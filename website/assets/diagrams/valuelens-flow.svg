@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 120" width="960" height="120" role="img" aria-labelledby="vl-flow-title" font-family="'JetBrains Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="500" letter-spacing="0.06em" text-anchor="middle" fill="currentColor">
+  <title id="vl-flow-title">Six points on a line: 01 read, 02 calculate, 03 detect, 04 evidence (the lens glyph), 05 investigate, 06 human review (bracketed).</title>
+  <g fill="none" stroke="currentColor" stroke-width="1.5">
+    <path d="M48 60h490"/>
+    <path d="M566 60h322"/>
+  </g>
+  <circle cx="48" cy="60" r="4"/>
+  <circle cx="216" cy="60" r="4"/>
+  <circle cx="384" cy="60" r="4"/>
+  <circle cx="552" cy="60" r="14" fill="none" stroke="currentColor" stroke-width="2"/>
+  <circle cx="552" cy="60" r="4" fill="var(--svls-accent, #E4432B)"/>
+  <circle cx="720" cy="60" r="4"/>
+  <circle cx="888" cy="60" r="4"/>
+  <g fill="none" stroke="currentColor" stroke-width="2">
+    <path d="M874 60V46h14"/>
+    <path d="M902 60v14h-14"/>
+  </g>
+  <text x="48" y="36">01</text>
+  <text x="216" y="36">02</text>
+  <text x="384" y="36">03</text>
+  <text x="552" y="36">04</text>
+  <text x="720" y="36">05</text>
+  <text x="888" y="36">06</text>
+  <g fill-opacity="0.72" font-weight="400">
+    <text x="48" y="100">READ</text>
+    <text x="216" y="100">CALCULATE</text>
+    <text x="384" y="100">DETECT</text>
+    <text x="552" y="100">EVIDENCE</text>
+    <text x="720" y="100">INVESTIGATE</text>
+    <text x="888" y="100">HUMAN REVIEW</text>
+  </g>
+</svg>

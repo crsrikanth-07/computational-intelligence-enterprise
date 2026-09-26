@@ -247,7 +247,7 @@ One phrase per section at most, only where SITE_SPEC names it: `<span class="key
 - Chips: `<ul class="chips" role="list"><li class="chip">PS/EPPM</li>…</ul>`; labelled rows: `.chip-rows > .chip-row` (`<p class="eyebrow">Modules</p>` + `.chips`).
 - Lists: `.list-points` (filled point: things we do), `.list-rings` (ring: things we never do), `.list-mono` (mono lines with hairlines).
 - Book card: `.book > .book__cover[role=img][aria-label] > span` + `.book__caption` (title only, no author).
-- Micro-label row and proof row (hero): `.microlabels` and `.proof-row` (`<li><span class="proof-row__num">22+</span><span class="proof-row__label">…</span></li>`).
+- Micro-label row and proof row (hero): `.microlabels` and `.proof-row` (`<li><span class="proof-row__num">25+</span><span class="proof-row__label">…</span></li>`).
 - Visible placeholder: `<span class="todo">TODO</span> (client): registered address`.
 - Mono note: `<p class="mono-note">NDA-friendly · …</p>` (uppercase via CSS).
 - Prose pages (privacy, terms): wrap in `<div class="prose">`.

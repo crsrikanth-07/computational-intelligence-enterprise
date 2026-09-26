@@ -1,0 +1,36 @@
+/* /products/sap-intelligence-suite/ — page-specific styles (tokens only; loaded after site.css) */
+
+/* Hero: the product lockup sits above the H1 (BRAND_SPEC 11.2); the status sentence sits between lead and buttons */
+.hero--suite .hero__copy h1 { margin-top: var(--s-5); }
+.hero--suite .hero__copy .status { margin-top: var(--s-4); }
+.hero--suite .hero__mock { margin-top: var(--s-7); }
+@media (min-width: 1024px) { .hero--suite .hero__mock { margin-top: 0; padding-top: var(--s-2); } }
+
+/* White hero into the white modes section: halve the stacked padding, as the service pages do */
+.hero--suite { padding-bottom: var(--s-8); }
+#modes { padding-top: var(--s-8); }
+@media (min-width: 1024px) {
+  .hero--suite { padding-bottom: var(--s-9); }
+  #modes { padding-top: var(--s-7); }
+}
+
+/* Mode columns reuse .practice without the 24px glyph; the example requests are a mono list under an eyebrow */
+.mode .practice__num { margin-top: 0; }
+.mode__examples { width: 100%; margin-top: var(--s-4); }
+.mode__examples .eyebrow { display: block; margin-bottom: var(--s-2); }
+
+/* How it works: the workbench function names under the timeline */
+#how-it-works .mono-note { margin-top: var(--s-6); }
+
+/* Library snapshot caption */
+.library__caption { margin-top: var(--s-5); max-width: var(--measure); }
+
+/* Two products, one control model: slim white band, copy 1-8, links 9-12 (stacks below 1024px) */
+.pair-band { border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+.pair-band .grid { row-gap: var(--s-5); margin-top: var(--s-5); }
+.pair-band h3 { max-width: 32ch; }
+.pair-band__body { font-size: 15px; line-height: 24px; margin-top: var(--s-3); max-width: var(--measure); }
+.pair-band__action { display: flex; flex-direction: column; align-items: flex-start; gap: var(--s-5); }
+@media (min-width: 1024px) {
+  .pair-band__action { justify-content: flex-end; height: 100%; }
+}
