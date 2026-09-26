@@ -1,11 +1,9 @@
 /* /products/value-lens/ — page-specific styles (tokens only; loaded after site.css) */
 
-/* Hero (dark band): H1 with the inline PRIVATE BETA badge, H2-size sub-headline, status sentence, frame right */
+/* Hero (dark band): H1 with the inline PRIVATE BETA badge, H2-size sub-headline, status sentence; the frame uses .hero__aside */
 .hero--vl h1 .badge { margin-left: var(--s-3); position: relative; top: -0.12em; }
 .hero__sub { margin-top: var(--s-4); }
 .hero--vl .status { margin-top: var(--s-4); font-size: 15px; }
-.hero__frame { margin-top: var(--s-7); }
-@media (min-width: 1024px) { .hero__frame { margin-top: 0; padding-top: var(--s-2); } }
 
 /* 02 The business question: body in two columns on desktop, then the three rule cells */
 .question__body { max-width: var(--measure); }
@@ -21,7 +19,6 @@
 .steps > li { border-top: 1px solid var(--rule); padding: var(--s-4) 0; min-width: 0; }
 .steps h3 { margin-top: var(--s-2); }
 .steps p { margin-top: var(--s-2); font-size: 15px; line-height: 24px; }
-.steps code { font-family: var(--font-mono); font-size: 0.93em; }
 @media (min-width: 600px) {
   .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .steps > li { padding: var(--s-5); }
@@ -38,32 +35,8 @@
   .steps > :nth-child(3n) { padding-right: 0; }
 }
 
-/* Flow diagram: the wide drawing (960 x 120) from 1024px where its labels render at 14px or more;
-   the tall drawing (400 x 400) below that, capped at 480px so labels stay 12px or more on a phone. */
-.flow { margin-top: var(--s-7); }
-.flow svg { width: 100%; height: auto; display: block; color: var(--text); }
-.flow svg.flow__wide { display: none; }
-.flow svg.flow__tall { max-width: 480px; }
-@media (min-width: 1024px) {
-  .flow svg.flow__wide { display: block; }
-  .flow svg.flow__tall { display: none; }
-}
-
-/* 05 Cross-link band (Addendum A.9): one line on hairlines, link at right on desktop */
-.xlink { border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
-.xlink .grid { row-gap: var(--s-4); margin-top: var(--s-5); }
-.xlink__line { font: 600 var(--fs-h3)/1.35 var(--font-heading); letter-spacing: -0.01em; max-width: 32ch; }
-.xlink__action { display: flex; align-items: flex-start; }
-@media (min-width: 1024px) { .xlink__action { align-items: center; justify-content: flex-end; height: 100%; } }
-
-/* 07 Beta form: copy 1-5, form 6-12; name and email side by side from 600px */
+/* 07 Beta form: copy 1-5, form 6-12 (.form__row puts name and work email side by side) */
 .beta-grid { margin-top: var(--s-6); }
 @media (min-width: 600px) { .beta-grid { margin-top: var(--s-7); } }
 .beta-copy .subcopy { margin-top: var(--s-4); }
 .beta-copy .status { margin-top: var(--s-4); }
-@media (min-width: 600px) {
-  .form__row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s-4); }
-}
-
-/* 09 Closing: status sentence under the buttons */
-.cta-band .status { margin-top: var(--s-4); }

@@ -1,5 +1,7 @@
 # SVLS LABS website — BUILD_NOTES (for page builders)
 
+> **Integration pass (2026-09-26).** All pages are built. `README.md` is now the entry point (structure, preview, client TODOs). Addendum C (`COPY_CORRECTIONS.md`) is applied: no résumé-derived figures remain and the control model is three one-sentence cards. Shared components added to `site.css` since these notes were written: `h2.eyebrow` (eyebrow as section heading), `.hero--plain` (hero without a figure), `.hero__aside`, `.slim-band` (lead magnet / cross-link bands), `.diagram` (wide/tall drawing pair), `.method__extra`, `.list-numbered`, `.aside-rule`, `.form__row`, `.links--after`, `code`. The examples below still describe the vocabulary correctly; where they name a figure, the live copy follows Addendum C.
+
 The foundation (tokens, stylesheet, script, brand assets, diagrams, partials) and the homepage are built, reviewed and QA-clean. Page builders add the inner pages using the vocabulary below. The specs remain the source of truth for copy and structure: `BRAND_SPEC.md` v1.1 (tokens, type, logo, motion, **Title Case rule**), `SITE_SPEC.md` (copy, page structure, titles and descriptions) and **`PRODUCTS_ADDENDUM.md` (Addendum A: the second product, SAP Intelligence Suite; it supersedes SITE_SPEC 1.1, 1.2, 1.3 column 3, 1.4, 3.7 and adds `/products/sap-intelligence-suite/` and section 14 entries). Read it right after SITE_SPEC.**
 
 ## 0. Rules
@@ -107,9 +109,9 @@ Inside `.hgrid--4`. L-tick at top-left, mono stat numeral, 17px label, small mut
 ```html
 <ul class="hgrid hgrid--4 hgrid--bottom" role="list">
   <li class="stat-cell">
-    <p class="stat stat-cell__num">200+</p>
-    <p class="stat-cell__label">CPI flows built</p>
-    <p class="stat-cell__ctx">Pattern library, contract per flow.</p>
+    <p class="stat stat-cell__num">25+</p>
+    <p class="stat-cell__label">years of SAP delivery experience</p>
+    <p class="stat-cell__ctx">Across our key architects.</p>
   </li>
   …
 </ul>

@@ -13,11 +13,11 @@
    07  Practice columns
    08  Method timeline
    09  Control model: columns, spec table, pull-quote
-   10  Lists (points / rings), chip rows, book card, product feature block, workbench mock
+   10  Lists (points / rings / mono / numbered), chip rows, book card, diagram figure, product feature block, workbench mock
    11  Value Lens product frame
    12  FAQ (details)
    13  Forms
-   14  CTA band, partner band, trust line
+   14  CTA band, slim bands (partner, lead magnet, cross-link), trust line
    15  Footer and TODO labels
    16  Prose and utilities
    17  Motion: reveal on scroll, reduced motion
@@ -126,6 +126,10 @@ p + p { margin-top: 1em; }
   text-transform: uppercase;
   color: var(--text-muted);
 }
+/* An eyebrow that is also the section's heading (inner pages where the spec gives no H2): one mono line, no h2 cap */
+h2.eyebrow { max-width: none; text-wrap: wrap; }
+/* Inline tool names, policy versions (SITE_SPEC 16.3) */
+code { font-family: var(--font-mono); font-size: 0.93em; }
 .numeral {
   font: 500 13px/16px var(--font-mono);
   letter-spacing: 0.04em;
@@ -186,6 +190,11 @@ p + p { margin-top: 1em; }
   .col-9 { grid-column: span 9; }
   .col-start-8 { grid-column-start: 8; }
   .col-start-9 { grid-column-start: 9; }
+  /* An offset column sets both lines, or the span collapses to one track */
+  .col-start-8.col-4 { grid-column: 8 / span 4; }
+  .col-start-8.col-5 { grid-column: 8 / span 5; }
+  .col-start-9.col-3 { grid-column: 9 / span 3; }
+  .col-start-9.col-4 { grid-column: 9 / span 4; }
 }
 
 /* Hairline grids: border-top on every cell, border-left on cells after the
@@ -193,7 +202,7 @@ p + p { margin-top: 1em; }
    .hgrid--4: 4 -> 2 -> 1   .hgrid--3: 3 -> 1 (at 900)   .hgrid--2: 2 -> 1 (at 600) */
 .hgrid { display: grid; grid-template-columns: minmax(0, 1fr); list-style: none; margin: 0; padding: 0; }
 .hgrid > * { border-top: 1px solid var(--rule); padding: var(--s-4) 0; min-width: 0; }
-ul[role="list"], ol[role="list"] { list-style: none; margin: 0; padding: 0; }
+:where(ul[role="list"], ol[role="list"]) { list-style: none; margin: 0; padding: 0; } /* zero specificity: a component's own margin wins */
 .hgrid--tight > * { padding: var(--s-3) 0; }
 @media (min-width: 600px) {
   .hgrid--4, .hgrid--2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -245,6 +254,10 @@ ul[role="list"], ol[role="list"] { list-style: none; margin: 0; padding: 0; }
   .section-head--split > * { grid-column: 1 / span 8; }
   .section-head--split > .section-mark { grid-column: 1 / -1; }
 }
+
+/* Aside column on a hairline: left rule beside the main column from 1024px, top rule when stacked */
+.aside-rule { border-top: 1px solid var(--rule); padding-top: var(--s-5); }
+@media (min-width: 1024px) { .aside-rule { border-top: 0; padding-top: 0; border-left: 1px solid var(--rule); padding-left: var(--s-5); } }
 
 /* Bands */
 .band-surface { background: var(--surface); }
@@ -465,6 +478,7 @@ body.sheet-open { overflow: hidden; }
 .arrow-link .arrow-link__pt { fill: currentColor; transition: fill var(--t-fast) var(--ease); }
 .arrow-link:hover .arrow-link__pt { fill: var(--accent); }
 .links { display: flex; flex-wrap: wrap; gap: var(--s-3) var(--s-6); align-items: center; }
+.links--after { margin-top: var(--s-6); } /* a link row under a hairline grid */
 
 /* Chips */
 .chips { display: flex; flex-wrap: wrap; gap: var(--s-2); list-style: none; margin: 0; padding: 0; }
@@ -513,6 +527,16 @@ body.sheet-open { overflow: hidden; }
   .hero__grid { align-items: start; }
   .hero__diagram { margin-top: 0; padding-top: var(--s-2); }
 }
+/* Hero right column that is not a diagram (product frame, workbench mock): same rhythm as .hero__diagram */
+.hero__aside { margin-top: var(--s-7); }
+@media (min-width: 1024px) { .hero__aside { margin-top: 0; padding-top: var(--s-2); } }
+
+/* Hero without a right-column figure, followed by a white section (services, products, approach, contact, legal):
+   the two full paddings would otherwise stack, so the hero's bottom and the next section's top shrink together */
+.hero--plain { padding-bottom: var(--s-7); }
+.hero--plain + .section { padding-top: var(--s-7); }
+@media (min-width: 600px)  { .hero--plain { padding-bottom: var(--s-8); } }
+@media (min-width: 1024px) { .hero--plain { padding-bottom: var(--s-9); } }
 
 /* Micro-label row: three mono labels separated by hairlines */
 .microlabels { list-style: none; margin: var(--s-7) 0 0; padding: 0; display: grid; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
@@ -574,6 +598,7 @@ body.sheet-open { overflow: hidden; }
 .practice { display: flex; flex-direction: column; align-items: flex-start; gap: 0; }
 .practice__glyph { width: 24px; height: 24px; color: var(--primary); display: block; }
 .practice__num { margin-top: var(--s-4); }
+.practice > .practice__num:first-child { margin-top: 0; } /* offer, mode and value columns carry no 24px glyph */
 .practice h3 { margin-top: var(--s-2); }
 .practice__body { margin-top: var(--s-3); }
 .practice__typical { margin-top: var(--s-4); padding-top: var(--s-3); border-top: 1px solid var(--rule); width: 100%; font-size: var(--fs-small); line-height: 1.6; }
@@ -600,6 +625,13 @@ body.sheet-open { overflow: hidden; }
   .method { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 }
 .method__after { display: flex; flex-wrap: wrap; align-items: center; gap: var(--s-4) var(--s-6); margin-top: var(--s-7); }
+/* Supplementary block under a step on its own hairline: a labelled line (services) or an artefact list (Approach gates) */
+.method__step .method__extra { margin-top: var(--s-4); padding-top: var(--s-3); border-top: 1px solid var(--rule); width: 100%; }
+p.method__extra { font-size: var(--fs-small); line-height: 1.6; color: var(--text-muted); }
+.method__extra .eyebrow { display: block; margin-bottom: var(--s-1); }
+.method__extra .list-mono { margin-top: var(--s-1); }
+.method__extra .list-mono > li:first-child { border-top: 0; }
+.method__extra .list-mono > li:last-child { border-bottom: 0; }
 
 /* ---------------------------------------------------------------------------
    09  Control model
@@ -609,7 +641,7 @@ body.sheet-open { overflow: hidden; }
 .control__prevents { margin-top: var(--s-3); font-size: var(--fs-small); line-height: 1.6; color: var(--text-muted); }
 .control__prevents .eyebrow { display: block; margin-bottom: 2px; }
 
-.control-diagram { margin-top: var(--s-7); }
+.control-diagram { margin-bottom: var(--s-7); } /* between the section head and the three cards */
 .control-diagram svg { width: 100%; height: auto; display: block; color: var(--text); }
 @media (max-width: 599px) { .control-diagram { display: none; } }
 
@@ -626,12 +658,8 @@ body.sheet-open { overflow: hidden; }
   .spec-table tbody td { border-top: 0; padding-top: 0; }
 }
 
-.pullquote { border-top: 1px solid var(--rule); padding-top: var(--s-5); }
-.pullquote h3 { color: var(--primary); font-size: var(--fs-h3); max-width: 24ch; }
-.pullquote p { margin-top: var(--s-4); }
-.control-links { margin-top: var(--s-7); }
-.control-grid { margin-top: var(--s-7); }
-@media (min-width: 1024px) { .control-grid .pullquote { border-top: 0; padding-top: 0; border-left: 1px solid var(--rule); padding-left: var(--s-5); } }
+.control__line { margin-top: var(--s-6); max-width: var(--measure); }
+.control-links { margin-top: var(--s-6); }
 
 /* ---------------------------------------------------------------------------
    10  Lists, chip rows, book card
@@ -654,6 +682,19 @@ body.sheet-open { overflow: hidden; }
 .list-mono > li:first-child { border-top: 0; padding-top: 0; }
 .list-mono > li:last-child { border-bottom: 1px solid var(--rule); }
 
+/* Numbered hairline list: mono numeral in a narrow column, text beside it (contact next steps; --lg: Approach commitments) */
+.list-numbered { list-style: none; margin: var(--s-4) 0 0; padding: 0; border-bottom: 1px solid var(--rule); }
+.list-numbered > li {
+  display: grid; grid-template-columns: 40px minmax(0, 1fr); column-gap: var(--s-3);
+  border-top: 1px solid var(--rule); padding: var(--s-3) 0;
+  font-size: 15px; line-height: 24px;
+}
+.list-numbered .numeral { padding-top: 4px; }
+.list-numbered--lg { margin-top: 0; }
+.list-numbered--lg > li { column-gap: var(--s-4); padding: var(--s-4) 0; font-size: var(--fs-body); line-height: 1.6; }
+.list-numbered--lg .numeral { padding-top: 6px; }
+@media (min-width: 600px) { .list-numbered--lg > li { grid-template-columns: 56px minmax(0, 1fr); padding: var(--s-5) 0; } }
+
 /* Chip rows: mono label then chips */
 .chip-row { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--s-3); border-top: 1px solid var(--rule); padding: var(--s-4) 0; }
 .chip-row:last-of-type { border-bottom: 1px solid var(--rule); }
@@ -675,6 +716,18 @@ body.sheet-open { overflow: hidden; }
 .book__caption { font-size: var(--fs-small); line-height: 1.6; color: var(--text-muted); }
 .book-title { font: 500 12px/16px var(--font-mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); }
 .cred h3 { margin-bottom: var(--s-4); }
+
+/* Page diagram drawn twice (reference architecture, Value Lens flow): the wide drawing from 1024px, where its labels
+   render at 12px or more; the tall one below that, capped at 480px so labels stay 12px or more on a phone. */
+.diagram { margin-top: var(--s-7); display: flex; flex-direction: column; gap: var(--s-4); }
+.diagram svg { width: 100%; height: auto; display: block; color: var(--text); }
+.diagram svg.diagram__wide { display: none; }
+.diagram svg.diagram__tall { max-width: 480px; }
+.diagram figcaption { font: 500 12px/18px var(--font-mono); letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-muted); }
+@media (min-width: 1024px) {
+  .diagram svg.diagram__wide { display: block; }
+  .diagram svg.diagram__tall { display: none; }
+}
 
 /* Product feature block (Addendum A.6): hairline frame, --r-2 corners, copy 1-6, mock 7-12; stacks on phone */
 .product-feature { margin-top: var(--s-7); border: 1px solid var(--rule); border-radius: var(--r-2); padding: var(--s-5) var(--s-4); }
@@ -826,6 +879,7 @@ body.sheet-open { overflow: hidden; }
    13  Forms (SITE_SPEC 1.5)
    --------------------------------------------------------------------------- */
 .form { display: grid; gap: var(--s-4); }
+@media (min-width: 600px) { .form__row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s-4); } } /* name + work email */
 .form-title { margin-bottom: var(--s-4); }
 .field { display: grid; gap: 6px; }
 .field__label, .fieldset legend { font: 500 15px/20px var(--font-body); color: var(--text); }
@@ -861,7 +915,7 @@ textarea.input { min-height: 96px; resize: vertical; }
 .form__failed { font-size: var(--fs-small); line-height: 1.6; color: var(--text); padding: var(--s-3) var(--s-4); border: 1px solid var(--rule); border-left: 4px solid var(--accent-text); }
 
 /* ---------------------------------------------------------------------------
-   14  CTA band, partner band, trust line
+   14  CTA band, slim bands (partner, lead magnet, cross-link), trust line
    --------------------------------------------------------------------------- */
 .trust { font-size: var(--fs-small); line-height: 1.6; color: var(--text-muted); margin-top: var(--s-4); max-width: var(--measure); }
 .cta-links { display: flex; flex-wrap: wrap; gap: var(--s-2) var(--s-6); margin-top: var(--s-3); }
@@ -873,14 +927,19 @@ textarea.input { min-height: 96px; resize: vertical; }
 .cta-band__forms .form-title { font-size: var(--fs-h3); }
 .cta-band__after { margin-top: var(--s-6); }
 .cta-band__after .trust { margin-top: 0; }
+.cta-band .status { margin-top: var(--s-4); } /* a product status sentence repeated in a closing band */
 
-.partner-band { border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
-.partner-band .grid { row-gap: var(--s-5); margin-top: var(--s-5); }
-.partner-band h3 { font-size: var(--fs-h3); max-width: 32ch; }
-.partner-band__body { font-size: 15px; line-height: 24px; margin-top: var(--s-3); max-width: var(--measure); }
-.partner-band__action { display: flex; flex-direction: column; align-items: flex-start; gap: var(--s-3); }
+/* Slim hairline band: copy in .col-8, an action column in .col-4 that aligns to the bottom from 1024px.
+   .partner-band (surface, button + mono note) and .slim-band (lead magnets, product cross-links) share it. */
+.partner-band, .slim-band { border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+.partner-band .grid, .slim-band .grid { row-gap: var(--s-5); margin-top: var(--s-5); }
+.partner-band h3, .slim-band h3, .slim-band .h3 { font-size: var(--fs-h3); max-width: 32ch; }
+.partner-band__body, .slim-band__body { font-size: 15px; line-height: 24px; margin-top: var(--s-3); max-width: var(--measure); }
+.partner-band__action, .slim-band__action { display: flex; flex-direction: column; align-items: flex-start; gap: var(--s-4); }
+.partner-band__action { gap: var(--s-3); }
+.slim-band__action .small { margin: 0; }
 @media (min-width: 1024px) {
-  .partner-band__action { justify-content: flex-end; height: 100%; }
+  .partner-band__action, .slim-band__action { justify-content: flex-end; height: 100%; }
   .partner-band__action .mono-note { margin-top: 0; }
 }
 
@@ -965,5 +1024,4 @@ textarea.input { min-height: 96px; resize: vertical; }
 }
 
 /* Nav beta label (visible "Private beta" next to Value Lens in the Products menu and sheet) */
-.nav-beta { display: inline-block; vertical-align: middle; margin-left: 6px; padding: 1px 6px; border-radius: var(--r-1); background: var(--warn-fill); color: #101418; font-family: var(--font-mono); font-size: 10px; letter-spacing: .08em; text-transform: uppercase; line-height: 16px; white-space: nowrap; }
-.band-dark .nav-beta, [data-theme="dark"] .nav-beta { background: var(--d-warn); color: var(--d-bg); }
+.nav-beta { display: inline-block; vertical-align: middle; margin-left: 6px; padding: 1px 6px; border-radius: var(--r-1); background: var(--warn-fill); color: var(--on-warn); font-family: var(--font-mono); font-size: 10px; letter-spacing: .08em; text-transform: uppercase; line-height: 16px; white-space: nowrap; }

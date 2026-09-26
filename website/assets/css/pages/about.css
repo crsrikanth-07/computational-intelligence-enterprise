@@ -1,9 +1,5 @@
 /* /about/ — page-specific styles (tokens only; loaded after site.css) */
 
-/* Sections without a spec H2 use the eyebrow as their heading; keep it on one line
-   (h2 carries max-width: 24ch and text-wrap: balance, which wraps a tracked mono line). */
-h2.eyebrow { max-width: none; text-wrap: wrap; }
-
 /* 02 The story: two body columns, a four-cell mono strip, then the line that reaches the present */
 .story { row-gap: var(--s-4); }
 .story > p { margin: 0; max-width: var(--measure); }
@@ -26,9 +22,6 @@ h2.eyebrow { max-width: none; text-wrap: wrap; }
 .story__today-line { max-width: var(--measure); }
 .story__today .status { margin-top: var(--s-3); max-width: var(--measure); }
 .story__today .status + .status { margin-top: var(--s-1); }
-
-/* 03 Values: practice columns without the glyph; the numeral opens the cell */
-.value .practice__num { margin-top: 0; }
 
 /* 04 The team: paragraph and role chips left, two mono lists right */
 .team { row-gap: var(--s-6); }

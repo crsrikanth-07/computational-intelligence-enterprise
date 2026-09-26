@@ -1,55 +1,23 @@
 /* /approach/ — page-specific styles (tokens only; loaded after site.css) */
 
-/* Sections without a spec H2 use the eyebrow as their heading; keep it on one line
-   (h2 carries max-width: 24ch and text-wrap: balance, which wraps a tracked mono line). */
-h2.eyebrow { max-width: none; text-wrap: wrap; }
-
-/* Hero without a diagram: halve the white-on-white gap to the first section. */
-.hero--approach { padding-bottom: var(--s-8); }
-#gates { padding-top: var(--s-8); }
-@media (min-width: 1024px) {
-  .hero--approach { padding-bottom: var(--s-9); }
-  #gates { padding-top: var(--s-7); }
-}
-
-/* The four gates: the method timeline with an artefact list per gate */
-.gate__artefacts { margin-top: var(--s-4); padding-top: var(--s-3); border-top: 1px solid var(--rule); }
-.gate__artefacts .eyebrow { display: block; margin-bottom: var(--s-2); }
-.gate__artefacts .list-mono > li:first-child { border-top: 0; }
-.gate__artefacts .list-mono > li:last-child { border-bottom: 0; }
-
-/* Standards table: a link inside a value cell */
-.spec-table td a { color: var(--accent-text); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
-.spec-table td a:hover { text-decoration-thickness: 2px; }
-.standards-aside { display: flex; flex-direction: column; align-items: flex-start; gap: var(--s-5); border-top: 1px solid var(--rule); padding-top: var(--s-4); }
+/* Standards table aside: "Read next" links stacked beside the table (.aside-rule draws the hairline) */
+.standards-aside { display: flex; flex-direction: column; align-items: flex-start; gap: var(--s-5); }
 .standards-aside .eyebrow { margin-bottom: calc(var(--s-1) - var(--s-5)); }
-@media (min-width: 1024px) { .standards-aside { border-top: 0; padding-top: 0; border-left: 1px solid var(--rule); padding-left: var(--s-5); } }
+/* In the narrow aside a link may wrap: keep the point after the last word, not at the column edge */
+.standards-aside .arrow-link { display: inline-block; }
+.standards-aside .arrow-link svg { vertical-align: middle; margin-left: var(--s-2); }
 
-/* AI-assisted engineering: the added review-record paragraph and the links */
+/* AI-assisted engineering: the added review-record paragraph */
 .review-record { margin-top: var(--s-6); max-width: var(--measure); }
-.accelerate-links { margin-top: var(--s-6); }
-
-/* Security and confidentiality: numbered commitments on hairlines */
-.commitments { list-style: none; margin: 0; padding: 0; border-bottom: 1px solid var(--rule); }
-.commitments > li {
-  display: grid; grid-template-columns: 40px minmax(0, 1fr); column-gap: var(--s-4);
-  border-top: 1px solid var(--rule); padding: var(--s-4) 0;
-  font-size: var(--fs-body); line-height: 1.6;
-}
-.commitments .numeral { padding-top: 6px; }
-@media (min-width: 600px) { .commitments > li { grid-template-columns: 56px minmax(0, 1fr); padding: var(--s-5) 0; } }
 
 /* Commercial shapes: three hairline cells (numeral, H3, terms, gate line), then the partner line and its button */
 .shape { display: flex; flex-direction: column; align-items: flex-start; }
 .shape h3 { margin-top: var(--s-2); }
 .shape__terms { margin-top: var(--s-3); font-size: 15px; line-height: 24px; }
+.shape__gate { margin-top: var(--s-4); padding-top: var(--s-3); border-top: 1px solid var(--rule); width: 100%; font: 400 14px/22px var(--font-mono); color: var(--text); }
+.shape__gate .eyebrow { display: block; margin-bottom: var(--s-1); }
 .partner-row { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--s-4); margin-top: var(--s-6); align-items: center; }
 .partner-row__body { font-size: 15px; line-height: 24px; max-width: var(--measure); }
 @media (min-width: 900px) {
   .partner-row { grid-template-columns: minmax(0, 1fr) auto; gap: var(--s-6); }
 }
-.shape__gate { margin-top: var(--s-4); padding-top: var(--s-3); border-top: 1px solid var(--rule); width: 100%; font: 400 14px/22px var(--font-mono); color: var(--text); }
-.shape__gate .eyebrow { display: block; margin-bottom: var(--s-1); }
-/* In the narrow aside a link may wrap: keep the point after the last word, not at the column edge */
-.standards-aside .arrow-link { display: inline-block; }
-.standards-aside .arrow-link svg { vertical-align: middle; margin-left: var(--s-2); }

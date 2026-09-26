@@ -330,7 +330,8 @@
     box.className = 'form__success';
     box.setAttribute('role', 'status');
     box.setAttribute('tabindex', '-1');
-    box.innerHTML = checkIcon() + '<p>' + escapeHtml(msg) + '</p>';
+    // A trailing "(TODO client)" in data-success renders with the visible mono TODO label (SITE_SPEC 16.3)
+    box.innerHTML = checkIcon() + '<p>' + escapeHtml(msg).replace(/\(TODO client\)/g, '(<span class="todo">TODO</span> client)') + '</p>';
     form.parentNode.replaceChild(box, form);
     box.focus();
   }

@@ -1,12 +1,7 @@
 /* /privacy/, /terms/ and /404.html — page-specific styles (tokens only; loaded after site.css) */
 
-/* ---- Legal pages: hero without a diagram, then the sections on hairlines ---- */
+/* ---- Legal pages: hero (.hero--plain), then the sections on hairlines ---- */
 
-/* Halve the white-on-white gap between the hero and the body section. */
-.hero--legal { padding-bottom: var(--s-7); }
-.legal-body { padding-top: var(--s-7); }
-
-.hero--legal .lead { margin-top: var(--s-5); }
 .legal__updated { margin-top: var(--s-4); }
 .hero--legal .microlabels { margin-top: var(--s-6); }
 
@@ -14,8 +9,7 @@
 .legal__grid { row-gap: var(--s-7); }
 @media (min-width: 1024px) {
   .legal__grid { align-items: start; }
-  /* .col-4 + .col-start-9 in site.css leaves grid-column-end at auto (one track); set both lines here. */
-  .legal-aside { grid-column: 9 / span 4; position: sticky; top: calc(var(--nav-h) + var(--s-6)); }
+  .legal-aside { position: sticky; top: calc(var(--nav-h) + var(--s-6)); }
 }
 
 /* Sections counsel completes: numeral, H2 (at H3 size) on a hairline, one-line placeholder, visible TODO */

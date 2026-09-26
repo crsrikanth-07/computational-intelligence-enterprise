@@ -1,29 +1,13 @@
 /* /contact/ — page-specific styles (tokens only; loaded after site.css) */
 
-/* Hero without a diagram: halve the white-on-white gap to the form section. */
-.hero--contact { padding-bottom: var(--s-7); }
-.contact { padding-top: var(--s-7); }
-@media (min-width: 1024px) { .hero--contact { padding-bottom: var(--s-8); } }
-
-/* The form section has no spec H2: the eyebrow is its heading; keep it on one line
-   (h2 carries max-width: 24ch and text-wrap: balance, which wraps a tracked mono line). */
-h2.eyebrow { max-width: none; text-wrap: wrap; }
-
-/* Form 1-7, right column 8-12; a hairline between them (left rule on desktop, top rule when stacked) */
+/* Form 1-7, right column 8-12 (.aside-rule draws the hairline between them) */
 .contact__grid { margin-top: var(--s-6); row-gap: var(--s-7); }
 @media (min-width: 1024px) {
   .contact__grid { margin-top: var(--s-7); }
   .contact__form { padding-right: var(--s-5); }
-  .contact__aside { border-left: 1px solid var(--rule); padding-left: var(--s-5); }
-}
-@media (max-width: 1023px) {
-  .contact__aside { border-top: 1px solid var(--rule); padding-top: var(--s-6); }
 }
 
-/* Name and work email side by side from 600px; the two checkboxes as one group */
-@media (min-width: 600px) {
-  .form__row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s-4); }
-}
+/* The two checkboxes as one group */
 .form__choices { display: grid; }
 
 /* Right column blocks on hairlines */
@@ -33,22 +17,12 @@ h2.eyebrow { max-width: none; text-wrap: wrap; }
 .contact__link { margin-top: var(--s-4); }
 .contact__block .mono-note { margin-top: var(--s-4); }
 .contact__block .status { margin-top: var(--s-4); }
-
-/* What happens next: mono numerals on hairlines */
-.next-steps { list-style: none; margin: var(--s-4) 0 0; padding: 0; border-bottom: 1px solid var(--rule); }
-.next-steps > li {
-  display: grid; grid-template-columns: 40px minmax(0, 1fr); column-gap: var(--s-3);
-  border-top: 1px solid var(--rule); padding: var(--s-3) 0;
-  font-size: 15px; line-height: 24px;
-}
-.next-steps .numeral { padding-top: 4px; }
+.contact__block .status + .status { margin-top: var(--s-1); }
 
 /* Offices: mono key, Inter value */
 .offices { margin-top: var(--s-4); border-bottom: 1px solid var(--rule); }
 .offices__row { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--s-1); border-top: 1px solid var(--rule); padding: var(--s-3) 0; }
 .offices dd { margin: 0; font-size: 15px; line-height: 24px; }
-.offices dd a { color: var(--accent-text); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
-.offices dd a:hover { text-decoration-thickness: 2px; }
 @media (min-width: 600px) { .offices__row { grid-template-columns: 140px minmax(0, 1fr); gap: var(--s-4); } }
 @media (min-width: 1024px) { .offices__row { grid-template-columns: 120px minmax(0, 1fr); } }
 
