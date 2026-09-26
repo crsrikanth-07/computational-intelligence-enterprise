@@ -46,6 +46,7 @@ $GLOBALS['svls_page_head'] = function () { ?>
   "@type": "Organization",
   "name": "SVLS LABS",
   "legalName": "SVLS Labs LLP",
+      "telephone": "+91 850081119",
       "address": {"@type": "PostalAddress", "streetAddress": "4th Floor, Aparna Astute, Shaikpet, Door No. 8-1-299/103&104/AA/4F-2, Jubilee Hills", "addressLocality": "Hyderabad", "postalCode": "500008", "addressRegion": "Telangana", "addressCountry": "IN"},
   "url": "https://svlslabs.com/",
   "logo": "<?php echo esc_url( get_template_directory_uri() ); ?>/assets/logo/stacked.svg",

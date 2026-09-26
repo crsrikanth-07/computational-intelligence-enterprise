@@ -59,6 +59,7 @@ $GLOBALS['svls_page_head'] = function () { ?>
     "@type": "Organization",
     "name": "SVLS LABS",
     "legalName": "SVLS Labs LLP",
+      "telephone": "+91 850081119",
       "address": {"@type": "PostalAddress", "streetAddress": "4th Floor, Aparna Astute, Shaikpet, Door No. 8-1-299/103&104/AA/4F-2, Jubilee Hills", "addressLocality": "Hyderabad", "postalCode": "500008", "addressRegion": "Telangana", "addressCountry": "IN"},
     "url": "https://svlslabs.com/",
     "foundingDate": "2020",
@@ -208,7 +209,7 @@ get_header();
             <dl class="offices">
               <div class="offices__row">
                 <dt class="mono-title">SVLS Labs LLP</dt>
-                <dd>4th Floor, Aparna Astute<br>Shaikpet, Door No. 8-1-299/103&amp;104/AA/4F-2<br>Jubilee Hills, Hyderabad 500008<br>Telangana, India<br><span class="todo">TODO</span>: phone.</dd>
+                <dd>4th Floor, Aparna Astute<br>Shaikpet, Door No. 8-1-299/103&amp;104/AA/4F-2<br>Jubilee Hills, Hyderabad 500008<br>Telangana, India<br><a href="tel:+91850081119">+91 850081119</a></dd>
               </div>
               <div class="offices__row">
                 <dt class="mono-title">Email</dt>
