@@ -117,7 +117,7 @@ Anomalies found and what was done:
 ## What to do next (client)
 
 1. ~~Upload the rebuilt theme zip~~ Done 26 September 2026, 21:05 UTC: verified live (old site icon gone, hub pages render, refund page cleaned).
-2. **Deactivate the old plugins** (Plugins -> Installed Plugins): Contact Form 7, Everest Forms, WPForms Lite (the theme's own handler delivers the forms), and Click to Chat unless the WhatsApp button is wanted. Jetpack can stay for stats, or go if the wp.com scripts are not wanted. Delete the inactive plugins and unused themes after the rollback window; keep Divi installed until then.
+2. ~~Deactivate the old plugins~~ Done 26 September 2026, 21:12 UTC: Contact Form 7, Everest Forms, WPForms Lite and Click to Chat are deactivated (verified: no plugin scripts, no jQuery, no WhatsApp button; homepage on a phone is 18 requests, about 144 KB). Jetpack stays active (stats script and two wp.com stylesheets). **GA Google Analytics was deactivated in the same pass**, so the gtag no longer loads: reactivate it, or accept no analytics and remove the Google Analytics sentence from /privacy/. Delete the inactive plugins and unused themes after the rollback window; keep Divi installed until then.
 3. **Draft the old refund page** or ask for a refund clause in /terms/.
 4. **Site Icon**: Appearance -> Customize -> Site Identity -> replace the old image with `website/assets/social/linkedin-logo-light.png` (or the favicon SVG rendered at 512 px).
 5. **Change the WordPress login password** of the deploy account if not already done. The Application Password is already revoked.
