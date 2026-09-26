@@ -1,5 +1,7 @@
 # SVLS LABS website — BUILD_NOTES (for page builders)
 
+> **Theme rollout (2026-09-26): "Signal Premium", site-wide, with tweaks.** `THEME_SPEC.md` is the visual system now (it supersedes BRAND_SPEC 5, 6, 10 and 12). Every page loads, in this order, `tokens.css` → `site.css` → its page stylesheet → **`theme.css`**, then `site.js` → **`theme.js`** (the head partial has a `{{PAGE_CSS}}` slot for the page stylesheet), plus the separate Inter Tight 800 font request and `theme-color #0E1116` for both schemes. What the theme changes for builders: (1) **every page opens on a charcoal hero**: the homepage hero is `.hero.hero--home` and carries the full `div.hero-art` (faint mark + data trace); every inner hero and the 404 section carry `div.hero-art.hero-art--lite` (faint mark only) right after the opening `<section>` tag; copy the block from any inner page. (2) **Card language**: every `.hgrid` cell, `.method__step`, `.steps > li`, `.faq`, `.spec-table` and `.diagram` renders as a card (6px radius, hairline, soft shadow, 2px hover lift); do not draw hairlines for grids any more. (3) **Bands alternate automatically** (hero = band 1, then soft, white, soft...; `.band-dark` keeps its place), so `.band-surface` no longer decides colour. (4) Buttons are gradient primary / outlined secondary, 44px minimum; pills glow; forms sit on cards; the footer is charcoal with a gradient hairline; dark mode maps to the charcoal set without per-page work. (5) OG images are charcoal: `node _tools/make-og.js <key> "<page H1>"` (all twelve regenerated). Client copy corrections applied in the same pass: 25+ years everywhere (never 22+ or "two decades"); no "200+" or other résumé figures; "integration flow" in running copy ("iFlow" only in the Suite's mode name); the AI practice now says "applied AI methods" in the nav and 404 descriptions, the homepage practice card links to `/services/ai/#methods`, the AI hero lead names the method families, and the footer Practices column carries "Applied AI research".
+
 > **Addendum D (2026-09-26).** `/products/value-lens/` now carries the Value Lens depth sections in the D insert order (`#inside-the-beta`, `#architecture`, `#tools`, `#detection`, `#coverage`, `#agent`, `#audit`, the D.9 milestone timeline inside `#scope`, `#guardrails`, `#stack`, four D.11 FAQ entries) and the homepage Value Lens band links to `#inside-the-beta` (D.12). Page-specific CSS for these lives in `assets/css/pages/value-lens.css` (tokens only); the architecture diagram is inline SVG drawn twice (wide from 1024px, tall below).
 
 > **Research pass (2026-09-26).** Addendum B is applied and QA-clean on the four pages it names (`/services/ai/#methods` grid, B.2.1 FAQ, the `5` proof cell; About 9.5 body; homepage 08 `RESEARCH` chip row and the mono line under the book card; Suite B.5.1 FAQ entries). Client rule: the About lead now says "25+ years of SAP delivery experience" instead of "two decades" (never 22+ or 20). "iFlow" is used only in the Suite mode name (Addendum A exact name); elsewhere copy says "integration flow" so non-technical readers follow it.
@@ -10,8 +12,8 @@ The foundation (tokens, stylesheet, script, brand assets, diagrams, partials) an
 
 ## 0. Rules
 
-1. **Do not edit** `assets/css/tokens.css`, `assets/css/site.css`, `assets/js/site.js`, `index.html`, anything in `assets/logo/`, `assets/diagrams/`, `favicon*`, `apple-touch-icon.png`, `site.webmanifest` or `_partials/`. If a page needs a component the foundation lacks, note it in your report rather than patching the shared files.
-2. Page-specific CSS goes in `/assets/css/pages/<key>.css`, linked **after** `site.css` (put the `<link>` in the `{{HEAD_EXTRA}}` slot). Keep it tiny and use tokens only (`var(--s-5)`, `var(--rule)` ...). Never write a colour value outside `tokens.css`.
+1. **Do not edit** `assets/css/tokens.css`, `assets/css/site.css`, `assets/css/theme.css`, `assets/js/site.js`, `assets/js/theme.js`, `index.html`, anything in `assets/logo/`, `assets/diagrams/`, `favicon*`, `apple-touch-icon.png`, `site.webmanifest` or `_partials/`. If a page needs a component the foundation lacks, note it in your report rather than patching the shared files. Theme changes go through `THEME_SPEC.md` first.
+2. Page-specific CSS goes in `/assets/css/pages/<key>.css`, linked **after** `site.css` and **before** `theme.css` (the `{{PAGE_CSS}}` slot in the head partial), so the theme's card and band rules win. Keep it tiny and use tokens only (`var(--s-5)`, `var(--rule)`, or the theme's `var(--sg-*)`). Never write a colour value outside `tokens.css` and `theme.css`.
 3. Copy is verbatim from SITE_SPEC / the Addendum. No new numbers, no new claims, hedges exactly as written. Banned words (SITE_SPEC 16.1) nowhere, including alt text, `<title>`, meta and SVG `<title>`. **Title Case (BRAND_SPEC 4.2, client rule v1.1): the tagline and every H1 and H2 use Title Case exactly as SITE_SPEC now prints them ("Delivery You Can Put in a Board Pack."). H3s, eyebrows, body, buttons, links, the status sentences and `<title>`/meta stay as written.** The Suite has its own mandatory status sentence wherever it is featured: "In use in SVLS LABS delivery. Available to customers on request; deployed in your landscape, reviewed by your architects."
 4. No person is ever named. Voice is "our architects" / "our team" / "the leadership team".
 5. Root-relative URLs (`/services/sap/`, `/assets/css/site.css`), directory-style internal links with trailing slash.
@@ -51,19 +53,26 @@ The foundation (tokens, stylesheet, script, brand assets, diagrams, partials) an
    - `{{TITLE}}` and `{{DESCRIPTION}}` exactly from SITE_SPEC section 14
    - `{{PATH}}` the page path with trailing slash (`/services/sap/`; use `/404.html` for the 404 page)
    - `{{OG}}` the OG key (`sap`, `cloud`, `ai`, `value-lens`, `suite`, `approach`, `about`, `contact`, `404`, `privacy`, `terms`)
-   - `{{HEAD_EXTRA}}` your JSON-LD `<script type="application/ld+json">` (Service on the three service pages, SoftwareApplication with `"applicationCategory": "BusinessApplication"` and `"releaseNotes": "Private beta"` on Value Lens, SoftwareApplication with `"applicationCategory": "DeveloperApplication"`, `"operatingSystem": "Web"` and a provider Organization on the Suite page plus Organization, nothing on the others; never a Person) plus the optional `<link rel="stylesheet" href="/assets/css/pages/<key>.css">`.
+   - `{{PAGE_CSS}}` the optional `<link rel="stylesheet" href="/assets/css/pages/<key>.css">` (or nothing), and `{{HEAD_EXTRA}}` your JSON-LD `<script type="application/ld+json">` (Service on the three service pages, SoftwareApplication with `"applicationCategory": "BusinessApplication"` and `"releaseNotes": "Private beta"` on Value Lens, SoftwareApplication with `"applicationCategory": "DeveloperApplication"`, `"operatingSystem": "Web"` and a provider Organization on the Suite page plus Organization, nothing on the others; never a Person).
    The head already contains: viewport, canonical, OG/Twitter tags, theme-color for both schemes, favicons, manifest, the **pre-paint theme snippet** (reads `localStorage['svls-theme']` and sets `data-theme` on `<html>` before first paint, and removes the `no-js` class), font preconnects, the exact Google Fonts URL, the two woff2 preloads, `tokens.css`, `site.css`, and `site.js` deferred. `<body>` is opened at the end of the partial.
 2. Paste `_partials/header.html` verbatim (skip link, sticky header, Services and Products dropdowns, Menu sheet with Services and Products groups). **Do not change it.** The current page is highlighted automatically by `site.js` from `location.pathname` (a dropdown trigger is underlined when its panel contains the current page, so `/services/...` underlines Services and `/products/...` underlines Products). Without JS nothing is highlighted, which is acceptable; if you want a static fallback you may add `aria-current="page"` to the matching `.site-nav__link` and `.sheet__link` in your copy, nothing else.
 3. Write `<main id="main">…</main>`.
 4. Paste `_partials/footer.html` verbatim. It closes `</body></html>`.
-5. Generate your OG image: `node _tools/make-og.js <key> "<page H1 or title>" [--dark]` (see section 5).
+5. Generate your OG image: `node _tools/make-og.js <key> "<page H1>"` (charcoal by default; see section 5).
 6. Run the QA loop (section 6) until clean at both sizes.
 
 Minimal skeleton of a page body:
 
 ```html
 <main id="main">
-  <section class="section" aria-labelledby="hero-title">
+  <section class="hero hero--plain" aria-labelledby="hero-title">
+    <div class="hero-art hero-art--lite" aria-hidden="true">
+      <svg class="hero-art__mark" viewBox="0 0 64 64" focusable="false">
+        <path d="M4 24V4h20v4H8v16z" fill="currentColor"/>
+        <circle cx="32" cy="32" r="13.5" fill="none" stroke="currentColor" stroke-width="5"/>
+        <path d="M60 40v20H40v-4h16V40z" fill="var(--svls-accent, #E4432B)"/>
+      </svg>
+    </div>
     <div class="container">
       <div class="section-mark"><span class="numeral">01</span><p class="eyebrow">Practice 01 · SAP &amp; ERP</p></div>
       <h1 id="hero-title" class="mt-6">S/4HANA, BTP and Integration Suite, Delivered <span class="key">Clean Core</span> from the First Transport.</h1>
@@ -75,7 +84,7 @@ Minimal skeleton of a page body:
 </main>
 ```
 
-Inner-page hero H1 uses the plain `<h1>` (52/58 → 36/40 fluid). `class="display"` is for the homepage only.
+Inner-page hero H1 uses the plain `<h1>` (52/58 → 36/40 fluid, Inter Tight 800 under the theme). `class="display"` is for the homepage only. The hero renders as a shorter charcoal band; the `.hero-art--lite` block above is the faint mark every inner page carries.
 
 ## 3. Component vocabulary
 
@@ -99,7 +108,7 @@ Every section: `.section` (128/96/64px vertical padding) → `.container` → `.
 Eyebrows are written in normal case in the HTML and rendered uppercase by CSS.
 
 ### 3.2 Hairline grid cells
-`.hgrid` + one of `.hgrid--4` (4 → 2 → 1), `.hgrid--3` (3 → 1 at 900px), `.hgrid--2` (2 → 1 at 600px). Each direct child gets a top hairline; cells after the first in a row get a left hairline (desktop/tablet only). Add `.hgrid--bottom` for a closing rule. Works on `<ul>`/`<ol>` (markers are removed) and `<div>`.
+`.hgrid` + one of `.hgrid--4` (4 → 2 → 1), `.hgrid--3` (3 → 1 at 900px), `.hgrid--2` (2 → 1 at 600px). site.css draws hairlines between cells; **theme.css turns every cell into a card** (28px padding, hairline border, 6px radius, soft shadow, 2px lift on hover for content cards), so a grid of cards needs nothing more than the markup below. `.hgrid--bottom` is harmless (the theme removes the closing rule). Works on `<ul>`/`<ol>` (markers are removed) and `<div>`.
 
 ```html
 <div class="hgrid hgrid--3 hgrid--bottom">
@@ -286,14 +295,14 @@ Keep `role="img"` + `<title id>` when the drawing conveys meaning; use `aria-hid
 
 ## 5. Tools
 
-**OG image** (1200×630 PNG, white or `--dark`, hairline grid, stacked lockup left, title right in Inter Tight 700 40px, two lines when the title has two sentences). Pass the page H1 in Title Case exactly as SITE_SPEC prints it:
+**OG image** (1200×630 PNG on charcoal per THEME_SPEC 8: faint grid, coral glow, faint mark, reversed stacked lockup left, title right in Inter Tight 800, two lines when the title has two sentences; `--light` renders the old white variant). Pass the page H1 in Title Case exactly as SITE_SPEC prints it:
 ```
-node _tools/make-og.js <key> "<title>" [--dark]      →  /assets/og/og-<key>.png
+node _tools/make-og.js <key> "<title>" [--light]     →  /assets/og/og-<key>.png
 node _tools/make-og.js sap "S/4HANA, BTP and Integration Suite, Delivered Clean Core from the First Transport."
-node _tools/make-og.js value-lens "Value Lens: Margin Leak Finder for SAP O2C" --dark
+node _tools/make-og.js value-lens "Value Lens. The Margin Leak Finder for Order-to-Cash."
 node _tools/make-og.js suite "SAP Intelligence Suite. SAP Engineering in Plain English."
 ```
-Needs network for Google Fonts; it warns if Inter Tight did not load. `og-home.png` exists (regenerated with the Title Case tagline).
+Needs network for Google Fonts; it warns if Inter Tight did not load. All twelve images were regenerated on the charcoal theme with each page's H1 (home: the tagline).
 
 **Favicons**: `node _tools/render-icons.js` regenerates the PNGs from `/favicon.svg` (already done; only rerun if the mark changes, which it should not).
 
@@ -314,6 +323,7 @@ Chromium in this environment needed the proxy CA in the browser NSS store to loa
 ## 7. Foundation decisions worth knowing
 
 - **Lockup viewBox is 284×64, not 320×64.** Real Inter Tight metrics make "SVLS" 107 units wide at 44px (the spec estimated 112); LABS starts at x=195, which gives an 8.3-unit ink-to-ink gap between the S and the L (measured with canvas `measureText` on the loaded font, not on advance boxes), and the ink ends at ~280, so the canvas is trimmed to 284 for a 4-unit inset on both sides. The stacked lockup's wordmark (x 48 / 175.5) is centred under the mark with the same proportional gap. Inline lockups in the header (32px; 28px below 900px; mark-only below 400px) and footer (40px) use the page webfont; the exported files use `<text>` with the same family stack and weight, so they render with Inter Tight where it is installed/loaded and with a sans-serif fallback elsewhere. Outline conversion for print is a client TODO.
+- **Header height is 68px under the theme** (`--nav-h`), charcoal and translucent on every page; `theme.js` adds `.is-scrolled` for the drop shadow.
 - **Theme toggle**: desktop toggle (ring + half-ring) is shown from 1024px (SITE_SPEC says 1200; at 900–1023 the six nav items plus the button fill the bar, so the toggle is hidden there), the System/Light/Dark chips live in the Menu sheet below 900px. Choice stored under `localStorage['svls-theme']`; "System" removes the key. Pre-paint snippet lives in `head.html`.
 - **Menu sheet**: without JS the Menu control is `<a href="#site-nav">` (the footer nav). With JS it becomes a `<button>` with `aria-expanded`/`aria-controls`, the sheet traps focus (Close button included), locks body scroll, closes on Escape, backdrop click, Close, or a resize to ≥900px.
 - **Dropdowns (Services, Products)**: `site.js` wires every `.has-dropdown` independently and keeps **at most one panel open** (opening one closes the other). Open on hover, focus, click; a click on a panel that hover already opened keeps it open (pinned until mouseleave) instead of toggling it shut; Escape closes and returns focus; ArrowDown/ArrowUp/Home/End move within the open panel; closes on focus-out or outside click. No shadow on the panel (BRAND_SPEC 10 allows shadows only on the nav edge, the product frame and the mobile sheet). Panels are `width: max-content`, at least 460px, capped at 560px from 1024px (every description on one line) and at 460px below that, where the Products panel would otherwise run past the viewport's right edge at 900px (its Suite description wraps to two lines there, by design). Without JS the `.no-js` CSS fallback opens a panel on hover/focus-within.

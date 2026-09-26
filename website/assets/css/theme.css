@@ -270,7 +270,7 @@ main > section.section:nth-of-type(odd):not(.band-dark)  { background-color: var
 .pill { height: 24px; padding: 0 10px 0 9px; font-weight: 600; gap: 6px; }
 .pill::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: currentColor; flex: none; box-shadow: 0 0 6px currentColor; }
 .pill--high, .pill--medium {
-  background: color-mix(in srgb, currentColor 10%, transparent);
+  background: color-mix(in srgb, currentColor 6%, transparent); /* 6%: MEDIUM (#9A6412) stays 4.6:1 on white */
   border-color: color-mix(in srgb, currentColor 50%, transparent);
   box-shadow: 0 0 0 1px color-mix(in srgb, currentColor 8%, transparent), 0 0 14px color-mix(in srgb, currentColor 28%, transparent);
 }
