@@ -12,9 +12,9 @@ const pages = {
     <div style="position:absolute;right:-40px;top:-110px;opacity:.10">${mark(420,'#F3F4F6','#FF6A50')}</div>
     <div style="position:absolute;left:0;right:0;top:0;height:3px;background:linear-gradient(90deg,#E4432B,#FF6A50 40%,transparent)"></div>
     <div style="display:flex;align-items:center;gap:24px;position:relative">${mark(84,'#F3F4F6','#FF6A50')}<div style="font:800 54px/1 'Inter Tight',Inter,sans-serif;letter-spacing:-.01em">SVLS LABS</div></div>
-    <div style="position:relative;margin-left:auto;text-align:right;max-width:560px">
-      <div style="font:700 26px/1.2 'Inter Tight',Inter,sans-serif;letter-spacing:-.01em">SAP, Cloud and Governed AI. Engineered to Spec.</div>
-      <div style="font:500 13px/1 'JetBrains Mono',monospace;letter-spacing:.14em;color:#A9B1BD;margin-top:12px">S/4HANA · BTP · INTEGRATION SUITE · GOVERNED AGENTS · VALUE LENS · SVLSLABS.COM</div>
+    <div style="position:relative;margin-left:auto;text-align:right;max-width:640px">
+      <div style="font:700 28px/1.2 'Inter Tight',Inter,sans-serif;letter-spacing:-.01em;white-space:nowrap">SAP, Cloud and Governed AI.<br>Engineered to Spec.</div>
+      <div style="font:500 12px/1 'JetBrains Mono',monospace;letter-spacing:.12em;color:#A9B1BD;margin-top:12px;white-space:nowrap">S/4HANA · BTP · INTEGRATION SUITE · GOVERNED AGENTS · SVLSLABS.COM</div>
     </div></div>` },
 };
 (async () => {
