@@ -127,7 +127,7 @@ const fallback = `<?php get_header(); ?>
   <?php if ( $svls_hub ) : ?>
   <section class="section" aria-label="<?php echo esc_attr( $svls_hub['label'] ); ?>">
     <div class="container">
-      <div class="hgrid hgrid--3 hgrid--bottom">
+      <div class="hgrid hgrid--<?php echo 2 === count( $svls_hub['items'] ) ? '2' : '3'; ?> hgrid--bottom">
         <?php foreach ( $svls_hub['items'] as $i => $item ) : ?>
         <article class="practice">
           <span class="numeral practice__num"><?php echo esc_html( sprintf( '%02d', $i + 1 ) ); ?></span>
