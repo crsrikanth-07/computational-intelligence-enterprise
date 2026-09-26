@@ -112,11 +112,11 @@ Anomalies found and what was done:
 3. **/cancellation-and-refund-policy/** is still published from the old site and printed raw Divi shortcodes. The theme now strips Divi shortcodes from any leftover page, but the text itself is generic shop wording ("Thank you for shopping at SVLS LABS"). Client decision: draft it (Pages -> Quick Edit -> Status: Draft) or ask for a refund clause in /terms/ if a payment provider requires one.
 4. **Plugins from the old site still load on every page**: Click to Chat (green WhatsApp button bottom-left, which overlaps the hero copy on phones), Contact Form 7 and Everest Forms (scripts and styles, unused), Jetpack (jQuery and jquery-migrate from wp.com, stats script). Client decision; see the list below.
 5. **/favicon.ico** returns the host's 404 (GoDaddy answers missing static files before WordPress, and Cloudflare cached that 404 for 31 days). Browsers use the theme's icon links, so this is cosmetic. `favicon.ico` is now in the theme root; copying it to the web root through GoDaddy's file manager and purging the Cloudflare cache would close it.
-6. **robots.txt** now carries `Sitemap: https://svlslabs.com/wp-sitemap.xml`.
+6. **robots.txt** is a physical file at the web root (GoDaddy default: "User-Agent: *, Disallow:"), served before WordPress, so the theme's `robots_txt` filter (which adds the Sitemap line) never runs. Fix from GoDaddy's file manager: delete that file so WordPress serves its own robots.txt with the Sitemap line, or add `Sitemap: https://svlslabs.com/wp-sitemap.xml` to it. Alternatively submit the sitemap in Google Search Console.
 
 ## What to do next (client)
 
-1. **Upload the rebuilt theme zip** (`wordpress-theme/svls-labs.zip`) with "Replace current with uploaded". It carries items 1, 2, 3 and 6 above.
+1. ~~Upload the rebuilt theme zip~~ Done 26 September 2026, 21:05 UTC: verified live (old site icon gone, hub pages render, refund page cleaned).
 2. **Deactivate the old plugins** (Plugins -> Installed Plugins): Contact Form 7, Everest Forms, WPForms Lite (the theme's own handler delivers the forms), and Click to Chat unless the WhatsApp button is wanted. Jetpack can stay for stats, or go if the wp.com scripts are not wanted. Delete the inactive plugins and unused themes after the rollback window; keep Divi installed until then.
 3. **Draft the old refund page** or ask for a refund clause in /terms/.
 4. **Site Icon**: Appearance -> Customize -> Site Identity -> replace the old image with `website/assets/social/linkedin-logo-light.png` (or the favicon SVG rendered at 512 px).
