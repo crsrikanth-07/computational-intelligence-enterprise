@@ -71,7 +71,7 @@ $GLOBALS['svls_page_head'] = function () { ?>
   "url": "https://svlslabs.com/",
   "logo": "<?php echo esc_url( get_template_directory_uri() ); ?>/assets/logo/stacked.svg",
   "foundingDate": "2020",
-  "sameAs": ["https://www.linkedin.com/company/14559452/"]
+  "sameAs": ["https://www.linkedin.com/company/svlslabs/"]
 }
 </script>
 <?php };

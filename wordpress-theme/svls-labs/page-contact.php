@@ -63,7 +63,7 @@ $GLOBALS['svls_page_head'] = function () { ?>
       "address": {"@type": "PostalAddress", "streetAddress": "4th Floor, Aparna Astute, Shaikpet, Door No. 8-1-299/103&104/AA/4F-2, Jubilee Hills", "addressLocality": "Hyderabad", "postalCode": "500008", "addressRegion": "Telangana", "addressCountry": "IN"},
     "url": "https://svlslabs.com/",
     "foundingDate": "2020",
-    "sameAs": ["https://www.linkedin.com/company/14559452/"]
+    "sameAs": ["https://www.linkedin.com/company/svlslabs/"]
   }
 }
 </script>
@@ -217,7 +217,7 @@ get_header();
               </div>
               <div class="offices__row">
                 <dt class="mono-title">LinkedIn</dt>
-                <dd><a class="link" href="https://www.linkedin.com/company/14559452/" target="_blank" rel="noopener">SVLS LABS company page<span class="visually-hidden"> (opens in a new tab)</span></a></dd>
+                <dd><a class="link" href="https://www.linkedin.com/company/svlslabs/" target="_blank" rel="noopener">SVLS LABS company page<span class="visually-hidden"> (opens in a new tab)</span></a></dd>
               </div>
             </dl>
           </div>

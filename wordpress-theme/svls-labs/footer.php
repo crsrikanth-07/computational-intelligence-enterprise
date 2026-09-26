@@ -38,7 +38,7 @@
           <ul>
             <li><a href="/about/">About</a></li>
             <li><a href="/contact/">Contact</a></li>
-            <li><a href="https://www.linkedin.com/company/14559452/" target="_blank" rel="noopener">LinkedIn<span class="visually-hidden"> (opens in a new tab)</span></a></li>
+            <li><a href="https://www.linkedin.com/company/svlslabs/" target="_blank" rel="noopener">LinkedIn<span class="visually-hidden"> (opens in a new tab)</span></a></li>
             <li><a href="/privacy/">Privacy</a></li>
             <li><a href="/terms/">Terms</a></li>
           </ul>

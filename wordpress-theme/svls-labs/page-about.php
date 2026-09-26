@@ -67,7 +67,7 @@ $GLOBALS['svls_page_head'] = function () { ?>
       "logo": "<?php echo esc_url( get_template_directory_uri() ); ?>/assets/logo/stacked.svg",
       "foundingDate": "2020",
       "description": "SAP, cloud and governed agentic AI for enterprises that run on S/4HANA. Specified, built and verified by architects. Founded 2020.",
-      "sameAs": ["https://www.linkedin.com/company/14559452/"]
+      "sameAs": ["https://www.linkedin.com/company/svlslabs/"]
     }
   ]
 }
