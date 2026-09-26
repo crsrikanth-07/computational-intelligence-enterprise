@@ -35,10 +35,10 @@ async function api(p, opts = {}) {
 // Page plan: slug -> {title, template, parent?, content}. Templates match wordpress-theme/svls-labs/*.php.
 const PLAN = [
   { slug: 'home', title: 'SVLS LABS', template: '', front: true, content: '<!-- Rendered by front-page.php of the SVLS Labs theme -->' },
-  { slug: 'services', title: 'Services', template: '', content: '<p><a href="/services/sap/">SAP &amp; ERP</a> · <a href="/services/cloud/">Cloud</a> · <a href="/services/ai/">Agentic AI</a></p>' },
+  { slug: 'services', title: 'Services', template: '', content: '<p><a href="/services/sap/">SAP &amp; ERP</a> · <a href="/services/cloud/">Cloud</a> · <a href="/services/ai/">Agentic &amp; Applied AI</a></p>' },
   { slug: 'sap', parent: 'services', title: 'SAP & ERP', template: 'page-services-sap.php' },
   { slug: 'cloud', parent: 'services', title: 'Cloud', template: 'page-services-cloud.php' },
-  { slug: 'ai', parent: 'services', title: 'Agentic AI', template: 'page-services-ai.php' },
+  { slug: 'ai', parent: 'services', title: 'Agentic & Applied AI', template: 'page-services-ai.php' },
   { slug: 'products', title: 'Products', template: '', content: '<p><a href="/products/value-lens/">Value Lens (private beta)</a> · <a href="/products/sap-intelligence-suite/">SAP Intelligence Suite</a></p>' },
   { slug: 'value-lens', parent: 'products', title: 'Value Lens', template: 'page-products-value-lens.php' },
   { slug: 'sap-intelligence-suite', parent: 'products', title: 'SAP Intelligence Suite', template: 'page-products-sap-intelligence-suite.php' },

@@ -16,6 +16,13 @@ function svls_page_head() {
 	svls_default_head();
 }
 
+/** Prints aria-current="page" when the request path is the given site path (the static site bakes this in). */
+function svls_current( $path ) {
+	$uri = isset( $_SERVER['REQUEST_URI'] ) ? (string) wp_parse_url( $_SERVER['REQUEST_URI'], PHP_URL_PATH ) : '';
+	$uri = '/' . trim( $uri, '/' ) . '/';
+	if ( $uri === $path ) { echo ' aria-current="page"'; }
+}
+
 /** Head for generic WordPress pages that have no dedicated template (index.php / page.php). */
 function svls_default_head() { ?>
 <meta charset="utf-8">

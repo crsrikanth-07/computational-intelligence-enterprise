@@ -28,21 +28,21 @@
         <li class="site-nav__item has-dropdown">
           <button class="site-nav__link site-nav__trigger" type="button" aria-expanded="false" aria-controls="services-menu">Services<svg class="site-nav__chevron" viewBox="0 0 10 10" aria-hidden="true" focusable="false"><path d="M1 3.5l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button>
           <ul class="dropdown" id="services-menu">
-            <li><a href="/services/sap/"><span class="dropdown__title">SAP &amp; ERP</span><span class="dropdown__desc">S/4HANA, RISE, BTP, Integration Suite, Clean Core</span></a></li>
-            <li><a href="/services/cloud/"><span class="dropdown__title">Cloud</span><span class="dropdown__desc">SAP-to-cloud integration, migrations, cloud-native engineering</span></a></li>
-            <li><a href="/services/ai/"><span class="dropdown__title">Agentic &amp; Applied AI</span><span class="dropdown__desc">Governed agents on SAP BTP, applied AI methods, AI-assisted engineering</span></a></li>
+            <li><a href="/services/sap/"<?php svls_current( '/services/sap/' ); ?>><span class="dropdown__title">SAP &amp; ERP</span><span class="dropdown__desc">S/4HANA, RISE, BTP, Integration Suite, Clean Core</span></a></li>
+            <li><a href="/services/cloud/"<?php svls_current( '/services/cloud/' ); ?>><span class="dropdown__title">Cloud</span><span class="dropdown__desc">SAP-to-cloud integration, migrations, cloud-native engineering</span></a></li>
+            <li><a href="/services/ai/"<?php svls_current( '/services/ai/' ); ?>><span class="dropdown__title">Agentic &amp; Applied AI</span><span class="dropdown__desc">Governed agents on SAP BTP, applied AI methods, AI-assisted engineering</span></a></li>
           </ul>
         </li>
         <li class="site-nav__item has-dropdown">
           <button class="site-nav__link site-nav__trigger" type="button" aria-expanded="false" aria-controls="products-menu">Products<svg class="site-nav__chevron" viewBox="0 0 10 10" aria-hidden="true" focusable="false"><path d="M1 3.5l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button>
           <ul class="dropdown" id="products-menu">
-            <li><a href="/products/value-lens/"><span class="dropdown__title">Value Lens <span class="nav-beta">Private beta</span></span><span class="dropdown__desc">Margin leak finder for order-to-cash. Private beta.</span></a></li>
-            <li><a href="/products/sap-intelligence-suite/"><span class="dropdown__title">SAP Intelligence Suite</span><span class="dropdown__desc">AI-assisted SAP engineering workbench.</span></a></li>
+            <li><a href="/products/value-lens/"<?php svls_current( '/products/value-lens/' ); ?>><span class="dropdown__title">Value Lens <span class="nav-beta">Private beta</span></span><span class="dropdown__desc">Margin leak finder for order-to-cash. Private beta.</span></a></li>
+            <li><a href="/products/sap-intelligence-suite/"<?php svls_current( '/products/sap-intelligence-suite/' ); ?>><span class="dropdown__title">SAP Intelligence Suite</span><span class="dropdown__desc">AI-assisted SAP engineering workbench.</span></a></li>
           </ul>
         </li>
-        <li class="site-nav__item"><a class="site-nav__link" href="/approach/">Approach</a></li>
-        <li class="site-nav__item"><a class="site-nav__link" href="/about/">About</a></li>
-        <li class="site-nav__item"><a class="site-nav__link" href="/contact/">Contact</a></li>
+        <li class="site-nav__item"><a class="site-nav__link" href="/approach/"<?php svls_current( '/approach/' ); ?>>Approach</a></li>
+        <li class="site-nav__item"><a class="site-nav__link" href="/about/"<?php svls_current( '/about/' ); ?>>About</a></li>
+        <li class="site-nav__item"><a class="site-nav__link" href="/contact/"<?php svls_current( '/contact/' ); ?>>Contact</a></li>
       </ul>
     </nav>
     <div class="site-header__actions">

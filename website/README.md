@@ -24,7 +24,7 @@ website/
   assets/diagrams/                    landscape, method, control-model, practice glyphs, reference-cloud, valuelens-flow (SVG)
   assets/og/og-<key>.png              1200x630 social images, one per page, charcoal (THEME_SPEC 8)
   _partials/                          head.html, header.html, footer.html: the canonical markup every page copies (NOT deployed)
-  _tools/                             make-og.js (social images), render-icons.js (favicons), deploy-wp.js (WordPress REST upload) (NOT deployed)
+  _tools/                             make-og.js (social images), render-icons.js (favicons), make-wp-theme.js (WordPress theme generator), deploy-wp.js (WordPress REST upload) (NOT deployed)
   THEME_SPEC.md                       the visual system (supersedes BRAND_SPEC 5, 6, 10, 12)
   BUILD_NOTES.md                      component vocabulary and foundation decisions for anyone editing pages
   .htmlvalidate.json .htmlvalidateignore   html-validate configuration (partials are fragments and are ignored)
