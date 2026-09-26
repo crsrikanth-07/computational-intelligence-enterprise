@@ -1,0 +1,25 @@
+/* /services/cloud/ — page-specific styles (tokens only; loaded after site.css) */
+
+/* Offer blocks reuse .practice without the 24px glyph: the numeral opens the cell */
+.offer .practice__num { margin-top: 0; }
+
+/* Sections without a spec H2 use the eyebrow as their heading; keep it on one line
+   (h2 carries max-width: 24ch and text-wrap: balance, which wraps a tracked mono line). */
+h2.eyebrow { max-width: none; text-wrap: wrap; }
+
+/* White hero into a white section: the hero's own bottom padding is the gap */
+.hero + .section { padding-top: 0; }
+
+/* Reference architecture (SITE_SPEC 5.4): two drawings of the same landscape.
+   The wide one (960 x 350) is shown from 1024px, where its 13-unit labels render at 13px or more;
+   the tall one (400 x 500) is shown below that, capped at 480px so its labels stay 12px or more on a phone.
+   Selectors carry the svg element so they outrank .ref-diagram svg { display: block }. */
+.ref-diagram { margin-top: var(--s-7); display: flex; flex-direction: column; gap: var(--s-4); }
+.ref-diagram svg { width: 100%; height: auto; display: block; color: var(--text); }
+.ref-diagram svg.ref-diagram__wide { display: none; }
+.ref-diagram svg.ref-diagram__tall { max-width: 480px; }
+.ref-diagram figcaption { font: 500 12px/18px var(--font-mono); letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-muted); }
+@media (min-width: 1024px) {
+  .ref-diagram svg.ref-diagram__wide { display: block; }
+  .ref-diagram svg.ref-diagram__tall { display: none; }
+}

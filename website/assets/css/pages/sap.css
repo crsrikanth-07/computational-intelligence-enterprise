@@ -1,0 +1,31 @@
+/* /services/sap/ — page-specific styles (tokens only; loaded after site.css) */
+
+/* Offer blocks reuse .practice without the 24px glyph: the numeral opens the cell */
+.offer .practice__num { margin-top: 0; }
+
+/* Method step 01: the SAP-specific line under the generic step copy */
+.method__step .method__sap {
+  margin-top: var(--s-4); padding-top: var(--s-3); border-top: 1px solid var(--rule);
+  font-size: var(--fs-small); line-height: 1.6; color: var(--text-muted);
+}
+.method__sap .eyebrow { display: block; margin-bottom: var(--s-1); }
+
+/* Lead-magnet block: slim band, copy 1-8, action 9-12 (stacks below 1024px) */
+.magnet { border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+.magnet .grid { row-gap: var(--s-5); margin-top: var(--s-5); }
+.magnet h3 { max-width: 32ch; }
+.magnet__body { font-size: 15px; line-height: 24px; margin-top: var(--s-3); max-width: var(--measure); }
+.magnet__action { display: flex; flex-direction: column; align-items: flex-start; gap: var(--s-4); }
+.magnet__action .small { margin: 0; }
+@media (min-width: 1024px) {
+  .magnet__action { justify-content: flex-end; height: 100%; }
+}
+
+/* Hero without a diagram: the white hero and the white offer section would otherwise stack
+   256px of empty page between the micro-labels and the first offer; halve it. */
+.hero--sap { padding-bottom: var(--s-8); }
+#offer { padding-top: var(--s-8); }
+@media (min-width: 1024px) {
+  .hero--sap { padding-bottom: var(--s-9); }
+  #offer { padding-top: var(--s-7); }
+}

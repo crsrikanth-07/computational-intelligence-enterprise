@@ -1,7 +1,7 @@
 /* =============================================================================
    SVLS LABS — site.js
    One IIFE, no globals except window.SVLS (theme helpers for page scripts).
-   Modules: theme, Services dropdown, Menu sheet, current nav, reveal, forms, year.
+   Modules: theme, dropdowns (Services, Products), Menu sheet, current nav, reveal, forms, year.
    Everything degrades: without this file the nav links work, the Menu button
    is a link to #site-nav, forms post normally, content is visible.
    ============================================================================= */
@@ -77,9 +77,12 @@
   window.SVLS = { theme: { get: storedTheme, set: applyTheme, effective: effectiveTheme } };
 
   /* ---------------------------------------------------------------------------
-     Services dropdown: hover, focus and click open it; Escape closes and returns
-     focus; ArrowDown/ArrowUp/Home/End move through the rows.
+     Dropdowns (Services, Products): each .has-dropdown is wired on its own; hover,
+     focus and click open it; Escape closes and returns focus; ArrowDown/ArrowUp/
+     Home/End move through the rows of the open panel. Opening one panel closes
+     every other, so at most one is open at a time.
      --------------------------------------------------------------------------- */
+  var dropdowns = [];
   qsa('.has-dropdown').forEach(function (item) {
     var trigger = qs('.site-nav__trigger', item);
     var panel = qs('.dropdown', item);
@@ -88,9 +91,13 @@
     var openedByHover = false;
 
     function isOpen() { return item.classList.contains('is-open'); }
-    function open() { item.classList.add('is-open'); trigger.setAttribute('aria-expanded', 'true'); }
-    function close() { item.classList.remove('is-open'); trigger.setAttribute('aria-expanded', 'false'); openedByHover = false; }
+    function open() {
+      dropdowns.forEach(function (other) { if (other.item !== item) other.close(); });
+      item.classList.add('is-open'); trigger.setAttribute('aria-expanded', 'true');
+    }
+    function close() { clearTimeout(leaveTimer); item.classList.remove('is-open'); trigger.setAttribute('aria-expanded', 'false'); openedByHover = false; }
     function links() { return qsa('a', panel); }
+    dropdowns.push({ item: item, close: close });
 
     // A click on a panel that hover already opened keeps it open (and pins it until mouseleave).
     trigger.addEventListener('click', function () {

@@ -6,14 +6,14 @@
    00  Reset and base
    01  Type scale, text utilities, key-word underline
    02  Layout: container, 12-col grid, hairline grids, section anatomy, bands
-   03  Header, primary nav, Services dropdown, theme toggle, Menu sheet
+   03  Header, primary nav, Services and Products dropdowns, theme toggle, Menu sheet
    04  Buttons, text links, arrow links, chips, badge, severity pills, status
    05  Hero pieces: micro-label row, proof row, diagram figure
    06  Stat cells (proof strip)
    07  Practice columns
    08  Method timeline
    09  Control model: columns, spec table, pull-quote
-   10  Lists (points / rings), chip rows, book card
+   10  Lists (points / rings), chip rows, book card, product feature block, workbench mock
    11  Value Lens product frame
    12  FAQ (details)
    13  Forms
@@ -310,13 +310,17 @@ ul[role="list"], ol[role="list"] { list-style: none; margin: 0; padding: 0; }
   background: var(--accent); margin-left: 1px; align-self: center; flex: none;
 }
 
-/* Services dropdown: opens instantly (no animation) on hover, focus and click */
+/* Services / Products dropdowns: open instantly (no animation) on hover, focus and click; one panel at a time */
 .dropdown {
   position: absolute; top: 100%; left: -16px; z-index: 60;
-  display: none; min-width: 460px;
+  display: none; width: max-content; min-width: 460px; max-width: 460px;
   list-style: none; margin: 0; padding: var(--s-2) 0;
   background: var(--bg); border: 1px solid var(--rule);
 }
+/* From 1024px a panel may grow to 560px so every one-line description stays on one line (the Products
+   rows are longer than the Services rows). Below 1024px it stays at 460px, the widest the second panel
+   can be without running past the viewport's right edge at 900px. */
+@media (min-width: 1024px) { .dropdown { max-width: 560px; } }
 .has-dropdown.is-open > .dropdown { display: block; }
 .no-js .has-dropdown:hover > .dropdown,
 .no-js .has-dropdown:focus-within > .dropdown { display: block; }
@@ -672,14 +676,14 @@ body.sheet-open { overflow: hidden; }
 .book-title { font: 500 12px/16px var(--font-mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); }
 .cred h3 { margin-bottom: var(--s-4); }
 
-/* Product feature block (Addendum A.6): hairline frame, --r-2 corners, copy 1-6, mock 7-12 */
-.feature { margin-top: var(--s-7); border: 1px solid var(--rule); border-radius: var(--r-2); padding: var(--s-5) var(--s-4); }
-@media (min-width: 600px)  { .feature { padding: var(--s-6); } }
-@media (min-width: 1024px) { .feature__grid { align-items: start; } }
-.feature__copy h3 { margin-top: var(--s-5); max-width: 24ch; }
-.feature__body { margin-top: var(--s-3); font-size: 15px; line-height: 24px; max-width: var(--measure); }
-.feature__copy .status { margin-top: var(--s-3); }
-.feature__copy .btn-row { margin-top: var(--s-5); align-items: center; }
+/* Product feature block (Addendum A.6): hairline frame, --r-2 corners, copy 1-6, mock 7-12; stacks on phone */
+.product-feature { margin-top: var(--s-7); border: 1px solid var(--rule); border-radius: var(--r-2); padding: var(--s-5) var(--s-4); }
+@media (min-width: 600px)  { .product-feature { padding: var(--s-6); } }
+@media (min-width: 1024px) { .product-feature__grid { align-items: start; } }
+.product-feature__copy h3 { margin-top: var(--s-5); max-width: 24ch; }
+.product-feature__body { margin-top: var(--s-3); font-size: 15px; line-height: 24px; max-width: var(--measure); }
+.product-feature__copy .status { margin-top: var(--s-3); }
+.product-feature__copy .btn-row { margin-top: var(--s-5); align-items: center; }
 
 /* Product lockup (BRAND_SPEC 11.2): mark, name at 60% cap height on the bracket's lower edge, "by SVLS LABS" beneath */
 .product-lockup { display: flex; align-items: baseline; gap: var(--s-2); color: var(--text); }
@@ -688,7 +692,8 @@ body.sheet-open { overflow: hidden; }
 .product-lockup__name { font: 600 26px/1 var(--font-heading); letter-spacing: -0.01em; color: var(--text); }
 .product-lockup__by { font: 400 12px/16px var(--font-mono); letter-spacing: 0.04em; color: var(--text-muted); }
 
-/* Workbench mock (Addendum A.6): request bar, three request columns, library snapshot strip. Static, illustrative. */
+/* Workbench mock (Addendum A.6 / A.7.1): request bar, three request columns, library snapshot strip.
+   Static and illustrative. .workbench--lg is the hero-size variant for the Suite page. */
 .workbench { background: var(--surface); border: 1px solid var(--rule); border-radius: var(--r-2); padding: var(--s-3); font-family: var(--font-mono); }
 .workbench__bar { font: 400 13px/20px var(--font-mono); color: var(--text); background: var(--bg); border: 1px solid var(--rule); border-radius: var(--r-1); padding: 10px 12px; overflow-wrap: anywhere; }
 .workbench__cols { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--s-4); margin-top: var(--s-4); }
@@ -696,7 +701,15 @@ body.sheet-open { overflow: hidden; }
 .workbench__col .eyebrow { display: block; padding-bottom: var(--s-2); border-bottom: 1px solid var(--rule); }
 .workbench__col ul { list-style: none; margin: 0; padding: 0; }
 .workbench__col li { font: 400 12px/18px var(--font-mono); color: var(--text); padding: 6px 0; border-bottom: 1px solid var(--rule); overflow-wrap: anywhere; }
-.workbench__strip { margin-top: var(--s-4); padding-top: var(--s-3); border-top: 1px solid var(--rule); font: 500 12px/18px var(--font-mono); letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-muted); }
+.workbench .snapshot-strip { margin-top: var(--s-4); }
+.workbench--lg { padding: var(--s-4); }
+.workbench--lg .workbench__bar { font-size: 15px; line-height: 24px; padding: 12px 16px; }
+.workbench--lg .workbench__cols { margin-top: var(--s-5); }
+.workbench--lg .workbench__col li { font-size: 13px; line-height: 20px; padding: 8px 0; }
+.workbench--lg .snapshot-strip { margin-top: var(--s-5); }
+
+/* Library snapshot strip: one mono uppercase line on a hairline. Works inside the workbench or on its own. */
+.snapshot-strip { padding-top: var(--s-3); border-top: 1px solid var(--rule); font: 500 12px/18px var(--font-mono); letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-muted); }
 
 /* ---------------------------------------------------------------------------
    11  Value Lens product frame (BRAND_SPEC 9.3, SITE_SPEC 3.5)
@@ -708,6 +721,7 @@ body.sheet-open { overflow: hidden; }
   background: var(--surface); color: var(--text);
   overflow: hidden;
   font-family: var(--font-mono);
+  container-type: inline-size; /* the table stacks by the frame's own width, see below */
 }
 .frame.band-dark { box-shadow: var(--shadow-2); }
 .frame__head {
@@ -758,6 +772,27 @@ body.sheet-open { overflow: hidden; }
   .frame__table tr.frame__detail { padding: 0 16px 12px; border-top: 0; }
   .frame__table .frame__detail td { display: block; }
   .frame__table .frame__detail td::before { content: none; }
+}
+
+/* The same stacked layout whenever the frame itself is narrower than 540px, whatever the viewport:
+   the six-column table clips below that (a .col-6 frame is 468px at 1024px and 530px at 1150px).
+   Browsers without container queries keep the phone media query above. */
+@container (max-width: 539px) {
+  .frame__table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .frame__table thead tr, .frame__table thead th { display: block; width: 1px; padding: 0; }
+  .frame__table, .frame__table tbody, .frame__table tr, .frame__table td { display: block; }
+  .frame__table tr { padding: 10px 16px; border-top: 1px solid var(--rule); }
+  .frame__table tbody tr:first-child { border-top: 0; }
+  .frame__table td { display: flex; gap: var(--s-3); padding: 3px 0 !important; border: 0; }
+  .frame__table td::before {
+    content: attr(data-label); flex: 0 0 84px;
+    font: 500 12px/20px var(--font-mono); letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-muted);
+  }
+  .frame__table .num { text-align: left; }
+  .frame__table tr.frame__detail { padding: 0 16px 12px; border-top: 0; }
+  .frame__table .frame__detail td { display: block; }
+  .frame__table .frame__detail td::before { content: none; }
+  .frame__panel { grid-template-columns: minmax(0, 1fr); }
 }
 
 /* Value Lens band copy */
