@@ -89,7 +89,7 @@ Fonts stay Inter Tight / Inter / JetBrains Mono. The theme adds Inter Tight 800.
 | Lead | `clamp(17px, 0.35vw + 15.6px, 20px)` in heroes, max 56ch | Inter 400 |
 | Body / small | site.css sizes; `.small`, `.status`, `.trust` +0.002em | |
 | Eyebrow | 12/16 mono uppercase | 600, +0.1em |
-| Numeral | 13/16 mono | 600, +0.08em; in `.section-mark` a 24px coral pill (11px, +0.1em) |
+| Numeral | 13/16 mono | 600, +0.08em; in `.section-mark` a 24px coral pill (12px, +0.1em) |
 | Stat | `clamp(38px, 1.6vw + 28px, 52px)` | Inter Tight 700, -0.03em, tabular numerals (the brand's mono stat is retired) |
 | Mono in frames and workbench | 14/20 | JetBrains Mono 400 |
 
