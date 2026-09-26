@@ -28,9 +28,11 @@
 .notice .eyebrow { display: block; }
 .notice p { margin-top: var(--s-2); font-size: var(--fs-small); line-height: 1.6; }
 .notice p + p { margin-top: var(--s-2); }
+.legal-aside__block { border: 1px solid var(--sg-line, var(--rule)); border-radius: var(--sg-radius-lg, var(--r-2)); background: var(--sg-card, var(--bg)); box-shadow: var(--sg-shadow, none); padding: var(--s-4) var(--s-5); }
 .legal-aside__block .eyebrow { display: block; }
 .legal-aside__links { list-style: none; margin: var(--s-3) 0 0; padding: 0; border-top: 1px solid var(--rule); }
 .legal-aside__links li { border-bottom: 1px solid var(--rule); padding: var(--s-1) 0; }
+.legal-aside__links li:last-child { border-bottom: 0; padding-bottom: 0; }
 .legal-aside__links .arrow-link { margin-block: 0; }
 
 /* ---- 404: dark full page with the grid texture; fills the viewport under the nav ---- */
