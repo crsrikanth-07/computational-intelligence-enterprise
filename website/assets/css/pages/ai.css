@@ -5,3 +5,11 @@
 @media (min-width: 1024px) {
   .cta-band--ai h2 { max-width: 30ch; }
 }
+
+/* 03 Applied research (Addendum B.2): eight method cells, 4 -> 2 -> 1. Mono uppercase title in --text,
+   two-sentence body at 15/24 like the control cards, then a small muted "Applied to" line. */
+.method-cell { display: flex; flex-direction: column; }
+.method-cell__title { color: var(--text); margin: 0; max-width: none; }
+.method-cell__body { margin-top: var(--s-3); font-size: 15px; line-height: 24px; }
+.method-cell__applied { margin-top: auto; padding-top: var(--s-4); }
+.method-cell__applied .eyebrow { display: block; margin-bottom: 2px; }

@@ -58,6 +58,7 @@
     "itemListElement": [
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Governed agents on SAP BTP" } },
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI governance and human-in-the-loop design" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Applied research: probabilistic models, constraint engines, metaheuristic optimisation and retrieval systems" } },
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI-assisted SAP engineering" } }
     ]
   }
@@ -96,7 +97,7 @@
           <button class="site-nav__link site-nav__trigger" type="button" aria-expanded="false" aria-controls="products-menu">Products<svg class="site-nav__chevron" viewBox="0 0 10 10" aria-hidden="true" focusable="false"><path d="M1 3.5l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button>
           <ul class="dropdown" id="products-menu">
             <li><a href="/products/value-lens/"><span class="dropdown__title">Value Lens <span class="nav-beta">Private beta</span></span><span class="dropdown__desc">Margin leak finder for order-to-cash. Private beta.</span></a></li>
-            <li><a href="/products/sap-intelligence-suite/"><span class="dropdown__title">SAP Intelligence Suite</span><span class="dropdown__desc">AI-assisted SAP engineering workbench: iFlows, ABAP, RAP, functional answers.</span></a></li>
+            <li><a href="/products/sap-intelligence-suite/"><span class="dropdown__title">SAP Intelligence Suite</span><span class="dropdown__desc">AI-assisted SAP engineering workbench.</span></a></li>
           </ul>
         </li>
         <li class="site-nav__item"><a class="site-nav__link" href="/approach/">Approach</a></li>
@@ -195,7 +196,7 @@
         <article class="practice offer">
           <span class="numeral practice__num">03</span>
           <h3>AI-assisted SAP engineering</h3>
-          <p class="practice__body">Faster on repeatable objects: mapping specs, iFlow scaffolds, tests, runbooks, extension boilerplate. Never transport approval, never production changes, never arithmetic inside an LLM.</p>
+          <p class="practice__body">Faster on repeatable objects: mapping specs, integration flow scaffolds, tests, runbooks, extension boilerplate. Never transport approval, never production changes, never arithmetic inside an LLM.</p>
           <p class="practice__typical"><span class="eyebrow">Deliverables</span>accelerated build with architect review on every artefact.</p>
           <a class="arrow-link" href="/products/sap-intelligence-suite/">See SAP Intelligence Suite<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
         </article>
@@ -203,11 +204,68 @@
     </div>
   </section>
 
-  <!-- 03 Control model -->
+  <!-- 03 Applied research: the methods behind the agents (Addendum B.2) -->
+  <section class="section" id="methods" aria-labelledby="methods-title">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <div class="section-mark"><span class="numeral">03</span><p class="eyebrow">Applied research</p></div>
+        <h2 id="methods-title">The Methods Behind the Agents, Built and Run Before We Recommend Them.</h2>
+        <p class="subcopy">Agentic AI is the visible layer. Underneath it are methods our team has built and written up: probabilistic models, constraint engines, metaheuristic optimisers and retrieval systems. Most come with source code. The optimisers come with seeded results that reproduce to the cent.</p>
+      </div>
+      <div class="hgrid hgrid--4 hgrid--bottom methods-grid">
+        <div class="method-cell">
+          <h3 class="eyebrow method-cell__title">Markov chain models</h3>
+          <p class="method-cell__body">Order-1 and order-2 chains with context back-off and temperature-controlled sampling, written from scratch in the standard library. Transitions are learned by counting, so every probability can be read and audited.</p>
+          <p class="method-cell__applied small muted"><span class="eyebrow">Applied to</span>sequence generation from reference data, next-state prediction, process and clickstream simulation.</p>
+        </div>
+        <div class="method-cell">
+          <h3 class="eyebrow method-cell__title">Stochastic generation</h3>
+          <p class="method-cell__body">Seeded weighted random walks over hand-authored weight profiles, with each value projected onto an allowed set. 1 seed reproduces a run, in Python and in a JavaScript port for workflow automation.</p>
+          <p class="method-cell__applied small muted"><span class="eyebrow">Applied to</span>profile-driven sequence generation, scenario and what-if sampling, synthetic test data.</p>
+        </div>
+        <div class="method-cell">
+          <h3 class="eyebrow method-cell__title">Constraint-based generation</h3>
+          <p class="method-cell__body">Several candidates are sampled per step and the lowest-cost one is kept under hard and soft rules: range, step size, forbidden pairings, learned likelihood. A repair pass then finds remaining violations and fixes them locally.</p>
+          <p class="method-cell__applied small muted"><span class="eyebrow">Applied to</span>rule-conformant multi-stream generation, scheduling and allocation under rules, configuration validation with auto-repair.</p>
+        </div>
+        <div class="method-cell">
+          <h3 class="eyebrow method-cell__title">Simulated annealing</h3>
+          <p class="method-cell__body">Single- and multi-objective annealing with a Pareto archive and an 11-point weight sweep, so a decision-maker sees the whole trade-off frontier and a knee point. Our book documents it with a working prototype for transport mode selection against cost and CO2.</p>
+          <p class="method-cell__applied small muted"><span class="eyebrow">Applied to</span>transport mode selection, cost-versus-emissions planning, multi-objective scheduling.</p>
+        </div>
+        <div class="method-cell">
+          <h3 class="eyebrow method-cell__title">Adaptive genetic optimisation</h3>
+          <p class="method-cell__body">A genetic algorithm whose mutation and crossover rates adapt online to population diversity and stagnation, with capacity and demand limits as soft penalties. Our book documents it with a working prototype for 3-tier supplier, plant and distribution-centre assignment.</p>
+          <p class="method-cell__applied small muted"><span class="eyebrow">Applied to</span>supply-network design, plant and route selection, capacitated assignment.</p>
+        </div>
+        <div class="method-cell">
+          <h3 class="eyebrow method-cell__title">Swarm and hybrid optimisation</h3>
+          <p class="method-cell__body">Particle swarm and a hybrid swarm-genetic method for continuous decisions, benchmarked against the closed-form EOQ. Runs are repeated across 5 seeds and the mean is reported, not only the best run.</p>
+          <p class="method-cell__applied small muted"><span class="eyebrow">Applied to</span>inventory policy and order quantities, continuous parameter tuning.</p>
+        </div>
+        <div class="method-cell">
+          <h3 class="eyebrow method-cell__title">Retrieval-augmented generation</h3>
+          <p class="method-cell__body">Hybrid dense and keyword retrieval with cross-encoder re-ranking over SAP documentation and BPMN process exports. Every answer cites its document and page, and the model must say so when the context does not hold the answer.</p>
+          <p class="method-cell__applied small muted"><span class="eyebrow">Applied to</span>SAP functional questions, process documentation, private document libraries that stay on your infrastructure.</p>
+        </div>
+        <div class="method-cell">
+          <h3 class="eyebrow method-cell__title">Protocol-based agents</h3>
+          <p class="method-cell__body">A reference design for A2A agents on SAP BTP: agent cards, LangGraph orchestration and SAP AI Core models. The agent calls S/4HANA Cloud APIs as typed business tools from Joule or an external client. MCP tool catalogs sit under the same control model in Value Lens.</p>
+          <p class="method-cell__applied small muted"><span class="eyebrow">Applied to</span>governed agents on SAP BTP, Joule and agent-to-agent scenarios, custom Python jobs on SAP AI Core.</p>
+        </div>
+      </div>
+      <p class="control__line">Numbers still come from deterministic code. These methods generate, rank, retrieve and explain; a person decides.</p>
+      <div class="links control-links">
+        <a class="arrow-link" href="#faq">Which AI methods do you actually use?<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 Control model -->
   <section class="section" id="control-model" aria-labelledby="control-title">
     <div class="container">
       <div class="section-head" data-reveal>
-        <div class="section-mark"><span class="numeral">03</span><p class="eyebrow">Governed AI on SAP BTP</p></div>
+        <div class="section-mark"><span class="numeral">04</span><p class="eyebrow">Governed AI on SAP BTP</p></div>
         <h2 id="control-title">AI in Your ERP Is a Control Question Before It Is a Productivity Question.</h2>
         <p class="subcopy">The same agent that can raise a purchase order can raise the wrong one. Our agents explain; your people decide. The numbers never come from the model.</p>
       </div>
@@ -256,7 +314,7 @@
   <!-- 04 Proof (surface band, four cells) -->
   <section class="section band-surface" id="proof" aria-labelledby="proof-title">
     <div class="container">
-      <div class="section-mark mb-6"><span class="numeral">04</span><h2 class="eyebrow" id="proof-title">Facts with Sources</h2></div>
+      <div class="section-mark mb-6"><span class="numeral">05</span><h2 class="eyebrow" id="proof-title">Facts with Sources</h2></div>
       <ul class="hgrid hgrid--4 hgrid--bottom" role="list">
         <li class="stat-cell">
           <p class="stat stat-cell__num">0</p>
@@ -268,8 +326,9 @@
           <p class="stat-cell__label">reviewer on every write</p>
         </li>
         <li class="stat-cell">
-          <p class="stat stat-cell__num">2</p>
-          <p class="stat-cell__label">products built on the control model</p>
+          <p class="stat stat-cell__num">5</p>
+          <p class="stat-cell__label">algorithms in our book, each with a working prototype</p>
+          <p class="stat-cell__ctx">Adaptive genetic optimisation, simulated annealing, particle swarm, hybrid PSO-GA and Bessel-Fourier classification. Seeded, so every figure in the book reproduces.</p>
         </li>
         <li class="stat-cell">
           <p class="stat stat-cell__num">25+</p>
@@ -284,7 +343,7 @@
   <section class="section" id="ai-assisted" aria-labelledby="ai-title">
     <div class="container">
       <div class="section-head" data-reveal>
-        <div class="section-mark"><span class="numeral">05</span><p class="eyebrow">AI-assisted engineering</p></div>
+        <div class="section-mark"><span class="numeral">06</span><p class="eyebrow">AI-assisted engineering</p></div>
         <h2 id="ai-title">Repeatable SAP Engineering, Faster. With a List of What We Never Automate.</h2>
         <p class="subcopy">We use our own AI-assisted tooling for the repeatable parts of integration and extension work. Every generated artefact is reviewed by a certified architect before it reaches your landscape.</p>
       </div>
@@ -293,7 +352,7 @@
           <span class="mono-title">What we accelerate</span>
           <ul class="list-points">
             <li>Mapping specifications from domain contracts</li>
-            <li>iFlow scaffolds from the pattern library</li>
+            <li>Integration flow scaffolds from the pattern library</li>
             <li>Test cases and read-back checks</li>
             <li>Runbooks and handover documentation</li>
             <li>Clean Core extension boilerplate on BTP</li>
@@ -320,7 +379,7 @@
   <!-- 06 Lead magnet -->
   <section class="section section--slim band-surface slim-band" id="checklist" aria-labelledby="checklist-title">
     <div class="container">
-      <div class="section-mark"><span class="numeral">06</span><p class="eyebrow">Checklist</p></div>
+      <div class="section-mark"><span class="numeral">07</span><p class="eyebrow">Checklist</p></div>
       <div class="grid">
         <div class="col-8">
           <h3 id="checklist-title">The Governed Agent Control Checklist for SAP BTP.</h3>
@@ -337,7 +396,7 @@
   <!-- 07 FAQ -->
   <section class="section" id="faq" aria-labelledby="faq-title">
     <div class="container">
-      <div class="section-mark mb-6"><span class="numeral">07</span><h2 class="eyebrow" id="faq-title">Questions</h2></div>
+      <div class="section-mark mb-6"><span class="numeral">08</span><h2 class="eyebrow" id="faq-title">Questions</h2></div>
       <div class="faq-list">
         <details class="faq">
           <summary>Can the agent post to SAP on its own?<svg class="faq__glyph" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M0 8h16" stroke="currentColor" stroke-width="1.5"/><path class="v" d="M8 0v16" stroke="currentColor" stroke-width="1.5"/></svg></summary>
@@ -359,6 +418,10 @@
           <summary>Is Value Lens what you would build for us?<svg class="faq__glyph" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M0 8h16" stroke="currentColor" stroke-width="1.5"/><path class="v" d="M8 0v16" stroke="currentColor" stroke-width="1.5"/></svg></summary>
           <div class="faq__body"><p><a href="/products/value-lens/">Value Lens</a> is our product for order-to-cash margin leakage, in private beta. Client agents use the same control model and catalog approach against your own processes.</p></div>
         </details>
+        <details class="faq">
+          <summary>Which AI methods do you actually use?<svg class="faq__glyph" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M0 8h16" stroke="currentColor" stroke-width="1.5"/><path class="v" d="M8 0v16" stroke="currentColor" stroke-width="1.5"/></svg></summary>
+          <div class="faq__body"><p>Deterministic code for every number. That rule comes first. Around it, methods our team has built and run. Markov chain and stochastic models for sequences and simulation. Constraint-based generation with repair passes. Metaheuristic optimisation: adaptive genetic, simulated annealing, particle swarm and hybrid PSO-GA. Bessel-Fourier descriptors with a linear SVM for image classification. Retrieval-augmented generation with hybrid retrieval, re-ranking and citations. A2A agents with LangGraph on SAP AI Core, and MCP tool catalogs in Value Lens. Most are published with source code; the rest are in our book with working prototypes.</p></div>
+        </details>
       </div>
     </div>
   </section>
@@ -367,7 +430,7 @@
   <section class="section has-grid cta-band cta-band--ai" id="next-step" aria-labelledby="next-title">
     <div class="container">
       <div class="section-head" data-reveal>
-        <div class="section-mark"><span class="numeral">08</span><p class="eyebrow">Next step</p></div>
+        <div class="section-mark"><span class="numeral">09</span><p class="eyebrow">Next step</p></div>
         <h2 id="next-title">Start with a Read-Only Catalog Against Your Landscape. Decide About Writes When You Have Seen the Evidence.</h2>
       </div>
       <div class="btn-row">

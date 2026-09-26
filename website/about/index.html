@@ -97,7 +97,7 @@
           <button class="site-nav__link site-nav__trigger" type="button" aria-expanded="false" aria-controls="products-menu">Products<svg class="site-nav__chevron" viewBox="0 0 10 10" aria-hidden="true" focusable="false"><path d="M1 3.5l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button>
           <ul class="dropdown" id="products-menu">
             <li><a href="/products/value-lens/"><span class="dropdown__title">Value Lens <span class="nav-beta">Private beta</span></span><span class="dropdown__desc">Margin leak finder for order-to-cash. Private beta.</span></a></li>
-            <li><a href="/products/sap-intelligence-suite/"><span class="dropdown__title">SAP Intelligence Suite</span><span class="dropdown__desc">AI-assisted SAP engineering workbench: iFlows, ABAP, RAP, functional answers.</span></a></li>
+            <li><a href="/products/sap-intelligence-suite/"><span class="dropdown__title">SAP Intelligence Suite</span><span class="dropdown__desc">AI-assisted SAP engineering workbench.</span></a></li>
           </ul>
         </li>
         <li class="site-nav__item"><a class="site-nav__link" href="/approach/">Approach</a></li>
@@ -185,7 +185,7 @@
       <div class="section-mark mb-6"><span class="numeral">02</span><h2 class="eyebrow" id="story-title">The Story Since 2020</h2></div>
       <div class="grid story" data-reveal>
         <p class="col-6">We started in 2020 with a narrow ambition: to be the SAP engineering team that enterprises keep after go-live, because the work holds. Our key architects brought 25+ years of SAP delivery experience across integration, S/4HANA programmes and BTP. The first years were integration work: flows built from a pattern library, a written contract per interface and a read-back check after every run.</p>
-        <p class="col-6">From there the work extended into the cloud around SAP, with contracted extracts to BigQuery and Salesforce integration, and then into agentic AI on SAP BTP, where we published reference implementations for agents, retrieval over SAP documentation and iFlow generation, and built the control model that goes with them. Value Lens, our margin leak finder for order-to-cash, is the product we built to prove that an agent can explain without being allowed to decide. It is in private beta on synthetic data, and we say so on every page. SAP Intelligence Suite is the workbench we use for our own engineering.</p>
+        <p class="col-6">From there the work extended into the cloud around SAP, with contracted extracts to BigQuery and Salesforce integration, and then into agentic AI on SAP BTP, where we published reference implementations for agents, retrieval over SAP documentation and integration flow generation, and built the control model that goes with them. Value Lens, our margin leak finder for order-to-cash, is the product we built to prove that an agent can explain without being allowed to decide. It is in private beta on synthetic data, and we say so on every page. SAP Intelligence Suite is the workbench we use for our own engineering.</p>
       </div>
       <ul class="microlabels story__strip">
         <li>2020 · Founded</li>
@@ -262,7 +262,11 @@
         </div>
         <div class="col-9 research__copy">
           <h3>Research and publications.</h3>
-          <p>Our team authored the technical book <cite>Computational Intelligence for Enterprise Systems: Advanced Optimization Algorithms with Working Prototypes</cite>, covering supply-chain optimisation with working prototypes: adaptive genetic optimisation, multi-objective simulated annealing, particle swarm optimisation and hybrid PSO-GA. The same rigour goes into every client build.</p>
+          <p>Our team authored the technical book <cite>Computational Intelligence for Enterprise Systems: Advanced Optimization Algorithms with Working Prototypes</cite>. It covers supply-chain optimisation with working prototypes. Adaptive genetic optimisation designs supply networks. Multi-objective simulated annealing selects transport modes. Particle swarm and hybrid PSO-GA set inventory policy. Bessel-Fourier descriptors with a linear SVM classify images. Underneath sits a primer on stochastic foundations, Markov chains and Monte Carlo methods. The closing chapter is a deployment blueprint. It gives a JSON service contract per algorithm, a compute budget and a staged rollout from shadow to advisory to automated. A human override stays in place throughout.</p>
+          <p>Our open engineering work is published on GitHub. It holds a reference design for A2A agents on SAP BTP and a retrieval-augmented generation service over SAP documentation and process models. It also holds deterministic CPI integration flow generation and probabilistic sequence models built on Markov chains and constraint-based decoding. The same rigour goes into every client build.</p>
+          <div class="links links--after research__links">
+            <a class="arrow-link" href="/services/ai/#methods">The methods behind the agents<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
+          </div>
         </div>
       </div>
     </div>

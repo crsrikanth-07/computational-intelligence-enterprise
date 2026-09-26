@@ -34,6 +34,8 @@
 .research { row-gap: var(--s-5); }
 .research__copy h3 { margin-bottom: var(--s-3); }
 .research__copy p { max-width: var(--measure); }
+.research__copy p + p { margin-top: var(--s-4); }
+.research__links { margin-top: var(--s-5); }
 .research__copy cite { font-style: normal; font-weight: 500; }
 @media (min-width: 1024px) { .research { align-items: start; } }
 
