@@ -40,3 +40,79 @@
 @media (min-width: 600px) { .beta-grid { margin-top: var(--s-7); } }
 .beta-copy .subcopy { margin-top: var(--s-4); }
 .beta-copy .status { margin-top: var(--s-4); }
+
+/* ---------------------------------------------------------------------------
+   Addendum D sections (tokens only)
+   --------------------------------------------------------------------------- */
+
+/* D.1 One case: table label above the spec table, 2 x 2 stat cells in the right column, result line */
+.case-grid { margin-top: 0; }
+.case-label { display: block; margin-bottom: var(--s-3); }
+@media (min-width: 1024px) { .case-result .stat-cell:nth-child(2n+1)::before { left: 0; } }
+.stat-cell__num--pill { display: flex; align-items: center; height: 44px; }
+.pill--stat { height: 36px; padding: 0 14px; font-size: 17px; line-height: 1; letter-spacing: 0.06em; }
+.case-line { margin-top: var(--s-6); max-width: var(--measure); }
+
+/* D.2 Architecture: the diagram sits between the section head and the four cards */
+.diagram--arch { margin-top: 0; margin-bottom: var(--s-7); }
+.diagram--arch svg.diagram__tall { max-width: 400px; }
+
+/* D.3 Tools: five mono cells, one hairline row each below 1024px, five columns from 1024px */
+.tools > li { padding: var(--s-4) 0; }
+.tool__name { font: 500 14px/22px var(--font-mono); letter-spacing: 0; text-transform: none; margin: 0; max-width: none; color: var(--text); overflow-wrap: anywhere; }
+.tools p { margin-top: var(--s-2); font-size: 15px; line-height: 24px; }
+@media (min-width: 1024px) {
+  .tools { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+  .tools > li { padding: var(--s-5); }
+  .tools > li:first-child { padding-left: 0; }
+  .tools > li + li { border-left: 1px solid var(--rule); }
+  .tools > li:last-child { padding-right: 0; }
+}
+
+/* D.5 Coverage: body beside a three-row scale (mono key left, figure right) */
+.coverage-grid { margin-top: 0; }
+.coverage__body { max-width: var(--measure); }
+.coverage-scale > li { display: flex; justify-content: space-between; align-items: baseline; gap: var(--s-4); padding: var(--s-3) 0; }
+.coverage-scale__key { font: 400 14px/22px var(--font-mono); color: var(--text-muted); }
+.coverage-scale .stat { font-size: var(--fs-h3); line-height: 1.2; }
+
+/* D.7 Audit: body in two columns from 1024px (like the business question), then two cards */
+.audit__body { max-width: var(--measure); }
+@media (min-width: 1024px) {
+  .audit__body { max-width: none; column-count: 2; column-gap: var(--gap); column-rule: 1px solid var(--rule); }
+}
+.audit-cards { margin-top: var(--s-7); }
+
+/* 7.5 + D.9 Scope: beta list (1-4) beside the roadmap (5-12); 15 milestones on the method timeline,
+   4 per row from 1024px, 3 per row from 600px, a numbered hairline list on phone */
+.scope-grid { margin-top: var(--s-6); }
+.roadmap .eyebrow { margin: 0; }
+.method--milestones { margin-top: var(--s-4); }
+.method--milestones .method__step { padding: var(--s-4) 0; }
+.milestone { display: block; font-size: 15px; line-height: 24px; margin-top: var(--s-2); }
+@media (max-width: 599px) {
+  .method--milestones { border-bottom: 1px solid var(--rule); }
+  .method--milestones .method__step { display: grid; grid-template-columns: 48px minmax(0, 1fr); column-gap: var(--s-3); padding: var(--s-3) 0; }
+  .method--milestones .method__step::before { display: none; }
+  .method--milestones .numeral { padding-top: 4px; }
+  .method--milestones .milestone { margin-top: 0; }
+}
+@media (min-width: 600px) {
+  .method--milestones { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .method--milestones .method__step { padding-right: var(--s-4); }
+}
+@media (min-width: 1024px) { .method--milestones { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.roadmap__line { margin-top: var(--s-5); font-size: 15px; line-height: 24px; max-width: var(--measure); }
+.roadmap .status { margin-top: var(--s-3); }
+
+/* D.8 Guardrails: two mono lists; a full-bleed hairline separates two adjacent surface bands */
+.band-surface + .band-surface { border-top: 1px solid var(--rule); }
+.guardrails-grid { row-gap: 0; }
+@media (max-width: 1023px) {
+  .guardrails-grid .list-mono:first-child > li:last-child { border-bottom: 0; }
+  .guardrails-grid .list-mono + .list-mono > li:first-child { border-top: 1px solid var(--rule); padding-top: var(--s-2); }
+}
+
+/* D.10 Stack chips */
+.stack-chips { margin-top: var(--s-5); }
+.stack-chips .chip { white-space: normal; height: auto; min-height: 32px; padding-block: 6px; line-height: 16px; }
