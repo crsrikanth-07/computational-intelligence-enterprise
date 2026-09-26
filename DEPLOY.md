@@ -130,7 +130,7 @@ GitHub Pages serves the repository root or `/docs`, not an arbitrary folder, so 
 
 ## C. Option C: automated WordPress deployment from a Claude session
 
-`website/_tools/deploy-wp.js` performs option A through the WordPress REST API (pages, front page, verification) and, when allowed, uploads the theme through a headless browser (the REST API cannot install themes). It is idempotent: re-running updates the same pages by slug.
+`website/_tools/deploy-wp.js` performs option A through the WordPress REST API (pages, front page, verification) and, when `WP_PASSWORD` is set, uploads and activates the theme through a cookie-authenticated wp-admin session made of plain HTTPS requests (the REST API cannot install themes; no headless browser is needed). It is idempotent: re-running updates the same pages by slug.
 
 ### C.1 Environment
 
@@ -141,7 +141,7 @@ Set these in the session environment (never in a file in the repository, never p
 | `WP_URL` | `https://svlslabs.com` |
 | `WP_USER` | an Administrator account |
 | `WP_APP_PASSWORD` | an Application Password for that account: Users -> Profile -> Application Passwords -> name it "deploy" -> Add New; copy the 24-character password (spaces are ignored). Requires HTTPS on the site |
-| `WP_PASSWORD` | optional, the account's normal login password, used only by the headless browser to upload and activate the theme zip. Without it the script stops with a warning and the theme is uploaded by hand (A.2), after which the script is re-run |
+| `WP_PASSWORD` | optional, the account's normal login password, used only for the wp-admin session that uploads and activates the theme zip and flushes the host cache. Without it the script warns and the theme is uploaded by hand (A.2), after which the script is re-run |
 
 ### C.2 Pre-flight
 
@@ -162,17 +162,18 @@ node website/_tools/deploy-wp.js --dry-run
 
 ```
 cd wordpress-theme && rm -f svls-labs.zip && zip -qr svls-labs.zip svls-labs && cd ..
-node website/_tools/deploy-wp.js            # theme via browser (needs WP_PASSWORD and playwright), pages via REST
+node website/_tools/deploy-wp.js            # theme via wp-admin session (needs WP_PASSWORD), pages via REST
+node website/_tools/deploy-wp.js --skip-cache   # do not follow the host's "Flush Cache" link afterwards
 node website/_tools/deploy-wp.js --skip-theme   # when the theme was uploaded by hand
 ```
 
-What the script does, in order: pre-flight (REST root, authenticated user, role) -> reads the active theme (`/wp/v2/themes?status=active`) -> if `svls-labs` is not active and `WP_PASSWORD` is set, logs in with Playwright, uploads `wordpress-theme/svls-labs.zip` at `wp-admin/theme-install.php?browse=upload`, accepts "Replace current with uploaded" and activates -> creates or updates the 13 pages in A.3 with the correct parents and templates (`/wp/v2/pages`) -> sets the static front page and the site title and tagline (`/wp/v2/settings`) -> fetches each public URL and checks it is served by the new theme and prints the H1. The result is written to `website/_tools/deploy-report.json` (steps, warnings, errors); the exit code is 1 on any error.
+What the script does, in order: pre-flight (REST root, authenticated user, role) -> reads the active theme (`/wp/v2/themes?status=active`) -> if `svls-labs` is not active and `WP_PASSWORD` is set, logs in at `wp-login.php`, uploads `wordpress-theme/svls-labs.zip` through `update.php?action=upload-theme` (the form on `theme-install.php?browse=upload`), accepts "Replace current with uploaded" and activates -> creates or updates the 13 pages in A.3 with the correct parents and templates (`/wp/v2/pages`) -> sets the static front page and the site title and tagline (`/wp/v2/settings`) -> follows the admin-bar "Flush Cache" link (GoDaddy) -> fetches each public URL plus a random 404 URL and checks it is served by the new theme, prints the H1, counts the head tags and looks for PHP errors. The result is written to `website/_tools/deploy-report.json` (steps, warnings, errors); the exit code is 1 on any error.
 
 Media: none needs uploading. Every image, diagram, OG image and icon ships inside the theme (`/wp-content/themes/svls-labs/assets/...`), so `/wp/v2/media` is not used. The templates point the `og:image` and JSON-LD `logo` at the theme directory.
 
 After the run: A.5 (plugins) and A.6 (verification) still apply; the script cannot deactivate plugins or configure an SEO plugin through REST.
 
-### C.4 When the browser step is not possible
+### C.4 When the wp-admin step is not possible
 
 Upload the zip by hand (A.2), activate, then `node website/_tools/deploy-wp.js --skip-theme`. Pages created while the old theme was active are saved without a template and re-saved with the right template on the next run after activation.
 
