@@ -13,16 +13,16 @@
   <circle cx="617" cy="60" r="3" fill="currentColor"/>
   <circle cx="617" cy="170" r="3" fill="currentColor"/>
   <circle cx="617" cy="280" r="3" fill="currentColor"/>
-  <rect x="624.75" y="32.75" width="214.5" height="54.5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+  <rect x="624.5" y="32.75" width="215" height="54.5" fill="none" stroke="currentColor" stroke-width="1.5"/>
   <text x="732" y="56">BIGQUERY</text>
   <text x="732" y="75" fill-opacity="0.72" font-weight="400">GCP · CLOUD DATA</text>
-  <rect x="624.75" y="142.75" width="214.5" height="54.5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+  <rect x="624.5" y="142.75" width="215" height="54.5" fill="none" stroke="currentColor" stroke-width="1.5"/>
   <text x="732" y="166">SALESFORCE</text>
   <text x="732" y="185" fill-opacity="0.72" font-weight="400">ORDER-TO-CASH</text>
-  <rect x="624.75" y="252.75" width="214.5" height="54.5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+  <rect x="624.5" y="252.75" width="215" height="54.5" fill="none" stroke="currentColor" stroke-width="1.5"/>
   <text x="732" y="276">CLOUD RUN SERVICES</text>
   <text x="732" y="295" fill-opacity="0.72" font-weight="400">GCP · APIS</text>
-  <path d="M840 60h60M840 170h60M840 280h60M900 60v270H110v-116" fill="none" stroke="currentColor" stroke-width="1"/>
-  <circle cx="110" cy="214" r="4" fill="var(--svls-accent, #E4432B)"/>
+  <path d="M840 60h60M840 170h60M840 280h60M900 60v270H110v-117" fill="none" stroke="currentColor" stroke-width="1"/>
+  <circle cx="110" cy="213" r="4" fill="var(--svls-accent, #E4432B)"/>
   <text x="505" y="322" fill-opacity="0.72" font-weight="400">RECONCILE TO SAP TOTALS</text>
 </svg>

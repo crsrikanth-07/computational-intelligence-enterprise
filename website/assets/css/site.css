@@ -745,24 +745,27 @@ p.method__extra { font-size: var(--fs-small); line-height: 1.6; color: var(--tex
 .product-lockup__name { font: 600 26px/1 var(--font-heading); letter-spacing: -0.01em; color: var(--text); }
 .product-lockup__by { font: 400 12px/16px var(--font-mono); letter-spacing: 0.04em; color: var(--text-muted); }
 
-/* Workbench mock (Addendum A.6 / A.7.1): request bar, three request columns, library snapshot strip.
-   Static and illustrative. .workbench--lg is the hero-size variant for the Suite page. */
+/* Workbench visual (Addendum A.6 / A.7.1, v2 generic): a placeholder request bar, three mode tiles, a mono footer line.
+   No prompts, no numbers. Static and illustrative. .workbench--lg is the hero-size variant for the Suite page. */
 .workbench { background: var(--surface); border: 1px solid var(--rule); border-radius: var(--r-2); padding: var(--s-3); font-family: var(--font-mono); }
 .workbench__bar { font: 400 13px/20px var(--font-mono); color: var(--text); background: var(--bg); border: 1px solid var(--rule); border-radius: var(--r-1); padding: 10px 12px; overflow-wrap: anywhere; }
+.workbench__bar--placeholder { color: var(--text-muted); }
 .workbench__cols { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--s-4); margin-top: var(--s-4); }
 @media (min-width: 600px) { .workbench__cols { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s-4); } }
 .workbench__col .eyebrow { display: block; padding-bottom: var(--s-2); border-bottom: 1px solid var(--rule); }
 .workbench__col ul { list-style: none; margin: 0; padding: 0; }
-.workbench__col li { font: 400 12px/18px var(--font-mono); color: var(--text); padding: 6px 0; border-bottom: 1px solid var(--rule); overflow-wrap: anywhere; }
-.workbench .snapshot-strip { margin-top: var(--s-4); }
+.workbench__col li, .workbench__line { font: 400 12px/18px var(--font-mono); color: var(--text); padding: 6px 0; border-bottom: 1px solid var(--rule); overflow-wrap: anywhere; }
+.workbench__line { padding: 8px 0 0; border-bottom: 0; }
+.workbench__foot { margin-top: var(--s-4); }
 .workbench--lg { padding: var(--s-4); }
 .workbench--lg .workbench__bar { font-size: 15px; line-height: 24px; padding: 12px 16px; }
 .workbench--lg .workbench__cols { margin-top: var(--s-5); }
-.workbench--lg .workbench__col li { font-size: 13px; line-height: 20px; padding: 8px 0; }
-.workbench--lg .snapshot-strip { margin-top: var(--s-5); }
+.workbench--lg .workbench__col li, .workbench--lg .workbench__line { font-size: 13px; line-height: 20px; padding: 8px 0; }
+.workbench--lg .workbench__line { padding-bottom: 0; }
+.workbench--lg .workbench__foot { margin-top: var(--s-5); }
 
-/* Library snapshot strip: one mono uppercase line on a hairline. Works inside the workbench or on its own. */
-.snapshot-strip { padding-top: var(--s-3); border-top: 1px solid var(--rule); font: 500 12px/18px var(--font-mono); letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-muted); }
+/* Workbench footer line: one mono uppercase line on a hairline */
+.workbench__foot { padding-top: var(--s-3); border-top: 1px solid var(--rule); font: 500 12px/18px var(--font-mono); letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-muted); }
 
 /* ---------------------------------------------------------------------------
    11  Value Lens product frame (BRAND_SPEC 9.3, SITE_SPEC 3.5)
