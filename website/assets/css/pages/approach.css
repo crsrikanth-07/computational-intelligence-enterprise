@@ -21,3 +21,9 @@
 @media (min-width: 900px) {
   .partner-row { grid-template-columns: minmax(0, 1fr) auto; gap: var(--s-6); }
 }
+
+/* Security commitments: the numbered list sits in one 12px-radius card (same panel as the standards table above it) */
+#security .list-numbered--lg { border: 1px solid var(--sg-line); border-radius: var(--sg-radius-lg); background: var(--sg-card); box-shadow: var(--sg-shadow); padding: 0 var(--s-4); }
+#security .list-numbered--lg > li:first-child { border-top: 0; }
+#security .list-numbered--lg > li { padding-left: var(--s-2); padding-right: var(--s-2); }
+@media (min-width: 600px) { #security .list-numbered--lg { padding: 0 var(--s-5); } }

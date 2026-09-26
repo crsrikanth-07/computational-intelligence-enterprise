@@ -105,13 +105,11 @@
 .roadmap__line { margin-top: var(--s-5); font-size: 15px; line-height: 24px; max-width: var(--measure); }
 .roadmap .status { margin-top: var(--s-3); }
 
-/* D.8 Guardrails: two mono lists; a full-bleed hairline separates two adjacent surface bands */
-.band-surface + .band-surface { border-top: 1px solid var(--rule); }
-.guardrails-grid { row-gap: 0; }
-@media (max-width: 1023px) {
-  .guardrails-grid .list-mono:first-child > li:last-child { border-bottom: 0; }
-  .guardrails-grid .list-mono + .list-mono > li:first-child { border-top: 1px solid var(--rule); padding-top: var(--s-2); }
-}
+/* D.8 Guardrails: the two mono lists sit in cards (theme card language; bands alternate automatically) */
+.guardrails-grid { row-gap: var(--s-5); }
+.guardrails-grid > .list-mono { background: var(--sg-card, var(--surface)); border: 1px solid var(--sg-line, var(--rule)); border-radius: var(--sg-radius, var(--r-2)); box-shadow: var(--sg-shadow, none); padding: var(--s-5) 28px; }
+.guardrails-grid > .list-mono > li:last-child { border-bottom: 0; }
+@media (max-width: 599px) { .guardrails-grid > .list-mono { padding: var(--s-5) var(--s-5); } }
 
 /* D.10 Stack chips */
 .stack-chips { margin-top: var(--s-5); }
