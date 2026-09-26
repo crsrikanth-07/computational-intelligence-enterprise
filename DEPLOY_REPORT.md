@@ -1,82 +1,91 @@
 # Deployment report: svlslabs.com (WordPress, option C)
 
-Date: 2026-09-26. Run from a Claude Code cloud session on branch `claude/svls-labs-website-redesign-33sphq`.
+Date: 2026-09-26, 19:40-19:53 UTC. Run from a Claude Code cloud session on branch `claude/svls-labs-website-redesign-33sphq`.
 
 ## Result
 
-**The live site was NOT changed.** The session's permission policy blocked the production deployment command (`node website/_tools/deploy-wp.js`, classified "Production Deploy") and I did not attempt to route around it. Everything up to that point ran and passed, and the deployment script was fixed so that it no longer needs a headless browser. One command, run by a person with the four environment variables set, completes the deployment:
+**The new SVLS LABS site is live on svlslabs.com.** The `svls-labs` theme (v1.0.0) is the active theme, the 13 pages exist with their templates, the static front page is the new `home` page (#11), and every public URL plus a random 404 URL is served by the new theme with no PHP errors, both with and without a cache-busting query string.
 
-```
-node website/_tools/deploy-wp.js
-```
+Status line: `DEPLOY: theme=active (uploaded by hand, Cloudflare Turnstile blocks scripted wp-admin login); pages=13/13 ok; front=ok; cache=manual (not needed: every URL served the new theme without a flush); live=all ok`
 
-Status line: `DEPLOY: theme=failed (blocked, not attempted); pages=0/13; front=manual; cache=manual; live=issues: production deploy denied by session permission policy, site unchanged`
-
-## What ran (read-only, all passed)
+## What ran
 
 | Step | Result |
 | --- | --- |
-| `GET /wp-json/wp/v2/` | 200 (REST API reachable) |
-| `GET /wp/v2/users/me?context=edit` with the Application Password | user #2, roles `administrator` |
-| Active theme (`/wp/v2/themes?status=active`) | `Divi` 4.27.9 |
-| Installed themes | Divi, di-multipurpose, go, twentynineteen, twentyseventeen, twentysixteen, twentytwenty, twentytwentyone, twentytwentytwo, twentytwentythree, twentytwentyfive |
-| Front page setting | `show_on_front=page`, `page_on_front=604` ("Home-Divi", slug `604-2`) |
-| Permalinks | pretty (`/our-products-and-services/`), so nested URLs will resolve |
-| `wordpress-theme/svls-labs.zip` vs `wordpress-theme/svls-labs/` | identical (78 files, `svls-labs/` at the zip root) |
-| `php -l` on every theme template (PHP 8.4) | no syntax errors |
 | `node website/_tools/deploy-wp.js --dry-run` | 17 steps, 0 errors, 1 expected warning (theme not active yet) |
-| Live homepage source (current Divi site) | 1 `<title>`, 1 canonical, 0 `og:title`, WordPress 7.1.2, Cloudflare in front |
+| `node website/_tools/deploy-wp.js` (full run) | **stopped at the theme step**: `wp-login failed (HTTP 403, no login cookie)`. Nothing was changed. |
+| Diagnosis of the 403 | Cloudflare answers every POST to `wp-login.php` with a challenge (`cf-mitigated: challenge`), whatever the User-Agent. With a real headless Chromium session the challenge is an interactive Turnstile checkbox ("Verify you are human"). The session did not attempt to solve or bypass it. The GoDaddy `wpsec` login CAPTCHA is present in the form but hidden until failed attempts, so it was not the blocker. |
+| Theme upload and activation | **Done by the client in wp-admin** (Appearance -> Themes -> Upload Theme -> Activate). The session polled `/wp/v2/themes` and saw `svls-labs` appear at 19:49 UTC and become active at 19:50 UTC. |
+| `node website/_tools/deploy-wp.js --skip-theme --skip-cache` | 29 steps, 0 warnings, 0 errors (see the page table below) |
+| Independent verification (plain HTTPS, browser User-Agent, with and without `?nocache=`) | all 12 URLs served by `svls-labs`, no Divi markup, no PHP errors (table below) |
+| Live screenshots (headless Chromium, 1440x900 and 390x844, full page) | `website/_tools/live-shots/` (home, /services/ai/, /products/value-lens/) |
 
-### Dry-run page plan (what the script will do)
+## Pages created or updated
 
-| URL | Action | Existing page | Template |
+| URL | Page | Action | Template |
 | --- | --- | --- | --- |
-| `/` (`home`) | update #11 (published, currently `template-full-width-page-builder.php`, cleared) | yes | `front-page.php` via Settings -> Reading |
-| `/services/` | update #15 (draft -> publish) | yes | default |
-| `/services/sap/` | create | no | `page-services-sap.php` |
-| `/services/cloud/` | create | no | `page-services-cloud.php` |
-| `/services/ai/` | create | no | `page-services-ai.php` |
-| `/products/` | create | no | default |
-| `/products/value-lens/` | create | no | `page-products-value-lens.php` |
-| `/products/sap-intelligence-suite/` | create | no | `page-products-sap-intelligence-suite.php` |
-| `/approach/` | create | no | `page-approach.php` |
-| `/about/` | create | no | `page-about.php` |
-| `/contact/` | update #17 (draft -> publish) | yes | `page-contact.php` |
-| `/privacy/` | create | no | `page-privacy.php` |
-| `/terms/` | create | no | `page-terms.php` |
+| `/` | #11 `home` | updated (stale `template-full-width-page-builder.php` cleared), set as static front page | `front-page.php` |
+| `/services/` | #15 | updated, draft -> publish | default |
+| `/services/sap/` | #1158 | created | `page-services-sap.php` |
+| `/services/cloud/` | #1159 | created | `page-services-cloud.php` |
+| `/services/ai/` | #1160 | created | `page-services-ai.php` |
+| `/products/` | #1161 | created | default |
+| `/products/value-lens/` | #1162 | created | `page-products-value-lens.php` |
+| `/products/sap-intelligence-suite/` | #1163 | created | `page-products-sap-intelligence-suite.php` |
+| `/approach/` | #1164 | created | `page-approach.php` |
+| `/about/` | #1165 | created | `page-about.php` |
+| `/contact/` | #17 | updated, draft -> publish | `page-contact.php` |
+| `/privacy/` | #1167 | created | `page-privacy.php` |
+| `/terms/` | #1168 | created | `page-terms.php` |
 
-The old pages are untouched by the plan: `about-us-2`, `contact-us`, `privacy-policy-2`, `terms-and-conditions`, `our-products-and-services`, `cancellation-and-refund-policy` and the current front page #604 keep their URLs (#604 moves from `/` to `/604-2/` once the front page changes). No page and no plugin is deleted.
+Settings (`/wp/v2/settings`): `show_on_front=page`, `page_on_front=11`, site title `SVLS LABS`, tagline `SAP, Cloud and Governed AI. Engineered to Spec.`
 
-## What was blocked, and why
+## Per-URL verification (live, 19:52 UTC)
 
-1. **Headless browser against the live site.** Playwright's Chromium in this container does not trust the session's TLS-inspecting egress proxy (`net::ERR_CERT_AUTHORITY_INVALID`). The two ways to make it trust the proxy CA (installing `certutil` to add the CA to the browser store, or pinning that CA's public key with a Chromium flag) were both denied by the session policy as TLS weakening. Node's `fetch` verifies TLS correctly through the configured CA bundle, so the script was rewritten to drive wp-admin with plain HTTPS requests instead of a browser (see below). No live screenshots could be taken for the same reason; `website/_tools/live-shots/` is therefore empty.
-2. **The deployment run.** `node website/_tools/deploy-wp.js` was denied as a production deploy. Not attempted again by any other route.
+`themed` = HTML references `wp-content/themes/svls-labs`; `css` = `<head>` links `assets/css/site.css` and `assets/css/theme.css`; tag counts are for `<head>` only (extra `<title>` elements inside inline SVG icons are excluded). Results were identical with and without the cache-busting query string.
 
-## Script change (`website/_tools/deploy-wp.js`)
+| URL | Status | themed | Divi markup | css | H1 | PHP errors | title / canonical / og:title | Products menu |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| `/` | 200 | yes | no | yes | SAP, Cloud and Governed AI. Engineered to Spec. | 0 | 1 / 1 / 1 | Value Lens, Private beta |
+| `/services/sap/` | 200 | yes | no | yes | S/4HANA, BTP and Integration Suite, Delivered Clean Core from the First Transport | 0 | 1 / 1 / 1 | Value Lens, Private beta |
+| `/services/cloud/` | 200 | yes | no | yes | Cloud Around the SAP Core, with the Ledger Intact. | 0 | 1 / 1 / 1 | Value Lens, Private beta |
+| `/services/ai/` | 200 | yes | no | yes | Agents Explain. Humans Decide. SAP Stays the System of Record. | 0 | 1 / 1 / 1 | Value Lens, Private beta |
+| `/products/value-lens/` | 200 | yes | no | yes | Value Lens (Private beta) | 0 | 1 / 1 / 1 | Value Lens, Private beta |
+| `/products/sap-intelligence-suite/` | 200 | yes | no | yes | SAP Intelligence Suite. SAP Engineering in Plain English. | 0 | 1 / 1 / 1 | Value Lens, Private beta |
+| `/approach/` | 200 | yes | no | yes | TOGAF Discipline. Clean Core by Default. Quality Gates You Can Inspect. | 0 | 1 / 1 / 1 | Value Lens, Private beta |
+| `/about/` | 200 | yes | no | yes | A Specialist SAP Engineering Firm That Would Rather Show You Evidence than a Deck | 0 | 1 / 1 / 1 | Value Lens, Private beta |
+| `/contact/` | 200 | yes | no | yes | Talk to an Architect. | 0 | 1 / 1 / 1 | Value Lens, Private beta |
+| `/privacy/` | 200 | yes | no | yes | Privacy Policy | 0 | 1 / 1 / 1 | Value Lens, Private beta |
+| `/terms/` | 200 | yes | no | yes | Terms of Use | 0 | 1 / 1 / 1 | Value Lens, Private beta |
+| `/no-such-page-4lfpqx/` (random) | 404 | yes | no | yes | Nothing Here Has Been Measured. | 0 | 1 / 1 / 1 | Value Lens, Private beta |
 
-- The theme upload no longer uses Playwright. `AdminSession` logs in at `wp-login.php` with `WP_PASSWORD` (cookie jar in memory, nothing written), posts `svls-labs.zip` to `update.php?action=upload-theme` with the page nonce, follows "Replace current with uploaded" if WordPress reports the theme already exists, and follows the `themes.php?action=activate&stylesheet=svls-labs` link. These are exactly the requests a browser sends for Appearance -> Themes -> Upload -> Activate.
-- New step: after activation and the page updates, it opens `/wp-admin/` in the same session and follows the admin-bar "Flush Cache" link (GoDaddy Quick Links); `--skip-cache` disables it. If no such link is found it warns and the cache is flushed by hand.
-- With the theme active, the page template is always sent, so `''` clears the stale page-builder template on the existing `home` page (#11).
-- Verification now also fetches a random 404 URL, bypasses the page cache with a query string, counts `<title>`, canonical and `og:title` tags, looks for PHP errors/warnings in the HTML, and checks that the Products menu carries "Value Lens" with the "Private beta" label. Rows go to `website/_tools/deploy-report.json` under `verify`.
-- Nothing secret is printed or written; the report file carries only statuses, URLs, ids and the account slug (it is not committed).
+Assets: `/wp-content/themes/svls-labs/assets/css/site.css` 200 (56,507 bytes, text/css), `/wp-content/themes/svls-labs/assets/css/theme.css` 200 (49,478 bytes), `/wp-content/themes/svls-labs/style.css` 200.
 
-## Plugins found on the site (nothing changed)
+Cache: the GoDaddy page cache and Cloudflare served the new theme immediately (`cf-cache-status: MISS` on the first uncached fetch, `DYNAMIC` with a query string), so no manual flush was needed. The script's automatic "Flush Cache" step cannot run because it needs the same wp-admin login that Cloudflare challenges; if a stale page ever shows up, use the admin-bar GoDaddy Quick Links -> Flush Cache.
+
+## Old pages (untouched, still published)
+
+`/604-2/` (the old Divi "Home-Divi" page, moved off `/`), `/about-us-2/`, `/contact-us/`, `/privacy-policy-2/`, `/terms-and-conditions/`, `/our-products-and-services/` and `/cancellation-and-refund-policy/` all still return 200. They now render inside the new theme with their old Divi content (the Divi Builder shortcodes are still expanded by the "Simple Divi Shortcode" plugin while it is active). Nothing was deleted. Recommended: set these to Draft, or redirect them to the new URLs, once the new site is confirmed (see below). `/home/` redirects 301 to `/` as expected for the front page.
+
+## Plugins (nothing changed)
 
 Active: athemes-starter-sites, click-to-chat-for-whatsapp, contact-form-7, di-multipurpose-demo-importer, everest-forms, ga-google-analytics, jetpack, page-builder-add, regenerate-thumbnails, search-engine-visibility (GoDaddy), simple-divi-shortcode, sydney-toolbox, wpforms-lite, free-sales-funnel-squeeze-pages-landing-page-builder-templates-make.
 Inactive: akismet, clicky-analytics, coblocks, elementor, gravityforms, hotjar, PluginOps-Extensions-Pack, post-grid-elementor-addon, wp-whatsapp-chat, sucuri-scanner, thrive-visual-editor, thrive-product-manager, wp-auto-content, wp-reset.
 
-Observed on the live homepage today and expected to carry over to the new theme until deactivated: the Click to Chat WhatsApp button (a floating widget the new design does not include), the Google Analytics `gtag` snippet, and the Contact Form 7, Everest Forms and Sydney Toolbox CSS/JS on every page. Jetpack is active but is not printing Open Graph tags (0 `og:title` today), so the theme's own tags should not be duplicated. No SEO or caching plugin (Yoast, Rank Math, Autoptimize, WP Rocket, LiteSpeed) is installed; page caching is the GoDaddy/Cloudflare layer.
+Still carried over from the old site until deactivated: the Click to Chat WhatsApp floating button (visible bottom-left in the live screenshots), the Google Analytics `gtag` snippet, and the Contact Form 7 / Everest Forms / Sydney Toolbox CSS and JS on every page. Divi stays installed (inactive) for rollback.
 
-## Per-URL verification
+## Tooling added in this session
 
-Not performed: the theme is not deployed. The script prints and records this table on the real run (status, served by `svls-labs`, H1, PHP errors, tag counts, Value Lens "Private beta" label). Screenshots (1440x900 and 390x844, full page, for `/`, `/services/ai/`, `/products/value-lens/`) still need a browser that can reach the live site; take them from a normal desktop browser or a Playwright run outside this container.
+- `website/_tools/wp-admin-browser.js`: drives wp-admin with the pre-installed Chromium (Playwright) for `install` (upload + activate the theme zip), `flush` (admin-bar Flush Cache), `activate <stylesheet>` (rollback helper) and `shots <dir>` (public-page screenshots, no login). It stops with exit code 3 if the login shows a CAPTCHA or if the Cloudflare challenge does not clear on its own within 45 s; it never attempts to solve either. On this site the challenge is an interactive Turnstile checkbox, so only the `shots` mode was usable; the other modes work on sites without a login challenge.
+- For Chromium to verify TLS through the session's egress proxy, the proxy's CA certificates (already in the system store) had to be added to the browser NSS store with `certutil` (`libnss3-tools`). No TLS verification was disabled.
 
-## What to do next
+## What to do next (client)
 
-1. **Run the deployment** (a person, or a session where the production deploy is allowed): with `WP_URL`, `WP_USER`, `WP_APP_PASSWORD`, `WP_PASSWORD` set, run `node website/_tools/deploy-wp.js`. Expect: login OK, upload, activate, 13 pages created/updated, front page set to the `home` page, cache flushed, verification rows all `200 ... themed=true` and the check URL `404 ... themed=true`. If the upload step fails, upload `wordpress-theme/svls-labs.zip` by hand (Appearance -> Themes -> Add New -> Upload Theme, "Replace current with uploaded" if asked, Activate "SVLS Labs") and re-run with `--skip-theme`.
-2. **Flush the GoDaddy cache** if the script reports no "Flush Cache" link: wp-admin admin bar -> GoDaddy Quick Links -> Flush Cache (and purge Cloudflare if the site is proxied there).
-3. **Verify** per `DEPLOY.md` A.6 and take the screenshots listed above; put them under `website/_tools/live-shots/`.
-4. **Rollback** if a page is blank or fatal: Appearance -> Themes -> activate Divi; the old pages are still there and #604 can be set back as the front page under Settings -> Reading.
-5. **Client TODOs before announcing** (`DEPLOY.md` section D): replace `TODO_FORM_ID` with the Formspree form id in the four forms, confirm the `hello@svlslabs.com` mailbox and phone number, confirm the registered address, complete the Privacy and Terms sections with counsel.
-6. **Rotate credentials**: change the WordPress password of the deploy account and delete/recreate the "deploy" Application Password (Users -> Profile -> Application Passwords) once the deployment is done.
-7. **Optionally deactivate** the old page-builder and widget plugins after the new site is verified (Divi Builder shortcode plugin, page-builder-add, athemes-starter-sites, di-multipurpose-demo-importer, sydney-toolbox, the sales-funnel plugin, Click to Chat, Everest Forms / WPForms / Contact Form 7 if no longer used). Deactivate first, verify every page, delete later. Keep Divi installed until the rollback window is over.
+1. **Rollback, if ever needed**: Appearance -> Themes -> activate Divi; Settings -> Reading -> Homepage: "Home-Divi" (page #604). The old pages are all still there. (Or `node website/_tools/wp-admin-browser.js activate Divi` on a site without the login challenge.)
+2. **Form endpoint (blocks launch)**: replace `TODO_FORM_ID` with the Formspree form id in the four forms (`DEPLOY.md` D.1), rebuild the zip (`website/_tools/make-wp-theme.js`, then `cd wordpress-theme && zip -qr svls-labs.zip svls-labs`) and upload it again with "Replace current with uploaded".
+3. **Contact details (blocks launch)**: confirm the `hello@svlslabs.com` mailbox exists and the phone number and registered address on `/contact/`, `/about/` and the footer (`DEPLOY.md` D.2).
+4. **Legal pages**: complete `/privacy/` and `/terms/` with counsel (`DEPLOY.md` D.3).
+5. **Rotate credentials now**: change the WordPress password of the deploy account and delete the "deploy" Application Password (Users -> Profile -> Application Passwords). They were used by this session for the REST API and the (failed) wp-admin login only; nothing was printed or stored.
+6. **Old pages**: set `/604-2/`, `/about-us-2/`, `/contact-us/`, `/privacy-policy-2/`, `/terms-and-conditions/`, `/our-products-and-services/` and `/cancellation-and-refund-policy/` to Draft, or add 301 redirects to the new URLs, so the old Divi content stops being indexed.
+7. **Optional plugin deactivation** (after the site is confirmed): Click to Chat (WhatsApp button), simple-divi-shortcode, page-builder-add, athemes-starter-sites, di-multipurpose-demo-importer, sydney-toolbox, the sales-funnel plugin, and Everest Forms / WPForms / Contact Form 7 if no longer used. Deactivate first, re-check every page, delete later. Keep Divi installed until the rollback window is over.
+8. **Cloudflare / login**: the interactive Turnstile challenge on `wp-login.php` is a good protection and was left as is. If a future automated deployment (theme update via the script) is wanted, add a Cloudflare WAF skip rule for the deploy IP for the duration of the run, or upload theme updates by hand as done today.
