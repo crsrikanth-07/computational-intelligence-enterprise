@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-labelledby="svls-mark-title">
+  <title id="svls-mark-title">SVLS LABS</title>
+  <path d="M4 24V4h20v4H8v16z" fill="#101418"/>
+  <circle cx="32" cy="32" r="13.5" fill="none" stroke="#101418" stroke-width="5"/>
+  <path d="M60 40v20H40v-4h16V40z" fill="#E4432B"/>
+</svg>

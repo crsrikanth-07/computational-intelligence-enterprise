@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" width="560" height="360" role="img" aria-labelledby="landscape-title" font-family="'JetBrains Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="500" letter-spacing="0.06em" text-anchor="middle" fill="currentColor">
+  <title id="landscape-title">SAP core, BTP integration, cloud data and governed agents with human review, drawn as a landscape diagram.</title>
+  <!-- Return path: agents -> human review -> write to SAP -> read-back -->
+  <g fill="none" stroke="currentColor" stroke-width="1.5">
+    <path d="M491 226V186"/>
+    <path d="M491 154V106H71V219"/>
+  </g>
+  <circle cx="71" cy="223" r="3" fill="currentColor"/>
+  <!-- Value Lens glyph: the finding inside the lens (the one vermilion element) -->
+  <circle cx="491" cy="170" r="16" fill="none" stroke="currentColor" stroke-width="2"/>
+  <circle cx="491" cy="170" r="4" fill="var(--svls-accent, #E4432B)"/>
+  <!-- Human review gate: two register brackets around the line -->
+  <g fill="none" stroke="currentColor" stroke-width="2">
+    <path d="M267 106V92h14"/>
+    <path d="M295 106v14h-14"/>
+  </g>
+  <text x="281" y="78">HUMAN REVIEW</text>
+  <!-- Dimension hairlines with 4-unit end ticks -->
+  <g fill="none" stroke="currentColor" stroke-width="1" stroke-opacity="0.45">
+    <path d="M515 186v40M511 186h8M511 226h8"/>
+    <path d="M305 120h176M305 116v8M481 116v8"/>
+    <path d="M85 120h172M85 116v8M257 116v8"/>
+    <path d="M91 130v86M87 130h8M87 216h8"/>
+  </g>
+  <g fill="currentColor" fill-opacity="0.72" font-weight="400">
+    <text x="522" y="210" text-anchor="start">READ</text>
+    <text x="393" y="138">CONFIRM</text>
+    <text x="171" y="138">WRITE</text>
+    <text x="98" y="177" text-anchor="start">READ-BACK</text>
+  </g>
+  <!-- The landscape row -->
+  <rect x="13" y="227" width="116" height="70" fill="none" stroke="currentColor" stroke-width="2"/>
+  <rect x="152.75" y="226.75" width="116.5" height="70.5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+  <rect x="292.75" y="226.75" width="116.5" height="70.5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+  <rect x="432.75" y="226.75" width="116.5" height="70.5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+  <g fill="none" stroke="currentColor" stroke-width="1.5">
+    <path d="M130 262h16"/>
+    <path d="M270 262h16"/>
+    <path d="M410 262h16"/>
+  </g>
+  <circle cx="149" cy="262" r="3" fill="currentColor"/>
+  <circle cx="289" cy="262" r="3" fill="currentColor"/>
+  <circle cx="429" cy="262" r="3" fill="currentColor"/>
+  <text x="71" y="258">SAP S/4HANA</text>
+  <text x="71" y="275" fill-opacity="0.72" font-weight="400">CORE</text>
+  <text x="211" y="251">BTP /</text>
+  <text x="211" y="266">INTEGRATION</text>
+  <text x="211" y="281">SUITE</text>
+  <text x="351" y="251">CLOUD DATA</text>
+  <text x="351" y="266">BIGQUERY ·</text>
+  <text x="351" y="281">SALESFORCE</text>
+  <text x="491" y="258">GOVERNED</text>
+  <text x="491" y="275">AGENTS</text>
+  <!-- Ground hairline with end ticks -->
+  <g fill="none" stroke="currentColor" stroke-width="1" stroke-opacity="0.45">
+    <path d="M12 318h538M12 316v4M550 316v4"/>
+  </g>
+  <g fill="currentColor" fill-opacity="0.72" font-weight="400">
+    <text x="12" y="340" text-anchor="start">SYSTEM OF RECORD</text>
+    <text x="550" y="340" text-anchor="end">PROPOSES · EXPLAINS</text>
+  </g>
+</svg>

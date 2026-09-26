@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 288 64" width="288" height="64" role="img" aria-labelledby="svls-lockup-rev-title">
+  <title id="svls-lockup-rev-title">SVLS LABS</title>
+  <path d="M4 24V4h20v4H8v16z" fill="#FFFFFF"/>
+  <circle cx="32" cy="32" r="13.5" fill="none" stroke="#FFFFFF" stroke-width="5"/>
+  <path d="M60 40v20H40v-4h16V40z" fill="#FF6A50"/>
+  <text x="80" y="60" fill="#FFFFFF" font-family="'Inter Tight', Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="44" font-weight="700" letter-spacing="-0.44">SVLS</text>
+  <text x="196" y="60" fill="#FFFFFF" font-family="'Inter Tight', Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="31" font-weight="500" letter-spacing="3.72">LABS</text>
+</svg>
