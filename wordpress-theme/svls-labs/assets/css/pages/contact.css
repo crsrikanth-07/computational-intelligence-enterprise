@@ -1,0 +1,44 @@
+/* /contact/ — page-specific styles (tokens only; loaded after site.css) */
+
+/* Form 1-7, right column 8-12 (.aside-rule draws the hairline between them) */
+.contact__grid { margin-top: var(--s-6); row-gap: var(--s-7); }
+@media (min-width: 1024px) {
+  .contact__grid { margin-top: var(--s-7); }
+  .contact__form { padding-right: var(--s-5); position: sticky; top: calc(var(--nav-h) + var(--s-5)); align-self: start; }
+}
+
+/* The two checkboxes as one group */
+.form__choices { display: grid; }
+
+/* Right column blocks as theme cards (THEME_SPEC 5.5: list columns render as cards; no lift, they are plain lists).
+   theme.css only recolours these borders, so the widths set here decide; the .contact__aside prefix outranks its
+   .contact__block + .contact__block rule so every card keeps the resting hairline. */
+.contact__aside.aside-rule { border: 0; padding: 0; }
+.contact__block {
+  padding: 24px 20px; border: 1px solid var(--sg-line, var(--rule)); border-radius: var(--sg-radius, var(--r-1));
+  background: var(--sg-card, var(--bg)); box-shadow: var(--sg-shadow, none);
+}
+.contact__aside .contact__block + .contact__block { margin-top: 20px; padding-top: 24px; border-top: 1px solid var(--sg-line, var(--rule)); }
+@media (min-width: 600px) {
+  .contact__block { padding: 28px; }
+  .contact__aside .contact__block + .contact__block { padding-top: 28px; }
+}
+.contact__aside .list-numbered, .contact__aside .offices { border-bottom: 0; }
+.contact__aside .list-numbered > li:last-child, .contact__aside .offices__row:last-child { padding-bottom: 0; }
+.contact__block h3 { max-width: 24ch; }
+.contact__body { margin-top: var(--s-3); font-size: 15px; line-height: 24px; max-width: var(--measure); }
+.contact__link { margin-top: var(--s-4); }
+.contact__block .mono-note { margin-top: var(--s-4); }
+.contact__block .status { margin-top: var(--s-4); }
+.contact__block .status + .status { margin-top: var(--s-1); }
+
+/* Offices: mono key, Inter value */
+.offices { margin-top: var(--s-4); border-bottom: 1px solid var(--rule); }
+.offices__row { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--s-1); border-top: 1px solid var(--rule); padding: var(--s-3) 0; }
+.offices dd { margin: 0; font-size: 15px; line-height: 24px; }
+@media (min-width: 600px) { .offices__row { grid-template-columns: 140px minmax(0, 1fr); gap: var(--s-4); } }
+@media (min-width: 1024px) { .offices__row { grid-template-columns: 120px minmax(0, 1fr); } }
+
+/* Product pointers: one arrow link per line */
+.contact__products { margin-top: var(--s-3); display: grid; gap: var(--s-2); }
+.contact__products .arrow-link { margin-block: 0; }

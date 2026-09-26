@@ -1,0 +1,279 @@
+<?php /* Template Name: Governed Delivery Approach */ ?>
+<?php get_header(); ?>
+<div class="sheet-backdrop" data-menu-backdrop hidden></div>
+<div class="sheet" id="mobile-sheet" hidden>
+  <nav aria-label="Menu">
+    <ul class="sheet__list">
+      <li>
+        <span class="eyebrow sheet__group-label" id="sheet-services">Services</span>
+        <ul class="sheet__sub" aria-labelledby="sheet-services">
+          <li><a class="sheet__link" href="/services/sap/">SAP &amp; ERP</a></li>
+          <li><a class="sheet__link" href="/services/cloud/">Cloud</a></li>
+          <li><a class="sheet__link" href="/services/ai/">Agentic &amp; Applied AI</a></li>
+        </ul>
+      </li>
+      <li>
+        <span class="eyebrow sheet__group-label" id="sheet-products">Products</span>
+        <ul class="sheet__sub" aria-labelledby="sheet-products">
+          <li><a class="sheet__link" href="/products/value-lens/">Value Lens <span class="nav-beta">Private beta</span></a></li>
+          <li><a class="sheet__link" href="/products/sap-intelligence-suite/">SAP Intelligence Suite</a></li>
+        </ul>
+      </li>
+      <li><a class="sheet__link" href="/approach/" aria-current="page">Approach</a></li>
+      <li><a class="sheet__link" href="/about/">About</a></li>
+      <li><a class="sheet__link" href="/contact/">Contact</a></li>
+    </ul>
+    <div class="sheet__actions">
+      <a class="btn btn--primary" href="/contact/?intent=discovery">Book a discovery call</a>
+      <a class="btn btn--secondary" href="/products/value-lens/#beta">Request Value Lens beta access</a>
+    </div>
+  </nav>
+  <div class="sheet__theme" role="group" aria-label="Appearance">
+    <span class="sheet__theme-label" aria-hidden="true">Appearance:</span>
+    <button type="button" class="chip" data-theme-choice="system" aria-pressed="true">System</button>
+    <button type="button" class="chip" data-theme-choice="light" aria-pressed="false">Light</button>
+    <button type="button" class="chip" data-theme-choice="dark" aria-pressed="false">Dark</button>
+  </div>
+</div>
+<main id="main">
+
+  <!-- 01 Hero (white, no grid) -->
+  <section class="hero hero--plain" aria-labelledby="hero-title">
+    <div class="hero-art hero-art--lite" aria-hidden="true">
+      <svg class="hero-art__mark" viewBox="0 0 64 64" focusable="false">
+        <path d="M4 24V4h20v4H8v16z" fill="currentColor"/>
+        <circle cx="32" cy="32" r="13.5" fill="none" stroke="currentColor" stroke-width="5"/>
+        <path d="M60 40v20H40v-4h16V40z" fill="var(--svls-accent, #E4432B)"/>
+      </svg>
+    </div>
+    <div class="container">
+      <div class="section-mark"><span class="numeral">01</span><p class="eyebrow">Approach</p></div>
+      <div class="grid hero__grid">
+        <div class="hero__copy col-9">
+          <h1 id="hero-title">TOGAF Discipline. Clean Core by Default. Quality Gates You Can <span class="key">Inspect.</span></h1>
+          <p class="lead">This page is for the people who have to approve us: procurement, InfoSec, internal audit, the head of SAP. It states how we run SAP, cloud and AI work, what we hand over at each gate, and what we refuse to do.</p>
+          <div class="btn-row">
+            <a class="btn btn--primary" href="/contact/?intent=discovery">Book a discovery call</a>
+            <a class="btn btn--secondary" href="/contact/?intent=overview">Download the capability overview</a>
+          </div>
+          <p class="trust">A 45-minute call with an architect, not a salesperson. Replies within one business day.</p>
+        </div>
+        <ul class="microlabels hero__rows-a">
+          <li>TOGAF 9 · Clean Core · ADRs</li>
+          <li>Contract per flow · Read-back per run · Evidence pack</li>
+          <li>NDA before discovery · Least privilege · Your identity provider</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 The four gates -->
+  <section class="section" id="gates" aria-labelledby="gates-title">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <div class="section-mark"><span class="numeral">02</span><p class="eyebrow">The four gates</p></div>
+        <h2 id="gates-title">Specify. Build. Verify. Then Ship.</h2>
+        <p class="subcopy">The reason our integrations do not come back: every flow has a written contract before it has code, and a read-back check after it runs. The same method builds Value Lens.</p>
+      </div>
+      <ol class="method" role="list">
+        <li class="method__step">
+          <span class="numeral">01</span>
+          <h3 class="h4">Specify — two weeks, fixed scope, fixed price.</h3>
+          <p>Landscape and architecture review. Domain contracts, interface specs, policy versions, a prototype scope. You leave with an architecture you can act on, whether or not you continue with us.</p>
+          <div class="method__extra">
+            <span class="eyebrow">Artefacts at this gate</span>
+            <ul class="list-mono">
+              <li>Architecture review</li>
+              <li>Domain contracts</li>
+              <li>Interface specs</li>
+              <li>Policy versions</li>
+              <li>Prototype scope</li>
+              <li>Fixed-price proposal</li>
+            </ul>
+          </div>
+        </li>
+        <li class="method__step">
+          <span class="numeral">02</span>
+          <h3 class="h4">Build.</h3>
+          <p>Clean Core extensions on BTP. CPI flows from a pattern library. AI-assisted generation for repeatable objects, every artefact reviewed by a certified architect before it reaches your landscape.</p>
+          <div class="method__extra">
+            <span class="eyebrow">Artefacts at this gate</span>
+            <ul class="list-mono">
+              <li>Extension register</li>
+              <li>Flow contracts</li>
+              <li>Review log for AI-assisted artefacts</li>
+              <li>Test plan</li>
+            </ul>
+          </div>
+        </li>
+        <li class="method__step">
+          <span class="numeral">03</span>
+          <h3 class="h4">Verify.</h3>
+          <p>Automated read-back against SAP after every run. Reconciliation to SAP totals. An evidence pack your auditors and InfoSec can read.</p>
+          <div class="method__extra">
+            <span class="eyebrow">Artefacts at this gate</span>
+            <ul class="list-mono">
+              <li>Read-back results</li>
+              <li>Reconciliation reports</li>
+              <li>Evidence pack</li>
+            </ul>
+          </div>
+        </li>
+        <li class="method__step">
+          <span class="numeral">04</span>
+          <h3 class="h4">Ship and run.</h3>
+          <p>Cutover, hypercare, runbooks, handover to your team, with a named engagement lead (a role on the team, not a rotating bench) who stays through run. We do not hand you a deck and leave. We stay until it runs.</p>
+          <div class="method__extra">
+            <span class="eyebrow">Artefacts at this gate</span>
+            <ul class="list-mono">
+              <li>Cutover runbook</li>
+              <li>Hypercare log</li>
+              <li>Handover record</li>
+              <li>Named engagement lead</li>
+              <li>Run cadence</li>
+            </ul>
+          </div>
+        </li>
+      </ol>
+      <div class="method__after">
+        <a class="btn btn--secondary" href="/contact/?intent=discovery&amp;offer=two-week">Start with a two-week discovery</a>
+        <a class="arrow-link" href="#commercial">See the commercial shapes<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 Standards we hold to (surface band) -->
+  <section class="section band-surface" id="standards" aria-labelledby="standards-title">
+    <div class="container">
+      <div class="section-mark mb-6"><span class="numeral">03</span><h2 class="eyebrow" id="standards-title">Standards We Hold to</h2></div>
+      <div class="grid">
+        <div class="col-8">
+          <table class="spec-table">
+            <thead>
+              <tr><th scope="col">Area</th><th scope="col">The standard</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Architecture</th><td>TOGAF 9 method, decisions recorded as ADRs</td></tr>
+              <tr><th scope="row">SAP</th><td>Clean Core, extensions on BTP, keep-the-core-upgradeable test on every design</td></tr>
+              <tr><th scope="row">Integration</th><td>Contract per flow, read-back per run</td></tr>
+              <tr><th scope="row">Cloud</th><td>Landing zone reviewed with InfoSec before workloads</td></tr>
+              <tr><th scope="row">AI</th><td><a class="link" href="/services/ai/#control-model">The control model</a>: read-before-write, confirm-to-act, verify-after</td></tr>
+              <tr><th scope="row">Data</th><td>Synthetic or masked data in non-production; production data never leaves your tenancy</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <aside class="col-4 standards-aside aside-rule" aria-label="Related">
+          <p class="eyebrow">Read next</p>
+          <a class="arrow-link" href="/services/ai/#control-model">See the control model<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
+          <a class="arrow-link" href="/contact/?intent=checklist">Get the Governed Agent Control <span class="nowrap">Checklist<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></span></a>
+          <a class="arrow-link" href="/services/ai/">See the Agentic &amp; Applied AI practice<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 AI-assisted engineering in delivery -->
+  <section class="section" id="ai-assisted" aria-labelledby="ai-title">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <div class="section-mark"><span class="numeral">04</span><p class="eyebrow">AI-assisted engineering</p></div>
+        <h2 id="ai-title">Repeatable SAP Engineering, Faster. With a List of What We Never Automate.</h2>
+        <p class="subcopy">We use our own AI-assisted tooling for the repeatable parts of integration and extension work. Every generated artefact is reviewed by a certified architect before it reaches your landscape.</p>
+      </div>
+      <div class="hgrid hgrid--2 hgrid--bottom two-col">
+        <div>
+          <span class="mono-title">What we accelerate</span>
+          <ul class="list-points">
+            <li>Mapping specifications from domain contracts</li>
+            <li>Integration flow scaffolds from the pattern library</li>
+            <li>Test cases and read-back checks</li>
+            <li>Runbooks and handover documentation</li>
+            <li>Clean Core extension boilerplate on BTP</li>
+          </ul>
+        </div>
+        <div>
+          <span class="mono-title">What we never automate</span>
+          <ul class="list-rings">
+            <li>Transport approval</li>
+            <li>Production changes and cutover decisions</li>
+            <li>Anything that writes to SAP without a confirmed reviewer</li>
+            <li>Financial calculations inside an LLM</li>
+            <li>Sign-off on an evidence pack</li>
+          </ul>
+        </div>
+      </div>
+      <p class="review-record">Generated artefacts carry a review record naming the reviewing role and the check performed. The record is part of the evidence pack.</p>
+      <div class="links links--after">
+        <a class="arrow-link" href="/services/ai/">See the Agentic &amp; Applied AI practice<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
+        <a class="arrow-link" href="/products/sap-intelligence-suite/">See SAP Intelligence Suite<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 Security and confidentiality (surface band) -->
+  <section class="section band-surface" id="security" aria-labelledby="security-title">
+    <div class="container">
+      <div class="section-mark mb-6"><span class="numeral">05</span><h2 class="eyebrow" id="security-title">Security and Confidentiality</h2></div>
+      <ol class="list-numbered list-numbered--lg" role="list">
+        <li><span class="numeral">01</span><span>NDA before discovery.</span></li>
+        <li><span class="numeral">02</span><span>Named engagement lead and roster shared with your security team.</span></li>
+        <li><span class="numeral">03</span><span>Access via your identity provider, least privilege, revoked at exit.</span></li>
+        <li><span class="numeral">04</span><span>No client data in model prompts without a written data-handling agreement.</span></li>
+        <li><span class="numeral">05</span><span>Deliverables and code are yours.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 06 Commercial shapes -->
+  <section class="section" id="commercial" aria-labelledby="commercial-title">
+    <div class="container">
+      <div class="section-mark mb-6"><span class="numeral">06</span><h2 class="eyebrow" id="commercial-title">Commercial Shapes</h2></div>
+      <div class="hgrid hgrid--3 hgrid--bottom">
+        <article class="shape">
+          <span class="numeral">01</span>
+          <h3>Two-week discovery</h3>
+          <p class="shape__terms">Fixed scope, fixed price.</p>
+          <p class="shape__gate"><span class="eyebrow">Gate</span>01 Specify</p>
+        </article>
+        <article class="shape">
+          <span class="numeral">02</span>
+          <h3>Fixed-scope build</h3>
+          <p class="shape__terms">From the discovery, with acceptance criteria.</p>
+          <p class="shape__gate"><span class="eyebrow">Gates</span>02 Build · 03 Verify</p>
+        </article>
+        <article class="shape">
+          <span class="numeral">03</span>
+          <h3>Run and extend</h3>
+          <p class="shape__terms">Monthly, named lead, quarterly review.</p>
+          <p class="shape__gate"><span class="eyebrow">Gate</span>04 Ship and run</p>
+        </article>
+      </div>
+      <div class="partner-row">
+        <p class="partner-row__body">Partner engagements: white-label or co-delivered, NDA-friendly, fixed-scope options.</p>
+        <a class="btn btn--secondary" href="/contact/?intent=partnership">Talk to us about partner capacity</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 07 Closing CTA -->
+  <section class="section has-grid cta-band" id="next-step" aria-labelledby="next-title">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <div class="section-mark"><span class="numeral">07</span><p class="eyebrow">Next step</p></div>
+        <h2 id="next-title">Send This Page to Whoever Has to Say Yes.</h2>
+      </div>
+      <div class="btn-row">
+        <a class="btn btn--primary" href="/contact/?intent=discovery">Book a discovery call</a>
+        <a class="btn btn--secondary" href="/contact/?intent=overview">Download the capability overview</a>
+      </div>
+      <p class="trust">A 45-minute call with an architect, not a salesperson. Replies within one business day.</p>
+      <div class="cta-links">
+        <a class="arrow-link" href="/contact/?intent=discovery&amp;offer=two-week">Start with a two-week discovery<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
+        <a class="arrow-link" href="/contact/?intent=checklist">Get the Governed Agent Control Checklist<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
+      </div>
+      <p class="mono-note"><a href="/contact/?intent=partnership">SAP partners: ask about integration and BTP capacity.</a></p>
+    </div>
+  </section>
+
+</main>
+<?php get_footer(); ?>

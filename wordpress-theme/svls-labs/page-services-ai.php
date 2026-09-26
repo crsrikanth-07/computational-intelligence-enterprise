@@ -1,0 +1,342 @@
+<?php /* Template Name: Governed Agentic &amp; Applied AI on SAP BTP */ ?>
+<?php get_header(); ?>
+<div class="sheet-backdrop" data-menu-backdrop hidden></div>
+<div class="sheet" id="mobile-sheet" hidden>
+  <nav aria-label="Menu">
+    <ul class="sheet__list">
+      <li>
+        <span class="eyebrow sheet__group-label" id="sheet-services">Services</span>
+        <ul class="sheet__sub" aria-labelledby="sheet-services">
+          <li><a class="sheet__link" href="/services/sap/">SAP &amp; ERP</a></li>
+          <li><a class="sheet__link" href="/services/cloud/">Cloud</a></li>
+          <li><a class="sheet__link" href="/services/ai/" aria-current="page">Agentic &amp; Applied AI</a></li>
+        </ul>
+      </li>
+      <li>
+        <span class="eyebrow sheet__group-label" id="sheet-products">Products</span>
+        <ul class="sheet__sub" aria-labelledby="sheet-products">
+          <li><a class="sheet__link" href="/products/value-lens/">Value Lens <span class="nav-beta">Private beta</span></a></li>
+          <li><a class="sheet__link" href="/products/sap-intelligence-suite/">SAP Intelligence Suite</a></li>
+        </ul>
+      </li>
+      <li><a class="sheet__link" href="/approach/">Approach</a></li>
+      <li><a class="sheet__link" href="/about/">About</a></li>
+      <li><a class="sheet__link" href="/contact/">Contact</a></li>
+    </ul>
+    <div class="sheet__actions">
+      <a class="btn btn--primary" href="/contact/?intent=discovery">Book a discovery call</a>
+      <a class="btn btn--secondary" href="/products/value-lens/#beta">Request Value Lens beta access</a>
+    </div>
+  </nav>
+  <div class="sheet__theme" role="group" aria-label="Appearance">
+    <span class="sheet__theme-label" aria-hidden="true">Appearance:</span>
+    <button type="button" class="chip" data-theme-choice="system" aria-pressed="true">System</button>
+    <button type="button" class="chip" data-theme-choice="light" aria-pressed="false">Light</button>
+    <button type="button" class="chip" data-theme-choice="dark" aria-pressed="false">Dark</button>
+  </div>
+</div>
+<main id="main">
+
+  <!-- 01 Hero (white, no grid) -->
+  <section class="hero hero--plain" aria-labelledby="hero-title">
+    <div class="hero-art hero-art--lite" aria-hidden="true">
+      <svg class="hero-art__mark" viewBox="0 0 64 64" focusable="false">
+        <path d="M4 24V4h20v4H8v16z" fill="currentColor"/>
+        <circle cx="32" cy="32" r="13.5" fill="none" stroke="currentColor" stroke-width="5"/>
+        <path d="M60 40v20H40v-4h16V40z" fill="var(--svls-accent, #E4432B)"/>
+      </svg>
+    </div>
+    <div class="container">
+      <div class="section-mark"><span class="numeral">01</span><p class="eyebrow">Practice 03 · Agentic &amp; Applied AI</p></div>
+      <div class="grid hero__grid">
+        <div class="hero__copy col-9">
+          <h1 id="hero-title">Agents Explain. <span class="key">Humans Decide.</span> SAP Stays the System of Record.</h1>
+          <p class="lead">Governed agentic AI on SAP BTP: MCP tool catalogs, Joule and A2A, SAP AI Core, LangGraph and RAG, under a control model where every write is read before, confirmed by a person and verified after. Agents explain. Humans decide. SAP stays the system of record. Underneath the agents sit methods our team has built and run: retrieval-augmented generation, metaheuristic optimisation, probabilistic models and constraint engines, most published with source code.</p>
+          <div class="btn-row">
+            <a class="btn btn--primary" href="/contact/?intent=ai">Book an AI readiness call</a>
+            <a class="btn btn--secondary" href="/products/value-lens/">See Value Lens (private beta)</a>
+          </div>
+          <p class="trust">A 45-minute call with an architect, not a salesperson. Replies within one business day. <a href="/approach/">How we run engagements</a></p>
+        </div>
+        <ul class="microlabels hero__rows-a">
+          <li>MCP · Joule / A2A · SAP AI Core · LangGraph</li>
+          <li>RAG · Optimisation · Markov models</li>
+          <li><span class="nowrap">Read-before-write</span> · <span class="nowrap">Confirm-to-act</span> · <span class="nowrap">Verify-after</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 Three offer blocks -->
+  <section class="section" id="offer" aria-labelledby="offer-title">
+    <div class="container">
+      <div class="section-mark mb-6"><span class="numeral">02</span><h2 class="eyebrow" id="offer-title">What We Deliver</h2></div>
+      <div class="hgrid hgrid--3 hgrid--bottom">
+        <article class="practice offer">
+          <span class="numeral practice__num">01</span>
+          <h3>Governed agents on SAP BTP</h3>
+          <p class="practice__body">A read-only MCP tool catalog against your landscape first. Then confirm-to-act operations under the control model. Joule and A2A where SAP provides the surface; LangGraph and SAP AI Core where it does not.</p>
+          <p class="practice__typical"><span class="eyebrow">Deliverables</span>tool catalog with policies, control-model implementation, evidence pack for InfoSec, runbook.</p>
+          <a class="arrow-link" href="#control-model">The control model<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
+        </article>
+        <article class="practice offer">
+          <span class="numeral practice__num">02</span>
+          <h3>AI governance and human-in-the-loop design</h3>
+          <p class="practice__body">The controls a CIO can hand to any AI vendor, implemented rather than promised: read before write, confirm to act, verify after, and an audit trail per case. Workshops with finance, InfoSec and internal audit.</p>
+          <p class="practice__typical"><span class="eyebrow">Deliverables</span>control model, policy versions, review UI patterns, audit design.</p>
+          <a class="arrow-link" href="#checklist">Get the checklist<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
+        </article>
+        <article class="practice offer">
+          <span class="numeral practice__num">03</span>
+          <h3>AI-assisted SAP engineering</h3>
+          <p class="practice__body">Faster on repeatable objects: mapping specs, integration flow scaffolds, tests, runbooks, extension boilerplate. Never transport approval, never production changes, never arithmetic inside an LLM.</p>
+          <p class="practice__typical"><span class="eyebrow">Deliverables</span>accelerated build with architect review on every artefact.</p>
+          <a class="arrow-link" href="/products/sap-intelligence-suite/">See SAP Intelligence Suite<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 Applied research: the methods behind the agents (Addendum B.2) -->
+  <section class="section" id="methods" aria-labelledby="methods-title">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <div class="section-mark"><span class="numeral">03</span><p class="eyebrow">Applied research</p></div>
+        <h2 id="methods-title">The Methods Behind the Agents, Built and Run Before We Recommend Them.</h2>
+        <p class="subcopy">Agentic AI is the visible layer. Underneath it are methods our team has built and written up: probabilistic models, constraint engines, metaheuristic optimisers and retrieval systems. Most come with source code. The optimisers come with seeded results that reproduce to the cent.</p>
+      </div>
+      <div class="hgrid hgrid--4 hgrid--bottom methods-grid">
+        <div class="method-cell">
+          <h3 class="eyebrow method-cell__title">Markov chain models</h3>
+          <p class="method-cell__body">Order-1 and order-2 chains with context back-off and temperature-controlled sampling, written from scratch in the standard library. Transitions are learned by counting, so every probability can be read and audited.</p>
+          <p class="method-cell__applied small muted"><span class="eyebrow">Applied to</span>sequence generation from reference data, next-state prediction, process and clickstream simulation.</p>
+        </div>
+        <div class="method-cell">
+          <h3 class="eyebrow method-cell__title">Stochastic generation</h3>
+          <p class="method-cell__body">Seeded weighted random walks over hand-authored weight profiles, with each value projected onto an allowed set. 1 seed reproduces a run, in Python and in a JavaScript port for workflow automation.</p>
+          <p class="method-cell__applied small muted"><span class="eyebrow">Applied to</span>profile-driven sequence generation, scenario and what-if sampling, synthetic test data.</p>
+        </div>
+        <div class="method-cell">
+          <h3 class="eyebrow method-cell__title">Constraint-based generation</h3>
+          <p class="method-cell__body">Several candidates are sampled per step and the lowest-cost one is kept under hard and soft rules: range, step size, forbidden pairings, learned likelihood. A repair pass then finds remaining violations and fixes them locally.</p>
+          <p class="method-cell__applied small muted"><span class="eyebrow">Applied to</span>rule-conformant multi-stream generation, scheduling and allocation under rules, configuration validation with auto-repair.</p>
+        </div>
+        <div class="method-cell">
+          <h3 class="eyebrow method-cell__title">Simulated annealing</h3>
+          <p class="method-cell__body">Single- and multi-objective annealing with a Pareto archive and an 11-point weight sweep, so a decision-maker sees the whole trade-off frontier and a knee point. Our book documents it with a working prototype for transport mode selection against cost and CO2.</p>
+          <p class="method-cell__applied small muted"><span class="eyebrow">Applied to</span>transport mode selection, cost-versus-emissions planning, multi-objective scheduling.</p>
+        </div>
+        <div class="method-cell">
+          <h3 class="eyebrow method-cell__title">Adaptive genetic optimisation</h3>
+          <p class="method-cell__body">A genetic algorithm whose mutation and crossover rates adapt online to population diversity and stagnation, with capacity and demand limits as soft penalties. Our book documents it with a working prototype for 3-tier supplier, plant and distribution-centre assignment.</p>
+          <p class="method-cell__applied small muted"><span class="eyebrow">Applied to</span>supply-network design, plant and route selection, capacitated assignment.</p>
+        </div>
+        <div class="method-cell">
+          <h3 class="eyebrow method-cell__title">Swarm and hybrid optimisation</h3>
+          <p class="method-cell__body">Particle swarm and a hybrid swarm-genetic method for continuous decisions, benchmarked against the closed-form EOQ. Runs are repeated across 5 seeds and the mean is reported, not only the best run.</p>
+          <p class="method-cell__applied small muted"><span class="eyebrow">Applied to</span>inventory policy and order quantities, continuous parameter tuning.</p>
+        </div>
+        <div class="method-cell">
+          <h3 class="eyebrow method-cell__title">Retrieval-augmented generation</h3>
+          <p class="method-cell__body">Hybrid dense and keyword retrieval with cross-encoder re-ranking over SAP documentation and BPMN process exports. Every answer cites its document and page, and the model must say so when the context does not hold the answer.</p>
+          <p class="method-cell__applied small muted"><span class="eyebrow">Applied to</span>SAP functional questions, process documentation, private document libraries that stay on your infrastructure.</p>
+        </div>
+        <div class="method-cell">
+          <h3 class="eyebrow method-cell__title">Protocol-based agents</h3>
+          <p class="method-cell__body">A reference design for A2A agents on SAP BTP: agent cards, LangGraph orchestration and SAP AI Core models. The agent calls S/4HANA Cloud APIs as typed business tools from Joule or an external client. MCP tool catalogs sit under the same control model in Value Lens.</p>
+          <p class="method-cell__applied small muted"><span class="eyebrow">Applied to</span>governed agents on SAP BTP, Joule and agent-to-agent scenarios, custom Python jobs on SAP AI Core.</p>
+        </div>
+      </div>
+      <p class="control__line">Numbers still come from deterministic code. These methods generate, rank, retrieve and explain; a person decides.</p>
+      <div class="links control-links">
+        <a class="arrow-link" href="#faq">Which AI methods do you actually use?<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 Control model -->
+  <section class="section" id="control-model" aria-labelledby="control-title">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <div class="section-mark"><span class="numeral">04</span><p class="eyebrow">Governed AI on SAP BTP</p></div>
+        <h2 id="control-title">AI in Your ERP Is a Control Question Before It Is a Productivity Question.</h2>
+        <p class="subcopy">The same agent that can raise a purchase order can raise the wrong one. Our agents explain; your people decide. The numbers never come from the model.</p>
+      </div>
+      <div class="control-diagram" aria-hidden="true">
+        <svg viewBox="0 0 960 120" font-family="'JetBrains Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="500" letter-spacing="0.06em" text-anchor="middle" fill="currentColor" focusable="false">
+          <rect x="1" y="37" width="94" height="46" fill="none" stroke="currentColor" stroke-width="2"/>
+          <rect x="865" y="37" width="94" height="46" fill="none" stroke="currentColor" stroke-width="2"/>
+          <text x="48" y="64">SAP</text>
+          <text x="912" y="64">SAP</text>
+          <path d="M96 60h760" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <circle cx="859" cy="60" r="3" fill="var(--svls-accent, #E4432B)"/>
+          <g fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M274 60V46h14M302 60v14h-14"/>
+            <path d="M466 60V46h14M494 60v14h-14"/>
+            <path d="M658 60V46h14M686 60v14h-14"/>
+          </g>
+          <g fill-opacity="0.72" font-weight="400">
+            <text x="288" y="104">READ-BEFORE-WRITE</text>
+            <text x="480" y="104">CONFIRM-TO-ACT</text>
+            <text x="672" y="104">VERIFY-AFTER</text>
+          </g>
+        </svg>
+      </div>
+      <div class="hgrid hgrid--3 hgrid--bottom">
+        <div class="control">
+          <span class="mono-title">Read before write</span>
+          <p class="control__body">The agent reads the current SAP state before it proposes anything.</p>
+        </div>
+        <div class="control">
+          <span class="mono-title">Confirm to act</span>
+          <p class="control__body">A person reviews and confirms every create and update.</p>
+        </div>
+        <div class="control">
+          <span class="mono-title">Verify after</span>
+          <p class="control__body">SAP is read back after every action, and the result goes into the audit trail.</p>
+        </div>
+      </div>
+      <p class="control__line">Numbers come from deterministic code, never from the model. Every case carries its sources, its calculation and its decisions.</p>
+      <div class="links control-links">
+        <a class="arrow-link" href="/contact/?intent=checklist">Get the Governed Agent Control Checklist<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
+        <a class="arrow-link" href="/products/value-lens/">See Value Lens<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 Proof (surface band, four cells) -->
+  <section class="section band-surface" id="proof" aria-labelledby="proof-title">
+    <div class="container">
+      <div class="section-mark mb-6"><span class="numeral">05</span><h2 class="eyebrow" id="proof-title">Facts with Sources</h2></div>
+      <ul class="hgrid hgrid--4 hgrid--bottom" role="list">
+        <li class="stat-cell">
+          <p class="stat stat-cell__num">0</p>
+          <p class="stat-cell__label">numbers produced by a model</p>
+          <p class="stat-cell__ctx">Deterministic code only.</p>
+        </li>
+        <li class="stat-cell">
+          <p class="stat stat-cell__num">1</p>
+          <p class="stat-cell__label">reviewer on every write</p>
+        </li>
+        <li class="stat-cell">
+          <p class="stat stat-cell__num">5</p>
+          <p class="stat-cell__label">algorithms in our book, each with a working prototype</p>
+          <p class="stat-cell__ctx">Adaptive genetic optimisation, simulated annealing, particle swarm, hybrid PSO-GA and Bessel-Fourier classification. Seeded, so every figure in the book reproduces.</p>
+        </li>
+        <li class="stat-cell">
+          <p class="stat stat-cell__num">25+</p>
+          <p class="stat-cell__label">years of SAP delivery experience</p>
+          <p class="stat-cell__ctx">Across our key architects.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 05 AI-assisted SAP engineering: what we accelerate / never automate -->
+  <section class="section" id="ai-assisted" aria-labelledby="ai-title">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <div class="section-mark"><span class="numeral">06</span><p class="eyebrow">AI-assisted engineering</p></div>
+        <h2 id="ai-title">Repeatable SAP Engineering, Faster. With a List of What We Never Automate.</h2>
+        <p class="subcopy">We use our own AI-assisted tooling for the repeatable parts of integration and extension work. Every generated artefact is reviewed by a certified architect before it reaches your landscape.</p>
+      </div>
+      <div class="hgrid hgrid--2 hgrid--bottom two-col">
+        <div>
+          <span class="mono-title">What we accelerate</span>
+          <ul class="list-points">
+            <li>Mapping specifications from domain contracts</li>
+            <li>Integration flow scaffolds from the pattern library</li>
+            <li>Test cases and read-back checks</li>
+            <li>Runbooks and handover documentation</li>
+            <li>Clean Core extension boilerplate on BTP</li>
+          </ul>
+        </div>
+        <div>
+          <span class="mono-title">What we never automate</span>
+          <ul class="list-rings">
+            <li>Transport approval</li>
+            <li>Production changes and cutover decisions</li>
+            <li>Anything that writes to SAP without a confirmed reviewer</li>
+            <li>Financial calculations inside an LLM</li>
+            <li>Sign-off on an evidence pack</li>
+          </ul>
+        </div>
+      </div>
+      <div class="links links--after">
+        <a class="arrow-link" href="/approach/#ai-assisted">How the method uses it<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
+        <a class="arrow-link" href="/products/sap-intelligence-suite/">See SAP Intelligence Suite<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 Lead magnet -->
+  <section class="section section--slim band-surface slim-band" id="checklist" aria-labelledby="checklist-title">
+    <div class="container">
+      <div class="section-mark"><span class="numeral">07</span><p class="eyebrow">Checklist</p></div>
+      <div class="grid">
+        <div class="col-8">
+          <h3 id="checklist-title">The Governed Agent Control Checklist for SAP BTP.</h3>
+          <p class="slim-band__body">One page. The three controls (read before write, confirm to act, verify after) and the audit trail a CIO can hand to any AI vendor and ask: which of these do you implement?</p>
+        </div>
+        <div class="col-4 slim-band__action">
+          <a class="arrow-link" href="/contact/?intent=checklist">Get the checklist<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
+          <p class="small muted"><span class="todo">TODO</span> (client): the PDF. Until it exists, the link opens the contact form with the checklist preselected.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 07 FAQ -->
+  <section class="section" id="faq" aria-labelledby="faq-title">
+    <div class="container">
+      <div class="section-mark mb-6"><span class="numeral">08</span><h2 class="eyebrow" id="faq-title">Questions</h2></div>
+      <div class="faq-list">
+        <details class="faq">
+          <summary>Can the agent post to SAP on its own?<svg class="faq__glyph" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M0 8h16" stroke="currentColor" stroke-width="1.5"/><path class="v" d="M8 0v16" stroke="currentColor" stroke-width="1.5"/></svg></summary>
+          <div class="faq__body"><p>No. There is no path in the catalog that writes without a person confirming, and the confirmation expires.</p></div>
+        </details>
+        <details class="faq">
+          <summary>Where do the numbers come from?<svg class="faq__glyph" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M0 8h16" stroke="currentColor" stroke-width="1.5"/><path class="v" d="M8 0v16" stroke="currentColor" stroke-width="1.5"/></svg></summary>
+          <div class="faq__body"><p>From deterministic code under a versioned policy, in integer cents. The model explains and proposes hypotheses, labelled as hypotheses.</p></div>
+        </details>
+        <details class="faq">
+          <summary>Do you use Joule?<svg class="faq__glyph" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M0 8h16" stroke="currentColor" stroke-width="1.5"/><path class="v" d="M8 0v16" stroke="currentColor" stroke-width="1.5"/></svg></summary>
+          <div class="faq__body"><p>Where SAP exposes the surface you need, yes; A2A for agent-to-agent. Where it does not, LangGraph on SAP AI Core or your cloud, with the same control model.</p></div>
+        </details>
+        <details class="faq">
+          <summary>What is in the evidence pack?<svg class="faq__glyph" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M0 8h16" stroke="currentColor" stroke-width="1.5"/><path class="v" d="M8 0v16" stroke="currentColor" stroke-width="1.5"/></svg></summary>
+          <div class="faq__body"><p>Tool catalog and policies, sample audit trails, read-back results, and the control-model document your InfoSec can review.</p></div>
+        </details>
+        <details class="faq">
+          <summary>Is Value Lens what you would build for us?<svg class="faq__glyph" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M0 8h16" stroke="currentColor" stroke-width="1.5"/><path class="v" d="M8 0v16" stroke="currentColor" stroke-width="1.5"/></svg></summary>
+          <div class="faq__body"><p><a href="/products/value-lens/">Value Lens</a> is our product for order-to-cash margin leakage, in private beta. Client agents use the same control model and catalog approach against your own processes.</p></div>
+        </details>
+        <details class="faq">
+          <summary>Which AI methods do you actually use?<svg class="faq__glyph" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M0 8h16" stroke="currentColor" stroke-width="1.5"/><path class="v" d="M8 0v16" stroke="currentColor" stroke-width="1.5"/></svg></summary>
+          <div class="faq__body"><p>Deterministic code for every number. That rule comes first. Around it, methods our team has built and run. Markov chain and stochastic models for sequences and simulation. Constraint-based generation with repair passes. Metaheuristic optimisation: adaptive genetic, simulated annealing, particle swarm and hybrid PSO-GA. Bessel-Fourier descriptors with a linear SVM for image classification. Retrieval-augmented generation with hybrid retrieval, re-ranking and citations. A2A agents with LangGraph on SAP AI Core, and MCP tool catalogs in Value Lens. Most are published with source code; the rest are in our book with working prototypes.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 08 Closing CTA -->
+  <section class="section has-grid cta-band cta-band--ai" id="next-step" aria-labelledby="next-title">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <div class="section-mark"><span class="numeral">09</span><p class="eyebrow">Next step</p></div>
+        <h2 id="next-title">Start with a Read-Only Catalog Against Your Landscape. Decide About Writes When You Have Seen the Evidence.</h2>
+      </div>
+      <div class="btn-row">
+        <a class="btn btn--primary" href="/contact/?intent=ai">Book an AI readiness call</a>
+        <a class="btn btn--secondary" href="/products/value-lens/#beta">Request Value Lens beta access</a>
+      </div>
+      <p class="trust">A 45-minute call with an architect, not a salesperson. Replies within one business day.</p>
+      <div class="cta-links">
+        <a class="arrow-link" href="/approach/">How we run engagements<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
+        <a class="arrow-link" href="/contact/?intent=overview">Download the capability overview<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+</main>
+<?php get_footer(); ?>

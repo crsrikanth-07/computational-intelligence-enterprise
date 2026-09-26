@@ -1,0 +1,247 @@
+<?php /* Template Name: SAP Intelligence Suite: Integration Flows, ABAP, RAP */ ?>
+<?php get_header(); ?>
+<div class="sheet-backdrop" data-menu-backdrop hidden></div>
+<div class="sheet" id="mobile-sheet" hidden>
+  <nav aria-label="Menu">
+    <ul class="sheet__list">
+      <li>
+        <span class="eyebrow sheet__group-label" id="sheet-services">Services</span>
+        <ul class="sheet__sub" aria-labelledby="sheet-services">
+          <li><a class="sheet__link" href="/services/sap/">SAP &amp; ERP</a></li>
+          <li><a class="sheet__link" href="/services/cloud/">Cloud</a></li>
+          <li><a class="sheet__link" href="/services/ai/">Agentic &amp; Applied AI</a></li>
+        </ul>
+      </li>
+      <li>
+        <span class="eyebrow sheet__group-label" id="sheet-products">Products</span>
+        <ul class="sheet__sub" aria-labelledby="sheet-products">
+          <li><a class="sheet__link" href="/products/value-lens/">Value Lens <span class="nav-beta">Private beta</span></a></li>
+          <li><a class="sheet__link" href="/products/sap-intelligence-suite/" aria-current="page">SAP Intelligence Suite</a></li>
+        </ul>
+      </li>
+      <li><a class="sheet__link" href="/approach/">Approach</a></li>
+      <li><a class="sheet__link" href="/about/">About</a></li>
+      <li><a class="sheet__link" href="/contact/">Contact</a></li>
+    </ul>
+    <div class="sheet__actions">
+      <a class="btn btn--primary" href="/contact/?intent=discovery">Book a discovery call</a>
+      <a class="btn btn--secondary" href="/products/value-lens/#beta">Request Value Lens beta access</a>
+    </div>
+  </nav>
+  <div class="sheet__theme" role="group" aria-label="Appearance">
+    <span class="sheet__theme-label" aria-hidden="true">Appearance:</span>
+    <button type="button" class="chip" data-theme-choice="system" aria-pressed="true">System</button>
+    <button type="button" class="chip" data-theme-choice="light" aria-pressed="false">Light</button>
+    <button type="button" class="chip" data-theme-choice="dark" aria-pressed="false">Dark</button>
+  </div>
+</div>
+<main id="main">
+
+  <!-- 01 Hero (white, grid texture): lockup, H1, lead, status, CTAs, generic workbench visual (Addendum A v2) -->
+  <section class="hero hero--plain hero--suite has-grid" aria-labelledby="hero-title">
+    <div class="hero-art hero-art--lite" aria-hidden="true">
+      <svg class="hero-art__mark" viewBox="0 0 64 64" focusable="false">
+        <path d="M4 24V4h20v4H8v16z" fill="currentColor"/>
+        <circle cx="32" cy="32" r="13.5" fill="none" stroke="currentColor" stroke-width="5"/>
+        <path d="M60 40v20H40v-4h16V40z" fill="var(--svls-accent, #E4432B)"/>
+      </svg>
+    </div>
+    <div class="container">
+      <div class="section-mark"><span class="numeral">01</span><p class="eyebrow">Product</p></div>
+      <div class="grid hero__grid">
+        <div class="hero__copy col-6">
+          <div class="product-lockup">
+            <svg class="product-lockup__mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+              <path d="M4 24V4h20v4H8v16z" fill="currentColor"/>
+              <circle cx="32" cy="32" r="13.5" fill="none" stroke="currentColor" stroke-width="5"/>
+              <rect x="25" y="27" width="14" height="2" fill="var(--svls-accent, #E4432B)"/>
+              <rect x="25" y="31" width="10" height="2" fill="var(--svls-accent, #E4432B)"/>
+              <rect x="25" y="35" width="12" height="2" fill="var(--svls-accent, #E4432B)"/>
+              <path d="M60 40v20H40v-4h16V40z" fill="var(--svls-accent, #E4432B)"/>
+            </svg>
+            <span class="product-lockup__text"><span class="product-lockup__name">SAP Intelligence Suite</span><span class="product-lockup__by">by SVLS LABS</span></span>
+          </div>
+          <h1 id="hero-title">SAP Intelligence Suite. SAP Engineering <span class="key">in Plain English</span>.</h1>
+          <p class="lead">Generate integration flows, ABAP and RAP artefacts, modernise legacy code and get SAP functional answers from one workbench. Trained on your own reviewed library. Runs with local models on your infrastructure or with a hosted model of your choice. Your artefacts and code stay in your landscape.</p>
+          <p class="status">In use in SVLS LABS delivery. Available to customers on request; deployed in your landscape, reviewed by your architects.</p>
+          <div class="btn-row">
+            <a class="btn btn--primary" href="/contact/?intent=suite-demo">Request a Suite demo</a>
+            <a class="btn btn--secondary" href="/contact/?intent=discovery">Book a discovery call</a>
+          </div>
+          <p class="trust">A 45-minute call with an architect, not a salesperson. Replies within one business day. <a href="/approach/">How we run engagements</a></p>
+        </div>
+        <div class="col-6 hero__aside" data-reveal>
+          <div class="workbench workbench--lg" role="group" aria-label="SAP Intelligence Suite workbench, illustrative">
+              <p class="workbench__bar workbench__bar--placeholder">Describe the interface, the object or the process</p>
+              <div class="workbench__cols">
+                <div class="workbench__col">
+                  <p class="eyebrow">CPI iFlow generation</p>
+                  <p class="workbench__line">Integration flows from a plain-English description</p>
+                </div>
+                <div class="workbench__col">
+                  <p class="eyebrow">ABAP &amp; RAP code</p>
+                  <p class="workbench__line">Programs, CDS views and RAP models, legacy code modernised</p>
+                </div>
+                <div class="workbench__col">
+                  <p class="eyebrow">Functional knowledge</p>
+                  <p class="workbench__line">Process and configuration answers grounded in trained documentation</p>
+                </div>
+              </div>
+              <p class="workbench__foot">Trained on your library · Runs in your landscape · Architect-reviewed</p>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 Three modes (white, three cards) -->
+  <section class="section" id="modes" aria-labelledby="modes-title">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <div class="section-mark"><span class="numeral">02</span><p class="eyebrow">Three modes</p></div>
+        <h2 id="modes-title">Three Modes. One Reviewed Library.</h2>
+      </div>
+      <div class="hgrid hgrid--3 hgrid--bottom">
+        <article class="practice mode">
+          <span class="numeral practice__num">01</span>
+          <h3>CPI iFlow generation</h3>
+          <p class="practice__body">Describe the interface and get a working Integration Suite flow drawn from a library of reviewed patterns, with the mapping and error handling made explicit for review.</p>
+        </article>
+        <article class="practice mode">
+          <span class="numeral practice__num">02</span>
+          <h3>ABAP &amp; RAP code</h3>
+          <p class="practice__body">Programs, classes, CDS views and RAP models from a plain-English request. Legacy code modernised with the original logic preserved and diffed.</p>
+        </article>
+        <article class="practice mode">
+          <span class="numeral practice__num">03</span>
+          <h3>Functional knowledge</h3>
+          <p class="practice__body">Process explanations and configuration answers grounded in trained SAP documentation, for consultants, developers and business analysts alike.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 How it works (surface band): four steps on the method component -->
+  <section class="section band-surface" id="how-it-works" aria-labelledby="how-title">
+    <div class="container">
+      <div class="section-mark mb-6"><span class="numeral">03</span><h2 class="eyebrow" id="how-title">How It Works</h2></div>
+      <ol class="method" role="list">
+        <li class="method__step">
+          <span class="numeral">01</span>
+          <h3 class="h4">Upload.</h3>
+          <p>Upload your own artefacts and documentation. Nothing leaves the workbench.</p>
+        </li>
+        <li class="method__step">
+          <span class="numeral">02</span>
+          <h3 class="h4">Train.</h3>
+          <p>The workbench indexes your library so generated work follows your naming, error handling and mapping conventions.</p>
+        </li>
+        <li class="method__step">
+          <span class="numeral">03</span>
+          <h3 class="h4">Ask and generate.</h3>
+          <p>Type the request in plain English. The Suite drafts the artefact with its objects and mappings made explicit.</p>
+        </li>
+        <li class="method__step">
+          <span class="numeral">04</span>
+          <h3 class="h4">Review.</h3>
+          <p>A certified architect reviews every artefact before it enters a landscape. The review record travels with the artefact into the evidence pack.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 04 Where it runs (white, three cells) -->
+  <section class="section" id="where-it-runs" aria-labelledby="runs-title">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <div class="section-mark"><span class="numeral">04</span><p class="eyebrow">Where it runs</p></div>
+        <h2 id="runs-title">Your Landscape, Your Models.</h2>
+      </div>
+      <div class="hgrid hgrid--3 hgrid--bottom">
+        <div class="control">
+          <h3>Local models</h3>
+          <p class="control__body">Runs with local open-weight models on your infrastructure. Your artefacts, code and documents never leave it.</p>
+        </div>
+        <div class="control">
+          <h3>Hosted models</h3>
+          <p class="control__body">Or connect a hosted model of your choice under your data-handling agreement.</p>
+        </div>
+        <div class="control">
+          <h3>Your library</h3>
+          <p class="control__body">Trained on your reviewed artefacts, so generated work follows your conventions rather than a generic template.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 Suite and Value Lens together (surface band, slim) -->
+  <section class="section section--slim band-surface slim-band" id="two-products" aria-labelledby="pair-title">
+    <div class="container">
+      <div class="section-mark"><span class="numeral">05</span><p class="eyebrow">Suite and Value Lens</p></div>
+      <div class="grid">
+        <div class="col-8">
+          <h3 id="pair-title">Two Products, One Control Model.</h3>
+          <p class="slim-band__body">The Suite accelerates the engineering. Value Lens governs what the numbers say. Both follow the same rule: deterministic artefacts, architect or reviewer decisions, SAP as the system of record.</p>
+        </div>
+        <div class="col-4 slim-band__action">
+          <a class="arrow-link" href="/products/value-lens/">See Value Lens<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
+          <a class="arrow-link" href="/services/ai/#control-model">The control model<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 FAQ -->
+  <section class="section" id="faq" aria-labelledby="faq-title">
+    <div class="container">
+      <div class="section-mark mb-6"><span class="numeral">06</span><h2 class="eyebrow" id="faq-title">Questions</h2></div>
+      <div class="faq-list">
+        <details class="faq">
+          <summary>Does the Suite deploy flows or transport code by itself?<svg class="faq__glyph" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M0 8h16" stroke="currentColor" stroke-width="1.5"/><path class="v" d="M8 0v16" stroke="currentColor" stroke-width="1.5"/></svg></summary>
+          <div class="faq__body"><p>No. It generates artefacts. Deployment and transports stay with your architects and your change process.</p></div>
+        </details>
+        <details class="faq">
+          <summary>Which models does it use?<svg class="faq__glyph" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M0 8h16" stroke="currentColor" stroke-width="1.5"/><path class="v" d="M8 0v16" stroke="currentColor" stroke-width="1.5"/></svg></summary>
+          <div class="faq__body"><p>Local open-weight models on your infrastructure by default, or a hosted model you choose. The model never sees data you have not uploaded to the workbench.</p></div>
+        </details>
+        <details class="faq">
+          <summary>Can it learn our conventions?<svg class="faq__glyph" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M0 8h16" stroke="currentColor" stroke-width="1.5"/><path class="v" d="M8 0v16" stroke="currentColor" stroke-width="1.5"/></svg></summary>
+          <div class="faq__body"><p>Yes. It is trained on your own artefacts and documentation, so generated work follows your patterns.</p></div>
+        </details>
+        <details class="faq">
+          <summary>Is it available today?<svg class="faq__glyph" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M0 8h16" stroke="currentColor" stroke-width="1.5"/><path class="v" d="M8 0v16" stroke="currentColor" stroke-width="1.5"/></svg></summary>
+          <div class="faq__body"><p>It is in use in SVLS LABS delivery and available to customers on request. <a href="/contact/?intent=suite-demo">Book a demo</a> and we will scope a deployment in your landscape.</p></div>
+        </details>
+        <details class="faq">
+          <summary>What does a generated integration flow contain?<svg class="faq__glyph" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M0 8h16" stroke="currentColor" stroke-width="1.5"/><path class="v" d="M8 0v16" stroke="currentColor" stroke-width="1.5"/></svg></summary>
+          <div class="faq__body"><p>A complete Integration Suite package. It holds the flow definition, the Groovy scripts it needs and the manifest. They are assembled in the form the CPI import dialog expects. An architect reviews it before it enters a landscape.</p></div>
+        </details>
+        <details class="faq">
+          <summary>Does a language model write the integration flow?<svg class="faq__glyph" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M0 8h16" stroke="currentColor" stroke-width="1.5"/><path class="v" d="M8 0v16" stroke="currentColor" stroke-width="1.5"/></svg></summary>
+          <div class="faq__body"><p>No. The artefact is assembled by rule from a matched template in your library or from a built-in skeleton, and the Groovy comes from a pattern library. The language model, local or hosted, explains the result. The Suite keeps working when the model is offline and says so on screen.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 07 Closing (white, grid texture) -->
+  <section class="section has-grid cta-band cta-band--suite" id="next-step" aria-labelledby="next-title">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <div class="section-mark"><span class="numeral">07</span><p class="eyebrow">Next step</p></div>
+        <h2 id="next-title">See It Generate One of Your Interfaces.</h2>
+      </div>
+      <div class="btn-row">
+        <a class="btn btn--primary" href="/contact/?intent=suite-demo">Request a Suite demo</a>
+        <a class="btn btn--secondary" href="/contact/?intent=discovery">Book a discovery call</a>
+      </div>
+      <p class="trust">A 45-minute call with an architect, not a salesperson. Replies within one business day.</p>
+      <div class="cta-links">
+        <a class="arrow-link" href="/approach/">How we run engagements<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
+      </div>
+      <p class="status">In use in SVLS LABS delivery. Available to customers on request; deployed in your landscape, reviewed by your architects.</p>
+    </div>
+  </section>
+
+</main>
+<?php get_footer(); ?>

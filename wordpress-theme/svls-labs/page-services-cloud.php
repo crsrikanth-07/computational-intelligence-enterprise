@@ -1,0 +1,241 @@
+<?php /* Template Name: Cloud Services for SAP Landscapes */ ?>
+<?php get_header(); ?>
+<div class="sheet-backdrop" data-menu-backdrop hidden></div>
+<div class="sheet" id="mobile-sheet" hidden>
+  <nav aria-label="Menu">
+    <ul class="sheet__list">
+      <li>
+        <span class="eyebrow sheet__group-label" id="sheet-services">Services</span>
+        <ul class="sheet__sub" aria-labelledby="sheet-services">
+          <li><a class="sheet__link" href="/services/sap/">SAP &amp; ERP</a></li>
+          <li><a class="sheet__link" href="/services/cloud/" aria-current="page">Cloud</a></li>
+          <li><a class="sheet__link" href="/services/ai/">Agentic &amp; Applied AI</a></li>
+        </ul>
+      </li>
+      <li>
+        <span class="eyebrow sheet__group-label" id="sheet-products">Products</span>
+        <ul class="sheet__sub" aria-labelledby="sheet-products">
+          <li><a class="sheet__link" href="/products/value-lens/">Value Lens <span class="nav-beta">Private beta</span></a></li>
+          <li><a class="sheet__link" href="/products/sap-intelligence-suite/">SAP Intelligence Suite</a></li>
+        </ul>
+      </li>
+      <li><a class="sheet__link" href="/approach/">Approach</a></li>
+      <li><a class="sheet__link" href="/about/">About</a></li>
+      <li><a class="sheet__link" href="/contact/">Contact</a></li>
+    </ul>
+    <div class="sheet__actions">
+      <a class="btn btn--primary" href="/contact/?intent=discovery">Book a discovery call</a>
+      <a class="btn btn--secondary" href="/products/value-lens/#beta">Request Value Lens beta access</a>
+    </div>
+  </nav>
+  <div class="sheet__theme" role="group" aria-label="Appearance">
+    <span class="sheet__theme-label" aria-hidden="true">Appearance:</span>
+    <button type="button" class="chip" data-theme-choice="system" aria-pressed="true">System</button>
+    <button type="button" class="chip" data-theme-choice="light" aria-pressed="false">Light</button>
+    <button type="button" class="chip" data-theme-choice="dark" aria-pressed="false">Dark</button>
+  </div>
+</div>
+<main id="main">
+
+  <!-- 01 Hero (white, no grid) -->
+  <section class="hero hero--plain" aria-labelledby="hero-title">
+    <div class="hero-art hero-art--lite" aria-hidden="true">
+      <svg class="hero-art__mark" viewBox="0 0 64 64" focusable="false">
+        <path d="M4 24V4h20v4H8v16z" fill="currentColor"/>
+        <circle cx="32" cy="32" r="13.5" fill="none" stroke="currentColor" stroke-width="5"/>
+        <path d="M60 40v20H40v-4h16V40z" fill="var(--svls-accent, #E4432B)"/>
+      </svg>
+    </div>
+    <div class="container">
+      <div class="section-mark"><span class="numeral">01</span><p class="eyebrow">Practice 02 · Cloud</p></div>
+      <div class="grid hero__grid">
+        <div class="hero__copy col-8">
+          <h1 id="hero-title">Cloud Around the SAP Core, with the <span class="key">Ledger Intact.</span></h1>
+          <p class="lead">We connect S/4HANA to your cloud data and engineering platforms and build the services around it: contracted extracts to BigQuery, Salesforce integration, cloud-native services on GCP, migrations and landing zones that your security team has already signed.</p>
+          <div class="btn-row">
+            <a class="btn btn--primary" href="/contact/?intent=discovery">Book a discovery call</a>
+            <a class="btn btn--secondary" href="/contact/?intent=discovery&amp;offer=two-week">Start with a two-week discovery</a>
+          </div>
+          <p class="trust">A 45-minute call with an architect, not a salesperson. Replies within one business day. <a href="/approach/">How we run engagements</a></p>
+        </div>
+        <ul class="microlabels hero__rows-a">
+          <li>GCP · BigQuery · Cloud Run · Pub/Sub</li>
+          <li>Salesforce · SAP Integration Suite</li>
+          <li>Landing zones · Migrations · Data pipelines</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 Three offer blocks -->
+  <section class="section" id="offers" aria-labelledby="offers-title">
+    <div class="container">
+      <div class="section-mark mb-6"><span class="numeral">02</span><h2 class="eyebrow" id="offers-title">What We Build</h2></div>
+      <div class="hgrid hgrid--3 hgrid--bottom">
+        <article class="practice offer">
+          <span class="numeral practice__num">01</span>
+          <h3>SAP-to-cloud data platforms</h3>
+          <p class="practice__body">Contracted extracts from S/4HANA to BigQuery (CDS views, Integration Suite, event-driven where it fits), reconciled to SAP totals on a schedule, with lineage documented per table.</p>
+          <p class="practice__typical"><span class="eyebrow">Deliverables</span>Data contracts, pipeline code, reconciliation reports, cost model.</p>
+        </article>
+        <article class="practice offer">
+          <span class="numeral practice__num">02</span>
+          <h3>SAP and Salesforce, and the services between them</h3>
+          <p class="practice__body">Bidirectional integration between SAP order-to-cash and Salesforce, cloud-native services on GCP where SAP should not be extended, APIs with a written contract and read-back verification.</p>
+          <p class="practice__typical"><span class="eyebrow">Deliverables</span>Interface catalog, API specifications, monitoring, evidence pack.</p>
+        </article>
+        <article class="practice offer">
+          <span class="numeral practice__num">03</span>
+          <h3>Migrations and landing zones</h3>
+          <p class="practice__body">Landing zones designed with your InfoSec (identity, network, logging, key management), SAP-adjacent workloads migrated with cutover plans and back-out criteria, run cost reviewed quarterly.</p>
+          <p class="practice__typical"><span class="eyebrow">Deliverables</span>Landing-zone design, migration plan, cutover runbook, cost baseline.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 Proof (surface band) -->
+  <section class="section band-surface" id="figures" aria-labelledby="figures-title">
+    <div class="container">
+      <div class="section-mark mb-6"><span class="numeral">03</span><h2 class="eyebrow" id="figures-title">Facts with Sources</h2></div>
+      <ul class="hgrid hgrid--4 hgrid--bottom" role="list">
+        <li class="stat-cell">
+          <p class="stat stat-cell__num">25+</p>
+          <p class="stat-cell__label">years of SAP delivery experience</p>
+          <p class="stat-cell__ctx">Across our key architects.</p>
+        </li>
+        <li class="stat-cell">
+          <p class="stat stat-cell__num">1</p>
+          <p class="stat-cell__label">reconciliation to SAP totals</p>
+          <p class="stat-cell__ctx">On every extract.</p>
+        </li>
+        <li class="stat-cell">
+          <p class="stat stat-cell__num">1 team</p>
+          <p class="stat-cell__label">from Clean Core extension to BigQuery to governed agent</p>
+          <p class="stat-cell__ctx">No vendor hand-offs.</p>
+        </li>
+        <li class="stat-cell">
+          <p class="stat stat-cell__num">2 weeks</p>
+          <p class="stat-cell__label">fixed-scope discovery</p>
+          <p class="stat-cell__ctx">To a signed architecture.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 04 Reference architecture -->
+  <section class="section" id="reference-architecture" aria-labelledby="ref-arch-title">
+    <div class="container">
+      <div class="section-mark"><span class="numeral">04</span><h2 class="eyebrow" id="ref-arch-title">Reference Architecture</h2></div>
+      <figure class="diagram" data-reveal>
+        <svg class="diagram__wide" viewBox="0 0 960 350" role="img" aria-labelledby="ref-wide-title" font-family="'JetBrains Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="13" font-weight="500" letter-spacing="0.06em" text-anchor="middle" fill="currentColor">
+          <title id="ref-wide-title">Reference architecture: SAP S/4HANA feeds SAP BTP Integration Suite, which serves BigQuery, Salesforce and Cloud Run services; a reconciliation line returns from the cloud to SAP totals.</title>
+          <rect x="21" y="131" width="178" height="78" fill="none" stroke="currentColor" stroke-width="2"/>
+          <text x="110" y="166">SAP S/4HANA</text>
+          <text x="110" y="186" fill-opacity="0.72" font-weight="400">SYSTEM OF RECORD</text>
+          <path d="M200 170h80" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <circle cx="283" cy="170" r="3" fill="currentColor"/>
+          <rect x="290.75" y="130.75" width="198.5" height="78.5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <text x="390" y="158">SAP BTP /</text>
+          <text x="390" y="176">INTEGRATION SUITE</text>
+          <text x="390" y="196" fill-opacity="0.72" font-weight="400">CONTRACT PER FLOW</text>
+          <path d="M490 170h70M560 60v220M560 60h54M560 170h54M560 280h54" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <circle cx="617" cy="60" r="3" fill="currentColor"/>
+          <circle cx="617" cy="170" r="3" fill="currentColor"/>
+          <circle cx="617" cy="280" r="3" fill="currentColor"/>
+          <rect x="624.5" y="32.75" width="215" height="54.5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <text x="732" y="56">BIGQUERY</text>
+          <text x="732" y="75" fill-opacity="0.72" font-weight="400">GCP · CLOUD DATA</text>
+          <rect x="624.5" y="142.75" width="215" height="54.5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <text x="732" y="166">SALESFORCE</text>
+          <text x="732" y="185" fill-opacity="0.72" font-weight="400">ORDER-TO-CASH</text>
+          <rect x="624.5" y="252.75" width="215" height="54.5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <text x="732" y="276">CLOUD RUN SERVICES</text>
+          <text x="732" y="295" fill-opacity="0.72" font-weight="400">GCP · APIS</text>
+          <path d="M840 60h60M840 170h60M840 280h60M900 60v270H110v-117" fill="none" stroke="currentColor" stroke-width="1"/>
+          <circle cx="110" cy="213" r="4" fill="var(--svls-accent, #E4432B)"/>
+          <text x="505" y="322" fill-opacity="0.72" font-weight="400">RECONCILE TO SAP TOTALS</text>
+        </svg>
+        <svg class="diagram__tall" viewBox="0 0 400 500" role="img" aria-labelledby="ref-tall-title" font-family="'JetBrains Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="14" font-weight="500" letter-spacing="0.06em" text-anchor="middle" fill="currentColor">
+          <title id="ref-tall-title">Reference architecture: SAP S/4HANA feeds SAP BTP Integration Suite, which serves BigQuery, Salesforce and Cloud Run services; a reconciliation line returns from the cloud to SAP totals.</title>
+          <rect x="21" y="37" width="318" height="62" fill="none" stroke="currentColor" stroke-width="2"/>
+          <text x="180" y="64">SAP S/4HANA</text>
+          <text x="180" y="84" fill-opacity="0.72" font-weight="400">SYSTEM OF RECORD</text>
+          <path d="M80 100v40" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <circle cx="80" cy="143" r="3" fill="currentColor"/>
+          <text x="340" y="124" text-anchor="end" fill-opacity="0.72" font-weight="400">RECONCILE TO SAP TOTALS</text>
+          <path d="M348 119h20" fill="none" stroke="currentColor" stroke-width="1"/>
+          <rect x="20.75" y="146.75" width="318.5" height="62.5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <text x="180" y="174">SAP BTP / INTEGRATION SUITE</text>
+          <text x="180" y="194" fill-opacity="0.72" font-weight="400">CONTRACT PER FLOW</text>
+          <path d="M80 210v24H40v224M40 278h20M40 368h20M40 458h20" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <circle cx="61" cy="278" r="3" fill="currentColor"/>
+          <circle cx="61" cy="368" r="3" fill="currentColor"/>
+          <circle cx="61" cy="458" r="3" fill="currentColor"/>
+          <rect x="64.75" y="250.75" width="274.5" height="54.5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <text x="202" y="274">BIGQUERY</text>
+          <text x="202" y="293" fill-opacity="0.72" font-weight="400">GCP · CLOUD DATA</text>
+          <rect x="64.75" y="340.75" width="274.5" height="54.5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <text x="202" y="364">SALESFORCE</text>
+          <text x="202" y="383" fill-opacity="0.72" font-weight="400">ORDER-TO-CASH</text>
+          <rect x="64.75" y="430.75" width="274.5" height="54.5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <text x="202" y="454">CLOUD RUN SERVICES</text>
+          <text x="202" y="473" fill-opacity="0.72" font-weight="400">GCP · APIS</text>
+          <path d="M340 278h32M340 368h32M340 458h32M372 458V68h-24" fill="none" stroke="currentColor" stroke-width="1"/>
+          <circle cx="344" cy="68" r="4" fill="var(--svls-accent, #E4432B)"/>
+        </svg>
+        <figcaption>SAP stays the system of record. The cloud reads, serves and reports.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- 05 FAQ -->
+  <section class="section band-surface" id="faq" aria-labelledby="faq-title">
+    <div class="container">
+      <div class="section-mark mb-6"><span class="numeral">05</span><h2 class="eyebrow" id="faq-title">Questions</h2></div>
+      <div class="faq-list">
+        <details class="faq">
+          <summary>Why go through Integration Suite instead of connecting BigQuery directly to the database?<svg class="faq__glyph" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M0 8h16" stroke="currentColor" stroke-width="1.5"/><path class="v" d="M8 0v16" stroke="currentColor" stroke-width="1.5"/></svg></summary>
+          <div class="faq__body"><p>Because the contract, the error handling and the read-back live in one place, and the core stays clean when you upgrade.</p></div>
+        </details>
+        <details class="faq">
+          <summary>How do you prove the cloud numbers match SAP?<svg class="faq__glyph" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M0 8h16" stroke="currentColor" stroke-width="1.5"/><path class="v" d="M8 0v16" stroke="currentColor" stroke-width="1.5"/></svg></summary>
+          <div class="faq__body"><p>Scheduled reconciliation of totals and counts per contract, reported as evidence, not assumed.</p></div>
+        </details>
+        <details class="faq">
+          <summary>Which clouds?<svg class="faq__glyph" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M0 8h16" stroke="currentColor" stroke-width="1.5"/><path class="v" d="M8 0v16" stroke="currentColor" stroke-width="1.5"/></svg></summary>
+          <div class="faq__body"><p>GCP is where our delivered work is; landing-zone and migration patterns are cloud-agnostic and we will say plainly if your platform is outside our proven scope.</p></div>
+        </details>
+        <details class="faq">
+          <summary>Can this feed governed agents later?<svg class="faq__glyph" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M0 8h16" stroke="currentColor" stroke-width="1.5"/><path class="v" d="M8 0v16" stroke="currentColor" stroke-width="1.5"/></svg></summary>
+          <div class="faq__body"><p>Yes. The same contracts become the read-only tools an agent uses. See the <a href="/services/ai/">Agentic &amp; Applied AI practice</a>.</p></div>
+        </details>
+        <details class="faq">
+          <summary>What does the two-week discovery cover for cloud?<svg class="faq__glyph" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M0 8h16" stroke="currentColor" stroke-width="1.5"/><path class="v" d="M8 0v16" stroke="currentColor" stroke-width="1.5"/></svg></summary>
+          <div class="faq__body"><p>Data inventory, security and identity review, target architecture, cost model, fixed-price build scope.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 Closing CTA -->
+  <section class="section has-grid cta-band" id="next-step" aria-labelledby="next-title">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <div class="section-mark"><span class="numeral">06</span><p class="eyebrow">Next step</p></div>
+        <h2 id="next-title">Tell Us What SAP Has to Feed. We Will Draw the Path and the Checks.</h2>
+      </div>
+      <div class="btn-row">
+        <a class="btn btn--primary" href="/contact/?intent=discovery">Book a discovery call</a>
+        <a class="btn btn--secondary" href="/contact/?intent=discovery&amp;offer=two-week">Start with a two-week discovery</a>
+      </div>
+      <p class="trust">A 45-minute call with an architect, not a salesperson. Replies within one business day.</p>
+      <div class="cta-links">
+        <a class="arrow-link" href="/approach/">How we run engagements<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
+        <a class="arrow-link" href="/contact/?intent=overview">Download the capability overview<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+</main>
+<?php get_footer(); ?>

@@ -1,0 +1,249 @@
+<?php /* Template Name: SAP &amp; ERP Services: S/4HANA, BTP, CPI */ ?>
+<?php get_header(); ?>
+<div class="sheet-backdrop" data-menu-backdrop hidden></div>
+<div class="sheet" id="mobile-sheet" hidden>
+  <nav aria-label="Menu">
+    <ul class="sheet__list">
+      <li>
+        <span class="eyebrow sheet__group-label" id="sheet-services">Services</span>
+        <ul class="sheet__sub" aria-labelledby="sheet-services">
+          <li><a class="sheet__link" href="/services/sap/" aria-current="page">SAP &amp; ERP</a></li>
+          <li><a class="sheet__link" href="/services/cloud/">Cloud</a></li>
+          <li><a class="sheet__link" href="/services/ai/">Agentic &amp; Applied AI</a></li>
+        </ul>
+      </li>
+      <li>
+        <span class="eyebrow sheet__group-label" id="sheet-products">Products</span>
+        <ul class="sheet__sub" aria-labelledby="sheet-products">
+          <li><a class="sheet__link" href="/products/value-lens/">Value Lens <span class="nav-beta">Private beta</span></a></li>
+          <li><a class="sheet__link" href="/products/sap-intelligence-suite/">SAP Intelligence Suite</a></li>
+        </ul>
+      </li>
+      <li><a class="sheet__link" href="/approach/">Approach</a></li>
+      <li><a class="sheet__link" href="/about/">About</a></li>
+      <li><a class="sheet__link" href="/contact/">Contact</a></li>
+    </ul>
+    <div class="sheet__actions">
+      <a class="btn btn--primary" href="/contact/?intent=discovery">Book a discovery call</a>
+      <a class="btn btn--secondary" href="/products/value-lens/#beta">Request Value Lens beta access</a>
+    </div>
+  </nav>
+  <div class="sheet__theme" role="group" aria-label="Appearance">
+    <span class="sheet__theme-label" aria-hidden="true">Appearance:</span>
+    <button type="button" class="chip" data-theme-choice="system" aria-pressed="true">System</button>
+    <button type="button" class="chip" data-theme-choice="light" aria-pressed="false">Light</button>
+    <button type="button" class="chip" data-theme-choice="dark" aria-pressed="false">Dark</button>
+  </div>
+</div>
+<main id="main">
+
+  <!-- 01 Hero (white, no grid) -->
+  <section class="hero hero--plain" aria-labelledby="hero-title">
+    <div class="hero-art hero-art--lite" aria-hidden="true">
+      <svg class="hero-art__mark" viewBox="0 0 64 64" focusable="false">
+        <path d="M4 24V4h20v4H8v16z" fill="currentColor"/>
+        <circle cx="32" cy="32" r="13.5" fill="none" stroke="currentColor" stroke-width="5"/>
+        <path d="M60 40v20H40v-4h16V40z" fill="var(--svls-accent, #E4432B)"/>
+      </svg>
+    </div>
+    <div class="container">
+      <div class="section-mark"><span class="numeral">01</span><p class="eyebrow">Practice 01 · SAP &amp; ERP</p></div>
+      <div class="grid hero__grid">
+        <div class="hero__copy col-9">
+          <h1 id="hero-title">S/4HANA, BTP and Integration Suite, Delivered <span class="key">Clean Core</span> from the First Transport.</h1>
+          <p class="lead">We design, build and verify SAP landscapes for enterprises that cannot afford a second go-live. Public and Private Cloud, RISE, on-premise. Integration Suite flows from a pattern library with a written contract per interface and a read-back check after every run. Clean Core by default.</p>
+          <div class="btn-row">
+            <a class="btn btn--primary" href="/contact/?intent=discovery">Book a discovery call</a>
+            <a class="btn btn--secondary" href="/contact/?intent=discovery&amp;offer=two-week">Start with a two-week discovery</a>
+          </div>
+          <p class="trust">A 45-minute call with an architect, not a salesperson. Replies within one business day. <a href="/approach/">How we run engagements</a></p>
+        </div>
+        <ul class="microlabels hero__rows-a">
+          <li>S/4HANA Public · Private · RISE · On-premise</li>
+          <li>BTP · Integration Suite / CPI · Extension Suite</li>
+          <li>PS/EPPM · TEM · O2C · P2P · Finance</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 Three offer blocks -->
+  <section class="section" id="offer" aria-labelledby="offer-title">
+    <div class="container">
+      <div class="section-mark mb-6"><span class="numeral">02</span><h2 class="eyebrow" id="offer-title">What We Deliver</h2></div>
+      <div class="hgrid hgrid--3 hgrid--bottom">
+        <article class="practice offer">
+          <span class="numeral practice__num">01</span>
+          <h3>S/4HANA programmes and Clean Core extensions</h3>
+          <p class="practice__body">Greenfield, conversion and selective transition on Public Cloud, Private Cloud, RISE and on-premise. Extensions live on BTP; the core stays upgradeable. Architecture decisions are written down before they are built.</p>
+          <p class="practice__typical"><span class="eyebrow">Deliverables</span>target architecture, extension register, transport strategy, cutover plan, hypercare runbook.</p>
+        </article>
+        <article class="practice offer">
+          <span class="numeral practice__num">02</span>
+          <h3>Integration Suite and CPI</h3>
+          <p class="practice__body">Flows from a pattern library with a domain contract per interface, error handling by design, and automated read-back against SAP after every run.</p>
+          <p class="practice__typical"><span class="eyebrow">Deliverables</span>interface catalog, flow contracts, monitoring runbook, evidence pack.</p>
+        </article>
+        <article class="practice offer">
+          <span class="numeral practice__num">03</span>
+          <h3>Module depth where money moves</h3>
+          <p class="practice__body">PS/EPPM, Tools &amp; Equipment Management, MM/P2P, O2C, inventory, finance, workforce. Configuration and extension by people who have run these modules live, including in engineering and construction, banking and insurance, manufacturing and pharma.</p>
+          <p class="practice__typical"><span class="eyebrow">Deliverables</span>process design, configuration rationale, test evidence, training material.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 Proof (surface band, four cells) -->
+  <section class="section band-surface" id="proof" aria-labelledby="proof-title">
+    <div class="container">
+      <div class="section-mark mb-6"><span class="numeral">03</span><h2 class="eyebrow" id="proof-title">Facts with Sources</h2></div>
+      <ul class="hgrid hgrid--4 hgrid--bottom" role="list">
+        <li class="stat-cell">
+          <p class="stat stat-cell__num">25+</p>
+          <p class="stat-cell__label">years of SAP delivery experience</p>
+          <p class="stat-cell__ctx">Across our key architects.</p>
+        </li>
+        <li class="stat-cell">
+          <p class="stat stat-cell__num">1</p>
+          <p class="stat-cell__label">written contract per interface</p>
+          <p class="stat-cell__ctx">Before code.</p>
+        </li>
+        <li class="stat-cell">
+          <p class="stat stat-cell__num">1</p>
+          <p class="stat-cell__label">read-back check</p>
+          <p class="stat-cell__ctx">After every run.</p>
+        </li>
+        <li class="stat-cell">
+          <p class="stat stat-cell__num">2 weeks</p>
+          <p class="stat-cell__label">fixed-scope, fixed-price discovery</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 04 Method on this page -->
+  <section class="section" id="method" aria-labelledby="method-title">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <div class="section-mark"><span class="numeral">04</span><p class="eyebrow">How we work</p></div>
+        <h2 id="method-title">Specify. Build. Verify. Then Ship.</h2>
+        <p class="subcopy">The reason our integrations do not come back: every flow has a written contract before it has code, and a read-back check after it runs. The same method builds Value Lens.</p>
+      </div>
+      <ol class="method" role="list">
+        <li class="method__step">
+          <span class="numeral">01</span>
+          <h3 class="h4">Specify — two weeks, fixed scope, fixed price.</h3>
+          <p>Landscape and architecture review. Domain contracts, interface specs, policy versions, a prototype scope. You leave with an architecture you can act on, whether or not you continue with us.</p>
+          <p class="method__extra"><span class="eyebrow">SAP &amp; ERP</span>Two-week Clean Core and Integration Suite readiness review: extension register, interface inventory, upgrade risks, a fixed-price build scope.</p>
+        </li>
+        <li class="method__step">
+          <span class="numeral">02</span>
+          <h3 class="h4">Build.</h3>
+          <p>Clean Core extensions on BTP. CPI flows from a pattern library. AI-assisted generation for repeatable objects, every artefact reviewed by a certified architect before it reaches your landscape.</p>
+        </li>
+        <li class="method__step">
+          <span class="numeral">03</span>
+          <h3 class="h4">Verify.</h3>
+          <p>Automated read-back against SAP after every run. Reconciliation to SAP totals. An evidence pack your auditors and InfoSec can read.</p>
+        </li>
+        <li class="method__step">
+          <span class="numeral">04</span>
+          <h3 class="h4">Ship and run.</h3>
+          <p>Cutover, hypercare, runbooks, handover to your team, with a named engagement lead (a role on the team, not a rotating bench) who stays through run. We do not hand you a deck and leave. We stay until it runs.</p>
+        </li>
+      </ol>
+      <div class="method__after">
+        <a class="btn btn--secondary" href="/contact/?intent=discovery&amp;offer=two-week">Start with a two-week discovery</a>
+        <a class="arrow-link" href="/approach/">Read the Governed Delivery approach<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 Lead magnet -->
+  <section class="section section--slim band-surface slim-band" id="checklist" aria-labelledby="checklist-title">
+    <div class="container">
+      <div class="section-mark"><span class="numeral">05</span><p class="eyebrow">Checklist</p></div>
+      <div class="grid">
+        <div class="col-8">
+          <h3 id="checklist-title">The Clean Core integration checklist.</h3>
+          <p class="slim-band__body">24 questions to ask before your next CPI or BTP extension project: contract, error handling, read-back, transport, ownership.</p>
+        </div>
+        <div class="col-4 slim-band__action">
+          <a class="arrow-link" href="/contact/?intent=checklist-cleancore">Get the checklist<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
+          <p class="small muted"><span class="todo">TODO</span> (client): the PDF. Until it exists, the link opens the contact form with the checklist preselected.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 FAQ -->
+  <section class="section" id="faq" aria-labelledby="faq-title">
+    <div class="container">
+      <div class="section-mark mb-6"><span class="numeral">06</span><h2 class="eyebrow" id="faq-title">Questions</h2></div>
+      <div class="faq-list">
+        <details class="faq">
+          <summary>Do you work on RISE with SAP and S/4HANA Public Cloud, or only on-premise?<svg class="faq__glyph" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M0 8h16" stroke="currentColor" stroke-width="1.5"/><path class="v" d="M8 0v16" stroke="currentColor" stroke-width="1.5"/></svg></summary>
+          <div class="faq__body"><p>All four: Public Cloud, Private Cloud, RISE and on-premise. Clean Core is our default on every one, because it is what keeps the upgrade path open.</p></div>
+        </details>
+        <details class="faq">
+          <summary>What does "a written contract per flow" mean?<svg class="faq__glyph" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M0 8h16" stroke="currentColor" stroke-width="1.5"/><path class="v" d="M8 0v16" stroke="currentColor" stroke-width="1.5"/></svg></summary>
+          <div class="faq__body"><p>Each interface has a document stating source, target, fields, transformations, error behaviour and the read-back check that proves it ran. It exists before the integration flow does.</p></div>
+        </details>
+        <details class="faq">
+          <summary>How do you keep integration delivery cost down?<svg class="faq__glyph" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M0 8h16" stroke="currentColor" stroke-width="1.5"/><path class="v" d="M8 0v16" stroke="currentColor" stroke-width="1.5"/></svg></summary>
+          <div class="faq__body"><p>A pattern library, contracts that stop rework, AI-assisted generation of repeatable objects reviewed by an architect, and read-back checks that catch defects before hypercare does.</p></div>
+        </details>
+        <details class="faq">
+          <summary>Can you take over an existing landscape with undocumented interfaces?<svg class="faq__glyph" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M0 8h16" stroke="currentColor" stroke-width="1.5"/><path class="v" d="M8 0v16" stroke="currentColor" stroke-width="1.5"/></svg></summary>
+          <div class="faq__body"><p>Yes. The two-week discovery produces the interface inventory and the extension register first.</p></div>
+        </details>
+        <details class="faq">
+          <summary>Do you provide application management after go-live?<svg class="faq__glyph" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M0 8h16" stroke="currentColor" stroke-width="1.5"/><path class="v" d="M8 0v16" stroke="currentColor" stroke-width="1.5"/></svg></summary>
+          <div class="faq__body"><p>Yes, as run-and-extend with the same team that built it and a named engagement lead.</p></div>
+        </details>
+        <details class="faq">
+          <summary>Do you work with SAP partners as well as end customers?<svg class="faq__glyph" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M0 8h16" stroke="currentColor" stroke-width="1.5"/><path class="v" d="M8 0v16" stroke="currentColor" stroke-width="1.5"/></svg></summary>
+          <div class="faq__body"><p>Yes, white-label or co-delivered. See the <a href="#partners">partner band below</a>.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 07 For SAP partners -->
+  <section class="section section--slim band-surface partner-band" id="partners" aria-labelledby="partners-title">
+    <div class="container">
+      <div class="section-mark"><span class="numeral">07</span><p class="eyebrow">For SAP partners</p></div>
+      <div class="grid">
+        <div class="col-8">
+          <h3 id="partners-title">Integration Suite, BTP and agentic-AI capacity for partner programmes. White-label or co-delivered.</h3>
+          <p class="partner-band__body">Our architects plug into your RISE and S/4HANA programmes with CPI squads, Clean Core extension builds and governed-agent pilots, under your brand or beside your team.</p>
+        </div>
+        <div class="col-4 partner-band__action">
+          <a class="btn btn--secondary" href="/contact/?intent=partnership">Talk to us about partner capacity</a>
+          <p class="mono-note">NDA-friendly · Fixed-scope options</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 08 Closing CTA -->
+  <section class="section has-grid cta-band" id="next-step" aria-labelledby="next-title">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <div class="section-mark"><span class="numeral">08</span><p class="eyebrow">Next step</p></div>
+        <h2 id="next-title">Bring Us the Landscape. Leave with a Spec.</h2>
+      </div>
+      <div class="btn-row">
+        <a class="btn btn--primary" href="/contact/?intent=discovery">Book a discovery call</a>
+        <a class="btn btn--secondary" href="/contact/?intent=discovery&amp;offer=two-week">Start with a two-week discovery</a>
+      </div>
+      <p class="trust">A 45-minute call with an architect, not a salesperson. Replies within one business day.</p>
+      <div class="cta-links">
+        <a class="arrow-link" href="/approach/">How we run engagements<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+</main>
+<?php get_footer(); ?>

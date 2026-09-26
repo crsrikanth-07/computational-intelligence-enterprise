@@ -1,0 +1,56 @@
+/* /privacy/, /terms/ and /404.html — page-specific styles (tokens only; loaded after site.css) */
+
+/* ---- Legal pages: hero (.hero--plain), then the sections on hairlines ---- */
+
+.legal__updated { margin-top: var(--s-4); }
+.hero--legal .microlabels { margin-top: var(--s-6); }
+
+/* Prose 1-7, aside 9-12 */
+.legal__grid { row-gap: var(--s-7); }
+@media (min-width: 1024px) {
+  .legal__grid { align-items: start; }
+  .legal-aside { position: sticky; top: calc(var(--nav-h) + var(--s-6)); }
+}
+
+/* Sections counsel completes: numeral, H2 (at H3 size) on a hairline, one-line placeholder, visible TODO */
+.legal__section { border-top: 1px solid var(--rule); padding-top: var(--s-4); }
+.legal__section + .legal__section { margin-top: var(--s-6); }
+.legal__section .numeral { display: block; }
+.legal__section h2 { margin-top: var(--s-2); max-width: none; }
+.legal__section p { margin-top: var(--s-3); max-width: var(--measure); }
+.legal__section .status { margin-top: var(--s-2); }
+.legal__todo { font-size: var(--fs-small); line-height: 1.6; color: var(--text-muted); }
+.legal__sections { border-bottom: 1px solid var(--rule); padding-bottom: var(--s-6); }
+
+/* Aside: the review notice (caution note, --warn rule) and related links */
+.legal-aside { display: grid; gap: var(--s-6); align-content: start; }
+.notice { border: 1px solid var(--rule); border-left: 4px solid var(--warn); padding: var(--s-4) var(--s-5); }
+.notice .eyebrow { display: block; }
+.notice p { margin-top: var(--s-2); font-size: var(--fs-small); line-height: 1.6; }
+.notice p + p { margin-top: var(--s-2); }
+.legal-aside__block { border: 1px solid var(--sg-line, var(--rule)); border-radius: var(--sg-radius-lg, var(--r-2)); background: var(--sg-card, var(--bg)); box-shadow: var(--sg-shadow, none); padding: var(--s-4) var(--s-5); }
+.legal-aside__block .eyebrow { display: block; }
+.legal-aside__links { list-style: none; margin: var(--s-3) 0 0; padding: 0; border-top: 1px solid var(--rule); }
+.legal-aside__links li { border-bottom: 1px solid var(--rule); padding: var(--s-1) 0; }
+.legal-aside__links li:last-child { border-bottom: 0; padding-bottom: 0; }
+.legal-aside__links .arrow-link { margin-block: 0; }
+
+/* ---- 404: dark full page with the grid texture; fills the viewport under the nav ---- */
+.nf { display: flex; align-items: center; min-height: calc(100vh - var(--nav-h)); min-height: calc(100dvh - var(--nav-h)); }
+.nf__mark { display: block; width: 96px; height: 96px; margin-top: var(--s-7); color: var(--text); }
+.nf h1 { margin-top: var(--s-6); max-width: 20ch; }
+.nf .lead { margin-top: var(--s-5); }
+.nf__links { margin-top: var(--s-6); }
+.nf__link {
+  display: inline-flex; align-items: center; gap: var(--s-2);
+  min-height: 44px; padding-block: 8px; margin-block: -8px;
+  font: 600 var(--fs-h4)/1.44 var(--font-heading); letter-spacing: -0.01em;
+  color: var(--text); text-decoration: none;
+  text-underline-offset: 6px; text-decoration-thickness: 2px; text-decoration-color: var(--accent);
+}
+.nf__link:hover { text-decoration: underline; }
+.nf__link svg { width: 12px; height: 12px; flex: none; }
+.nf__link .arrow-link__pt { fill: currentColor; transition: fill var(--t-fast) var(--ease); }
+.nf__link:hover .arrow-link__pt { fill: var(--accent); }
+.nf__desc { display: block; margin-top: var(--s-2); font-size: var(--fs-small); line-height: 1.6; color: var(--text-muted); max-width: 36ch; }
+.nf .btn-row { margin-top: var(--s-7); align-items: center; }

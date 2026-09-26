@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 284 64" width="284" height="64" role="img" aria-labelledby="svls-lockup-title">
+  <title id="svls-lockup-title">SVLS LABS</title>
+  <!-- Wordmark is live text: it renders with Inter Tight where the font is installed or loaded, otherwise with the sans-serif fallback. The inline copies in the site header/footer use the page webfont. -->
+  <path d="M4 24V4h20v4H8v16z" fill="#101418"/>
+  <circle cx="32" cy="32" r="13.5" fill="none" stroke="#101418" stroke-width="5"/>
+  <path d="M60 40v20H40v-4h16V40z" fill="#E4432B"/>
+  <text x="80" y="60" fill="#101418" font-family="'Inter Tight', Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="44" font-weight="700" letter-spacing="-0.44">SVLS</text>
+  <text x="195" y="60" fill="#101418" font-family="'Inter Tight', Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="31" font-weight="500" letter-spacing="3.72">LABS</text>
+</svg>

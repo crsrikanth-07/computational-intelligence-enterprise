@@ -1,0 +1,6 @@
+/* /products/sap-intelligence-suite/ — page-specific styles (tokens only; loaded after site.css) */
+
+/* Hero: the product lockup sits above the H1 (BRAND_SPEC 11.2); the status sentence sits between lead and buttons.
+   The generic workbench visual in the right column uses the shared .hero__aside. */
+.hero--suite .hero__copy h1 { margin-top: var(--s-5); }
+.hero--suite .hero__copy .status { margin-top: var(--s-4); }

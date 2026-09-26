@@ -1,0 +1,245 @@
+<?php /* Template Name: About SVLS LABS */ ?>
+<?php get_header(); ?>
+<div class="sheet-backdrop" data-menu-backdrop hidden></div>
+<div class="sheet" id="mobile-sheet" hidden>
+  <nav aria-label="Menu">
+    <ul class="sheet__list">
+      <li>
+        <span class="eyebrow sheet__group-label" id="sheet-services">Services</span>
+        <ul class="sheet__sub" aria-labelledby="sheet-services">
+          <li><a class="sheet__link" href="/services/sap/">SAP &amp; ERP</a></li>
+          <li><a class="sheet__link" href="/services/cloud/">Cloud</a></li>
+          <li><a class="sheet__link" href="/services/ai/">Agentic &amp; Applied AI</a></li>
+        </ul>
+      </li>
+      <li>
+        <span class="eyebrow sheet__group-label" id="sheet-products">Products</span>
+        <ul class="sheet__sub" aria-labelledby="sheet-products">
+          <li><a class="sheet__link" href="/products/value-lens/">Value Lens <span class="nav-beta">Private beta</span></a></li>
+          <li><a class="sheet__link" href="/products/sap-intelligence-suite/">SAP Intelligence Suite</a></li>
+        </ul>
+      </li>
+      <li><a class="sheet__link" href="/approach/">Approach</a></li>
+      <li><a class="sheet__link" href="/about/" aria-current="page">About</a></li>
+      <li><a class="sheet__link" href="/contact/">Contact</a></li>
+    </ul>
+    <div class="sheet__actions">
+      <a class="btn btn--primary" href="/contact/?intent=discovery">Book a discovery call</a>
+      <a class="btn btn--secondary" href="/products/value-lens/#beta">Request Value Lens beta access</a>
+    </div>
+  </nav>
+  <div class="sheet__theme" role="group" aria-label="Appearance">
+    <span class="sheet__theme-label" aria-hidden="true">Appearance:</span>
+    <button type="button" class="chip" data-theme-choice="system" aria-pressed="true">System</button>
+    <button type="button" class="chip" data-theme-choice="light" aria-pressed="false">Light</button>
+    <button type="button" class="chip" data-theme-choice="dark" aria-pressed="false">Dark</button>
+  </div>
+</div>
+<main id="main">
+
+  <!-- 01 Hero (white, grid texture) -->
+  <section class="hero has-grid" aria-labelledby="hero-title">
+    <div class="hero-art hero-art--lite" aria-hidden="true">
+      <svg class="hero-art__mark" viewBox="0 0 64 64" focusable="false">
+        <path d="M4 24V4h20v4H8v16z" fill="currentColor"/>
+        <circle cx="32" cy="32" r="13.5" fill="none" stroke="currentColor" stroke-width="5"/>
+        <path d="M60 40v20H40v-4h16V40z" fill="var(--svls-accent, #E4432B)"/>
+      </svg>
+    </div>
+    <div class="container">
+      <div class="section-mark"><span class="numeral">01</span><p class="eyebrow">About</p></div>
+      <div class="grid hero__grid">
+        <div class="hero__copy col-9">
+          <h1 id="hero-title">A Specialist SAP Engineering Firm That Would Rather Show You <span class="key">Evidence</span> than a Deck.</h1>
+          <p class="lead">SVLS LABS was founded in 2020 by architects with 25+ years of SAP delivery experience behind them. We build S/4HANA, BTP and Integration Suite landscapes, connect them to the cloud, and add agentic AI under real governance. We also build our own product, Value Lens (private beta), on the same principles.</p>
+          <div class="btn-row">
+            <a class="btn btn--primary" href="/contact/?intent=discovery">Book a discovery call</a>
+            <a class="btn btn--secondary" href="/contact/?intent=discovery&amp;offer=two-week">Start with a two-week discovery</a>
+          </div>
+          <p class="trust">A 45-minute call with an architect, not a salesperson. Replies within one business day. <a href="/approach/">How we run engagements</a></p>
+        </div>
+        <ul class="microlabels hero__rows-a">
+          <li>Founded 2020</li>
+          <li>SAP · Cloud · Governed agentic &amp; applied AI</li>
+          <li>TOGAF-certified architects · SAP-certified product engineering</li>
+        </ul>
+        <ul class="proof-row hero__rows-b">
+          <li><span class="proof-row__num">25+</span><span class="proof-row__label">years of SAP delivery experience</span></li>
+          <li><span class="proof-row__num">2020</span><span class="proof-row__label">founded</span></li>
+          <li><span class="proof-row__num">2</span><span class="proof-row__label">products: Value Lens (private beta) and SAP Intelligence Suite</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 The story since 2020 -->
+  <section class="section band-surface" id="story" aria-labelledby="story-title">
+    <div class="container">
+      <div class="section-mark mb-6"><span class="numeral">02</span><h2 class="eyebrow" id="story-title">The Story Since 2020</h2></div>
+      <div class="grid story" data-reveal>
+        <p class="col-6">We started in 2020 with a narrow ambition: to be the SAP engineering team that enterprises keep after go-live, because the work holds. Our key architects brought 25+ years of SAP delivery experience across integration, S/4HANA programmes and BTP. The first years were integration work: flows built from a pattern library, a written contract per interface and a read-back check after every run.</p>
+        <p class="col-6">From there the work extended into the cloud around SAP, with contracted extracts to BigQuery and Salesforce integration, and then into agentic AI on SAP BTP, where we published reference implementations for agents, retrieval over SAP documentation and integration flow generation, and built the control model that goes with them. Value Lens, our margin leak finder for order-to-cash, is the product we built to prove that an agent can explain without being allowed to decide. It is in private beta on synthetic data, and we say so on every page. SAP Intelligence Suite is the workbench we use for our own engineering.</p>
+      </div>
+      <ul class="microlabels story__strip">
+        <li>2020 · Founded</li>
+        <li>Integration · Pattern library · Contract per interface</li>
+        <li>Cloud · BigQuery · Salesforce</li>
+        <li>Agentic &amp; applied AI on SAP BTP · Reference implementations · Control model</li>
+      </ul>
+      <div class="story__today">
+        <p class="story__today-line">Today the same principles run through two products: <a class="link" href="/products/value-lens/">Value Lens (private beta)</a>, our margin leak finder for order-to-cash, and <a class="link" href="/products/sap-intelligence-suite/">SAP Intelligence Suite</a>, our AI-assisted SAP engineering workbench.</p>
+        <p class="status">Value Lens: private beta on synthetic SAP-like data. Production SAP connector in development.</p>
+        <p class="status">SAP Intelligence Suite: in use in SVLS LABS delivery. Available to customers on request; deployed in your landscape, reviewed by your architects.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 Values as working commitments -->
+  <section class="section" id="values" aria-labelledby="values-title">
+    <div class="container">
+      <div class="section-mark mb-6"><span class="numeral">03</span><h2 class="eyebrow" id="values-title">Values as Working Commitments</h2></div>
+      <div class="hgrid hgrid--3 hgrid--bottom">
+        <article class="practice value">
+          <span class="numeral practice__num">01</span>
+          <h3>Quality.</h3>
+          <p class="practice__body">Every flow has a contract before it has code. Every action is read back from SAP. An evidence pack is a deliverable, not a favour.</p>
+        </article>
+        <article class="practice value">
+          <span class="numeral practice__num">02</span>
+          <h3>Focus.</h3>
+          <p class="practice__body">We work only where SAP, cloud and AI meet. We will tell you when a problem is outside what we have shipped.</p>
+        </article>
+        <article class="practice value">
+          <span class="numeral practice__num">03</span>
+          <h3>Ownership.</h3>
+          <p class="practice__body">A named engagement lead stays from discovery through run. We do not hand you a deck and leave.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 The team, described generically -->
+  <section class="section band-surface" id="team" aria-labelledby="team-title">
+    <div class="container">
+      <div class="section-mark mb-6"><span class="numeral">04</span><h2 class="eyebrow" id="team-title">The Team</h2></div>
+      <div class="grid team">
+        <div class="col-5" data-reveal>
+          <p class="team__body">Our team is small and senior: SAP architects, integration engineers, cloud engineers and AI engineers, with TOGAF-certified architects leading design. Certified across enterprise architecture, SAP BTP integration and extension, analytics and generative AI. Delivery covers S/4HANA cloud and on-premise editions, RISE, BTP, Integration Suite and the cloud platforms around them.</p>
+          <ul class="chips team__roles" role="list">
+            <li class="chip">SAP architects</li><li class="chip">Integration engineers</li><li class="chip">Cloud engineers</li><li class="chip">AI engineers</li>
+          </ul>
+        </div>
+        <div class="col-7 hgrid hgrid--2 hgrid--bottom team__lists">
+          <div class="cred">
+            <h3>Certified team</h3>
+            <p class="cred__body">Certified architects and engineers across enterprise architecture, SAP BTP integration and extension, analytics and generative AI. TOGAF-certified architects lead every design.</p>
+          </div>
+          <div class="cred">
+            <h3>Technical coverage</h3>
+            <p class="cred__body">S/4HANA cloud and on-premise editions, RISE, BTP and Integration Suite, cloud data platforms and governed agents on BTP. One team across the SAP core, the cloud around it and the AI on top.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 Research and publications -->
+  <section class="section" id="research" aria-labelledby="research-title">
+    <div class="container">
+      <div class="section-mark mb-6"><span class="numeral">05</span><h2 class="eyebrow" id="research-title">Published Research</h2></div>
+      <div class="grid research" data-reveal>
+        <div class="col-3">
+          <div class="book">
+            <div class="book__cover" role="img" aria-label="Book: Computational Intelligence for Enterprise Systems: Advanced Optimization Algorithms with Working Prototypes."><span>Computational Intelligence for Enterprise Systems: Advanced Optimization Algorithms with Working Prototypes.</span></div>
+          </div>
+        </div>
+        <div class="col-9 research__copy">
+          <h3>Research and publications.</h3>
+          <p>Our team authored the technical book <cite>Computational Intelligence for Enterprise Systems: Advanced Optimization Algorithms with Working Prototypes</cite>. It covers supply-chain optimisation with working prototypes. Adaptive genetic optimisation designs supply networks. Multi-objective simulated annealing selects transport modes. Particle swarm and hybrid PSO-GA set inventory policy. Bessel-Fourier descriptors with a linear SVM classify images. Underneath sits a primer on stochastic foundations, Markov chains and Monte Carlo methods. The closing chapter is a deployment blueprint. It gives a JSON service contract per algorithm, a compute budget and a staged rollout from shadow to advisory to automated. A human override stays in place throughout.</p>
+          <p>Our open engineering work is published on GitHub. It holds a reference design for A2A agents on SAP BTP and a retrieval-augmented generation service over SAP documentation and process models. It also holds deterministic CPI integration flow generation and probabilistic sequence models built on Markov chains and constraint-based decoding. The same rigour goes into every client build.</p>
+          <div class="links links--after research__links">
+            <a class="arrow-link" href="/services/ai/#methods">The methods behind the agents<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 Where we are -->
+  <section class="section band-surface" id="where" aria-labelledby="where-title">
+    <div class="container">
+      <div class="section-mark mb-6"><span class="numeral">06</span><h2 class="eyebrow" id="where-title">Where We Are</h2></div>
+      <div class="hgrid hgrid--2 hgrid--bottom">
+        <div class="place">
+          <span class="numeral">01</span>
+          <h3>SVLS Labs LLP</h3>
+          <p>4th Floor, Aparna Astute<br>Shaikpet, Door No. 8-1-299/103&amp;104/AA/4F-2<br>Jubilee Hills, Hyderabad 500008<br>Telangana, India</p>
+        </div>
+      </div>
+      <div class="where__after">
+        <p class="mono-note">NDA-friendly · Fixed-scope options</p>
+        <a class="arrow-link" href="/contact/">Talk to an architect<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 07 How we build, illustrated (footnote strip) -->
+  <section class="section section--slim how-strip" id="how-we-build" aria-labelledby="how-title">
+    <div class="container">
+      <div class="section-mark mb-6"><span class="numeral">07</span><h2 class="eyebrow" id="how-title">How We Build, Illustrated</h2></div>
+      <div class="grid how-strip__grid">
+        <figure class="col-4 how-strip__figure">
+          <svg viewBox="0 0 128 104" role="img" aria-labelledby="mark-geometry-title" font-family="'JetBrains Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="4.8" font-weight="500" letter-spacing="0.04em" focusable="false">
+            <title id="mark-geometry-title">The SVLS LABS mark drawn on its 16 by 16 construction grid, with dimension callouts: ring outer diameter 32 units, ring radius 13.5 units, bracket thickness 4 units.</title>
+            <defs>
+              <pattern id="mark-grid" width="4" height="4" patternUnits="userSpaceOnUse"><path d="M4 0H0V4" fill="none" stroke="var(--rule)" stroke-width="0.4"/></pattern>
+            </defs>
+            <rect x="28" y="24" width="64" height="64" fill="url(#mark-grid)"/>
+            <rect x="28" y="24" width="64" height="64" fill="none" stroke="var(--rule)" stroke-width="0.4"/>
+            <g fill="none" stroke="currentColor" stroke-width="0.5" stroke-opacity="0.55">
+              <path d="M44 16H76M44 14v4M76 14v4"/>
+              <path d="M22 28V32M20 28h4M20 32h4M24 28h7M24 32h7"/>
+              <path d="M60 56H98M60 54v4"/>
+            </g>
+            <circle cx="60" cy="56" r="1" fill="currentColor"/>
+            <g transform="translate(28 24)">
+              <path d="M4 24V4h20v4H8v16z" fill="currentColor"/>
+              <circle cx="32" cy="32" r="13.5" fill="none" stroke="currentColor" stroke-width="5"/>
+              <path d="M60 40v20H40v-4h16V40z" fill="var(--svls-accent, #E4432B)"/>
+            </g>
+            <g fill="currentColor" fill-opacity="0.72">
+              <text x="60" y="11.5" text-anchor="middle">32</text>
+              <text x="17" y="31.7" text-anchor="end">4</text>
+              <text x="101" y="57.7" text-anchor="start">13.5</text>
+              <text x="28" y="95.5" text-anchor="start">16 × 16 · 4-UNIT MODULE</text>
+            </g>
+          </svg>
+        </figure>
+        <p class="col-8 how-strip__caption">The mark is built on a 4-unit module, like our grids and our contracts. Register marks prove alignment; the lens is what we read through.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 08 Closing CTA -->
+  <section class="section has-grid cta-band" id="next-step" aria-labelledby="next-title">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <div class="section-mark"><span class="numeral">08</span><p class="eyebrow">Next step</p></div>
+        <h2 id="next-title">Bring Us the Spec. Or the Problem You Have Not Specified Yet.</h2>
+        <p class="subcopy">A 45-minute discovery call with an architect, not a salesperson. We will tell you what we would build, what we would not, and what it should cost. Or start with a two-week, fixed-scope discovery.</p>
+      </div>
+      <div class="btn-row">
+        <a class="btn btn--primary" href="/contact/?intent=discovery">Book a discovery call</a>
+        <a class="btn btn--secondary" href="/contact/?intent=discovery&amp;offer=two-week">Start with a two-week discovery</a>
+      </div>
+      <p class="trust">A 45-minute call with an architect, not a salesperson. Replies within one business day.</p>
+      <div class="cta-links">
+        <a class="arrow-link" href="/approach/">How we run engagements<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
+        <a class="arrow-link" href="/contact/?intent=overview">Download the capability overview<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
+      </div>
+      <p class="mono-note"><a href="/contact/?intent=partnership">SAP partners: ask about integration and BTP capacity.</a></p>
+    </div>
+  </section>
+
+</main>
+<?php get_footer(); ?>

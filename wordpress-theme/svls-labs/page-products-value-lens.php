@@ -1,0 +1,844 @@
+<?php /* Template Name: Value Lens: Margin Leak Finder for SAP O2C */ ?>
+<?php get_header(); ?>
+<div class="sheet-backdrop" data-menu-backdrop hidden></div>
+<div class="sheet" id="mobile-sheet" hidden>
+  <nav aria-label="Menu">
+    <ul class="sheet__list">
+      <li>
+        <span class="eyebrow sheet__group-label" id="sheet-services">Services</span>
+        <ul class="sheet__sub" aria-labelledby="sheet-services">
+          <li><a class="sheet__link" href="/services/sap/">SAP &amp; ERP</a></li>
+          <li><a class="sheet__link" href="/services/cloud/">Cloud</a></li>
+          <li><a class="sheet__link" href="/services/ai/">Agentic &amp; Applied AI</a></li>
+        </ul>
+      </li>
+      <li>
+        <span class="eyebrow sheet__group-label" id="sheet-products">Products</span>
+        <ul class="sheet__sub" aria-labelledby="sheet-products">
+          <li><a class="sheet__link" href="/products/value-lens/" aria-current="page">Value Lens <span class="nav-beta">Private beta</span></a></li>
+          <li><a class="sheet__link" href="/products/sap-intelligence-suite/">SAP Intelligence Suite</a></li>
+        </ul>
+      </li>
+      <li><a class="sheet__link" href="/approach/">Approach</a></li>
+      <li><a class="sheet__link" href="/about/">About</a></li>
+      <li><a class="sheet__link" href="/contact/">Contact</a></li>
+    </ul>
+    <div class="sheet__actions">
+      <a class="btn btn--primary" href="/contact/?intent=discovery">Book a discovery call</a>
+      <a class="btn btn--secondary" href="/products/value-lens/#beta">Request Value Lens beta access</a>
+    </div>
+  </nav>
+  <div class="sheet__theme" role="group" aria-label="Appearance">
+    <span class="sheet__theme-label" aria-hidden="true">Appearance:</span>
+    <button type="button" class="chip" data-theme-choice="system" aria-pressed="true">System</button>
+    <button type="button" class="chip" data-theme-choice="light" aria-pressed="false">Light</button>
+    <button type="button" class="chip" data-theme-choice="dark" aria-pressed="false">Dark</button>
+  </div>
+</div>
+<main id="main">
+
+  <!-- 7.1 Hero (dark band) -->
+  <section class="hero hero--vl band-dark has-grid" aria-labelledby="hero-title">
+    <div class="hero-art hero-art--lite" aria-hidden="true">
+      <svg class="hero-art__mark" viewBox="0 0 64 64" focusable="false">
+        <path d="M4 24V4h20v4H8v16z" fill="currentColor"/>
+        <circle cx="32" cy="32" r="13.5" fill="none" stroke="currentColor" stroke-width="5"/>
+        <path d="M60 40v20H40v-4h16V40z" fill="var(--svls-accent, #E4432B)"/>
+      </svg>
+    </div>
+    <div class="container">
+      <div class="section-mark"><span class="numeral">01</span><p class="eyebrow">Product · Order-to-cash</p></div>
+      <div class="grid hero__grid">
+        <div class="hero__copy col-6">
+          <h1 id="hero-title">Value Lens <span class="badge">Private beta</span></h1>
+          <p class="h2 hero__sub">The Margin Leak Finder for Order-to-Cash.</p>
+          <p class="lead">Value Lens reads SAP-like sales, pricing, cost and agreement facts through read-only tools, computes margin in exact integer cents under a versioned policy, and raises evidence-backed cases your finance team can accept or dismiss with a reason. Agents explain. Humans decide. SAP stays the system of record.</p>
+          <p class="status">Private beta on synthetic SAP-like data. Production SAP connector in development. Detection rules are ours, not customer-approved accounting logic.</p>
+          <div class="btn-row">
+            <a class="btn btn--primary" href="#beta">Request beta access</a>
+            <a class="btn btn--secondary" href="/contact/?intent=demo">Request a demo</a>
+          </div>
+          <p class="trust">A 45-minute call with an architect, not a salesperson. Replies within one business day. <a href="/approach/">How we run engagements</a></p>
+        </div>
+        <div class="col-6 hero__aside">
+          <section class="frame" aria-label="Value Lens findings queue, private beta, synthetic data">
+            <div class="frame__head">
+              <svg class="vl-mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+                <path d="M4 24V4h20v4H8v16z" fill="currentColor"/>
+                <circle cx="32" cy="32" r="13.5" fill="none" stroke="currentColor" stroke-width="5"/>
+                <circle cx="32" cy="31" r="4" fill="var(--svls-accent, #E4432B)"/>
+                <rect x="25" y="39" width="14" height="2" fill="var(--svls-accent, #E4432B)"/>
+                <path d="M60 40v20H40v-4h16V40z" fill="var(--svls-accent, #E4432B)"/>
+              </svg>
+              <span>Value Lens</span><span class="frame__sep" aria-hidden="true">·</span>
+              <span>Findings queue</span><span class="frame__sep" aria-hidden="true">·</span>
+              <span class="badge">Private beta</span><span class="frame__sep" aria-hidden="true">·</span>
+              <span>Synthetic data</span>
+              <span class="frame__meta"><span>Policy <span class="keep-case">v1.3</span></span><span>Week 38</span></span>
+            </div>
+            <table class="frame__table" role="table">
+              <thead role="rowgroup">
+                <tr role="row">
+                  <th role="columnheader" scope="col">Case</th>
+                  <th role="columnheader" scope="col">Severity</th>
+                  <th role="columnheader" scope="col">Rule</th>
+                  <th role="columnheader" scope="col" class="num">Leakage</th>
+                  <th role="columnheader" scope="col" class="num">Coverage</th>
+                  <th role="columnheader" scope="col">Status</th>
+                </tr>
+              </thead>
+              <tbody role="rowgroup">
+                <tr role="row" class="is-expanded">
+                  <td role="cell" data-label="Case">VL-0231</td>
+                  <td role="cell" data-label="Severity"><span class="pill pill--high">HIGH</span></td>
+                  <td role="cell" data-label="Rule" class="rule">net_loss</td>
+                  <td role="cell" data-label="Leakage" class="num">12,406.18</td>
+                  <td role="cell" data-label="Coverage" class="num">0.94</td>
+                  <td role="cell" data-label="Status">Open</td>
+                </tr>
+                <tr role="row" class="frame__detail">
+                  <td role="cell" colspan="6">
+                    <div class="frame__panel">
+                      <div class="frame__block">
+                        <p class="frame__block-title">Sources</p>
+                        <ul>
+                          <li>sales_order.get 4500012877</li>
+                          <li>pricing.get PR-88213</li>
+                          <li>cost.get MAT-10442</li>
+                          <li>agreements.get AG-2031</li>
+                        </ul>
+                      </div>
+                      <div class="frame__block">
+                        <p class="frame__block-title">Calculation · Policy <span class="keep-case">v1.3</span></p>
+                        <ul>
+                          <li>net price 84,120.00 − cost 96,526.18 = −12,406.18</li>
+                          <li>rule net_loss → HIGH</li>
+                          <li>integer cents, deterministic</li>
+                        </ul>
+                      </div>
+                      <div class="frame__block">
+                        <p class="frame__block-title">Timeline</p>
+                        <ul>
+                          <li>09:12 facts read (4 tools, read-only)</li>
+                          <li>09:12 margin computed</li>
+                          <li>09:12 rule fired</li>
+                          <li>09:14 agent hypothesis (labelled hypothesis, 3 of 5 authorised reads used): "cost updated after pricing"</li>
+                          <li>awaiting reviewer</li>
+                        </ul>
+                      </div>
+                      <div class="frame__actions">
+                        <button type="button" class="btn btn--secondary btn--sm" aria-disabled="true" tabindex="-1">Mark reviewed</button>
+                        <button type="button" class="btn btn--secondary btn--sm" aria-disabled="true" tabindex="-1">Dismiss with reason</button>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr role="row">
+                  <td role="cell" data-label="Case">VL-0228</td>
+                  <td role="cell" data-label="Severity"><span class="pill pill--high">HIGH</span></td>
+                  <td role="cell" data-label="Rule" class="rule">excessive_<wbr>discount</td>
+                  <td role="cell" data-label="Leakage" class="num">7,930.00</td>
+                  <td role="cell" data-label="Coverage" class="num">0.88</td>
+                  <td role="cell" data-label="Status">Open</td>
+                </tr>
+                <tr role="row">
+                  <td role="cell" data-label="Case">VL-0225</td>
+                  <td role="cell" data-label="Severity"><span class="pill pill--medium">MEDIUM</span></td>
+                  <td role="cell" data-label="Rule" class="rule">cost_above_<wbr>priced_cost</td>
+                  <td role="cell" data-label="Leakage" class="num">2,114.55</td>
+                  <td role="cell" data-label="Coverage" class="num">0.91</td>
+                  <td role="cell" data-label="Status"><span class="status-ok">Reviewed<svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M2.5 8.5l3.5 3.5 7.5-7.5" fill="none" stroke="currentColor" stroke-width="2"/></svg><span class="visually-hidden">(checked)</span></span></td>
+                </tr>
+                <tr role="row">
+                  <td role="cell" data-label="Case">VL-0219</td>
+                  <td role="cell" data-label="Severity"><span class="pill pill--medium">MEDIUM</span></td>
+                  <td role="cell" data-label="Rule" class="rule">excessive_<wbr>discount</td>
+                  <td role="cell" data-label="Leakage" class="num">1,480.00</td>
+                  <td role="cell" data-label="Coverage" class="num">0.97</td>
+                  <td role="cell" data-label="Status">Dismissed <span class="frame__reason">· reason: approved promotion</span></td>
+                </tr>
+              </tbody>
+            </table>
+            <p class="frame__foot">Numbers from deterministic code. The model explains; it never calculates.</p>
+          </section>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7.2 The business question (white) -->
+  <section class="section" id="question" aria-labelledby="question-title">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <div class="section-mark"><span class="numeral">02</span><p class="eyebrow">The question</p></div>
+        <h2 id="question-title">Where Did We Lose Money This Week That We Should Not Have Lost?</h2>
+      </div>
+      <p class="question__body">Standard SAP reporting tells you margin by product, customer and period. It does not tell you which orders shipped below cost, which discounts exceeded the agreement, or which cost updates landed after pricing, until the quarter closes and someone reconciles by hand. Value Lens asks the question every week, answers it with source records, and leaves the decision to a person.</p>
+      <div class="hgrid hgrid--3 hgrid--bottom rules">
+        <div class="rule-cell">
+          <span class="mono-title">Net loss</span>
+          <p>Orders priced below the cost that applied at the time.</p>
+        </div>
+        <div class="rule-cell">
+          <span class="mono-title">Excessive discount</span>
+          <p>Discounts beyond the agreement or policy threshold.</p>
+        </div>
+        <div class="rule-cell">
+          <span class="mono-title">Cost drift</span>
+          <p>Cost changes after pricing that nobody re-priced for.</p>
+        </div>
+      </div>
+      <p class="small muted mt-4">Rule set in the beta. Thresholds are policy-versioned; severity is MEDIUM or HIGH.</p>
+    </div>
+  </section>
+
+  <!-- 7.3 How it works: six steps (dark band) -->
+  <section class="section band-dark" id="how-it-works" aria-labelledby="how-title">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <div class="section-mark"><span class="numeral">03</span><p class="eyebrow">How it works</p></div>
+        <h2 id="how-title">Six Steps, One Audit Trail.</h2>
+      </div>
+      <ol class="steps" role="list">
+        <li>
+          <span class="numeral">01</span>
+          <h3 class="h4">Read, read-only.</h3>
+          <p>Facts come in through read-only MCP business tools: <code>sales_order.search</code>, <code>sales_order.get</code>, <code>pricing.get</code>, <code>cost.get</code>, <code>agreements.get</code>. No tool in the product can write.</p>
+        </li>
+        <li>
+          <span class="numeral">02</span>
+          <h3 class="h4">Calculate deterministically.</h3>
+          <p>A margin engine in exact integer-cent arithmetic under a versioned policy (<code>POLICY v1.3</code> in the beta). The same inputs always produce the same number. The LLM never touches it.</p>
+        </li>
+        <li>
+          <span class="numeral">03</span>
+          <h3 class="h4">Detect by rule.</h3>
+          <p>Net-loss, excessive-discount and cost-drift rules with MEDIUM and HIGH thresholds raise candidate cases.</p>
+        </li>
+        <li>
+          <span class="numeral">04</span>
+          <h3 class="h4">Build the evidence.</h3>
+          <p>Every case carries its source references, a calculation snapshot and a coverage score that says how much of the picture the tools could see.</p>
+        </li>
+        <li>
+          <span class="numeral">05</span>
+          <h3 class="h4">Investigate within bounds.</h3>
+          <p>A host-mediated agent may run a bounded number of authorised reads to propose a hypothesis. It has no financial authority and its hypotheses are labelled as hypotheses.</p>
+        </li>
+        <li>
+          <span class="numeral">06</span>
+          <h3 class="h4">Review by a person.</h3>
+          <p>The findings queue is sorted by severity and leakage. A reviewer marks a case reviewed or dismisses it with a reason. Every action lands on the case timeline.</p>
+        </li>
+      </ol>
+      <div class="diagram" data-reveal>
+        <svg class="diagram__wide" viewBox="0 0 960 120" role="img" aria-labelledby="vl-flow-title" font-family="'JetBrains Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="500" letter-spacing="0.06em" text-anchor="middle" fill="currentColor">
+          <title id="vl-flow-title">Six points on a line: 01 read, 02 calculate, 03 detect, 04 evidence (the lens glyph), 05 investigate, 06 human review (bracketed).</title>
+          <g fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M48 60h490"/>
+            <path d="M566 60h322"/>
+          </g>
+          <circle cx="48" cy="60" r="4"/>
+          <circle cx="216" cy="60" r="4"/>
+          <circle cx="384" cy="60" r="4"/>
+          <circle cx="552" cy="60" r="14" fill="none" stroke="currentColor" stroke-width="2"/>
+          <circle cx="552" cy="60" r="4" fill="var(--svls-accent, #E4432B)"/>
+          <circle cx="720" cy="60" r="4"/>
+          <circle cx="888" cy="60" r="4"/>
+          <g fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M874 60V46h14"/>
+            <path d="M902 60v14h-14"/>
+          </g>
+          <text x="48" y="36">01</text>
+          <text x="216" y="36">02</text>
+          <text x="384" y="36">03</text>
+          <text x="552" y="36">04</text>
+          <text x="720" y="36">05</text>
+          <text x="888" y="36">06</text>
+          <g fill-opacity="0.72" font-weight="400">
+            <text x="48" y="100">READ</text>
+            <text x="216" y="100">CALCULATE</text>
+            <text x="384" y="100">DETECT</text>
+            <text x="552" y="100">EVIDENCE</text>
+            <text x="720" y="100">INVESTIGATE</text>
+            <text x="888" y="100">HUMAN REVIEW</text>
+          </g>
+        </svg>
+        <svg class="diagram__tall" viewBox="0 0 400 400" role="img" aria-labelledby="vl-flow-tall-title" font-family="'JetBrains Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="14" font-weight="500" letter-spacing="0.06em" fill="currentColor">
+          <title id="vl-flow-tall-title">Six points on a line: 01 read, 02 calculate, 03 detect, 04 evidence (the lens glyph), 05 investigate, 06 human review (bracketed).</title>
+          <g fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M24 24v196"/>
+            <path d="M24 248v126"/>
+          </g>
+          <circle cx="24" cy="24" r="4"/>
+          <circle cx="24" cy="94" r="4"/>
+          <circle cx="24" cy="164" r="4"/>
+          <circle cx="24" cy="234" r="14" fill="none" stroke="currentColor" stroke-width="2"/>
+          <circle cx="24" cy="234" r="4" fill="var(--svls-accent, #E4432B)"/>
+          <circle cx="24" cy="304" r="4"/>
+          <circle cx="24" cy="374" r="4"/>
+          <g fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M10 374V360h14"/>
+            <path d="M38 374v14h-14"/>
+          </g>
+          <text x="56" y="29">01</text>
+          <text x="56" y="99">02</text>
+          <text x="56" y="169">03</text>
+          <text x="56" y="239">04</text>
+          <text x="56" y="309">05</text>
+          <text x="56" y="379">06</text>
+          <g fill-opacity="0.72" font-weight="400">
+            <text x="92" y="29">READ</text>
+            <text x="92" y="99">CALCULATE</text>
+            <text x="92" y="169">DETECT</text>
+            <text x="92" y="239">EVIDENCE</text>
+            <text x="92" y="309">INVESTIGATE</text>
+            <text x="92" y="379">HUMAN REVIEW</text>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- D.1 One case, end to end (white) -->
+  <section class="section" id="inside-the-beta" aria-labelledby="case-title">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <div class="section-mark"><span class="numeral">04</span><p class="eyebrow">Inside the beta</p></div>
+        <h2 id="case-title">One Case, End to End.</h2>
+        <p class="subcopy">This is the first golden case the beta reproduces exactly, on synthetic SAP-like data under the demo policy. Every number below is produced by deterministic code and can be recomputed from the stored inputs.</p>
+      </div>
+      <div class="grid case-grid">
+        <div class="col-7">
+          <p class="eyebrow case-label">Synthetic order line · Demo policy</p>
+          <table class="spec-table">
+            <thead>
+              <tr><th scope="col">Fact</th><th scope="col">Value</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Quantity</th><td>10 EA</td></tr>
+              <tr><th scope="row">List unit price</th><td>$100</td></tr>
+              <tr><th scope="row">Allowed discount (demo policy)</th><td>10%</td></tr>
+              <tr><th scope="row">Recorded discount</th><td>20%, no override, no eligible agreement</td></tr>
+              <tr><th scope="row">Charged unit price</th><td>$80</td></tr>
+              <tr><th scope="row">Net goods total</th><td>$800</td></tr>
+              <tr><th scope="row">Reference unit cost</th><td>$60</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="col-5">
+          <p class="eyebrow case-label">Result</p>
+          <ul class="hgrid hgrid--2 hgrid--bottom case-result" role="list">
+            <li class="stat-cell">
+              <p class="stat stat-cell__num">$300</p>
+              <p class="stat-cell__label">expected margin</p>
+            </li>
+            <li class="stat-cell">
+              <p class="stat stat-cell__num">$200</p>
+              <p class="stat-cell__label">actual margin</p>
+            </li>
+            <li class="stat-cell">
+              <p class="stat stat-cell__num">$100</p>
+              <p class="stat-cell__label">discount variance, the leakage</p>
+            </li>
+            <li class="stat-cell">
+              <p class="stat stat-cell__num stat-cell__num--pill"><span class="pill pill--medium pill--stat">MEDIUM</span></p>
+              <p class="stat-cell__label">severity</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <p class="case-line">Rules fired: net leakage (R-01) and excessive discount (R-02). Evidence: 4 of 4 checklist items resolved, coverage 100%. Annualised exposure, illustrative 52-week extrapolation: $5,200. The reviewer can mark the case reviewed or dismiss it with a reason; neither action changes a single cent.</p>
+      <p class="small muted mt-3">Demo policy, not customer-approved accounting logic. Synthetic data. USD and EA only in the beta.</p>
+    </div>
+  </section>
+
+  <!-- D.2 How it is built (surface band) -->
+  <section class="section band-surface" id="architecture" aria-labelledby="arch-title">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <div class="section-mark"><span class="numeral">05</span><p class="eyebrow">Architecture</p></div>
+        <h2 id="arch-title">Four Parts, One Direction of Trust.</h2>
+        <p class="subcopy">Each part can only do what the part before it allows. The browser renders; the backend calculates; the tools read; the adapter is the only code that touches a source.</p>
+      </div>
+      <div class="diagram diagram--arch" data-reveal>
+        <svg class="diagram__wide" viewBox="0 0 960 216" role="img" aria-labelledby="arch-wide-title" font-family="'JetBrains Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="500" letter-spacing="0.06em" text-anchor="middle" fill="currentColor">
+          <title id="arch-wide-title">Browser, backend API, MCP tool server and source adapter in a row, each joined to the next by a line ending in a point. The adapter reads synthetic SAP-like records now; a dashed box marks the SAP connector in development. A hairline beneath the four parts is labelled shared contracts: runtime-validated schemas, integer-cent money.</title>
+          <g fill="none" stroke="currentColor" stroke-width="1.5">
+            <rect x="0.75" y="40.75" width="150.5" height="54.5"/>
+            <rect x="184.75" y="40.75" width="150.5" height="54.5"/>
+            <rect x="368.75" y="40.75" width="150.5" height="54.5"/>
+            <rect x="552.75" y="40.75" width="150.5" height="54.5"/>
+            <rect x="756.75" y="8.75" width="186.5" height="50.5"/>
+            <rect x="756.75" y="76.75" width="186.5" height="50.5" stroke-dasharray="6 4"/>
+            <path d="M152 68h26"/>
+            <path d="M336 68h26"/>
+            <path d="M520 68h26"/>
+            <path d="M704 68h24v-34h20"/>
+            <path d="M728 68v34h20" stroke-dasharray="4 4"/>
+          </g>
+          <circle cx="181" cy="68" r="3"/>
+          <circle cx="365" cy="68" r="3"/>
+          <circle cx="549" cy="68" r="3"/>
+          <circle cx="751" cy="34" r="3" fill="var(--svls-accent, #E4432B)"/>
+          <circle cx="751" cy="102" r="3"/>
+          <text x="76" y="72">BROWSER</text>
+          <text x="260" y="72">BACKEND API</text>
+          <text x="444" y="72">MCP TOOL SERVER</text>
+          <text x="628" y="72">SOURCE ADAPTER</text>
+          <text x="850" y="30">SYNTHETIC</text>
+          <text x="850" y="45">SAP-LIKE RECORDS</text>
+          <text x="850" y="106">SAP CONNECTOR</text>
+          <g fill-opacity="0.72" font-weight="400">
+            <text x="850" y="146">IN DEVELOPMENT</text>
+            <text x="352" y="204">SHARED CONTRACTS: RUNTIME-VALIDATED SCHEMAS, INTEGER-CENT MONEY</text>
+          </g>
+          <g fill="none" stroke="currentColor" stroke-width="1" stroke-opacity="0.45">
+            <path d="M0 176h704M0 172v8M704 172v8"/>
+          </g>
+        </svg>
+        <svg class="diagram__tall" viewBox="0 0 400 520" role="img" aria-labelledby="arch-tall-title" font-family="'JetBrains Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="14" font-weight="500" letter-spacing="0.06em" text-anchor="middle" fill="currentColor">
+          <title id="arch-tall-title">Browser, backend API, MCP tool server and source adapter in a row, each joined to the next by a line ending in a point. The adapter reads synthetic SAP-like records now; a dashed box marks the SAP connector in development. A hairline beneath the four parts is labelled shared contracts: runtime-validated schemas, integer-cent money.</title>
+          <g fill="none" stroke="currentColor" stroke-width="1.5">
+            <rect x="0.75" y="0.75" width="238.5" height="46.5"/>
+            <rect x="0.75" y="80.75" width="238.5" height="46.5"/>
+            <rect x="0.75" y="160.75" width="238.5" height="46.5"/>
+            <rect x="0.75" y="240.75" width="238.5" height="46.5"/>
+            <rect x="0.75" y="344.75" width="182.5" height="54.5"/>
+            <rect x="216.75" y="344.75" width="182.5" height="54.5" stroke-dasharray="6 4"/>
+            <path d="M120 48v24"/>
+            <path d="M120 128v24"/>
+            <path d="M120 208v24"/>
+            <path d="M120 288v24"/>
+            <path d="M92 312h216"/>
+            <path d="M92 312v24"/>
+            <path d="M308 312v24" stroke-dasharray="4 4"/>
+          </g>
+          <circle cx="120" cy="75" r="3"/>
+          <circle cx="120" cy="155" r="3"/>
+          <circle cx="120" cy="235" r="3"/>
+          <circle cx="92" cy="339" r="3" fill="var(--svls-accent, #E4432B)"/>
+          <circle cx="308" cy="339" r="3"/>
+          <text x="120" y="29">BROWSER</text>
+          <text x="120" y="109">BACKEND API</text>
+          <text x="120" y="189">MCP TOOL SERVER</text>
+          <text x="120" y="269">SOURCE ADAPTER</text>
+          <text x="92" y="368">SYNTHETIC</text>
+          <text x="92" y="386">SAP-LIKE RECORDS</text>
+          <text x="308" y="377">SAP CONNECTOR</text>
+          <g fill-opacity="0.72" font-weight="400">
+            <text x="308" y="421">IN DEVELOPMENT</text>
+            <text x="200" y="476">SHARED CONTRACTS:</text>
+            <text x="200" y="496">RUNTIME-VALIDATED SCHEMAS,</text>
+            <text x="200" y="516">INTEGER-CENT MONEY</text>
+          </g>
+          <g fill="none" stroke="currentColor" stroke-width="1" stroke-opacity="0.45">
+            <path d="M0 448h400M0 444v8M400 444v8"/>
+          </g>
+        </svg>
+      </div>
+      <div class="hgrid hgrid--4 hgrid--bottom">
+        <div class="control">
+          <h3 class="mono-title">Browser</h3>
+          <p class="control__body">Displays backend results. Holds no policy, no fixtures, no calculation and no model credentials.</p>
+        </div>
+        <div class="control">
+          <h3 class="mono-title">Backend</h3>
+          <p class="control__body">Normalises the retrieved facts, runs the calculation and detection engines, creates cases and persists them with their audit events. All financial fields are owned by code.</p>
+        </div>
+        <div class="control">
+          <h3 class="mono-title">MCP tool server</h3>
+          <p class="control__body">Exposes a small catalogue of read-only business tools over a real MCP transport. Every request and response is schema-validated; unknown keys, oversized pages and out-of-scope dates are rejected.</p>
+        </div>
+        <div class="control">
+          <h3 class="mono-title">Source adapter</h3>
+          <p class="control__body">The only code that reads a source. Synthetic SAP-like records in the beta; a production SAP connector replaces it without moving SAP concepts into the calculation or the screen.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- D.3 The read-only tool catalogue (white) -->
+  <section class="section" id="tools" aria-labelledby="tools-title">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <div class="section-mark"><span class="numeral">06</span><p class="eyebrow">Tools</p></div>
+        <h2 id="tools-title">Five Tools. All of Them Read.</h2>
+      </div>
+      <ul class="hgrid hgrid--bottom tools" role="list">
+        <li>
+          <h3 class="tool__name">sales_order.search</h3>
+          <p>bounded business filters, 5 rows by default, 25 at most</p>
+        </li>
+        <li>
+          <h3 class="tool__name">sales_order.get</h3>
+        </li>
+        <li>
+          <h3 class="tool__name">pricing.get</h3>
+          <p>price stages and conditions for one line</p>
+        </li>
+        <li>
+          <h3 class="tool__name">cost.get</h3>
+          <p>reference and current unit cost</p>
+        </li>
+        <li>
+          <h3 class="tool__name">agreements.get</h3>
+          <p>eligible agreements, or an explicit 'none' the case can rely on</p>
+        </li>
+      </ul>
+      <p class="control__line">There is no generic query tool, no raw table access and no write tool. Scope, tenant and actor are set by the backend, never by a user or a model.</p>
+    </div>
+  </section>
+
+  <!-- D.4 Rules and severity (surface band) -->
+  <section class="section band-surface" id="detection" aria-labelledby="detection-title">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <div class="section-mark"><span class="numeral">07</span><p class="eyebrow">Detection</p></div>
+        <h2 id="detection-title">Nine Rules. Deterministic Severity.</h2>
+        <p class="subcopy">Detection turns a valid calculation into a finding. The beta ships the first two rules end to end and the remaining seven across eleven synthetic scenarios.</p>
+      </div>
+      <div class="hgrid hgrid--2 hgrid--bottom two-col">
+        <div>
+          <h3 class="mono-title">Rules</h3>
+          <ul class="list-mono" role="list">
+            <li>R-01 net leakage on the line</li>
+            <li>R-02 excessive discount</li>
+            <li>R-03 to R-09: further price, cost, charge and agreement causes, plus two repeated-pattern rules across lines (customer and material)</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="mono-title">Severity (demo policy)</h3>
+          <ul class="list-mono" role="list">
+            <li>Below $50: no finding</li>
+            <li>$50 to $99.99: LOW</li>
+            <li>$100 to $199.99: MEDIUM</li>
+            <li>$200 and above: HIGH</li>
+          </ul>
+          <p class="small muted mt-3">Boundaries are exact to the cent and configured, never model-selected.</p>
+        </div>
+      </div>
+      <p class="control__line">Queue order is fixed: severity, then leakage, then transaction date, then case ID. <span class="nowrap">Re-running</span> the same source, policy and rule versions produces the same cases and no duplicate exposure.</p>
+    </div>
+  </section>
+
+  <!-- D.5 The coverage score (white) -->
+  <section class="section" id="coverage" aria-labelledby="coverage-title">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <div class="section-mark"><span class="numeral">08</span><p class="eyebrow">Evidence</p></div>
+        <h2 id="coverage-title">Coverage Is Counted, Never Estimated.</h2>
+      </div>
+      <div class="grid coverage-grid">
+        <div class="col-7">
+          <p class="coverage__body">Each case carries an evidence checklist. Coverage is the share of applicable checks whose source records resolved: 4 of 4 is 100%, 3 of 4 is 75%, and a case with nothing applicable shows NOT ASSESSED rather than a number. A missing cost never earns a score, and no narrative can make a gap disappear.</p>
+        </div>
+        <div class="col-5">
+          <ul class="hgrid hgrid--bottom coverage-scale" role="list">
+            <li><span class="coverage-scale__key">4 of 4 resolved</span><span class="stat">100%</span></li>
+            <li><span class="coverage-scale__key">3 of 4 resolved</span><span class="stat">75%</span></li>
+            <li><span class="coverage-scale__key">nothing applicable</span><span class="mono-title">Not assessed</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7.4 Trust principles (white) -->
+  <section class="section" id="principles" aria-labelledby="principles-title">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <div class="section-mark"><span class="numeral">09</span><p class="eyebrow">Design principles</p></div>
+        <h2 id="principles-title">Trust Cannot Be <span class="key">Retrofitted</span>.</h2>
+      </div>
+      <div class="grid">
+        <div class="col-9">
+          <table class="spec-table">
+            <thead>
+              <tr><th scope="col">Principle</th><th scope="col">In the product</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Numbers from code, never from the model</th><td>Deterministic engine, integer cents, versioned policy</td></tr>
+              <tr><th scope="row">Agents explain, humans decide</th><td>Bounded investigation, labelled hypotheses, reviewer actions only</td></tr>
+              <tr><th scope="row">Every case traceable</th><td>Source references and calculation snapshot on every case</td></tr>
+              <tr><th scope="row">Read-only by design</th><td>No write tool exists in the catalog</td></tr>
+              <tr><th scope="row">Complete audit trail</th><td>Case timeline with tools called, policy version, decisions, timestamps</td></tr>
+              <tr><th scope="row">SAP-agnostic domain contracts</th><td>Replaceable adapter; the production SAP connector is in development</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- D.6 The bounded investigator (dark band) -->
+  <section class="section band-dark" id="agent" aria-labelledby="agent-title">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <div class="section-mark"><span class="numeral">10</span><p class="eyebrow">Agent</p></div>
+        <h2 id="agent-title">The Agent Explains. It Cannot Decide.</h2>
+        <p class="subcopy">After a case exists, a model may investigate it. What it may read, say and never touch is fixed in code.</p>
+      </div>
+      <div class="hgrid hgrid--3 hgrid--bottom">
+        <div class="control">
+          <h3 class="mono-title">What it may read</h3>
+          <p class="control__body">Up to three additional authorised reads per case, inside the case's customer, material and week, through the same tool catalogue, with provenance on every read.</p>
+        </div>
+        <div class="control">
+          <h3 class="mono-title">What it may say</h3>
+          <p class="control__body">A hypothesis, approved observation and action categories, and references that must resolve to real evidence. Numbers in its text are bound by code to the stored calculation.</p>
+        </div>
+        <div class="control">
+          <h3 class="mono-title">What it can never touch</h3>
+          <p class="control__body">Money, severity, approval, review status or any source record. Invented records and contradictions are rejected. If the model is unavailable, the case stays complete and useful.</p>
+        </div>
+      </div>
+      <p class="control__line">Retrieved documents are treated as untrusted text. Model credentials stay on the server and never appear in prompts, errors or audit records.</p>
+    </div>
+  </section>
+
+  <!-- D.7 Audit trail and review (white) -->
+  <section class="section" id="audit" aria-labelledby="audit-title">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <div class="section-mark"><span class="numeral">11</span><p class="eyebrow">Audit</p></div>
+        <h2 id="audit-title">Every Case Can Be Rebuilt from Its Trail.</h2>
+      </div>
+      <p class="audit__body">Each run records an attempt and an outcome for every tool call, the normalised inputs, the calculation snapshot with its policy and rule versions, each rule evaluation, the coverage assessment, each model request and result, and each reviewer action. Run, case, tool and investigation IDs are correlated. The case timeline shows what was read, calculated, detected, explained and reviewed, and a reconstruction check recomputes the stored cents from the stored inputs.</p>
+      <div class="hgrid hgrid--2 hgrid--bottom audit-cards">
+        <div class="control">
+          <h3 class="mono-title">Review actions</h3>
+          <p class="control__body">Mark reviewed, or dismiss with a reason. The action and its audit event commit together; if either fails, nothing changes.</p>
+        </div>
+        <div class="control">
+          <h3 class="mono-title">What a review cannot do</h3>
+          <p class="control__body">Alter a source, a calculation, a rule result or an exposure. Reviews survive restarts and reruns of the same version.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- A.9 Cross-link to SAP Intelligence Suite (Addendum A.9, slim band) -->
+  <section class="section section--slim slim-band" id="suite" aria-labelledby="suite-title">
+    <div class="container">
+      <div class="section-mark"><span class="numeral">12</span><h2 class="eyebrow" id="suite-title">Also from SVLS LABS</h2></div>
+      <div class="grid">
+        <div class="col-8">
+          <p class="h3 slim-band__line">Building the integrations around it?</p>
+        </div>
+        <div class="col-4 slim-band__action">
+          <a class="arrow-link" href="/products/sap-intelligence-suite/">See SAP Intelligence Suite<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7.5 In the beta (left) and the D.9 roadmap (right; surface band) -->
+  <section class="section band-surface" id="scope" aria-labelledby="scope-title">
+    <div class="container">
+      <div class="section-mark"><span class="numeral">13</span><h2 class="eyebrow" id="scope-title">Scope</h2></div>
+      <div class="grid scope-grid">
+        <div class="col-4 two-col">
+          <h3 class="mono-title">In the private beta (phase A)</h3>
+          <ul class="list-points">
+            <li>Synthetic SAP-like order-to-cash data set</li>
+            <li>Read-only tool catalog (search, get, pricing, cost, agreements)</li>
+            <li>Deterministic margin engine, policy v1.x</li>
+            <li>Net-loss, excessive-discount and cost-drift rules with MEDIUM/HIGH thresholds</li>
+            <li>Evidence-backed cases with coverage scores</li>
+            <li>Bounded agent investigation with labelled hypotheses</li>
+            <li>Findings queue, review actions, case timeline</li>
+          </ul>
+          <p class="small muted mt-4">We update this list when the product changes, and we would rather show you a shorter list that is true.</p>
+        </div>
+        <div class="col-8 aside-rule roadmap">
+          <p class="eyebrow">Phase A · 15 milestones · 47 tasks</p>
+          <ol class="method method--milestones" role="list">
+            <li class="method__step"><span class="numeral">M0</span><span class="milestone">Bootstrap</span></li>
+            <li class="method__step"><span class="numeral">M1</span><span class="milestone">Domain contracts</span></li>
+            <li class="method__step"><span class="numeral">M2</span><span class="milestone">Synthetic SAP-like records</span></li>
+            <li class="method__step"><span class="numeral">M3</span><span class="milestone">Source adapter</span></li>
+            <li class="method__step"><span class="numeral">M4</span><span class="milestone">Read-only MCP tools</span></li>
+            <li class="method__step"><span class="numeral">M5</span><span class="milestone">Deterministic calculation engine</span></li>
+            <li class="method__step"><span class="numeral">M6</span><span class="milestone">Detection and rules</span></li>
+            <li class="method__step"><span class="numeral">M7</span><span class="milestone">Case generation</span></li>
+            <li class="method__step"><span class="numeral">M8</span><span class="milestone">First working screen</span></li>
+            <li class="method__step"><span class="numeral">M9</span><span class="milestone">Evidence and calculation detail</span></li>
+            <li class="method__step"><span class="numeral">M10</span><span class="milestone">Agent investigation</span></li>
+            <li class="method__step"><span class="numeral">M11</span><span class="milestone">Audit trail completion</span></li>
+            <li class="method__step"><span class="numeral">M12</span><span class="milestone">Remaining scenarios</span></li>
+            <li class="method__step"><span class="numeral">M13</span><span class="milestone">Testing and hardening</span></li>
+            <li class="method__step"><span class="numeral">M14</span><span class="milestone">Demo readiness</span></li>
+          </ol>
+          <p class="roadmap__line">The first usable screen arrives at M8, the investigator at M10, and the complete eleven-scenario demonstration at M12. After Phase A: the production SAP connector, customer accounting policy, production identity and hosting, and write-side controls.</p>
+          <p class="status">Private beta on synthetic SAP-like data. Production SAP connector in development.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- D.8 What the beta will not do (surface band) -->
+  <section class="section band-surface" id="guardrails" aria-labelledby="guardrails-title">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <div class="section-mark"><span class="numeral">14</span><p class="eyebrow">Guardrails</p></div>
+        <h2 id="guardrails-title">What We Refuse to Build into the Beta.</h2>
+      </div>
+      <div class="grid guardrails-grid">
+        <ul class="col-6 list-mono" role="list">
+          <li>No real SAP integration or customer data in Phase A</li>
+          <li>No SAP writes, postings or execution of recommendations</li>
+          <li>No financial arithmetic, thresholds, severity or coverage inside the model</li>
+          <li>No generic query tools or raw table access</li>
+        </ul>
+        <ul class="col-6 list-mono" role="list">
+          <li>No hidden calculations: inputs, signed results and versions stay inspectable</li>
+          <li>No invented evidence, approvals or numeric claims</li>
+          <li>No multi-agent choreography or plugin platform</li>
+          <li>No production authentication or hosting decision yet</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- D.10 Built with (white, slim) -->
+  <section class="section section--slim" id="stack" aria-labelledby="stack-title">
+    <div class="container">
+      <div class="section-mark"><span class="numeral">15</span><h2 class="eyebrow" id="stack-title">Stack</h2></div>
+      <ul class="chips stack-chips" role="list">
+        <li class="chip">TypeScript monorepo</li>
+        <li class="chip">Next.js and React</li>
+        <li class="chip">Node.js API</li>
+        <li class="chip">MCP server on the TypeScript MCP SDK</li>
+        <li class="chip">Runtime-validated contracts</li>
+        <li class="chip">Integer-cent money</li>
+        <li class="chip">SQLite in the beta</li>
+        <li class="chip">Vitest and Playwright</li>
+        <li class="chip">Provider-neutral model gateway (local or hosted model)</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 7.6 Beta access form (white, grid texture) -->
+  <section class="section has-grid" id="beta" aria-labelledby="beta-title">
+    <div class="container">
+      <div class="section-mark"><span class="numeral">16</span><p class="eyebrow">Private beta</p></div>
+      <div class="grid beta-grid">
+        <div class="col-5 beta-copy">
+          <h2 id="beta-title">Request Beta Access.</h2>
+          <p class="subcopy">The beta is a guided walkthrough on synthetic order-to-cash data, followed by an early-access seat. You will receive the Value Lens beta brief first: what the beta covers, what data it needs, and what it will not do yet.</p>
+          <p class="status">Private beta on synthetic SAP-like data. Production SAP connector in development.</p>
+          <p class="trust">A 45-minute call with an architect, not a salesperson. Replies within one business day. <a href="/approach/">How we run engagements</a></p>
+        </div>
+        <div class="col-7" data-reveal>
+          <form class="form" method="POST" action="https://formspree.io/f/TODO_FORM_ID" data-netlify="true" name="beta" aria-labelledby="beta-title" data-enhance data-success="Thank you. The beta brief is on its way within one business day, and we will propose a walkthrough slot." data-subject="Value Lens beta access request">
+            <input type="hidden" name="intent" value="beta">
+            <input type="hidden" name="form-name" value="beta">
+            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" hidden>
+            <div class="form__row">
+              <div class="field">
+                <label class="field__label" for="b-name">Name</label>
+                <input class="input" id="b-name" name="name" type="text" autocomplete="name" required>
+              </div>
+              <div class="field">
+                <label class="field__label" for="b-email">Work email</label>
+                <input class="input" id="b-email" name="email" type="email" autocomplete="email" required>
+              </div>
+            </div>
+            <div class="field">
+              <label class="field__label" for="b-company">Company</label>
+              <input class="input" id="b-company" name="company" type="text" autocomplete="organization" required>
+            </div>
+            <fieldset class="fieldset">
+              <legend>Your role</legend>
+              <div class="choices">
+                <label class="choice"><input type="radio" name="role" value="finance" required><span>Finance</span></label>
+                <label class="choice"><input type="radio" name="role" value="sap" required><span>SAP</span></label>
+                <label class="choice"><input type="radio" name="role" value="it" required><span>IT</span></label>
+                <label class="choice"><input type="radio" name="role" value="other" required><span>Other</span></label>
+              </div>
+            </fieldset>
+            <div class="field">
+              <label class="field__label" for="b-first">What would you want it to find first? <span class="opt">(optional)</span></label>
+              <textarea class="input" id="b-first" name="message" rows="3"></textarea>
+            </div>
+            <label class="choice"><input type="checkbox" name="notify" value="yes"><span>Notify me when Value Lens leaves beta.</span></label>
+            <label class="choice"><input type="checkbox" name="discovery" value="yes"><span>I would also like to book a discovery call about SAP, cloud or agentic AI services.</span></label>
+            <button class="btn btn--primary" type="submit">Request beta access</button>
+            <p class="form__privacy">We use your details only to reply to you. See <a href="/privacy/">Privacy</a>.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7.7 FAQ (+ D.11) -->
+  <section class="section" id="faq" aria-labelledby="faq-title">
+    <div class="container">
+      <div class="section-mark mb-6"><span class="numeral">17</span><h2 class="eyebrow" id="faq-title">Questions</h2></div>
+      <div class="faq-list">
+        <details class="faq">
+          <summary>Is this connected to my SAP system?<svg class="faq__glyph" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M0 8h16" stroke="currentColor" stroke-width="1.5"/><path class="v" d="M8 0v16" stroke="currentColor" stroke-width="1.5"/></svg></summary>
+          <div class="faq__body"><p>Not yet. The beta runs on synthetic SAP-like data; the production SAP connector is in development.</p></div>
+        </details>
+        <details class="faq">
+          <summary>Can it change anything in SAP?<svg class="faq__glyph" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M0 8h16" stroke="currentColor" stroke-width="1.5"/><path class="v" d="M8 0v16" stroke="currentColor" stroke-width="1.5"/></svg></summary>
+          <div class="faq__body"><p>No. There is no write tool in the product, and none is planned.</p></div>
+        </details>
+        <details class="faq">
+          <summary>Where do the numbers come from?<svg class="faq__glyph" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M0 8h16" stroke="currentColor" stroke-width="1.5"/><path class="v" d="M8 0v16" stroke="currentColor" stroke-width="1.5"/></svg></summary>
+          <div class="faq__body"><p>Deterministic code, integer cents, versioned policy. Never from the model.</p></div>
+        </details>
+        <details class="faq">
+          <summary>Are the detection rules our accounting policy?<svg class="faq__glyph" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M0 8h16" stroke="currentColor" stroke-width="1.5"/><path class="v" d="M8 0v16" stroke="currentColor" stroke-width="1.5"/></svg></summary>
+          <div class="faq__body"><p>No. They are our rules with configurable thresholds. Customer-specific policy configuration is on the roadmap.</p></div>
+        </details>
+        <details class="faq">
+          <summary>Who reviews a case?<svg class="faq__glyph" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M0 8h16" stroke="currentColor" stroke-width="1.5"/><path class="v" d="M8 0v16" stroke="currentColor" stroke-width="1.5"/></svg></summary>
+          <div class="faq__body"><p>Your finance reviewer. Value Lens raises and explains; it does not decide.</p></div>
+        </details>
+        <details class="faq">
+          <summary>What does the beta cost?<svg class="faq__glyph" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M0 8h16" stroke="currentColor" stroke-width="1.5"/><path class="v" d="M8 0v16" stroke="currentColor" stroke-width="1.5"/></svg></summary>
+          <div class="faq__body"><p>Beta participation terms are agreed per organisation. <span class="todo">TODO</span> (client): pricing statement.</p></div>
+        </details>
+        <details class="faq">
+          <summary>Why integer cents?<svg class="faq__glyph" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M0 8h16" stroke="currentColor" stroke-width="1.5"/><path class="v" d="M8 0v16" stroke="currentColor" stroke-width="1.5"/></svg></summary>
+          <div class="faq__body"><p>Because $0.01 matters in a margin bridge. Money crosses every boundary as an integer string in minor units, and every expression uses exact integer operations. No floating point, no rounding surprises.</p></div>
+        </details>
+        <details class="faq">
+          <summary>What happens when data is missing?<svg class="faq__glyph" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M0 8h16" stroke="currentColor" stroke-width="1.5"/><path class="v" d="M8 0v16" stroke="currentColor" stroke-width="1.5"/></svg></summary>
+          <div class="faq__body"><p>The case is blocked and says so. A missing cost, a total that does not reconcile or a failed read never becomes a zero-loss result or an empty success.</p></div>
+        </details>
+        <details class="faq">
+          <summary>Can we bring our own accounting policy?<svg class="faq__glyph" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M0 8h16" stroke="currentColor" stroke-width="1.5"/><path class="v" d="M8 0v16" stroke="currentColor" stroke-width="1.5"/></svg></summary>
+          <div class="faq__body"><p>That is the point of the versioned policy. The beta ships a demo policy; a customer policy is configured, versioned and recorded on every calculation it touches.</p></div>
+        </details>
+        <details class="faq">
+          <summary>Which SAP editions will the connector support?<svg class="faq__glyph" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M0 8h16" stroke="currentColor" stroke-width="1.5"/><path class="v" d="M8 0v16" stroke="currentColor" stroke-width="1.5"/></svg></summary>
+          <div class="faq__body"><p>The adapter boundary is edition-neutral. The production connector is in development; we will confirm editions with beta participants.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7.8 Closing (white, grid texture) -->
+  <section class="section has-grid cta-band" id="next-step" aria-labelledby="next-title">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <div class="section-mark"><span class="numeral">18</span><p class="eyebrow">Next step</p></div>
+        <h2 id="next-title">Agents Explain. Humans Decide. SAP Stays the System of Record.</h2>
+      </div>
+      <div class="btn-row">
+        <a class="btn btn--primary" href="#beta">Request beta access</a>
+        <a class="btn btn--secondary" href="/contact/?intent=discovery">Book a discovery call</a>
+      </div>
+      <p class="status">Private beta on synthetic SAP-like data. Production SAP connector in development.</p>
+      <p class="trust">A 45-minute call with an architect, not a salesperson. Replies within one business day.</p>
+      <div class="cta-links">
+        <a class="arrow-link" href="/approach/">How we run engagements<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+</main>
+<?php get_footer(); ?>

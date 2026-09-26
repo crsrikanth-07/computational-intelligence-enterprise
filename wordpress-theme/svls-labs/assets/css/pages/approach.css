@@ -1,0 +1,29 @@
+/* /approach/ — page-specific styles (tokens only; loaded after site.css) */
+
+/* Standards table aside: "Read next" links stacked beside the table (.aside-rule draws the hairline) */
+.standards-aside { display: flex; flex-direction: column; align-items: flex-start; gap: var(--s-5); }
+.standards-aside .eyebrow { margin-bottom: calc(var(--s-1) - var(--s-5)); }
+/* In the narrow aside a link may wrap: keep the point after the last word, not at the column edge */
+.standards-aside .arrow-link { display: inline-block; }
+.standards-aside .arrow-link svg { vertical-align: middle; margin-left: var(--s-2); }
+
+/* AI-assisted engineering: the added review-record paragraph */
+.review-record { margin-top: var(--s-6); max-width: var(--measure); }
+
+/* Commercial shapes: three hairline cells (numeral, H3, terms, gate line), then the partner line and its button */
+.shape { display: flex; flex-direction: column; align-items: flex-start; }
+.shape h3 { margin-top: var(--s-2); }
+.shape__terms { margin-top: var(--s-3); font-size: 15px; line-height: 24px; }
+.shape__gate { margin-top: var(--s-4); padding-top: var(--s-3); border-top: 1px solid var(--rule); width: 100%; font: 400 14px/22px var(--font-mono); color: var(--text); }
+.shape__gate .eyebrow { display: block; margin-bottom: var(--s-1); }
+.partner-row { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--s-4); margin-top: var(--s-6); align-items: center; }
+.partner-row__body { font-size: 15px; line-height: 24px; max-width: var(--measure); }
+@media (min-width: 900px) {
+  .partner-row { grid-template-columns: minmax(0, 1fr) auto; gap: var(--s-6); }
+}
+
+/* Security commitments: the numbered list sits in one 12px-radius card (same panel as the standards table above it) */
+#security .list-numbered--lg { border: 1px solid var(--sg-line); border-radius: var(--sg-radius-lg); background: var(--sg-card); box-shadow: var(--sg-shadow); padding: 0 var(--s-4); }
+#security .list-numbered--lg > li:first-child { border-top: 0; }
+#security .list-numbered--lg > li { padding-left: var(--s-2); padding-right: var(--s-2); }
+@media (min-width: 600px) { #security .list-numbered--lg { padding: 0 var(--s-5); } }
