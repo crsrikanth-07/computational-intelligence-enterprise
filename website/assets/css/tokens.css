@@ -1,0 +1,124 @@
+/* =============================================================================
+   SVLS LABS — tokens.css
+   The ONLY place colour values live (BRAND_SPEC 5.2, 15.1). Every other
+   stylesheet references these custom properties. Light theme is the default;
+   the dark set applies to .band-dark regardless of theme, to the whole page
+   when the user prefers dark and has not chosen light, and to the whole page
+   when <html data-theme="dark"> is set by the theme toggle.
+   ============================================================================= */
+
+:root {
+  /* Light theme (default) */
+  --bg:            #FFFFFF;  /* page background */
+  --surface:       #F3F4F6;  /* section bands, cards, proof strip, spec blocks; never text */
+  --rule:          #D9DDE3;  /* 1px hairlines, grid lines, table borders; decorative only */
+  --grid:          rgba(16, 20, 24, 0.06); /* 16x16 unit background grid on hero/about */
+  --text:          #101418;  /* headlines, body, wordmark */
+  --text-muted:    #4B5563;  /* subcopy, captions, labels, metadata */
+  --primary:       #14213D;  /* ink navy: secondary buttons, nav hover, section numerals, chart baselines */
+  --accent:        #E4432B;  /* GRAPHIC ONLY: logo bracket, ticks, underlines, focus ring, HIGH mark glyph */
+  --accent-text:   #C8351F;  /* TEXT-SAFE: button fills (white label), links, any accent running text, HIGH label text */
+  --success:       #1E7F4F;  /* verified / read-back OK / reviewed */
+  --warn:          #9A6412;  /* MEDIUM severity text, beta label text, caution notes */
+  --warn-fill:     #B7791F;  /* badge fill only, with --text label */
+  --on-accent:     #FFFFFF;  /* label on --accent-text buttons */
+  --on-primary:    #FFFFFF;  /* label on --primary buttons */
+
+  /* Dark band set (used inside .band-dark regardless of theme) */
+  --d-bg:          #0B0E13;
+  --d-surface:     #141923;
+  --d-rule:        #1F2632;  /* tinted hairline so the grid survives on dark */
+  --d-grid:        rgba(243, 244, 246, 0.05);
+  --d-text:        #F3F4F6;
+  --d-text-muted:  #A9B1BD;
+  --d-accent:      #FF6A50;  /* accent on dark, graphic AND text-safe */
+  --d-warn:        #E6B05C;
+  --d-success:     #4CC38A;
+
+  /* Type */
+  --font-heading: "Inter Tight", "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-body:    "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-mono:    "JetBrains Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+
+  /* Spacing (4px module, mirrors the logo grid) */
+  --s-1: 4px;  --s-2: 8px;  --s-3: 12px; --s-4: 16px; --s-5: 24px;
+  --s-6: 32px; --s-7: 48px; --s-8: 64px; --s-9: 96px; --s-10: 128px;
+
+  /* Radius */
+  --r-0: 0;    /* default: cards, tables, grid cells, buttons */
+  --r-1: 2px;  /* inputs, badges, chips */
+  --r-2: 4px;  /* product-frame corners, image frames */
+  --r-pill: 999px; /* severity pills only */
+
+  /* Shadow (the only two permitted) */
+  --shadow-0: none;
+  --shadow-1: 0 1px 0 var(--rule);                 /* sticky nav bottom edge */
+  --shadow-2: 0 8px 24px rgba(16, 20, 24, 0.08);   /* product frame on light, mobile nav sheet */
+
+  /* Layout */
+  --measure: 64ch;
+  --container: 1200px;
+  --gutter: 16px;   /* phone */
+  --gutter-md: 24px;/* tablet */
+  --gutter-lg: 32px;/* desktop */
+  --nav-h: 64px;
+
+  /* Motion */
+  --ease: cubic-bezier(0.2, 0, 0, 1);
+  --t-fast: 120ms;
+  --t-base: 200ms;
+  --t-reveal: 360ms;
+
+  /* ---- Build additions (derived from BRAND_SPEC 5.4 / 7 / 8.3; no new hues) ---- */
+  --accent-hover:  #B02E1A;  /* primary button hover fill, light (accent-text darkened 10%) */
+  --on-warn:       #101418;  /* label on the PRIVATE BETA badge (ink on amber) */
+  --nav-bg:        rgba(255, 255, 255, 0.92); /* sticky nav: --bg at 92% */
+  --scrim:         rgba(16, 20, 24, 0.40);    /* backdrop behind the mobile sheet */
+  --svls-accent:   #E4432B;  /* vermilion bracket in the inline mark / lockups (BRAND_SPEC 8.3) */
+  color-scheme: light;
+}
+
+/* Dark mode: system preference, unless the user has explicitly chosen light */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0B0E13; --surface: #141923; --rule: #1F2632;
+    --grid: rgba(243, 244, 246, 0.05);
+    --text: #F3F4F6; --text-muted: #A9B1BD;
+    --primary: #F3F4F6; --on-primary: #0B0E13;
+    --accent: #FF6A50; --accent-text: #FF6A50; --on-accent: #0B0E13;
+    --success: #4CC38A; --warn: #E6B05C; --warn-fill: #E6B05C;
+    --shadow-2: 0 8px 24px rgba(0, 0, 0, 0.5);
+    --accent-hover: #FF8068; --on-warn: #0B0E13;
+    --nav-bg: rgba(11, 14, 19, 0.92); --scrim: rgba(0, 0, 0, 0.6);
+    --svls-accent: #FF6A50;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0B0E13; --surface: #141923; --rule: #1F2632;
+  --grid: rgba(243, 244, 246, 0.05);
+  --text: #F3F4F6; --text-muted: #A9B1BD;
+  --primary: #F3F4F6; --on-primary: #0B0E13;
+  --accent: #FF6A50; --accent-text: #FF6A50; --on-accent: #0B0E13;
+  --success: #4CC38A; --warn: #E6B05C; --warn-fill: #E6B05C;
+  --shadow-2: 0 8px 24px rgba(0, 0, 0, 0.5);
+  --accent-hover: #FF8068; --on-warn: #0B0E13;
+  --nav-bg: rgba(11, 14, 19, 0.92); --scrim: rgba(0, 0, 0, 0.6);
+  --svls-accent: #FF6A50;
+  color-scheme: dark;
+}
+
+/* Dark band inside the light site (Value Lens band, footer, Value Lens page hero) */
+.band-dark {
+  --bg: var(--d-bg); --surface: var(--d-surface); --rule: var(--d-rule); --grid: var(--d-grid);
+  --text: var(--d-text); --text-muted: var(--d-text-muted);
+  --primary: var(--d-text); --on-primary: var(--d-bg);
+  --accent: var(--d-accent); --accent-text: var(--d-accent); --on-accent: var(--d-bg);
+  --success: var(--d-success); --warn: var(--d-warn); --warn-fill: var(--d-warn);
+  --accent-hover: #FF8068; --on-warn: var(--d-bg);
+  --svls-accent: var(--d-accent);
+  --shadow-2: 0 8px 24px rgba(0, 0, 0, 0.5);
+  color-scheme: dark;
+  background: var(--bg); color: var(--text);
+}
+body { background: var(--bg); color: var(--text); }
