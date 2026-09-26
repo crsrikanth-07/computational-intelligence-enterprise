@@ -1,4 +1,4 @@
-# SVLS Labs WordPress theme
+# SVLS LABS WordPress theme
 
 Generated from the static site in `website/` by `make-wp-theme.js`. Copy and markup come from the static HTML; edit the static site first, regenerate, and re-upload.
 
@@ -41,4 +41,4 @@ Front page: create a page (any title, for example "Home"), then Settings -> Read
 - `robots.txt` and the sitemap are served by WordPress (`/robots.txt`, `/wp-sitemap.xml`); the static `sitemap.xml` is not part of the theme. Keep Settings -> Reading -> "Discourage search engines" unticked on the live site.
 - Titles, descriptions, canonicals and Open Graph tags come from the templates. If an SEO plugin (Yoast, Rank Math, All in One SEO) is active, turn off its title, meta description, canonical and Open Graph output, or deactivate it, or the head carries each tag twice.
 - Caching or minification plugins (Autoptimize, WP Rocket, LiteSpeed) must not combine, defer or inline the theme's CSS and JS; the head order (tokens.css, site.css, page css, theme.css) is deliberate.
-- The contact forms post to Formspree (`TODO_FORM_ID` until the client supplies the id); WordPress form plugins are not involved.
+- The contact and beta forms post to admin-post.php (action=svls_form) and are emailed to service@svlslabs.com by functions.php; WordPress form plugins are not involved.

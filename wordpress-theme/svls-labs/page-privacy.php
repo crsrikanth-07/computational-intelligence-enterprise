@@ -7,12 +7,12 @@ $GLOBALS['svls_page_head'] = function () { ?>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy | SVLS LABS</title>
-<meta name="description" content="How SVLS Labs LLP collects and uses the details you send through svlslabs.com.">
+<meta name="description" content="How SVLS LABS LLP collects and uses the details you send through svlslabs.com.">
 <link rel="canonical" href="<?php echo esc_url( home_url( '/privacy/' ) ); ?>">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="SVLS LABS">
 <meta property="og:title" content="Privacy Policy | SVLS LABS">
-<meta property="og:description" content="How SVLS Labs LLP collects and uses the details you send through svlslabs.com.">
+<meta property="og:description" content="How SVLS LABS LLP collects and uses the details you send through svlslabs.com.">
 <meta property="og:url" content="<?php echo esc_url( home_url( '/privacy/' ) ); ?>">
 <meta property="og:image" content="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/og/og-privacy.png">
 <meta property="og:image:width" content="1200">
@@ -20,7 +20,7 @@ $GLOBALS['svls_page_head'] = function () { ?>
 <meta property="og:image:alt" content="SVLS LABS lockup and the page title on charcoal.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Privacy Policy | SVLS LABS">
-<meta name="twitter:description" content="How SVLS Labs LLP collects and uses the details you send through svlslabs.com.">
+<meta name="twitter:description" content="How SVLS LABS LLP collects and uses the details you send through svlslabs.com.">
 <meta name="twitter:image" content="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/og/og-privacy.png">
 <meta name="theme-color" content="#0E1116" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0E1116" media="(prefers-color-scheme: dark)">
@@ -48,11 +48,11 @@ $GLOBALS['svls_page_head'] = function () { ?>
   "@type": "WebPage",
   "name": "Privacy Policy",
   "url": "https://svlslabs.com/privacy/",
-  "description": "How SVLS Labs LLP collects and uses the details you send through svlslabs.com.",
+  "description": "How SVLS LABS LLP collects and uses the details you send through svlslabs.com.",
   "inLanguage": "en",
   "isPartOf": { "@type": "WebSite", "name": "SVLS LABS", "url": "https://svlslabs.com/" },
-  "publisher": { "@type": "Organization", "name": "SVLS LABS", "legalName": "SVLS Labs LLP",
-      "telephone": "+91 850081119",
+  "publisher": { "@type": "Organization", "name": "SVLS LABS", "legalName": "SVLS LABS LLP",
+      "telephone": "+91 8500811119",
       "address": {"@type": "PostalAddress", "streetAddress": "4th Floor, Aparna Astute, Shaikpet, Door No. 8-1-299/103&104/AA/4F-2, Jubilee Hills", "addressLocality": "Hyderabad", "postalCode": "500008", "addressRegion": "Telangana", "addressCountry": "IN"}, "url": "https://svlslabs.com/", "foundingDate": "2020", "sameAs": ["https://www.linkedin.com/company/svlslabs/"] }
 }
 </script>
@@ -110,13 +110,13 @@ get_header();
       <div class="grid hero__grid">
         <div class="hero__copy col-8">
           <h1 id="hero-title">Privacy Policy</h1>
-          <p class="lead">How SVLS Labs LLP collects and uses the details you send through svlslabs.com.</p>
-          <p class="small muted legal__updated">Last updated: <span class="todo">TODO</span> (client)</p>
+          <p class="lead">How SVLS LABS LLP collects and uses the details you send through svlslabs.com.</p>
+          <p class="small muted legal__updated">Last updated: 26 September 2026</p>
         </div>
         <ul class="microlabels hero__rows-a">
-          <li>Legal entity · <span class="keep-case">SVLS Labs LLP</span></li>
+          <li>Legal entity · <span class="keep-case">SVLS LABS LLP</span></li>
           <li>Site · <span class="keep-case">svlslabs.com</span></li>
-          <li>Status · Template for legal review</li>
+          <li>Status · In force</li>
         </ul>
       </div>
     </div>
@@ -131,33 +131,30 @@ get_header();
           <section class="legal__section" aria-labelledby="p-who">
             <span class="numeral">01</span>
             <h2 class="h3" id="p-who">Who We Are</h2>
-            <p>svlslabs.com is published by SVLS Labs LLP. Established 2020.</p>
+            <p>svlslabs.com is published by SVLS LABS LLP. Established 2020.</p>
             <p>Registered office: 4th Floor, Aparna Astute, Shaikpet, Door No. 8-1-299/103&amp;104/AA/4F-2, Jubilee Hills, Hyderabad 500008, Telangana, India.</p>
-            <p class="legal__todo">Contact point for privacy questions: <a href="mailto:service@svlslabs.com">service@svlslabs.com</a>.</p>
+            <p class="legal__note">Contact point for privacy questions: <a href="mailto:service@svlslabs.com">service@svlslabs.com</a>.</p>
           </section>
           <section class="legal__section" aria-labelledby="p-collect">
             <span class="numeral">02</span>
             <h2 class="h3" id="p-collect">What We Collect</h2>
-            <p>The fields you send through the contact and beta forms (name, work email, company, role, message) and, if enabled, site analytics.</p>
-            <p class="legal__todo"><span class="todo">TODO</span> (client): confirm the fields and whether analytics is enabled.</p>
+            <p>The fields you send through the contact and beta forms: name, work email, company, role, what you are asking about and your message.</p>
+            <p>Site analytics: this site uses Google Analytics, which sets cookies to measure visits and pages viewed. You can block these cookies in your browser settings without affecting the site.</p>
           </section>
           <section class="legal__section" aria-labelledby="p-use">
             <span class="numeral">03</span>
             <h2 class="h3" id="p-use">How We Use It</h2>
-            <p>We use your details only to reply to you. We do not sell your data.</p>
-            <p class="legal__todo"><span class="todo">TODO</span> (client): counsel to complete this section.</p>
+            <p>We use your details only to reply to your enquiry, to arrange the call or demo you asked for and to send you the document you requested. We do not sell your data, we do not use it for advertising and we do not add you to a mailing list unless you ask.</p>
           </section>
           <section class="legal__section" aria-labelledby="p-storage">
             <span class="numeral">04</span>
             <h2 class="h3" id="p-storage">Storage and Processors</h2>
-            <p>Form submissions are handled by the form endpoint provider.</p>
-            <p class="legal__todo"><span class="todo">TODO</span> (client): name the form endpoint provider, where submissions are stored and for how long.</p>
+            <p>Form submissions are delivered by email to service@svlslabs.com and kept in that mailbox for up to 12 months, then deleted unless an engagement follows. The site is hosted on GoDaddy Managed WordPress behind Cloudflare, which process technical data such as IP addresses and request logs to serve and protect the site. Google Analytics processes analytics data under Google's privacy terms.</p>
           </section>
           <section class="legal__section" aria-labelledby="p-rights">
             <span class="numeral">05</span>
             <h2 class="h3" id="p-rights">Your Rights</h2>
-            <p>Requests about the details we hold about you go to <a href="mailto:service@svlslabs.com">service@svlslabs.com</a>.</p>
-            <p class="legal__todo"><span class="todo">TODO</span> (client): the rights that apply to you and how to exercise them.</p>
+            <p>Under India's Digital Personal Data Protection Act, 2023 you may ask us to confirm what we hold about you, to correct it or to erase it, and you may withdraw consent at any time. Write to <a href="mailto:service@svlslabs.com">service@svlslabs.com</a>; we respond within 30 days. If you are outside India, the rights of your own jurisdiction apply and we honour the same requests.</p>
           </section>
           <section class="legal__section" aria-labelledby="p-contact">
             <span class="numeral">06</span>
@@ -168,9 +165,8 @@ get_header();
         </div>
         <aside class="col-4 col-start-9 legal-aside" aria-label="About this page">
           <div class="notice">
-            <p class="eyebrow">Template for legal review</p>
-            <p>The six sections above are the headings the client's counsel completes. Each carries a <span class="todo">TODO</span> (client) label until it is done.</p>
-            <p>Nothing on this page has been reviewed by counsel yet.</p>
+            <p class="eyebrow">About this policy</p>
+            <p>This policy was last updated on 26 September 2026. Questions go to service@svlslabs.com.</p>
           </div>
           <div class="legal-aside__block">
             <p class="eyebrow">Related</p>

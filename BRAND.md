@@ -4,7 +4,7 @@ For anyone producing a page, a post, a slide or a PDF for SVLS LABS. This page g
 
 ## 1. Name and tagline
 
-- Company: **SVLS LABS** (always uppercase in running text and headlines). Legal entity: **SVLS Labs LLP**. Product: **Value Lens**. Suite: **SAP Intelligence Suite** (name under review, see section 7).
+- Company: **SVLS LABS** (always uppercase in running text and headlines). Legal entity: **SVLS LABS LLP**. Product: **Value Lens**. Suite: **SAP Intelligence Suite** (name under review, see section 7).
 - Tagline, locked, always two sentences with both full stops: **"SAP, Cloud and Governed AI. Engineered to Spec."** Used as the homepage H1, the footer strap, the OG image, LinkedIn and email signatures.
 - Approved secondary lines (never as the homepage H1): "Clean core. Clean cloud. Governed agents." and "Agents explain. Humans decide. SAP stays the system of record."
 - The three practices are **SAP & ERP**, **Cloud** and **Agentic & Applied AI** (client instruction, 2026-09-26: the AI work published on GitHub is broader than agents; "Agentic AI" alone is no longer used as the practice name).
@@ -76,7 +76,7 @@ Tone: precise, calm, evidence-led, specific, unadorned. An architect talking to 
   - Value Lens: **"Private beta on synthetic SAP-like data. Production SAP connector in development."** Never "live", "in production", "customers use", "GA".
   - SAP Intelligence Suite: **"In use in SVLS LABS delivery. Available to customers on request; deployed in your landscape, reviewed by your architects."**
 - Agents "explain", "propose", "read before write", "confirm to act"; never "autonomous", never "decide" for the agent, never "rollback" (SAP postings are reversed).
-- The only location is the registered office: SVLS Labs LLP, 4th Floor, Aparna Astute, Shaikpet, Door No. 8-1-299/103&104/AA/4F-2, Jubilee Hills, Hyderabad 500008, Telangana, India. No other country, region, time zone or presence claim.
+- The only location is the registered office: SVLS LABS LLP, 4th Floor, Aparna Astute, Shaikpet, Door No. 8-1-299/103&104/AA/4F-2, Jubilee Hills, Hyderabad 500008, Telangana, India. No other country, region, time zone or presence claim.
 
 ## 7. Open items that touch the brand
 

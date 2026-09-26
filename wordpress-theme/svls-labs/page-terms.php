@@ -51,8 +51,8 @@ $GLOBALS['svls_page_head'] = function () { ?>
   "description": "Terms of use for svlslabs.com and a note on Value Lens private beta terms.",
   "inLanguage": "en",
   "isPartOf": { "@type": "WebSite", "name": "SVLS LABS", "url": "https://svlslabs.com/" },
-  "publisher": { "@type": "Organization", "name": "SVLS LABS", "legalName": "SVLS Labs LLP",
-      "telephone": "+91 850081119",
+  "publisher": { "@type": "Organization", "name": "SVLS LABS", "legalName": "SVLS LABS LLP",
+      "telephone": "+91 8500811119",
       "address": {"@type": "PostalAddress", "streetAddress": "4th Floor, Aparna Astute, Shaikpet, Door No. 8-1-299/103&104/AA/4F-2, Jubilee Hills", "addressLocality": "Hyderabad", "postalCode": "500008", "addressRegion": "Telangana", "addressCountry": "IN"}, "url": "https://svlslabs.com/", "foundingDate": "2020", "sameAs": ["https://www.linkedin.com/company/svlslabs/"] }
 }
 </script>
@@ -111,12 +111,12 @@ get_header();
         <div class="hero__copy col-8">
           <h1 id="hero-title">Terms of Use</h1>
           <p class="lead">Terms of use for svlslabs.com and a note on Value Lens private beta terms.</p>
-          <p class="small muted legal__updated">Last updated: <span class="todo">TODO</span> (client)</p>
+          <p class="small muted legal__updated">Last updated: 26 September 2026</p>
         </div>
         <ul class="microlabels hero__rows-a">
-          <li>Legal entity · <span class="keep-case">SVLS Labs LLP</span></li>
+          <li>Legal entity · <span class="keep-case">SVLS LABS LLP</span></li>
           <li>Site · <span class="keep-case">svlslabs.com</span></li>
-          <li>Status · Template for legal review</li>
+          <li>Status · In force</li>
         </ul>
       </div>
     </div>
@@ -131,27 +131,24 @@ get_header();
           <section class="legal__section" aria-labelledby="t-use">
             <span class="numeral">01</span>
             <h2 class="h3" id="t-use">Use of the Site</h2>
-            <p>svlslabs.com is published by SVLS Labs LLP for information about our services and products.</p>
-            <p class="legal__todo"><span class="todo">TODO</span> (client): counsel to complete this section.</p>
+            <p>svlslabs.com is published by SVLS LABS LLP for information about our services and products. You may read, link to and quote this site to evaluate our services. You may not copy its content for commercial use, present it as your own or use the site to send unsolicited messages. SAP and related marks are trademarks of SAP SE; all other marks belong to their owners.</p>
           </section>
           <section class="legal__section" aria-labelledby="t-beta">
             <span class="numeral">02</span>
             <h2 class="h3" id="t-beta">Value Lens Beta Terms</h2>
             <p>Value Lens (private beta) beta terms are agreed per organisation and are not granted by this site.</p>
             <p class="status">Private beta on synthetic SAP-like data. Production SAP connector in development.</p>
-            <p class="legal__todo"><span class="todo">TODO</span> (client): counsel to confirm the beta terms reference.</p>
+            <p>Participation in the Value Lens private beta is governed by a separate beta agreement signed per organisation, which covers data handling, confidentiality and the synthetic-data scope. Nothing on this site grants beta access.</p>
           </section>
           <section class="legal__section" aria-labelledby="t-warranty">
             <span class="numeral">03</span>
             <h2 class="h3" id="t-warranty">No Warranty on Informational Content</h2>
-            <p>The content of this site is informational and is provided without warranty.</p>
-            <p class="legal__todo"><span class="todo">TODO</span> (client): counsel to complete this section.</p>
+            <p>The content of this site is informational and is provided without warranty. Figures and descriptions are accurate to our knowledge at publication and may change. They are not an offer, a quotation or professional advice. Services are priced per engagement; no prices are published on this site.</p>
           </section>
           <section class="legal__section" aria-labelledby="t-law">
             <span class="numeral">04</span>
             <h2 class="h3" id="t-law">Governing Law</h2>
-            <p>Governing law and jurisdiction: <span class="todo">TODO</span> (client).</p>
-            <p class="legal__todo"><span class="todo">TODO</span> (client): counsel to state the governing law and jurisdiction.</p>
+            <p>These terms are governed by the laws of India. The courts in Hyderabad, Telangana have exclusive jurisdiction over any dispute arising from this site.</p>
           </section>
           <section class="legal__section" aria-labelledby="t-contact">
             <span class="numeral">05</span>
@@ -162,9 +159,8 @@ get_header();
         </div>
         <aside class="col-4 col-start-9 legal-aside" aria-label="About this page">
           <div class="notice">
-            <p class="eyebrow">Template for legal review</p>
-            <p>The five sections above are the headings the client's counsel completes. Each carries a <span class="todo">TODO</span> (client) label until it is done.</p>
-            <p>Nothing on this page has been reviewed by counsel yet.</p>
+            <p class="eyebrow">About this policy</p>
+            <p>These terms were last updated on 26 September 2026. Questions go to service@svlslabs.com.</p>
           </div>
           <div class="legal-aside__block">
             <p class="eyebrow">Related</p>

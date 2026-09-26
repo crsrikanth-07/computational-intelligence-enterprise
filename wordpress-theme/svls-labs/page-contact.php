@@ -58,8 +58,8 @@ $GLOBALS['svls_page_head'] = function () { ?>
   "about": {
     "@type": "Organization",
     "name": "SVLS LABS",
-    "legalName": "SVLS Labs LLP",
-      "telephone": "+91 850081119",
+    "legalName": "SVLS LABS LLP",
+      "telephone": "+91 8500811119",
       "address": {"@type": "PostalAddress", "streetAddress": "4th Floor, Aparna Astute, Shaikpet, Door No. 8-1-299/103&104/AA/4F-2, Jubilee Hills", "addressLocality": "Hyderabad", "postalCode": "500008", "addressRegion": "Telangana", "addressCountry": "IN"},
     "url": "https://svlslabs.com/",
     "foundingDate": "2020",
@@ -133,7 +133,8 @@ get_header();
       <div class="section-mark"><span class="numeral">02</span><h2 class="eyebrow" id="form-title">Write to Us</h2></div>
       <div class="grid contact__grid">
         <div class="col-7 contact__form" data-reveal>
-          <form class="form" method="POST" action="https://formspree.io/f/TODO_FORM_ID" data-netlify="true" name="contact" aria-labelledby="hero-title" data-enhance data-success="Thank you. We reply within one business day. If it is urgent, email service@svlslabs.com." data-subject="Contact enquiry">
+          <form class="form" method="POST" action="/wp-admin/admin-post.php" name="contact" aria-labelledby="hero-title" data-enhance data-success="Thank you. We reply within one business day. If it is urgent, email service@svlslabs.com." data-subject="Contact enquiry">
+            <input type="hidden" name="action" value="svls_form">
             <input type="hidden" name="form-name" value="contact">
             <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" hidden>
             <div class="form__row">
@@ -208,8 +209,8 @@ get_header();
             <h3>Offices</h3>
             <dl class="offices">
               <div class="offices__row">
-                <dt class="mono-title">SVLS Labs LLP</dt>
-                <dd>4th Floor, Aparna Astute<br>Shaikpet, Door No. 8-1-299/103&amp;104/AA/4F-2<br>Jubilee Hills, Hyderabad 500008<br>Telangana, India<br><a href="tel:+91850081119">+91 850081119</a></dd>
+                <dt class="mono-title">SVLS LABS LLP</dt>
+                <dd>4th Floor, Aparna Astute<br>Shaikpet, Door No. 8-1-299/103&amp;104/AA/4F-2<br>Jubilee Hills, Hyderabad 500008<br>Telangana, India<br><a href="tel:+918500811119">+91 8500811119</a></dd>
               </div>
               <div class="offices__row">
                 <dt class="mono-title">Email</dt>

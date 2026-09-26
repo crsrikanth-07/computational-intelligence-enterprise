@@ -13,7 +13,7 @@ What is in this repository for deployment:
 
 Pick option A (keep WordPress) or option B (static hosting). Option C is option A run by a script. Sections D and E apply to both.
 
-Two decisions block going live in either option: the form endpoint (`TODO_FORM_ID`, section D.1) and the contact mailbox (D.2). Everything else in section D can follow launch, but each placeholder renders as a visible amber `TODO` label until it is done.
+No placeholders remain on the site. The forms post to the theme's own handler (section D.1), the mailbox is service@svlslabs.com and the phone is +91 8500811119. Section D lists what is still the client's to confirm after launch.
 
 ---
 
@@ -63,7 +63,7 @@ Notes:
 
 ### A.4 Activate and set the front page
 
-1. Appearance -> Themes -> SVLS Labs -> Activate.
+1. Appearance -> Themes -> SVLS LABS -> Activate.
 2. Settings -> Reading -> "Your homepage displays": A static page -> Homepage: Home. Save. (Leave "Posts page" empty.)
 3. Settings -> General: Site Title `SVLS LABS`, Tagline `SAP, Cloud and Governed AI. Engineered to Spec.` (the templates do not print these, but WordPress uses them in feeds and admin).
 4. Settings -> Permalinks -> Save Changes once more (flushes the rewrite rules so the nested URLs resolve).
@@ -73,7 +73,7 @@ Notes:
 - **Deactivate the page-builder plugins** the old site used (Elementor, WPBakery, Divi Builder, Beaver Builder, Brizy or similar) and their add-ons. The new theme does not use them; left active they load their CSS and JS on every page. Deactivate first, verify every page, then delete.
 - **SEO plugin**: the templates already print the title, description, canonical, Open Graph, Twitter and JSON-LD tags. Either deactivate the SEO plugin or switch off its title, meta description, canonical and Open Graph/Twitter output; otherwise every tag appears twice. Keep its XML sitemap if you prefer it over `/wp-sitemap.xml`.
 - **Caching and optimisation plugins**: exclude the theme's CSS and JS from combining, deferring, delaying and inlining (the head order tokens.css -> site.css -> page css -> theme.css is deliberate, and `site.js`/`theme.js` are already deferred). Page caching is fine. Purge all caches after activation.
-- **Forms**: the contact, beta and lead-magnet forms post to Formspree (section D.1). No WordPress form plugin is involved; a form plugin that used to serve the old site can be deactivated.
+- **Forms**: the contact and beta forms post to the theme's own handler (`svls_form` in `functions.php`, reached through `/wp-admin/admin-post.php`), which emails service@svlslabs.com with `wp_mail()` and sets Reply-To to the sender. No form plugin is involved; the form plugins that served the old site can be deactivated. If the host's PHP mail is unreliable, install an SMTP plugin (WP Mail SMTP or similar): the handler uses `wp_mail()`, so it picks that up automatically.
 - **Keep the old theme installed** (do not delete it) until everything in A.6 passes; rolling back is Appearance -> Themes -> activate the old theme, and the old pages still exist.
 
 ### A.6 Verify (on the live domain)
@@ -103,7 +103,7 @@ The `website/` folder is deployable as is: root-relative URLs, directory-style p
 1. Add new site -> Import from Git -> this repository. Build command: none. Publish directory: `website`. Deploy.
 2. Domain management -> add `svlslabs.com` (primary) and `www.svlslabs.com`; Netlify DNS or the ALIAS/A + CNAME it lists. TLS via Let's Encrypt is automatic once DNS resolves.
 3. `404.html` is served for missing paths automatically. "Pretty URLs" keeps trailing slashes as the site links them.
-4. Forms: the site posts to Formspree by default (D.1). To use Netlify Forms instead, add `data-netlify="true"` and a `name` attribute to each `<form>` listed in D.1 and remove the Formspree `action`; `site.js` submits with `fetch` and expects a 2xx response, which Netlify Forms returns.
+4. Forms: the forms post to `/wp-admin/admin-post.php`, which exists only on WordPress. On a static host, point each `<form action>` at a Formspree endpoint (keep the hidden `form-name` field, drop the hidden `action` field) or enable Netlify Forms (`data-netlify="true"` plus a `name` attribute); `site.js` submits with `fetch` and expects a 2xx response, which both return.
 
 ### B.3 GitHub Pages
 
@@ -181,43 +181,38 @@ On svlslabs.com this is the normal path: Cloudflare puts an interactive Turnstil
 
 ---
 
-## D. Client TODO list
+## D. Client confirmations
 
-Every placeholder renders with a visible amber `TODO` label until it is resolved. Lines are 1-based in the current files under `website/`. After changing any page, regenerate the WordPress theme (`node website/_tools/make-wp-theme.js website wordpress-theme/svls-labs svls-labs` and re-zip) if option A or C is in use.
+No placeholder or amber `TODO` label remains on the site. Every item below is either live with a default the client can change, or a check that only the client can make. After changing any page, regenerate the WordPress theme (`node website/_tools/make-wp-theme.js website wordpress-theme/svls-labs svls-labs` and re-zip) and upload it with "Replace current with uploaded".
 
-### D.1 Form endpoint (blocks launch)
+### D.1 Forms
 
-Replace `https://formspree.io/f/TODO_FORM_ID` with the Formspree form id (or enable Netlify Forms, B.2):
+The four forms (discovery call and beta on the homepage, the contact form, the Value Lens beta request) post to the theme's handler `svls_form` (`functions.php`, via `/wp-admin/admin-post.php`). The handler rejects the honeypot, requires a name and a valid email, emails service@svlslabs.com with every field in the body and the sender in Reply-To, and answers JSON to `site.js` (which shows the inline confirmation) or redirects back with `?sent=1` when JavaScript is off.
 
-- `website/index.html:687` (discovery call form) and `website/index.html:710` (beta form)
-- `website/products/value-lens/index.html:854` (beta request form)
-- `website/contact/index.html:179` (contact form)
+- Test one submission of each form on the live site after the theme upload and check the mailbox (and its spam folder).
+- If nothing arrives, GoDaddy's PHP mail is the usual cause: install WP Mail SMTP (or the mail plugin of your choice) and send through an authenticated mailbox. The handler needs no change.
+- The mailbox is hard-coded in `website/_tools/make-wp-theme.js` (`wp_mail( 'service@svlslabs.com', ...)`); change it there and regenerate if the address changes.
 
-Formspree: create one form per purpose or one shared form; the forms send `intent`/`offer` fields so one endpoint is enough. Test a submission from the live domain and confirm the notification mailbox.
+### D.2 Contact details (live)
 
-### D.2 Contact details (blocks launch)
+- Mailbox service@svlslabs.com and phone +91 8500811119 appear on Contact, in the footer of every page, in the two PDFs and in the Organization JSON-LD. Both came from the client on 26 September 2026.
+- Registered address: "SVLS LABS LLP, 4th Floor, Aparna Astute, Shaikpet, Door No. 8-1-299/103&104/AA/4F-2, Jubilee Hills, Hyderabad 500008, Telangana, India" in the footer, on About, Contact, Privacy and in the JSON-LD. No other location appears anywhere.
+- The company name is written "SVLS LABS" (all capitals) everywhere, including the legal form "SVLS LABS LLP".
 
-- Mailbox `hello@svlslabs.com`: confirm it exists and is monitored. `website/contact/index.html:259` ("TODO (client): confirm mailbox"); the footer bottom row on every page carries "(placeholder)" after the address, from `website/_partials/footer.html:51`, rendered at `website/index.html:802`, `website/services/sap/index.html:415`, `website/services/cloud/index.html:407`, `website/services/ai/index.html:510`, `website/products/value-lens/index.html:1014`, `website/products/sap-intelligence-suite/index.html:414`, `website/approach/index.html:442`, `website/about/index.html:413`, `website/contact/index.html:341`, `website/privacy/index.html:282`, `website/terms/index.html:276`, `website/404.html:247`.
-- Phone: `website/contact/index.html:255` ("TODO: phone") and the footer bottom row (same lines as above, "TODO phone").
-- Registered address: the site prints "SVLS Labs LLP, 4th Floor, Aparna Astute, Shaikpet, Door No. 8-1-299/103&104/AA/4F-2, Jubilee Hills, Hyderabad 500008, Telangana, India" as supplied, in the footer, on About, Contact, Privacy and in the Organization JSON-LD of every page. Confirm it is the address to publish; no other location appears anywhere.
-- Privacy and Terms contact points: `website/privacy/index.html:179`, `:209` and `website/terms/index.html:203` (mailbox and postal address).
+### D.3 Legal pages (counsel to review)
 
-### D.3 Legal pages (counsel)
-
-- `website/privacy/index.html:157` last-updated date; `:185` confirm the form fields and whether analytics is enabled; `:191`, `:197` (form endpoint provider, storage and retention), `:203` (rights), `:209`; the notice at `:215` lists the six sections to complete.
-- `website/terms/index.html:157` last-updated date; `:178`, `:185` (beta terms reference), `:191`, `:196` and `:197` (governing law and jurisdiction), `:203`; the notice at `:209` lists the five sections.
+`website/privacy/index.html` and `website/terms/index.html` ship with complete default text, dated 26 September 2026 and marked "In force". Counsel should confirm: the analytics statement (Google Analytics, if enabled on the host), the processors named (GoDaddy hosting, Cloudflare), the 12-month retention of form submissions, the DPDP Act 2023 rights section and its 30-day response window, the governing law (India) and jurisdiction (courts of Hyderabad, Telangana), and the beta-agreement clause. Change the "Last updated" line whenever the text changes.
 
 ### D.4 SAP Intelligence Suite: commercial wording and product name
 
-- Status sentence, shown wherever the Suite is featured: "In use in SVLS LABS delivery. Available to customers on request; deployed in your landscape, reviewed by your architects." Confirm or replace it at `website/products/sap-intelligence-suite/index.html:183` and `:359`, `website/index.html:576`, `website/about/index.html:210`, `website/contact/index.html:283`.
+- Status sentence, shown wherever the Suite is featured: "In use in SVLS LABS delivery. Available to customers on request; deployed in your landscape, reviewed by your architects." Confirm or replace it on the Suite page, the homepage, About and Contact.
 - Library figures: none ship (no flow counts, operation counts, deployment counts or example requests, per Addendum C). If the client wants a figure published, it must be a company figure, not a résumé figure, and it goes through the copy rules in `website/README.md`.
-- The first Suite mode is shown under its exact product name "CPI iFlow generation" at `website/index.html:587`, `website/products/sap-intelligence-suite/index.html:195` and `:224`; everywhere else the site says "integration flow". If the mode name is also too technical for customers, rename it to "CPI integration flow generation" in those three places (the label wraps to two lines in the workbench tiles).
-- SAP trademark naming note: SAP's trademark guidance generally asks third parties not to lead a product name with "SAP". "Intelligence Suite for SAP" is the safer descriptive form. The site ships the client's current name in the H1 (`website/products/sap-intelligence-suite/index.html:181`), the JSON-LD (`:49`), the Products dropdown (`website/_partials/header.html:32`, copied into every page), the footer and the product lockup. Decide before launch; a rename touches those places, the `<title>`/OG title and the OG image (`node website/_tools/make-og.js suite "<new H1>"`).
-- Value Lens pricing statement: `website/products/value-lens/index.html:922` ("Beta participation terms are agreed per organisation. TODO (client): pricing statement.").
+- SAP trademark naming note: SAP's trademark guidance generally asks third parties not to lead a product name with "SAP". "Intelligence Suite for SAP" is the safer descriptive form. The site ships the client's current name in the H1, the JSON-LD, the Products dropdown, the footer and the product lockup. A rename touches those places, the `<title>`/OG title and the OG image (`node website/_tools/make-og.js suite "<new H1>"`).
+- Value Lens pricing: the beta page says participation terms and pricing are agreed per organisation and that no fee is charged during the private beta. Change that line on `website/products/value-lens/index.html` when public pricing exists.
 
-### D.5 Lead-magnet PDFs
+### D.5 Lead-magnet PDFs (live)
 
-The capability overview, the Governed Agent Control Checklist and the Clean Core integration checklist do not exist yet; every link routes to `/contact/` with the intent preselected. Placeholders: `website/services/sap/index.html:290`, `website/services/ai/index.html:401`; the link targets at `website/services/sap/index.html:289`, `website/services/ai/index.html:400`, `website/index.html:743`, `website/approach/index.html:170`. When a PDF exists, point the link at it and remove the placeholder line.
+Two PDFs ship under `website/assets/downloads/` and are linked from the homepage, the AI page, the Approach page and the SAP page: the capability overview (`svls-labs-capability-overview.pdf`) and the Governed Agent Control Checklist (`governed-agent-control-checklist.pdf`). Both are generated by `node website/_tools/make-pdfs.js` from brand-styled HTML; edit the copy there and re-run it. The Clean Core link on the SAP page routes to the contact form with the checklist preselected; add a third PDF to the generator when the content exists.
 
 ### D.6 Trademark screening
 
@@ -229,11 +224,10 @@ Screen the mark and the name "Value Lens" in class 42 (software and IT services)
 
 ### D.8 Other items carried from the build
 
-- GitHub: create an organisation account and mirror the presentable repositories before any repository link is added; the About research section says "published on GitHub" without a link (`website/about/index.html:277`). Then add the two text links named in Addendum B.3.2.
+- GitHub: create an organisation account and mirror the presentable repositories before any repository link is added; the About research section says "published on GitHub" without a link. Then add the two text links named in Addendum B.3.2.
 - Book: confirm it is on sale before any copy says "published" (the site says "authored"); reconcile the back-cover chapter count with the KDP metadata before print.
-- Value Lens `sales_order.get` card carries only its name (`website/products/value-lens/index.html:326`); supply one line if the row should read evenly.
 - Fonts: the two woff2 preloads in every head point at the current Google-served files; if Google rotates the URLs the preload is wasted (a console warning, not an error).
-- Static hosts only: serve `404.html` for missing paths and resolve directory URLs to `index.html` (all three hosts in B do this by default).
+- Static hosts only: serve `404.html` for missing paths, resolve directory URLs to `index.html` and re-point the forms (B.2).
 
 ---
 

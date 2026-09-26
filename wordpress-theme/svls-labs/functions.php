@@ -1,12 +1,48 @@
 <?php
 /**
- * SVLS Labs theme bootstrap.
+ * SVLS LABS theme bootstrap.
  *
  * Every page template stores its own <head> content (title, description, canonical, Open Graph, Twitter,
  * page stylesheet, robots, JSON-LD) in $GLOBALS['svls_page_head']; header.php prints it through
  * svls_page_head(). Stylesheets and scripts are linked directly, so the output matches the static site build.
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
+
+/**
+ * Contact and beta forms post to /wp-admin/admin-post.php with action=svls_form.
+ * Every submission is emailed to service@svlslabs.com (Reply-To: the sender).
+ * The site script sends Accept: application/json and expects a JSON reply; without JS the browser is redirected back.
+ */
+function svls_handle_form() {
+	if ( ! empty( $_POST['_gotcha'] ) ) { status_header( 400 ); exit; } // honeypot
+	$skip   = array( 'action', '_gotcha', '_wp_http_referer' );
+	$fields = array();
+	foreach ( $_POST as $key => $value ) {
+		if ( in_array( $key, $skip, true ) ) { continue; }
+		$key = sanitize_key( $key );
+		$fields[ $key ] = is_array( $value ) ? implode( ', ', array_map( 'sanitize_text_field', wp_unslash( $value ) ) ) : sanitize_textarea_field( wp_unslash( $value ) );
+	}
+	$email = ( isset( $fields['email'] ) && is_email( $fields['email'] ) ) ? $fields['email'] : '';
+	$form  = isset( $fields['form-name'] ) ? $fields['form-name'] : 'contact';
+	if ( '' === $email || empty( $fields['name'] ) ) {
+		if ( svls_wants_json() ) { wp_send_json( array( 'ok' => false, 'error' => 'name and email are required' ), 400 ); }
+		wp_safe_redirect( add_query_arg( 'sent', '0', wp_get_referer() ? wp_get_referer() : home_url( '/contact/' ) ) ); exit;
+	}
+	$subject = 'svlslabs.com: ' . ( 'beta' === $form ? 'Value Lens beta request' : 'Contact enquiry' ) . ' from ' . $fields['name'];
+	$body    = '';
+	foreach ( $fields as $key => $value ) { $body .= ucfirst( str_replace( array( '-', '_' ), ' ', $key ) ) . ': ' . $value . "
+"; }
+	$body   .= "
+Sent " . gmdate( 'Y-m-d H:i' ) . " UTC from " . home_url( '/' ) . "
+";
+	$headers = array( 'Content-Type: text/plain; charset=UTF-8', 'Reply-To: ' . $fields['name'] . ' <' . $email . '>' );
+	$sent    = wp_mail( 'service@svlslabs.com', $subject, $body, $headers );
+	if ( svls_wants_json() ) { wp_send_json( array( 'ok' => (bool) $sent ), $sent ? 200 : 500 ); }
+	wp_safe_redirect( add_query_arg( 'sent', $sent ? '1' : '0', wp_get_referer() ? wp_get_referer() : home_url( '/contact/' ) ) ); exit;
+}
+function svls_wants_json() { return isset( $_SERVER['HTTP_ACCEPT'] ) && false !== strpos( $_SERVER['HTTP_ACCEPT'], 'application/json' ); }
+add_action( 'admin_post_nopriv_svls_form', 'svls_handle_form' );
+add_action( 'admin_post_svls_form', 'svls_handle_form' );
 
 function svls_page_head() {
 	if ( ! empty( $GLOBALS['svls_page_head'] ) && is_callable( $GLOBALS['svls_page_head'] ) ) {

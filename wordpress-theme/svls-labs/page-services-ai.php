@@ -53,8 +53,8 @@ $GLOBALS['svls_page_head'] = function () { ?>
   "provider": {
     "@type": "Organization",
     "name": "SVLS LABS",
-    "legalName": "SVLS Labs LLP",
-      "telephone": "+91 850081119",
+    "legalName": "SVLS LABS LLP",
+      "telephone": "+91 8500811119",
       "address": {"@type": "PostalAddress", "streetAddress": "4th Floor, Aparna Astute, Shaikpet, Door No. 8-1-299/103&104/AA/4F-2, Jubilee Hills", "addressLocality": "Hyderabad", "postalCode": "500008", "addressRegion": "Telangana", "addressCountry": "IN"},
     "url": "https://svlslabs.com/",
     "foundingDate": "2020",
@@ -273,7 +273,7 @@ get_header();
       </div>
       <p class="control__line">Numbers come from deterministic code, never from the model. Every case carries its sources, its calculation and its decisions.</p>
       <div class="links control-links">
-        <a class="arrow-link" href="/contact/?intent=checklist">Get the Governed Agent Control Checklist<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
+        <a class="arrow-link" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/downloads/governed-agent-control-checklist.pdf">Get the Governed Agent Control Checklist<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
         <a class="arrow-link" href="/products/value-lens/">See Value Lens<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
       </div>
     </div>
@@ -354,9 +354,8 @@ get_header();
           <p class="slim-band__body">One page. The three controls (read before write, confirm to act, verify after) and the audit trail a CIO can hand to any AI vendor and ask: which of these do you implement?</p>
         </div>
         <div class="col-4 slim-band__action">
-          <a class="arrow-link" href="/contact/?intent=checklist">Get the checklist<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
-          <p class="small muted"><span class="todo">TODO</span> (client): the PDF. Until it exists, the link opens the contact form with the checklist preselected.</p>
-        </div>
+          <a class="arrow-link" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/downloads/governed-agent-control-checklist.pdf">Get the checklist<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
+                  </div>
       </div>
     </div>
   </section>
@@ -408,7 +407,7 @@ get_header();
       <p class="trust">A 45-minute call with an architect, not a salesperson. Replies within one business day.</p>
       <div class="cta-links">
         <a class="arrow-link" href="/approach/">How we run engagements<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
-        <a class="arrow-link" href="/contact/?intent=overview">Download the capability overview<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
+        <a class="arrow-link" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/downloads/svls-labs-capability-overview.pdf">Download the capability overview<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
       </div>
     </div>
   </section>

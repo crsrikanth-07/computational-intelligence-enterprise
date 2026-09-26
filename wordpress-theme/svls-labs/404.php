@@ -51,8 +51,8 @@ $GLOBALS['svls_page_head'] = function () { ?>
   "description": "The page you asked for does not exist. Find SAP & ERP, Cloud, Agentic & Applied AI, Value Lens and Contact from here.",
   "inLanguage": "en",
   "isPartOf": { "@type": "WebSite", "name": "SVLS LABS", "url": "https://svlslabs.com/" },
-  "publisher": { "@type": "Organization", "name": "SVLS LABS", "legalName": "SVLS Labs LLP",
-      "telephone": "+91 850081119",
+  "publisher": { "@type": "Organization", "name": "SVLS LABS", "legalName": "SVLS LABS LLP",
+      "telephone": "+91 8500811119",
       "address": {"@type": "PostalAddress", "streetAddress": "4th Floor, Aparna Astute, Shaikpet, Door No. 8-1-299/103&104/AA/4F-2, Jubilee Hills", "addressLocality": "Hyderabad", "postalCode": "500008", "addressRegion": "Telangana", "addressCountry": "IN"}, "url": "https://svlslabs.com/", "foundingDate": "2020", "sameAs": ["https://www.linkedin.com/company/svlslabs/"] }
 }
 </script>

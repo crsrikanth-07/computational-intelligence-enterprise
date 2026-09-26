@@ -55,8 +55,8 @@ $GLOBALS['svls_page_head'] = function () { ?>
   "author": {
     "@type": "Organization",
     "name": "SVLS LABS",
-    "legalName": "SVLS Labs LLP",
-      "telephone": "+91 850081119",
+    "legalName": "SVLS LABS LLP",
+      "telephone": "+91 8500811119",
       "address": {"@type": "PostalAddress", "streetAddress": "4th Floor, Aparna Astute, Shaikpet, Door No. 8-1-299/103&104/AA/4F-2, Jubilee Hills", "addressLocality": "Hyderabad", "postalCode": "500008", "addressRegion": "Telangana", "addressCountry": "IN"},
     "url": "https://svlslabs.com/"
   }
@@ -67,7 +67,7 @@ $GLOBALS['svls_page_head'] = function () { ?>
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "SVLS LABS",
-  "legalName": "SVLS Labs LLP",
+  "legalName": "SVLS LABS LLP",
   "url": "https://svlslabs.com/",
   "logo": "<?php echo esc_url( get_template_directory_uri() ); ?>/assets/logo/stacked.svg",
   "foundingDate": "2020",
@@ -808,7 +808,8 @@ get_header();
           <p class="trust">A 45-minute call with an architect, not a salesperson. Replies within one business day. <a href="/approach/">How we run engagements</a></p>
         </div>
         <div class="col-7" data-reveal>
-          <form class="form" method="POST" action="https://formspree.io/f/TODO_FORM_ID" data-netlify="true" name="beta" aria-labelledby="beta-title" data-enhance data-success="Thank you. The beta brief is on its way within one business day, and we will propose a walkthrough slot." data-subject="Value Lens beta access request">
+          <form class="form" method="POST" action="/wp-admin/admin-post.php" name="beta" aria-labelledby="beta-title" data-enhance data-success="Thank you. The beta brief is on its way within one business day, and we will propose a walkthrough slot." data-subject="Value Lens beta access request">
+            <input type="hidden" name="action" value="svls_form">
             <input type="hidden" name="intent" value="beta">
             <input type="hidden" name="form-name" value="beta">
             <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" hidden>
@@ -876,7 +877,7 @@ get_header();
         </details>
         <details class="faq">
           <summary>What does the beta cost?<svg class="faq__glyph" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M0 8h16" stroke="currentColor" stroke-width="1.5"/><path class="v" d="M8 0v16" stroke="currentColor" stroke-width="1.5"/></svg></summary>
-          <div class="faq__body"><p>Beta participation terms are agreed per organisation. <span class="todo">TODO</span> (client): pricing statement.</p></div>
+          <div class="faq__body"><p>Beta participation terms are agreed per organisation. Participation is priced per organisation; no prices are published on this site.</p></div>
         </details>
         <details class="faq">
           <summary>Why integer cents?<svg class="faq__glyph" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M0 8h16" stroke="currentColor" stroke-width="1.5"/><path class="v" d="M8 0v16" stroke="currentColor" stroke-width="1.5"/></svg></summary>

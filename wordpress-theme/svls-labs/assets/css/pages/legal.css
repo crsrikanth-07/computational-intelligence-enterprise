@@ -19,7 +19,7 @@
 .legal__section h2 { margin-top: var(--s-2); max-width: none; }
 .legal__section p { margin-top: var(--s-3); max-width: var(--measure); }
 .legal__section .status { margin-top: var(--s-2); }
-.legal__todo { font-size: var(--fs-small); line-height: 1.6; color: var(--text-muted); }
+.legal__note { font-size: var(--fs-small); line-height: 1.6; color: var(--text-muted); }
 .legal__sections { border-bottom: 1px solid var(--rule); padding-bottom: var(--s-6); }
 
 /* Aside: the review notice (caution note, --warn rule) and related links */

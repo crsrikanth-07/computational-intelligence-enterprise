@@ -39,7 +39,7 @@ async function api(p, opts = {}) {
 
 // Page plan: slug -> {title, template, parent?, content}. Templates match wordpress-theme/svls-labs/*.php.
 const PLAN = [
-  { slug: 'home', title: 'SVLS LABS', template: '', front: true, content: '<!-- Rendered by front-page.php of the SVLS Labs theme -->' },
+  { slug: 'home', title: 'SVLS LABS', template: '', front: true, content: '<!-- Rendered by front-page.php of the SVLS LABS theme -->' },
   { slug: 'services', title: 'Services', template: '', content: '<p><a href="/services/sap/">SAP &amp; ERP</a> · <a href="/services/cloud/">Cloud</a> · <a href="/services/ai/">Agentic &amp; Applied AI</a></p>' },
   { slug: 'sap', parent: 'services', title: 'SAP & ERP', template: 'page-services-sap.php' },
   { slug: 'cloud', parent: 'services', title: 'Cloud', template: 'page-services-cloud.php' },
@@ -160,7 +160,7 @@ async function upsertPages(themeActive) {
   for (const p of PLAN) {
     const parentId = p.parent ? ids[p.parent] : 0;
     const existing = await findPage(p.slug, parentId);
-    const body = { title: p.title, slug: p.slug, status: 'publish', parent: parentId || 0, content: p.content || `<!-- Rendered by ${p.template} of the SVLS Labs theme -->` };
+    const body = { title: p.title, slug: p.slug, status: 'publish', parent: parentId || 0, content: p.content || `<!-- Rendered by ${p.template} of the SVLS LABS theme -->` };
     // With the theme active, always send the template: '' clears a stale page-builder template left by the old theme.
     if (themeActive) body.template = p.template;
     if (DRY) { log(`[dry-run] ${existing ? `update page #${existing.id} (${existing.status}, template=${existing.template || '(default)'})` : 'create page'} /${p.parent ? p.parent + '/' : ''}${p.slug}/ template=${p.template || '(default)'}`); ids[p.slug] = existing ? existing.id : -1; continue; }
