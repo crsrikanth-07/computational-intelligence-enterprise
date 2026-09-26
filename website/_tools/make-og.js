@@ -9,7 +9,7 @@
    so and still writes the PNG with the fallback family.
 
    Examples:
-     node _tools/make-og.js home "SAP, cloud and governed AI. Engineered to spec."
+     node _tools/make-og.js home "SAP, Cloud and Governed AI. Engineered to Spec."
      node _tools/make-og.js value-lens "Value Lens: Margin Leak Finder for SAP O2C" --dark */
 const fs = require('fs');
 const path = require('path');
@@ -64,8 +64,8 @@ const html = `<!doctype html><html><head><meta charset="utf-8">
     <circle cx="32" cy="32" r="13.5" fill="none" stroke="${C.text}" stroke-width="5"/>
     <path d="M60 40v20H40v-4h16V40z" fill="${C.accent}"/>
   </g>
-  <text x="47" y="272" fill="${C.text}" font-family="'Inter Tight', Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="49.5" font-weight="700" letter-spacing="-0.495">SVLS</text>
-  <text x="177" y="272" fill="${C.text}" font-family="'Inter Tight', Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="34.65" font-weight="500" letter-spacing="4.158">LABS</text>
+  <text x="48" y="272" fill="${C.text}" font-family="'Inter Tight', Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="49.5" font-weight="700" letter-spacing="-0.495">SVLS</text>
+  <text x="175.5" y="272" fill="${C.text}" font-family="'Inter Tight', Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="34.65" font-weight="500" letter-spacing="4.158">LABS</text>
 </svg>
 <div class="rule"></div>
 <div class="copy">

@@ -85,14 +85,19 @@
     var panel = qs('.dropdown', item);
     if (!trigger || !panel) return;
     var leaveTimer = null;
+    var openedByHover = false;
 
     function isOpen() { return item.classList.contains('is-open'); }
     function open() { item.classList.add('is-open'); trigger.setAttribute('aria-expanded', 'true'); }
-    function close() { item.classList.remove('is-open'); trigger.setAttribute('aria-expanded', 'false'); }
+    function close() { item.classList.remove('is-open'); trigger.setAttribute('aria-expanded', 'false'); openedByHover = false; }
     function links() { return qsa('a', panel); }
 
-    trigger.addEventListener('click', function () { if (isOpen()) close(); else open(); });
-    item.addEventListener('mouseenter', function () { clearTimeout(leaveTimer); open(); });
+    // A click on a panel that hover already opened keeps it open (and pins it until mouseleave).
+    trigger.addEventListener('click', function () {
+      if (isOpen() && !openedByHover) close();
+      else { open(); openedByHover = false; }
+    });
+    item.addEventListener('mouseenter', function () { clearTimeout(leaveTimer); if (!isOpen()) { open(); openedByHover = true; } });
     item.addEventListener('mouseleave', function () { leaveTimer = setTimeout(close, 120); });
     item.addEventListener('focusout', function (e) {
       if (!e.relatedTarget || !item.contains(e.relatedTarget)) close();
@@ -142,6 +147,7 @@
     btn.type = 'button';
     btn.className = link.className;
     btn.innerHTML = link.innerHTML;
+    btn.setAttribute('data-menu-toggle', '');
     btn.setAttribute('aria-expanded', 'false');
     btn.setAttribute('aria-controls', 'mobile-sheet');
     link.parentNode.replaceChild(btn, link);
@@ -216,9 +222,9 @@
       if (hp === '/') return;
       if (path === hp || path.indexOf(hp) === 0) a.setAttribute('aria-current', 'page');
     });
-    if (path.indexOf('/services/') === 0) {
-      qsa('.site-nav__trigger').forEach(function (t) { t.classList.add('is-current'); });
-    }
+    qsa('.has-dropdown').forEach(function (item) {
+      if (qs('.dropdown a[aria-current="page"]', item)) qs('.site-nav__trigger', item).classList.add('is-current');
+    });
   })();
 
   /* ---------------------------------------------------------------------------
@@ -333,7 +339,7 @@
   function showFailed(form, data) {
     var box = qs('.form__failed', form);
     if (!box) { box = doc.createElement('div'); box.className = 'form__failed'; box.setAttribute('role', 'alert'); form.appendChild(box); }
-    box.innerHTML = 'Sending failed. Email us instead: <a href="' + mailtoFor(form, data) + '">' + FALLBACK_EMAIL + '</a> <span class="todo">TODO</span> client';
+    box.innerHTML = 'Sending failed. Email us instead: <a href="' + mailtoFor(form, data) + '">' + FALLBACK_EMAIL + '</a> (<span class="todo">TODO</span> client)';
     box.hidden = false;
     var submit = qs('[type="submit"]', form);
     if (submit) submit.disabled = false;
