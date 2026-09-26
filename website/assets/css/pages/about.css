@@ -33,7 +33,7 @@ h2.eyebrow { max-width: none; text-wrap: wrap; }
 /* 04 The team: paragraph and role chips left, two mono lists right */
 .team { row-gap: var(--s-6); }
 .team__body { max-width: var(--measure); }
-.team__roles { margin-top: var(--s-5); }
+.team .team__roles { margin-top: var(--s-5); }
 .team__lists.hgrid { display: grid; }
 @media (min-width: 1024px) { .team { align-items: start; } }
 
@@ -42,7 +42,6 @@ h2.eyebrow { max-width: none; text-wrap: wrap; }
 .research__copy h3 { margin-bottom: var(--s-3); }
 .research__copy p { max-width: var(--measure); }
 .research__copy cite { font-style: normal; font-weight: 500; }
-.research__topics { margin-top: var(--s-5); }
 @media (min-width: 1024px) { .research { align-items: start; } }
 
 /* 06 Where we are: two cells with a visible TODO each, then the coverage note and a link */

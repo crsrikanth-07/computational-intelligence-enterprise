@@ -963,3 +963,7 @@ textarea.input { min-height: 96px; resize: vertical; }
   .reveal { opacity: 1; transform: none; }
   .sheet, .sheet-backdrop { transform: none; }
 }
+
+/* Nav beta label (visible "Private beta" next to Value Lens in the Products menu and sheet) */
+.nav-beta { display: inline-block; vertical-align: middle; margin-left: 6px; padding: 1px 6px; border-radius: var(--r-1); background: var(--warn-fill); color: #101418; font-family: var(--font-mono); font-size: 10px; letter-spacing: .08em; text-transform: uppercase; line-height: 16px; white-space: nowrap; }
+.band-dark .nav-beta, [data-theme="dark"] .nav-beta { background: var(--d-warn); color: var(--d-bg); }
