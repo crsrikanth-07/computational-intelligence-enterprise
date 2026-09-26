@@ -183,6 +183,23 @@ add_action( 'wp_enqueue_scripts', function () {
 // No 32px admin-bar bump on the sticky header when an editor is logged in.
 add_action( 'get_header', function () { remove_action( 'wp_head', '_admin_bar_bump_cb' ); } );
 
+/** 301 redirects from the URLs of the previous (Divi) site to their replacements, whatever the old pages' status. */
+add_action( 'template_redirect', function () {
+	$map = array(
+		'604-2'                     => '/',
+		'about-us-2'                => '/about/',
+		'contact-us'                => '/contact/',
+		'privacy-policy-2'          => '/privacy/',
+		'terms-and-conditions'      => '/terms/',
+		'our-products-and-services' => '/services/',
+	);
+	$path = isset( $_SERVER['REQUEST_URI'] ) ? trim( (string) wp_parse_url( $_SERVER['REQUEST_URI'], PHP_URL_PATH ), '/' ) : '';
+	if ( '' !== $path && isset( $map[ $path ] ) ) {
+		wp_safe_redirect( home_url( $map[ $path ] ), 301 );
+		exit;
+	}
+}, 1 );
+
 /**
  * Choose the template from the page's path (services/sap -> page-services-sap.php) unless the editor picked one.
  * Top-level pages (about, approach, contact, privacy, terms) already match page-{slug}.php through the core hierarchy.
