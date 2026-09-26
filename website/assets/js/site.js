@@ -177,6 +177,8 @@
       if (label) label.textContent = 'Close';
       doc.body.classList.add('sheet-open');
       if (!keyBound) { doc.addEventListener('keydown', onKey); keyBound = true; }
+      var first = focusables()[0];
+      if (first) first.focus();
     }
     function close() {
       sheet.classList.remove('is-open');

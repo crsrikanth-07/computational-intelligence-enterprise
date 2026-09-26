@@ -53,9 +53,9 @@ const html = `<!doctype html><html><head><meta charset="utf-8">
   .lockup{position:absolute;left:88px;top:195px;width:240px;height:240px}
   .rule{position:absolute;left:392px;top:195px;width:1px;height:240px;background:${C.rule}}
   .copy{position:absolute;left:456px;top:0;width:656px;height:630px;display:flex;flex-direction:column;justify-content:center}
-  .eyebrow{font:500 14px/20px 'JetBrains Mono',Menlo,Consolas,monospace;letter-spacing:.08em;text-transform:uppercase;color:${C.muted};margin-bottom:24px}
+  .eyebrow{font:500 18px/24px 'JetBrains Mono',Menlo,Consolas,monospace;letter-spacing:.08em;text-transform:uppercase;color:${C.muted};margin-bottom:24px}
   h1{margin:0;font:700 ${size}px/1.2 'Inter Tight',Inter,'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:-0.02em;text-wrap:balance}
-  .site{font:400 14px/20px 'JetBrains Mono',Menlo,Consolas,monospace;letter-spacing:.08em;text-transform:uppercase;color:${C.muted};margin-top:32px}
+  .site{font:400 16px/22px 'JetBrains Mono',Menlo,Consolas,monospace;letter-spacing:.08em;text-transform:uppercase;color:${C.muted};margin-top:32px}
   .site i{display:inline-block;width:8px;height:8px;border-radius:50%;background:${C.accent};margin-right:10px;vertical-align:1px}
 </style></head><body><div class="og">
 <svg class="lockup" viewBox="0 0 320 320" aria-hidden="true">
