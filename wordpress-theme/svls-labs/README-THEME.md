@@ -24,7 +24,7 @@ The theme picks the template from the page's path automatically (`functions.php`
 | `/services/sap/` | `sap` | `services` | `page-services-sap.php` | SAP & ERP Services: S/4HANA, BTP, CPI |
 | `/terms/` | `terms` | none | `page-terms.php` | Terms of Use |
 
-The nested pages need their parent pages to exist first: `services` (title "Services") and `products` (title "Products"). Those two parents render with `page.php` (a plain hero plus the page content); give them a one-line list of links to their children or leave them out of any menu.
+The nested pages need their parent pages to exist first: `services` (title "Services") and `products` (title "Products"). Those two parents render with `page.php` as hub pages (hero plus one card per child, from `svls_hub()` in functions.php); their WordPress content is not shown. Any other leftover page renders with its Divi shortcodes stripped.
 
 Front page: create a page (any title, for example "Home"), then Settings -> Reading -> "Your homepage displays: A static page" -> Homepage: that page. `front-page.php` renders it. The 404 page is `404.php` and needs no WordPress page.
 

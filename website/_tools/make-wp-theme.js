@@ -28,7 +28,7 @@ const cp = (src, dst) => { fs.mkdirSync(path.dirname(dst), { recursive: true });
 // 1. Static files. robots.txt and sitemap.xml are NOT copied: WordPress serves its own virtual robots.txt and
 //    /wp-sitemap.xml; a copy inside a theme folder would never be served at the site root anyway.
 for (const f of walk(path.join(root, 'assets'))) cp(f, path.join(out, 'assets', path.relative(path.join(root, 'assets'), f)));
-for (const extra of ['favicon.svg', 'favicon-32.png', 'favicon-16.png', 'apple-touch-icon.png']) if (fs.existsSync(path.join(root, extra))) cp(path.join(root, extra), path.join(out, extra));
+for (const extra of ['favicon.svg', 'favicon-32.png', 'favicon-16.png', 'favicon.ico', 'apple-touch-icon.png']) if (fs.existsSync(path.join(root, extra))) cp(path.join(root, extra), path.join(out, extra));
 if (fs.existsSync(path.join(root, 'site.webmanifest'))) {
   // Icon paths become relative to the manifest (which lives at the theme root); start_url stays the site root.
   const manifest = JSON.parse(fs.readFileSync(path.join(root, 'site.webmanifest'), 'utf8'));
@@ -111,7 +111,46 @@ if (!headerPhp) { console.error('no page produced a header'); process.exit(1); }
 fs.writeFileSync(path.join(out, 'header.php'), headerPhp);
 fs.writeFileSync(path.join(out, 'footer.php'), footerPhp);
 
-const fallback = `<?php get_header(); ?>\n<main id="main">\n  <section class="hero hero--plain" aria-labelledby="hero-title">\n    <div class="hero-art hero-art--lite" aria-hidden="true"></div>\n    <div class="container">\n      <div class="hero__copy">\n        <h1 id="hero-title"><?php echo esc_html( is_singular() ? get_the_title() : wp_get_document_title() ); ?></h1>\n      </div>\n    </div>\n  </section>\n  <section class="section">\n    <div class="container prose">\n      <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); the_content(); endwhile; else : ?>\n        <p>Nothing here yet.</p>\n      <?php endif; ?>\n    </div>\n  </section>\n</main>\n<?php get_footer(); ?>\n`;
+const fallback = `<?php get_header(); ?>
+<main id="main">
+  <section class="hero hero--plain" aria-labelledby="hero-title">
+    <div class="hero-art hero-art--lite" aria-hidden="true"></div>
+    <div class="container">
+      <div class="hero__copy">
+        <h1 id="hero-title"><?php echo esc_html( is_singular() ? get_the_title() : wp_get_document_title() ); ?></h1>
+        <?php $svls_hub = is_page() ? svls_hub( get_post_field( 'post_name' ) ) : null; if ( $svls_hub ) : ?>
+        <p class="lead"><?php echo esc_html( $svls_hub['lead'] ); ?></p>
+        <?php endif; ?>
+      </div>
+    </div>
+  </section>
+  <?php if ( $svls_hub ) : ?>
+  <section class="section" aria-label="<?php echo esc_attr( $svls_hub['label'] ); ?>">
+    <div class="container">
+      <div class="hgrid hgrid--3 hgrid--bottom">
+        <?php foreach ( $svls_hub['items'] as $i => $item ) : ?>
+        <article class="practice">
+          <span class="numeral practice__num"><?php echo esc_html( sprintf( '%02d', $i + 1 ) ); ?></span>
+          <h3><?php echo esc_html( $item['title'] ); ?></h3>
+          <p class="practice__body"><?php echo esc_html( $item['body'] ); ?></p>
+          <a class="arrow-link" href="<?php echo esc_url( home_url( $item['href'] ) ); ?>"><?php echo esc_html( $item['cta'] ); ?><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
+        </article>
+        <?php endforeach; ?>
+      </div>
+    </div>
+  </section>
+  <?php else : ?>
+  <section class="section">
+    <div class="container prose">
+      <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); echo svls_clean_content( get_the_content() ); endwhile; else : ?>
+        <p>Nothing here yet.</p>
+      <?php endif; ?>
+    </div>
+  </section>
+  <?php endif; ?>
+</main>
+<?php get_footer(); ?>
+`;
 fs.writeFileSync(path.join(out, 'index.php'), fallback);
 fs.writeFileSync(path.join(out, 'page.php'), fallback);
 
@@ -213,6 +252,41 @@ add_action( 'wp_enqueue_scripts', function () {
 		wp_dequeue_style( $handle );
 	}
 }, 100 );
+// The Customizer "Site Icon" of the previous site must not print after the theme's own icons.
+remove_action( 'wp_head', 'wp_site_icon', 99 );
+// Point crawlers at the core sitemap (the previous site's sitemap plugin output is empty).
+add_filter( 'robots_txt', function ( $output ) { return rtrim( (string) $output ) . "\nSitemap: " . home_url( '/wp-sitemap.xml' ) . "\n"; } );
+
+/** Hub content for the two parent pages (services, products); page.php renders it as practice cards. */
+function svls_hub( $slug ) {
+	$hubs = array(
+		'services' => array(
+			'label' => 'Practices',
+			'lead'  => 'Three practices, one standard: SAP at the core, cloud around it, governed AI on top of it.',
+			'items' => array(
+				array( 'title' => 'SAP & ERP', 'href' => '/services/sap/', 'cta' => 'See the SAP & ERP practice', 'body' => 'S/4HANA (Public and Private Cloud, RISE, on-premise), BTP and Integration Suite delivered Clean Core from day one. A written contract per interface and a read-back check after every run.' ),
+				array( 'title' => 'Cloud', 'href' => '/services/cloud/', 'cta' => 'See the Cloud practice', 'body' => 'SAP-to-GCP/BigQuery and Salesforce integration, cloud-native services around the core, migrations and landing zones that keep the ledger intact.' ),
+				array( 'title' => 'Agentic & Applied AI', 'href' => '/services/ai/', 'cta' => 'See the Agentic & Applied AI practice', 'body' => 'Governed agents on SAP BTP under a control model where every write is read before, confirmed by a person and verified after. Applied AI methods our team has built and published underneath.' ),
+			),
+		),
+		'products' => array(
+			'label' => 'Products',
+			'lead'  => 'Two products built on our own control model. Agents explain; your people decide.',
+			'items' => array(
+				array( 'title' => 'Value Lens (private beta)', 'href' => '/products/value-lens/', 'cta' => 'See Value Lens', 'body' => 'Margin leak finder for order-to-cash on SAP. Every case carries its sources, its calculation and its decisions. Private beta on synthetic data; production SAP connector in development.' ),
+				array( 'title' => 'SAP Intelligence Suite', 'href' => '/products/sap-intelligence-suite/', 'cta' => 'See SAP Intelligence Suite', 'body' => 'The workbench behind our AI-assisted SAP engineering: integration flows, ABAP and RAP generated from plain-English requests, reviewed by an architect before they reach a landscape. Available to customers on request.' ),
+			),
+		),
+	);
+	return isset( $hubs[ $slug ] ) ? $hubs[ $slug ] : null;
+}
+
+/** Content of a leftover page from the previous site: Divi shortcodes removed, then the normal content filters. */
+function svls_clean_content( $content ) {
+	$content = preg_replace( '/\\[\\/?et_pb_[^\\]]*\\]/', '', (string) $content );
+	return apply_filters( 'the_content', trim( $content ) );
+}
+
 // No 32px admin-bar bump on the sticky header when an editor is logged in.
 add_action( 'get_header', function () { remove_action( 'wp_head', '_admin_bar_bump_cb' ); } );
 
@@ -266,7 +340,7 @@ The theme picks the template from the page's path automatically (\`functions.php
 | --- | --- | --- | --- | --- |
 ${pageRows.map(t => { const parts = t.slug.split('/'); return `| \`${t.path}\` | \`${parts[parts.length - 1]}\` | ${parts.length > 1 ? '`' + parts.slice(0, -1).join('/') + '`' : 'none'} | \`${t.file}\` | ${t.template} |`; }).join('\n')}
 
-The nested pages need their parent pages to exist first: \`services\` (title "Services") and \`products\` (title "Products"). Those two parents render with \`page.php\` (a plain hero plus the page content); give them a one-line list of links to their children or leave them out of any menu.
+The nested pages need their parent pages to exist first: \`services\` (title "Services") and \`products\` (title "Products"). Those two parents render with \`page.php\` as hub pages (hero plus one card per child, from \`svls_hub()\` in functions.php); their WordPress content is not shown. Any other leftover page renders with its Divi shortcodes stripped.
 
 Front page: create a page (any title, for example "Home"), then Settings -> Reading -> "Your homepage displays: A static page" -> Homepage: that page. \`front-page.php\` renders it. The 404 page is \`404.php\` and needs no WordPress page.
 

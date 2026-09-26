@@ -109,6 +109,43 @@ add_action( 'wp_enqueue_scripts', function () {
 		wp_dequeue_style( $handle );
 	}
 }, 100 );
+// The Customizer "Site Icon" of the previous site must not print after the theme's own icons.
+remove_action( 'wp_head', 'wp_site_icon', 99 );
+// Point crawlers at the core sitemap (the previous site's sitemap plugin output is empty).
+add_filter( 'robots_txt', function ( $output ) { return rtrim( (string) $output ) . "
+Sitemap: " . home_url( '/wp-sitemap.xml' ) . "
+"; } );
+
+/** Hub content for the two parent pages (services, products); page.php renders it as practice cards. */
+function svls_hub( $slug ) {
+	$hubs = array(
+		'services' => array(
+			'label' => 'Practices',
+			'lead'  => 'Three practices, one standard: SAP at the core, cloud around it, governed AI on top of it.',
+			'items' => array(
+				array( 'title' => 'SAP & ERP', 'href' => '/services/sap/', 'cta' => 'See the SAP & ERP practice', 'body' => 'S/4HANA (Public and Private Cloud, RISE, on-premise), BTP and Integration Suite delivered Clean Core from day one. A written contract per interface and a read-back check after every run.' ),
+				array( 'title' => 'Cloud', 'href' => '/services/cloud/', 'cta' => 'See the Cloud practice', 'body' => 'SAP-to-GCP/BigQuery and Salesforce integration, cloud-native services around the core, migrations and landing zones that keep the ledger intact.' ),
+				array( 'title' => 'Agentic & Applied AI', 'href' => '/services/ai/', 'cta' => 'See the Agentic & Applied AI practice', 'body' => 'Governed agents on SAP BTP under a control model where every write is read before, confirmed by a person and verified after. Applied AI methods our team has built and published underneath.' ),
+			),
+		),
+		'products' => array(
+			'label' => 'Products',
+			'lead'  => 'Two products built on our own control model. Agents explain; your people decide.',
+			'items' => array(
+				array( 'title' => 'Value Lens (private beta)', 'href' => '/products/value-lens/', 'cta' => 'See Value Lens', 'body' => 'Margin leak finder for order-to-cash on SAP. Every case carries its sources, its calculation and its decisions. Private beta on synthetic data; production SAP connector in development.' ),
+				array( 'title' => 'SAP Intelligence Suite', 'href' => '/products/sap-intelligence-suite/', 'cta' => 'See SAP Intelligence Suite', 'body' => 'The workbench behind our AI-assisted SAP engineering: integration flows, ABAP and RAP generated from plain-English requests, reviewed by an architect before they reach a landscape. Available to customers on request.' ),
+			),
+		),
+	);
+	return isset( $hubs[ $slug ] ) ? $hubs[ $slug ] : null;
+}
+
+/** Content of a leftover page from the previous site: Divi shortcodes removed, then the normal content filters. */
+function svls_clean_content( $content ) {
+	$content = preg_replace( '/\[\/?et_pb_[^\]]*\]/', '', (string) $content );
+	return apply_filters( 'the_content', trim( $content ) );
+}
+
 // No 32px admin-bar bump on the sticky header when an editor is logged in.
 add_action( 'get_header', function () { remove_action( 'wp_head', '_admin_bar_bump_cb' ); } );
 

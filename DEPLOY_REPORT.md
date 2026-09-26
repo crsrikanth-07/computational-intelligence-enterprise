@@ -92,12 +92,35 @@ Still carried over from the old site until deactivated: the Click to Chat WhatsA
 | Re-verification after the changes | all 11 pages 200, themed, no PHP errors, 1/1/1 head tags, menu label intact; random URL 404 themed; theme CSS 200; the six old URLs 404 (themed); refund page 200. |
 | "Claude deploy" Application Password | **revoked** by the session itself (`DELETE /wp/v2/users/me/application-passwords/<uuid>`); a request with it now gets 401. The script cannot reach the site until a new one is created. |
 
+## Post-upload check (26 September 2026, 20:50 UTC)
+
+The client uploaded the theme rebuilt after the TODO batch. Checked from this session over HTTPS:
+
+| Check | Result |
+|---|---|
+| 13 pages + 404 | 200 (404 for the missing path), latest theme, no lowercase "SVLS Labs", no TODO, phone and mailbox present, one meta description per page |
+| Console errors, failed requests, broken links, mobile overflow | none on any page (Playwright, 1440 and 390 px) |
+| Forms | handler answers 400 to the honeypot and to a missing email; one real test submission to the contact form returned {"ok":true} (wp_mail accepted it; the client confirms arrival at service@svlslabs.com) |
+| PDFs | both served as application/pdf from the theme's downloads folder |
+| Redirects | /about-us-2/, /contact-us/ 301 to the new pages; www and http 301 to https://svlslabs.com/ |
+| Sitemap | /wp-sitemap.xml lists the 13 pages plus /services/, /products/ and the old /cancellation-and-refund-policy/; /sitemap.xml (old plugin) is empty; robots.txt had no Sitemap line |
+
+Anomalies found and what was done:
+
+1. **Old site icon** (the previous ChatGPT-generated logo, set under Customizer -> Site Identity) was still printed by WordPress after the theme's own icons. The theme now removes that output (`remove_action( 'wp_head', 'wp_site_icon', 99 )`). The client should also replace the Site Icon in the Customizer so wp-admin and the login page show the new mark.
+2. **/services/ and /products/** (the parent pages) rendered as a bare title with one line of links. `page.php` now renders them as hub pages with one card per practice or product (`svls_hub()` in functions.php).
+3. **/cancellation-and-refund-policy/** is still published from the old site and printed raw Divi shortcodes. The theme now strips Divi shortcodes from any leftover page, but the text itself is generic shop wording ("Thank you for shopping at SVLS LABS"). Client decision: draft it (Pages -> Quick Edit -> Status: Draft) or ask for a refund clause in /terms/ if a payment provider requires one.
+4. **Plugins from the old site still load on every page**: Click to Chat (green WhatsApp button bottom-left, which overlaps the hero copy on phones), Contact Form 7 and Everest Forms (scripts and styles, unused), Jetpack (jQuery and jquery-migrate from wp.com, stats script). Client decision; see the list below.
+5. **/favicon.ico** returns the host's 404 (GoDaddy answers missing static files before WordPress, and Cloudflare cached that 404 for 31 days). Browsers use the theme's icon links, so this is cosmetic. `favicon.ico` is now in the theme root; copying it to the web root through GoDaddy's file manager and purging the Cloudflare cache would close it.
+6. **robots.txt** now carries `Sitemap: https://svlslabs.com/wp-sitemap.xml`.
+
 ## What to do next (client)
 
-1. **Change the WordPress login password** of the deploy account (Users -> Profile). The session cannot do this safely because the new password would have to be handed over in clear text. The Application Password is already revoked.
-2. **Upload the latest theme zip** (`wordpress-theme/svls-labs.zip`, rebuilt after every page change with `node website/_tools/make-wp-theme.js website wordpress-theme/svls-labs svls-labs` then `cd wordpress-theme && rm -f svls-labs.zip && zip -qr svls-labs.zip svls-labs`) with "Replace current with uploaded". That upload carries the forms handler (posts email service@svlslabs.com), the 301 redirects, the phone, the legal text and the PDFs. Re-check `/about-us-2/` afterwards: it should redirect to `/about/`. Then submit each form once and check the mailbox.
-3. **Contact details (blocks launch)**: the theme on this branch has moved past what is live. Commits pushed in parallel the same evening set the mailbox to `service@svlslabs.com` site-wide, added the office phone number to the footer, contact page and structured data, and added a reveal-on-scroll fallback; together with the redirects above they all reach the live site with the next theme upload. Confirm the `service@svlslabs.com` mailbox exists and the registered address on `/contact/`, `/about/` and the footer (`DEPLOY.md` D.2). The live site still shows the previous mailbox until that upload.
-4. **Legal pages**: complete `/privacy/` and `/terms/` with counsel (`DEPLOY.md` D.3), and decide whether `/cancellation-and-refund-policy/` should be rewritten in the new voice or linked from the footer.
-5. **Rollback, if ever needed**: Appearance -> Themes -> activate Divi; Settings -> Reading -> Homepage: "Home-Divi" (page #604, publish it first from Pages -> Drafts); Plugins -> activate simple-divi-shortcode and page-builder-add. Nothing was deleted.
-6. **Later**: deactivate Click to Chat if the WhatsApp button is not wanted, and the three form plugins once a test submission has reached service@svlslabs.com; delete the inactive plugins and the unused themes after the rollback window. Keep Divi installed until then.
-7. **Cloudflare / login**: the interactive Turnstile challenge on `wp-login.php` is a good protection and was left as is. If a future automated deployment (theme update via the script) is wanted, add a Cloudflare WAF skip rule for the deploy IP for the duration of the run, or upload theme updates by hand as done today.
+1. **Upload the rebuilt theme zip** (`wordpress-theme/svls-labs.zip`) with "Replace current with uploaded". It carries items 1, 2, 3 and 6 above.
+2. **Deactivate the old plugins** (Plugins -> Installed Plugins): Contact Form 7, Everest Forms, WPForms Lite (the theme's own handler delivers the forms), and Click to Chat unless the WhatsApp button is wanted. Jetpack can stay for stats, or go if the wp.com scripts are not wanted. Delete the inactive plugins and unused themes after the rollback window; keep Divi installed until then.
+3. **Draft the old refund page** or ask for a refund clause in /terms/.
+4. **Site Icon**: Appearance -> Customize -> Site Identity -> replace the old image with `website/assets/social/linkedin-logo-light.png` (or the favicon SVG rendered at 512 px).
+5. **Change the WordPress login password** of the deploy account if not already done. The Application Password is already revoked.
+6. **Legal pages**: /privacy/ and /terms/ carry complete default text; have counsel confirm it (`DEPLOY.md` D.3).
+7. **Rollback, if ever needed**: Appearance -> Themes -> activate Divi; Settings -> Reading -> Homepage: "Home-Divi" (page #604, publish it first from Pages -> Drafts); Plugins -> activate simple-divi-shortcode and page-builder-add. Nothing was deleted.
+8. **Cloudflare / login**: the interactive Turnstile challenge on `wp-login.php` is a good protection and was left as is. If a future automated deployment is wanted, add a Cloudflare WAF skip rule for the deploy IP for the duration of the run, or upload theme updates by hand as done today.
