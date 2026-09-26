@@ -52,6 +52,7 @@ $GLOBALS['svls_page_head'] = function () { ?>
   "inLanguage": "en",
   "isPartOf": { "@type": "WebSite", "name": "SVLS LABS", "url": "https://svlslabs.com/" },
   "publisher": { "@type": "Organization", "name": "SVLS LABS", "legalName": "SVLS Labs LLP",
+      "telephone": "+91 850081119",
       "address": {"@type": "PostalAddress", "streetAddress": "4th Floor, Aparna Astute, Shaikpet, Door No. 8-1-299/103&104/AA/4F-2, Jubilee Hills", "addressLocality": "Hyderabad", "postalCode": "500008", "addressRegion": "Telangana", "addressCountry": "IN"}, "url": "https://svlslabs.com/", "foundingDate": "2020", "sameAs": ["https://www.linkedin.com/company/14559452/"] }
 }
 </script>
@@ -155,8 +156,8 @@ get_header();
           <section class="legal__section" aria-labelledby="t-contact">
             <span class="numeral">05</span>
             <h2 class="h3" id="t-contact">Contact</h2>
-            <p>Questions about these terms: <a href="mailto:hello@svlslabs.com">hello@svlslabs.com</a> (placeholder), or the <a href="/contact/">contact form</a>.</p>
-            <p class="legal__todo"><span class="todo">TODO</span> (client): confirm the mailbox and add the postal address.</p>
+            <p>Questions about these terms: <a href="mailto:service@svlslabs.com">service@svlslabs.com</a>, or the <a href="/contact/">contact form</a>.</p>
+            
           </section>
         </div>
         <aside class="col-4 col-start-9 legal-aside" aria-label="About this page">
