@@ -265,7 +265,7 @@
      Forms: query-string prefill, inline validation naming the field, fetch POST
      with Accept: application/json, success message swap, mailto fallback.
      --------------------------------------------------------------------------- */
-  var FALLBACK_EMAIL = 'hello@svlslabs.com';
+  var FALLBACK_EMAIL = 'service@svlslabs.com';
 
   function fieldName(ctrl, form) {
     var wrap = ctrl.closest('.field, .fieldset');

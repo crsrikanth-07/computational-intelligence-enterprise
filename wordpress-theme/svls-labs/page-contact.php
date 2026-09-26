@@ -132,7 +132,7 @@ get_header();
       <div class="section-mark"><span class="numeral">02</span><h2 class="eyebrow" id="form-title">Write to Us</h2></div>
       <div class="grid contact__grid">
         <div class="col-7 contact__form" data-reveal>
-          <form class="form" method="POST" action="https://formspree.io/f/TODO_FORM_ID" data-netlify="true" name="contact" aria-labelledby="hero-title" data-enhance data-success="Thank you. We reply within one business day. If it is urgent, email hello@svlslabs.com (TODO client)." data-subject="Contact enquiry">
+          <form class="form" method="POST" action="https://formspree.io/f/TODO_FORM_ID" data-netlify="true" name="contact" aria-labelledby="hero-title" data-enhance data-success="Thank you. We reply within one business day. If it is urgent, email service@svlslabs.com." data-subject="Contact enquiry">
             <input type="hidden" name="form-name" value="contact">
             <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" hidden>
             <div class="form__row">
@@ -212,7 +212,7 @@ get_header();
               </div>
               <div class="offices__row">
                 <dt class="mono-title">Email</dt>
-                <dd><a class="link" href="mailto:hello@svlslabs.com">hello@svlslabs.com</a>. <span class="todo">TODO</span> (client): confirm mailbox.</dd>
+                <dd><a class="link" href="mailto:service@svlslabs.com">service@svlslabs.com</a></dd>
               </div>
               <div class="offices__row">
                 <dt class="mono-title">LinkedIn</dt>

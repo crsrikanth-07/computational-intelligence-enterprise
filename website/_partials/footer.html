@@ -48,7 +48,7 @@
     </div>
     <div class="footer-bottom">
       <p>&copy; <span data-year>2026</span> SVLS Labs LLP. Established 2020.</p>
-      <p>4th Floor, Aparna Astute, Shaikpet, Door No. 8-1-299/103&amp;104/AA/4F-2, Jubilee Hills, Hyderabad 500008, Telangana, India &middot; <a href="mailto:hello@svlslabs.com">hello@svlslabs.com</a> (placeholder) &middot; <span class="nowrap"><span class="todo">TODO</span> phone</span></p>
+      <p>4th Floor, Aparna Astute, Shaikpet, Door No. 8-1-299/103&amp;104/AA/4F-2, Jubilee Hills, Hyderabad 500008, Telangana, India &middot; <a href="mailto:service@svlslabs.com">service@svlslabs.com</a> &middot; <span class="nowrap"><span class="todo">TODO</span> phone</span></p>
     </div>
     <p class="footer__status">Value Lens: private beta on synthetic SAP-like data. Production SAP connector in development.</p>
   </div>

@@ -132,7 +132,7 @@ get_header();
             <h2 class="h3" id="p-who">Who We Are</h2>
             <p>svlslabs.com is published by SVLS Labs LLP. Established 2020.</p>
             <p>Registered office: 4th Floor, Aparna Astute, Shaikpet, Door No. 8-1-299/103&amp;104/AA/4F-2, Jubilee Hills, Hyderabad 500008, Telangana, India.</p>
-            <p class="legal__todo"><span class="todo">TODO</span> (client): the contact point for privacy questions.</p>
+            <p class="legal__todo">Contact point for privacy questions: <a href="mailto:service@svlslabs.com">service@svlslabs.com</a>.</p>
           </section>
           <section class="legal__section" aria-labelledby="p-collect">
             <span class="numeral">02</span>
@@ -155,14 +155,14 @@ get_header();
           <section class="legal__section" aria-labelledby="p-rights">
             <span class="numeral">05</span>
             <h2 class="h3" id="p-rights">Your Rights</h2>
-            <p>Requests about the details we hold about you go to <a href="mailto:hello@svlslabs.com">hello@svlslabs.com</a> (placeholder).</p>
+            <p>Requests about the details we hold about you go to <a href="mailto:service@svlslabs.com">service@svlslabs.com</a>.</p>
             <p class="legal__todo"><span class="todo">TODO</span> (client): the rights that apply to you and how to exercise them.</p>
           </section>
           <section class="legal__section" aria-labelledby="p-contact">
             <span class="numeral">06</span>
             <h2 class="h3" id="p-contact">Contact</h2>
-            <p>Privacy questions: <a href="mailto:hello@svlslabs.com">hello@svlslabs.com</a> (placeholder), or the <a href="/contact/">contact form</a>.</p>
-            <p class="legal__todo"><span class="todo">TODO</span> (client): confirm the mailbox and add the postal address.</p>
+            <p>Privacy questions: <a href="mailto:service@svlslabs.com">service@svlslabs.com</a>, or the <a href="/contact/">contact form</a>.</p>
+            
           </section>
         </div>
         <aside class="col-4 col-start-9 legal-aside" aria-label="About this page">
