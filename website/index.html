@@ -14,13 +14,13 @@
 <meta property="og:image" content="https://svlslabs.com/assets/og/og-home.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="SVLS LABS lockup and the page title on a hairline grid.">
+<meta property="og:image:alt" content="SVLS LABS lockup and the page title on charcoal.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="SVLS LABS | SAP, Cloud and Governed AI Engineering">
 <meta name="twitter:description" content="SVLS LABS designs, builds and verifies S/4HANA, BTP and Integration Suite landscapes, connects them to the cloud and adds governed agentic AI. Est. 2020.">
 <meta name="twitter:image" content="https://svlslabs.com/assets/og/og-home.png">
-<meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0B0E13" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#0E1116" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0E1116" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="icon" href="/favicon-16.png" sizes="16x16" type="image/png">
@@ -32,9 +32,12 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="https://fonts.gstatic.com/s/intertight/v9/NGSwv5HMAFg6IuGlBNMjxLsH8ag.woff2">
 <link rel="preload" as="font" type="font/woff2" crossorigin href="https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@800&display=swap">
 <link rel="stylesheet" href="/assets/css/tokens.css">
 <link rel="stylesheet" href="/assets/css/site.css">
+<link rel="stylesheet" href="/assets/css/theme.css">
 <script src="/assets/js/site.js" defer></script>
+<script src="/assets/js/theme.js" defer></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -74,7 +77,7 @@
           <ul class="dropdown" id="services-menu">
             <li><a href="/services/sap/"><span class="dropdown__title">SAP &amp; ERP</span><span class="dropdown__desc">S/4HANA, RISE, BTP, Integration Suite, Clean Core</span></a></li>
             <li><a href="/services/cloud/"><span class="dropdown__title">Cloud</span><span class="dropdown__desc">SAP-to-cloud integration, migrations, cloud-native engineering</span></a></li>
-            <li><a href="/services/ai/"><span class="dropdown__title">Agentic AI</span><span class="dropdown__desc">Governed agents on SAP BTP, AI-assisted SAP engineering</span></a></li>
+            <li><a href="/services/ai/"><span class="dropdown__title">Agentic AI</span><span class="dropdown__desc">Governed agents on SAP BTP, applied AI methods, AI-assisted engineering</span></a></li>
           </ul>
         </li>
         <li class="site-nav__item has-dropdown">
@@ -136,7 +139,24 @@
 <main id="main">
 
   <!-- 01 Hero -->
-  <section class="hero has-grid" aria-labelledby="hero-title">
+  <section class="hero hero--home has-grid" aria-labelledby="hero-title">
+    <div class="hero-art" aria-hidden="true">
+      <svg class="hero-art__mark" viewBox="0 0 64 64" focusable="false">
+        <path d="M4 24V4h20v4H8v16z" fill="currentColor"/>
+        <circle cx="32" cy="32" r="13.5" fill="none" stroke="currentColor" stroke-width="5"/>
+        <path d="M60 40v20H40v-4h16V40z" fill="var(--svls-accent, #E4432B)"/>
+      </svg>
+      <svg class="hero-art__trace" viewBox="0 0 1440 820" preserveAspectRatio="xMidYMid slice" focusable="false">
+        <path class="hero-art__line hero-art__line--faint" d="M620 640H860l40-60h180l40 40h400"/>
+        <path class="hero-art__line" d="M-60 300H150l50-70h160l40 40h160l60-120h170l40 50h170l50-90h180l40 50h300"/>
+        <path class="hero-art__pulse" d="M-60 300H150l50-70h160l40 40h160l60-120h170l40 50h170l50-90h180l40 50h300"/>
+        <circle class="hero-art__node" cx="200" cy="230" r="2.5"/>
+        <circle class="hero-art__node" cx="560" cy="270" r="2.5"/>
+        <circle class="hero-art__node" cx="790" cy="150" r="2.5"/>
+        <circle class="hero-art__node" cx="1230" cy="110" r="2.5"/>
+        <circle class="hero-art__node hero-art__node--hot" cx="1050" cy="110" r="3.5"/>
+      </svg>
+    </div>
     <div class="container">
       <div class="section-mark"><span class="numeral">01</span><p class="eyebrow">SAP · Cloud · Governed agentic AI</p></div>
       <div class="grid hero__grid">
@@ -284,9 +304,10 @@
           <svg class="practice__glyph" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M22 14v8h-8v-2h6v-6z" fill="currentColor"/></svg>
           <span class="numeral practice__num">03</span>
           <h3>Agentic AI</h3>
-          <p class="practice__body">Governed agents on SAP BTP: MCP tool catalogs, Joule/A2A, SAP AI Core, LangGraph and RAG, with read-before-write controls and a human decision on every write.</p>
+          <p class="practice__body">Governed agents on SAP BTP: MCP tool catalogs, Joule/A2A, SAP AI Core, LangGraph and RAG, with read-before-write controls and a human decision on every write. Underneath the agents: applied AI methods our team has built and published, from retrieval-augmented generation to metaheuristic optimisation and probabilistic models.</p>
           <p class="practice__typical"><span class="eyebrow">Typical engagement</span>Governed agent pilot on BTP: a read-only tool catalog against your landscape first, then confirm-to-act operations under the control model, with an evidence pack for InfoSec.</p>
           <a class="arrow-link" href="/services/ai/">See the Agentic AI practice<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
+          <a class="arrow-link" href="/services/ai/#methods">The methods behind the agents<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
         </article>
       </div>
     </div>
@@ -750,6 +771,7 @@
             <li><a href="/services/sap/">SAP &amp; ERP</a></li>
             <li><a href="/services/cloud/">Cloud</a></li>
             <li><a href="/services/ai/">Agentic AI</a></li>
+            <li><a href="/services/ai/#methods">Applied AI research</a></li>
             <li><a href="/approach/">Approach</a></li>
           </ul>
         </div>

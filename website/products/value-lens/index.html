@@ -14,13 +14,13 @@
 <meta property="og:image" content="https://svlslabs.com/assets/og/og-value-lens.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="SVLS LABS lockup and the page title on a hairline grid.">
+<meta property="og:image:alt" content="SVLS LABS lockup and the page title on charcoal.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Value Lens: Margin Leak Finder for SAP O2C | SVLS LABS">
 <meta name="twitter:description" content="Value Lens finds order-to-cash margin leakage with read-only tools, deterministic margin and evidence-backed cases for finance review. Private beta.">
 <meta name="twitter:image" content="https://svlslabs.com/assets/og/og-value-lens.png">
-<meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0B0E13" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#0E1116" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0E1116" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="icon" href="/favicon-16.png" sizes="16x16" type="image/png">
@@ -32,10 +32,13 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="https://fonts.gstatic.com/s/intertight/v9/NGSwv5HMAFg6IuGlBNMjxLsH8ag.woff2">
 <link rel="preload" as="font" type="font/woff2" crossorigin href="https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@800&display=swap">
 <link rel="stylesheet" href="/assets/css/tokens.css">
 <link rel="stylesheet" href="/assets/css/site.css">
-<script src="/assets/js/site.js" defer></script>
 <link rel="stylesheet" href="/assets/css/pages/value-lens.css">
+<link rel="stylesheet" href="/assets/css/theme.css">
+<script src="/assets/js/site.js" defer></script>
+<script src="/assets/js/theme.js" defer></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -92,7 +95,7 @@
           <ul class="dropdown" id="services-menu">
             <li><a href="/services/sap/"><span class="dropdown__title">SAP &amp; ERP</span><span class="dropdown__desc">S/4HANA, RISE, BTP, Integration Suite, Clean Core</span></a></li>
             <li><a href="/services/cloud/"><span class="dropdown__title">Cloud</span><span class="dropdown__desc">SAP-to-cloud integration, migrations, cloud-native engineering</span></a></li>
-            <li><a href="/services/ai/"><span class="dropdown__title">Agentic AI</span><span class="dropdown__desc">Governed agents on SAP BTP, AI-assisted SAP engineering</span></a></li>
+            <li><a href="/services/ai/"><span class="dropdown__title">Agentic AI</span><span class="dropdown__desc">Governed agents on SAP BTP, applied AI methods, AI-assisted engineering</span></a></li>
           </ul>
         </li>
         <li class="site-nav__item has-dropdown">
@@ -155,6 +158,13 @@
 
   <!-- 7.1 Hero (dark band) -->
   <section class="hero hero--vl band-dark has-grid" aria-labelledby="hero-title">
+    <div class="hero-art hero-art--lite" aria-hidden="true">
+      <svg class="hero-art__mark" viewBox="0 0 64 64" focusable="false">
+        <path d="M4 24V4h20v4H8v16z" fill="currentColor"/>
+        <circle cx="32" cy="32" r="13.5" fill="none" stroke="currentColor" stroke-width="5"/>
+        <path d="M60 40v20H40v-4h16V40z" fill="var(--svls-accent, #E4432B)"/>
+      </svg>
+    </div>
     <div class="container">
       <div class="section-mark"><span class="numeral">01</span><p class="eyebrow">Product · Order-to-cash</p></div>
       <div class="grid hero__grid">
@@ -973,6 +983,7 @@
             <li><a href="/services/sap/">SAP &amp; ERP</a></li>
             <li><a href="/services/cloud/">Cloud</a></li>
             <li><a href="/services/ai/">Agentic AI</a></li>
+            <li><a href="/services/ai/#methods">Applied AI research</a></li>
             <li><a href="/approach/">Approach</a></li>
           </ul>
         </div>
