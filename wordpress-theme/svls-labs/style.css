@@ -1,10 +1,10 @@
 /*
 Theme Name: SVLS Labs
 Theme URI: https://svlslabs.com
-Description: Brand-new SVLS Labs website theme (SAP/ERP, Cloud, Agentic AI, Value Lens). Static-template theme: page layouts live in the PHP templates; styles in /assets/css.
+Description: The svlslabs.com website as a WordPress theme (SAP & ERP, Cloud, Agentic & Applied AI, Value Lens, SAP Intelligence Suite). Page layouts and copy live in the PHP templates; styles in assets/css (tokens.css, site.css, pages/*.css, theme.css); behaviour in assets/js.
 Version: 1.0.0
 Author: SVLS Labs
 License: Proprietary
 Text Domain: svls-labs
 */
-/* Styles are loaded from assets/css/styles.css via header.php */
+/* This file only identifies the theme. The stylesheets are linked directly from each template's head. */

@@ -53,7 +53,6 @@
     <p class="footer__status">Value Lens: private beta on synthetic SAP-like data. Production SAP connector in development.</p>
   </div>
 </footer>
-
 <?php wp_footer(); ?>
 </body>
 </html>
