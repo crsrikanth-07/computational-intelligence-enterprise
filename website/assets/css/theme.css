@@ -264,24 +264,20 @@ main > section.section:nth-of-type(odd):not(.band-dark)  { background-color: var
 .band-surface .chip { background: var(--sg-card); }
 .badge { border-radius: 999px; height: 24px; padding: 0 10px; font-weight: 600; }
 
-/* Severity pills: glowing, with a live point on HIGH. The label text is always present. */
+/* Severity pills: glowing, with a live point on HIGH. The label text is always present.
+   Colours come from the tokens (--accent-text / --warn), so the pills read on light cards, on
+   charcoal frames and in whole-page dark mode alike; the glow is built from currentColor. */
 .pill { height: 24px; padding: 0 10px 0 9px; font-weight: 600; gap: 6px; }
 .pill::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: currentColor; flex: none; box-shadow: 0 0 6px currentColor; }
-.pill--high {
-  color: var(--sg-coral-text);
-  background: rgba(255, 106, 80, .10);
-  border-color: rgba(255, 106, 80, .55);
-  box-shadow: 0 0 0 1px rgba(255, 106, 80, .08), 0 0 16px rgba(255, 106, 80, .30);
+.pill--high, .pill--medium {
+  background: color-mix(in srgb, currentColor 10%, transparent);
+  border-color: color-mix(in srgb, currentColor 50%, transparent);
+  box-shadow: 0 0 0 1px color-mix(in srgb, currentColor 8%, transparent), 0 0 14px color-mix(in srgb, currentColor 28%, transparent);
 }
+.pill--high { color: var(--accent-text); }
 .pill--high::before { animation: sg-pulse 2.2s ease-in-out infinite; }
-.pill--medium {
-  color: #9A6412;
-  background: rgba(230, 176, 92, .10);
-  border-color: rgba(154, 100, 18, .5);
-  box-shadow: 0 0 12px rgba(230, 176, 92, .22);
-}
-.band-dark .pill--medium, .hero .pill--medium, .frame .pill--medium { color: #E6B05C; border-color: rgba(230, 176, 92, .5); }
-.pill--high:not(.frame .pill--high):not(.band-dark .pill--high) { color: #C8351F; background: rgba(228, 67, 43, .08); border-color: rgba(228, 67, 43, .45); box-shadow: 0 0 12px rgba(228, 67, 43, .18); }
+.pill--medium { color: var(--warn); }
+.frame .pill--high, .band-dark .pill--high, .hero .pill--high { color: var(--sg-coral-text); }
 .pill--stat { height: 36px; padding: 0 16px 0 14px; font-size: 15px; }
 .status-ok { font-weight: 600; }
 
