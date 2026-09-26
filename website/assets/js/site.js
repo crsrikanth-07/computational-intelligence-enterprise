@@ -259,6 +259,20 @@
       el.classList.add('reveal');
       io.observe(el);
     });
+    // Safety net: nothing stays hidden if the observer never fires (some in-app
+    // browsers, print, scripted captures). Scroll position also reveals, and a
+    // hard cap reveals everything after 4 seconds.
+    function revealNear() {
+      items.forEach(function (el) {
+        if (el.classList.contains('is-visible')) return;
+        var r = el.getBoundingClientRect();
+        if (r.top < window.innerHeight * 1.15) el.classList.add('is-visible');
+      });
+    }
+    window.addEventListener('scroll', revealNear, { passive: true });
+    window.addEventListener('resize', revealNear, { passive: true });
+    setTimeout(revealNear, 800);
+    setTimeout(function () { items.forEach(function (el) { el.classList.add('is-visible'); }); }, 4000);
   })();
 
   /* ---------------------------------------------------------------------------
