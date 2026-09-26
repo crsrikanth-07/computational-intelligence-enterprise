@@ -1,0 +1,744 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SVLS LABS | SAP, Cloud and Governed AI Engineering</title>
+<meta name="description" content="SVLS LABS designs, builds and verifies S/4HANA, BTP and Integration Suite landscapes, connects them to the cloud and adds governed agentic AI. Est. 2020.">
+<link rel="canonical" href="https://svlslabs.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SVLS LABS">
+<meta property="og:title" content="SVLS LABS | SAP, Cloud and Governed AI Engineering">
+<meta property="og:description" content="SVLS LABS designs, builds and verifies S/4HANA, BTP and Integration Suite landscapes, connects them to the cloud and adds governed agentic AI. Est. 2020.">
+<meta property="og:url" content="https://svlslabs.com/">
+<meta property="og:image" content="https://svlslabs.com/assets/og/og-home.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="SVLS LABS lockup and the page title on a hairline grid.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SVLS LABS | SAP, Cloud and Governed AI Engineering">
+<meta name="twitter:description" content="SVLS LABS designs, builds and verifies S/4HANA, BTP and Integration Suite landscapes, connects them to the cloud and adds governed agentic AI. Est. 2020.">
+<meta name="twitter:image" content="https://svlslabs.com/assets/og/og-home.png">
+<meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0B0E13" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/favicon-16.png" sizes="16x16" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<script>(function(){var d=document.documentElement;d.classList.remove('no-js');try{var t=localStorage.getItem('svls-theme');if(t==='light'||t==='dark'){d.setAttribute('data-theme',t);}}catch(e){}})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="font" type="font/woff2" crossorigin href="https://fonts.gstatic.com/s/intertight/v9/NGSwv5HMAFg6IuGlBNMjxLsH8ag.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/assets/css/tokens.css">
+<link rel="stylesheet" href="/assets/css/site.css">
+<script src="/assets/js/site.js" defer></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "SVLS LABS",
+  "legalName": "SVLS Labs LLP",
+  "url": "https://svlslabs.com/",
+  "logo": "https://svlslabs.com/assets/logo/stacked.svg",
+  "foundingDate": "2020",
+  "description": "SAP, cloud and governed agentic AI for enterprises that run on S/4HANA. Specified, built and verified by architects. Founded 2020.",
+  "sameAs": ["https://www.linkedin.com/company/14559452/"]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a href="/" class="brand" aria-label="SVLS LABS home">
+      <svg class="brand__lockup" viewBox="0 0 288 64" aria-hidden="true" focusable="false">
+        <path d="M4 24V4h20v4H8v16z" fill="currentColor"/>
+        <circle cx="32" cy="32" r="13.5" fill="none" stroke="currentColor" stroke-width="5"/>
+        <path d="M60 40v20H40v-4h16V40z" fill="var(--svls-accent, #E4432B)"/>
+        <text x="80" y="60" fill="currentColor" font-family="'Inter Tight', Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="44" font-weight="700" letter-spacing="-0.44">SVLS</text>
+        <text x="196" y="60" fill="currentColor" font-family="'Inter Tight', Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="31" font-weight="500" letter-spacing="3.72">LABS</text>
+      </svg>
+      <svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+        <path d="M4 24V4h20v4H8v16z" fill="currentColor"/>
+        <circle cx="32" cy="32" r="13.5" fill="none" stroke="currentColor" stroke-width="5"/>
+        <path d="M60 40v20H40v-4h16V40z" fill="var(--svls-accent, #E4432B)"/>
+      </svg>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <ul class="site-nav__list">
+        <li class="site-nav__item has-dropdown">
+          <button class="site-nav__link site-nav__trigger" type="button" aria-expanded="false" aria-controls="services-menu">Services<svg class="site-nav__chevron" viewBox="0 0 10 10" aria-hidden="true" focusable="false"><path d="M1 3.5l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button>
+          <ul class="dropdown" id="services-menu">
+            <li><a href="/services/sap/"><span class="dropdown__title">SAP &amp; ERP</span><span class="dropdown__desc">S/4HANA, RISE, BTP, Integration Suite, Clean Core</span></a></li>
+            <li><a href="/services/cloud/"><span class="dropdown__title">Cloud</span><span class="dropdown__desc">SAP-to-cloud integration, migrations, cloud-native engineering</span></a></li>
+            <li><a href="/services/ai/"><span class="dropdown__title">Agentic AI</span><span class="dropdown__desc">Governed agents on SAP BTP, AI-assisted SAP engineering</span></a></li>
+          </ul>
+        </li>
+        <li class="site-nav__item"><a class="site-nav__link" href="/products/value-lens/">Value Lens<span class="beta-point" aria-hidden="true"></span><span class="visually-hidden">(private beta)</span></a></li>
+        <li class="site-nav__item"><a class="site-nav__link" href="/approach/">Approach</a></li>
+        <li class="site-nav__item"><a class="site-nav__link" href="/about/">About</a></li>
+        <li class="site-nav__item"><a class="site-nav__link" href="/contact/">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="site-header__actions">
+      <a class="btn btn--primary btn--nav" href="/contact/?intent=discovery">Book a discovery call</a>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark theme">
+        <svg viewBox="0 0 20 20" aria-hidden="true" focusable="false"><circle cx="10" cy="10" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M10 3.5a6.5 6.5 0 0 1 0 13z" fill="currentColor"/></svg>
+      </button>
+      <a class="menu-btn" href="#site-nav" data-menu-toggle><span class="menu-btn__label">Menu</span><svg class="menu-btn__lines" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M0 2.5h16M0 8h16M0 13.5h16" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><svg class="menu-btn__close" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M2 2l12 12M14 2L2 14" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a>
+    </div>
+  </div>
+</header>
+<div class="sheet-backdrop" data-menu-backdrop hidden></div>
+<div class="sheet" id="mobile-sheet" hidden>
+  <nav aria-label="Menu">
+    <ul class="sheet__list">
+      <li>
+        <span class="eyebrow sheet__group-label" id="sheet-services">Services</span>
+        <ul class="sheet__sub" aria-labelledby="sheet-services">
+          <li><a class="sheet__link" href="/services/sap/">SAP &amp; ERP</a></li>
+          <li><a class="sheet__link" href="/services/cloud/">Cloud</a></li>
+          <li><a class="sheet__link" href="/services/ai/">Agentic AI</a></li>
+        </ul>
+      </li>
+      <li><a class="sheet__link" href="/products/value-lens/">Value Lens<span class="beta-point" aria-hidden="true"></span><span class="visually-hidden">(private beta)</span></a></li>
+      <li><a class="sheet__link" href="/approach/">Approach</a></li>
+      <li><a class="sheet__link" href="/about/">About</a></li>
+      <li><a class="sheet__link" href="/contact/">Contact</a></li>
+    </ul>
+    <div class="sheet__actions">
+      <a class="btn btn--primary" href="/contact/?intent=discovery">Book a discovery call</a>
+      <a class="btn btn--secondary" href="/products/value-lens/#beta">Request Value Lens beta access</a>
+    </div>
+  </nav>
+  <div class="sheet__theme" role="group" aria-label="Appearance">
+    <span class="sheet__theme-label" aria-hidden="true">Appearance:</span>
+    <button type="button" class="chip" data-theme-choice="system" aria-pressed="true">System</button>
+    <button type="button" class="chip" data-theme-choice="light" aria-pressed="false">Light</button>
+    <button type="button" class="chip" data-theme-choice="dark" aria-pressed="false">Dark</button>
+  </div>
+</div>
+<main id="main">
+
+  <!-- 01 Hero -->
+  <section class="hero has-grid" aria-labelledby="hero-title">
+    <div class="container">
+      <div class="section-mark"><span class="numeral">01</span><p class="eyebrow">SAP · Cloud · Governed agentic AI</p></div>
+      <div class="grid hero__grid">
+        <div class="hero__copy col-7">
+          <h1 class="display" id="hero-title">SAP, cloud and governed AI. Engineered <span class="key">to spec.</span></h1>
+          <p class="lead">SVLS LABS designs, builds and verifies S/4HANA and BTP landscapes, connects them to your cloud, and adds agentic AI with deterministic numbers and a human decision on every action. Founded 2020. 22+ years of SAP delivery in the leadership team.</p>
+          <div class="btn-row">
+            <a class="btn btn--primary" href="/contact/?intent=discovery">Book a discovery call</a>
+            <a class="btn btn--secondary" href="/products/value-lens/#beta">Request Value Lens beta access</a>
+          </div>
+          <p class="trust">A 45-minute call with an architect, not a salesperson. Replies within one business day. <a href="/approach/">How we run engagements</a></p>
+        </div>
+        <figure class="hero__diagram col-5">
+          <svg viewBox="0 0 560 360" role="img" aria-labelledby="landscape-title" font-family="'JetBrains Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="500" letter-spacing="0.06em" text-anchor="middle" fill="currentColor">
+            <title id="landscape-title">SAP core, BTP integration, cloud data and governed agents with human review, drawn as a landscape diagram.</title>
+            <g fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M491 226V186"/>
+              <path d="M491 154V106H71V219"/>
+            </g>
+            <circle cx="71" cy="223" r="3" fill="currentColor"/>
+            <circle cx="491" cy="170" r="16" fill="none" stroke="currentColor" stroke-width="2"/>
+            <circle cx="491" cy="170" r="4" fill="var(--svls-accent, #E4432B)"/>
+            <g fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M267 106V92h14"/>
+              <path d="M295 106v14h-14"/>
+            </g>
+            <text x="281" y="78">HUMAN REVIEW</text>
+            <g fill="none" stroke="currentColor" stroke-width="1" stroke-opacity="0.45">
+              <path d="M515 186v40M511 186h8M511 226h8"/>
+              <path d="M305 120h176M305 116v8M481 116v8"/>
+              <path d="M85 120h172M85 116v8M257 116v8"/>
+              <path d="M91 130v86M87 130h8M87 216h8"/>
+            </g>
+            <g fill="currentColor" fill-opacity="0.72" font-weight="400">
+              <text x="522" y="210" text-anchor="start">READ</text>
+              <text x="393" y="138">CONFIRM</text>
+              <text x="171" y="138">WRITE</text>
+              <text x="98" y="177" text-anchor="start">READ-BACK</text>
+            </g>
+            <rect x="13" y="227" width="116" height="70" fill="none" stroke="currentColor" stroke-width="2"/>
+            <rect x="152.75" y="226.75" width="116.5" height="70.5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+            <rect x="292.75" y="226.75" width="116.5" height="70.5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+            <rect x="432.75" y="226.75" width="116.5" height="70.5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+            <g fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M130 262h16"/>
+              <path d="M270 262h16"/>
+              <path d="M410 262h16"/>
+            </g>
+            <circle cx="149" cy="262" r="3" fill="currentColor"/>
+            <circle cx="289" cy="262" r="3" fill="currentColor"/>
+            <circle cx="429" cy="262" r="3" fill="currentColor"/>
+            <text x="71" y="258">SAP S/4HANA</text>
+            <text x="71" y="275" fill-opacity="0.72" font-weight="400">CORE</text>
+            <text x="211" y="251">BTP /</text>
+            <text x="211" y="266">INTEGRATION</text>
+            <text x="211" y="281">SUITE</text>
+            <text x="351" y="251">CLOUD DATA</text>
+            <text x="351" y="266">BIGQUERY ·</text>
+            <text x="351" y="281">SALESFORCE</text>
+            <text x="491" y="258">GOVERNED</text>
+            <text x="491" y="275">AGENTS</text>
+            <g fill="none" stroke="currentColor" stroke-width="1" stroke-opacity="0.45">
+              <path d="M12 318h538M12 316v4M550 316v4"/>
+            </g>
+            <g fill="currentColor" fill-opacity="0.72" font-weight="400">
+              <text x="12" y="340" text-anchor="start">SYSTEM OF RECORD</text>
+              <text x="550" y="340" text-anchor="end">PROPOSES · EXPLAINS</text>
+            </g>
+          </svg>
+          <figcaption>The landscape we build, specified. Human review gates every write back to SAP.</figcaption>
+        </figure>
+        <ul class="microlabels hero__rows-a">
+          <li>S/4HANA · RISE · BTP · Integration Suite</li>
+          <li>GCP · BigQuery · Salesforce</li>
+          <li>MCP · Joule / A2A · SAP AI Core · LangGraph</li>
+        </ul>
+        <ul class="proof-row hero__rows-b">
+          <li><span class="proof-row__num">22+</span><span class="proof-row__label">years of SAP delivery in the leadership team</span></li>
+          <li><span class="proof-row__num">200+</span><span class="proof-row__label">Integration Suite / CPI flows built</span></li>
+          <li><span class="proof-row__num">~10</span><span class="proof-row__label">live customer deployments supported</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 Proof strip -->
+  <section class="section band-surface" id="figures" aria-labelledby="figures-title">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <div class="section-mark"><span class="numeral">02</span><p class="eyebrow">Delivered figures</p></div>
+        <h2 id="figures-title">Delivery you can put in a board pack.</h2>
+        <p class="subcopy">Four figures from delivered work. Each one says where it was measured.</p>
+      </div>
+      <ul class="hgrid hgrid--4 hgrid--bottom" role="list">
+        <li class="stat-cell">
+          <p class="stat stat-cell__num">22+</p>
+          <p class="stat-cell__label">years of SAP delivery</p>
+          <p class="stat-cell__ctx">In the leadership team, since 2004. Programmes to $10M+ across multi-country landscapes.</p>
+        </li>
+        <li class="stat-cell">
+          <p class="stat stat-cell__num">200+</p>
+          <p class="stat-cell__label">Integration Suite / CPI flows built</p>
+          <p class="stat-cell__ctx">Delivered from a pattern library with a written contract per flow, across ~10 live customer deployments.</p>
+        </li>
+        <li class="stat-cell">
+          <p class="stat stat-cell__num">~80%</p>
+          <p class="stat-cell__label">lower external integration delivery cost</p>
+          <p class="stat-cell__ctx">Measured on a multi-country S/4HANA integration programme against the prior external delivery model.</p>
+        </li>
+        <li class="stat-cell">
+          <p class="stat stat-cell__num">up to 90%</p>
+          <p class="stat-cell__label">faster repeatable SAP engineering</p>
+          <p class="stat-cell__ctx">Internal measurement on repeatable objects (mapping specs, iFlow scaffolds, tests, runbooks) with AI-assisted engineering, architect-reviewed.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 03 Three practices -->
+  <section class="section" id="practices" aria-labelledby="practices-title">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <div class="section-mark"><span class="numeral">03</span><p class="eyebrow">Practices</p></div>
+        <h2 id="practices-title">Three practices. One standard.</h2>
+        <p class="subcopy">We stay in the work we can prove: SAP at the core, cloud around it, governed AI on top of it. One team owns the path from Clean Core extension to BigQuery to a governed agent on BTP.</p>
+      </div>
+      <div class="hgrid hgrid--3 hgrid--bottom">
+        <article class="practice">
+          <svg class="practice__glyph" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"/><rect x="9" y="9" width="6" height="6" fill="currentColor"/></svg>
+          <span class="numeral practice__num">01</span>
+          <h3>SAP &amp; ERP</h3>
+          <p class="practice__body">S/4HANA (Public and Private Cloud, RISE, on-premise), BTP and Integration Suite delivered Clean Core from day one. PS/EPPM, Tools &amp; Equipment Management, O2C, P2P, finance.</p>
+          <p class="practice__typical"><span class="eyebrow">Typical engagement</span>Integration programme on a multi-country S/4HANA landscape: pattern-library CPI flows, written contract per flow, read-back verification, hypercare.</p>
+          <a class="arrow-link" href="/services/sap/">See the SAP &amp; ERP practice<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
+        </article>
+        <article class="practice">
+          <svg class="practice__glyph" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="7" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17" cy="7" r="5" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+          <span class="numeral practice__num">02</span>
+          <h3>Cloud</h3>
+          <p class="practice__body">SAP-to-GCP/BigQuery and Salesforce integration, cloud-native services around the core, migrations and landing zones that keep the ledger intact.</p>
+          <p class="practice__typical"><span class="eyebrow">Typical engagement</span>SAP-to-cloud data platform: contracted extracts from S/4HANA to BigQuery, reconciled against SAP totals, with a landing zone your security team has signed.</p>
+          <a class="arrow-link" href="/services/cloud/">See the Cloud practice<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
+        </article>
+        <article class="practice">
+          <svg class="practice__glyph" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M22 14v8h-8v-2h6v-6z" fill="currentColor"/></svg>
+          <span class="numeral practice__num">03</span>
+          <h3>Agentic AI</h3>
+          <p class="practice__body">Governed agents on SAP BTP: MCP tool catalogs, Joule/A2A, SAP AI Core, LangGraph and RAG, with read-before-write controls and a human decision on every write.</p>
+          <p class="practice__typical"><span class="eyebrow">Typical engagement</span>Governed agent pilot on BTP: a read-only tool catalog against your landscape first, then confirm-to-act operations under the control model, with an evidence pack for InfoSec.</p>
+          <a class="arrow-link" href="/services/ai/">See the Agentic AI practice<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 Method -->
+  <section class="section" id="method" aria-labelledby="method-title">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <div class="section-mark"><span class="numeral">04</span><p class="eyebrow">How we work</p></div>
+        <h2 id="method-title">Specify. Build. Verify. Then ship.</h2>
+        <p class="subcopy">The reason our integrations do not come back: every flow has a written contract before it has code, and a read-back check after it runs. The same method builds Value Lens.</p>
+      </div>
+      <ol class="method" role="list">
+        <li class="method__step">
+          <span class="numeral">01</span>
+          <h4>Specify — two weeks, fixed scope, fixed price.</h4>
+          <p>Landscape and architecture review. Domain contracts, interface specs, policy versions, a prototype scope. You leave with an architecture you can act on, whether or not you continue with us.</p>
+        </li>
+        <li class="method__step">
+          <span class="numeral">02</span>
+          <h4>Build.</h4>
+          <p>Clean Core extensions on BTP. CPI flows from a pattern library. AI-assisted generation for repeatable objects, every artefact reviewed by a certified architect before it reaches your landscape.</p>
+        </li>
+        <li class="method__step">
+          <span class="numeral">03</span>
+          <h4>Verify.</h4>
+          <p>Automated read-back against SAP after every run. Reconciliation to SAP totals. An evidence pack your auditors and InfoSec can read.</p>
+        </li>
+        <li class="method__step">
+          <span class="numeral">04</span>
+          <h4>Ship and run.</h4>
+          <p>Cutover, hypercare, runbooks, handover to your team, with a named engagement lead (a role on the team, not a rotating bench) who stays through run. We do not hand you a deck and leave. We stay until it runs.</p>
+        </li>
+      </ol>
+      <div class="method__after">
+        <a class="btn btn--secondary" href="/contact/?intent=discovery&amp;offer=two-week">Start with a two-week discovery</a>
+        <a class="arrow-link" href="/approach/">Read the Governed Delivery approach<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 Value Lens (dark band) -->
+  <section class="section band-dark" id="value-lens" aria-labelledby="vl-title">
+    <div class="container">
+      <div class="grid vl-grid">
+        <div class="vl-copy col-6">
+          <div class="section-mark"><span class="numeral">05</span><p class="eyebrow">Product</p></div>
+          <span class="badge">Private beta</span>
+          <h2 id="vl-title">Where did we lose money this week that we should not have lost?</h2>
+          <p class="subcopy">Value Lens is our margin leak finder for order-to-cash. It reads SAP-like sales, pricing, cost and agreement facts through read-only tools, computes margin in exact integer cents under a versioned policy, and raises evidence-backed cases a finance reviewer can accept or dismiss with a reason.</p>
+          <p class="h4 strap">Agents explain. Humans decide. SAP stays the system of record.</p>
+          <p class="status">Private beta on synthetic SAP-like data. Production SAP connector in development.</p>
+          <div class="btn-row">
+            <a class="btn btn--primary" href="/products/value-lens/#beta">Request beta access</a>
+            <a class="arrow-link" href="/products/value-lens/#how-it-works">How it works<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
+          </div>
+        </div>
+        <div class="col-6" data-reveal>
+          <div class="frame" role="region" aria-label="Value Lens findings queue, private beta, synthetic data">
+            <div class="frame__head">
+              <svg class="vl-mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+                <path d="M4 24V4h20v4H8v16z" fill="currentColor"/>
+                <circle cx="32" cy="32" r="13.5" fill="none" stroke="currentColor" stroke-width="5"/>
+                <circle cx="32" cy="31" r="4" fill="var(--svls-accent, #E4432B)"/>
+                <rect x="25" y="39" width="14" height="2" fill="var(--svls-accent, #E4432B)"/>
+                <path d="M60 40v20H40v-4h16V40z" fill="var(--svls-accent, #E4432B)"/>
+              </svg>
+              <span>Value Lens</span><span class="frame__sep" aria-hidden="true">·</span>
+              <span>Findings queue</span><span class="frame__sep" aria-hidden="true">·</span>
+              <span class="badge">Private beta</span><span class="frame__sep" aria-hidden="true">·</span>
+              <span>Synthetic data</span>
+              <span class="frame__meta"><span>Policy v1.3</span><span>Week 38</span></span>
+            </div>
+            <table class="frame__table" role="table">
+              <thead role="rowgroup">
+                <tr role="row">
+                  <th role="columnheader" scope="col">Case</th>
+                  <th role="columnheader" scope="col">Severity</th>
+                  <th role="columnheader" scope="col">Rule</th>
+                  <th role="columnheader" scope="col" class="num">Leakage</th>
+                  <th role="columnheader" scope="col" class="num">Coverage</th>
+                  <th role="columnheader" scope="col">Status</th>
+                </tr>
+              </thead>
+              <tbody role="rowgroup">
+                <tr role="row" class="is-expanded">
+                  <td role="cell" data-label="Case">VL-0231</td>
+                  <td role="cell" data-label="Severity"><span class="pill pill--high">HIGH</span></td>
+                  <td role="cell" data-label="Rule" class="rule">net_loss</td>
+                  <td role="cell" data-label="Leakage" class="num">12,406.18</td>
+                  <td role="cell" data-label="Coverage" class="num">0.94</td>
+                  <td role="cell" data-label="Status">Open</td>
+                </tr>
+                <tr role="row" class="frame__detail">
+                  <td role="cell" colspan="6">
+                    <div class="frame__panel">
+                      <div class="frame__block">
+                        <p class="frame__block-title">Sources</p>
+                        <ul>
+                          <li>sales_order.get 4500012877</li>
+                          <li>pricing.get PR-88213</li>
+                          <li>cost.get MAT-10442</li>
+                          <li>agreements.get AG-2031</li>
+                        </ul>
+                      </div>
+                      <div class="frame__block">
+                        <p class="frame__block-title">Calculation · Policy v1.3</p>
+                        <ul>
+                          <li>net price 84,120.00 − cost 96,526.18 = −12,406.18</li>
+                          <li>rule net_loss → HIGH</li>
+                          <li>integer cents, deterministic</li>
+                        </ul>
+                      </div>
+                      <div class="frame__block">
+                        <p class="frame__block-title">Timeline</p>
+                        <ul>
+                          <li>09:12 facts read (4 tools, read-only)</li>
+                          <li>09:12 margin computed</li>
+                          <li>09:12 rule fired</li>
+                          <li>09:14 agent hypothesis (labelled hypothesis, 3 of 5 authorised reads used): "cost updated after pricing"</li>
+                          <li>awaiting reviewer</li>
+                        </ul>
+                      </div>
+                      <div class="frame__actions">
+                        <button type="button" class="btn btn--secondary btn--sm" aria-disabled="true" tabindex="-1">Mark reviewed</button>
+                        <button type="button" class="btn btn--secondary btn--sm" aria-disabled="true" tabindex="-1">Dismiss with reason</button>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr role="row">
+                  <td role="cell" data-label="Case">VL-0228</td>
+                  <td role="cell" data-label="Severity"><span class="pill pill--high">HIGH</span></td>
+                  <td role="cell" data-label="Rule" class="rule">excessive_discount</td>
+                  <td role="cell" data-label="Leakage" class="num">7,930.00</td>
+                  <td role="cell" data-label="Coverage" class="num">0.88</td>
+                  <td role="cell" data-label="Status">Open</td>
+                </tr>
+                <tr role="row">
+                  <td role="cell" data-label="Case">VL-0225</td>
+                  <td role="cell" data-label="Severity"><span class="pill pill--medium">MEDIUM</span></td>
+                  <td role="cell" data-label="Rule" class="rule">cost_above_priced_cost</td>
+                  <td role="cell" data-label="Leakage" class="num">2,114.55</td>
+                  <td role="cell" data-label="Coverage" class="num">0.91</td>
+                  <td role="cell" data-label="Status"><span class="status-ok">Reviewed<svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M2.5 8.5l3.5 3.5 7.5-7.5" fill="none" stroke="currentColor" stroke-width="2"/></svg><span class="visually-hidden">(checked)</span></span></td>
+                </tr>
+                <tr role="row">
+                  <td role="cell" data-label="Case">VL-0219</td>
+                  <td role="cell" data-label="Severity"><span class="pill pill--medium">MEDIUM</span></td>
+                  <td role="cell" data-label="Rule" class="rule">excessive_discount</td>
+                  <td role="cell" data-label="Leakage" class="num">1,480.00</td>
+                  <td role="cell" data-label="Coverage" class="num">0.97</td>
+                  <td role="cell" data-label="Status">Dismissed <span class="frame__reason">· reason: approved promotion</span></td>
+                </tr>
+              </tbody>
+            </table>
+            <p class="frame__foot">Numbers from deterministic code. The model explains; it never calculates.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 Control model -->
+  <section class="section" id="control-model" aria-labelledby="control-title">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <div class="section-mark"><span class="numeral">06</span><p class="eyebrow">Governed AI on SAP BTP</p></div>
+        <h2 id="control-title">AI in your ERP is a control question before it is a productivity question.</h2>
+        <p class="subcopy">The same agent that can raise a purchase order can raise the wrong one. Our agents explain; your people decide. The numbers never come from the model.</p>
+      </div>
+      <div class="hgrid hgrid--3 hgrid--bottom">
+        <div class="control">
+          <span class="mono-title">Read-before-write</span>
+          <p class="control__body">The agent fetches the current SAP state before it proposes anything, and its proposal is diffed against that state.</p>
+          <p class="control__prevents"><span class="eyebrow">Prevents</span>Acting on a stale document. Writing over a change a person made five minutes ago.</p>
+        </div>
+        <div class="control">
+          <span class="mono-title">Confirm-to-act</span>
+          <p class="control__body">Every create or update is allowlisted by tool and field, shown to a person for review, and executed only with an expiring confirmation token.</p>
+          <p class="control__prevents"><span class="eyebrow">Prevents</span>Unsupervised writes. Replay of an old approval. An agent reaching a field it was never given.</p>
+        </div>
+        <div class="control">
+          <span class="mono-title">Verify-after</span>
+          <p class="control__body">After every action, SAP is read back and the result is compared to the intent. The comparison goes into the audit trail with the case.</p>
+          <p class="control__prevents"><span class="eyebrow">Prevents</span>Silent partial failures. "The agent said it did it." An audit you cannot reconstruct.</p>
+        </div>
+      </div>
+      <div class="control-diagram" aria-hidden="true">
+        <svg viewBox="0 0 960 120" font-family="'JetBrains Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="500" letter-spacing="0.06em" text-anchor="middle" fill="currentColor" focusable="false">
+          <rect x="1" y="37" width="94" height="46" fill="none" stroke="currentColor" stroke-width="2"/>
+          <rect x="865" y="37" width="94" height="46" fill="none" stroke="currentColor" stroke-width="2"/>
+          <text x="48" y="64">SAP</text>
+          <text x="912" y="64">SAP</text>
+          <path d="M96 60h760" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <circle cx="859" cy="60" r="3" fill="var(--svls-accent, #E4432B)"/>
+          <g fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M274 60V46h14M302 60v14h-14"/>
+            <path d="M466 60V46h14M494 60v14h-14"/>
+            <path d="M658 60V46h14M686 60v14h-14"/>
+          </g>
+          <g fill-opacity="0.72" font-weight="400">
+            <text x="288" y="104">READ-BEFORE-WRITE</text>
+            <text x="480" y="104">CONFIRM-TO-ACT</text>
+            <text x="672" y="104">VERIFY-AFTER</text>
+          </g>
+        </svg>
+      </div>
+      <div class="grid control-grid">
+        <div class="col-7">
+          <table class="spec-table">
+            <thead>
+              <tr><th scope="col">Control</th><th scope="col">What it means in practice</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Read-before-write</th><td>Current SAP state is read and shown before any proposal</td></tr>
+              <tr><th scope="row">Review and confirm</th><td>Every create and update waits for a person</td></tr>
+              <tr><th scope="row">Expiring confirmation tokens</th><td>Approvals cannot be replayed later</td></tr>
+              <tr><th scope="row">Allowlisted tools and fields</th><td>The catalog defines what an agent can touch, by name</td></tr>
+              <tr><th scope="row">Human-in-the-loop by default</th><td>No path exists that skips the reviewer</td></tr>
+              <tr><th scope="row">SAP read-back verification</th><td>Every action is checked against SAP after it runs</td></tr>
+              <tr><th scope="row">Deterministic calculation engine</th><td>Numbers come from versioned code in integer cents; the LLM never touches arithmetic</td></tr>
+              <tr><th scope="row">Complete audit trail per case</th><td>Sources, calculation snapshot, hypotheses, decisions, timestamps</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <aside class="pullquote col-5" aria-label="Catalog counts">
+          <h3>29 live read operations. 18 governed create actions. 11 controlled update patterns. No unsupervised writes.</h3>
+          <p class="small muted">Counts from our MCP tool catalog, live on our SAP BTP landscape against synthetic order-to-cash data. Value Lens uses the read operations only.</p>
+        </aside>
+      </div>
+      <div class="links control-links">
+        <a class="arrow-link" href="/contact/?intent=checklist">Get the Governed Agent Control Checklist<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
+        <a class="arrow-link" href="/services/ai/">See the Agentic AI practice<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 07 AI-assisted SAP engineering -->
+  <section class="section" id="ai-assisted" aria-labelledby="ai-title">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <div class="section-mark"><span class="numeral">07</span><p class="eyebrow">AI-assisted engineering</p></div>
+        <h2 id="ai-title">Repeatable SAP engineering, up to 90% faster. With a list of what we never automate.</h2>
+        <p class="subcopy">We use our own AI-assisted tooling for the repeatable parts of integration and extension work. Every generated artefact is reviewed by a certified architect before it reaches your landscape. The figure is our internal measurement on repeatable objects, not a client outcome we promise.</p>
+      </div>
+      <div class="hgrid hgrid--2 hgrid--bottom two-col">
+        <div>
+          <span class="mono-title">What we accelerate</span>
+          <ul class="list-points">
+            <li>Mapping specifications from domain contracts</li>
+            <li>iFlow scaffolds from the pattern library</li>
+            <li>Test cases and read-back checks</li>
+            <li>Runbooks and handover documentation</li>
+            <li>Clean Core extension boilerplate on BTP</li>
+          </ul>
+        </div>
+        <div>
+          <span class="mono-title">What we never automate</span>
+          <ul class="list-rings">
+            <li>Transport approval</li>
+            <li>Production changes and cutover decisions</li>
+            <li>Anything that writes to SAP without a confirmed reviewer</li>
+            <li>Financial calculations inside an LLM</li>
+            <li>Sign-off on an evidence pack</li>
+          </ul>
+        </div>
+      </div>
+      <p class="mt-6"><a class="arrow-link" href="/approach/#ai-assisted">How the method uses it<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a></p>
+    </div>
+  </section>
+
+  <!-- 08 Domains, credentials and research -->
+  <section class="section band-surface" id="credentials" aria-labelledby="cred-title">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <div class="section-mark"><span class="numeral">08</span><p class="eyebrow">Where we work · What we hold</p></div>
+        <h2 id="cred-title">Built in the modules where money moves. Certified where it counts.</h2>
+        <p class="subcopy">Project systems, procurement, order-to-cash, inventory, finance, workforce. Industries where the ledger is not optional.</p>
+      </div>
+      <div class="chip-rows">
+        <div class="chip-row">
+          <p class="eyebrow">Modules</p>
+          <ul class="chips" role="list">
+            <li class="chip">PS/EPPM</li><li class="chip">Tools &amp; Equipment Management</li><li class="chip">MM/P2P</li><li class="chip">O2C</li><li class="chip">Inventory</li><li class="chip">Finance</li><li class="chip">Workforce</li><li class="chip">SCM/APO</li>
+          </ul>
+        </div>
+        <div class="chip-row">
+          <p class="eyebrow">Industries</p>
+          <ul class="chips" role="list">
+            <li class="chip">Engineering &amp; Construction</li><li class="chip">Banking &amp; Insurance</li><li class="chip">Consumer &amp; Manufacturing</li><li class="chip">Pharma</li><li class="chip">Supply Chain</li>
+          </ul>
+        </div>
+      </div>
+      <div class="hgrid hgrid--3 hgrid--bottom">
+        <div class="cred">
+          <h3>Certifications held in the team</h3>
+          <ul class="list-mono">
+            <li>TOGAF 9</li><li>SAP BTP Integration Suite</li><li>SAP BTP Extension Suite</li><li>SAP PI/PO</li><li>SAP Analytics Cloud</li><li>Generative AI Practitioner</li>
+          </ul>
+        </div>
+        <div class="cred">
+          <h3>SAP platforms delivered</h3>
+          <ul class="list-mono">
+            <li>S/4HANA Public Cloud</li><li>S/4HANA Private Cloud</li><li>RISE with SAP</li><li>SAP BTP</li><li>SAP on-premise</li><li>SAP Integration Suite / CPI</li>
+          </ul>
+        </div>
+        <div class="cred">
+          <h3>Published research</h3>
+          <div class="book">
+            <div class="book__cover" role="img" aria-label="Book: Computational Intelligence for Enterprise Systems: Advanced Optimization Algorithms with Working Prototypes."><span>Computational Intelligence for Enterprise Systems: Advanced Optimization Algorithms with Working Prototypes.</span></div>
+            <p class="book__caption">Authored by our team. Supply-chain optimisation prototypes: adaptive genetic optimisation, multi-objective simulated annealing, particle swarm optimisation, hybrid PSO-GA.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 09 For SAP partners -->
+  <section class="section section--slim band-surface partner-band" id="partners" aria-labelledby="partners-title">
+    <div class="container">
+      <div class="grid">
+        <div class="col-8">
+          <div class="section-mark"><span class="numeral">09</span><p class="eyebrow">For SAP partners</p></div>
+          <h3 id="partners-title">Integration Suite, BTP and agentic-AI capacity for partner programmes. White-label or co-delivered.</h3>
+          <p class="partner-band__body">Our architects plug into your RISE and S/4HANA programmes with CPI squads, Clean Core extension builds and governed-agent pilots, under your brand or beside your team.</p>
+        </div>
+        <div class="col-4 partner-band__action">
+          <a class="btn btn--secondary" href="/contact/?intent=partnership">Talk to us about partner capacity</a>
+          <p class="mono-note">NDA-friendly · Time-zone coverage India + US East · Fixed-scope options</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10 Closing CTA with inline dual form -->
+  <section class="section has-grid cta-band" id="next-step" aria-labelledby="next-title">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <div class="section-mark"><span class="numeral">10</span><p class="eyebrow">Next step</p></div>
+        <h2 id="next-title">Bring us the spec. Or the problem you have not specified yet.</h2>
+        <p class="subcopy">A 45-minute discovery call with an architect, not a salesperson. We will tell you what we would build, what we would not, and what it should cost. Or start with a two-week, fixed-scope discovery.</p>
+      </div>
+      <div class="hgrid hgrid--2 hgrid--bottom cta-band__forms">
+        <div>
+          <h3 class="form-title" id="discovery-form-title">Book a discovery call</h3>
+          <form class="form" method="POST" action="https://formspree.io/f/TODO_FORM_ID" data-netlify="true" name="contact" aria-labelledby="discovery-form-title" data-enhance data-success="Thank you. An architect will reply within one business day with two or three slots." data-subject="Discovery call request">
+            <input type="hidden" name="intent" value="discovery">
+            <input type="hidden" name="form-name" value="contact">
+            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" hidden>
+            <div class="field">
+              <label class="field__label" for="d-name">Name</label>
+              <input class="input" id="d-name" name="name" type="text" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label class="field__label" for="d-email">Work email</label>
+              <input class="input" id="d-email" name="email" type="email" autocomplete="email" required>
+            </div>
+            <div class="field">
+              <label class="field__label" for="d-message">What are you working on? <span class="opt">(optional)</span></label>
+              <textarea class="input" id="d-message" name="message" rows="3" placeholder="e.g. S/4HANA integration programme, BTP extension, SAP-to-BigQuery, agent pilot"></textarea>
+            </div>
+            <label class="choice"><input type="checkbox" name="offer" value="two-week"><span>I would like to start with the two-week discovery (fixed scope, fixed price).</span></label>
+            <button class="btn btn--primary" type="submit">Book a discovery call</button>
+            <p class="form__privacy">We use your details only to reply to you. See <a href="/privacy/">Privacy</a>.</p>
+          </form>
+        </div>
+        <div>
+          <h3 class="form-title" id="beta-form-title">Request Value Lens beta access</h3>
+          <form class="form" method="POST" action="https://formspree.io/f/TODO_FORM_ID" data-netlify="true" name="beta" aria-labelledby="beta-form-title" data-enhance data-success="Thank you. We will send the Value Lens beta brief (what the beta covers, what data it needs, what it will not do yet) within one business day." data-subject="Value Lens beta access request">
+            <input type="hidden" name="intent" value="beta">
+            <input type="hidden" name="form-name" value="beta">
+            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" hidden>
+            <div class="field">
+              <label class="field__label" for="b-name">Name</label>
+              <input class="input" id="b-name" name="name" type="text" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label class="field__label" for="b-email">Work email</label>
+              <input class="input" id="b-email" name="email" type="email" autocomplete="email" required>
+            </div>
+            <fieldset class="fieldset">
+              <legend>Your role</legend>
+              <div class="choices">
+                <label class="choice"><input type="radio" name="role" value="finance" required><span>Finance</span></label>
+                <label class="choice"><input type="radio" name="role" value="sap" required><span>SAP</span></label>
+                <label class="choice"><input type="radio" name="role" value="it" required><span>IT</span></label>
+              </div>
+            </fieldset>
+            <div class="field">
+              <label class="field__label" for="b-company">Company <span class="opt">(optional)</span></label>
+              <input class="input" id="b-company" name="company" type="text" autocomplete="organization">
+            </div>
+            <label class="choice"><input type="checkbox" name="notify" value="yes"><span>Notify me when Value Lens leaves beta.</span></label>
+            <button class="btn btn--primary" type="submit">Request beta access</button>
+            <p class="form__privacy">We use your details only to reply to you. See <a href="/privacy/">Privacy</a>.</p>
+          </form>
+        </div>
+      </div>
+      <div class="cta-band__after">
+        <p class="trust">TOGAF-certified architects. SAP-certified product engineering. Replies within one business day.</p>
+        <div class="cta-links">
+          <a class="arrow-link" href="/contact/?intent=overview">Download the capability overview<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
+          <a class="arrow-link" href="/approach/">How we run engagements<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
+        </div>
+        <p class="mono-note"><a href="/contact/?intent=partnership">SAP partners: ask about integration and BTP capacity.</a></p>
+      </div>
+    </div>
+  </section>
+
+</main>
+<footer class="site-footer band-dark">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer__brand">
+        <a href="/" class="brand" aria-label="SVLS LABS home">
+          <svg class="brand__lockup" viewBox="0 0 288 64" aria-hidden="true" focusable="false">
+            <path d="M4 24V4h20v4H8v16z" fill="currentColor"/>
+            <circle cx="32" cy="32" r="13.5" fill="none" stroke="currentColor" stroke-width="5"/>
+            <path d="M60 40v20H40v-4h16V40z" fill="var(--svls-accent, #E4432B)"/>
+            <text x="80" y="60" fill="currentColor" font-family="'Inter Tight', Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="44" font-weight="700" letter-spacing="-0.44">SVLS</text>
+            <text x="196" y="60" fill="currentColor" font-family="'Inter Tight', Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="31" font-weight="500" letter-spacing="3.72">LABS</text>
+          </svg>
+        </a>
+        <p class="footer__strap">SAP, cloud and governed AI. Engineered to spec.</p>
+        <p class="footer__founded">Founded 2020. 22+ years of SAP delivery in the leadership team.</p>
+      </div>
+      <nav id="site-nav" class="footer-nav" aria-label="Footer">
+        <div class="footer__col">
+          <p class="eyebrow">Practices</p>
+          <ul>
+            <li><a href="/services/sap/">SAP &amp; ERP</a></li>
+            <li><a href="/services/cloud/">Cloud</a></li>
+            <li><a href="/services/ai/">Agentic AI</a></li>
+            <li><a href="/approach/">Approach</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <p class="eyebrow">Product</p>
+          <ul>
+            <li><a href="/products/value-lens/">Value Lens (private beta)</a></li>
+            <li><a href="/products/value-lens/#beta">Request beta access</a></li>
+            <li><a href="/services/ai/#control-model">The control model</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <p class="eyebrow">Company</p>
+          <ul>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/contact/">Contact</a></li>
+            <li><a href="https://www.linkedin.com/company/14559452/" target="_blank" rel="noopener">LinkedIn<span class="visually-hidden"> (opens in a new tab)</span></a></li>
+            <li><a href="/privacy/">Privacy</a></li>
+            <li><a href="/terms/">Terms</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span data-year>2026</span> SVLS Labs LLP. Established 2020. India. US presence: Rhode Island, USA.</p>
+      <p><span class="todo">TODO</span> (client): registered address &middot; <a href="mailto:hello@svlslabs.com">hello@svlslabs.com</a> (placeholder) &middot; +91 <span class="todo">TODO</span> &middot; +1 <span class="todo">TODO</span></p>
+    </div>
+    <p class="footer__status">Value Lens: private beta on synthetic SAP-like data. Production SAP connector in development.</p>
+  </div>
+</footer>
+</body>
+</html>
