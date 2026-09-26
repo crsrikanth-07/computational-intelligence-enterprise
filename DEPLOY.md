@@ -177,6 +177,8 @@ After the run: A.5 (plugins) and A.6 (verification) still apply; the script cann
 
 Upload the zip by hand (A.2), activate, then `node website/_tools/deploy-wp.js --skip-theme`. Pages created while the old theme was active are saved without a template and re-saved with the right template on the next run after activation.
 
+On svlslabs.com this is the normal path: Cloudflare puts an interactive Turnstile challenge ("Verify you are human") in front of every POST to `wp-login.php`, so neither the script's cookie login nor a headless browser can log in, and the script's "Flush Cache" step is skipped for the same reason (`--skip-cache`). `website/_tools/wp-admin-browser.js` (Playwright + the pre-installed Chromium) exists for sites without such a challenge: `install` uploads and activates the zip, `flush` follows the admin-bar Flush Cache link, `activate <stylesheet>` is the rollback helper, and `shots <dir>` takes full-page screenshots of the public pages without logging in. It exits with code 3 and does nothing further if a CAPTCHA or an unresolved challenge appears.
+
 ---
 
 ## D. Client TODO list
