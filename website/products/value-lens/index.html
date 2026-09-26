@@ -169,7 +169,7 @@
           </div>
           <p class="trust">A 45-minute call with an architect, not a salesperson. Replies within one business day. <a href="/approach/">How we run engagements</a></p>
         </div>
-        <div class="col-6 hero__frame">
+        <div class="col-6 hero__aside">
           <section class="frame" aria-label="Value Lens findings queue, private beta, synthetic data">
             <div class="frame__head">
               <svg class="vl-mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
@@ -340,8 +340,8 @@
           <p>The findings queue is sorted by severity and leakage. A reviewer marks a case reviewed or dismisses it with a reason. Every action lands on the case timeline.</p>
         </li>
       </ol>
-      <div class="flow" data-reveal>
-        <svg class="flow__wide" viewBox="0 0 960 120" role="img" aria-labelledby="vl-flow-title" font-family="'JetBrains Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="500" letter-spacing="0.06em" text-anchor="middle" fill="currentColor">
+      <div class="diagram" data-reveal>
+        <svg class="diagram__wide" viewBox="0 0 960 120" role="img" aria-labelledby="vl-flow-title" font-family="'JetBrains Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="500" letter-spacing="0.06em" text-anchor="middle" fill="currentColor">
           <title id="vl-flow-title">Six points on a line: 01 read, 02 calculate, 03 detect, 04 evidence (the lens glyph), 05 investigate, 06 human review (bracketed).</title>
           <g fill="none" stroke="currentColor" stroke-width="1.5">
             <path d="M48 60h490"/>
@@ -373,7 +373,7 @@
             <text x="888" y="100">HUMAN REVIEW</text>
           </g>
         </svg>
-        <svg class="flow__tall" viewBox="0 0 400 400" role="img" aria-labelledby="vl-flow-tall-title" font-family="'JetBrains Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="14" font-weight="500" letter-spacing="0.06em" fill="currentColor">
+        <svg class="diagram__tall" viewBox="0 0 400 400" role="img" aria-labelledby="vl-flow-tall-title" font-family="'JetBrains Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="14" font-weight="500" letter-spacing="0.06em" fill="currentColor">
           <title id="vl-flow-tall-title">Six points on a line: 01 read, 02 calculate, 03 detect, 04 evidence (the lens glyph), 05 investigate, 06 human review (bracketed).</title>
           <g fill="none" stroke="currentColor" stroke-width="1.5">
             <path d="M24 24v196"/>
@@ -437,14 +437,14 @@
   </section>
 
   <!-- 05 Cross-link to SAP Intelligence Suite (Addendum A.9, slim band) -->
-  <section class="section section--slim xlink" id="suite" aria-labelledby="suite-eyebrow">
+  <section class="section section--slim slim-band" id="suite" aria-labelledby="suite-title">
     <div class="container">
-      <div class="section-mark"><span class="numeral">05</span><p class="eyebrow" id="suite-eyebrow">Also from SVLS LABS</p></div>
+      <div class="section-mark"><span class="numeral">05</span><h2 class="eyebrow" id="suite-title">Also from SVLS LABS</h2></div>
       <div class="grid">
         <div class="col-8">
-          <p class="xlink__line">Building the integrations around it?</p>
+          <p class="h3 slim-band__line">Building the integrations around it?</p>
         </div>
-        <div class="col-4 xlink__action">
+        <div class="col-4 slim-band__action">
           <a class="arrow-link" href="/products/sap-intelligence-suite/">See SAP Intelligence Suite<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
         </div>
       </div>
@@ -454,8 +454,7 @@
   <!-- 06 In the beta vs on the roadmap (surface band) -->
   <section class="section band-surface" id="scope" aria-labelledby="scope-title">
     <div class="container">
-      <div class="section-mark mb-6"><span class="numeral">06</span><p class="eyebrow">Scope</p></div>
-      <h2 id="scope-title" class="visually-hidden">In the Beta vs on the Roadmap.</h2>
+      <div class="section-mark mb-6"><span class="numeral">06</span><h2 class="eyebrow" id="scope-title">Scope</h2></div>
       <div class="hgrid hgrid--2 hgrid--bottom two-col">
         <div>
           <span class="mono-title">In the private beta (phase A)</span>
@@ -539,9 +538,9 @@
   </section>
 
   <!-- 08 FAQ -->
-  <section class="section" id="faq" aria-labelledby="faq-eyebrow">
+  <section class="section" id="faq" aria-labelledby="faq-title">
     <div class="container">
-      <div class="section-mark mb-6"><span class="numeral">08</span><p class="eyebrow" id="faq-eyebrow">Questions</p></div>
+      <div class="section-mark mb-6"><span class="numeral">08</span><h2 class="eyebrow" id="faq-title">Questions</h2></div>
       <div class="faq-list">
         <details class="faq">
           <summary>Is this connected to my SAP system?<svg class="faq__glyph" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M0 8h16" stroke="currentColor" stroke-width="1.5"/><path class="v" d="M8 0v16" stroke="currentColor" stroke-width="1.5"/></svg></summary>

@@ -151,13 +151,13 @@
 <main id="main">
 
   <!-- 01 Hero (white, no grid) -->
-  <section class="hero hero--ai" aria-labelledby="hero-title">
+  <section class="hero hero--plain" aria-labelledby="hero-title">
     <div class="container">
       <div class="section-mark"><span class="numeral">01</span><p class="eyebrow">Practice 03 · Agentic AI</p></div>
       <div class="grid hero__grid">
         <div class="hero__copy col-9">
           <h1 id="hero-title">Agents Explain. <span class="key">Humans Decide.</span> SAP Stays the System of Record.</h1>
-          <p class="lead">Governed agentic AI on SAP BTP: MCP tool catalogs, Joule and A2A, SAP AI Core, LangGraph and RAG, under a control model where every write is read-before-write, allowlisted, confirmed by a person and read back from SAP. Plus AI-assisted SAP engineering for the repeatable work, reviewed by architects.</p>
+          <p class="lead">Governed agentic AI on SAP BTP: MCP tool catalogs, Joule and A2A, SAP AI Core, LangGraph and RAG, under a control model where every write is read before, confirmed by a person and verified after. Agents explain. Humans decide. SAP stays the system of record.</p>
           <div class="btn-row">
             <a class="btn btn--primary" href="/contact/?intent=ai">Book an AI readiness call</a>
             <a class="btn btn--secondary" href="/products/value-lens/">See Value Lens (private beta)</a>
@@ -176,7 +176,7 @@
   <!-- 02 Three offer blocks -->
   <section class="section" id="offer" aria-labelledby="offer-title">
     <div class="container">
-      <div class="section-mark mb-6"><span class="numeral">02</span><h2 class="eyebrow" id="offer-title">What we deliver</h2></div>
+      <div class="section-mark mb-6"><span class="numeral">02</span><h2 class="eyebrow" id="offer-title">What We Deliver</h2></div>
       <div class="hgrid hgrid--3 hgrid--bottom">
         <article class="practice offer">
           <span class="numeral practice__num">01</span>
@@ -188,14 +188,14 @@
         <article class="practice offer">
           <span class="numeral practice__num">02</span>
           <h3>AI governance and human-in-the-loop design</h3>
-          <p class="practice__body">The controls a CIO can hand to any AI vendor, implemented rather than promised: allowlists, expiring confirmation tokens, audit trail per case, read-back verification. Workshops with finance, InfoSec and SAP basis in the same room.</p>
+          <p class="practice__body">The controls a CIO can hand to any AI vendor, implemented rather than promised: read before write, confirm to act, verify after, and an audit trail per case. Workshops with finance, InfoSec and internal audit.</p>
           <p class="practice__typical"><span class="eyebrow">Deliverables</span>control model, policy versions, review UI patterns, audit design.</p>
           <a class="arrow-link" href="#checklist">Get the checklist<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
         </article>
         <article class="practice offer">
           <span class="numeral practice__num">03</span>
           <h3>AI-assisted SAP engineering</h3>
-          <p class="practice__body">Up to 90% faster on repeatable objects: mapping specs, iFlow scaffolds, tests, runbooks, extension boilerplate. Never transport approval, never production changes, never arithmetic inside an LLM.</p>
+          <p class="practice__body">Faster on repeatable objects: mapping specs, iFlow scaffolds, tests, runbooks, extension boilerplate. Never transport approval, never production changes, never arithmetic inside an LLM.</p>
           <p class="practice__typical"><span class="eyebrow">Deliverables</span>accelerated build with architect review on every artefact.</p>
           <a class="arrow-link" href="/products/sap-intelligence-suite/">See SAP Intelligence Suite<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
         </article>
@@ -210,23 +210,6 @@
         <div class="section-mark"><span class="numeral">03</span><p class="eyebrow">Governed AI on SAP BTP</p></div>
         <h2 id="control-title">AI in Your ERP Is a Control Question Before It Is a Productivity Question.</h2>
         <p class="subcopy">The same agent that can raise a purchase order can raise the wrong one. Our agents explain; your people decide. The numbers never come from the model.</p>
-      </div>
-      <div class="hgrid hgrid--3 hgrid--bottom">
-        <div class="control">
-          <span class="mono-title">Read-before-write</span>
-          <p class="control__body">The agent fetches the current SAP state before it proposes anything, and its proposal is diffed against that state.</p>
-          <p class="control__prevents"><span class="eyebrow">Prevents</span>Acting on a stale document. Writing over a change a person made five minutes ago.</p>
-        </div>
-        <div class="control">
-          <span class="mono-title">Confirm-to-act</span>
-          <p class="control__body">Every create or update is allowlisted by tool and field, shown to a person for review, and executed only with an expiring confirmation token.</p>
-          <p class="control__prevents"><span class="eyebrow">Prevents</span>Unsupervised writes. Replay of an old approval. An agent reaching a field it was never given.</p>
-        </div>
-        <div class="control">
-          <span class="mono-title">Verify-after</span>
-          <p class="control__body">After every action, SAP is read back and the result is compared to the intent. The comparison goes into the audit trail with the case.</p>
-          <p class="control__prevents"><span class="eyebrow">Prevents</span>Silent partial failures. "The agent said it did it." An audit you cannot reconstruct.</p>
-        </div>
       </div>
       <div class="control-diagram" aria-hidden="true">
         <svg viewBox="0 0 960 120" font-family="'JetBrains Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="500" letter-spacing="0.06em" text-anchor="middle" fill="currentColor" focusable="false">
@@ -248,29 +231,21 @@
           </g>
         </svg>
       </div>
-      <div class="grid control-grid">
-        <div class="col-7">
-          <table class="spec-table">
-            <thead>
-              <tr><th scope="col">Control</th><th scope="col">What it means in practice</th></tr>
-            </thead>
-            <tbody>
-              <tr><th scope="row">Read-before-write</th><td>Current SAP state is read and shown before any proposal</td></tr>
-              <tr><th scope="row">Review and confirm</th><td>Every create and update waits for a person</td></tr>
-              <tr><th scope="row">Expiring confirmation tokens</th><td>Approvals cannot be replayed later</td></tr>
-              <tr><th scope="row">Allowlisted tools and fields</th><td>The catalog defines what an agent can touch, by name</td></tr>
-              <tr><th scope="row">Human-in-the-loop by default</th><td>No path exists that skips the reviewer</td></tr>
-              <tr><th scope="row">SAP read-back verification</th><td>Every action is checked against SAP after it runs</td></tr>
-              <tr><th scope="row">Deterministic calculation engine</th><td>Numbers come from versioned code in integer cents; the LLM never touches arithmetic</td></tr>
-              <tr><th scope="row">Complete audit trail per case</th><td>Sources, calculation snapshot, hypotheses, decisions, timestamps</td></tr>
-            </tbody>
-          </table>
+      <div class="hgrid hgrid--3 hgrid--bottom">
+        <div class="control">
+          <span class="mono-title">Read before write</span>
+          <p class="control__body">The agent reads the current SAP state before it proposes anything.</p>
         </div>
-        <aside class="pullquote col-5" aria-label="Catalog counts">
-          <h3>29 live read operations. 18 governed create actions. 11 controlled update patterns. No unsupervised writes.</h3>
-          <p class="small muted">Counts from our MCP tool catalog, live on our SAP BTP landscape against synthetic order-to-cash data. Value Lens uses the read operations only.</p>
-        </aside>
+        <div class="control">
+          <span class="mono-title">Confirm to act</span>
+          <p class="control__body">A person reviews and confirms every create and update.</p>
+        </div>
+        <div class="control">
+          <span class="mono-title">Verify after</span>
+          <p class="control__body">SAP is read back after every action, and the result goes into the audit trail.</p>
+        </div>
       </div>
+      <p class="control__line">Numbers come from deterministic code, never from the model. Every case carries its sources, its calculation and its decisions.</p>
       <div class="links control-links">
         <a class="arrow-link" href="/contact/?intent=checklist">Get the Governed Agent Control Checklist<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
         <a class="arrow-link" href="/products/value-lens/">See Value Lens<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
@@ -281,26 +256,27 @@
   <!-- 04 Proof (surface band, four cells) -->
   <section class="section band-surface" id="proof" aria-labelledby="proof-title">
     <div class="container">
-      <div class="section-mark mb-6"><span class="numeral">04</span><h2 class="eyebrow" id="proof-title">MCP tool catalog</h2></div>
+      <div class="section-mark mb-6"><span class="numeral">04</span><h2 class="eyebrow" id="proof-title">Facts with Sources</h2></div>
       <ul class="hgrid hgrid--4 hgrid--bottom" role="list">
         <li class="stat-cell">
-          <p class="stat stat-cell__num">29</p>
-          <p class="stat-cell__label">live read operations</p>
-        </li>
-        <li class="stat-cell">
-          <p class="stat stat-cell__num">18</p>
-          <p class="stat-cell__label">governed create actions</p>
-        </li>
-        <li class="stat-cell">
-          <p class="stat stat-cell__num">11</p>
-          <p class="stat-cell__label">controlled update patterns</p>
-        </li>
-        <li class="stat-cell">
           <p class="stat stat-cell__num">0</p>
-          <p class="stat-cell__label">unsupervised writes</p>
+          <p class="stat-cell__label">numbers produced by a model</p>
+          <p class="stat-cell__ctx">Deterministic code only.</p>
+        </li>
+        <li class="stat-cell">
+          <p class="stat stat-cell__num">1</p>
+          <p class="stat-cell__label">reviewer on every write</p>
+        </li>
+        <li class="stat-cell">
+          <p class="stat stat-cell__num">2</p>
+          <p class="stat-cell__label">products built on the control model</p>
+        </li>
+        <li class="stat-cell">
+          <p class="stat stat-cell__num">25+</p>
+          <p class="stat-cell__label">years of SAP delivery experience</p>
+          <p class="stat-cell__ctx">Across our key architects.</p>
         </li>
       </ul>
-      <p class="small muted proof-note">Our MCP tool catalog on SAP BTP, live against synthetic order-to-cash data. Counts reviewed quarterly.</p>
     </div>
   </section>
 
@@ -309,8 +285,8 @@
     <div class="container">
       <div class="section-head" data-reveal>
         <div class="section-mark"><span class="numeral">05</span><p class="eyebrow">AI-assisted engineering</p></div>
-        <h2 id="ai-title">Repeatable SAP Engineering, Up to 90% Faster. With a List of What We Never Automate.</h2>
-        <p class="subcopy">We use our own AI-assisted tooling for the repeatable parts of integration and extension work. Every generated artefact is reviewed by a certified architect before it reaches your landscape. The figure is our internal measurement on repeatable objects, not a client outcome we promise.</p>
+        <h2 id="ai-title">Repeatable SAP Engineering, Faster. With a List of What We Never Automate.</h2>
+        <p class="subcopy">We use our own AI-assisted tooling for the repeatable parts of integration and extension work. Every generated artefact is reviewed by a certified architect before it reaches your landscape.</p>
       </div>
       <div class="hgrid hgrid--2 hgrid--bottom two-col">
         <div>
@@ -334,7 +310,7 @@
           </ul>
         </div>
       </div>
-      <div class="links accelerate-links">
+      <div class="links links--after">
         <a class="arrow-link" href="/approach/#ai-assisted">How the method uses it<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
         <a class="arrow-link" href="/products/sap-intelligence-suite/">See SAP Intelligence Suite<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
       </div>
@@ -342,15 +318,15 @@
   </section>
 
   <!-- 06 Lead magnet -->
-  <section class="section section--slim band-surface magnet" id="checklist" aria-labelledby="checklist-title">
+  <section class="section section--slim band-surface slim-band" id="checklist" aria-labelledby="checklist-title">
     <div class="container">
       <div class="section-mark"><span class="numeral">06</span><p class="eyebrow">Checklist</p></div>
       <div class="grid">
         <div class="col-8">
           <h3 id="checklist-title">The Governed Agent Control Checklist for SAP BTP.</h3>
-          <p class="magnet__body">One page. The six controls (read-before-write, confirm-to-act, expiring tokens, allowlists, human-in-the-loop, read-back) a CIO can hand to any AI vendor and ask: which of these do you implement, and where can I see it?</p>
+          <p class="slim-band__body">One page. The three controls (read before write, confirm to act, verify after) and the audit trail a CIO can hand to any AI vendor and ask: which of these do you implement?</p>
         </div>
-        <div class="col-4 magnet__action">
+        <div class="col-4 slim-band__action">
           <a class="arrow-link" href="/contact/?intent=checklist">Get the checklist<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
           <p class="small muted"><span class="todo">TODO</span> (client): the PDF. Until it exists, the link opens the contact form with the checklist preselected.</p>
         </div>
@@ -377,15 +353,11 @@
         </details>
         <details class="faq">
           <summary>What is in the evidence pack?<svg class="faq__glyph" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M0 8h16" stroke="currentColor" stroke-width="1.5"/><path class="v" d="M8 0v16" stroke="currentColor" stroke-width="1.5"/></svg></summary>
-          <div class="faq__body"><p>Tool catalog and policies, allowlists, sample audit trails, read-back results, the control-model document your InfoSec can review.</p></div>
+          <div class="faq__body"><p>Tool catalog and policies, sample audit trails, read-back results, and the control-model document your InfoSec can review.</p></div>
         </details>
         <details class="faq">
           <summary>Is Value Lens what you would build for us?<svg class="faq__glyph" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M0 8h16" stroke="currentColor" stroke-width="1.5"/><path class="v" d="M8 0v16" stroke="currentColor" stroke-width="1.5"/></svg></summary>
           <div class="faq__body"><p><a href="/products/value-lens/">Value Lens</a> is our product for order-to-cash margin leakage, in private beta. Client agents use the same control model and catalog approach against your own processes.</p></div>
-        </details>
-        <details class="faq">
-          <summary>How does "up to 90% faster" hold up?<svg class="faq__glyph" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M0 8h16" stroke="currentColor" stroke-width="1.5"/><path class="v" d="M8 0v16" stroke="currentColor" stroke-width="1.5"/></svg></summary>
-          <div class="faq__body"><p>It is our internal measurement on repeatable objects. We show you the artefacts and the review log in the discovery.</p></div>
         </details>
       </div>
     </div>

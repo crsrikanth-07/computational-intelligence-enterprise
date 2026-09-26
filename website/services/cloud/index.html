@@ -35,7 +35,6 @@
 <link rel="stylesheet" href="/assets/css/tokens.css">
 <link rel="stylesheet" href="/assets/css/site.css">
 <script src="/assets/js/site.js" defer></script>
-<link rel="stylesheet" href="/assets/css/pages/cloud.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -151,7 +150,7 @@
 <main id="main">
 
   <!-- 01 Hero (white, no grid) -->
-  <section class="hero" aria-labelledby="hero-title">
+  <section class="hero hero--plain" aria-labelledby="hero-title">
     <div class="container">
       <div class="section-mark"><span class="numeral">01</span><p class="eyebrow">Practice 02 · Cloud</p></div>
       <div class="grid hero__grid">
@@ -176,7 +175,7 @@
   <!-- 02 Three offer blocks -->
   <section class="section" id="offers" aria-labelledby="offers-title">
     <div class="container">
-      <div class="section-mark mb-6"><span class="numeral">02</span><h2 class="eyebrow" id="offers-title">What we build</h2></div>
+      <div class="section-mark mb-6"><span class="numeral">02</span><h2 class="eyebrow" id="offers-title">What We Build</h2></div>
       <div class="hgrid hgrid--3 hgrid--bottom">
         <article class="practice offer">
           <span class="numeral practice__num">01</span>
@@ -203,16 +202,17 @@
   <!-- 03 Proof (surface band) -->
   <section class="section band-surface" id="figures" aria-labelledby="figures-title">
     <div class="container">
-      <div class="section-mark mb-6"><span class="numeral">03</span><h2 class="eyebrow" id="figures-title">Delivered figures</h2></div>
+      <div class="section-mark mb-6"><span class="numeral">03</span><h2 class="eyebrow" id="figures-title">Facts with Sources</h2></div>
       <ul class="hgrid hgrid--4 hgrid--bottom" role="list">
         <li class="stat-cell">
-          <p class="stat stat-cell__num">200+</p>
-          <p class="stat-cell__label">integration flows built</p>
-          <p class="stat-cell__ctx">SAP Integration Suite.</p>
+          <p class="stat stat-cell__num">25+</p>
+          <p class="stat-cell__label">years of SAP delivery experience</p>
+          <p class="stat-cell__ctx">Across our key architects.</p>
         </li>
         <li class="stat-cell">
-          <p class="stat stat-cell__num">~10</p>
-          <p class="stat-cell__label">live deployments supported</p>
+          <p class="stat stat-cell__num">1</p>
+          <p class="stat-cell__label">reconciliation to SAP totals</p>
+          <p class="stat-cell__ctx">On every extract.</p>
         </li>
         <li class="stat-cell">
           <p class="stat stat-cell__num">1 team</p>
@@ -221,7 +221,8 @@
         </li>
         <li class="stat-cell">
           <p class="stat stat-cell__num">2 weeks</p>
-          <p class="stat-cell__label">fixed-scope discovery to a signed architecture</p>
+          <p class="stat-cell__label">fixed-scope discovery</p>
+          <p class="stat-cell__ctx">To a signed architecture.</p>
         </li>
       </ul>
     </div>
@@ -230,9 +231,9 @@
   <!-- 04 Reference architecture -->
   <section class="section" id="reference-architecture" aria-labelledby="ref-arch-title">
     <div class="container">
-      <div class="section-mark"><span class="numeral">04</span><h2 class="eyebrow" id="ref-arch-title">Reference architecture</h2></div>
-      <figure class="ref-diagram" data-reveal>
-        <svg class="ref-diagram__wide" viewBox="0 0 960 350" role="img" aria-labelledby="ref-wide-title" font-family="'JetBrains Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="13" font-weight="500" letter-spacing="0.06em" text-anchor="middle" fill="currentColor">
+      <div class="section-mark"><span class="numeral">04</span><h2 class="eyebrow" id="ref-arch-title">Reference Architecture</h2></div>
+      <figure class="diagram" data-reveal>
+        <svg class="diagram__wide" viewBox="0 0 960 350" role="img" aria-labelledby="ref-wide-title" font-family="'JetBrains Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="13" font-weight="500" letter-spacing="0.06em" text-anchor="middle" fill="currentColor">
           <title id="ref-wide-title">Reference architecture: SAP S/4HANA feeds SAP BTP Integration Suite, which serves BigQuery, Salesforce and Cloud Run services; a reconciliation line returns from the cloud to SAP totals.</title>
           <rect x="21" y="131" width="178" height="78" fill="none" stroke="currentColor" stroke-width="2"/>
           <text x="110" y="166">SAP S/4HANA</text>
@@ -260,7 +261,7 @@
           <circle cx="110" cy="214" r="4" fill="var(--svls-accent, #E4432B)"/>
           <text x="505" y="322" fill-opacity="0.72" font-weight="400">RECONCILE TO SAP TOTALS</text>
         </svg>
-        <svg class="ref-diagram__tall" viewBox="0 0 400 500" role="img" aria-labelledby="ref-tall-title" font-family="'JetBrains Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="14" font-weight="500" letter-spacing="0.06em" text-anchor="middle" fill="currentColor">
+        <svg class="diagram__tall" viewBox="0 0 400 500" role="img" aria-labelledby="ref-tall-title" font-family="'JetBrains Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="14" font-weight="500" letter-spacing="0.06em" text-anchor="middle" fill="currentColor">
           <title id="ref-tall-title">Reference architecture: SAP S/4HANA feeds SAP BTP Integration Suite, which serves BigQuery, Salesforce and Cloud Run services; a reconciliation line returns from the cloud to SAP totals.</title>
           <rect x="21" y="37" width="318" height="62" fill="none" stroke="currentColor" stroke-width="2"/>
           <text x="180" y="64">SAP S/4HANA</text>
