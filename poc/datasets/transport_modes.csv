@@ -1,0 +1,4 @@
+mode,cost_per_tkm,co2_kg_per_tkm,handling_cost_per_t,handling_co2_kg_per_t,avg_speed_kmh,fixed_hours
+truck,0.090,0.090,0,0,65,2
+rail,0.035,0.025,45,12,40,30
+air,0.950,0.800,80,5,700,8

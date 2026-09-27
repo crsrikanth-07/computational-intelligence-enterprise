@@ -1,0 +1,1002 @@
+[
+ {
+  "key": "front:About This Book",
+  "match": "About This Book",
+  "level": "front"
+ },
+ {
+  "key": "front:Preface",
+  "match": "Preface",
+  "level": "front"
+ },
+ {
+  "key": "part:PART I",
+  "match": "PART I Foundations",
+  "level": "part"
+ },
+ {
+  "key": "H1:Chapter 1 — The Optimization Landscape in Modern Enterprise Systems",
+  "match": "Chapter 1 — The Optimization Landscape in Modern Enterprise Systems",
+  "level": "chapter"
+ },
+ {
+  "key": "H2:1.1 Why optimization, and why now",
+  "match": "1.1 Why optimization, and why now",
+  "level": "section"
+ },
+ {
+  "key": "H2:1.2 A working taxonomy",
+  "match": "1.2 A working taxonomy",
+  "level": "section"
+ },
+ {
+  "key": "H2:1.3 When to reach for each algorithm",
+  "match": "1.3 When to reach for each algorithm",
+  "level": "section"
+ },
+ {
+  "key": "H2:1.4 What this book will not do",
+  "match": "1.4 What this book will not do",
+  "level": "section"
+ },
+ {
+  "key": "H2:1.5 MILP or metaheuristic? A decision guide",
+  "match": "1.5 MILP or metaheuristic? A decision guide",
+  "level": "section"
+ },
+ {
+  "key": "H2:1.6 The road ahead",
+  "match": "1.6 The road ahead",
+  "level": "section"
+ },
+ {
+  "key": "H1:Chapter 2 — Mathematical Preliminaries and Notation",
+  "match": "Chapter 2 — Mathematical Preliminaries and Notation",
+  "level": "chapter"
+ },
+ {
+  "key": "H2:2.1 Decision variables, objective functions, and constraints",
+  "match": "2.1 Decision variables, objective functions, and constraints",
+  "level": "section"
+ },
+ {
+  "key": "H2:2.2 Fitness landscapes",
+  "match": "2.2 Fitness landscapes",
+  "level": "section"
+ },
+ {
+  "key": "H2:2.3 Convergence and stopping criteria",
+  "match": "2.3 Convergence and stopping criteria",
+  "level": "section"
+ },
+ {
+  "key": "H2:2.4 Measuring quality in multi-objective problems",
+  "match": "2.4 Measuring quality in multi-objective problems",
+  "level": "section"
+ },
+ {
+  "key": "H2:2.5 Notation summary",
+  "match": "2.5 Notation summary",
+  "level": "section"
+ },
+ {
+  "key": "H2:2.6 How this book reports results",
+  "match": "2.6 How this book reports results",
+  "level": "section"
+ },
+ {
+  "key": "part:PART II",
+  "match": "PART II Mathematical Machinery",
+  "level": "part"
+ },
+ {
+  "key": "H1:Chapter 3 — Metaheuristics: A Unified Framework",
+  "match": "Chapter 3 — Metaheuristics: A Unified Framework",
+  "level": "chapter"
+ },
+ {
+  "key": "H2:3.1 What is a metaheuristic?",
+  "match": "3.1 What is a metaheuristic?",
+  "level": "section"
+ },
+ {
+  "key": "H2:3.2 The exploration-exploitation trade-off",
+  "match": "3.2 The exploration-exploitation trade-off",
+  "level": "section"
+ },
+ {
+  "key": "H2:3.3 Common building blocks",
+  "match": "3.3 Common building blocks",
+  "level": "section"
+ },
+ {
+  "key": "H2:3.4 Single-point versus population-based methods",
+  "match": "3.4 Single-point versus population-based methods",
+  "level": "section"
+ },
+ {
+  "key": "H2:3.5 The No Free Lunch theorem",
+  "match": "3.5 The No Free Lunch theorem",
+  "level": "section"
+ },
+ {
+  "key": "H2:3.6 What convergence means (and does not mean)",
+  "match": "3.6 What convergence means (and does not mean)",
+  "level": "section"
+ },
+ {
+  "key": "H2:3.7 Why hybrids work",
+  "match": "3.7 Why hybrids work",
+  "level": "section"
+ },
+ {
+  "key": "H2:3.8 A reading map for the rest of the book",
+  "match": "3.8 A reading map for the rest of the book",
+  "level": "section"
+ },
+ {
+  "key": "H1:Chapter 4 — Stochastic Foundations: A Working Primer",
+  "match": "Chapter 4 — Stochastic Foundations: A Working Primer",
+  "level": "chapter"
+ },
+ {
+  "key": "H2:4.1 Random variables and distributions",
+  "match": "4.1 Random variables and distributions",
+  "level": "section"
+ },
+ {
+  "key": "H2:4.2 Independence and the Central Limit Theorem",
+  "match": "4.2 Independence and the Central Limit Theorem",
+  "level": "section"
+ },
+ {
+  "key": "H2:4.3 Markov chains",
+  "match": "4.3 Markov chains",
+  "level": "section"
+ },
+ {
+  "key": "H2:4.4 Random walks and diffusion",
+  "match": "4.4 Random walks and diffusion",
+  "level": "section"
+ },
+ {
+  "key": "H2:4.5 Monte Carlo estimation",
+  "match": "4.5 Monte Carlo estimation",
+  "level": "section"
+ },
+ {
+  "key": "H2:4.6 Bringing it back to the algorithms",
+  "match": "4.6 Bringing it back to the algorithms",
+  "level": "section"
+ },
+ {
+  "key": "H2:4.7 Comparing algorithms fairly",
+  "match": "4.7 Comparing algorithms fairly",
+  "level": "section"
+ },
+ {
+  "key": "H2:4.8 What the practitioner actually needs to remember",
+  "match": "4.8 What the practitioner actually needs to remember",
+  "level": "section"
+ },
+ {
+  "key": "part:PART III",
+  "match": "PART III Adaptive Genetic Optimization",
+  "level": "part"
+ },
+ {
+  "key": "H1:Chapter 5 — AGOA: Theory and Adaptive Mechanisms",
+  "match": "Chapter 5 — AGOA: Theory and Adaptive Mechanisms",
+  "level": "chapter"
+ },
+ {
+  "key": "H2:5.1 The textbook genetic algorithm in one page",
+  "match": "5.1 The textbook genetic algorithm in one page",
+  "level": "section"
+ },
+ {
+  "key": "H2:5.2 Why static GA parameters fail on supply networks",
+  "match": "5.2 Why static GA parameters fail on supply networks",
+  "level": "section"
+ },
+ {
+  "key": "H2:5.3 The AGOA algorithm",
+  "match": "5.3 The AGOA algorithm",
+  "level": "section"
+ },
+ {
+  "key": "H2:5.4 Objective, fitness and selection — the math",
+  "match": "5.4 Objective, fitness and selection — the math",
+  "level": "section"
+ },
+ {
+  "key": "H2:5.5 What makes a chromosome in this problem",
+  "match": "5.5 What makes a chromosome in this problem",
+  "level": "section"
+ },
+ {
+  "key": "H1:Chapter 6 — Implementing AGOA for Supply Network Planning",
+  "match": "Chapter 6 — Implementing AGOA for Supply Network Planning",
+  "level": "chapter"
+ },
+ {
+  "key": "H2:6.1 Code structure",
+  "match": "6.1 Code structure",
+  "level": "section"
+ },
+ {
+  "key": "H2:6.2 Fitness function in Python",
+  "match": "6.2 Fitness function in Python",
+  "level": "section"
+ },
+ {
+  "key": "H2:6.3 Selection, crossover, mutation",
+  "match": "6.3 Selection, crossover, mutation",
+  "level": "section"
+ },
+ {
+  "key": "H2:6.4 The adaptive update in detail",
+  "match": "6.4 The adaptive update in detail",
+  "level": "section"
+ },
+ {
+  "key": "H2:6.5 Exact baselines",
+  "match": "6.5 Exact baselines",
+  "level": "section"
+ },
+ {
+  "key": "H2:6.6 A complete run",
+  "match": "6.6 A complete run",
+  "level": "section"
+ },
+ {
+  "key": "H1:Chapter 7 — AGOA Case Study: Mid-Sized Consumer Goods Supply Network",
+  "match": "Chapter 7 — AGOA Case Study: Mid-Sized Consumer Goods Supply Network",
+  "level": "chapter"
+ },
+ {
+  "key": "H2:7.1 The scenario",
+  "match": "7.1 The scenario",
+  "level": "section"
+ },
+ {
+  "key": "H2:7.2 Results",
+  "match": "7.2 Results",
+  "level": "section"
+ },
+ {
+  "key": "H2:7.3 Adaptive versus fixed-rate GA",
+  "match": "7.3 Adaptive versus fixed-rate GA",
+  "level": "section"
+ },
+ {
+  "key": "H2:7.4 How far does it scale? An honest benchmark against MILP",
+  "match": "7.4 How far does it scale? An honest benchmark against MILP",
+  "level": "section"
+ },
+ {
+  "key": "H2:7.5 Production blueprint",
+  "match": "7.5 Production blueprint",
+  "level": "section"
+ },
+ {
+  "key": "part:PART IV",
+  "match": "PART IV Multi-Objective Simulated Annealing",
+  "level": "part"
+ },
+ {
+  "key": "H1:Chapter 8 — Simulated Annealing and the Pareto Front",
+  "match": "Chapter 8 — Simulated Annealing and the Pareto Front",
+  "level": "chapter"
+ },
+ {
+  "key": "H2:8.1 The metallurgy metaphor",
+  "match": "8.1 The metallurgy metaphor",
+  "level": "section"
+ },
+ {
+  "key": "H2:8.2 The single-objective algorithm",
+  "match": "8.2 The single-objective algorithm",
+  "level": "section"
+ },
+ {
+  "key": "H2:8.3 From one objective to many",
+  "match": "8.3 From one objective to many",
+  "level": "section"
+ },
+ {
+  "key": "H2:8.4 The freight problem",
+  "match": "8.4 The freight problem",
+  "level": "section"
+ },
+ {
+  "key": "H2:8.5 Why weighted sums miss part of the front",
+  "match": "8.5 Why weighted sums miss part of the front",
+  "level": "section"
+ },
+ {
+  "key": "H2:8.6 Hyperparameters and convergence",
+  "match": "8.6 Hyperparameters and convergence",
+  "level": "section"
+ },
+ {
+  "key": "H1:Chapter 9 — Implementing MOSA and the Weight-Sweep Frontier",
+  "match": "Chapter 9 — Implementing MOSA and the Weight-Sweep Frontier",
+  "level": "chapter"
+ },
+ {
+  "key": "H2:9.1 The problem object",
+  "match": "9.1 The problem object",
+  "level": "section"
+ },
+ {
+  "key": "H2:9.2 Neighbour generation",
+  "match": "9.2 Neighbour generation",
+  "level": "section"
+ },
+ {
+  "key": "H2:9.3 Weighted-sum SA",
+  "match": "9.3 Weighted-sum SA",
+  "level": "section"
+ },
+ {
+  "key": "H2:9.4 Archive management for MOSA",
+  "match": "9.4 Archive management for MOSA",
+  "level": "section"
+ },
+ {
+  "key": "H2:9.5 The exact front: merging lanes",
+  "match": "9.5 The exact front: merging lanes",
+  "level": "section"
+ },
+ {
+  "key": "H2:9.6 Measuring quality: hypervolume",
+  "match": "9.6 Measuring quality: hypervolume",
+  "level": "section"
+ },
+ {
+  "key": "H2:9.7 Results",
+  "match": "9.7 Results",
+  "level": "section"
+ },
+ {
+  "key": "H2:9.8 Production blueprint",
+  "match": "9.8 Production blueprint",
+  "level": "section"
+ },
+ {
+  "key": "part:PART V",
+  "match": "PART V Swarm Intelligence for Inventory",
+  "level": "part"
+ },
+ {
+  "key": "H1:Chapter 10 — Particle Swarm Optimization: Fundamentals",
+  "match": "Chapter 10 — Particle Swarm Optimization: Fundamentals",
+  "level": "chapter"
+ },
+ {
+  "key": "H2:10.1 The swarm metaphor",
+  "match": "10.1 The swarm metaphor",
+  "level": "section"
+ },
+ {
+  "key": "H2:10.2 The velocity and position update",
+  "match": "10.2 The velocity and position update",
+  "level": "section"
+ },
+ {
+  "key": "H2:10.3 The inventory problem: a (Q, r) policy",
+  "match": "10.3 The inventory problem: a (Q, r) policy",
+  "level": "section"
+ },
+ {
+  "key": "H2:10.4 A harder variant: quantity discounts",
+  "match": "10.4 A harder variant: quantity discounts",
+  "level": "section"
+ },
+ {
+  "key": "H2:10.5 Velocity clamping and boundary handling",
+  "match": "10.5 Velocity clamping and boundary handling",
+  "level": "section"
+ },
+ {
+  "key": "H2:10.6 When PSO struggles",
+  "match": "10.6 When PSO struggles",
+  "level": "section"
+ },
+ {
+  "key": "H1:Chapter 11 — PSO POC: Implementation Walk-Through",
+  "match": "Chapter 11 — PSO POC: Implementation Walk-Through",
+  "level": "chapter"
+ },
+ {
+  "key": "H2:11.1 The InventoryProblem class",
+  "match": "11.1 The InventoryProblem class",
+  "level": "section"
+ },
+ {
+  "key": "H2:11.2 PSOConfig — one dataclass, one place to tune",
+  "match": "11.2 PSOConfig — one dataclass, one place to tune",
+  "level": "section"
+ },
+ {
+  "key": "H2:11.3 The core loop",
+  "match": "11.3 The core loop",
+  "level": "section"
+ },
+ {
+  "key": "H2:11.4 The exact optimum",
+  "match": "11.4 The exact optimum",
+  "level": "section"
+ },
+ {
+  "key": "H2:11.5 Running the demo",
+  "match": "11.5 Running the demo",
+  "level": "section"
+ },
+ {
+  "key": "H2:11.6 When the swarm gets stuck",
+  "match": "11.6 When the swarm gets stuck",
+  "level": "section"
+ },
+ {
+  "key": "H1:Chapter 12 — Hybrid PSO-GA: Design and Rationale",
+  "match": "Chapter 12 — Hybrid PSO-GA: Design and Rationale",
+  "level": "chapter"
+ },
+ {
+  "key": "H2:12.1 Why hybridize",
+  "match": "12.1 Why hybridize",
+  "level": "section"
+ },
+ {
+  "key": "H2:12.2 The algorithm",
+  "match": "12.2 The algorithm",
+  "level": "section"
+ },
+ {
+  "key": "H2:12.3 BLX-α crossover and Gaussian mutation",
+  "match": "12.3 BLX-α crossover and Gaussian mutation",
+  "level": "section"
+ },
+ {
+  "key": "H2:12.4 Why cross-pollination, not merging",
+  "match": "12.4 Why cross-pollination, not merging",
+  "level": "section"
+ },
+ {
+  "key": "H2:12.5 Evaluation budgets",
+  "match": "12.5 Evaluation budgets",
+  "level": "section"
+ },
+ {
+  "key": "H2:12.6 Parameter count and tuning",
+  "match": "12.6 Parameter count and tuning",
+  "level": "section"
+ },
+ {
+  "key": "H1:Chapter 13 — Hybrid PSO-GA Case Study and Comparison",
+  "match": "Chapter 13 — Hybrid PSO-GA Case Study and Comparison",
+  "level": "chapter"
+ },
+ {
+  "key": "H2:13.1 The case study",
+  "match": "13.1 The case study",
+  "level": "section"
+ },
+ {
+  "key": "H2:13.2 The base model at equal budgets",
+  "match": "13.2 The base model at equal budgets",
+  "level": "section"
+ },
+ {
+  "key": "H2:13.3 Quantity discounts at equal budgets",
+  "match": "13.3 Quantity discounts at equal budgets",
+  "level": "section"
+ },
+ {
+  "key": "H2:13.4 Interpreting the results",
+  "match": "13.4 Interpreting the results",
+  "level": "section"
+ },
+ {
+  "key": "H2:13.5 When to use which",
+  "match": "13.5 When to use which",
+  "level": "section"
+ },
+ {
+  "key": "H2:13.6 Production blueprint",
+  "match": "13.6 Production blueprint",
+  "level": "section"
+ },
+ {
+  "key": "part:PART VI",
+  "match": "PART VI Bessel Functions for Visual Inspection",
+  "level": "part"
+ },
+ {
+  "key": "H1:Chapter 14 — Bessel-Fourier Descriptors: Theory",
+  "match": "Chapter 14 — Bessel-Fourier Descriptors: Theory",
+  "level": "chapter"
+ },
+ {
+  "key": "H2:14.1 Why this chapter belongs here",
+  "match": "14.1 Why this chapter belongs here",
+  "level": "section"
+ },
+ {
+  "key": "H2:14.2 Bessel functions of the first kind",
+  "match": "14.2 Bessel functions of the first kind",
+  "level": "section"
+ },
+ {
+  "key": "H2:14.3 From image to radial profile",
+  "match": "14.3 From image to radial profile",
+  "level": "section"
+ },
+ {
+  "key": "H2:14.4 The radial Bessel filter bank",
+  "match": "14.4 The radial Bessel filter bank",
+  "level": "section"
+ },
+ {
+  "key": "H2:14.5 Full Bessel-Fourier moments",
+  "match": "14.5 Full Bessel-Fourier moments",
+  "level": "section"
+ },
+ {
+  "key": "H2:14.6 The scale parameter λ",
+  "match": "14.6 The scale parameter λ",
+  "level": "section"
+ },
+ {
+  "key": "H2:14.7 Normalization and invariance",
+  "match": "14.7 Normalization and invariance",
+  "level": "section"
+ },
+ {
+  "key": "H2:14.8 Limitations",
+  "match": "14.8 Limitations",
+  "level": "section"
+ },
+ {
+  "key": "H1:Chapter 15 — BFD POC: A Shape-Classification Pipeline",
+  "match": "Chapter 15 — BFD POC: A Shape-Classification Pipeline",
+  "level": "chapter"
+ },
+ {
+  "key": "H2:15.1 The pipeline",
+  "match": "15.1 The pipeline",
+  "level": "section"
+ },
+ {
+  "key": "H2:15.2 The synthetic dataset",
+  "match": "15.2 The synthetic dataset",
+  "level": "section"
+ },
+ {
+  "key": "H2:15.3 Computing the descriptors",
+  "match": "15.3 Computing the descriptors",
+  "level": "section"
+ },
+ {
+  "key": "H2:15.4 Baseline results",
+  "match": "15.4 Baseline results",
+  "level": "section"
+ },
+ {
+  "key": "H2:15.5 Tuning the descriptor with PSO",
+  "match": "15.5 Tuning the descriptor with PSO",
+  "level": "section"
+ },
+ {
+  "key": "H2:15.6 Comparison with a CNN",
+  "match": "15.6 Comparison with a CNN",
+  "level": "section"
+ },
+ {
+  "key": "H2:15.7 Production blueprint",
+  "match": "15.7 Production blueprint",
+  "level": "section"
+ },
+ {
+  "key": "part:PART VII",
+  "match": "PART VII Integration and Deployment",
+  "level": "part"
+ },
+ {
+  "key": "H1:Chapter 16 — A Unified Optimization Library",
+  "match": "Chapter 16 — A Unified Optimization Library",
+  "level": "chapter"
+ },
+ {
+  "key": "H2:16.1 Why a unified library",
+  "match": "16.1 Why a unified library",
+  "level": "section"
+ },
+ {
+  "key": "H2:16.2 The RunReport contract",
+  "match": "16.2 The RunReport contract",
+  "level": "section"
+ },
+ {
+  "key": "H2:16.3 Problems, generators and exact baselines",
+  "match": "16.3 Problems, generators and exact baselines",
+  "level": "section"
+ },
+ {
+  "key": "H2:16.4 Directory layout",
+  "match": "16.4 Directory layout",
+  "level": "section"
+ },
+ {
+  "key": "H2:16.5 How the unified demo works",
+  "match": "16.5 How the unified demo works",
+  "level": "section"
+ },
+ {
+  "key": "H2:16.6 Benchmarks and tests",
+  "match": "16.6 Benchmarks and tests",
+  "level": "section"
+ },
+ {
+  "key": "H1:Chapter 17 — From POC to Production: Deployment Blueprint",
+  "match": "Chapter 17 — From POC to Production: Deployment Blueprint",
+  "level": "chapter"
+ },
+ {
+  "key": "H2:17.1 The reference architecture",
+  "match": "17.1 The reference architecture",
+  "level": "section"
+ },
+ {
+  "key": "H2:17.2 Service-layer contract",
+  "match": "17.2 Service-layer contract",
+  "level": "section"
+ },
+ {
+  "key": "H2:17.3 Compute-and-memory budget",
+  "match": "17.3 Compute-and-memory budget",
+  "level": "section"
+ },
+ {
+  "key": "H2:17.4 Observability",
+  "match": "17.4 Observability",
+  "level": "section"
+ },
+ {
+  "key": "H2:17.5 Security and data handling",
+  "match": "17.5 Security and data handling",
+  "level": "section"
+ },
+ {
+  "key": "H2:17.6 Testing and rollout",
+  "match": "17.6 Testing and rollout",
+  "level": "section"
+ },
+ {
+  "key": "part:PART VIII",
+  "match": "PART VIII Capstone and Outlook",
+  "level": "part"
+ },
+ {
+  "key": "H1:Chapter 18 — Margin Leak Finder: Deterministic Detection",
+  "match": "Chapter 18 — Margin Leak Finder: Deterministic Detection",
+  "level": "chapter"
+ },
+ {
+  "key": "H2:18.1 The question",
+  "match": "18.1 The question",
+  "level": "section"
+ },
+ {
+  "key": "H2:18.2 Design principles",
+  "match": "18.2 Design principles",
+  "level": "section"
+ },
+ {
+  "key": "H2:18.3 Architecture",
+  "match": "18.3 Architecture",
+  "level": "section"
+ },
+ {
+  "key": "H2:18.4 Reference price and the price waterfall",
+  "match": "18.4 Reference price and the price waterfall",
+  "level": "section"
+ },
+ {
+  "key": "H2:18.5 The signed margin bridge",
+  "match": "18.5 The signed margin bridge",
+  "level": "section"
+ },
+ {
+  "key": "H2:18.6 Rules, severity, coverage and patterns",
+  "match": "18.6 Rules, severity, coverage and patterns",
+  "level": "section"
+ },
+ {
+  "key": "H2:18.7 The golden catalogue",
+  "match": "18.7 The golden catalogue",
+  "level": "section"
+ },
+ {
+  "key": "H2:18.8 The reference implementation",
+  "match": "18.8 The reference implementation",
+  "level": "section"
+ },
+ {
+  "key": "H1:Chapter 19 — Calibrating Detection with Multi-Objective Search",
+  "match": "Chapter 19 — Calibrating Detection with Multi-Objective Search",
+  "level": "chapter"
+ },
+ {
+  "key": "H2:19.1 The calibration question",
+  "match": "19.1 The calibration question",
+  "level": "section"
+ },
+ {
+  "key": "H2:19.2 Formulation",
+  "match": "19.2 Formulation",
+  "level": "section"
+ },
+ {
+  "key": "H2:19.3 A reviewed history",
+  "match": "19.3 A reviewed history",
+  "level": "section"
+ },
+ {
+  "key": "H2:19.4 An exact front by decomposition",
+  "match": "19.4 An exact front by decomposition",
+  "level": "section"
+ },
+ {
+  "key": "H2:19.5 MOSA on the same problem",
+  "match": "19.5 MOSA on the same problem",
+  "level": "section"
+ },
+ {
+  "key": "H2:19.6 Results and a decision rule",
+  "match": "19.6 Results and a decision rule",
+  "level": "section"
+ },
+ {
+  "key": "H2:19.7 Governance",
+  "match": "19.7 Governance",
+  "level": "section"
+ },
+ {
+  "key": "H2:19.8 What the capstone teaches",
+  "match": "19.8 What the capstone teaches",
+  "level": "section"
+ },
+ {
+  "key": "H1:Chapter 20 — Future Directions and Research Agenda",
+  "match": "Chapter 20 — Future Directions and Research Agenda",
+  "level": "chapter"
+ },
+ {
+  "key": "H2:20.1 Predictable extensions",
+  "match": "20.1 Predictable extensions",
+  "level": "section"
+ },
+ {
+  "key": "H2:20.2 Integration with learned models",
+  "match": "20.2 Integration with learned models",
+  "level": "section"
+ },
+ {
+  "key": "H2:20.3 Reinforcement learning parallels",
+  "match": "20.3 Reinforcement learning parallels",
+  "level": "section"
+ },
+ {
+  "key": "H2:20.4 Sustainability as a first-class objective",
+  "match": "20.4 Sustainability as a first-class objective",
+  "level": "section"
+ },
+ {
+  "key": "H2:20.5 Closing thoughts",
+  "match": "20.5 Closing thoughts",
+  "level": "section"
+ },
+ {
+  "key": "part:APPENDICES",
+  "match": "APPENDICES",
+  "level": "part"
+ },
+ {
+  "key": "H1:Appendix A — Running the Code",
+  "match": "Appendix A — Running the Code",
+  "level": "chapter"
+ },
+ {
+  "key": "H2:A.1 Requirements",
+  "match": "A.1 Requirements",
+  "level": "section"
+ },
+ {
+  "key": "H2:A.2 Directory layout",
+  "match": "A.2 Directory layout",
+  "level": "section"
+ },
+ {
+  "key": "H2:A.3 Running individual demos",
+  "match": "A.3 Running individual demos",
+  "level": "section"
+ },
+ {
+  "key": "H2:A.4 The unified demo, worked examples and benchmarks",
+  "match": "A.4 The unified demo, worked examples and benchmarks",
+  "level": "section"
+ },
+ {
+  "key": "H2:A.5 Tests",
+  "match": "A.5 Tests",
+  "level": "section"
+ },
+ {
+  "key": "H2:A.6 Reproducibility",
+  "match": "A.6 Reproducibility",
+  "level": "section"
+ },
+ {
+  "key": "H1:Appendix B — Dataset Specifications",
+  "match": "Appendix B — Dataset Specifications",
+  "level": "chapter"
+ },
+ {
+  "key": "H2:B.1 make_supply_network",
+  "match": "B.1 make_supply_network",
+  "level": "section"
+ },
+ {
+  "key": "H2:B.2 make_transportation_network",
+  "match": "B.2 make_transportation_network",
+  "level": "section"
+ },
+ {
+  "key": "H2:B.3 make_inventory_dataset",
+  "match": "B.3 make_inventory_dataset",
+  "level": "section"
+ },
+ {
+  "key": "H2:B.4 make_synthetic_dataset",
+  "match": "B.4 make_synthetic_dataset",
+  "level": "section"
+ },
+ {
+  "key": "H2:B.5 CSV datasets",
+  "match": "B.5 CSV datasets",
+  "level": "section"
+ },
+ {
+  "key": "H2:B.6 Capstone data",
+  "match": "B.6 Capstone data",
+  "level": "section"
+ },
+ {
+  "key": "H1:Appendix C — References and Further Reading",
+  "match": "Appendix C — References and Further Reading",
+  "level": "chapter"
+ },
+ {
+  "key": "H2:C.1 Original preprints",
+  "match": "C.1 Original preprints",
+  "level": "section"
+ },
+ {
+  "key": "H2:C.2 Foundational works",
+  "match": "C.2 Foundational works",
+  "level": "section"
+ },
+ {
+  "key": "H2:C.3 Textbooks for further study",
+  "match": "C.3 Textbooks for further study",
+  "level": "section"
+ },
+ {
+  "key": "H2:C.4 Online resources",
+  "match": "C.4 Online resources",
+  "level": "section"
+ },
+ {
+  "key": "H1:Appendix D — Worked Examples with CSV Data and Python",
+  "match": "Appendix D — Worked Examples with CSV Data and Python",
+  "level": "chapter"
+ },
+ {
+  "key": "H2:D.1 AGOA on the CSV supply network",
+  "match": "D.1 AGOA on the CSV supply network",
+  "level": "section"
+ },
+ {
+  "key": "H2:D.2 MOSA on the CSV freight lanes",
+  "match": "D.2 MOSA on the CSV freight lanes",
+  "level": "section"
+ },
+ {
+  "key": "H2:D.3 PSO on the CSV inventory",
+  "match": "D.3 PSO on the CSV inventory",
+  "level": "section"
+ },
+ {
+  "key": "H2:D.4 Hybrid PSO-GA versus PSO on CSV discounts",
+  "match": "D.4 Hybrid PSO-GA versus PSO on CSV discounts",
+  "level": "section"
+ },
+ {
+  "key": "H2:D.5 Bessel-Fourier features on the shape dataset",
+  "match": "D.5 Bessel-Fourier features on the shape dataset",
+  "level": "section"
+ },
+ {
+  "key": "H2:D.6 The Margin Leak Finder golden run",
+  "match": "D.6 The Margin Leak Finder golden run",
+  "level": "section"
+ },
+ {
+  "key": "H2:D.7 Running every worked example",
+  "match": "D.7 Running every worked example",
+  "level": "section"
+ },
+ {
+  "key": "H1:Appendix E — Questions, Exercises, and Projects",
+  "match": "Appendix E — Questions, Exercises, and Projects",
+  "level": "chapter"
+ },
+ {
+  "key": "H2:E.1 Parts I and II — Foundations and machinery",
+  "match": "E.1 Parts I and II — Foundations and machinery",
+  "level": "section"
+ },
+ {
+  "key": "H2:E.2 Part III — Adaptive Genetic Optimization",
+  "match": "E.2 Part III — Adaptive Genetic Optimization",
+  "level": "section"
+ },
+ {
+  "key": "H2:E.3 Part IV — Multi-Objective Simulated Annealing",
+  "match": "E.3 Part IV — Multi-Objective Simulated Annealing",
+  "level": "section"
+ },
+ {
+  "key": "H2:E.4 Part V — Swarm Intelligence for Inventory",
+  "match": "E.4 Part V — Swarm Intelligence for Inventory",
+  "level": "section"
+ },
+ {
+  "key": "H2:E.5 Part VI — Bessel Functions for Visual Inspection",
+  "match": "E.5 Part VI — Bessel Functions for Visual Inspection",
+  "level": "section"
+ },
+ {
+  "key": "H2:E.6 Part VII — Integration and Deployment",
+  "match": "E.6 Part VII — Integration and Deployment",
+  "level": "section"
+ },
+ {
+  "key": "H2:E.7 Part VIII — Capstone",
+  "match": "E.7 Part VIII — Capstone",
+  "level": "section"
+ },
+ {
+  "key": "H2:E.8 Capstone project",
+  "match": "E.8 Capstone project",
+  "level": "section"
+ },
+ {
+  "key": "H2:E.9 Selected solutions",
+  "match": "E.9 Selected solutions",
+  "level": "section"
+ },
+ {
+  "key": "H1:Index",
+  "match": "Index",
+  "level": "chapter"
+ },
+ {
+  "key": "H1:About the Author",
+  "match": "About the Author",
+  "level": "chapter"
+ }
+]

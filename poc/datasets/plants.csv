@@ -1,0 +1,4 @@
+plant_id,plant_name,region,capacity_units_per_week,fixed_operating_cost_per_week
+1,PlantAlpha,US-Central,1300,4500
+2,PlantBeta,US-Central,950,3200
+3,PlantGamma,US-East,1400,5100

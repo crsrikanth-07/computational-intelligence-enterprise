@@ -1,0 +1,11 @@
+{
+  "name": "computational-intelligence-enterprise-book",
+  "private": true,
+  "description": "Manuscript build for 'Computational Intelligence for Enterprise Systems' (KDP 6x9 interior)",
+  "scripts": {
+    "build": "python3 make_kdp.py && python3 make_index.py && python3 make_kdp.py"
+  },
+  "dependencies": {
+    "docx": "^9.6.1"
+  }
+}

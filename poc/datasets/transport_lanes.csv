@@ -1,0 +1,21 @@
+origin,destination,distance_km,weekly_tonnes,max_transit_hours,notes
+Chicago,Indianapolis,290,38,24,next-day replenishment
+Chicago,Detroit,455,30,48,regional
+Chicago,St. Louis,480,26,72,regional
+Chicago,Columbus,570,22,48,regional
+Chicago,Nashville,760,18,72,regional
+Chicago,Kansas City,820,20,120,long-haul
+Chicago,Memphis,855,16,120,long-haul
+Chicago,Atlanta,1150,24,72,long-haul
+Chicago,Dallas,1500,14,120,long-haul
+Indianapolis,Columbus,280,18,24,next-day replenishment
+Indianapolis,Nashville,460,15,48,regional
+Indianapolis,Atlanta,855,12,72,long-haul
+St. Louis,Kansas City,400,17,72,regional
+St. Louis,Memphis,455,13,48,regional
+Memphis,Dallas,725,19,72,regional
+Memphis,Atlanta,620,11,12,expedited
+Nashville,Atlanta,400,21,48,regional
+Atlanta,Dallas,1250,6,12,expedited (air only)
+Kansas City,Dallas,815,15,96,long-haul
+Detroit,Columbus,330,14,24,next-day replenishment

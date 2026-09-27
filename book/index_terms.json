@@ -1,0 +1,290 @@
+[
+ {
+  "term": "Adaptive mutation rate",
+  "pages": "15–16, 26, 30, 32, 37"
+ },
+ {
+  "term": "AGOA (Adaptive Genetic Optimization Algorithm)",
+  "pages": "13, 15, 17, 38, 42–43"
+ },
+ {
+  "term": "Archive MOSA",
+  "pages": "45, 47, 49, 51, 53–54"
+ },
+ {
+  "term": "Backorder cost",
+  "pages": "56–57, 62, 110, 118, 126"
+ },
+ {
+  "term": "Bessel functions",
+  "pages": "9, 70–72, 124"
+ },
+ {
+  "term": "Bessel-Fourier moments",
+  "pages": "72–73, 75–76"
+ },
+ {
+  "term": "BLX-α crossover",
+  "pages": "15, 20, 63–65"
+ },
+ {
+  "term": "Break-even distance",
+  "pages": "48"
+ },
+ {
+  "term": "Confusion matrix",
+  "pages": "75, 77, 81, 120"
+ },
+ {
+  "term": "Cooling schedule",
+  "pages": "3, 9, 18–19, 24, 26"
+ },
+ {
+  "term": "Coverage (evidence)",
+  "pages": "94–96, 121"
+ },
+ {
+  "term": "Cross-pollination",
+  "pages": "15, 63–64, 67"
+ },
+ {
+  "term": "Cross-validation",
+  "pages": "77–79"
+ },
+ {
+  "term": "Crossover",
+  "pages": "3, 30, 32, 36–37, 63"
+ },
+ {
+  "term": "Crowding distance",
+  "pages": "49, 52"
+ },
+ {
+  "term": "Decision guide, MILP or metaheuristic",
+  "pages": "4"
+ },
+ {
+  "term": "Demonstration policy",
+  "pages": "91, 94"
+ },
+ {
+  "term": "Diversity, population",
+  "pages": "15–17, 31–32, 37"
+ },
+ {
+  "term": "Dominance, Pareto",
+  "pages": "9–10, 47, 51–52, 99"
+ },
+ {
+  "term": "Economic order quantity (EOQ)",
+  "pages": "58, 60, 62, 110, 124, 126"
+ },
+ {
+  "term": "Elitism",
+  "pages": "14, 20, 30"
+ },
+ {
+  "term": "Emission factors",
+  "pages": "47, 124"
+ },
+ {
+  "term": "Encoding, chromosome",
+  "pages": "34, 36, 123"
+ },
+ {
+  "term": "Equal evaluation budgets",
+  "pages": "10, 49, 53, 64, 66–67"
+ },
+ {
+  "term": "Exact Pareto front",
+  "pages": "11, 52–53, 87, 99–100"
+ },
+ {
+  "term": "Exhaustive enumeration",
+  "pages": "6, 11, 29, 34, 37, 42"
+ },
+ {
+  "term": "Fitness landscape",
+  "pages": "6–7"
+ },
+ {
+  "term": "Genetic algorithm",
+  "pages": "5, 16, 27, 29–30, 63"
+ },
+ {
+  "term": "Golden catalogue",
+  "pages": "11, 82, 84, 95–97"
+ },
+ {
+  "term": "HiGHS solver",
+  "pages": "4–5, 11, 37, 42, 87"
+ },
+ {
+  "term": "Hold-out data",
+  "pages": "11, 27, 82, 99–101"
+ },
+ {
+  "term": "Hybrid PSO-GA",
+  "pages": "3, 10, 13, 15, 19, 66"
+ },
+ {
+  "term": "Hypervolume",
+  "pages": "9–10, 52–53, 83, 100"
+ },
+ {
+  "term": "Inertia weight",
+  "pages": "9, 14–16, 20, 26"
+ },
+ {
+  "term": "Knee point",
+  "pages": "53–54, 118, 124"
+ },
+ {
+  "term": "Lane merging, exact front",
+  "pages": "11, 52, 99"
+ },
+ {
+  "term": "Margin bridge",
+  "pages": "93, 96–97, 125"
+ },
+ {
+  "term": "Margin Leak Finder",
+  "pages": "6, 84, 87, 90–92"
+ },
+ {
+  "term": "Markov chain",
+  "pages": "23–24, 26, 28, 122"
+ },
+ {
+  "term": "MILP (mixed-integer linear programming)",
+  "pages": "4–6, 11, 42–43"
+ },
+ {
+  "term": "Model Context Protocol (MCP)",
+  "pages": "92"
+ },
+ {
+  "term": "Monte Carlo",
+  "pages": "24–26, 28"
+ },
+ {
+  "term": "MOSA (multi-objective simulated annealing)",
+  "pages": "20, 47, 49, 51, 53, 100"
+ },
+ {
+  "term": "Mutation",
+  "pages": "15–16, 20–21, 26, 32"
+ },
+ {
+  "term": "No Free Lunch theorem",
+  "pages": "17, 19, 63, 122"
+ },
+ {
+  "term": "Normal loss function",
+  "pages": "57"
+ },
+ {
+  "term": "Optimality gap",
+  "pages": "10, 27, 38, 41–43"
+ },
+ {
+  "term": "Pareto front",
+  "pages": "6–8, 10–11, 46"
+ },
+ {
+  "term": "Particle swarm optimization (PSO)",
+  "pages": "9, 26, 66–67, 83, 119"
+ },
+ {
+  "term": "Penalty",
+  "pages": "33, 36, 38, 40, 42, 44"
+ },
+ {
+  "term": "Premature convergence",
+  "pages": "3, 16, 58, 66"
+ },
+ {
+  "term": "Price agreement",
+  "pages": "2, 91, 93–95, 98"
+ },
+ {
+  "term": "Quantity discounts",
+  "pages": "5, 55, 57–58, 60, 119"
+ },
+ {
+  "term": "Radial profile",
+  "pages": "71–73, 76, 105"
+ },
+ {
+  "term": "Reorder point",
+  "pages": "56, 58, 61–62"
+ },
+ {
+  "term": "Reproducibility",
+  "pages": "61, 84, 89, 108"
+ },
+ {
+  "term": "Rotation invariance",
+  "pages": "70, 72–73, 124"
+ },
+ {
+  "term": "RunReport",
+  "pages": "8, 19, 35, 37, 81, 88"
+ },
+ {
+  "term": "Safety stock",
+  "pages": "57, 62, 119, 124, 126"
+ },
+ {
+  "term": "Severity",
+  "pages": "91, 94–96, 121, 125"
+ },
+ {
+  "term": "Simulated annealing",
+  "pages": "3–4, 9, 13, 46, 104"
+ },
+ {
+  "term": "Single sourcing",
+  "pages": "33, 39, 117"
+ },
+ {
+  "term": "Stagnation",
+  "pages": "8, 15, 31–32, 37, 123"
+ },
+ {
+  "term": "Supported points",
+  "pages": "49"
+ },
+ {
+  "term": "Threshold calibration",
+  "pages": "11, 44, 98, 101, 107, 121"
+ },
+ {
+  "term": "Tournament selection",
+  "pages": "30, 32–33, 36, 63, 65"
+ },
+ {
+  "term": "Value Lens",
+  "pages": "91"
+ },
+ {
+  "term": "Velocity clamping",
+  "pages": "58, 61, 65, 94, 125"
+ },
+ {
+  "term": "Visual inspection",
+  "pages": "70–71, 124"
+ },
+ {
+  "term": "Weight sweep",
+  "pages": "47, 49–50, 53, 83, 103"
+ },
+ {
+  "term": "Weighted sum",
+  "pages": "45, 47, 49, 51, 123"
+ },
+ {
+  "term": "Wilson score interval",
+  "pages": "27, 122–123, 126"
+ }
+]

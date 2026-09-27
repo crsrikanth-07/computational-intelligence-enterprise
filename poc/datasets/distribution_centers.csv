@@ -1,0 +1,7 @@
+dc_id,dc_name,region,weekly_demand_units
+1,DC-NE,US-Northeast,650
+2,DC-MA,US-MidAtlantic,480
+3,DC-SE,US-Southeast,720
+4,DC-MW,US-Midwest,550
+5,DC-SW,US-Southwest,390
+6,DC-NW,US-Northwest,430

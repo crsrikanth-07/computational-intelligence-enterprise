@@ -1,0 +1,6 @@
+supplier_id,supplier_name,region,capacity_units_per_week,fixed_plant_cost_note
+1,SupplierCo-North,US-Midwest,850,-
+2,SupplierCo-East,US-Northeast,1100,-
+3,MetalWorks-South,US-South,620,-
+4,Precision-Mex,Mexico,480,-
+5,Global-West,US-West,950,-

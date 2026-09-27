@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+book/node_modules/
+book/_build/
+# Built book files. Keep them out of a public repository if you sell the book
+# (and always if the ebook is enrolled in KDP Select, which requires exclusivity).
+kdp/*.pdf
+kdp/*.docx
+kdp/*.jpg
