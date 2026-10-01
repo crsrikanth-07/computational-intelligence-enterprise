@@ -312,9 +312,9 @@ function svls_hub( $slug ) {
 			'label' => 'Products',
 			'lead'  => 'Three products, one discipline: agents act through defined tools, and people make the decisions.',
 			'items' => array(
+				array( 'title' => 'LogicPilot (launching 12 Nov 2026)', 'href' => '/products/logicpilot/', 'cta' => 'See LogicPilot', 'body' => 'MCP production assistant for Logic Pro. Describe the musical direction and get an editable session: tracks, MIDI, song sections and arrangement structure. Development demo published.' ),
 				array( 'title' => 'Value Lens (private beta)', 'href' => '/products/value-lens/', 'cta' => 'See Value Lens', 'body' => 'Margin leak finder for order-to-cash on SAP. Every case carries its sources, its calculation and its decisions. Private beta on synthetic data; production SAP connector in development.' ),
 				array( 'title' => 'SAP Intelligence Suite', 'href' => '/products/sap-intelligence-suite/', 'cta' => 'See SAP Intelligence Suite', 'body' => 'The workbench behind our AI-assisted SAP engineering: integration flows, ABAP and RAP generated from plain-English requests, reviewed by an architect before they reach a landscape. Available to customers on request.' ),
-				array( 'title' => 'LogicPilot (launching 12 Nov 2026)', 'href' => '/products/logicpilot/', 'cta' => 'See LogicPilot', 'body' => 'MCP production assistant for Logic Pro. Describe the musical direction and get an editable session: tracks, MIDI, song sections and arrangement structure. Development demo published.' ),
 			),
 		),
 	);

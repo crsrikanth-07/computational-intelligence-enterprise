@@ -27,9 +27,9 @@
         <div class="footer__col">
           <p class="eyebrow">Products</p>
           <ul>
+            <li><a href="/products/logicpilot/">LogicPilot (new)</a></li>
             <li><a href="/products/value-lens/">Value Lens (private beta)</a></li>
             <li><a href="/products/sap-intelligence-suite/">SAP Intelligence Suite</a></li>
-            <li><a href="/products/logicpilot/">LogicPilot (new)</a></li>
             <li><a href="/products/value-lens/#beta">Request beta access</a></li>
             <li><a href="/services/ai/#control-model">The control model</a></li>
           </ul>
