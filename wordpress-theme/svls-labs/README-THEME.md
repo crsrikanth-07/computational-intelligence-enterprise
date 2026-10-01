@@ -17,6 +17,7 @@ The theme picks the template from the page's path automatically (`functions.php`
 | `/approach/` | `approach` | none | `page-approach.php` | Governed Delivery Approach |
 | `/contact/` | `contact` | none | `page-contact.php` | Contact SVLS LABS |
 | `/privacy/` | `privacy` | none | `page-privacy.php` | Privacy Policy |
+| `/products/logicpilot/` | `logicpilot` | `products` | `page-products-logicpilot.php` | LogicPilot: MCP Production Assistant for Logic Pro |
 | `/products/sap-intelligence-suite/` | `sap-intelligence-suite` | `products` | `page-products-sap-intelligence-suite.php` | SAP Intelligence Suite: Integration Flows, ABAP, RAP |
 | `/products/value-lens/` | `value-lens` | `products` | `page-products-value-lens.php` | Value Lens: Margin Leak Finder for SAP O2C |
 | `/services/ai/` | `ai` | `services` | `page-services-ai.php` | Governed Agentic & Applied AI on SAP BTP |

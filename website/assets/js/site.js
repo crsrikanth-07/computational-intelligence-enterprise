@@ -361,7 +361,7 @@
   function showFailed(form, data) {
     var box = qs('.form__failed', form);
     if (!box) { box = doc.createElement('div'); box.className = 'form__failed'; box.setAttribute('role', 'alert'); form.appendChild(box); }
-    box.innerHTML = 'Sending failed. Email us instead: <a href="' + mailtoFor(form, data) + '">' + FALLBACK_EMAIL + '</a> (<span class="todo">TODO</span> client)';
+    box.innerHTML = 'Sending failed. Email us instead: <a href="' + mailtoFor(form, data) + '">' + FALLBACK_EMAIL + '</a>.';
     box.hidden = false;
     var submit = qs('[type="submit"]', form);
     if (submit) submit.disabled = false;
@@ -422,4 +422,18 @@
      Copyright year
      --------------------------------------------------------------------------- */
   qsa('[data-year]').forEach(function (el) { el.textContent = String(new Date().getFullYear()); });
+
+  /* ---------------------------------------------------------------------------
+     Launch countdown: <span data-countdown="2026-11-12T00:00:00+05:30" hidden></span>
+     Shows "N days to go" before the date and "Launching today" on the day; stays hidden after it
+     and without JavaScript (the launch date is always printed next to it).
+     --------------------------------------------------------------------------- */
+  qsa('[data-countdown]').forEach(function (el) {
+    var t = Date.parse(el.getAttribute('data-countdown'));
+    if (isNaN(t)) return;
+    var days = Math.ceil((t - Date.now()) / 86400000);
+    if (days < 0) return;
+    el.textContent = days === 0 ? 'Launching today' : days === 1 ? '1 day to go' : days + ' days to go';
+    el.hidden = false;
+  });
 })();

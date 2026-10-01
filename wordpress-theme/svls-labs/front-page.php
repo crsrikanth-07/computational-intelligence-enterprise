@@ -58,41 +58,6 @@ $GLOBALS['svls_page_head'] = function () { ?>
 <?php };
 get_header();
 ?>
-<div class="sheet-backdrop" data-menu-backdrop hidden></div>
-<div class="sheet" id="mobile-sheet" hidden>
-  <nav aria-label="Menu">
-    <ul class="sheet__list">
-      <li>
-        <span class="eyebrow sheet__group-label" id="sheet-services">Services</span>
-        <ul class="sheet__sub" aria-labelledby="sheet-services">
-          <li><a class="sheet__link" href="/services/sap/">SAP &amp; ERP</a></li>
-          <li><a class="sheet__link" href="/services/cloud/">Cloud</a></li>
-          <li><a class="sheet__link" href="/services/ai/">Agentic &amp; Applied AI</a></li>
-        </ul>
-      </li>
-      <li>
-        <span class="eyebrow sheet__group-label" id="sheet-products">Products</span>
-        <ul class="sheet__sub" aria-labelledby="sheet-products">
-          <li><a class="sheet__link" href="/products/value-lens/">Value Lens <span class="nav-beta">Private beta</span></a></li>
-          <li><a class="sheet__link" href="/products/sap-intelligence-suite/">SAP Intelligence Suite</a></li>
-        </ul>
-      </li>
-      <li><a class="sheet__link" href="/approach/">Approach</a></li>
-      <li><a class="sheet__link" href="/about/">About</a></li>
-      <li><a class="sheet__link" href="/contact/">Contact</a></li>
-    </ul>
-    <div class="sheet__actions">
-      <a class="btn btn--primary" href="/contact/?intent=discovery">Book a discovery call</a>
-      <a class="btn btn--secondary" href="/products/value-lens/#beta">Request Value Lens beta access</a>
-    </div>
-  </nav>
-  <div class="sheet__theme" role="group" aria-label="Appearance">
-    <span class="sheet__theme-label" aria-hidden="true">Appearance:</span>
-    <button type="button" class="chip" data-theme-choice="system" aria-pressed="true">System</button>
-    <button type="button" class="chip" data-theme-choice="light" aria-pressed="false">Light</button>
-    <button type="button" class="chip" data-theme-choice="dark" aria-pressed="false">Dark</button>
-  </div>
-</div>
 <main id="main">
 
   <!-- 01 Hero -->
@@ -115,6 +80,7 @@ get_header();
       </svg>
     </div>
     <div class="container">
+      <a class="launch-pill" href="/products/logicpilot/"><span class="launch-pill__tag">New</span><span>LogicPilot, MCP for Logic Pro. Launching 12 November 2026.</span><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
       <div class="section-mark"><span class="numeral">01</span><p class="eyebrow">SAP · Cloud · Governed agentic &amp; applied AI</p></div>
       <div class="grid hero__grid">
         <div class="hero__copy col-7">
@@ -193,7 +159,7 @@ get_header();
         <ul class="proof-row hero__rows-b">
           <li><span class="proof-row__num">25+</span><span class="proof-row__label">years of SAP delivery experience</span></li>
           <li><span class="proof-row__num">2020</span><span class="proof-row__label">founded</span></li>
-          <li><span class="proof-row__num">2</span><span class="proof-row__label">products: Value Lens (private beta) and SAP Intelligence Suite</span></li>
+          <li><span class="proof-row__num">3</span><span class="proof-row__label">products: Value Lens (private beta), SAP Intelligence Suite and LogicPilot (launching 12 Nov 2026)</span></li>
         </ul>
       </div>
     </div>
@@ -219,9 +185,9 @@ get_header();
           <p class="stat-cell__ctx">SVLS LABS LLP. SAP, cloud and governed AI from one team.</p>
         </li>
         <li class="stat-cell">
-          <p class="stat stat-cell__num">2</p>
+          <p class="stat stat-cell__num">3</p>
           <p class="stat-cell__label">products</p>
-          <p class="stat-cell__ctx">Value Lens (private beta) and SAP Intelligence Suite, both built on our own control model.</p>
+          <p class="stat-cell__ctx">Value Lens (private beta) and SAP Intelligence Suite on our SAP control model, and LogicPilot for Logic Pro, launching 12 November 2026.</p>
         </li>
         <li class="stat-cell">
           <p class="stat stat-cell__num">3</p>

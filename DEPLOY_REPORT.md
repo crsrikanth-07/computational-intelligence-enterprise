@@ -124,3 +124,15 @@ Anomalies found and what was done:
 6. **Legal pages**: /privacy/ and /terms/ carry complete default text; have counsel confirm it (`DEPLOY.md` D.3).
 7. **Rollback, if ever needed**: Appearance -> Themes -> activate Divi; Settings -> Reading -> Homepage: "Home-Divi" (page #604, publish it first from Pages -> Drafts); Plugins -> activate simple-divi-shortcode and page-builder-add. Nothing was deleted.
 8. **Cloudflare / login**: the interactive Turnstile challenge on `wp-login.php` is a good protection and was left as is. If a future automated deployment is wanted, add a Cloudflare WAF skip rule for the deploy IP for the duration of the run, or upload theme updates by hand as done today.
+
+## LogicPilot launch page (1 October 2026)
+
+New product page `/products/logicpilot/` for LogicPilot, the MCP production assistant for Logic Pro (Agentic AI; launching 12 November 2026), built as a product-launch layout: oversized product name, launch date with a live countdown, an illustrative arrangement key visual, the 30-second development demo video (poster: the client's launch visual), why it exists, conversational edits, the seven-stage pipeline, producer-in-the-loop principles, a spec table with the Apple trademark notice, a launch-updates form and an FAQ.
+
+- **Site-wide**: LogicPilot is in the Products dropdown and the Menu sheet with a NEW label, in every footer, in the homepage hero (announcement pill) and facts (now 3 products), on About, on the Agentic & Applied AI page (new band 04) and in the Contact intent list. Not on the SAP or Cloud pages.
+- **Form**: posts to the theme handler like the others; the email to service@svlslabs.com has the subject "LogicPilot launch updates".
+- **WordPress page**: created automatically. The theme creates the `products/logicpilot` page on the first request after the upload (once per release, only if the Products parent exists).
+- **Media**: `assets/video/logicpilot-demo.mp4` (2.6 MB, H.264/AAC, streaming-ready), `assets/img/logicpilot/demo-poster.webp`, `assets/og/og-logicpilot.jpg` (LinkedIn/OG share image). The theme zip is about 4.4 MB.
+- **Fixed in the same release**: the mobile Menu did not open on `/services/` and `/products/` (the Menu sheet lived in each page template instead of `header.php`); the phone number link text now uses a non-breaking space; the form-failure message no longer shows a TODO label.
+- **Client to do**: upload the rebuilt zip with "Replace current with uploaded", then open https://svlslabs.com/products/logicpilot/ and submit the launch-updates form once.
+- **Note**: the demo video's burned-in caption reads "A product by SVLS Labs LLP" in mixed case; the site text uses SVLS LABS. Re-export the video if the caption should match.

@@ -74,41 +74,6 @@ $GLOBALS['svls_page_head'] = function () { ?>
 <?php };
 get_header();
 ?>
-<div class="sheet-backdrop" data-menu-backdrop hidden></div>
-<div class="sheet" id="mobile-sheet" hidden>
-  <nav aria-label="Menu">
-    <ul class="sheet__list">
-      <li>
-        <span class="eyebrow sheet__group-label" id="sheet-services">Services</span>
-        <ul class="sheet__sub" aria-labelledby="sheet-services">
-          <li><a class="sheet__link" href="/services/sap/">SAP &amp; ERP</a></li>
-          <li><a class="sheet__link" href="/services/cloud/">Cloud</a></li>
-          <li><a class="sheet__link" href="/services/ai/">Agentic &amp; Applied AI</a></li>
-        </ul>
-      </li>
-      <li>
-        <span class="eyebrow sheet__group-label" id="sheet-products">Products</span>
-        <ul class="sheet__sub" aria-labelledby="sheet-products">
-          <li><a class="sheet__link" href="/products/value-lens/">Value Lens <span class="nav-beta">Private beta</span></a></li>
-          <li><a class="sheet__link" href="/products/sap-intelligence-suite/" aria-current="page">SAP Intelligence Suite</a></li>
-        </ul>
-      </li>
-      <li><a class="sheet__link" href="/approach/">Approach</a></li>
-      <li><a class="sheet__link" href="/about/">About</a></li>
-      <li><a class="sheet__link" href="/contact/">Contact</a></li>
-    </ul>
-    <div class="sheet__actions">
-      <a class="btn btn--primary" href="/contact/?intent=discovery">Book a discovery call</a>
-      <a class="btn btn--secondary" href="/products/value-lens/#beta">Request Value Lens beta access</a>
-    </div>
-  </nav>
-  <div class="sheet__theme" role="group" aria-label="Appearance">
-    <span class="sheet__theme-label" aria-hidden="true">Appearance:</span>
-    <button type="button" class="chip" data-theme-choice="system" aria-pressed="true">System</button>
-    <button type="button" class="chip" data-theme-choice="light" aria-pressed="false">Light</button>
-    <button type="button" class="chip" data-theme-choice="dark" aria-pressed="false">Dark</button>
-  </div>
-</div>
 <main id="main">
 
   <!-- 01 Hero (white, grid texture): lockup, H1, lead, status, CTAs, generic workbench visual (Addendum A v2) -->

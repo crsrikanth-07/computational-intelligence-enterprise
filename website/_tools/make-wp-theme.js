@@ -54,11 +54,13 @@ const slice = (html, openRe, closeTag) => {
 };
 
 let headerPhp = null, footerPhp = null, defaultHead = null; const templates = []; const problems = [];
-// Anchor tags (without the attribute) that carry aria-current="page" in some page's header, keyed to their path.
+// Anchor tags (without the attribute) that carry aria-current="page" in some page's header or Menu sheet, keyed to their path.
 const currentMarkers = new Map();
 for (const f of pages) {
-  const h = slice(fs.readFileSync(f, 'utf8'), /<header class="site-header"[\s>]/, '</header>'); if (!h) continue;
-  for (const m of h.inner.matchAll(/<a\b[^>]*? aria-current="page"[^>]*>/g)) {
+  const src = fs.readFileSync(f, 'utf8');
+  const h = slice(src, /<header class="site-header"[\s>]/, '</header>'); if (!h) continue;
+  const chrome = h.inner + src.slice(h.end, Math.max(h.end, src.indexOf('<main', h.end)));
+  for (const m of chrome.matchAll(/<a\b[^>]*? aria-current="page"[^>]*>/g)) {
     const href = (m[0].match(/href="([^"]+)"/) || [])[1]; if (!href) continue;
     currentMarkers.set(m[0].replace(/ aria-current="page"/, ''), href);
   }
@@ -74,7 +76,10 @@ for (const f of pages) {
   if (!head || !hdr || !ftr) { problems.push(`${rel}: no head/site-header/site-footer, skipped`); continue; }
   const bodyOpen = html.match(/<body[^>]*>/); const bodyOpenIdx = bodyOpen.index + bodyOpen[0].length;
   const preHeader = html.slice(bodyOpenIdx, hdr.start).trim();          // skip link
-  const mainPart = html.slice(hdr.end, ftr.start).trim();                // <main>...</main>
+  const mainIdx = html.indexOf('<main', hdr.end);
+  if (mainIdx < 0 || mainIdx > ftr.start) { problems.push(`${rel}: no <main> between header and footer, skipped`); continue; }
+  const sheetPart = html.slice(hdr.end, mainIdx).trim();                 // Menu sheet + backdrop (shared chrome)
+  const mainPart = html.slice(mainIdx, ftr.start).trim();                // <main>...</main>
   const scripts = html.slice(ftr.end).replace(/<\/body>[\s\S]*$/, '').trim(); // anything after the footer
   const headContent = head.inner.replace(/^<head[^>]*>/, '').replace(/<\/head>$/, '').trim();
 
@@ -82,7 +87,7 @@ for (const f of pages) {
     const docOpen = html.slice(0, head.start).replace(/<html[^>]*>/, m => '<html <?php language_attributes(); ?>' + m.replace(/^<html/, '').replace(/\s+lang="[^"]*"/, '').replace(/>$/, '') + '>');
     // The static pages carry aria-current="page" on the current nav link (site.js also sets it at runtime);
     // header.php sets it server-side through svls_current() on exactly those anchors, so the no-JS output is identical.
-    let hdrInner = hdr.inner.replace(/ aria-current="page"/g, '');
+    let hdrInner = (hdr.inner + (sheetPart ? '\n' + sheetPart : '')).replace(/ aria-current="page"/g, '');
     for (const [tag, p] of currentMarkers) hdrInner = hdrInner.split(tag).join(tag.replace(/>$/, `<?php svls_current( '${p}' ); ?>>`));
     headerPhp = `${docOpen.trim()}\n<head>\n<?php svls_page_head(); ?>\n<?php wp_head(); ?>\n</head>\n<body <?php body_class(); ?>>\n<?php wp_body_open(); ?>\n${preHeader}\n${hdrInner}\n`;
     footerPhp = `${ftr.inner}\n${scripts ? scripts + '\n' : ''}<?php wp_footer(); ?>\n</body>\n</html>\n`;
@@ -196,7 +201,8 @@ function svls_handle_form() {
 		if ( svls_wants_json() ) { wp_send_json( array( 'ok' => false, 'error' => 'name and email are required' ), 400 ); }
 		wp_safe_redirect( add_query_arg( 'sent', '0', wp_get_referer() ? wp_get_referer() : home_url( '/contact/' ) ) ); exit;
 	}
-	$subject = 'svlslabs.com: ' . ( 'beta' === $form ? 'Value Lens beta request' : 'Contact enquiry' ) . ' from ' . $fields['name'];
+	$subjects = array( 'beta' => 'Value Lens beta request', 'logicpilot' => 'LogicPilot launch updates' );
+	$subject  = 'svlslabs.com: ' . ( isset( $subjects[ $form ] ) ? $subjects[ $form ] : 'Contact enquiry' ) . ' from ' . $fields['name'];
 	$body    = '';
 	foreach ( $fields as $key => $value ) { $body .= ucfirst( str_replace( array( '-', '_' ), ' ', $key ) ) . ': ' . $value . "\n"; }
 	$body   .= "\nSent " . gmdate( 'Y-m-d H:i' ) . " UTC from " . home_url( '/' ) . "\n";
@@ -208,6 +214,34 @@ function svls_handle_form() {
 function svls_wants_json() { return isset( $_SERVER['HTTP_ACCEPT'] ) && false !== strpos( $_SERVER['HTTP_ACCEPT'], 'application/json' ); }
 add_action( 'admin_post_nopriv_svls_form', 'svls_handle_form' );
 add_action( 'admin_post_svls_form', 'svls_handle_form' );
+
+/**
+ * Pages added by a theme release are created on the first request after the upload, once per release
+ * (option svls_pages_version). A page is created only when its parent exists and the path is still free.
+ */
+add_action( 'init', function () {
+	$release = '2026-10-logicpilot';
+	if ( get_option( 'svls_pages_version' ) === $release || get_transient( 'svls_pages_lock' ) ) { return; }
+	set_transient( 'svls_pages_lock', 1, 60 );
+	$pages = array(
+		array( 'path' => 'products/logicpilot', 'parent' => 'products', 'slug' => 'logicpilot', 'title' => 'LogicPilot' ),
+	);
+	foreach ( $pages as $p ) {
+		if ( get_page_by_path( $p['path'] ) ) { continue; }
+		$parent = get_page_by_path( $p['parent'] );
+		if ( ! $parent ) { continue; }
+		wp_insert_post( array(
+			'post_type'    => 'page',
+			'post_status'  => 'publish',
+			'post_title'   => $p['title'],
+			'post_name'    => $p['slug'],
+			'post_parent'  => $parent->ID,
+			'post_content' => '<!-- Rendered by the ' . $p['path'] . ' template of the SVLS LABS theme -->',
+		) );
+	}
+	update_option( 'svls_pages_version', $release, false );
+	delete_transient( 'svls_pages_lock' );
+}, 20 );
 
 function svls_page_head() {
 	if ( ! empty( $GLOBALS['svls_page_head'] ) && is_callable( $GLOBALS['svls_page_head'] ) ) {
@@ -271,10 +305,11 @@ function svls_hub( $slug ) {
 		),
 		'products' => array(
 			'label' => 'Products',
-			'lead'  => 'Two products built on our own control model. Agents explain; your people decide.',
+			'lead'  => 'Three products, one discipline: agents act through defined tools, and people make the decisions.',
 			'items' => array(
 				array( 'title' => 'Value Lens (private beta)', 'href' => '/products/value-lens/', 'cta' => 'See Value Lens', 'body' => 'Margin leak finder for order-to-cash on SAP. Every case carries its sources, its calculation and its decisions. Private beta on synthetic data; production SAP connector in development.' ),
 				array( 'title' => 'SAP Intelligence Suite', 'href' => '/products/sap-intelligence-suite/', 'cta' => 'See SAP Intelligence Suite', 'body' => 'The workbench behind our AI-assisted SAP engineering: integration flows, ABAP and RAP generated from plain-English requests, reviewed by an architect before they reach a landscape. Available to customers on request.' ),
+				array( 'title' => 'LogicPilot (launching 12 Nov 2026)', 'href' => '/products/logicpilot/', 'cta' => 'See LogicPilot', 'body' => 'MCP production assistant for Logic Pro. Describe the musical direction and get an editable session: tracks, MIDI, song sections and arrangement structure. Development demo published.' ),
 			),
 		),
 	);

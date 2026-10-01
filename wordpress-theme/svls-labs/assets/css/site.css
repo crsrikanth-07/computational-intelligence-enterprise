@@ -1028,3 +1028,20 @@ textarea.input { min-height: 96px; resize: vertical; }
 
 /* Nav beta label (visible "Private beta" next to Value Lens in the Products menu and sheet) */
 .nav-beta { display: inline-block; vertical-align: middle; margin-left: 6px; padding: 1px 7px; border-radius: var(--r-1); background: var(--warn-fill); color: var(--on-warn); font-family: var(--font-mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; line-height: 18px; white-space: nowrap; }
+.nav-beta--new { background: var(--accent); color: var(--on-accent); } /* NEW label for a product in launch */
+
+/* Launch pill: one-line product announcement above a hero section mark (homepage) */
+.launch-pill {
+  display: inline-flex; align-items: center; gap: 10px; max-width: 100%; min-height: 36px; margin-bottom: var(--s-5);
+  padding: 4px 14px 4px 4px; border: 1px solid var(--rule); border-radius: var(--r-pill);
+  background: color-mix(in srgb, var(--surface) 70%, transparent); color: var(--text);
+  font-size: 14px; line-height: 20px; text-decoration: none; transition: border-color var(--t-fast) var(--ease);
+}
+.launch-pill:hover { border-color: var(--accent); }
+.launch-pill:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.launch-pill__tag {
+  flex: none; display: inline-flex; align-items: center; height: 28px; padding: 0 10px; border-radius: var(--r-pill);
+  background: var(--accent); color: var(--on-accent); font: 600 11px/1 var(--font-mono); letter-spacing: .1em; text-transform: uppercase;
+}
+.launch-pill svg { flex: none; width: 12px; height: 12px; }
+.launch-pill .arrow-link__pt { fill: var(--accent); }

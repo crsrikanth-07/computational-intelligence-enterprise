@@ -75,41 +75,6 @@ $GLOBALS['svls_page_head'] = function () { ?>
 <?php };
 get_header();
 ?>
-<div class="sheet-backdrop" data-menu-backdrop hidden></div>
-<div class="sheet" id="mobile-sheet" hidden>
-  <nav aria-label="Menu">
-    <ul class="sheet__list">
-      <li>
-        <span class="eyebrow sheet__group-label" id="sheet-services">Services</span>
-        <ul class="sheet__sub" aria-labelledby="sheet-services">
-          <li><a class="sheet__link" href="/services/sap/">SAP &amp; ERP</a></li>
-          <li><a class="sheet__link" href="/services/cloud/">Cloud</a></li>
-          <li><a class="sheet__link" href="/services/ai/">Agentic &amp; Applied AI</a></li>
-        </ul>
-      </li>
-      <li>
-        <span class="eyebrow sheet__group-label" id="sheet-products">Products</span>
-        <ul class="sheet__sub" aria-labelledby="sheet-products">
-          <li><a class="sheet__link" href="/products/value-lens/">Value Lens <span class="nav-beta">Private beta</span></a></li>
-          <li><a class="sheet__link" href="/products/sap-intelligence-suite/">SAP Intelligence Suite</a></li>
-        </ul>
-      </li>
-      <li><a class="sheet__link" href="/approach/">Approach</a></li>
-      <li><a class="sheet__link" href="/about/" aria-current="page">About</a></li>
-      <li><a class="sheet__link" href="/contact/">Contact</a></li>
-    </ul>
-    <div class="sheet__actions">
-      <a class="btn btn--primary" href="/contact/?intent=discovery">Book a discovery call</a>
-      <a class="btn btn--secondary" href="/products/value-lens/#beta">Request Value Lens beta access</a>
-    </div>
-  </nav>
-  <div class="sheet__theme" role="group" aria-label="Appearance">
-    <span class="sheet__theme-label" aria-hidden="true">Appearance:</span>
-    <button type="button" class="chip" data-theme-choice="system" aria-pressed="true">System</button>
-    <button type="button" class="chip" data-theme-choice="light" aria-pressed="false">Light</button>
-    <button type="button" class="chip" data-theme-choice="dark" aria-pressed="false">Dark</button>
-  </div>
-</div>
 <main id="main">
 
   <!-- 01 Hero (white, grid texture) -->
@@ -141,7 +106,7 @@ get_header();
         <ul class="proof-row hero__rows-b">
           <li><span class="proof-row__num">25+</span><span class="proof-row__label">years of SAP delivery experience</span></li>
           <li><span class="proof-row__num">2020</span><span class="proof-row__label">founded</span></li>
-          <li><span class="proof-row__num">2</span><span class="proof-row__label">products: Value Lens (private beta) and SAP Intelligence Suite</span></li>
+          <li><span class="proof-row__num">3</span><span class="proof-row__label">products: Value Lens (private beta), SAP Intelligence Suite and LogicPilot (launching 12 Nov 2026)</span></li>
         </ul>
       </div>
     </div>
@@ -162,9 +127,10 @@ get_header();
         <li>Agentic &amp; applied AI on SAP BTP · Reference implementations · Control model</li>
       </ul>
       <div class="story__today">
-        <p class="story__today-line">Today the same principles run through two products: <a class="link" href="/products/value-lens/">Value Lens (private beta)</a>, our margin leak finder for order-to-cash, and <a class="link" href="/products/sap-intelligence-suite/">SAP Intelligence Suite</a>, our AI-assisted SAP engineering workbench.</p>
+        <p class="story__today-line">Today the same principles run through three products: <a class="link" href="/products/value-lens/">Value Lens (private beta)</a>, our margin leak finder for order-to-cash; <a class="link" href="/products/sap-intelligence-suite/">SAP Intelligence Suite</a>, our AI-assisted SAP engineering workbench; and <a class="link" href="/products/logicpilot/">LogicPilot</a>, our MCP production assistant for Logic Pro, which takes the same agent discipline beyond the enterprise.</p>
         <p class="status">Value Lens: private beta on synthetic SAP-like data. Production SAP connector in development.</p>
         <p class="status">SAP Intelligence Suite: in use in SVLS LABS delivery. Available to customers on request; deployed in your landscape, reviewed by your architects.</p>
+        <p class="status">LogicPilot: in development. Launching 12 November 2026.</p>
       </div>
     </div>
   </section>

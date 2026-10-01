@@ -37,6 +37,7 @@
           <ul class="dropdown" id="products-menu">
             <li><a href="/products/value-lens/"<?php svls_current( '/products/value-lens/' ); ?>><span class="dropdown__title">Value Lens <span class="nav-beta">Private beta</span></span><span class="dropdown__desc">Margin leak finder for order-to-cash. Private beta.</span></a></li>
             <li><a href="/products/sap-intelligence-suite/"<?php svls_current( '/products/sap-intelligence-suite/' ); ?>><span class="dropdown__title">SAP Intelligence Suite</span><span class="dropdown__desc">AI-assisted SAP engineering workbench.</span></a></li>
+            <li><a href="/products/logicpilot/"<?php svls_current( '/products/logicpilot/' ); ?>><span class="dropdown__title">LogicPilot <span class="nav-beta nav-beta--new">New</span></span><span class="dropdown__desc">MCP production assistant for Logic Pro. Launching 12 November 2026.</span></a></li>
           </ul>
         </li>
         <li class="site-nav__item"><a class="site-nav__link" href="/approach/"<?php svls_current( '/approach/' ); ?>>Approach</a></li>
@@ -53,3 +54,39 @@
     </div>
   </div>
 </header>
+<div class="sheet-backdrop" data-menu-backdrop hidden></div>
+<div class="sheet" id="mobile-sheet" hidden>
+  <nav aria-label="Menu">
+    <ul class="sheet__list">
+      <li>
+        <span class="eyebrow sheet__group-label" id="sheet-services">Services</span>
+        <ul class="sheet__sub" aria-labelledby="sheet-services">
+          <li><a class="sheet__link" href="/services/sap/"<?php svls_current( '/services/sap/' ); ?>>SAP &amp; ERP</a></li>
+          <li><a class="sheet__link" href="/services/cloud/"<?php svls_current( '/services/cloud/' ); ?>>Cloud</a></li>
+          <li><a class="sheet__link" href="/services/ai/"<?php svls_current( '/services/ai/' ); ?>>Agentic &amp; Applied AI</a></li>
+        </ul>
+      </li>
+      <li>
+        <span class="eyebrow sheet__group-label" id="sheet-products">Products</span>
+        <ul class="sheet__sub" aria-labelledby="sheet-products">
+          <li><a class="sheet__link" href="/products/value-lens/"<?php svls_current( '/products/value-lens/' ); ?>>Value Lens <span class="nav-beta">Private beta</span></a></li>
+          <li><a class="sheet__link" href="/products/sap-intelligence-suite/"<?php svls_current( '/products/sap-intelligence-suite/' ); ?>>SAP Intelligence Suite</a></li>
+          <li><a class="sheet__link" href="/products/logicpilot/"<?php svls_current( '/products/logicpilot/' ); ?>>LogicPilot <span class="nav-beta nav-beta--new">New</span></a></li>
+        </ul>
+      </li>
+      <li><a class="sheet__link" href="/approach/"<?php svls_current( '/approach/' ); ?>>Approach</a></li>
+      <li><a class="sheet__link" href="/about/"<?php svls_current( '/about/' ); ?>>About</a></li>
+      <li><a class="sheet__link" href="/contact/"<?php svls_current( '/contact/' ); ?>>Contact</a></li>
+    </ul>
+    <div class="sheet__actions">
+      <a class="btn btn--primary" href="/contact/?intent=discovery">Book a discovery call</a>
+      <a class="btn btn--secondary" href="/products/value-lens/#beta">Request Value Lens beta access</a>
+    </div>
+  </nav>
+  <div class="sheet__theme" role="group" aria-label="Appearance">
+    <span class="sheet__theme-label" aria-hidden="true">Appearance:</span>
+    <button type="button" class="chip" data-theme-choice="system" aria-pressed="true">System</button>
+    <button type="button" class="chip" data-theme-choice="light" aria-pressed="false">Light</button>
+    <button type="button" class="chip" data-theme-choice="dark" aria-pressed="false">Dark</button>
+  </div>
+</div>

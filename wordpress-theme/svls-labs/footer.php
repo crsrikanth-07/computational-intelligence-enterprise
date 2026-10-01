@@ -29,6 +29,7 @@
           <ul>
             <li><a href="/products/value-lens/">Value Lens (private beta)</a></li>
             <li><a href="/products/sap-intelligence-suite/">SAP Intelligence Suite</a></li>
+            <li><a href="/products/logicpilot/">LogicPilot (new)</a></li>
             <li><a href="/products/value-lens/#beta">Request beta access</a></li>
             <li><a href="/services/ai/#control-model">The control model</a></li>
           </ul>
@@ -47,7 +48,7 @@
     </div>
     <div class="footer-bottom">
       <p>&copy; <span data-year>2026</span> SVLS LABS LLP. Established 2020.</p>
-      <p>4th Floor, Aparna Astute, Shaikpet, Door No. 8-1-299/103&amp;104/AA/4F-2, Jubilee Hills, Hyderabad 500008, Telangana, India<br><a href="mailto:service@svlslabs.com">service@svlslabs.com</a><br><a class="nowrap" href="tel:+918500811119">+91 8500811119</a></p>
+      <p>4th Floor, Aparna Astute, Shaikpet, Door No. 8-1-299/103&amp;104/AA/4F-2, Jubilee Hills, Hyderabad 500008, Telangana, India<br><a href="mailto:service@svlslabs.com">service@svlslabs.com</a><br><a class="nowrap" href="tel:+918500811119">+91&nbsp;8500811119</a></p>
     </div>
     <p class="footer__status">Value Lens: private beta on synthetic SAP-like data. Production SAP connector in development.</p>
   </div>

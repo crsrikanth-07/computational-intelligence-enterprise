@@ -70,41 +70,6 @@ $GLOBALS['svls_page_head'] = function () { ?>
 <?php };
 get_header();
 ?>
-<div class="sheet-backdrop" data-menu-backdrop hidden></div>
-<div class="sheet" id="mobile-sheet" hidden>
-  <nav aria-label="Menu">
-    <ul class="sheet__list">
-      <li>
-        <span class="eyebrow sheet__group-label" id="sheet-services">Services</span>
-        <ul class="sheet__sub" aria-labelledby="sheet-services">
-          <li><a class="sheet__link" href="/services/sap/">SAP &amp; ERP</a></li>
-          <li><a class="sheet__link" href="/services/cloud/">Cloud</a></li>
-          <li><a class="sheet__link" href="/services/ai/">Agentic &amp; Applied AI</a></li>
-        </ul>
-      </li>
-      <li>
-        <span class="eyebrow sheet__group-label" id="sheet-products">Products</span>
-        <ul class="sheet__sub" aria-labelledby="sheet-products">
-          <li><a class="sheet__link" href="/products/value-lens/">Value Lens <span class="nav-beta">Private beta</span></a></li>
-          <li><a class="sheet__link" href="/products/sap-intelligence-suite/">SAP Intelligence Suite</a></li>
-        </ul>
-      </li>
-      <li><a class="sheet__link" href="/approach/">Approach</a></li>
-      <li><a class="sheet__link" href="/about/">About</a></li>
-      <li><a class="sheet__link" href="/contact/" aria-current="page">Contact</a></li>
-    </ul>
-    <div class="sheet__actions">
-      <a class="btn btn--primary" href="/contact/?intent=discovery">Book a discovery call</a>
-      <a class="btn btn--secondary" href="/products/value-lens/#beta">Request Value Lens beta access</a>
-    </div>
-  </nav>
-  <div class="sheet__theme" role="group" aria-label="Appearance">
-    <span class="sheet__theme-label" aria-hidden="true">Appearance:</span>
-    <button type="button" class="chip" data-theme-choice="system" aria-pressed="true">System</button>
-    <button type="button" class="chip" data-theme-choice="light" aria-pressed="false">Light</button>
-    <button type="button" class="chip" data-theme-choice="dark" aria-pressed="false">Dark</button>
-  </div>
-</div>
 <main id="main">
 
   <!-- 01 Hero -->
@@ -162,6 +127,7 @@ get_header();
                   <option value="beta">Value Lens beta access</option>
                   <option value="demo">Value Lens demo</option>
                   <option value="suite-demo">SAP Intelligence Suite demo</option>
+                  <option value="logicpilot">LogicPilot launch updates</option>
                   <option value="partnership">Partnership: SAP partner capacity</option>
                   <option value="overview">Capability overview PDF</option>
                   <option value="checklist">Governed Agent Control Checklist</option>
@@ -210,7 +176,7 @@ get_header();
             <dl class="offices">
               <div class="offices__row">
                 <dt class="mono-title">SVLS LABS LLP</dt>
-                <dd>4th Floor, Aparna Astute<br>Shaikpet, Door No. 8-1-299/103&amp;104/AA/4F-2<br>Jubilee Hills, Hyderabad 500008<br>Telangana, India<br><a href="tel:+918500811119">+91 8500811119</a></dd>
+                <dd>4th Floor, Aparna Astute<br>Shaikpet, Door No. 8-1-299/103&amp;104/AA/4F-2<br>Jubilee Hills, Hyderabad 500008<br>Telangana, India<br><a href="tel:+918500811119">+91&nbsp;8500811119</a></dd>
               </div>
               <div class="offices__row">
                 <dt class="mono-title">Email</dt>

@@ -122,3 +122,22 @@
   background: var(--bg); color: var(--text);
 }
 body { background: var(--bg); color: var(--text); }
+
+/* LogicPilot (/products/logicpilot/): arrangement palette for the hero key visual and the demo frame.
+   One colour per song section; the window chrome tones sit on charcoal (the hero is always charcoal). */
+:root {
+  --lp-intro:   #4F8DF5;
+  --lp-verse:   #34C77B;
+  --lp-chorus:  #A86BF2;
+  --lp-bridge:  #D9A441;
+  --lp-outro:   #7C8594;
+  --lp-on-sec:  #0B0E13;  /* section label text on the solid marker colours */
+  --lp-window:  #10141B;  /* key-visual window body */
+  --lp-chrome:  #181E27;  /* title bar, prompt bar */
+  --lp-dot:     #3A4250;  /* window buttons */
+  --lp-lcd:     #0A0D12;  /* transport display */
+  --lp-ruler:   #141A22;
+  --lp-track:   #161C25;  /* track header column */
+  --lp-lane:    #12171F;  /* empty lane */
+  --lp-video-bg: #0E131F; /* letterbox behind the demo poster and video (matches the launch visual's edge) */
+}
