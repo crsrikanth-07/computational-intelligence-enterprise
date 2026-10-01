@@ -1110,3 +1110,6 @@ textarea.input { min-height: 96px; resize: vertical; }
 .spot__cap a { color: var(--accent-text); }
 .spot__cap svg { width: 12px; height: 12px; }
 .spot__cap .arrow-link__pt { fill: var(--accent); }
+/* As the first section of the page the spotlight sits right under the sticky header: less top padding */
+main > .spot:first-child { padding-top: var(--s-7); }
+@media (min-width: 1024px) { main > .spot:first-child { padding-top: var(--s-8); } }
