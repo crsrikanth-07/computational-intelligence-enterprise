@@ -425,15 +425,52 @@
 
   /* ---------------------------------------------------------------------------
      Launch countdown: <span data-countdown="2026-11-12T00:00:00+05:30" hidden></span>
-     Shows "N days to go" before the date and "Launching today" on the day; stays hidden after it
+     Shows whole days left ("N days to go", matching the countdown tiles); stays hidden from the launch moment on
      and without JavaScript (the launch date is always printed next to it).
      --------------------------------------------------------------------------- */
   qsa('[data-countdown]').forEach(function (el) {
     var t = Date.parse(el.getAttribute('data-countdown'));
     if (isNaN(t)) return;
-    var days = Math.ceil((t - Date.now()) / 86400000);
-    if (days < 0) return;
-    el.textContent = days === 0 ? 'Launching today' : days === 1 ? '1 day to go' : days + ' days to go';
+    var ms = t - Date.now();
+    if (ms <= 0) return;
+    var days = Math.floor(ms / 86400000);
+    el.textContent = days === 0 ? 'Less than a day to go' : days === 1 ? '1 day to go' : days + ' days to go';
     el.hidden = false;
+  });
+
+  /* Countdown tiles: <div data-countdown-tiles="ISO date" hidden> with [data-unit=days|hours|minutes].
+     Updated every 20 s; stays hidden without JavaScript and after the date (a date line is always printed). */
+  qsa('[data-countdown-tiles]').forEach(function (box) {
+    var t = Date.parse(box.getAttribute('data-countdown-tiles'));
+    if (isNaN(t)) return;
+    function pad(n) { return (n < 10 ? '0' : '') + n; }
+    function tick() {
+      var ms = t - Date.now();
+      if (ms <= 0) { box.hidden = true; return false; }
+      var mins = Math.floor(ms / 60000);
+      var parts = { days: Math.floor(mins / 1440), hours: Math.floor(mins / 60) % 24, minutes: mins % 60 };
+      qsa('[data-unit]', box).forEach(function (el) { el.textContent = pad(parts[el.getAttribute('data-unit')]); });
+      box.hidden = false;
+      return true;
+    }
+    if (tick()) { var timer = setInterval(function () { if (!tick()) clearInterval(timer); }, 20000); }
+  });
+
+  /* Silent looping demo: <video muted loop data-autoplay> plays while on screen, never under reduced motion.
+     A visible toggle ([data-video-toggle]) pauses and resumes it (WCAG 2.2.2). */
+  qsa('video[data-autoplay]').forEach(function (v) {
+    var btn = qs('[data-video-toggle]', v.parentNode);
+    var userPaused = prefersReduced();
+    function label() { if (btn) btn.firstChild.textContent = v.paused ? 'Play demo' : 'Pause demo'; }
+    function play() { v.preload = 'auto'; var p = v.play(); if (p && p.catch) p.catch(function () { label(); }); }
+    v.addEventListener('play', label); v.addEventListener('pause', label);
+    if (btn) {
+      btn.hidden = false; label();
+      btn.addEventListener('click', function () { if (v.paused) { userPaused = false; play(); } else { userPaused = true; v.pause(); } });
+    }
+    if (userPaused || !('IntersectionObserver' in window)) return;
+    new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { if (en.isIntersecting) { if (!userPaused) play(); } else if (!v.paused) { v.pause(); } });
+    }, { threshold: 0.35 }).observe(v);
   });
 })();
