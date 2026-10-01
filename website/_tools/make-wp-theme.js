@@ -40,9 +40,14 @@ if (fs.existsSync(ogHome)) cp(ogHome, path.join(out, 'screenshot.png')); // them
 
 // 2. URL rewriting
 const URI = "<?php echo esc_url( get_template_directory_uri() ); ?>";
+// Cache busting: the host serves theme files with a 31-day cache, so every stylesheet and script URL carries
+// ?v=<content hash>. A changed file gets a new URL and returning visitors never mix old CSS with new markup.
+const crypto = require('crypto');
+const verOf = p => { const fp = path.join(root, p); return fs.existsSync(fp) ? crypto.createHash('md5').update(fs.readFileSync(fp)).digest('hex').slice(0, 8) : ''; };
+const withVer = p => (/\.(css|js)$/.test(p) && verOf(p)) ? `${p}?v=${verOf(p)}` : p;
 const rewrite = html => html
   .replace(/https:\/\/svlslabs\.com\/(assets\/[^"'\s)<]+)/g, (m, p) => `${URI}/${p}`)
-  .replace(/(href|src|content|srcset|poster|data)=("|')\/(assets\/[^"']+|site\.webmanifest|favicon[^"']*|apple-touch-icon\.png)("|')/g, (m, a, q, p) => `${a}=${q}${URI}/${p}${q}`)
+  .replace(/(href|src|content|srcset|poster|data)=("|')\/(assets\/[^"']+|site\.webmanifest|favicon[^"']*|apple-touch-icon\.png)("|')/g, (m, a, q, p) => `${a}=${q}${URI}/${withVer(p)}${q}`)
   .replace(/url\((["']?)\/(assets\/[^)"']+)(["']?)\)/g, (m, q1, p, q2) => `url(${q1}${URI}/${p}${q2})`)
   .replace(/(<link rel="canonical" href="|<meta property="og:url" content=")https:\/\/svlslabs\.com(\/[^"]*)"/g, (m, a, p) => `${a}<?php echo esc_url( home_url( '${p}' ) ); ?>"`);
 const decode = s => s.replace(/&amp;/g, '&').replace(/&#39;/g, "'").replace(/&quot;/g, '"').replace(/&lt;/g, '<').replace(/&gt;/g, '>');
