@@ -1092,7 +1092,7 @@ textarea.input { min-height: 96px; resize: vertical; }
 .spot .btn-row { margin-top: var(--s-6); }
 .spot__video { margin: 0; }
 .spot__frame {
-  position: relative; overflow: hidden; aspect-ratio: 1720 / 1080; border-radius: 16px;
+  position: relative; overflow: hidden; aspect-ratio: 16 / 9; border-radius: 16px;
   border: 1px solid color-mix(in srgb, var(--lp-chorus) 35%, var(--rule)); background: var(--lp-video-bg);
   box-shadow: 0 50px 100px -30px rgba(0, 0, 0, .85), 0 30px 80px -30px color-mix(in srgb, var(--lp-chorus) 45%, transparent);
 }

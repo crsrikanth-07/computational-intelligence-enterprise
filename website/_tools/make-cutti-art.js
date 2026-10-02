@@ -38,12 +38,12 @@ const card = (w, h, scale) => `<!doctype html><html><head><meta charset="utf-8">
   .win svg { display: block; width: 100%; height: auto; }
 </style></head><body><div class="art">
   <div class="copy"><div class="by">SVLS Labs LLP</div><div class="name">CuTTI</div><div class="sub">MCP for Logic Pro</div>
-  <div class="line">From simple prompts to editable song arrangements inside Logic Pro.</div><div class="date">Launching 12 November 2026</div></div>
+  <div class="line">From musical intent to editable production.</div><div class="date">Launching 12 November 2026</div></div>
   <div class="win">${svg}</div></div></body></html>`;
 (async () => {
   const b = await chromium.launch();
   const jobs = [
-    { w: 1376, h: 864, s: 1, png: 'demo-poster.png', out: 'assets/img/cutti/demo-poster.webp', fmt: 'WEBP' },
+    { w: 1600, h: 900, s: 1.08, png: 'demo-poster.png', out: 'assets/img/cutti/demo-poster.webp', fmt: 'WEBP' },
     { w: 1200, h: 630, s: 0.82, png: 'og-cutti.png', out: 'assets/og/og-cutti.jpg', fmt: 'JPEG' },
   ];
   for (const j of jobs) {

@@ -57,11 +57,16 @@
 .lp-kv .kv-msr { fill: var(--text-muted); font-size: 8.5px; letter-spacing: .08em; }
 .lp-kv .kv-reg { fill-opacity: .26; stroke-opacity: .75; stroke-width: 1; }
 .lp-kv .kv-note { fill: var(--text); fill-opacity: .72; }
-.lp-kv .kv-sec--intro, .lp-kv .kv-reg--intro   { fill: var(--lp-intro);  stroke: var(--lp-intro); }
-.lp-kv .kv-sec--verse, .lp-kv .kv-reg--verse   { fill: var(--lp-verse);  stroke: var(--lp-verse); }
-.lp-kv .kv-sec--chorus, .lp-kv .kv-reg--chorus { fill: var(--lp-chorus); stroke: var(--lp-chorus); }
-.lp-kv .kv-sec--bridge, .lp-kv .kv-reg--bridge { fill: var(--lp-bridge); stroke: var(--lp-bridge); }
-.lp-kv .kv-sec--outro, .lp-kv .kv-reg--outro   { fill: var(--lp-outro);  stroke: var(--lp-outro); }
+/* Song sections: one marker colour each; regions take their track colour, as in the CuTTI demo */
+.lp-kv .kv-sec--intro { fill: var(--lp-intro); }
+.lp-kv .kv-sec--hook  { fill: var(--lp-chorus); }
+.lp-kv .kv-sec--verse { fill: var(--lp-verse); }
+.lp-kv .kv-sec--final { fill: var(--lp-drums); }
+.lp-kv .kv-reg--drums { fill: var(--lp-drums); stroke: var(--lp-drums); }
+.lp-kv .kv-reg--bass  { fill: var(--lp-bass);  stroke: var(--lp-bass); }
+.lp-kv .kv-reg--piano { fill: var(--lp-piano); stroke: var(--lp-piano); }
+.lp-kv .kv-reg--bell  { fill: var(--lp-bell);  stroke: var(--lp-bell); }
+.lp-kv .kv-reg--pad   { fill: var(--lp-pad);   stroke: var(--lp-pad); }
 .lp-kv .kv-playhead { stroke: var(--accent); stroke-width: 1.5; }
 .lp-kv .kv-playhead-cap { fill: var(--accent); }
 .lp-kv .kv-prompt-caret { fill: var(--accent); font-size: 15px; font-weight: 500; }
@@ -81,7 +86,7 @@
 /* 03 Demo video */
 .lp-video { margin: 0; }
 .lp-video__frame {
-  position: relative; overflow: hidden; aspect-ratio: 1720 / 1080;
+  position: relative; overflow: hidden; aspect-ratio: 16 / 9;
   border: 1px solid var(--rule); border-radius: 14px; background: var(--lp-video-bg);
   box-shadow: var(--sg-halo, var(--shadow-2));
 }

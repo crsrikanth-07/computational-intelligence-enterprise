@@ -36,8 +36,8 @@ $GLOBALS['svls_page_head'] = function () { ?>
 <link rel="preload" as="font" type="font/woff2" crossorigin href="https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@800&display=swap">
-<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/tokens.css?v=c2966ec5">
-<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/site.css?v=971185ff">
+<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/tokens.css?v=047f8b8c">
+<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/site.css?v=1bc3ca8c">
 <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/pages/contact.css?v=a521a973">
 <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/theme.css?v=95b1acdc">
 <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/js/site.js?v=2891427c" defer></script>
@@ -127,7 +127,7 @@ get_header();
                   <option value="beta">Value Lens beta access</option>
                   <option value="demo">Value Lens demo</option>
                   <option value="suite-demo">SAP Intelligence Suite demo</option>
-                  <option value="logicpilot">LogicPilot launch updates</option>
+                  <option value="cutti">CuTTI launch updates</option>
                   <option value="partnership">Partnership: SAP partner capacity</option>
                   <option value="overview">Capability overview PDF</option>
                   <option value="checklist">Governed Agent Control Checklist</option>

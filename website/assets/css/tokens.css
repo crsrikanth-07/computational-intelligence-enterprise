@@ -139,5 +139,11 @@ body { background: var(--bg); color: var(--text); }
   --lp-ruler:   #141A22;
   --lp-track:   #161C25;  /* track header column */
   --lp-lane:    #12171F;  /* empty lane */
-  --lp-video-bg: #0E131F; /* letterbox behind the demo poster and video (matches the launch visual's edge) */
+  --lp-video-bg: #12171D; /* letterbox behind the demo poster and video (matches the demo background) */
+  /* Track colours from the CuTTI demo video */
+  --lp-drums:   #D4A843;
+  --lp-bass:    #E0614F;  /* 808 */
+  --lp-piano:   #E8E4DA;
+  --lp-bell:    #6FB4D6;
+  --lp-pad:     #8DBF9A; 
 }

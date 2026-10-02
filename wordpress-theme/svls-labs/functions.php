@@ -28,7 +28,7 @@ function svls_handle_form() {
 		if ( svls_wants_json() ) { wp_send_json( array( 'ok' => false, 'error' => 'name and email are required' ), 400 ); }
 		wp_safe_redirect( add_query_arg( 'sent', '0', wp_get_referer() ? wp_get_referer() : home_url( '/contact/' ) ) ); exit;
 	}
-	$subjects = array( 'beta' => 'Value Lens beta request', 'logicpilot' => 'LogicPilot launch updates' );
+	$subjects = array( 'beta' => 'Value Lens beta request', 'cutti' => 'CuTTI launch updates', 'logicpilot' => 'CuTTI launch updates' );
 	$subject  = 'svlslabs.com: ' . ( isset( $subjects[ $form ] ) ? $subjects[ $form ] : 'Contact enquiry' ) . ' from ' . $fields['name'];
 	$body    = '';
 	foreach ( $fields as $key => $value ) { $body .= ucfirst( str_replace( array( '-', '_' ), ' ', $key ) ) . ': ' . $value . "
@@ -50,12 +50,20 @@ add_action( 'admin_post_svls_form', 'svls_handle_form' );
  * (option svls_pages_version). A page is created only when its parent exists and the path is still free.
  */
 add_action( 'init', function () {
-	$release = '2026-10-logicpilot';
+	$release = '2026-10-cutti';
 	if ( get_option( 'svls_pages_version' ) === $release || get_transient( 'svls_pages_lock' ) ) { return; }
 	set_transient( 'svls_pages_lock', 1, 60 );
 	$pages = array(
-		array( 'path' => 'products/logicpilot', 'parent' => 'products', 'slug' => 'logicpilot', 'title' => 'LogicPilot' ),
+		array( 'path' => 'products/cutti', 'parent' => 'products', 'slug' => 'cutti', 'title' => 'CuTTI' ),
 	);
+	// Renamed products: move the existing page to the new slug so no orphan page is left behind.
+	$renamed = array( 'products/logicpilot' => array( 'slug' => 'cutti', 'title' => 'CuTTI' ) );
+	foreach ( $renamed as $old => $new ) {
+		$page = get_page_by_path( $old );
+		if ( $page && ! get_page_by_path( 'products/' . $new['slug'] ) ) {
+			wp_update_post( array( 'ID' => $page->ID, 'post_name' => $new['slug'], 'post_title' => $new['title'] ) );
+		}
+	}
 	foreach ( $pages as $p ) {
 		if ( get_page_by_path( $p['path'] ) ) { continue; }
 		$parent = get_page_by_path( $p['parent'] );
@@ -107,8 +115,8 @@ function svls_default_head() { ?>
 <link rel="preload" as="font" type="font/woff2" crossorigin href="https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@800&display=swap">
-<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/tokens.css?v=c2966ec5">
-<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/site.css?v=971185ff">
+<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/tokens.css?v=047f8b8c">
+<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/site.css?v=1bc3ca8c">
 <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/theme.css?v=95b1acdc">
 <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/js/site.js?v=2891427c" defer></script>
 <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/js/theme.js?v=1aa957a6" defer></script>
@@ -161,7 +169,7 @@ function svls_hub( $slug ) {
 			'label' => 'Products',
 			'lead'  => 'Three products, one discipline: agents act through defined tools, and people make the decisions.',
 			'items' => array(
-				array( 'title' => 'LogicPilot (launching 12 Nov 2026)', 'href' => '/products/logicpilot/', 'cta' => 'See LogicPilot', 'body' => 'MCP production assistant for Logic Pro. Describe the musical direction and get an editable session: tracks, MIDI, song sections and arrangement structure. Development demo published.' ),
+				array( 'title' => 'CuTTI (launching 12 Nov 2026)', 'href' => '/products/cutti/', 'cta' => 'See CuTTI', 'body' => 'MCP production assistant for Logic Pro. Describe the musical direction and get an editable session: tracks, MIDI, song sections and arrangement structure. Product demo published.' ),
 				array( 'title' => 'Value Lens (private beta)', 'href' => '/products/value-lens/', 'cta' => 'See Value Lens', 'body' => 'Margin leak finder for order-to-cash on SAP. Every case carries its sources, its calculation and its decisions. Private beta on synthetic data; production SAP connector in development.' ),
 				array( 'title' => 'SAP Intelligence Suite', 'href' => '/products/sap-intelligence-suite/', 'cta' => 'See SAP Intelligence Suite', 'body' => 'The workbench behind our AI-assisted SAP engineering: integration flows, ABAP and RAP generated from plain-English requests, reviewed by an architect before they reach a landscape. Available to customers on request.' ),
 			),
@@ -188,6 +196,7 @@ add_action( 'template_redirect', function () {
 		'privacy-policy-2'          => '/privacy/',
 		'terms-and-conditions'      => '/terms/',
 		'our-products-and-services' => '/services/',
+		'products/logicpilot'       => '/products/cutti/', // product renamed LogicPilot -> CuTTI (October 2026)
 	);
 	$path = isset( $_SERVER['REQUEST_URI'] ) ? trim( (string) wp_parse_url( $_SERVER['REQUEST_URI'], PHP_URL_PATH ), '/' ) : '';
 	if ( '' !== $path && isset( $map[ $path ] ) ) {

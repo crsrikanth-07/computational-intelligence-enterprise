@@ -36,8 +36,8 @@ $GLOBALS['svls_page_head'] = function () { ?>
 <link rel="preload" as="font" type="font/woff2" crossorigin href="https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@800&display=swap">
-<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/tokens.css?v=c2966ec5">
-<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/site.css?v=971185ff">
+<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/tokens.css?v=047f8b8c">
+<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/site.css?v=1bc3ca8c">
 <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/pages/ai.css?v=1542aab5">
 <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/theme.css?v=95b1acdc">
 <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/js/site.js?v=2891427c" defer></script>
@@ -195,18 +195,18 @@ get_header();
   </section>
 
   <!-- 04 Control model -->
-  <!-- 04 Product: LogicPilot (agentic AI beyond the enterprise) -->
-  <section class="section section--slim slim-band" id="logicpilot" aria-labelledby="logicpilot-title">
+  <!-- 04 Product: CuTTI (agentic AI beyond the enterprise) -->
+  <section class="section section--slim slim-band" id="cutti" aria-labelledby="cutti-title">
     <div class="container">
       <div class="section-mark"><span class="numeral">04</span><p class="eyebrow">New product · Launching 12 November 2026</p></div>
       <div class="grid">
         <div class="col-8">
-          <h3 id="logicpilot-title">LogicPilot: Agentic AI for Music Production in Logic Pro.</h3>
+          <h3 id="cutti-title">CuTTI: Agentic AI for Music Production in Logic Pro.</h3>
           <p class="slim-band__body">Our MCP production assistant turns a written brief into an editable Logic Pro session, with tracks, MIDI, song sections and arrangement structure. The same discipline as our enterprise agents: defined tools, verified actions and a person who makes the creative decisions.</p>
         </div>
         <div class="col-4 slim-band__action">
-          <a class="arrow-link" href="/products/logicpilot/">See LogicPilot<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
-          <a class="arrow-link" href="/products/logicpilot/#demo">Watch the development demo<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
+          <a class="arrow-link" href="/products/cutti/">See CuTTI<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
+          <a class="arrow-link" href="/products/cutti/#demo">Watch the product demo<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
         </div>
       </div>
     </div>

@@ -136,3 +136,11 @@ New product page `/products/logicpilot/` for LogicPilot, the MCP production assi
 - **Fixed in the same release**: the mobile Menu did not open on `/services/` and `/products/` (the Menu sheet lived in each page template instead of `header.php`); the phone number link text now uses a non-breaking space; the form-failure message no longer shows a TODO label.
 - **Client to do**: upload the rebuilt zip with "Replace current with uploaded", then open https://svlslabs.com/products/logicpilot/ and submit the launch-updates form once.
 - **Note**: the demo video's burned-in caption reads "A product by SVLS Labs LLP" in mixed case; the site text uses SVLS LABS. Re-export the video if the caption should match.
+
+## LogicPilot renamed to CuTTI (2 October 2026)
+
+- The product is now **CuTTI** ("From musical intent to editable production."), at `/products/cutti/`. `/products/logicpilot/` answers with a 301 to the new address; on the first request after the theme upload the theme renames the existing WordPress page to the new slug (no second page is created).
+- **Demo video**: the client's "CuTTI Demo" (52 s, 1080p, 18.8 MB) re-encoded for the web: `assets/video/cutti-demo.mp4` (1080p with sound, 3.5 MB) on the product page, `assets/video/cutti-loop.mp4` (720p, silent, 1.2 MB) for the homepage loop. Both stream from the first byte (faststart).
+- **Copy now matches the demo**: the request ("Build a dark melodic trap song in F♯ minor, 142 BPM, with piano, bell, pad, 808 and aggressive drums. Keep the verses sparse and make the final hook bigger."), five tracks of seeded, editable MIDI across Intro, Hook, Verse and Final Hook, built, verified and bounced in Logic Pro. The illustrated session uses the demo's track colours.
+- **New artwork**: cover image and LinkedIn share image regenerated with the CuTTI name (`node website/_tools/make-cutti-art.js`); the LogicPilot launch artwork is no longer used.
+- **Client to do**: upload the rebuilt zip with "Replace installed with uploaded", then open https://svlslabs.com/products/cutti/ and https://svlslabs.com/products/logicpilot/ (it should land on the CuTTI page). Set the Google Drive file "CuTTI Demo.mp4" back to Restricted if its sharing was opened.

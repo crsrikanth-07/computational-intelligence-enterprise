@@ -35,8 +35,8 @@ $GLOBALS['svls_page_head'] = function () { ?>
 <link rel="preload" as="font" type="font/woff2" crossorigin href="https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@800&display=swap">
-<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/tokens.css?v=c2966ec5">
-<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/site.css?v=971185ff">
+<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/tokens.css?v=047f8b8c">
+<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/site.css?v=1bc3ca8c">
 <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/theme.css?v=95b1acdc">
 <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/js/site.js?v=2891427c" defer></script>
 <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/js/theme.js?v=1aa957a6" defer></script>
@@ -60,15 +60,15 @@ get_header();
 ?>
 <main id="main">
 
-  <!-- 01 Launch spotlight: LogicPilot (charcoal, product colours, live countdown, looping demo) -->
-  <section class="section band-dark spot" id="logicpilot-spotlight" aria-labelledby="spot-title">
+  <!-- 01 Launch spotlight: CuTTI (charcoal, product colours, live countdown, looping demo) -->
+  <section class="section band-dark spot" id="cutti-spotlight" aria-labelledby="spot-title">
     <div class="spot__glow" aria-hidden="true"></div>
     <div class="container">
       <div class="section-mark"><span class="numeral">01</span><p class="eyebrow">New product · Agentic AI · Launching 12 November 2026</p></div>
       <div class="grid spot__grid">
         <div class="col-5 spot__copy">
-          <h2 id="spot-title" class="spot__title"><span class="spot__name">LogicPilot</span> <span class="spot__sub">MCP for Logic Pro</span></h2>
-          <p class="spot__lead">Describe the song. Get the session. LogicPilot turns a written brief into an editable Logic Pro project: tracks, MIDI, song sections and arrangement.</p>
+          <h2 id="spot-title" class="spot__title"><span class="spot__name">CuTTI</span> <span class="spot__sub">MCP for Logic Pro</span></h2>
+          <p class="spot__lead">From musical intent to editable production. Describe the song, and CuTTI builds the Logic Pro project: tracks, seeded MIDI, song sections and arrangement.</p>
           <ul class="spot__tags" role="list">
             <li>Producer in the loop</li>
             <li>Original arrangements</li>
@@ -84,19 +84,19 @@ get_header();
           </div>
           <p class="spot__date">Launching 12 November 2026</p>
           <div class="btn-row">
-            <a class="btn btn--primary" href="/products/logicpilot/">Discover LogicPilot</a>
-            <a class="btn btn--secondary" href="/products/logicpilot/#updates">Get launch updates</a>
+            <a class="btn btn--primary" href="/products/cutti/">Discover CuTTI</a>
+            <a class="btn btn--secondary" href="/products/cutti/#updates">Get launch updates</a>
           </div>
         </div>
         <div class="col-7 spot__media" data-reveal>
           <figure class="spot__video">
             <div class="spot__frame">
-              <video muted loop playsinline preload="none" poster="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/logicpilot/demo-poster.webp" width="1720" height="1080" data-autoplay aria-describedby="spot-cap">
-                <source src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/video/logicpilot-demo.mp4" type="video/mp4">
+              <video muted loop playsinline preload="none" poster="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/cutti/demo-poster.webp" width="1280" height="720" data-autoplay aria-describedby="spot-cap">
+                <source src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/video/cutti-loop.mp4" type="video/mp4">
               </video>
               <button class="spot__toggle" type="button" data-video-toggle hidden><span>Play demo</span></button>
             </div>
-            <figcaption class="spot__cap" id="spot-cap">Development demo, silent loop<span class="visually-hidden">: a Logic Pro session fills with Drums, 808, Piano, Bell and Pad tracks, MIDI and song sections</span>. <a href="/products/logicpilot/#demo">Watch with sound</a><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></figcaption>
+            <figcaption class="spot__cap" id="spot-cap"><span>Product demo, silent loop<span class="visually-hidden">: one written request becomes five tracks of seeded, editable MIDI (Drums, 808, Piano, Bell, Pad) across Intro, Hook, Verse and Final Hook in Logic Pro</span>.</span> <a href="/products/cutti/#demo">Watch with sound</a><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></figcaption>
           </figure>
         </div>
       </div>
@@ -201,7 +201,7 @@ get_header();
         <ul class="proof-row hero__rows-b">
           <li><span class="proof-row__num">25+</span><span class="proof-row__label">years of SAP delivery experience</span></li>
           <li><span class="proof-row__num">2020</span><span class="proof-row__label">founded</span></li>
-          <li><span class="proof-row__num">3</span><span class="proof-row__label">products: Value Lens (private beta), SAP Intelligence Suite and LogicPilot (launching 12 Nov 2026)</span></li>
+          <li><span class="proof-row__num">3</span><span class="proof-row__label">products: Value Lens (private beta), SAP Intelligence Suite and CuTTI (launching 12 Nov 2026)</span></li>
         </ul>
       </div>
     </div>
@@ -230,7 +230,7 @@ get_header();
         <li class="stat-cell">
           <p class="stat stat-cell__num">3</p>
           <p class="stat-cell__label">products</p>
-          <p class="stat-cell__ctx">Value Lens (private beta) and SAP Intelligence Suite on our SAP control model, and LogicPilot for Logic Pro, launching 12 November 2026.</p>
+          <p class="stat-cell__ctx">Value Lens (private beta) and SAP Intelligence Suite on our SAP control model, and CuTTI for Logic Pro, launching 12 November 2026.</p>
         </li>
         <li class="stat-cell">
           <p class="stat stat-cell__num">3</p>

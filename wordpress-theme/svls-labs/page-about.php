@@ -36,8 +36,8 @@ $GLOBALS['svls_page_head'] = function () { ?>
 <link rel="preload" as="font" type="font/woff2" crossorigin href="https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@800&display=swap">
-<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/tokens.css?v=c2966ec5">
-<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/site.css?v=971185ff">
+<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/tokens.css?v=047f8b8c">
+<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/site.css?v=1bc3ca8c">
 <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/pages/about.css?v=11dbc9a0">
 <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/theme.css?v=95b1acdc">
 <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/js/site.js?v=2891427c" defer></script>
@@ -106,7 +106,7 @@ get_header();
         <ul class="proof-row hero__rows-b">
           <li><span class="proof-row__num">25+</span><span class="proof-row__label">years of SAP delivery experience</span></li>
           <li><span class="proof-row__num">2020</span><span class="proof-row__label">founded</span></li>
-          <li><span class="proof-row__num">3</span><span class="proof-row__label">products: Value Lens (private beta), SAP Intelligence Suite and LogicPilot (launching 12 Nov 2026)</span></li>
+          <li><span class="proof-row__num">3</span><span class="proof-row__label">products: Value Lens (private beta), SAP Intelligence Suite and CuTTI (launching 12 Nov 2026)</span></li>
         </ul>
       </div>
     </div>
@@ -127,10 +127,10 @@ get_header();
         <li>Agentic &amp; applied AI on SAP BTP · Reference implementations · Control model</li>
       </ul>
       <div class="story__today">
-        <p class="story__today-line">Today the same principles run through three products: <a class="link" href="/products/value-lens/">Value Lens (private beta)</a>, our margin leak finder for order-to-cash; <a class="link" href="/products/sap-intelligence-suite/">SAP Intelligence Suite</a>, our AI-assisted SAP engineering workbench; and <a class="link" href="/products/logicpilot/">LogicPilot</a>, our MCP production assistant for Logic Pro, which takes the same agent discipline beyond the enterprise.</p>
+        <p class="story__today-line">Today the same principles run through three products: <a class="link" href="/products/value-lens/">Value Lens (private beta)</a>, our margin leak finder for order-to-cash; <a class="link" href="/products/sap-intelligence-suite/">SAP Intelligence Suite</a>, our AI-assisted SAP engineering workbench; and <a class="link" href="/products/cutti/">CuTTI</a>, our MCP production assistant for Logic Pro, which takes the same agent discipline beyond the enterprise.</p>
         <p class="status">Value Lens: private beta on synthetic SAP-like data. Production SAP connector in development.</p>
         <p class="status">SAP Intelligence Suite: in use in SVLS LABS delivery. Available to customers on request; deployed in your landscape, reviewed by your architects.</p>
-        <p class="status">LogicPilot: in development. Launching 12 November 2026.</p>
+        <p class="status">CuTTI: in development. Launching 12 November 2026.</p>
       </div>
     </div>
   </section>
