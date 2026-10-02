@@ -1,4 +1,4 @@
-/* /products/logicpilot/ — page-specific styles (tokens only; loaded after site.css, before theme.css).
+/* /products/cutti/ — page-specific styles (tokens only; loaded after site.css, before theme.css).
    A product-launch layout: oversized product name, key visual, full-width demo video, alternating
    charcoal bands, a seven-stage flow and a spec table. Colours come from tokens.css (--lp-*). */
 
@@ -9,7 +9,7 @@
 .lp-title { display: flex; flex-direction: column; gap: var(--s-2); max-width: none; }
 .lp-title__name {
   font-family: var(--font-heading); font-weight: 800;
-  font-size: clamp(56px, 4.6vw + 34px, 104px); line-height: .95; letter-spacing: -0.045em;
+  font-size: clamp(76px, 7vw + 40px, 150px); line-height: .9; letter-spacing: -0.05em;
   color: var(--text);
 }
 .lp-title__sub {

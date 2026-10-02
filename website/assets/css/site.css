@@ -1047,7 +1047,7 @@ textarea.input { min-height: 96px; resize: vertical; }
 .launch-pill .arrow-link__pt { fill: var(--accent); }
 
 /* ---------------------------------------------------------------------------
-   Launch spotlight (homepage, LogicPilot): charcoal band with the product's arrangement colours,
+   Launch spotlight (homepage, CuTTI): charcoal band with the product's arrangement colours,
    an oversized name, a live countdown and a silent looping demo. Colours: tokens.css (--lp-*).
    --------------------------------------------------------------------------- */
 .spot { overflow: hidden; }
@@ -1064,7 +1064,7 @@ textarea.input { min-height: 96px; resize: vertical; }
 .spot__title { display: flex; flex-direction: column; gap: var(--s-2); max-width: none; }
 .spot__name {
   font-family: var(--font-heading); font-weight: 800;
-  font-size: clamp(60px, 5.4vw + 34px, 120px); line-height: .92; letter-spacing: -0.05em;
+  font-size: clamp(84px, 8vw + 40px, 176px); line-height: .88; letter-spacing: -0.05em;
   background: linear-gradient(100deg, var(--text) 0%, var(--text) 55%, var(--lp-chorus) 82%, var(--lp-intro) 100%);
   -webkit-background-clip: text; background-clip: text; color: transparent;
 }
