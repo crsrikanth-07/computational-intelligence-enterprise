@@ -144,3 +144,10 @@ New product page `/products/logicpilot/` for LogicPilot, the MCP production assi
 - **Copy now matches the demo**: the request ("Build a dark melodic trap song in F♯ minor, 142 BPM, with piano, bell, pad, 808 and aggressive drums. Keep the verses sparse and make the final hook bigger."), five tracks of seeded, editable MIDI across Intro, Hook, Verse and Final Hook, built, verified and bounced in Logic Pro. The illustrated session uses the demo's track colours.
 - **New artwork**: cover image and LinkedIn share image regenerated with the CuTTI name (`node website/_tools/make-cutti-art.js`); the LogicPilot launch artwork is no longer used.
 - **Client to do**: upload the rebuilt zip with "Replace installed with uploaded", then open https://svlslabs.com/products/cutti/ and https://svlslabs.com/products/logicpilot/ (it should land on the CuTTI page). Set the Google Drive file "CuTTI Demo.mp4" back to Restricted if its sharing was opened.
+
+## CuTTI live demo with music (4 October 2026)
+
+- The client's "CuTTI Interim Demo with music" (2 min 52 s, 1080p, 18.9 MB, a live Logic Pro recording) replaces the earlier demo: `assets/video/cutti-demo.mp4` (1080p with music, 6.5 MB) on the product page; `assets/video/cutti-loop.mp4` (720p, silent, 48 s highlight from 0:41, 0.6 MB) on the homepage.
+- The demo section now carries a five-step transcript of the on-screen conversation (Build the song, Listen, Mix, Loop the final hook, Bounce), quoting only the words visible in the video; captions that end in "…" in the video are not completed.
+- Copy added from the demo: every change read back from Logic; transport, loop, mute and level among the actions; a new FAQ on the refused bounce (with the loop on, Logic would have bounced only the Final Hook).
+- Client to do: upload the rebuilt zip with "Replace installed with uploaded".

@@ -92,8 +92,20 @@
 }
 .lp-video video { display: block; width: 100%; height: 100%; object-fit: contain; background: var(--lp-video-bg); }
 .lp-video__cap { margin-top: var(--s-4); max-width: 80ch; font-size: 14px; line-height: 22px; color: var(--text-muted); }
-.lp-demo__facts { margin-top: var(--s-6); }
-.lp-demo__facts .eyebrow { display: block; margin-bottom: 4px; }
+/* Demo transcript: the five on-screen steps. 1 column, 2 from 700px, 3 from 1024px with step 1 spanning two */
+.lp-steps { list-style: none; margin: var(--s-6) 0 0; padding: 0; display: grid; gap: var(--s-4); grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 700px)  { .lp-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); } .lp-step:first-child { grid-column: 1 / -1; } }
+@media (min-width: 1024px) { .lp-steps { grid-template-columns: repeat(3, minmax(0, 1fr)); } .lp-step:first-child { grid-column: span 2; } }
+.lp-step { min-width: 0; padding: 20px 22px 22px; border: 1px solid var(--rule); border-radius: 12px; background: var(--surface); }
+.lp-step__head { display: flex; align-items: center; gap: 10px; font: 600 17px/1.3 var(--font-heading); letter-spacing: -0.01em; color: var(--text); }
+.lp-step__head .numeral { color: var(--accent-text); font-size: 12px; }
+.lp-step__you, .lp-step__cutti { margin-top: var(--s-3); font-size: 15px; line-height: 23px; }
+.lp-step__you { color: var(--text); }
+.lp-step__cutti { color: var(--text-muted); padding-left: 12px; border-left: 2px solid color-mix(in srgb, var(--lp-drums) 60%, transparent); }
+.lp-step__cutti--refused { color: var(--text); border-left-color: var(--accent); }
+.lp-step__who { display: block; margin-bottom: 2px; font: 500 11px/16px var(--font-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--text-muted); }
+.lp-step__cutti .lp-step__who { color: var(--lp-drums); }
+.lp-step__cutti--refused .lp-step__who { color: var(--accent-text); }
 
 /* 04 Rather than */
 .lp-rather .lp-rather__was { font: 500 12px/18px var(--font-mono); letter-spacing: .06em; text-transform: uppercase; color: var(--text-muted); }

@@ -96,7 +96,7 @@ get_header();
               </video>
               <button class="spot__toggle" type="button" data-video-toggle hidden><span>Play demo</span></button>
             </div>
-            <figcaption class="spot__cap" id="spot-cap"><span>Product demo, silent loop<span class="visually-hidden">: one written request becomes five tracks of seeded, editable MIDI (Drums, 808, Piano, Bell, Pad) across Intro, Hook, Verse and Final Hook in Logic Pro</span>.</span> <a href="/products/cutti/#demo">Watch with sound</a><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></figcaption>
+            <figcaption class="spot__cap" id="spot-cap"><span>Live demo in Logic Pro, silent highlight<span class="visually-hidden">: CuTTI confirms a five-track, four-section song, plays it from the hook, mutes the bell, lowers the 808 by 4 dB and loops the final hook</span>.</span> <a href="/products/cutti/#demo">Watch the full demo with music</a><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></figcaption>
           </figure>
         </div>
       </div>

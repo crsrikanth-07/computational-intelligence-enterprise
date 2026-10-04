@@ -38,7 +38,7 @@ $GLOBALS['svls_page_head'] = function () { ?>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@800&display=swap">
 <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/tokens.css?v=047f8b8c">
 <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/site.css?v=1bc3ca8c">
-<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/pages/cutti.css?v=2a688225">
+<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/pages/cutti.css?v=313a2e13">
 <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/theme.css?v=95b1acdc">
 <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/js/site.js?v=2891427c" defer></script>
 <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/js/theme.js?v=1aa957a6" defer></script>
@@ -72,12 +72,12 @@ $GLOBALS['svls_page_head'] = function () { ?>
 {
   "@context": "https://schema.org",
   "@type": "VideoObject",
-  "name": "CuTTI product demo",
-  "description": "CuTTI turns one written request into a dark melodic trap arrangement in F sharp minor at 142 BPM: five tracks of seeded, editable MIDI (Drums, 808, Piano, Bell, Pad) across Intro, Hook, Verse and Final Hook, built, verified and bounced in Logic Pro.",
+  "name": "CuTTI live demo in Logic Pro",
+  "description": "CuTTI live in Logic Pro: one request builds a dark melodic trap song in F sharp minor at 142 BPM (5 tracks, 4 sections, every step verified and saved); plain-English follow-ups play it from the hook, mute the bell and lower the 808 by 4 dB, loop the final hook, and CuTTI refuses a bounce that would have exported only the looped section.",
   "thumbnailUrl": "<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/cutti/demo-poster.webp",
   "contentUrl": "<?php echo esc_url( get_template_directory_uri() ); ?>/assets/video/cutti-demo.mp4",
-  "uploadDate": "2026-10-02",
-  "duration": "PT52S",
+  "uploadDate": "2026-10-04",
+  "duration": "PT2M52S",
   "publisher": {
     "@type": "Organization",
     "name": "SVLS LABS",
@@ -178,23 +178,45 @@ get_header();
     <div class="container">
       <div class="section-head" data-reveal>
         <div class="section-mark"><span class="numeral">03</span><p class="eyebrow">Product demo</p></div>
-        <h2 id="demo-title">One Request. Five Tracks. A Session in Logic Pro.</h2>
-        <p class="subcopy">Under a minute. One written request becomes five tracks of seeded, editable MIDI across four song sections, built, verified and bounced in Logic Pro. The producer takes it from there.</p>
+        <h2 id="demo-title">One Conversation. A Live Session in Logic Pro.</h2>
+        <p class="subcopy">Recorded live in Logic Pro, with music. One request builds the song; plain-English follow-ups play it, mix it and loop the final hook. CuTTI reads every change back from Logic, and refuses a bounce that would export the wrong part of the song.</p>
       </div>
       <figure class="lp-video">
         <div class="lp-video__frame">
           <video controls playsinline preload="none" poster="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/cutti/demo-poster.webp" width="1920" height="1080" aria-describedby="demo-desc">
             <source src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/video/cutti-demo.mp4" type="video/mp4">
-            <a href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/video/cutti-demo.mp4">Download the CuTTI product demo (MP4, 52 seconds)</a>
+            <a href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/video/cutti-demo.mp4">Download the CuTTI live demo (MP4, 2 min 52 s)</a>
           </video>
         </div>
-        <figcaption class="lp-video__cap" id="demo-desc">CuTTI product demo. The request: “Build a dark melodic trap song in F♯ minor, 142 BPM, with piano, bell, pad, 808 and aggressive drums. Keep the verses sparse and make the final hook bigger.” CuTTI builds Drums, 808, Piano, Bell and Pad as seeded, editable MIDI across Intro, Hook, Verse and Final Hook, then builds, verifies and bounces the session in Logic Pro.</figcaption>
+        <figcaption class="lp-video__cap" id="demo-desc">CuTTI live demo in Logic Pro, 2 min 52 s, with music. On-screen conversation in five steps, transcribed below.</figcaption>
       </figure>
-      <ul class="microlabels lp-demo__facts" role="list">
-        <li><span class="eyebrow">Tracks</span> Drums, 808, Piano, Bell, Pad</li>
-        <li><span class="eyebrow">Sections</span> Intro, Hook, Verse, Final Hook</li>
-        <li><span class="eyebrow">Session</span> Dark melodic trap, 142 BPM, F♯ minor</li>
-      </ul>
+      <ol class="lp-steps" role="list" aria-label="What happens in the demo">
+        <li class="lp-step">
+          <p class="lp-step__head"><span class="numeral">01</span> Build the song</p>
+          <p class="lp-step__you"><span class="lp-step__who">You</span> “Build a dark melodic trap song in F♯ minor at 142 BPM with piano, bell, pad, 808 and aggressive drums. Keep the verse sparse and make the final hook bigger.”</p>
+          <p class="lp-step__cutti"><span class="lp-step__who">CuTTI</span> Done: 5 tracks, 4 sections, 142 BPM, F♯ minor, every step verified and saved.</p>
+        </li>
+        <li class="lp-step">
+          <p class="lp-step__head"><span class="numeral">02</span> Listen</p>
+          <p class="lp-step__you"><span class="lp-step__who">You</span> “Play it from the hook.”</p>
+          <p class="lp-step__cutti"><span class="lp-step__who">CuTTI</span> Moving the playhead to the Hook (bar 5) and pressing Play.</p>
+        </li>
+        <li class="lp-step">
+          <p class="lp-step__head"><span class="numeral">03</span> Mix</p>
+          <p class="lp-step__you"><span class="lp-step__who">You</span> “Stop. Mute the bell and bring the 808 down 4 dB.”</p>
+          <p class="lp-step__cutti"><span class="lp-step__who">CuTTI</span> Stopping, then muting Bell and setting 808 to −4 dB, each change read back from Logic.</p>
+        </li>
+        <li class="lp-step">
+          <p class="lp-step__head"><span class="numeral">04</span> Loop the final hook</p>
+          <p class="lp-step__you"><span class="lp-step__who">You</span> “Loop the final hook and play it.”</p>
+          <p class="lp-step__cutti"><span class="lp-step__who">CuTTI</span> Setting the cycle to the Final Hook (bars 21–28), checking both locators, then Play.</p>
+        </li>
+        <li class="lp-step">
+          <p class="lp-step__head"><span class="numeral">05</span> Bounce</p>
+          <p class="lp-step__you"><span class="lp-step__who">You</span> “Stop and bounce it to an MP3.”</p>
+          <p class="lp-step__cutti lp-step__cutti--refused"><span class="lp-step__who">CuTTI</span> Refused: with the loop on, Logic would bounce only the Final Hook.</p>
+        </li>
+      </ol>
     </div>
   </section>
 
@@ -240,7 +262,7 @@ get_header();
         <li class="lp-ask"><span class="lp-ask__caret" aria-hidden="true">›</span>Change the instrumentation.</li>
         <li class="lp-ask"><span class="lp-ask__caret" aria-hidden="true">›</span>Make the chorus bigger.</li>
       </ul>
-      <p class="lp-brief"><span class="eyebrow">The brief from the demo</span> “Build a dark melodic trap song in F♯ minor, 142 BPM, with piano, bell, pad, 808 and aggressive drums. Keep the verses sparse and make the final hook bigger.”</p>
+      <p class="lp-brief"><span class="eyebrow">The brief from the demo</span> “Build a dark melodic trap song in F♯ minor at 142 BPM with piano, bell, pad, 808 and aggressive drums. Keep the verse sparse and make the final hook bigger.”</p>
     </div>
   </section>
 
@@ -268,6 +290,8 @@ get_header();
           <li class="chip">Arrangement templates</li>
           <li class="chip">Track creation</li>
           <li class="chip">Section edits</li>
+          <li class="chip">Transport and loop</li>
+          <li class="chip">Mute and level</li>
           <li class="chip">Project save and bounce</li>
         </ul>
       </div>
@@ -280,7 +304,7 @@ get_header();
       <div class="section-head" data-reveal>
         <div class="section-mark"><span class="numeral">07</span><p class="eyebrow">Producer in the loop</p></div>
         <h2 id="control-title">Your DAW. Your Templates. <span class="key">Your Control.</span></h2>
-        <p class="subcopy">The same rule we apply to governed agents in the enterprise: the agent acts through defined, verified tools, and a person makes the decisions.</p>
+        <p class="subcopy">The same rule we apply to governed agents in the enterprise: the agent acts through defined, verified tools, every change is read back from Logic, and a person makes the decisions.</p>
       </div>
       <div class="hgrid hgrid--3 hgrid--bottom">
         <div class="control">
@@ -317,8 +341,8 @@ get_header();
               <tr><th scope="row">Protocol</th><td>Model Context Protocol (MCP)</td></tr>
               <tr><th scope="row">Input</th><td>A written brief: genre, mood, tempo, instruments, structure, and follow-up requests</td></tr>
               <tr><th scope="row">Output</th><td>An editable Logic Pro project: tracks, MIDI regions, song sections and arrangement structure</td></tr>
-              <tr><th scope="row">Actions</th><td>MIDI generation, arrangement templates, track creation, section edits, project save and bounce</td></tr>
-              <tr><th scope="row">Status</th><td>In development; product demo published</td></tr>
+              <tr><th scope="row">Actions</th><td>MIDI generation, arrangement templates, track creation, section edits, transport and loop, mute and level, project save and bounce</td></tr>
+              <tr><th scope="row">Status</th><td>In development; live demo in Logic Pro published</td></tr>
               <tr><th scope="row">Launch</th><td>12 November 2026</td></tr>
               <tr><th scope="row">System requirements and pricing</th><td>Published at launch</td></tr>
               <tr><th scope="row">Publisher</th><td>SVLS LABS LLP, Hyderabad, India</td></tr>
@@ -406,12 +430,16 @@ get_header();
           <div class="faq__body"><p>Logic Pro on macOS. Supported versions, system requirements and pricing are published at launch.</p></div>
         </details>
         <details class="faq">
+          <summary>What if a request would do the wrong thing?<svg class="faq__glyph" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M0 8h16" stroke="currentColor" stroke-width="1.5"/><path class="v" d="M8 0v16" stroke="currentColor" stroke-width="1.5"/></svg></summary>
+          <div class="faq__body"><p>CuTTI checks the session before it acts and reads every change back from Logic. In the demo it was asked to bounce while the final hook was still looped, and it refused: Logic would have bounced only the Final Hook.</p></div>
+        </details>
+        <details class="faq">
           <summary>When can I use it?<svg class="faq__glyph" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M0 8h16" stroke="currentColor" stroke-width="1.5"/><path class="v" d="M8 0v16" stroke="currentColor" stroke-width="1.5"/></svg></summary>
           <div class="faq__body"><p>CuTTI launches on 12 November 2026. <a href="#updates">Register for launch updates</a> and we will write before launch, including early-access details.</p></div>
         </details>
         <details class="faq">
           <summary>Is the video the final product?<svg class="faq__glyph" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M0 8h16" stroke="currentColor" stroke-width="1.5"/><path class="v" d="M8 0v16" stroke="currentColor" stroke-width="1.5"/></svg></summary>
-          <div class="faq__body"><p>No. It is a pre-launch product demo. The launch build may look and behave differently.</p></div>
+          <div class="faq__body"><p>No. It is an interim demo recorded live in Logic Pro before launch. The launch build may look and behave differently.</p></div>
         </details>
         <details class="faq">
           <summary>Is CuTTI made by Apple?<svg class="faq__glyph" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M0 8h16" stroke="currentColor" stroke-width="1.5"/><path class="v" d="M8 0v16" stroke="currentColor" stroke-width="1.5"/></svg></summary>
