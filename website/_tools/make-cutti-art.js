@@ -1,5 +1,5 @@
-// Renders the CuTTI demo poster (assets/img/cutti/demo-poster.webp, video ratio) and the share image
-// (assets/og/og-cutti.jpg, 1200x630) from the page's own key visual and tokens.
+// Renders the CuTTI share image (assets/og/og-cutti.jpg, 1200x630) from the page's own key visual and tokens.
+// The video cover (assets/img/cutti/demo-poster.webp) is a frame from the demo video's opening title, not rendered here.
 // Usage: node website/_tools/make-cutti-art.js   (needs Playwright; Python Pillow converts PNG to WebP/JPEG)
 const fs = require('fs'), path = require('path'), { execFileSync } = require('child_process');
 const { chromium } = require(process.env.PLAYWRIGHT || '/opt/node22/lib/node_modules/playwright');
@@ -43,7 +43,6 @@ const card = (w, h, scale) => `<!doctype html><html><head><meta charset="utf-8">
 (async () => {
   const b = await chromium.launch();
   const jobs = [
-    { w: 1600, h: 900, s: 1.08, png: 'demo-poster.png', out: 'assets/img/cutti/demo-poster.webp', fmt: 'WEBP' },
     { w: 1200, h: 630, s: 0.82, png: 'og-cutti.png', out: 'assets/og/og-cutti.jpg', fmt: 'JPEG' },
   ];
   for (const j of jobs) {

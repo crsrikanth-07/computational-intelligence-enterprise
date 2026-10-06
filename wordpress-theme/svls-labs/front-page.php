@@ -68,7 +68,7 @@ get_header();
       <div class="grid spot__grid">
         <div class="col-5 spot__copy">
           <h2 id="spot-title" class="spot__title"><span class="spot__name">CuTTI</span> <span class="spot__sub">MCP for Logic Pro</span></h2>
-          <p class="spot__lead">From musical intent to editable production. Describe the song, and CuTTI builds the Logic Pro project: tracks, seeded MIDI, song sections and arrangement.</p>
+          <p class="spot__lead">From musical intent to editable production. One request becomes a full producer session in Logic Pro: named tracks, every section, a mix and a master, every step verified.</p>
           <ul class="spot__tags" role="list">
             <li>Producer in the loop</li>
             <li>Original arrangements</li>
@@ -96,7 +96,7 @@ get_header();
               </video>
               <button class="spot__toggle" type="button" data-video-toggle hidden><span>Play demo</span></button>
             </div>
-            <figcaption class="spot__cap" id="spot-cap"><span>Live demo in Logic Pro, silent highlight<span class="visually-hidden">: CuTTI confirms a five-track, four-section song, plays it from the hook, mutes the bell, lowers the 808 by 4 dB and loops the final hook</span>.</span> <a href="/products/cutti/#demo">Watch the full demo with music</a><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></figcaption>
+            <figcaption class="spot__cap" id="spot-cap"><span>Demo highlight, silent<span class="visually-hidden">: one request, 32 instruments on 45 named tracks, mixed, cut at every section, 147 of 147 steps verified</span>.</span> <a href="/products/cutti/#demo">Watch the full demo with sound</a><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></figcaption>
           </figure>
         </div>
       </div>

@@ -151,3 +151,11 @@ New product page `/products/logicpilot/` for LogicPilot, the MCP production assi
 - The demo section now carries a five-step transcript of the on-screen conversation (Build the song, Listen, Mix, Loop the final hook, Bounce), quoting only the words visible in the video; captions that end in "…" in the video are not completed.
 - Copy added from the demo: every change read back from Logic; transport, loop, mute and level among the actions; a new FAQ on the refused bounce (with the loop on, Logic would have bounced only the Final Hook).
 - Client to do: upload the rebuilt zip with "Replace installed with uploaded".
+
+## CuTTI demo replaced again (6 October 2026)
+
+- New client video (1 min 5 s, 1080p, 26 MB): "One request. A full producer session in Logic Pro." Re-encoded to `assets/video/cutti-demo.mp4` (1080p, sound at 192 kbps because the audio is the finished master, 10.2 MB) and `assets/video/cutti-loop.mp4` (first 37 s, 720p, silent, 1.8 MB) for the homepage.
+- Cover (`assets/img/cutti/demo-poster.webp`) is now the video's opening title frame; `_tools/make-cutti-art.js` renders only the share image.
+- Copy follows the video's on-screen text: the Dark Pop request, 32 instruments on 45 named tracks, mixed and cut at every section, 147 of 147 steps verified, built on camera in 13 min 9 s (18× time-lapse), mixed and mastered by CuTTI (71 finishing steps, Mastering Assistant and Adaptive Limiter, −14 LUFS), "Not a loop. Not a stem." Hero points now match the video's end card: Original music, Built-in Logic Pro instruments, Every step verified. The hero illustration and share image show the Dark Pop session.
+- Not repeated in page text: the video's "Human made" result from a third-party AI-music checker (it stays in the video only), and the unexplained "14 min 53 s" figure.
+- Client to do: upload the rebuilt zip with "Replace installed with uploaded".
