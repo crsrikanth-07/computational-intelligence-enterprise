@@ -35,10 +35,10 @@ $GLOBALS['svls_page_head'] = function () { ?>
 <link rel="preload" as="font" type="font/woff2" crossorigin href="https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@800&display=swap">
-<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/tokens.css?v=047f8b8c">
-<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/site.css?v=1bc3ca8c">
+<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/tokens.css?v=53ea99d0">
+<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/site.css?v=421ce377">
 <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/theme.css?v=95b1acdc">
-<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/js/site.js?v=2891427c" defer></script>
+<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/js/site.js?v=540ef525" defer></script>
 <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/js/theme.js?v=1aa957a6" defer></script>
 <script type="application/ld+json">
 {
@@ -60,50 +60,7 @@ get_header();
 ?>
 <main id="main">
 
-  <!-- 01 Launch spotlight: CuTTI (charcoal, product colours, live countdown, looping demo) -->
-  <section class="section band-dark spot" id="cutti-spotlight" aria-labelledby="spot-title">
-    <div class="spot__glow" aria-hidden="true"></div>
-    <div class="container">
-      <div class="section-mark"><span class="numeral">01</span><p class="eyebrow">New product · Agentic AI · Launching 12 November 2026</p></div>
-      <div class="grid spot__grid">
-        <div class="col-5 spot__copy">
-          <h2 id="spot-title" class="spot__title"><span class="spot__name">CuTTI</span> <span class="spot__sub">MCP for Logic Pro</span></h2>
-          <p class="spot__lead">From musical intent to editable production. One request becomes a full producer session in Logic Pro: named tracks, every section, a mix and a master, every step verified.</p>
-          <ul class="spot__tags" role="list">
-            <li>Producer in the loop</li>
-            <li>Original arrangements</li>
-            <li>Fully editable</li>
-          </ul>
-          <div class="spot__count" data-countdown-tiles="2026-11-12T00:00:00+05:30" hidden>
-            <p class="eyebrow spot__count-label">Launch in</p>
-            <div class="spot__tiles">
-              <span class="spot__tile"><span class="spot__num" data-unit="days">00</span><span class="spot__unit">Days</span></span>
-              <span class="spot__tile"><span class="spot__num" data-unit="hours">00</span><span class="spot__unit">Hours</span></span>
-              <span class="spot__tile"><span class="spot__num" data-unit="minutes">00</span><span class="spot__unit">Minutes</span></span>
-            </div>
-          </div>
-          <p class="spot__date">Launching 12 November 2026</p>
-          <div class="btn-row">
-            <a class="btn btn--primary" href="/products/cutti/">Discover CuTTI</a>
-            <a class="btn btn--secondary" href="/products/cutti/#updates">Get launch updates</a>
-          </div>
-        </div>
-        <div class="col-7 spot__media" data-reveal>
-          <figure class="spot__video">
-            <div class="spot__frame">
-              <video muted loop playsinline preload="none" poster="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/cutti/demo-poster.webp" width="1280" height="720" data-autoplay aria-describedby="spot-cap">
-                <source src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/video/cutti-loop.mp4" type="video/mp4">
-              </video>
-              <button class="spot__toggle" type="button" data-video-toggle hidden><span>Play demo</span></button>
-            </div>
-            <figcaption class="spot__cap" id="spot-cap"><span>Demo highlight, silent<span class="visually-hidden">: one request, 32 instruments on 45 named tracks, mixed, cut at every section, 147 of 147 steps verified</span>.</span> <a href="/products/cutti/#demo">Watch the full demo with sound</a><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></figcaption>
-          </figure>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 02 Hero: SAP, Cloud and Governed AI -->
+  <!-- 01 Hero -->
   <section class="hero hero--home has-grid" aria-labelledby="hero-title">
     <div class="hero-art" aria-hidden="true">
       <svg class="hero-art__mark" viewBox="0 0 64 64" focusable="false">
@@ -123,7 +80,7 @@ get_header();
       </svg>
     </div>
     <div class="container">
-      <div class="section-mark"><span class="numeral">02</span><p class="eyebrow">SAP · Cloud · Governed agentic &amp; applied AI</p></div>
+      <div class="section-mark"><span class="numeral">01</span><p class="eyebrow">SAP · Cloud · Governed agentic &amp; applied AI</p></div>
       <div class="grid hero__grid">
         <div class="hero__copy col-7">
           <h1 class="display" id="hero-title">SAP, Cloud and Governed AI. Engineered <span class="key">to Spec.</span></h1>
@@ -201,7 +158,7 @@ get_header();
         <ul class="proof-row hero__rows-b">
           <li><span class="proof-row__num">25+</span><span class="proof-row__label">years of SAP delivery experience</span></li>
           <li><span class="proof-row__num">2020</span><span class="proof-row__label">founded</span></li>
-          <li><span class="proof-row__num">3</span><span class="proof-row__label">products: Value Lens (private beta), SAP Intelligence Suite and CuTTI (launching 12 Nov 2026)</span></li>
+          <li><span class="proof-row__num">2</span><span class="proof-row__label">products: Value Lens (private beta) and SAP Intelligence Suite</span></li>
         </ul>
       </div>
     </div>
@@ -212,7 +169,7 @@ get_header();
   <section class="section band-surface" id="figures" aria-labelledby="figures-title">
     <div class="container">
       <div class="section-head" data-reveal>
-        <div class="section-mark"><span class="numeral">03</span><p class="eyebrow">Facts with sources</p></div>
+        <div class="section-mark"><span class="numeral">02</span><p class="eyebrow">Facts with sources</p></div>
         <h2 id="figures-title">Facts You Can Check.</h2>
         <p class="subcopy">Four facts about SVLS LABS. Each one says where it comes from.</p>
       </div>
@@ -228,9 +185,9 @@ get_header();
           <p class="stat-cell__ctx">SVLS LABS LLP. SAP, cloud and governed AI from one team.</p>
         </li>
         <li class="stat-cell">
-          <p class="stat stat-cell__num">3</p>
+          <p class="stat stat-cell__num">2</p>
           <p class="stat-cell__label">products</p>
-          <p class="stat-cell__ctx">Value Lens (private beta) and SAP Intelligence Suite on our SAP control model, and CuTTI for Logic Pro, launching 12 November 2026.</p>
+          <p class="stat-cell__ctx">Value Lens (private beta) and SAP Intelligence Suite, both built on our own control model.</p>
         </li>
         <li class="stat-cell">
           <p class="stat stat-cell__num">3</p>
@@ -245,7 +202,7 @@ get_header();
   <section class="section" id="practices" aria-labelledby="practices-title">
     <div class="container">
       <div class="section-head" data-reveal>
-        <div class="section-mark"><span class="numeral">04</span><p class="eyebrow">Practices</p></div>
+        <div class="section-mark"><span class="numeral">03</span><p class="eyebrow">Practices</p></div>
         <h2 id="practices-title">Three Practices. One Standard.</h2>
         <p class="subcopy">We stay in the work we can prove: SAP at the core, cloud around it, governed AI on top of it. One team owns the path from Clean Core extension to BigQuery to a governed agent on BTP.</p>
       </div>
@@ -283,7 +240,7 @@ get_header();
   <section class="section" id="method" aria-labelledby="method-title">
     <div class="container">
       <div class="section-head" data-reveal>
-        <div class="section-mark"><span class="numeral">05</span><p class="eyebrow">How we work</p></div>
+        <div class="section-mark"><span class="numeral">04</span><p class="eyebrow">How we work</p></div>
         <h2 id="method-title">Specify. Build. Verify. Then Ship.</h2>
         <p class="subcopy">The reason our integrations do not come back: every flow has a written contract before it has code, and a read-back check after it runs. The same method builds Value Lens.</p>
       </div>
@@ -321,7 +278,7 @@ get_header();
     <div class="container">
       <div class="grid vl-grid">
         <div class="vl-copy col-6">
-          <div class="section-mark"><span class="numeral">06</span><p class="eyebrow">Product</p></div>
+          <div class="section-mark"><span class="numeral">05</span><p class="eyebrow">Product</p></div>
           <span class="badge">Private beta</span>
           <h2 id="vl-title">Where Did We Lose Money This Week That We Should Not Have Lost?</h2>
           <p class="subcopy">Value Lens is our margin leak finder for order-to-cash. It reads SAP-like sales, pricing, cost and agreement facts through read-only tools, computes margin in exact integer cents under a versioned policy, and raises evidence-backed cases a finance reviewer can accept or dismiss with a reason.</p>
@@ -443,7 +400,7 @@ get_header();
   <section class="section" id="control-model" aria-labelledby="control-title">
     <div class="container">
       <div class="section-head" data-reveal>
-        <div class="section-mark"><span class="numeral">07</span><p class="eyebrow">Governed AI on SAP BTP</p></div>
+        <div class="section-mark"><span class="numeral">06</span><p class="eyebrow">Governed AI on SAP BTP</p></div>
         <h2 id="control-title">AI in Your ERP Is a Control Question Before It Is a Productivity Question.</h2>
         <p class="subcopy">The same agent that can raise a purchase order can raise the wrong one. Our agents explain; your people decide. The numbers never come from the model.</p>
       </div>
@@ -493,7 +450,7 @@ get_header();
   <section class="section" id="ai-assisted" aria-labelledby="ai-title">
     <div class="container">
       <div class="section-head" data-reveal>
-        <div class="section-mark"><span class="numeral">08</span><p class="eyebrow">AI-assisted engineering</p></div>
+        <div class="section-mark"><span class="numeral">07</span><p class="eyebrow">AI-assisted engineering</p></div>
         <h2 id="ai-title">Repeatable SAP Engineering, Faster. With a List of What We Never Automate.</h2>
         <p class="subcopy">We use our own AI-assisted tooling for the repeatable parts of integration and extension work. Every generated artefact is reviewed by a certified architect before it reaches your landscape.</p>
       </div>
@@ -573,7 +530,7 @@ get_header();
   <section class="section band-surface" id="credentials" aria-labelledby="cred-title">
     <div class="container">
       <div class="section-head" data-reveal>
-        <div class="section-mark"><span class="numeral">09</span><p class="eyebrow">Where we work · What we hold</p></div>
+        <div class="section-mark"><span class="numeral">08</span><p class="eyebrow">Where we work · What we hold</p></div>
         <h2 id="cred-title">Built in the Modules Where Money Moves. Certified Where It Counts.</h2>
         <p class="subcopy">Project systems, procurement, order-to-cash, inventory, finance, workforce. Industries where the ledger is not optional.</p>
       </div>
@@ -624,7 +581,7 @@ get_header();
   <!-- 09 For SAP partners -->
   <section class="section section--slim band-surface partner-band" id="partners" aria-labelledby="partners-title">
     <div class="container">
-      <div class="section-mark"><span class="numeral">10</span><p class="eyebrow">For SAP partners</p></div>
+      <div class="section-mark"><span class="numeral">09</span><p class="eyebrow">For SAP partners</p></div>
       <div class="grid">
         <div class="col-8">
           <h3 id="partners-title">Integration Suite, BTP and agentic-AI capacity for partner programmes. White-label or co-delivered.</h3>
@@ -642,7 +599,7 @@ get_header();
   <section class="section has-grid cta-band" id="next-step" aria-labelledby="next-title">
     <div class="container">
       <div class="section-head" data-reveal>
-        <div class="section-mark"><span class="numeral">11</span><p class="eyebrow">Next step</p></div>
+        <div class="section-mark"><span class="numeral">10</span><p class="eyebrow">Next step</p></div>
         <h2 id="next-title">Bring Us the Spec. Or the Problem You Have Not Specified Yet.</h2>
         <p class="subcopy">A 45-minute discovery call with an architect, not a salesperson. We will tell you what we would build, what we would not, and what it should cost. Or start with a two-week, fixed-scope discovery.</p>
       </div>

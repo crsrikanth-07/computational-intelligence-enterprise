@@ -36,11 +36,11 @@ $GLOBALS['svls_page_head'] = function () { ?>
 <link rel="preload" as="font" type="font/woff2" crossorigin href="https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@800&display=swap">
-<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/tokens.css?v=047f8b8c">
-<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/site.css?v=1bc3ca8c">
+<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/tokens.css?v=53ea99d0">
+<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/site.css?v=421ce377">
 <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/pages/ai.css?v=1542aab5">
 <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/theme.css?v=95b1acdc">
-<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/js/site.js?v=2891427c" defer></script>
+<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/js/site.js?v=540ef525" defer></script>
 <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/js/theme.js?v=1aa957a6" defer></script>
 <script type="application/ld+json">
 {
@@ -195,27 +195,10 @@ get_header();
   </section>
 
   <!-- 04 Control model -->
-  <!-- 04 Product: CuTTI (agentic AI beyond the enterprise) -->
-  <section class="section section--slim slim-band" id="cutti" aria-labelledby="cutti-title">
-    <div class="container">
-      <div class="section-mark"><span class="numeral">04</span><p class="eyebrow">New product · Launching 12 November 2026</p></div>
-      <div class="grid">
-        <div class="col-8">
-          <h3 id="cutti-title">CuTTI: Agentic AI for Music Production in Logic Pro.</h3>
-          <p class="slim-band__body">Our MCP production assistant turns a written brief into an editable Logic Pro session, with tracks, MIDI, song sections and arrangement structure. The same discipline as our enterprise agents: defined tools, verified actions and a person who makes the creative decisions.</p>
-        </div>
-        <div class="col-4 slim-band__action">
-          <a class="arrow-link" href="/products/cutti/">See CuTTI<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
-          <a class="arrow-link" href="/products/cutti/#demo">Watch the demo<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <section class="section" id="control-model" aria-labelledby="control-title">
     <div class="container">
       <div class="section-head" data-reveal>
-        <div class="section-mark"><span class="numeral">05</span><p class="eyebrow">Governed AI on SAP BTP</p></div>
+        <div class="section-mark"><span class="numeral">04</span><p class="eyebrow">Governed AI on SAP BTP</p></div>
         <h2 id="control-title">AI in Your ERP Is a Control Question Before It Is a Productivity Question.</h2>
         <p class="subcopy">The same agent that can raise a purchase order can raise the wrong one. Our agents explain; your people decide. The numbers never come from the model.</p>
       </div>
@@ -264,7 +247,7 @@ get_header();
   <!-- 04 Proof (surface band, four cells) -->
   <section class="section band-surface" id="proof" aria-labelledby="proof-title">
     <div class="container">
-      <div class="section-mark mb-6"><span class="numeral">06</span><h2 class="eyebrow" id="proof-title">Facts with Sources</h2></div>
+      <div class="section-mark mb-6"><span class="numeral">05</span><h2 class="eyebrow" id="proof-title">Facts with Sources</h2></div>
       <ul class="hgrid hgrid--4 hgrid--bottom" role="list">
         <li class="stat-cell">
           <p class="stat stat-cell__num">0</p>
@@ -293,7 +276,7 @@ get_header();
   <section class="section" id="ai-assisted" aria-labelledby="ai-title">
     <div class="container">
       <div class="section-head" data-reveal>
-        <div class="section-mark"><span class="numeral">07</span><p class="eyebrow">AI-assisted engineering</p></div>
+        <div class="section-mark"><span class="numeral">06</span><p class="eyebrow">AI-assisted engineering</p></div>
         <h2 id="ai-title">Repeatable SAP Engineering, Faster. With a List of What We Never Automate.</h2>
         <p class="subcopy">We use our own AI-assisted tooling for the repeatable parts of integration and extension work. Every generated artefact is reviewed by a certified architect before it reaches your landscape.</p>
       </div>
@@ -329,7 +312,7 @@ get_header();
   <!-- 06 Lead magnet -->
   <section class="section section--slim band-surface slim-band" id="checklist" aria-labelledby="checklist-title">
     <div class="container">
-      <div class="section-mark"><span class="numeral">08</span><p class="eyebrow">Checklist</p></div>
+      <div class="section-mark"><span class="numeral">07</span><p class="eyebrow">Checklist</p></div>
       <div class="grid">
         <div class="col-8">
           <h3 id="checklist-title">The Governed Agent Control Checklist for SAP BTP.</h3>
@@ -345,7 +328,7 @@ get_header();
   <!-- 07 FAQ -->
   <section class="section" id="faq" aria-labelledby="faq-title">
     <div class="container">
-      <div class="section-mark mb-6"><span class="numeral">09</span><h2 class="eyebrow" id="faq-title">Questions</h2></div>
+      <div class="section-mark mb-6"><span class="numeral">08</span><h2 class="eyebrow" id="faq-title">Questions</h2></div>
       <div class="faq-list">
         <details class="faq">
           <summary>Can the agent post to SAP on its own?<svg class="faq__glyph" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M0 8h16" stroke="currentColor" stroke-width="1.5"/><path class="v" d="M8 0v16" stroke="currentColor" stroke-width="1.5"/></svg></summary>
@@ -379,7 +362,7 @@ get_header();
   <section class="section has-grid cta-band cta-band--ai" id="next-step" aria-labelledby="next-title">
     <div class="container">
       <div class="section-head" data-reveal>
-        <div class="section-mark"><span class="numeral">10</span><p class="eyebrow">Next step</p></div>
+        <div class="section-mark"><span class="numeral">09</span><p class="eyebrow">Next step</p></div>
         <h2 id="next-title">Start with a Read-Only Catalog Against Your Landscape. Decide About Writes When You Have Seen the Evidence.</h2>
       </div>
       <div class="btn-row">

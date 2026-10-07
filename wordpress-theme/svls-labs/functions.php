@@ -28,7 +28,7 @@ function svls_handle_form() {
 		if ( svls_wants_json() ) { wp_send_json( array( 'ok' => false, 'error' => 'name and email are required' ), 400 ); }
 		wp_safe_redirect( add_query_arg( 'sent', '0', wp_get_referer() ? wp_get_referer() : home_url( '/contact/' ) ) ); exit;
 	}
-	$subjects = array( 'beta' => 'Value Lens beta request', 'cutti' => 'CuTTI launch updates', 'logicpilot' => 'CuTTI launch updates' );
+	$subjects = array( 'beta' => 'Value Lens beta request' );
 	$subject  = 'svlslabs.com: ' . ( isset( $subjects[ $form ] ) ? $subjects[ $form ] : 'Contact enquiry' ) . ' from ' . $fields['name'];
 	$body    = '';
 	foreach ( $fields as $key => $value ) { $body .= ucfirst( str_replace( array( '-', '_' ), ' ', $key ) ) . ': ' . $value . "
@@ -46,36 +46,18 @@ add_action( 'admin_post_nopriv_svls_form', 'svls_handle_form' );
 add_action( 'admin_post_svls_form', 'svls_handle_form' );
 
 /**
- * Pages added by a theme release are created on the first request after the upload, once per release
- * (option svls_pages_version). A page is created only when its parent exists and the path is still free.
+ * Page housekeeping per theme release, run once on the first request after the upload (option svls_pages_version).
+ * Retired pages are unpublished (set to draft, never deleted) so they leave the site, the menus and the sitemap.
  */
 add_action( 'init', function () {
-	$release = '2026-10-cutti';
+	$release = '2026-10-retire-cutti';
 	if ( get_option( 'svls_pages_version' ) === $release || get_transient( 'svls_pages_lock' ) ) { return; }
 	set_transient( 'svls_pages_lock', 1, 60 );
-	$pages = array(
-		array( 'path' => 'products/cutti', 'parent' => 'products', 'slug' => 'cutti', 'title' => 'CuTTI' ),
-	);
-	// Renamed products: move the existing page to the new slug so no orphan page is left behind.
-	$renamed = array( 'products/logicpilot' => array( 'slug' => 'cutti', 'title' => 'CuTTI' ) );
-	foreach ( $renamed as $old => $new ) {
-		$page = get_page_by_path( $old );
-		if ( $page && ! get_page_by_path( 'products/' . $new['slug'] ) ) {
-			wp_update_post( array( 'ID' => $page->ID, 'post_name' => $new['slug'], 'post_title' => $new['title'] ) );
+	foreach ( array( 'products/cutti', 'products/logicpilot' ) as $retired ) {
+		$page = get_page_by_path( $retired );
+		if ( $page && 'publish' === $page->post_status ) {
+			wp_update_post( array( 'ID' => $page->ID, 'post_status' => 'draft' ) );
 		}
-	}
-	foreach ( $pages as $p ) {
-		if ( get_page_by_path( $p['path'] ) ) { continue; }
-		$parent = get_page_by_path( $p['parent'] );
-		if ( ! $parent ) { continue; }
-		wp_insert_post( array(
-			'post_type'    => 'page',
-			'post_status'  => 'publish',
-			'post_title'   => $p['title'],
-			'post_name'    => $p['slug'],
-			'post_parent'  => $parent->ID,
-			'post_content' => '<!-- Rendered by the ' . $p['path'] . ' template of the SVLS LABS theme -->',
-		) );
 	}
 	update_option( 'svls_pages_version', $release, false );
 	delete_transient( 'svls_pages_lock' );
@@ -115,10 +97,10 @@ function svls_default_head() { ?>
 <link rel="preload" as="font" type="font/woff2" crossorigin href="https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@800&display=swap">
-<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/tokens.css?v=047f8b8c">
-<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/site.css?v=1bc3ca8c">
+<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/tokens.css?v=53ea99d0">
+<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/site.css?v=421ce377">
 <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/theme.css?v=95b1acdc">
-<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/js/site.js?v=2891427c" defer></script>
+<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/js/site.js?v=540ef525" defer></script>
 <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/js/theme.js?v=1aa957a6" defer></script>
 
 <?php }
@@ -167,9 +149,8 @@ function svls_hub( $slug ) {
 		),
 		'products' => array(
 			'label' => 'Products',
-			'lead'  => 'Three products, one discipline: agents act through defined tools, and people make the decisions.',
+			'lead'  => 'Two products built on our own control model. Agents explain; your people decide.',
 			'items' => array(
-				array( 'title' => 'CuTTI (launching 12 Nov 2026)', 'href' => '/products/cutti/', 'cta' => 'See CuTTI', 'body' => 'MCP production assistant for Logic Pro. Describe the musical direction and get an editable session: tracks, MIDI, song sections and arrangement structure. Product demo published.' ),
 				array( 'title' => 'Value Lens (private beta)', 'href' => '/products/value-lens/', 'cta' => 'See Value Lens', 'body' => 'Margin leak finder for order-to-cash on SAP. Every case carries its sources, its calculation and its decisions. Private beta on synthetic data; production SAP connector in development.' ),
 				array( 'title' => 'SAP Intelligence Suite', 'href' => '/products/sap-intelligence-suite/', 'cta' => 'See SAP Intelligence Suite', 'body' => 'The workbench behind our AI-assisted SAP engineering: integration flows, ABAP and RAP generated from plain-English requests, reviewed by an architect before they reach a landscape. Available to customers on request.' ),
 			),
@@ -196,11 +177,16 @@ add_action( 'template_redirect', function () {
 		'privacy-policy-2'          => '/privacy/',
 		'terms-and-conditions'      => '/terms/',
 		'our-products-and-services' => '/services/',
-		'products/logicpilot'       => '/products/cutti/', // product renamed LogicPilot -> CuTTI (October 2026)
 	);
 	$path = isset( $_SERVER['REQUEST_URI'] ) ? trim( (string) wp_parse_url( $_SERVER['REQUEST_URI'], PHP_URL_PATH ), '/' ) : '';
 	if ( '' !== $path && isset( $map[ $path ] ) ) {
 		wp_safe_redirect( home_url( $map[ $path ] ), 301 );
+		exit;
+	}
+	// Product pages moved off this site (October 2026): temporary redirect to the Products page until a new address is known.
+	$moved = array( 'products/cutti', 'products/logicpilot' );
+	if ( in_array( $path, $moved, true ) ) {
+		wp_safe_redirect( home_url( '/products/' ), 302 );
 		exit;
 	}
 }, 1 );

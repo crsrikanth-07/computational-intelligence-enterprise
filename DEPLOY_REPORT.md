@@ -159,3 +159,12 @@ New product page `/products/logicpilot/` for LogicPilot, the MCP production assi
 - Copy follows the video's on-screen text: the Dark Pop request, 32 instruments on 45 named tracks, mixed and cut at every section, 147 of 147 steps verified, built on camera in 13 min 9 s (18× time-lapse), mixed and mastered by CuTTI (71 finishing steps, Mastering Assistant and Adaptive Limiter, −14 LUFS), "Not a loop. Not a stem." Hero points now match the video's end card: Original music, Built-in Logic Pro instruments, Every step verified. The hero illustration and share image show the Dark Pop session.
 - Not repeated in page text: the video's "Human made" result from a third-party AI-music checker (it stays in the video only), and the unexplained "14 min 53 s" figure.
 - Client to do: upload the rebuilt zip with "Replace installed with uploaded".
+
+## CuTTI removed from svlslabs.com (7 October 2026)
+
+The client is moving CuTTI to its own site. svlslabs.com is SAP & ERP, Cloud and Agentic & Applied AI again, with two products (Value Lens, SAP Intelligence Suite).
+
+- Removed: the CuTTI page, its menu, Menu sheet and footer entries, the homepage launch spotlight (the SAP hero is section 01 again), the AI-page product band, the About and homepage product mentions (back to two products), the Contact intent, the sitemap entry, the Products hub card, the CuTTI videos, cover, share image, page stylesheet, colour tokens, spotlight styles, countdown and video-loop scripts, and the two CuTTI build tools.
+- WordPress: on the first request after the upload the theme sets the `products/cutti` page to draft (not deleted, reversible under Pages -> Drafts). `/products/cutti/` and `/products/logicpilot/` answer with a temporary (302) redirect to `/products/` until the new CuTTI address is known; then the redirect can point there.
+- Kept: everything else added in the same period (Menu sheet in `header.php`, version-tagged CSS/JS URLs, hub pages, phone number spacing).
+- Client to do: upload the rebuilt zip with "Replace installed with uploaded". The theme upload also removes the CuTTI video files from the server.
