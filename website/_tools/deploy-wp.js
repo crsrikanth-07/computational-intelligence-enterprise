@@ -49,6 +49,7 @@ const PLAN = [
   { slug: 'sap-intelligence-suite', parent: 'products', title: 'SAP Intelligence Suite', template: 'page-products-sap-intelligence-suite.php' },
   { slug: 'cutti', parent: 'products', title: 'CuTTI', template: 'page-products-cutti.php' },
   { slug: 'approach', title: 'Approach', template: 'page-approach.php' },
+  { slug: 'media', title: 'Entertainment & Media', template: 'page-media.php' },
   { slug: 'about', title: 'About', template: 'page-about.php' },
   { slug: 'contact', title: 'Contact', template: 'page-contact.php' },
   { slug: 'privacy', title: 'Privacy Policy', template: 'page-privacy.php' },
@@ -182,7 +183,7 @@ async function setFrontPage(homeId) {
   catch (e) { warn('Could not set the static front page via REST (' + e.message + '). Set it in Settings -> Reading -> Your homepage displays: A static page -> Homepage: SVLS LABS.'); }
 }
 
-const PUBLIC = ['/', '/services/sap/', '/services/cloud/', '/services/ai/', '/products/value-lens/', '/products/sap-intelligence-suite/', '/products/cutti/', '/approach/', '/about/', '/contact/', '/privacy/', '/terms/'];
+const PUBLIC = ['/', '/services/sap/', '/services/cloud/', '/services/ai/', '/products/value-lens/', '/products/sap-intelligence-suite/', '/products/cutti/', '/approach/', '/media/', '/about/', '/contact/', '/privacy/', '/terms/'];
 async function verify() {
   const urls = [...PUBLIC, `/svls-deploy-check-${Date.now().toString(36)}/`];
   for (const p of urls) {

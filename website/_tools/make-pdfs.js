@@ -1,4 +1,4 @@
-// Renders the two downloadable PDFs (capability overview, control checklist) from brand-styled HTML.
+// Renders the two downloadable PDFs (company overview, control checklist) from brand-styled HTML.
 const path = require('path'); const fs = require('fs');
 const { chromium } = require('/opt/node22/lib/node_modules/playwright');
 const OUT = path.resolve(__dirname, '../assets/downloads');
@@ -42,40 +42,44 @@ ol.steps li b{display:block;font:700 10.5pt/1.2 'Inter Tight',Inter,sans-serif;m
 const head = (t) => `<div class="top"><div class="lock">${mark(34,'#101418','#E4432B')}<span>SVLS LABS</span></div><div class="eyebrow">${t}</div></div>`;
 const foot = (p) => `<div class="foot"><span>SVLS LABS LLP · Hyderabad, India · service@svlslabs.com · +91 8500811119</span><span>svlslabs.com · ${p}</span></div>`;
 const overview = `
-<div class="page">${head('Capability overview · 2026')}
-<h1>SAP, Cloud and Governed AI. Engineered to Spec.</h1>
-<p class="lead">SVLS LABS designs, builds and verifies S/4HANA and BTP landscapes, connects them to your cloud, and adds agentic AI with deterministic numbers and a human decision on every action. Founded 2020. 25+ years of SAP delivery experience across our key architects.</p>
-<div class="stats"><div class="stat"><b>25+</b><span>years of SAP delivery experience across our key architects</span></div><div class="stat"><b>2020</b><span>founded. SVLS LABS LLP</span></div><div class="stat"><b>2</b><span>products: Value Lens (private beta) and SAP Intelligence Suite</span></div><div class="stat"><b>3</b><span>practices: SAP &amp; ERP, Cloud, Agentic &amp; Applied AI</span></div></div>
-<h2>Three Practices. One Standard.</h2>
-<div class="cols">
-<div class="card"><span class="k">01 · SAP &amp; ERP</span><h3>Clean Core from day one</h3><p>S/4HANA Public and Private Cloud, RISE, on-premise. BTP and Integration Suite flows from a pattern library with a written contract per interface and a read-back check after every run. PS/EPPM, Tools &amp; Equipment Management, O2C, P2P, finance.</p></div>
-<div class="card"><span class="k">02 · Cloud</span><h3>Cloud around the SAP core</h3><p>SAP-to-GCP/BigQuery and Salesforce integration, cloud-native services around the core, migrations and landing zones that keep the ledger intact. Every extract reconciled to SAP totals.</p></div>
-<div class="card"><span class="k">03 · Agentic &amp; Applied AI</span><h3>Governed agents on SAP BTP</h3><p>MCP tool catalogs, Joule/A2A, SAP AI Core, LangGraph and RAG, under a control model where every write is read before, confirmed by a person and verified after. Applied research: Markov and stochastic models, constraint-based generation, metaheuristic optimisation, retrieval-augmented generation.</p></div>
+<div class="page">${head('Company overview · 2026')}
+<h1>Innovative Software for Enterprise and Entertainment.</h1>
+<p class="lead">SVLS LABS builds software that does the groundwork and shows its work. Two portfolios, Enterprise Software and Entertainment &amp; Media, and two flagship products: CuTTI and Value Lens. Founded 2020.</p>
+<div class="stats"><div class="stat"><b>2020</b><span>founded. SVLS LABS LLP</span></div><div class="stat"><b>2</b><span>portfolios: Enterprise Software and Entertainment &amp; Media</span></div><div class="stat"><b>2</b><span>flagship products: CuTTI and Value Lens</span></div><div class="stat"><b>25+</b><span>years of ERP delivery experience across our key architects</span></div></div>
+<h2>Two Flagship Products</h2>
+<div class="two">
+<div class="card"><span class="k">Flagship · Entertainment &amp; Media</span><h3>CuTTI</h3><p>One request, a full producer session in Logic Pro. Describe the track; CuTTI builds a real, editable session with Logic's own instruments, checks every step, then mixes and masters it to −14 LUFS. Every track, region and note stays yours to edit.</p><p class="status" style="margin-top:2.5mm">Available to purchase from 1 January 2027. Early access is open: svlslabs.com/products/cutti/</p></div>
+<div class="card"><span class="k">Flagship · Enterprise Software</span><h3>Value Lens</h3><p>Where did we lose money this week that we should not have lost? Value Lens finds margin leakage in ERP order-to-cash. Read-only tools, margin in exact integer cents under a versioned policy, and evidence-backed cases a finance reviewer accepts or dismisses with a reason.</p><p class="status" style="margin-top:2.5mm">Private beta on synthetic ERP-like data. Production ERP connector in development.</p></div>
 </div>
-<h2>Specify. Build. Verify. Then Ship.</h2>
-<ol class="steps">
-<li><b>01 Specify</b>Two weeks, fixed scope, fixed price. Landscape and architecture review, domain contracts, interface specs, policy versions. You leave with an architecture you can act on.</li>
-<li><b>02 Build</b>Clean Core extensions on BTP. Integration flows from a pattern library. AI-assisted generation for repeatable objects, every artefact reviewed by a certified architect.</li>
-<li><b>03 Verify</b>Automated read-back against SAP after every run. Reconciliation to SAP totals. An evidence pack your auditors and InfoSec can read.</li>
-<li><b>04 Ship and run</b>Cutover, hypercare, runbooks, handover, with a named engagement lead who stays through run.</li>
-</ol>
+<h2>Enterprise Software</h2>
+<div class="cols">
+<div class="card"><span class="k">01 · ERP</span><h3>Clean core from the first transport</h3><p>ERP programmes, integration and extensions from a pattern library, with a written contract per interface and a read-back check after every run.</p></div>
+<div class="card"><span class="k">02 · Cloud</span><h3>Cloud around the core</h3><p>ERP-to-cloud integration, cloud-native services, migrations and landing zones that keep the ledger intact. Every extract reconciled to source totals.</p></div>
+<div class="card"><span class="k">03 · Agentic &amp; Applied AI</span><h3>Governed agents</h3><p>MCP tool catalogs, LangGraph and RAG under a control model where every write is read before, confirmed by a person and verified after. Applied research in Markov and stochastic models, constraint-based generation and optimisation.</p></div>
+</div>
 ${foot('page 1 of 2')}</div>
-<div class="page">${head('Products and control model')}
-<h2>Value Lens (private beta)</h2>
-<p><b>Where did we lose money this week that we should not have lost?</b> Value Lens is our margin leak finder for order-to-cash. It reads SAP-like sales, pricing, cost and agreement facts through read-only tools, computes margin in exact integer cents under a versioned policy, and raises evidence-backed cases a finance reviewer can accept or dismiss with a reason. Agents explain. Humans decide. SAP stays the system of record.</p>
-<p class="status">Private beta on synthetic SAP-like data. Production SAP connector in development.</p>
-<h2>SAP Intelligence Suite</h2>
-<p>Our AI-assisted SAP engineering workbench: integration flows, ABAP and RAP artefacts and SAP functional answers from plain-English requests. Trained on your own reviewed library. Runs with local models on your infrastructure or with a hosted model of your choice; your artefacts and code stay in your landscape. Every output goes through architect review before it reaches a landscape.</p>
-<p class="status">In use in SVLS LABS delivery. Available to customers on request; deployed in your landscape, reviewed by your architects.</p>
+<div class="page">${head('Entertainment &amp; Media · How we build')}
+<h2>Entertainment &amp; Media</h2>
+<div class="cols">
+<div class="card"><span class="k">Original Music</span><h3>Composed and produced in-house</h3><p>Songs and scores across pop, cinematic and Indian traditions, produced with the same care we put into software.</p></div>
+<div class="card"><span class="k">Published Fiction</span><h3>Five titles in 2026</h3><p>Novels and story collections, written in-house: svlslabs.com/media/#books</p></div>
+<div class="card"><span class="k">Creative Tools</span><h3>Software we wished we had</h3><p>CuTTI first, with CuTTI Score in private preview. Tools that do the groundwork so makers can spend their time on the work.</p></div>
+</div>
+<h2>How We Build</h2>
+<ol class="steps">
+<li><b>01 Specify</b>We write down what done looks like before we build: contracts, policies and acceptance checks.</li>
+<li><b>02 Build</b>Deterministic code for every number, AI where it helps, and a person reviewing what reaches you.</li>
+<li><b>03 Verify</b>Every step is read back and checked. When something cannot be verified, we say so.</li>
+<li><b>04 Hand over</b>What we deliver is yours to edit, own and extend, with the evidence attached.</li>
+</ol>
 <h2>The Control Model</h2>
 <div class="cols">
-<div class="card"><span class="k">Read before write</span><p>The agent reads the current SAP state before it proposes anything.</p></div>
+<div class="card"><span class="k">Read before write</span><p>Software reads the current state before it proposes anything.</p></div>
 <div class="card"><span class="k">Confirm to act</span><p>A person reviews and confirms every create and update.</p></div>
-<div class="card"><span class="k">Verify after</span><p>SAP is read back after every action, and the result goes into the audit trail.</p></div>
+<div class="card"><span class="k">Verify after</span><p>The result is read back after every action and goes into the audit trail.</p></div>
 </div>
-<p style="margin-top:3mm">Numbers come from deterministic code, never from the model. Every case carries its sources, its calculation and its decisions.</p>
 <h2>How to Start</h2>
-<p>Book a discovery call: a 45-minute call with an architect, not a salesperson. Or start with a two-week, fixed-scope, fixed-price discovery. Replies within one business day.</p>
+<p>Join CuTTI early access, request Value Lens beta access, or book a 45-minute discovery call with an architect. Replies within one business day.</p>
 <p><b>service@svlslabs.com · +91 8500811119 · svlslabs.com/contact/</b></p>
 <p>SVLS LABS LLP, 4th Floor, Aparna Astute, Shaikpet, Door No. 8-1-299/103&amp;104/AA/4F-2, Jubilee Hills, Hyderabad 500008, Telangana, India.</p>
 ${foot('page 2 of 2')}</div>`;
@@ -85,9 +89,9 @@ const checklist = `
 <p class="lead">Hand this page to the vendor and ask which of these they implement, and how you can inspect it. "Yes" without evidence is a "no".</p>
 <div class="two"><div>
 <ul class="check">
-<li><i class="box"></i><div><b>Read before write</b><span>Does the agent read the current SAP state before it proposes anything, and is the proposal diffed against that state?</span></div></li>
+<li><i class="box"></i><div><b>Read before write</b><span>Does the agent read the current ERP state before it proposes anything, and is the proposal diffed against that state?</span></div></li>
 <li><i class="box"></i><div><b>Confirm to act</b><span>Does a person review and confirm every create and update, with no path that skips the reviewer?</span></div></li>
-<li><i class="box"></i><div><b>Verify after</b><span>Is SAP read back after every action and compared with the intent, with the result stored?</span></div></li>
+<li><i class="box"></i><div><b>Verify after</b><span>Is the ERP read back after every action and compared with the intent, with the result stored?</span></div></li>
 <li><i class="box"></i><div><b>Deterministic numbers</b><span>Do all financial figures come from versioned code rather than from the language model?</span></div></li>
 <li><i class="box"></i><div><b>Bounded tools</b><span>Is the tool catalogue read-only by default, named and bounded, with no generic query or raw table access?</span></div></li>
 </ul></div><div>
@@ -99,7 +103,7 @@ const checklist = `
 <li><i class="box"></i><div><b>Evidence pack</b><span>Can InfoSec and internal audit receive tool policies, sample audit trails and read-back results before go-live?</span></div></li>
 </ul></div></div>
 <h2>How SVLS LABS answers</h2>
-<p>All ten are implemented in our control model and demonstrated in Value Lens (private beta on synthetic SAP-like data; production SAP connector in development). We show the artefacts and the review log in a discovery call.</p>
+<p>All ten are implemented in our control model and demonstrated in Value Lens (private beta on synthetic ERP-like data; production ERP connector in development). We show the artefacts and the review log in a discovery call.</p>
 <p><b>Book a discovery call: svlslabs.com/contact/ · service@svlslabs.com · +91 8500811119</b></p>
 ${foot('page 1 of 1')}</div>`;
 (async () => {

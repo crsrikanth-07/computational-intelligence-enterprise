@@ -176,3 +176,15 @@ The client is moving CuTTI to its own site. svlslabs.com is SAP & ERP, Cloud and
 - Not used from the copy: section 13 "About SVLS Labs" ("CuTTI is our first product") because it contradicts the SAP products on this site, and section 14 (the site has its own footer; the trademark line is on the page).
 - WordPress: on the first request after the upload the theme republishes the drafted CuTTI page (or creates it); `/products/logicpilot/` 301s to `/products/cutti/`. Early-access emails arrive with the subject "CuTTI early access".
 - Client to do: upload the rebuilt zip with "Replace installed with uploaded".
+
+## Repositioned: innovative software for Enterprise and Entertainment (13 October 2026)
+
+SVLS LABS now presents as an innovative software company with two portfolios (Enterprise Software; Entertainment & Media) and two flagship products (CuTTI, Value Lens). SAP is named only where it is the product's name or legally needed.
+
+- Homepage leads with CuTTI (hero with the vertical demo video), then the two portfolios, the two flagships (SAP Intelligence Suite and CuTTI Score as "also from SVLS LABS"), how we build, the Enterprise practices (ERP, Cloud, Agentic & Applied AI), Entertainment & Media, four numbers and a closing call to action. New elegant layer in `assets/css/pages/showcase.css` (aurora light, gradient wordmark, glass cards, book spines; motion off under reduced-motion).
+- New page `/media/` (Entertainment & Media): CuTTI and CuTTI Score, the music practice, and five 2026 books. The theme creates the WordPress page on the first request after the upload.
+- Rewritten without SAP: About, ERP services (the URL stays `/services/sap/` so existing links keep working), Cloud, Agentic & Applied AI, Approach, Contact (new "Entertainment & Media enquiry" option), Value Lens ("ERP-like data", "ERP connector"), 404, Privacy, Terms (except the trademark notice), menu, Menu sheet, footer, hubs and share images.
+- The downloadable overview PDF (same file name, so existing links keep working) is now a two-page company overview with no SAP; the control checklist says "ERP" instead of "SAP".
+- LinkedIn: new banner and logos in `assets/social/`, page copy (tagline, About, details, launch post) in `LINKEDIN_PAGE.md`.
+- QA: 14 pages with 0 axe violations, 0 console errors, 0 broken links or anchors, and no horizontal overflow at 390 px. html-validate is clean, `php -l` is clean, and there are no name or location leaks.
+- Client to do: upload the rebuilt zip with "Replace installed with uploaded", then update the LinkedIn page from `LINKEDIN_PAGE.md`.

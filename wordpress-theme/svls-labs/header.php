@@ -25,28 +25,29 @@
     <nav class="site-nav" aria-label="Primary">
       <ul class="site-nav__list">
         <li class="site-nav__item has-dropdown">
-          <button class="site-nav__link site-nav__trigger" type="button" aria-expanded="false" aria-controls="services-menu">Services<svg class="site-nav__chevron" viewBox="0 0 10 10" aria-hidden="true" focusable="false"><path d="M1 3.5l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button>
+          <button class="site-nav__link site-nav__trigger" type="button" aria-expanded="false" aria-controls="services-menu">Enterprise<svg class="site-nav__chevron" viewBox="0 0 10 10" aria-hidden="true" focusable="false"><path d="M1 3.5l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button>
           <ul class="dropdown" id="services-menu">
-            <li><a href="/services/sap/"<?php svls_current( '/services/sap/' ); ?>><span class="dropdown__title">SAP &amp; ERP</span><span class="dropdown__desc">S/4HANA, RISE, BTP, Integration Suite, Clean Core</span></a></li>
-            <li><a href="/services/cloud/"<?php svls_current( '/services/cloud/' ); ?>><span class="dropdown__title">Cloud</span><span class="dropdown__desc">SAP-to-cloud integration, migrations, cloud-native engineering</span></a></li>
-            <li><a href="/services/ai/"<?php svls_current( '/services/ai/' ); ?>><span class="dropdown__title">Agentic &amp; Applied AI</span><span class="dropdown__desc">Governed agents on SAP BTP, applied AI methods, AI-assisted engineering</span></a></li>
+            <li><a href="/services/sap/"<?php svls_current( '/services/sap/' ); ?>><span class="dropdown__title">ERP</span><span class="dropdown__desc">ERP programmes, integration and Clean Core</span></a></li>
+            <li><a href="/services/cloud/"<?php svls_current( '/services/cloud/' ); ?>><span class="dropdown__title">Cloud</span><span class="dropdown__desc">Cloud data platforms, integration and migrations</span></a></li>
+            <li><a href="/services/ai/"<?php svls_current( '/services/ai/' ); ?>><span class="dropdown__title">Agentic &amp; Applied AI</span><span class="dropdown__desc">Governed agents, applied AI methods, AI-assisted engineering</span></a></li>
           </ul>
         </li>
         <li class="site-nav__item has-dropdown">
           <button class="site-nav__link site-nav__trigger" type="button" aria-expanded="false" aria-controls="products-menu">Products<svg class="site-nav__chevron" viewBox="0 0 10 10" aria-hidden="true" focusable="false"><path d="M1 3.5l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button>
           <ul class="dropdown" id="products-menu">
-            <li><a href="/products/cutti/"<?php svls_current( '/products/cutti/' ); ?>><span class="dropdown__title">CuTTI <span class="nav-beta nav-beta--new">New</span></span><span class="dropdown__desc">Editable Logic Pro sessions from one request. Available January 2027.</span></a></li>
-            <li><a href="/products/value-lens/"<?php svls_current( '/products/value-lens/' ); ?>><span class="dropdown__title">Value Lens <span class="nav-beta">Private beta</span></span><span class="dropdown__desc">Margin leak finder for order-to-cash. Private beta.</span></a></li>
-            <li><a href="/products/sap-intelligence-suite/"<?php svls_current( '/products/sap-intelligence-suite/' ); ?>><span class="dropdown__title">SAP Intelligence Suite</span><span class="dropdown__desc">AI-assisted SAP engineering workbench.</span></a></li>
+            <li><a href="/products/cutti/"<?php svls_current( '/products/cutti/' ); ?>><span class="dropdown__title">CuTTI <span class="nav-beta nav-beta--new">Flagship</span></span><span class="dropdown__desc">Editable Logic Pro sessions from one request. Available January 2027.</span></a></li>
+            <li><a href="/products/value-lens/"<?php svls_current( '/products/value-lens/' ); ?>><span class="dropdown__title">Value Lens <span class="nav-beta">Private beta</span></span><span class="dropdown__desc">Flagship. Margin leak finder for order-to-cash.</span></a></li>
+            <li><a href="/products/sap-intelligence-suite/"<?php svls_current( '/products/sap-intelligence-suite/' ); ?>><span class="dropdown__title">SAP Intelligence Suite</span><span class="dropdown__desc">AI-assisted ERP engineering workbench.</span></a></li>
           </ul>
         </li>
+        <li class="site-nav__item"><a class="site-nav__link" href="/media/"<?php svls_current( '/media/' ); ?>>Media</a></li>
         <li class="site-nav__item"><a class="site-nav__link" href="/approach/"<?php svls_current( '/approach/' ); ?>>Approach</a></li>
         <li class="site-nav__item"><a class="site-nav__link" href="/about/"<?php svls_current( '/about/' ); ?>>About</a></li>
         <li class="site-nav__item"><a class="site-nav__link" href="/contact/"<?php svls_current( '/contact/' ); ?>>Contact</a></li>
       </ul>
     </nav>
     <div class="site-header__actions">
-      <a class="btn btn--primary btn--nav" href="/contact/?intent=discovery">Book a discovery call</a>
+      <a class="btn btn--primary btn--nav" href="/products/cutti/#early-access">CuTTI early access</a>
       <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark theme">
         <svg viewBox="0 0 20 20" aria-hidden="true" focusable="false"><circle cx="10" cy="10" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M10 3.5a6.5 6.5 0 0 1 0 13z" fill="currentColor"/></svg>
       </button>
@@ -59,9 +60,9 @@
   <nav aria-label="Menu">
     <ul class="sheet__list">
       <li>
-        <span class="eyebrow sheet__group-label" id="sheet-services">Services</span>
+        <span class="eyebrow sheet__group-label" id="sheet-services">Enterprise</span>
         <ul class="sheet__sub" aria-labelledby="sheet-services">
-          <li><a class="sheet__link" href="/services/sap/"<?php svls_current( '/services/sap/' ); ?>>SAP &amp; ERP</a></li>
+          <li><a class="sheet__link" href="/services/sap/"<?php svls_current( '/services/sap/' ); ?>>ERP</a></li>
           <li><a class="sheet__link" href="/services/cloud/"<?php svls_current( '/services/cloud/' ); ?>>Cloud</a></li>
           <li><a class="sheet__link" href="/services/ai/"<?php svls_current( '/services/ai/' ); ?>>Agentic &amp; Applied AI</a></li>
         </ul>
@@ -69,18 +70,19 @@
       <li>
         <span class="eyebrow sheet__group-label" id="sheet-products">Products</span>
         <ul class="sheet__sub" aria-labelledby="sheet-products">
-          <li><a class="sheet__link" href="/products/cutti/"<?php svls_current( '/products/cutti/' ); ?>>CuTTI <span class="nav-beta nav-beta--new">New</span></a></li>
+          <li><a class="sheet__link" href="/products/cutti/"<?php svls_current( '/products/cutti/' ); ?>>CuTTI <span class="nav-beta nav-beta--new">Flagship</span></a></li>
           <li><a class="sheet__link" href="/products/value-lens/"<?php svls_current( '/products/value-lens/' ); ?>>Value Lens <span class="nav-beta">Private beta</span></a></li>
           <li><a class="sheet__link" href="/products/sap-intelligence-suite/"<?php svls_current( '/products/sap-intelligence-suite/' ); ?>>SAP Intelligence Suite</a></li>
         </ul>
       </li>
+      <li><a class="sheet__link" href="/media/"<?php svls_current( '/media/' ); ?>>Entertainment &amp; Media</a></li>
       <li><a class="sheet__link" href="/approach/"<?php svls_current( '/approach/' ); ?>>Approach</a></li>
       <li><a class="sheet__link" href="/about/"<?php svls_current( '/about/' ); ?>>About</a></li>
       <li><a class="sheet__link" href="/contact/"<?php svls_current( '/contact/' ); ?>>Contact</a></li>
     </ul>
     <div class="sheet__actions">
-      <a class="btn btn--primary" href="/contact/?intent=discovery">Book a discovery call</a>
-      <a class="btn btn--secondary" href="/products/value-lens/#beta">Request Value Lens beta access</a>
+      <a class="btn btn--primary" href="/products/cutti/#early-access">CuTTI early access</a>
+      <a class="btn btn--secondary" href="/contact/?intent=discovery">Book a discovery call</a>
     </div>
   </nav>
   <div class="sheet__theme" role="group" aria-label="Appearance">

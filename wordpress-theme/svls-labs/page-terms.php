@@ -102,7 +102,7 @@ get_header();
             <span class="numeral">02</span>
             <h2 class="h3" id="t-beta">Value Lens Beta Terms</h2>
             <p>Value Lens (private beta) beta terms are agreed per organisation and are not granted by this site.</p>
-            <p class="status">Private beta on synthetic SAP-like data. Production SAP connector in development.</p>
+            <p class="status">Private beta on synthetic ERP-like data. Production ERP connector in development.</p>
             <p>Participation in the Value Lens private beta is governed by a separate beta agreement signed per organisation, which covers data handling, confidentiality and the synthetic-data scope. Nothing on this site grants beta access.</p>
           </section>
           <section class="legal__section" aria-labelledby="t-warranty">

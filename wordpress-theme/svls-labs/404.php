@@ -6,12 +6,12 @@ $GLOBALS['svls_page_head'] = function () { ?>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Page Not Found | SVLS LABS</title>
-<meta name="description" content="The page you asked for does not exist. Find SAP &amp; ERP, Cloud, Agentic &amp; Applied AI, Value Lens and Contact from here.">
+<meta name="description" content="The page you asked for does not exist. Find CuTTI, Value Lens, Entertainment &amp; Media, Enterprise Software and Contact from here.">
 <link rel="canonical" href="<?php echo esc_url( home_url( '/404.html' ) ); ?>">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="SVLS LABS">
 <meta property="og:title" content="Page Not Found | SVLS LABS">
-<meta property="og:description" content="The page you asked for does not exist. Find SAP &amp; ERP, Cloud, Agentic &amp; Applied AI, Value Lens and Contact from here.">
+<meta property="og:description" content="The page you asked for does not exist. Find CuTTI, Value Lens, Entertainment &amp; Media, Enterprise Software and Contact from here.">
 <meta property="og:url" content="<?php echo esc_url( home_url( '/404.html' ) ); ?>">
 <meta property="og:image" content="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/og/og-404.png">
 <meta property="og:image:width" content="1200">
@@ -19,7 +19,7 @@ $GLOBALS['svls_page_head'] = function () { ?>
 <meta property="og:image:alt" content="SVLS LABS lockup and the page title on charcoal.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Page Not Found | SVLS LABS">
-<meta name="twitter:description" content="The page you asked for does not exist. Find SAP &amp; ERP, Cloud, Agentic &amp; Applied AI, Value Lens and Contact from here.">
+<meta name="twitter:description" content="The page you asked for does not exist. Find CuTTI, Value Lens, Entertainment &amp; Media, Enterprise Software and Contact from here.">
 <meta name="twitter:image" content="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/og/og-404.png">
 <meta name="theme-color" content="#0E1116" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0E1116" media="(prefers-color-scheme: dark)">
@@ -48,7 +48,7 @@ $GLOBALS['svls_page_head'] = function () { ?>
   "@type": "WebPage",
   "name": "Page Not Found",
   "url": "https://svlslabs.com/404.html",
-  "description": "The page you asked for does not exist. Find SAP & ERP, Cloud, Agentic & Applied AI, Value Lens and Contact from here.",
+  "description": "The page you asked for does not exist. Find CuTTI, Value Lens, Entertainment & Media, Enterprise Software and Contact from here.",
   "inLanguage": "en",
   "isPartOf": { "@type": "WebSite", "name": "SVLS LABS", "url": "https://svlslabs.com/" },
   "publisher": { "@type": "Organization", "name": "SVLS LABS", "legalName": "SVLS LABS LLP",
@@ -83,28 +83,28 @@ get_header();
       <nav aria-label="Pages that exist">
         <ul class="hgrid hgrid--3 hgrid--bottom nf__links" role="list">
           <li>
-            <a class="nf__link" href="/services/sap/">SAP &amp; ERP<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
-            <span class="nf__desc">S/4HANA, RISE, BTP, Integration Suite, Clean Core</span>
-          </li>
-          <li>
-            <a class="nf__link" href="/services/cloud/">Cloud<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
-            <span class="nf__desc">SAP-to-cloud integration, migrations, cloud-native engineering</span>
-          </li>
-          <li>
-            <a class="nf__link" href="/services/ai/">Agentic &amp; Applied AI<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
-            <span class="nf__desc">Governed agents on SAP BTP, applied AI methods, AI-assisted engineering</span>
+            <a class="nf__link" href="/products/cutti/">CuTTI<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
+            <span class="nf__desc">One request, a full producer session in Logic Pro. Available January 2027</span>
           </li>
           <li>
             <a class="nf__link" href="/products/value-lens/">Value Lens (private beta)<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
-            <span class="nf__desc">Private beta on synthetic SAP-like data. Production SAP connector in development.</span>
+            <span class="nf__desc">Margin leak finder for ERP order-to-cash</span>
           </li>
           <li>
-            <a class="nf__link" href="/approach/">Approach<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
-            <span class="nf__desc">Governed Delivery: four gates, artefacts per gate, Clean Core by default</span>
+            <a class="nf__link" href="/media/">Entertainment &amp; Media<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
+            <span class="nf__desc">Original music, published fiction and creative tools</span>
+          </li>
+          <li>
+            <a class="nf__link" href="/services/sap/">Enterprise Software<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
+            <span class="nf__desc">ERP programmes, integration and extensions, clean core</span>
+          </li>
+          <li>
+            <a class="nf__link" href="/services/ai/">Agentic &amp; Applied AI<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
+            <span class="nf__desc">Governed agents, applied AI methods, AI-assisted engineering</span>
           </li>
           <li>
             <a class="nf__link" href="/contact/">Contact<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
-            <span class="nf__desc">Talk to an architect. Replies within one business day.</span>
+            <span class="nf__desc">Talk to us. Replies within one business day.</span>
           </li>
         </ul>
       </nav>

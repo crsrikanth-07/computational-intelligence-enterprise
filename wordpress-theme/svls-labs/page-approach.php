@@ -7,12 +7,12 @@ $GLOBALS['svls_page_head'] = function () { ?>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Governed Delivery Approach | SVLS LABS</title>
-<meta name="description" content="How SVLS LABS runs SAP, cloud and AI work: four gates, artefacts per gate, Clean Core by default, AI control model. Written for procurement and InfoSec.">
+<meta name="description" content="How SVLS LABS runs enterprise ERP, cloud and AI work: four gates, artefacts per gate, Clean Core by default, AI control model. Written for procurement and InfoSec.">
 <link rel="canonical" href="<?php echo esc_url( home_url( '/approach/' ) ); ?>">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="SVLS LABS">
 <meta property="og:title" content="Governed Delivery Approach | SVLS LABS">
-<meta property="og:description" content="How SVLS LABS runs SAP, cloud and AI work: four gates, artefacts per gate, Clean Core by default, AI control model. Written for procurement and InfoSec.">
+<meta property="og:description" content="How SVLS LABS runs enterprise ERP, cloud and AI work: four gates, artefacts per gate, Clean Core by default, AI control model. Written for procurement and InfoSec.">
 <meta property="og:url" content="<?php echo esc_url( home_url( '/approach/' ) ); ?>">
 <meta property="og:image" content="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/og/og-approach.png">
 <meta property="og:image:width" content="1200">
@@ -20,7 +20,7 @@ $GLOBALS['svls_page_head'] = function () { ?>
 <meta property="og:image:alt" content="SVLS LABS lockup and the page title on charcoal.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Governed Delivery Approach | SVLS LABS">
-<meta name="twitter:description" content="How SVLS LABS runs SAP, cloud and AI work: four gates, artefacts per gate, Clean Core by default, AI control model. Written for procurement and InfoSec.">
+<meta name="twitter:description" content="How SVLS LABS runs enterprise ERP, cloud and AI work: four gates, artefacts per gate, Clean Core by default, AI control model. Written for procurement and InfoSec.">
 <meta name="twitter:image" content="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/og/og-approach.png">
 <meta name="theme-color" content="#0E1116" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0E1116" media="(prefers-color-scheme: dark)">
@@ -48,7 +48,7 @@ $GLOBALS['svls_page_head'] = function () { ?>
   "@type": "WebPage",
   "name": "Governed Delivery Approach",
   "url": "https://svlslabs.com/approach/",
-  "description": "How SVLS LABS runs SAP, cloud and AI work: four gates, artefacts per gate, Clean Core by default, AI control model. Written for procurement and InfoSec.",
+  "description": "How SVLS LABS runs enterprise ERP, cloud and AI work: four gates, artefacts per gate, Clean Core by default, AI control model. Written for procurement and InfoSec.",
   "inLanguage": "en",
   "isPartOf": {
     "@type": "WebSite",
@@ -86,10 +86,10 @@ get_header();
       <div class="grid hero__grid">
         <div class="hero__copy col-9">
           <h1 id="hero-title">TOGAF Discipline. Clean Core by Default. Quality Gates You Can <span class="key">Inspect.</span></h1>
-          <p class="lead">This page is for the people who have to approve us: procurement, InfoSec, internal audit, the head of SAP. It states how we run SAP, cloud and AI work, what we hand over at each gate, and what we refuse to do.</p>
+          <p class="lead">This page covers our Enterprise Software work and is for the people who have to approve us: procurement, InfoSec, internal audit, the owner of your ERP platform. It states how we run ERP, cloud and AI work, what we hand over at each gate, and what we refuse to do.</p>
           <div class="btn-row">
             <a class="btn btn--primary" href="/contact/?intent=discovery">Book a discovery call</a>
-            <a class="btn btn--secondary" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/downloads/svls-labs-capability-overview.pdf">Download the capability overview</a>
+            <a class="btn btn--secondary" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/downloads/svls-labs-capability-overview.pdf">Download the company overview</a>
           </div>
           <p class="trust">A 45-minute call with an architect, not a salesperson. Replies within one business day.</p>
         </div>
@@ -113,7 +113,7 @@ get_header();
       <ol class="method" role="list">
         <li class="method__step">
           <span class="numeral">01</span>
-          <h3 class="h4">Specify — two weeks, fixed scope, fixed price.</h3>
+          <h3 class="h4">Specify — Two Weeks, Fixed Scope, Fixed Price.</h3>
           <p>Landscape and architecture review. Domain contracts, interface specs, policy versions, a prototype scope. You leave with an architecture you can act on, whether or not you continue with us.</p>
           <div class="method__extra">
             <span class="eyebrow">Artefacts at this gate</span>
@@ -130,7 +130,7 @@ get_header();
         <li class="method__step">
           <span class="numeral">02</span>
           <h3 class="h4">Build.</h3>
-          <p>Clean Core extensions on BTP. CPI flows from a pattern library. AI-assisted generation for repeatable objects, every artefact reviewed by a certified architect before it reaches your landscape.</p>
+          <p>Clean Core extensions kept outside the ERP core. Integration flows from a pattern library. AI-assisted generation for repeatable objects, every artefact reviewed by a certified architect before it reaches your landscape.</p>
           <div class="method__extra">
             <span class="eyebrow">Artefacts at this gate</span>
             <ul class="list-mono">
@@ -144,7 +144,7 @@ get_header();
         <li class="method__step">
           <span class="numeral">03</span>
           <h3 class="h4">Verify.</h3>
-          <p>Automated read-back against SAP after every run. Reconciliation to SAP totals. An evidence pack your auditors and InfoSec can read.</p>
+          <p>Automated read-back against the ERP system after every run. Reconciliation to ERP totals. An evidence pack your auditors and InfoSec can read.</p>
           <div class="method__extra">
             <span class="eyebrow">Artefacts at this gate</span>
             <ul class="list-mono">
@@ -156,7 +156,7 @@ get_header();
         </li>
         <li class="method__step">
           <span class="numeral">04</span>
-          <h3 class="h4">Ship and run.</h3>
+          <h3 class="h4">Ship and Run.</h3>
           <p>Cutover, hypercare, runbooks, handover to your team, with a named engagement lead (a role on the team, not a rotating bench) who stays through run. We do not hand you a deck and leave. We stay until it runs.</p>
           <div class="method__extra">
             <span class="eyebrow">Artefacts at this gate</span>
@@ -180,7 +180,7 @@ get_header();
   <!-- 03 Standards we hold to (surface band) -->
   <section class="section band-surface" id="standards" aria-labelledby="standards-title">
     <div class="container">
-      <div class="section-mark mb-6"><span class="numeral">03</span><h2 class="eyebrow" id="standards-title">Standards We Hold to</h2></div>
+      <div class="section-mark mb-6"><span class="numeral">03</span><h2 class="eyebrow" id="standards-title">Standards We Hold To</h2></div>
       <div class="grid">
         <div class="col-8">
           <table class="spec-table">
@@ -189,7 +189,7 @@ get_header();
             </thead>
             <tbody>
               <tr><th scope="row">Architecture</th><td>TOGAF 9 method, decisions recorded as ADRs</td></tr>
-              <tr><th scope="row">SAP</th><td>Clean Core, extensions on BTP, keep-the-core-upgradeable test on every design</td></tr>
+              <tr><th scope="row">ERP</th><td>Clean Core, extensions outside the core, keep-the-core-upgradeable test on every design</td></tr>
               <tr><th scope="row">Integration</th><td>Contract per flow, read-back per run</td></tr>
               <tr><th scope="row">Cloud</th><td>Landing zone reviewed with InfoSec before workloads</td></tr>
               <tr><th scope="row">AI</th><td><a class="link" href="/services/ai/#control-model">The control model</a>: read-before-write, confirm-to-act, verify-after</td></tr>
@@ -212,7 +212,7 @@ get_header();
     <div class="container">
       <div class="section-head" data-reveal>
         <div class="section-mark"><span class="numeral">04</span><p class="eyebrow">AI-assisted engineering</p></div>
-        <h2 id="ai-title">Repeatable SAP Engineering, Faster. With a List of What We Never Automate.</h2>
+        <h2 id="ai-title">Repeatable ERP Engineering, Faster. With a List of What We Never Automate.</h2>
         <p class="subcopy">We use our own AI-assisted tooling for the repeatable parts of integration and extension work. Every generated artefact is reviewed by a certified architect before it reaches your landscape.</p>
       </div>
       <div class="hgrid hgrid--2 hgrid--bottom two-col">
@@ -223,7 +223,7 @@ get_header();
             <li>Integration flow scaffolds from the pattern library</li>
             <li>Test cases and read-back checks</li>
             <li>Runbooks and handover documentation</li>
-            <li>Clean Core extension boilerplate on BTP</li>
+            <li>Clean Core extension boilerplate</li>
           </ul>
         </div>
         <div>
@@ -231,7 +231,7 @@ get_header();
           <ul class="list-rings">
             <li>Transport approval</li>
             <li>Production changes and cutover decisions</li>
-            <li>Anything that writes to SAP without a confirmed reviewer</li>
+            <li>Anything that writes to the ERP system without a confirmed reviewer</li>
             <li>Financial calculations inside an LLM</li>
             <li>Sign-off on an evidence pack</li>
           </ul>
@@ -266,19 +266,19 @@ get_header();
       <div class="hgrid hgrid--3 hgrid--bottom">
         <article class="shape">
           <span class="numeral">01</span>
-          <h3>Two-week discovery</h3>
+          <h3>Two-Week Discovery</h3>
           <p class="shape__terms">Fixed scope, fixed price.</p>
           <p class="shape__gate"><span class="eyebrow">Gate</span>01 Specify</p>
         </article>
         <article class="shape">
           <span class="numeral">02</span>
-          <h3>Fixed-scope build</h3>
+          <h3>Fixed-Scope Build</h3>
           <p class="shape__terms">From the discovery, with acceptance criteria.</p>
           <p class="shape__gate"><span class="eyebrow">Gates</span>02 Build · 03 Verify</p>
         </article>
         <article class="shape">
           <span class="numeral">03</span>
-          <h3>Run and extend</h3>
+          <h3>Run and Extend</h3>
           <p class="shape__terms">Monthly, named lead, quarterly review.</p>
           <p class="shape__gate"><span class="eyebrow">Gate</span>04 Ship and run</p>
         </article>
@@ -299,14 +299,14 @@ get_header();
       </div>
       <div class="btn-row">
         <a class="btn btn--primary" href="/contact/?intent=discovery">Book a discovery call</a>
-        <a class="btn btn--secondary" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/downloads/svls-labs-capability-overview.pdf">Download the capability overview</a>
+        <a class="btn btn--secondary" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/downloads/svls-labs-capability-overview.pdf">Download the company overview</a>
       </div>
       <p class="trust">A 45-minute call with an architect, not a salesperson. Replies within one business day.</p>
       <div class="cta-links">
         <a class="arrow-link" href="/contact/?intent=discovery&amp;offer=two-week">Start with a two-week discovery<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
         <a class="arrow-link" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/downloads/governed-agent-control-checklist.pdf">Get the Governed Agent Control Checklist<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
       </div>
-      <p class="mono-note"><a href="/contact/?intent=partnership">SAP partners: ask about integration and BTP capacity.</a></p>
+      <p class="mono-note"><a href="/contact/?intent=partnership">ERP partners: ask about integration and extension capacity.</a></p>
     </div>
   </section>
 

@@ -7,12 +7,12 @@ $GLOBALS['svls_page_head'] = function () { ?>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>SAP Intelligence Suite: Integration Flows, ABAP, RAP | SVLS LABS</title>
-<meta name="description" content="AI-assisted SAP engineering workbench: integration flows, ABAP and RAP artefacts and SAP functional answers in plain English. Local models, your landscape, architect review.">
+<meta name="description" content="AI-assisted ERP engineering workbench for SAP landscapes: integration flows, ABAP and RAP artefacts and functional answers in plain English. Local models, your landscape, architect review.">
 <link rel="canonical" href="<?php echo esc_url( home_url( '/products/sap-intelligence-suite/' ) ); ?>">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="SVLS LABS">
 <meta property="og:title" content="SAP Intelligence Suite: Integration Flows, ABAP, RAP | SVLS LABS">
-<meta property="og:description" content="AI-assisted SAP engineering workbench: integration flows, ABAP and RAP artefacts and SAP functional answers in plain English. Local models, your landscape, architect review.">
+<meta property="og:description" content="AI-assisted ERP engineering workbench for SAP landscapes: integration flows, ABAP and RAP artefacts and functional answers in plain English. Local models, your landscape, architect review.">
 <meta property="og:url" content="<?php echo esc_url( home_url( '/products/sap-intelligence-suite/' ) ); ?>">
 <meta property="og:image" content="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/og/og-suite.png">
 <meta property="og:image:width" content="1200">
@@ -20,7 +20,7 @@ $GLOBALS['svls_page_head'] = function () { ?>
 <meta property="og:image:alt" content="SVLS LABS lockup and the page title on charcoal.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="SAP Intelligence Suite: Integration Flows, ABAP, RAP | SVLS LABS">
-<meta name="twitter:description" content="AI-assisted SAP engineering workbench: integration flows, ABAP and RAP artefacts and SAP functional answers in plain English. Local models, your landscape, architect review.">
+<meta name="twitter:description" content="AI-assisted ERP engineering workbench for SAP landscapes: integration flows, ABAP and RAP artefacts and functional answers in plain English. Local models, your landscape, architect review.">
 <meta name="twitter:image" content="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/og/og-suite.png">
 <meta name="theme-color" content="#0E1116" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0E1116" media="(prefers-color-scheme: dark)">
@@ -53,7 +53,7 @@ $GLOBALS['svls_page_head'] = function () { ?>
       "applicationCategory": "DeveloperApplication",
       "operatingSystem": "Web",
       "url": "https://svlslabs.com/products/sap-intelligence-suite/",
-      "description": "AI-assisted SAP engineering workbench: integration flows, ABAP and RAP artefacts and SAP functional answers in plain English. Local models, your landscape, architect review.",
+      "description": "AI-assisted ERP engineering workbench for SAP landscapes: integration flows, ABAP and RAP artefacts and functional answers in plain English. Local models, your landscape, architect review.",
       "provider": { "@id": "https://svlslabs.com/#organization" }
     },
     {
@@ -100,8 +100,8 @@ get_header();
             </svg>
             <span class="product-lockup__text"><span class="product-lockup__name">SAP Intelligence Suite</span><span class="product-lockup__by">by SVLS LABS</span></span>
           </div>
-          <h1 id="hero-title">SAP Intelligence Suite. SAP Engineering <span class="key">in Plain English</span>.</h1>
-          <p class="lead">Generate integration flows, ABAP and RAP artefacts, modernise legacy code and get SAP functional answers from one workbench. Trained on your own reviewed library. Runs with local models on your infrastructure or with a hosted model of your choice. Your artefacts and code stay in your landscape.</p>
+          <h1 id="hero-title">SAP Intelligence Suite. ERP Engineering <span class="key">in Plain English</span>.</h1>
+          <p class="lead">Generate integration flows, ABAP and RAP artefacts, modernise legacy code and get ERP functional answers from one workbench. Trained on your own reviewed library. Runs with local models on your infrastructure or with a hosted model of your choice. Your artefacts and code stay in your landscape.</p>
           <p class="status">In use in SVLS LABS delivery. Available to customers on request; deployed in your landscape, reviewed by your architects.</p>
           <div class="btn-row">
             <a class="btn btn--primary" href="/contact/?intent=suite-demo">Request a Suite demo</a>
@@ -154,7 +154,7 @@ get_header();
         <article class="practice mode">
           <span class="numeral practice__num">03</span>
           <h3>Functional knowledge</h3>
-          <p class="practice__body">Process explanations and configuration answers grounded in trained SAP documentation, for consultants, developers and business analysts alike.</p>
+          <p class="practice__body">Process explanations and configuration answers grounded in trained ERP documentation, for consultants, developers and business analysts alike.</p>
         </article>
       </div>
     </div>
@@ -220,7 +220,7 @@ get_header();
       <div class="grid">
         <div class="col-8">
           <h3 id="pair-title">Two Products, One Control Model.</h3>
-          <p class="slim-band__body">The Suite accelerates the engineering. Value Lens governs what the numbers say. Both follow the same rule: deterministic artefacts, architect or reviewer decisions, SAP as the system of record.</p>
+          <p class="slim-band__body">The Suite accelerates the engineering. Value Lens governs what the numbers say. Both follow the same rule: deterministic artefacts, architect or reviewer decisions, the ERP as the system of record.</p>
         </div>
         <div class="col-4 slim-band__action">
           <a class="arrow-link" href="/products/value-lens/">See Value Lens<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>

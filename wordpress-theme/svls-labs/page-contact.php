@@ -7,12 +7,12 @@ $GLOBALS['svls_page_head'] = function () { ?>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Contact SVLS LABS | Book a Discovery Call</title>
-<meta name="description" content="Book a discovery call with an SAP architect, request Value Lens beta access or ask about partner capacity. Replies within one business day.">
+<meta name="description" content="Book a discovery call with our ERP, cloud and AI architects, join CuTTI early access, request Value Lens beta access or talk to us about music and media. Replies within one business day.">
 <link rel="canonical" href="<?php echo esc_url( home_url( '/contact/' ) ); ?>">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="SVLS LABS">
 <meta property="og:title" content="Contact SVLS LABS | Book a Discovery Call">
-<meta property="og:description" content="Book a discovery call with an SAP architect, request Value Lens beta access or ask about partner capacity. Replies within one business day.">
+<meta property="og:description" content="Book a discovery call with our ERP, cloud and AI architects, join CuTTI early access, request Value Lens beta access or talk to us about music and media. Replies within one business day.">
 <meta property="og:url" content="<?php echo esc_url( home_url( '/contact/' ) ); ?>">
 <meta property="og:image" content="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/og/og-contact.png">
 <meta property="og:image:width" content="1200">
@@ -20,7 +20,7 @@ $GLOBALS['svls_page_head'] = function () { ?>
 <meta property="og:image:alt" content="SVLS LABS lockup and the page title on charcoal.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Contact SVLS LABS | Book a Discovery Call">
-<meta name="twitter:description" content="Book a discovery call with an SAP architect, request Value Lens beta access or ask about partner capacity. Replies within one business day.">
+<meta name="twitter:description" content="Book a discovery call with our ERP, cloud and AI architects, join CuTTI early access, request Value Lens beta access or talk to us about music and media. Replies within one business day.">
 <meta name="twitter:image" content="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/og/og-contact.png">
 <meta name="theme-color" content="#0E1116" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0E1116" media="(prefers-color-scheme: dark)">
@@ -48,7 +48,7 @@ $GLOBALS['svls_page_head'] = function () { ?>
   "@type": "ContactPage",
   "name": "Contact SVLS LABS",
   "url": "https://svlslabs.com/contact/",
-  "description": "Book a discovery call with an SAP architect, request Value Lens beta access or ask about partner capacity. Replies within one business day.",
+  "description": "Book a discovery call with our ERP, cloud and AI architects, join CuTTI early access, request Value Lens beta access or talk to us about music and media. Replies within one business day.",
   "inLanguage": "en",
   "isPartOf": {
     "@type": "WebSite",
@@ -121,15 +121,16 @@ get_header();
               <div class="select">
                 <select class="input" id="c-intent" name="intent" required>
                   <option value="discovery">Discovery call</option>
-                  <option value="sap">Discovery call: SAP &amp; ERP</option>
+                  <option value="sap">Discovery call: ERP</option>
                   <option value="cloud">Discovery call: Cloud</option>
                   <option value="ai">AI readiness call: Agentic &amp; Applied AI</option>
                   <option value="beta">Value Lens beta access</option>
                   <option value="demo">Value Lens demo</option>
                   <option value="suite-demo">SAP Intelligence Suite demo</option>
                   <option value="cutti">CuTTI early access</option>
-                  <option value="partnership">Partnership: SAP partner capacity</option>
-                  <option value="overview">Capability overview PDF</option>
+                  <option value="media">Entertainment &amp; Media enquiry</option>
+                  <option value="partnership">Partnership: delivery partner capacity</option>
+                  <option value="overview">Company overview PDF</option>
                   <option value="checklist">Governed Agent Control Checklist</option>
                   <option value="checklist-cleancore">Clean Core integration checklist</option>
                   <option value="other">Something else</option>
@@ -141,7 +142,7 @@ get_header();
               <legend>Your role</legend>
               <div class="choices">
                 <label class="choice"><input type="radio" name="role" value="finance" data-required><span>Finance</span></label>
-                <label class="choice"><input type="radio" name="role" value="sap" data-required><span>SAP</span></label>
+                <label class="choice"><input type="radio" name="role" value="sap" data-required><span>ERP</span></label>
                 <label class="choice"><input type="radio" name="role" value="it" data-required><span>IT</span></label>
                 <label class="choice"><input type="radio" name="role" value="other" data-required><span>Other</span></label>
               </div>
@@ -190,7 +191,7 @@ get_header();
           </div>
 
           <div class="contact__block">
-            <h3>For SAP partners</h3>
+            <h3>For Delivery Partners</h3>
             <p class="contact__body">Select Partnership above. NDA-friendly, fixed-scope options.</p>
             <p class="mono-note">NDA-friendly · Fixed-scope options</p>
           </div>
@@ -203,7 +204,7 @@ get_header();
               <li><a class="arrow-link" href="/products/sap-intelligence-suite/">SAP Intelligence Suite<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a></li>
               <li><a class="arrow-link" href="/contact/?intent=suite-demo">Request a Suite demo<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a></li>
             </ul>
-            <p class="status">Value Lens: private beta on synthetic SAP-like data. Production SAP connector in development.</p>
+            <p class="status">Value Lens: private beta on synthetic ERP-like data. Production ERP connector in development.</p>
             <p class="status">SAP Intelligence Suite: in use in SVLS LABS delivery. Available to customers on request; deployed in your landscape, reviewed by your architects.</p>
           </div>
         </aside>

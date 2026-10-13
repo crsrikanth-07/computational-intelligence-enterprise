@@ -16,13 +16,14 @@ The theme picks the template from the page's path automatically (`functions.php`
 | `/about/` | `about` | none | `page-about.php` | About SVLS LABS |
 | `/approach/` | `approach` | none | `page-approach.php` | Governed Delivery Approach |
 | `/contact/` | `contact` | none | `page-contact.php` | Contact SVLS LABS |
+| `/media/` | `media` | none | `page-media.php` | Entertainment & Media |
 | `/privacy/` | `privacy` | none | `page-privacy.php` | Privacy Policy |
 | `/products/cutti/` | `cutti` | `products` | `page-products-cutti.php` | CuTTI by SVLS LABS |
 | `/products/sap-intelligence-suite/` | `sap-intelligence-suite` | `products` | `page-products-sap-intelligence-suite.php` | SAP Intelligence Suite: Integration Flows, ABAP, RAP |
-| `/products/value-lens/` | `value-lens` | `products` | `page-products-value-lens.php` | Value Lens: Margin Leak Finder for SAP O2C |
-| `/services/ai/` | `ai` | `services` | `page-services-ai.php` | Governed Agentic & Applied AI on SAP BTP |
-| `/services/cloud/` | `cloud` | `services` | `page-services-cloud.php` | Cloud Services for SAP Landscapes |
-| `/services/sap/` | `sap` | `services` | `page-services-sap.php` | SAP & ERP Services: S/4HANA, BTP, CPI |
+| `/products/value-lens/` | `value-lens` | `products` | `page-products-value-lens.php` | Value Lens: Margin Leak Finder for ERP Order-to-Cash |
+| `/services/ai/` | `ai` | `services` | `page-services-ai.php` | Governed Agentic & Applied AI for Enterprise Systems |
+| `/services/cloud/` | `cloud` | `services` | `page-services-cloud.php` | Cloud Around the ERP Core |
+| `/services/sap/` | `sap` | `services` | `page-services-sap.php` | ERP Services: Programmes, Integration, Clean Core |
 | `/terms/` | `terms` | none | `page-terms.php` | Terms of Use |
 
 The nested pages need their parent pages to exist first: `services` (title "Services") and `products` (title "Products"). Those two parents render with `page.php` as hub pages (hero plus one card per child, from `svls_hub()` in functions.php); their WordPress content is not shown. Any other leftover page renders with its Divi shortcodes stripped.
