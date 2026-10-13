@@ -40,7 +40,7 @@ $GLOBALS['svls_page_head'] = function () { ?>
 <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/site.css?v=467fa276">
 <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/pages/about.css?v=11dbc9a0">
 <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/pages/cutti.css?v=1f42d0a0">
-<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/pages/showcase.css?v=b5e4f523">
+<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/pages/showcase.css?v=eaa59410">
 <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/theme.css?v=95b1acdc">
 <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/js/site.js?v=540ef525" defer></script>
 <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/js/theme.js?v=1aa957a6" defer></script>

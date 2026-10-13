@@ -188,3 +188,8 @@ SVLS LABS now presents as an innovative software company with two portfolios (En
 - LinkedIn: new banner and logos in `assets/social/`, page copy (tagline, About, details, launch post) in `LINKEDIN_PAGE.md`.
 - QA: 14 pages with 0 axe violations, 0 console errors, 0 broken links or anchors, and no horizontal overflow at 390 px. html-validate is clean, `php -l` is clean, and there are no name or location leaks.
 - Client to do: upload the rebuilt zip with "Replace installed with uploaded", then update the LinkedIn page from `LINKEDIN_PAGE.md`.
+
+## Book links on Entertainment & Media (13 October 2026)
+
+- Each of the five books on `/media/#books` now opens its store page in a new tab, using the publication records the client supplied: AbeBooks (Ten Tales), Kobo (August 18th; Kamil & Hassan), Adlibris (The House on the Hill), Rakuten Books (Gottesgabe). The whole card is clickable, and ISBNs are shown where known.
+- Title corrected to the published spelling: "Ten Tales from Bellavere and Lindelfeld".

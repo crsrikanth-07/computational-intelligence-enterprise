@@ -93,3 +93,14 @@
 .shelf li:nth-child(3) .spine { --b1: #2C3B4A; --b2: #0D131A; }
 .shelf li:nth-child(4) .spine { --b1: #2E4234; --b2: #0D1510; }
 .shelf li:nth-child(5) .spine { --b1: #4A4128; --b2: #17140B; }
+/* Book cards: the title link covers the whole card */
+.shelf li { position: relative; padding: var(--s-3); margin: calc(var(--s-3) * -1); border-radius: 12px; transition: background-color .2s ease; }
+.shelf li:hover, .shelf li:focus-within { background: color-mix(in srgb, var(--text) 6%, transparent); }
+.book__link { color: inherit; text-decoration: none; }
+.book__link::after { content: ""; position: absolute; inset: 0; border-radius: 12px; }
+.book__link:focus-visible { outline: none; }
+.shelf li:focus-within { outline: 2px solid var(--accent); outline-offset: 2px; }
+.shelf li:hover .book__link { text-decoration: underline; text-underline-offset: 3px; }
+.shelf .book__store { margin-top: var(--s-2); font: 500 11px/16px var(--font-mono); letter-spacing: .06em; color: var(--text-muted); }
+.shelf li:hover .book__store { color: var(--accent-text); }
+@media (prefers-reduced-motion: reduce) { .shelf li { transition: none; } }
