@@ -168,3 +168,11 @@ The client is moving CuTTI to its own site. svlslabs.com is SAP & ERP, Cloud and
 - WordPress: on the first request after the upload the theme sets the `products/cutti` page to draft (not deleted, reversible under Pages -> Drafts). `/products/cutti/` and `/products/logicpilot/` answer with a temporary (302) redirect to `/products/` until the new CuTTI address is known; then the redirect can point there.
 - Kept: everything else added in the same period (Menu sheet in `header.php`, version-tagged CSS/JS URLs, hub pages, phone number spacing).
 - Client to do: upload the rebuilt zip with "Replace installed with uploaded". The theme upload also removes the CuTTI video files from the server.
+
+## CuTTI back on svlslabs.com (13 October 2026)
+
+- `/products/cutti/` rebuilt from the client's copy of 13 Oct 2026 ("One request. A full producer session in Logic Pro."), with the vertical demo video (720x1280, 50 s, 2.8 MB) in the hero. Available to purchase from 1 January 2027; the price shows only the founding-producer line, as the copy asks before checkout is live.
+- Back in the Products menu (first, NEW label), Menu sheet, footer, Products hub, Contact intent ("CuTTI early access"), sitemap and deploy plan. The homepage spotlight and AI-page band are not restored.
+- Not used from the copy: section 13 "About SVLS Labs" ("CuTTI is our first product") because it contradicts the SAP products on this site, and section 14 (the site has its own footer; the trademark line is on the page).
+- WordPress: on the first request after the upload the theme republishes the drafted CuTTI page (or creates it); `/products/logicpilot/` 301s to `/products/cutti/`. Early-access emails arrive with the subject "CuTTI early access".
+- Client to do: upload the rebuilt zip with "Replace installed with uploaded".
