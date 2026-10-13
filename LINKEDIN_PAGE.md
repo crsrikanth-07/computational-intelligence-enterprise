@@ -41,7 +41,7 @@ svlslabs.com
 
 ## Images
 
-- Banner (1128 × 191, rendered at 2x): `website/assets/social/linkedin-banner.png`
+- Banner (1128 × 191, rendered at 2x): `website/assets/social/linkedin-banner.jpg` (upload this one; the PNG is the same image)
 - Logo (400 × 400): `website/assets/social/linkedin-logo-dark.png` (or `linkedin-logo-light.png`)
 
 ## Launch post (optional)
