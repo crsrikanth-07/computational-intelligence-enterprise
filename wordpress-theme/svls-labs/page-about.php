@@ -125,7 +125,7 @@ get_header();
         <li>Entertainment &amp; Media · CuTTI · CuTTI Score</li>
       </ul>
       <div class="story__today">
-        <p class="story__today-line">Today: <a class="link" href="/products/cutti/">CuTTI</a>, available to purchase from 1 January 2027; <a class="link" href="/products/value-lens/">Value Lens</a>, in private beta; and <a class="link" href="/products/sap-intelligence-suite/">SAP Intelligence Suite</a>, our AI-assisted ERP engineering workbench.</p>
+        <p class="story__today-line">Today: <a class="link" href="/products/cutti/">CuTTI</a>, available to purchase from 1 January 2027, and <a class="link" href="/products/value-lens/">Value Lens</a>, in private beta.</p>
       </div>
     </div>
   </section>

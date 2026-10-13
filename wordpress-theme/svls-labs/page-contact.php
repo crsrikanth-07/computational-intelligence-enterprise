@@ -126,7 +126,6 @@ get_header();
                   <option value="ai">AI readiness call: Agentic &amp; Applied AI</option>
                   <option value="beta">Value Lens beta access</option>
                   <option value="demo">Value Lens demo</option>
-                  <option value="suite-demo">SAP Intelligence Suite demo</option>
                   <option value="cutti">CuTTI early access</option>
                   <option value="media">Entertainment &amp; Media enquiry</option>
                   <option value="partnership">Partnership: delivery partner capacity</option>
@@ -201,11 +200,8 @@ get_header();
             <ul class="contact__products" role="list">
               <li><a class="arrow-link" href="/products/value-lens/">Value Lens (private beta)<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a></li>
               <li><a class="arrow-link" href="/products/value-lens/#beta">Request beta access<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a></li>
-              <li><a class="arrow-link" href="/products/sap-intelligence-suite/">SAP Intelligence Suite<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a></li>
-              <li><a class="arrow-link" href="/contact/?intent=suite-demo">Request a Suite demo<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a></li>
             </ul>
             <p class="status">Value Lens: private beta on synthetic ERP-like data. Production ERP connector in development.</p>
-            <p class="status">SAP Intelligence Suite: in use in SVLS LABS delivery. Available to customers on request; deployed in your landscape, reviewed by your architects.</p>
           </div>
         </aside>
       </div>

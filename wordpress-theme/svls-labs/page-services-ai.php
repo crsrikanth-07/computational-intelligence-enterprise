@@ -131,7 +131,7 @@ get_header();
           <h3>AI-Assisted ERP Engineering</h3>
           <p class="practice__body">Faster on repeatable objects: mapping specs, integration flow scaffolds, tests, runbooks, extension boilerplate. Never transport approval, never production changes, never arithmetic inside an LLM.</p>
           <p class="practice__typical"><span class="eyebrow">Deliverables</span>accelerated build with architect review on every artefact.</p>
-          <a class="arrow-link" href="/products/sap-intelligence-suite/">See SAP Intelligence Suite<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
+          <a class="arrow-link" href="/contact/?intent=ai">Talk to an architect<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
         </article>
       </div>
     </div>
@@ -304,7 +304,6 @@ get_header();
       </div>
       <div class="links links--after">
         <a class="arrow-link" href="/approach/#ai-assisted">How the method uses it<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
-        <a class="arrow-link" href="/products/sap-intelligence-suite/">See SAP Intelligence Suite<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
       </div>
     </div>
   </section>

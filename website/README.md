@@ -9,14 +9,13 @@ website/
   index.html                          homepage
   services/sap/  services/cloud/  services/ai/      practice pages (index.html in each)
   products/value-lens/                Value Lens (private beta), with the Addendum D depth sections
-  products/sap-intelligence-suite/    SAP Intelligence Suite (generalised, Addendum A v2)
   approach/  about/  contact/  privacy/  terms/     one index.html each
   404.html                            not-found page (noindex; the host must serve it for missing paths)
   sitemap.xml  robots.txt  humans.txt site.webmanifest
   favicon.svg  favicon-32.png  favicon-16.png  apple-touch-icon.png
   assets/css/tokens.css               brand tokens: the base colour, type and spacing values (BRAND_SPEC 5.2)
   assets/css/site.css                 every shared component (layout, nav, buttons, grids, forms, footer, motion)
-  assets/css/pages/<key>.css          small page-specific layout (ai, approach, contact, value-lens, suite, about, legal); tokens only
+  assets/css/pages/<key>.css          small page-specific layout (ai, approach, contact, value-lens, cutti, showcase, about, legal); tokens only
   assets/css/theme.css                THE THEME (loaded last): charcoal heroes, cards, bands, gradients, dark mode; its own --sg-* token block
   assets/js/site.js                   one IIFE: theme choice, dropdowns, Menu sheet, current nav, reveal, forms, year
   assets/js/theme.js                  adds .is-scrolled to the sticky header (polish only)

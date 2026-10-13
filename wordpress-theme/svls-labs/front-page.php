@@ -165,7 +165,7 @@ get_header();
           </div>
         </article>
       </div>
-      <p class="also">Also from SVLS LABS: <a class="link" href="/products/sap-intelligence-suite/">SAP Intelligence Suite</a>, an AI-assisted ERP engineering workbench, and CuTTI Score, score recognition and editing for musicians, in private preview.</p>
+      <p class="also">Also from SVLS LABS: CuTTI Score, score recognition and editing for musicians, in private preview.</p>
     </div>
   </section>
 

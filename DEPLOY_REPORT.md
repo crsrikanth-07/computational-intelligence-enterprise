@@ -193,3 +193,13 @@ SVLS LABS now presents as an innovative software company with two portfolios (En
 
 - Each of the five books on `/media/#books` now opens its store page in a new tab, using the publication records the client supplied: AbeBooks (Ten Tales), Kobo (August 18th; Kamil & Hassan), Adlibris (The House on the Hill), Rakuten Books (Gottesgabe). The whole card is clickable, and ISBNs are shown where known.
 - Title corrected to the published spelling: "Ten Tales from Bellavere and Lindelfeld".
+
+## SAP Intelligence Suite retired (13 October 2026)
+
+SVLS LABS no longer markets SAP Intelligence Suite. The word "SAP" no longer appears anywhere in the site text.
+
+- Removed: the product page, its stylesheet, its mark and its share image; the menu, Menu sheet and footer entries; the Products hub card; the homepage "also from" mention; links from the About, Approach, Value Lens and AI pages (the AI page's engineering card now links to "Talk to an architect"); the Contact demo option, product links and status line; the sitemap entry and deploy plan entries.
+- Terms: the SAP trademark line now names the marks the site actually uses (Logic Pro, Claude).
+- WordPress: on the first request after the upload the theme sets the `products/sap-intelligence-suite` page to draft (reversible under Pages → Drafts). Its URL 301-redirects to `/products/`.
+- QA: 13 pages with 0 axe violations, 0 console errors and 0 broken links or anchors. html-validate is clean and `php -l` is clean.
+- Client to do: upload the rebuilt zip with "Replace installed with uploaded".

@@ -37,7 +37,6 @@
           <ul class="dropdown" id="products-menu">
             <li><a href="/products/cutti/"<?php svls_current( '/products/cutti/' ); ?>><span class="dropdown__title">CuTTI <span class="nav-beta nav-beta--new">Flagship</span></span><span class="dropdown__desc">Editable Logic Pro sessions from one request. Available January 2027.</span></a></li>
             <li><a href="/products/value-lens/"<?php svls_current( '/products/value-lens/' ); ?>><span class="dropdown__title">Value Lens <span class="nav-beta">Private beta</span></span><span class="dropdown__desc">Flagship. Margin leak finder for order-to-cash.</span></a></li>
-            <li><a href="/products/sap-intelligence-suite/"<?php svls_current( '/products/sap-intelligence-suite/' ); ?>><span class="dropdown__title">SAP Intelligence Suite</span><span class="dropdown__desc">AI-assisted ERP engineering workbench.</span></a></li>
           </ul>
         </li>
         <li class="site-nav__item"><a class="site-nav__link" href="/media/"<?php svls_current( '/media/' ); ?>>Media</a></li>
@@ -72,7 +71,6 @@
         <ul class="sheet__sub" aria-labelledby="sheet-products">
           <li><a class="sheet__link" href="/products/cutti/"<?php svls_current( '/products/cutti/' ); ?>>CuTTI <span class="nav-beta nav-beta--new">Flagship</span></a></li>
           <li><a class="sheet__link" href="/products/value-lens/"<?php svls_current( '/products/value-lens/' ); ?>>Value Lens <span class="nav-beta">Private beta</span></a></li>
-          <li><a class="sheet__link" href="/products/sap-intelligence-suite/"<?php svls_current( '/products/sap-intelligence-suite/' ); ?>>SAP Intelligence Suite</a></li>
         </ul>
       </li>
       <li><a class="sheet__link" href="/media/"<?php svls_current( '/media/' ); ?>>Entertainment &amp; Media</a></li>

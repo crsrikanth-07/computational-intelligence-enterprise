@@ -44,9 +44,8 @@ const PLAN = [
   { slug: 'sap', parent: 'services', title: 'SAP & ERP', template: 'page-services-sap.php' },
   { slug: 'cloud', parent: 'services', title: 'Cloud', template: 'page-services-cloud.php' },
   { slug: 'ai', parent: 'services', title: 'Agentic & Applied AI', template: 'page-services-ai.php' },
-  { slug: 'products', title: 'Products', template: '', content: '<p><a href="/products/value-lens/">Value Lens (private beta)</a> · <a href="/products/sap-intelligence-suite/">SAP Intelligence Suite</a></p>' },
+  { slug: 'products', title: 'Products', template: '', content: '<p><a href="/products/value-lens/">Value Lens (private beta)</a> · <a href="/products/cutti/">CuTTI</a></p>' },
   { slug: 'value-lens', parent: 'products', title: 'Value Lens', template: 'page-products-value-lens.php' },
-  { slug: 'sap-intelligence-suite', parent: 'products', title: 'SAP Intelligence Suite', template: 'page-products-sap-intelligence-suite.php' },
   { slug: 'cutti', parent: 'products', title: 'CuTTI', template: 'page-products-cutti.php' },
   { slug: 'approach', title: 'Approach', template: 'page-approach.php' },
   { slug: 'media', title: 'Entertainment & Media', template: 'page-media.php' },
@@ -183,7 +182,7 @@ async function setFrontPage(homeId) {
   catch (e) { warn('Could not set the static front page via REST (' + e.message + '). Set it in Settings -> Reading -> Your homepage displays: A static page -> Homepage: SVLS LABS.'); }
 }
 
-const PUBLIC = ['/', '/services/sap/', '/services/cloud/', '/services/ai/', '/products/value-lens/', '/products/sap-intelligence-suite/', '/products/cutti/', '/approach/', '/media/', '/about/', '/contact/', '/privacy/', '/terms/'];
+const PUBLIC = ['/', '/services/sap/', '/services/cloud/', '/services/ai/', '/products/value-lens/', '/products/cutti/', '/approach/', '/media/', '/about/', '/contact/', '/privacy/', '/terms/'];
 async function verify() {
   const urls = [...PUBLIC, `/svls-deploy-check-${Date.now().toString(36)}/`];
   for (const p of urls) {

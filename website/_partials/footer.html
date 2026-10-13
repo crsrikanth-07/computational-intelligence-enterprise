@@ -29,7 +29,6 @@
           <ul>
             <li><a href="/products/cutti/">CuTTI (flagship)</a></li>
             <li><a href="/products/value-lens/">Value Lens (flagship)</a></li>
-            <li><a href="/products/sap-intelligence-suite/">SAP Intelligence Suite</a></li>
             <li><a href="/products/cutti/#early-access">CuTTI early access</a></li>
             <li><a href="/products/value-lens/#beta">Value Lens beta access</a></li>
           </ul>

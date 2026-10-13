@@ -96,7 +96,7 @@ get_header();
           <section class="legal__section" aria-labelledby="t-use">
             <span class="numeral">01</span>
             <h2 class="h3" id="t-use">Use of the Site</h2>
-            <p>svlslabs.com is published by SVLS LABS LLP for information about our services and products. You may read, link to and quote this site to evaluate our services. You may not copy its content for commercial use, present it as your own or use the site to send unsolicited messages. SAP and related marks are trademarks of SAP SE; all other marks belong to their owners.</p>
+            <p>svlslabs.com is published by SVLS LABS LLP for information about our services and products. You may read, link to and quote this site to evaluate our services. You may not copy its content for commercial use, present it as your own or use the site to send unsolicited messages. Logic Pro is a trademark of Apple Inc. Claude is a trademark of Anthropic. All other marks belong to their owners.</p>
           </section>
           <section class="legal__section" aria-labelledby="t-beta">
             <span class="numeral">02</span>

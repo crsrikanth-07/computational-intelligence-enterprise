@@ -661,17 +661,16 @@ get_header();
   </section>
 
   <!-- A.9 Cross-link to sibling products (Addendum A.9, slim band) -->
-  <section class="section section--slim slim-band" id="suite" aria-labelledby="suite-title">
+  <section class="section section--slim slim-band" id="also" aria-labelledby="also-title">
     <div class="container">
-      <div class="section-mark"><span class="numeral">12</span><h2 class="eyebrow" id="suite-title">Also from SVLS LABS</h2></div>
+      <div class="section-mark"><span class="numeral">12</span><h2 class="eyebrow" id="also-title">Also from SVLS LABS</h2></div>
       <div class="grid">
         <div class="col-8">
           <p class="h3 slim-band__line">Our other flagship, CuTTI, builds editable Logic Pro sessions from one request.</p>
-          <p class="slim-band__body">CuTTI leads our Entertainment &amp; Media portfolio and is available to purchase from 1 January 2027. Building the integrations around Value Lens? SAP Intelligence Suite, our AI-assisted ERP engineering workbench, supports that work.</p>
+          <p class="slim-band__body">CuTTI leads our Entertainment &amp; Media portfolio and is available to purchase from 1 January 2027.</p>
         </div>
         <div class="col-4 slim-band__action">
           <a class="arrow-link" href="/products/cutti/">See CuTTI<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
-          <a class="arrow-link" href="/products/sap-intelligence-suite/">See SAP Intelligence Suite<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
         </div>
       </div>
     </div>

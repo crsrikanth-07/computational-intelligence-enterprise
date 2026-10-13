@@ -4,7 +4,7 @@ For anyone producing a page, a post, a slide or a PDF for SVLS LABS. This page g
 
 ## 1. Name and tagline
 
-- Company: **SVLS LABS** (always uppercase in running text and headlines). Legal entity: **SVLS LABS LLP**. Product: **Value Lens**. Suite: **SAP Intelligence Suite** (name under review, see section 7).
+- Company: **SVLS LABS** (always uppercase in running text and headlines). Legal entity: **SVLS LABS LLP**. Flagship products: **CuTTI** and **Value Lens**. (SAP Intelligence Suite is no longer marketed, October 2026; do not mention it.)
 - Tagline, locked, always two sentences with both full stops: **"SAP, Cloud and Governed AI. Engineered to Spec."** Used as the homepage H1, the footer strap, the OG image, LinkedIn and email signatures.
 - Approved secondary lines (never as the homepage H1): "Clean core. Clean cloud. Governed agents." and "Agents explain. Humans decide. SAP stays the system of record."
 - The three practices are **SAP & ERP**, **Cloud** and **Agentic & Applied AI** (client instruction, 2026-09-26: the AI work published on GitHub is broader than agents; "Agentic AI" alone is no longer used as the practice name).
@@ -20,7 +20,7 @@ Files in `website/assets/logo/`:
 | `lockup.svg` (284x64) | horizontal lockup on white or the light grey surface |
 | `lockup-reversed.svg` | horizontal lockup on charcoal (`#0E1116`, `#0B0E13`, `#101418`, `#14213D`) |
 | `stacked.svg`, `stacked-reversed.svg` (320x320) | social avatars, OG images, print squares. The stacked reversed lockup is the LinkedIn avatar; the bare mark is not used as an avatar in the first year |
-| `value-lens-mark.svg`, `sap-intelligence-suite-mark.svg` | product marks (a finding inside the ring) |
+| `value-lens-mark.svg` | product mark (a finding inside the ring) |
 | `favicon.svg`, `favicon-32.png`, `favicon-16.png`, `apple-touch-icon.png` (site root) | browser and home-screen icons (ink square with the reversed mark) |
 
 Rules:
@@ -74,14 +74,12 @@ Tone: precise, calm, evidence-led, specific, unadorned. An architect talking to 
 - **No person is named**, pictured, linked or implied: no founder, no CEO, no personal email, phone or LinkedIn. Voice is "our architects", "our team", "the leadership team". Certifications are "held in the team", described generically, never as an enumerated list.
 - **Product status sentences**, verbatim, wherever the product is featured:
   - Value Lens: **"Private beta on synthetic SAP-like data. Production SAP connector in development."** Never "live", "in production", "customers use", "GA".
-  - SAP Intelligence Suite: **"In use in SVLS LABS delivery. Available to customers on request; deployed in your landscape, reviewed by your architects."**
 - Agents "explain", "propose", "read before write", "confirm to act"; never "autonomous", never "decide" for the agent, never "rollback" (SAP postings are reversed).
 - The only location is the registered office: SVLS LABS LLP, 4th Floor, Aparna Astute, Shaikpet, Door No. 8-1-299/103&104/AA/4F-2, Jubilee Hills, Hyderabad 500008, Telangana, India. No other country, region, time zone or presence claim.
 
 ## 7. Open items that touch the brand
 
 - Trademark screening of the mark and the name "Value Lens" (classes 42 and 9) before public rollout; no ™ until cleared.
-- SAP Intelligence Suite: SAP's trademark guidance usually asks third parties not to lead a product name with "SAP"; "Intelligence Suite for SAP" is the safer descriptive form. Decide before launch.
 - Outline conversion of the lockup SVGs for print.
 
 Detail: `website/THEME_SPEC.md` (tokens, contrast pairs, components, motion, OG images), `website/README.md` (copy rules and the client TODO list), `website/BUILD_NOTES.md` (component vocabulary).

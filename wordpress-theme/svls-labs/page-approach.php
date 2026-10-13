@@ -240,7 +240,6 @@ get_header();
       <p class="review-record">Generated artefacts carry a review record naming the reviewing role and the check performed. The record is part of the evidence pack.</p>
       <div class="links links--after">
         <a class="arrow-link" href="/services/ai/">See the Agentic &amp; Applied AI practice<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
-        <a class="arrow-link" href="/products/sap-intelligence-suite/">See SAP Intelligence Suite<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
       </div>
     </div>
   </section>

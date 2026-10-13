@@ -167,7 +167,7 @@ fs.writeFileSync(path.join(out, 'page.php'), fallback);
 fs.writeFileSync(path.join(out, 'style.css'), `/*
 Theme Name: SVLS LABS
 Theme URI: https://svlslabs.com
-Description: The svlslabs.com website as a WordPress theme (SAP & ERP, Cloud, Agentic & Applied AI, Value Lens, SAP Intelligence Suite). Page layouts and copy live in the PHP templates; styles in assets/css (tokens.css, site.css, pages/*.css, theme.css); behaviour in assets/js.
+Description: The svlslabs.com website as a WordPress theme (CuTTI, Value Lens, Enterprise Software, Entertainment & Media). Page layouts and copy live in the PHP templates; styles in assets/css (tokens.css, site.css, pages/*.css, theme.css); behaviour in assets/js.
 Version: 1.0.0
 Author: SVLS LABS
 License: Proprietary
@@ -224,9 +224,10 @@ add_action( 'admin_post_svls_form', 'svls_handle_form' );
  * Page housekeeping per theme release, run once on the first request after the upload (option svls_pages_version).
  * October 2026: the CuTTI page is published again if a previous release set it to draft (or created under Products),
  * and the top-level Entertainment & Media page (/media/) is created if it does not exist.
+ * The SAP Intelligence Suite page is set to draft (no longer marketed; its URL 301s to /products/).
  */
 add_action( 'init', function () {
-	$release = '2026-10-portfolios';
+	$release = '2026-10-suite-retired';
 	if ( get_option( 'svls_pages_version' ) === $release || get_transient( 'svls_pages_lock' ) ) { return; }
 	set_transient( 'svls_pages_lock', 1, 60 );
 	$page = get_page_by_path( 'products/cutti' );
@@ -242,6 +243,10 @@ add_action( 'init', function () {
 	if ( ! get_page_by_path( 'media' ) ) {
 		wp_insert_post( array( 'post_type' => 'page', 'post_status' => 'publish', 'post_title' => 'Entertainment & Media', 'post_name' => 'media',
 			'post_content' => '<!-- Rendered by the media template of the SVLS LABS theme -->' ) );
+	}
+	$suite = get_page_by_path( 'products/sap-intelligence-suite' );
+	if ( $suite && 'publish' === $suite->post_status ) {
+		wp_update_post( array( 'ID' => $suite->ID, 'post_status' => 'draft' ) );
 	}
 	update_option( 'svls_pages_version', $release, false );
 	delete_transient( 'svls_pages_lock' );
@@ -313,7 +318,6 @@ function svls_hub( $slug ) {
 			'items' => array(
 				array( 'title' => 'CuTTI (flagship)', 'href' => '/products/cutti/', 'cta' => 'See CuTTI', 'body' => 'One request, a full producer session in Logic Pro: built-in instruments, every step verified, mixed and mastered. Available to purchase from 1 January 2027.' ),
 				array( 'title' => 'Value Lens (flagship)', 'href' => '/products/value-lens/', 'cta' => 'See Value Lens', 'body' => 'The margin leak finder for ERP order-to-cash. Numbers from deterministic code, every case evidenced, finance decides. Private beta.' ),
-				array( 'title' => 'SAP Intelligence Suite', 'href' => '/products/sap-intelligence-suite/', 'cta' => 'See SAP Intelligence Suite', 'body' => 'The AI-assisted ERP engineering workbench behind our enterprise delivery, reviewed by an architect before anything reaches a landscape.' ),
 			),
 		),
 	);
@@ -339,6 +343,7 @@ add_action( 'template_redirect', function () {
 		'terms-and-conditions'      => '/terms/',
 		'our-products-and-services' => '/services/',
 		'products/logicpilot'       => '/products/cutti/', // product renamed LogicPilot -> CuTTI
+		'products/sap-intelligence-suite' => '/products/', // product no longer marketed (October 2026)
 	);
 	$path = isset( $_SERVER['REQUEST_URI'] ) ? trim( (string) wp_parse_url( $_SERVER['REQUEST_URI'], PHP_URL_PATH ), '/' ) : '';
 	if ( '' !== $path && isset( $map[ $path ] ) ) {
