@@ -18,6 +18,7 @@ The theme picks the template from the page's path automatically (`functions.php`
 | `/contact/` | `contact` | none | `page-contact.php` | Contact SVLS LABS |
 | `/media/` | `media` | none | `page-media.php` | Entertainment & Media |
 | `/privacy/` | `privacy` | none | `page-privacy.php` | Privacy Policy |
+| `/products/cutti-score/` | `cutti-score` | `products` | `page-products-cutti-score.php` | CuTTI Score (Beta) |
 | `/products/cutti/` | `cutti` | `products` | `page-products-cutti.php` | CuTTI by SVLS LABS |
 | `/products/value-lens/` | `value-lens` | `products` | `page-products-value-lens.php` | Value Lens: Margin Leak Finder for ERP Order-to-Cash |
 | `/services/ai/` | `ai` | `services` | `page-services-ai.php` | Governed Agentic & Applied AI for Enterprise Systems |

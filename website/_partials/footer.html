@@ -29,8 +29,10 @@
           <ul>
             <li><a href="/products/cutti/">CuTTI (flagship)</a></li>
             <li><a href="/products/value-lens/">Value Lens (flagship)</a></li>
+            <li><a href="/products/cutti-score/">CuTTI Score (beta)</a></li>
             <li><a href="/products/cutti/#early-access">CuTTI early access</a></li>
             <li><a href="/products/value-lens/#beta">Value Lens beta access</a></li>
+            <li><a href="/products/cutti-score/#beta">CuTTI Score beta access</a></li>
           </ul>
         </div>
         <div class="footer__col">

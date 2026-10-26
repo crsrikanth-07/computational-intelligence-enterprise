@@ -203,3 +203,13 @@ SVLS LABS no longer markets SAP Intelligence Suite. The word "SAP" no longer app
 - WordPress: on the first request after the upload the theme sets the `products/sap-intelligence-suite` page to draft (reversible under Pages → Drafts). Its URL 301-redirects to `/products/`.
 - QA: 13 pages with 0 axe violations, 0 console errors and 0 broken links or anchors. html-validate is clean and `php -l` is clean.
 - Client to do: upload the rebuilt zip with "Replace installed with uploaded".
+
+## CuTTI Score (Beta) added (26 October 2026)
+
+- New page `/products/cutti-score/`, built from the client's copy (version 0.9.8, figures measured 25 Oct 2026). Sections: a hero with a side-by-side illustration of the printed original and CuTTI Score's reading (confidence map, hand-off formats); "Made by musicians, for musicians"; What it does (7 items); How it works (4 steps); Why a beta (98–100% of notes on clean modern scores, mid-90s on older song and choral editions, scores of 150–218 pages tested end to end, handwritten music not yet supported); a beta request form; FAQ (6).
+- Not published, per the copy's notes: competitor names or comparisons, the install steps for the un-notarized build (they belong in the welcome email), and the open-source engine licence note (legal to check before launch). The copy's "SVSL Labs" is written as "SVLS LABS".
+- Added to the Products menu (with a Beta label), the Menu sheet, the footer, the Products hub, the Contact form ("CuTTI Score beta"), the sitemap and the deploy plan. The Media page card now says "Beta · Free for Mac" and links to the page. The homepage "Also from SVLS LABS" line and the company overview PDF now link to or mention the beta.
+- Beta requests are emailed to service@svlslabs.com with the subject "CuTTI Score beta request".
+- WordPress: on the first request after the upload the theme creates the `products/cutti-score` page.
+- To update with each release: the "Where it is today" figures in `products/cutti-score/index.html` (section 05), taken from the release notes.
+- QA: 0 axe violations, 0 console errors and 0 broken links or anchors on the new page and the pages that changed. html-validate is clean and `php -l` is clean.

@@ -167,7 +167,7 @@ fs.writeFileSync(path.join(out, 'page.php'), fallback);
 fs.writeFileSync(path.join(out, 'style.css'), `/*
 Theme Name: SVLS LABS
 Theme URI: https://svlslabs.com
-Description: The svlslabs.com website as a WordPress theme (CuTTI, Value Lens, Enterprise Software, Entertainment & Media). Page layouts and copy live in the PHP templates; styles in assets/css (tokens.css, site.css, pages/*.css, theme.css); behaviour in assets/js.
+Description: The svlslabs.com website as a WordPress theme (CuTTI, Value Lens, CuTTI Score, Enterprise Software, Entertainment & Media). Page layouts and copy live in the PHP templates; styles in assets/css (tokens.css, site.css, pages/*.css, theme.css); behaviour in assets/js.
 Version: 1.0.0
 Author: SVLS LABS
 License: Proprietary
@@ -206,7 +206,7 @@ function svls_handle_form() {
 		if ( svls_wants_json() ) { wp_send_json( array( 'ok' => false, 'error' => 'name and email are required' ), 400 ); }
 		wp_safe_redirect( add_query_arg( 'sent', '0', wp_get_referer() ? wp_get_referer() : home_url( '/contact/' ) ) ); exit;
 	}
-	$subjects = array( 'beta' => 'Value Lens beta request', 'cutti' => 'CuTTI early access', 'media' => 'Entertainment & Media enquiry' );
+	$subjects = array( 'beta' => 'Value Lens beta request', 'cutti' => 'CuTTI early access', 'media' => 'Entertainment & Media enquiry', 'cutti-score' => 'CuTTI Score beta request' );
 	$subject  = 'svlslabs.com: ' . ( isset( $subjects[ $form ] ) ? $subjects[ $form ] : 'Contact enquiry' ) . ' from ' . $fields['name'];
 	$body    = '';
 	foreach ( $fields as $key => $value ) { $body .= ucfirst( str_replace( array( '-', '_' ), ' ', $key ) ) . ': ' . $value . "\n"; }
@@ -225,9 +225,10 @@ add_action( 'admin_post_svls_form', 'svls_handle_form' );
  * October 2026: the CuTTI page is published again if a previous release set it to draft (or created under Products),
  * and the top-level Entertainment & Media page (/media/) is created if it does not exist.
  * The SAP Intelligence Suite page is set to draft (no longer marketed; its URL 301s to /products/).
+ * The CuTTI Score (Beta) page is created under Products if it does not exist.
  */
 add_action( 'init', function () {
-	$release = '2026-10-suite-retired';
+	$release = '2026-10-cutti-score';
 	if ( get_option( 'svls_pages_version' ) === $release || get_transient( 'svls_pages_lock' ) ) { return; }
 	set_transient( 'svls_pages_lock', 1, 60 );
 	$page = get_page_by_path( 'products/cutti' );
@@ -243,6 +244,11 @@ add_action( 'init', function () {
 	if ( ! get_page_by_path( 'media' ) ) {
 		wp_insert_post( array( 'post_type' => 'page', 'post_status' => 'publish', 'post_title' => 'Entertainment & Media', 'post_name' => 'media',
 			'post_content' => '<!-- Rendered by the media template of the SVLS LABS theme -->' ) );
+	}
+	$products = get_page_by_path( 'products' );
+	if ( $products && ! get_page_by_path( 'products/cutti-score' ) ) {
+		wp_insert_post( array( 'post_type' => 'page', 'post_status' => 'publish', 'post_title' => 'CuTTI Score (Beta)', 'post_name' => 'cutti-score', 'post_parent' => $products->ID,
+			'post_content' => '<!-- Rendered by the products/cutti-score template of the SVLS LABS theme -->' ) );
 	}
 	$suite = get_page_by_path( 'products/sap-intelligence-suite' );
 	if ( $suite && 'publish' === $suite->post_status ) {
@@ -318,6 +324,7 @@ function svls_hub( $slug ) {
 			'items' => array(
 				array( 'title' => 'CuTTI (flagship)', 'href' => '/products/cutti/', 'cta' => 'See CuTTI', 'body' => 'One request, a full producer session in Logic Pro: built-in instruments, every step verified, mixed and mastered. Available to purchase from 1 January 2027.' ),
 				array( 'title' => 'Value Lens (flagship)', 'href' => '/products/value-lens/', 'cta' => 'See Value Lens', 'body' => 'The margin leak finder for ERP order-to-cash. Numbers from deterministic code, every case evidenced, finance decides. Private beta.' ),
+				array( 'title' => 'CuTTI Score (beta)', 'href' => '/products/cutti-score/', 'cta' => 'See CuTTI Score', 'body' => 'From printed page to playable, editable score: reads PDFs, scans, photos and screenshots, plays them back and opens them in your notation program. Free beta for Mac.' ),
 			),
 		),
 	);

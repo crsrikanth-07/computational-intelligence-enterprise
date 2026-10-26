@@ -127,6 +127,7 @@ get_header();
                   <option value="beta">Value Lens beta access</option>
                   <option value="demo">Value Lens demo</option>
                   <option value="cutti">CuTTI early access</option>
+                  <option value="cutti-score">CuTTI Score beta</option>
                   <option value="media">Entertainment &amp; Media enquiry</option>
                   <option value="partnership">Partnership: delivery partner capacity</option>
                   <option value="overview">Company overview PDF</option>

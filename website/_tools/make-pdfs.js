@@ -63,7 +63,7 @@ ${foot('page 1 of 2')}</div>
 <div class="cols">
 <div class="card"><span class="k">Original Music</span><h3>Composed and produced in-house</h3><p>Songs and scores across pop, cinematic and Indian traditions, produced with the same care we put into software.</p></div>
 <div class="card"><span class="k">Published Fiction</span><h3>Five titles in 2026</h3><p>Novels and story collections, written in-house: svlslabs.com/media/#books</p></div>
-<div class="card"><span class="k">Creative Tools</span><h3>Software we wished we had</h3><p>CuTTI first, with CuTTI Score in private preview. Tools that do the groundwork so makers can spend their time on the work.</p></div>
+<div class="card"><span class="k">Creative Tools</span><h3>Software we wished we had</h3><p>CuTTI first, and CuTTI Score, now in free beta, for turning printed music into playable, editable scores. Tools that do the groundwork so makers can spend their time on the work.</p></div>
 </div>
 <h2>How We Build</h2>
 <ol class="steps">

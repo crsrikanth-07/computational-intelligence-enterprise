@@ -124,11 +124,11 @@ get_header();
           <div class="btn-row"><a class="btn btn--primary" href="/products/cutti/">Discover CuTTI</a></div>
         </article>
         <article class="glass flagship">
-          <span class="flagship__tag">Private preview</span>
+          <span class="flagship__tag flagship__tag--live">Beta · Free for Mac</span>
           <h3 class="flagship__name">CuTTI Score</h3>
-          <p class="flagship__line">Printed music, made editable.</p>
-          <p>A musician-centred workflow that turns printed scores, scans and photographs into editable notation, with MusicXML, MIDI, PDF and audio export.</p>
-          <div class="btn-row"><a class="btn btn--secondary" href="/contact/?intent=media">Ask about the preview</a></div>
+          <p class="flagship__line">From printed page to playable, editable score.</p>
+          <p>CuTTI Score reads sheet music from PDFs, scans, phone photos and screenshots, and turns it into a score you can correct, hear with real instrument sounds, and open in Dorico, Sibelius, Finale or MuseScore. Everything runs on your Mac.</p>
+          <div class="btn-row"><a class="btn btn--primary" href="/products/cutti-score/#beta">Join the beta</a><a class="btn btn--secondary" href="/products/cutti-score/">Discover CuTTI Score</a></div>
         </article>
       </div>
     </div>
@@ -173,9 +173,10 @@ get_header();
     <div class="container">
       <div class="section-mark"><span class="numeral">05</span><p class="eyebrow">Next step</p></div>
       <h2 id="next-title">Spend Your Time on the <span class="key">Music</span>.</h2>
-      <p class="subcopy">Join CuTTI early access for the founding producer price, or write to us about collaborations, licensing and the CuTTI Score preview.</p>
+      <p class="subcopy">Join CuTTI early access for the founding producer price, join the free CuTTI Score beta, or write to us about collaborations and licensing.</p>
       <div class="btn-row">
         <a class="btn btn--primary" href="/products/cutti/#early-access">Join CuTTI early access</a>
+        <a class="btn btn--secondary" href="/products/cutti-score/#beta">Join the CuTTI Score beta</a>
         <a class="btn btn--secondary" href="/contact/?intent=media">Talk to us</a>
       </div>
     </div>

@@ -1,0 +1,40 @@
+/* CuTTI Score (Beta): hero side-by-side reading, four-step row, measured figures. Loads after cutti.css and showcase.css. */
+
+/* Hero visual: the printed original and CuTTI Score's reading, with a confidence map below */
+.score-viz { margin: 0; display: grid; gap: var(--s-3); }
+.score-viz__panes { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--s-3); }
+.score-pane { position: relative; border-radius: 12px; overflow: hidden; border: 1px solid var(--rule); }
+.score-pane svg { display: block; width: 100%; height: auto; }
+.score-pane__label { position: absolute; left: 10px; top: 8px; font: 500 10px/14px var(--font-mono); letter-spacing: .12em; text-transform: uppercase; }
+.score-pane--print { background: #EEE8DA; box-shadow: 0 18px 40px -24px rgba(0, 0, 0, .7); transform: rotate(-1.2deg); }
+.score-pane--print .score-pane__label { color: #5B5446; }
+.score-pane--read { background: #10141B; box-shadow: 0 0 0 1px rgba(212, 168, 67, .18), 0 24px 48px -24px rgba(0, 0, 0, .8); }
+.score-pane--read .score-pane__label { color: #D4A843; }
+.score-conf { display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: center; gap: var(--s-3); padding: 10px 12px; border-radius: 10px; border: 1px solid var(--rule); background: var(--surface); }
+.score-conf__label { font: 500 10px/14px var(--font-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--text-muted); }
+.score-conf__bars { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 4px; }
+.score-conf__bars span { height: 14px; border-radius: 3px; background: #34C77B; opacity: .85; }
+.score-conf__bars .is-check { background: #E7A93A; opacity: 1; box-shadow: 0 0 0 2px rgba(231, 169, 58, .35); }
+.score-viz__cap { font-size: 13px; line-height: 20px; color: var(--text-muted); }
+.score-handoff { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; padding: 0; list-style: none; }
+.score-handoff li { font: 500 11px/16px var(--font-mono); letter-spacing: .06em; padding: 4px 10px; border-radius: 999px; border: 1px solid var(--rule); color: var(--text-muted); }
+
+/* Four steps in one row on wide screens */
+@media (min-width: 700px) { .lp-steps--4 { grid-template-columns: repeat(2, minmax(0, 1fr)); } .lp-steps--4 .lp-step:first-child { grid-column: auto; } }
+@media (min-width: 1024px) { .lp-steps--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); } .lp-steps--4 .lp-step:first-child { grid-column: auto; } }
+
+/* Measured figures */
+.score-figures { margin-top: var(--s-6); }
+.score-figures .stat-cell__num { white-space: nowrap; }
+.score-figures .stat-cell__label { max-width: 26ch; }
+.score-limits { margin-top: var(--s-6); display: grid; gap: var(--s-3); max-width: 70ch; }
+.score-limits p { color: var(--text-muted); }
+.score-limits strong { color: var(--text); }
+
+@media (prefers-reduced-motion: reduce) { .score-pane--print { transform: none; } }
+
+/* Hero balance: the name on one line, more room for the illustration */
+.lp-title__name.score-name { font-size: clamp(48px, 6.4vw, 92px); line-height: .95; white-space: nowrap; display: inline-flex; align-items: center; gap: .18em; }
+.lp-title__name.score-name .badge { font-size: 12px; -webkit-text-fill-color: initial; }
+@media (max-width: 420px) { .lp-title__name.score-name { white-space: normal; flex-wrap: wrap; } }
+@media (min-width: 1024px) { .score-viz { margin-top: var(--s-6); } }

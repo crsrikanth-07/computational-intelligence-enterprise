@@ -165,7 +165,7 @@ get_header();
           </div>
         </article>
       </div>
-      <p class="also">Also from SVLS LABS: CuTTI Score, score recognition and editing for musicians, in private preview.</p>
+      <p class="also">Also from SVLS LABS: <a class="link" href="/products/cutti-score/">CuTTI Score</a>, from printed page to playable, editable score. Now in free beta for Mac.</p>
     </div>
   </section>
 
