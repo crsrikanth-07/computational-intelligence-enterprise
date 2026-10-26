@@ -7,12 +7,12 @@ $GLOBALS['svls_page_head'] = function () { ?>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Contact SVLS LABS | Book a Discovery Call</title>
-<meta name="description" content="Book a discovery call with our ERP, cloud and AI architects, join CuTTI early access, request Value Lens beta access or talk to us about music and media. Replies within one business day.">
+<meta name="description" content="Start an architecture assessment, book a discovery call with an architect, or request Value Lens beta access. Replies within one business day.">
 <link rel="canonical" href="<?php echo esc_url( home_url( '/contact/' ) ); ?>">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="SVLS LABS">
 <meta property="og:title" content="Contact SVLS LABS | Book a Discovery Call">
-<meta property="og:description" content="Book a discovery call with our ERP, cloud and AI architects, join CuTTI early access, request Value Lens beta access or talk to us about music and media. Replies within one business day.">
+<meta property="og:description" content="Start an architecture assessment, book a discovery call with an architect, or request Value Lens beta access. Replies within one business day.">
 <meta property="og:url" content="<?php echo esc_url( home_url( '/contact/' ) ); ?>">
 <meta property="og:image" content="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/og/og-contact.png">
 <meta property="og:image:width" content="1200">
@@ -20,7 +20,7 @@ $GLOBALS['svls_page_head'] = function () { ?>
 <meta property="og:image:alt" content="SVLS LABS lockup and the page title on charcoal.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Contact SVLS LABS | Book a Discovery Call">
-<meta name="twitter:description" content="Book a discovery call with our ERP, cloud and AI architects, join CuTTI early access, request Value Lens beta access or talk to us about music and media. Replies within one business day.">
+<meta name="twitter:description" content="Start an architecture assessment, book a discovery call with an architect, or request Value Lens beta access. Replies within one business day.">
 <meta name="twitter:image" content="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/og/og-contact.png">
 <meta name="theme-color" content="#0E1116" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0E1116" media="(prefers-color-scheme: dark)">
@@ -36,7 +36,7 @@ $GLOBALS['svls_page_head'] = function () { ?>
 <link rel="preload" as="font" type="font/woff2" crossorigin href="https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@800&display=swap">
-<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/tokens.css?v=047f8b8c">
+<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/tokens.css?v=bbbd58a0">
 <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/site.css?v=467fa276">
 <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/pages/contact.css?v=a521a973">
 <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/theme.css?v=95b1acdc">
@@ -48,7 +48,7 @@ $GLOBALS['svls_page_head'] = function () { ?>
   "@type": "ContactPage",
   "name": "Contact SVLS LABS",
   "url": "https://svlslabs.com/contact/",
-  "description": "Book a discovery call with our ERP, cloud and AI architects, join CuTTI early access, request Value Lens beta access or talk to us about music and media. Replies within one business day.",
+  "description": "Start an architecture assessment, book a discovery call with an architect, or request Value Lens beta access. Replies within one business day.",
   "inLanguage": "en",
   "isPartOf": {
     "@type": "WebSite",
@@ -86,7 +86,7 @@ get_header();
       <div class="grid hero__grid">
         <div class="hero__copy col-8">
           <h1 id="hero-title">Talk to an Architect.</h1>
-          <p class="lead">Tell us what you are working on. An architect, not a salesperson, replies within one business day with two or three slots or a written answer.</p>
+          <p class="lead">Tell us about the landscape and the decision in front of you. An architect, not a salesperson, replies within one business day with two or three slots or a written answer.</p>
         </div>
       </div>
     </div>
@@ -120,15 +120,15 @@ get_header();
               <label class="field__label" for="c-intent">I am contacting you about</label>
               <div class="select">
                 <select class="input" id="c-intent" name="intent" required>
-                  <option value="discovery">Discovery call</option>
-                  <option value="sap">Discovery call: ERP</option>
-                  <option value="cloud">Discovery call: Cloud</option>
-                  <option value="ai">AI readiness call: Agentic &amp; Applied AI</option>
+                  <option value="assessment">Architecture assessment</option>
+                  <option value="discovery">Discovery call with an architect</option>
+                  <option value="architecture">Enterprise architecture</option>
+                  <option value="erp">ERP and application modernisation</option>
+                  <option value="integration">Integration and cloud architecture</option>
+                  <option value="ai">AI architecture and governance review</option>
+                  <option value="engineering">Enterprise software engineering</option>
                   <option value="beta">Value Lens beta access</option>
                   <option value="demo">Value Lens demo</option>
-                  <option value="cutti">CuTTI early access</option>
-                  <option value="cutti-score">CuTTI Score beta</option>
-                  <option value="media">Entertainment &amp; Media enquiry</option>
                   <option value="partnership">Partnership: delivery partner capacity</option>
                   <option value="overview">Company overview PDF</option>
                   <option value="checklist">Governed Agent Control Checklist</option>
@@ -142,7 +142,7 @@ get_header();
               <legend>Your role</legend>
               <div class="choices">
                 <label class="choice"><input type="radio" name="role" value="finance" data-required><span>Finance</span></label>
-                <label class="choice"><input type="radio" name="role" value="sap" data-required><span>ERP</span></label>
+                <label class="choice"><input type="radio" name="role" value="erp" data-required><span>ERP</span></label>
                 <label class="choice"><input type="radio" name="role" value="it" data-required><span>IT</span></label>
                 <label class="choice"><input type="radio" name="role" value="other" data-required><span>Other</span></label>
               </div>
@@ -152,7 +152,7 @@ get_header();
               <textarea class="input" id="c-message" name="message" rows="5" placeholder="Landscape, timeline, what good looks like"></textarea>
             </div>
             <div class="form__choices">
-              <label class="choice"><input type="checkbox" name="offer" value="two-week"><span>Start with the two-week discovery (fixed scope, fixed price).</span></label>
+              <label class="choice"><input type="checkbox" name="offer" value="assessment"><span>Start with an Architecture Assessment (fixed scope, fixed price).</span></label>
               <label class="choice"><input type="checkbox" name="notify" value="yes"><span>Notify me when Value Lens leaves beta.</span></label>
             </div>
             <button class="btn btn--primary" type="submit">Send</button>
@@ -167,7 +167,7 @@ get_header();
               <li><span class="numeral">01</span><span>We read it the same day.</span></li>
               <li><span class="numeral">02</span><span>An architect replies within one business day.</span></li>
               <li><span class="numeral">03</span><span>A 45-minute call, no deck required.</span></li>
-              <li><span class="numeral">04</span><span>If it fits, a two-week discovery proposal with a fixed price.</span></li>
+              <li><span class="numeral">04</span><span>If it fits, a fixed-price proposal, usually starting with an Architecture Assessment.</span></li>
             </ol>
             <p class="contact__link"><a class="arrow-link" href="/approach/">How we run engagements<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a></p>
           </div>

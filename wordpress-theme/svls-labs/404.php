@@ -6,12 +6,12 @@ $GLOBALS['svls_page_head'] = function () { ?>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Page Not Found | SVLS LABS</title>
-<meta name="description" content="The page you asked for does not exist. Find CuTTI, Value Lens, Entertainment &amp; Media, Enterprise Software and Contact from here.">
+<meta name="description" content="The page you asked for does not exist. Find our services, the Architecture Assessment, AI governance, products and contact details from here.">
 <link rel="canonical" href="<?php echo esc_url( home_url( '/404.html' ) ); ?>">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="SVLS LABS">
 <meta property="og:title" content="Page Not Found | SVLS LABS">
-<meta property="og:description" content="The page you asked for does not exist. Find CuTTI, Value Lens, Entertainment &amp; Media, Enterprise Software and Contact from here.">
+<meta property="og:description" content="The page you asked for does not exist. Find our services, the Architecture Assessment, AI governance, products and contact details from here.">
 <meta property="og:url" content="<?php echo esc_url( home_url( '/404.html' ) ); ?>">
 <meta property="og:image" content="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/og/og-404.png">
 <meta property="og:image:width" content="1200">
@@ -19,7 +19,7 @@ $GLOBALS['svls_page_head'] = function () { ?>
 <meta property="og:image:alt" content="SVLS LABS lockup and the page title on charcoal.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Page Not Found | SVLS LABS">
-<meta name="twitter:description" content="The page you asked for does not exist. Find CuTTI, Value Lens, Entertainment &amp; Media, Enterprise Software and Contact from here.">
+<meta name="twitter:description" content="The page you asked for does not exist. Find our services, the Architecture Assessment, AI governance, products and contact details from here.">
 <meta name="twitter:image" content="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/og/og-404.png">
 <meta name="theme-color" content="#0E1116" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0E1116" media="(prefers-color-scheme: dark)">
@@ -35,7 +35,7 @@ $GLOBALS['svls_page_head'] = function () { ?>
 <link rel="preload" as="font" type="font/woff2" crossorigin href="https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@800&display=swap">
-<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/tokens.css?v=047f8b8c">
+<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/tokens.css?v=bbbd58a0">
 <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/site.css?v=467fa276">
 <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/pages/legal.css?v=048296db">
 <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/theme.css?v=95b1acdc">
@@ -48,7 +48,7 @@ $GLOBALS['svls_page_head'] = function () { ?>
   "@type": "WebPage",
   "name": "Page Not Found",
   "url": "https://svlslabs.com/404.html",
-  "description": "The page you asked for does not exist. Find CuTTI, Value Lens, Entertainment & Media, Enterprise Software and Contact from here.",
+  "description": "The page you asked for does not exist. Find our services, the Architecture Assessment, AI governance, products and contact details from here.",
   "inLanguage": "en",
   "isPartOf": { "@type": "WebSite", "name": "SVLS LABS", "url": "https://svlslabs.com/" },
   "publisher": { "@type": "Organization", "name": "SVLS LABS", "legalName": "SVLS LABS LLP",
@@ -83,28 +83,28 @@ get_header();
       <nav aria-label="Pages that exist">
         <ul class="hgrid hgrid--3 hgrid--bottom nf__links" role="list">
           <li>
-            <a class="nf__link" href="/products/cutti/">CuTTI<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
-            <span class="nf__desc">One request, a full producer session in Logic Pro. Available January 2027</span>
+            <a class="nf__link" href="/services/">Services<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
+            <span class="nf__desc">Architecture, modernisation, integration, AI and engineering</span>
           </li>
           <li>
-            <a class="nf__link" href="/products/value-lens/">Value Lens (private beta)<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
-            <span class="nf__desc">Margin leak finder for ERP order-to-cash</span>
+            <a class="nf__link" href="/services/assessment/">Architecture Assessment<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
+            <span class="nf__desc">Fixed-scope entry engagement</span>
           </li>
           <li>
-            <a class="nf__link" href="/media/">Entertainment &amp; Media<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
-            <span class="nf__desc">Original music, published fiction and creative tools</span>
+            <a class="nf__link" href="/ai-governance/">AI Governance<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
+            <span class="nf__desc">Seven principles for governed enterprise AI</span>
           </li>
           <li>
-            <a class="nf__link" href="/services/sap/">Enterprise Software<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
-            <span class="nf__desc">ERP programmes, integration and extensions, clean core</span>
+            <a class="nf__link" href="/products/">Products<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
+            <span class="nf__desc">Enterprise software from recurring problems</span>
           </li>
           <li>
-            <a class="nf__link" href="/services/ai/">Agentic &amp; Applied AI<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
-            <span class="nf__desc">Governed agents, applied AI methods, AI-assisted engineering</span>
+            <a class="nf__link" href="/approach/">Approach<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
+            <span class="nf__desc">Discover, architect, engineer, govern, evolve</span>
           </li>
           <li>
             <a class="nf__link" href="/contact/">Contact<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
-            <span class="nf__desc">Talk to us. Replies within one business day.</span>
+            <span class="nf__desc">Talk to an architect. Replies within one business day.</span>
           </li>
         </ul>
       </nav>

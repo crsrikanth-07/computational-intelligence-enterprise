@@ -4,7 +4,7 @@ For anyone producing a page, a post, a slide or a PDF for SVLS LABS. This page g
 
 ## 1. Name and tagline
 
-- Company: **SVLS LABS** (always uppercase in running text and headlines). Legal entity: **SVLS LABS LLP**. Flagship products: **CuTTI** and **Value Lens**. (SAP Intelligence Suite is no longer marketed, October 2026; do not mention it.)
+- Company: **SVLS LABS** (always uppercase in running text and headlines). Legal entity: **SVLS LABS LLP**. Positioning: vendor-neutral enterprise architecture and software engineering (see POSITIONING.md). Product: **Value Lens** (private beta). CuTTI, CuTTI Score, Media and SAP Intelligence Suite are not on the website (October 2026); do not mention them.
 - Tagline, locked, always two sentences with both full stops: **"SAP, Cloud and Governed AI. Engineered to Spec."** Used as the homepage H1, the footer strap, the OG image, LinkedIn and email signatures.
 - Approved secondary lines (never as the homepage H1): "Clean core. Clean cloud. Governed agents." and "Agents explain. Humans decide. SAP stays the system of record."
 - The three practices are **SAP & ERP**, **Cloud** and **Agentic & Applied AI** (client instruction, 2026-09-26: the AI work published on GitHub is broader than agents; "Agentic AI" alone is no longer used as the practice name).

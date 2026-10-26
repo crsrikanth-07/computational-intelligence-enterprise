@@ -1,0 +1,96 @@
+/* Enterprise architecture pages: landscape topology, five-stage method, pillars, deliverables, principles.
+   Restrained: charcoal, white, one accent. Loads after site.css, before theme.css. */
+
+/* Hero topology diagram: systems of record, a governed integration layer, agents and channels above */
+.topology { margin: 0; color: var(--text); }
+.topology svg { display: block; width: 100%; height: auto; }
+.topology .t-node { fill: var(--bg); stroke: var(--rule); stroke-width: 1.2; }
+.topology .t-node--key { stroke: var(--text); }
+.topology .t-layer { fill: var(--surface); stroke: var(--rule); stroke-width: 1; }
+.topology .t-gov { fill: none; stroke: var(--accent); stroke-width: 1.5; }
+.topology .t-link { stroke: var(--text-muted); stroke-width: 1; fill: none; opacity: .55; }
+.topology .t-link--gov { stroke: var(--accent); opacity: .9; }
+.topology .t-dot { fill: var(--accent); }
+.topology .t-label { font: 500 11px/1 var(--font-mono); letter-spacing: .06em; fill: var(--text); }
+.topology .t-label--muted { fill: var(--text-muted); font-size: 9.5px; letter-spacing: .12em; }
+.topology .t-label--accent { fill: var(--accent-text); }
+.topology figcaption { margin-top: var(--s-3); font-size: 13px; line-height: 20px; color: var(--text-muted); }
+.band-dark .topology .t-node { fill: var(--d-bg, #0B0E13); }
+
+/* Five-stage method (Discover, Architect, Engineer, Govern, Evolve) */
+@media (min-width: 1024px) { .method--5 { grid-template-columns: repeat(5, minmax(0, 1fr)); } }
+.method__step .stage-out { margin-top: var(--s-3); font: 500 11px/18px var(--font-mono); letter-spacing: .04em; color: var(--text-muted); }
+
+/* Landscape strip: the system types we work across */
+.landscape { list-style: none; margin: var(--s-6) 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.landscape li { font: 500 12px/18px var(--font-mono); letter-spacing: .04em; padding: 6px 12px; border: 1px solid var(--rule); color: var(--text); background: var(--bg); }
+.band-dark .landscape li { background: transparent; }
+
+/* Statement block */
+.statement { max-width: 30ch; font: 700 clamp(28px, 3.6vw, 44px)/1.12 var(--font-heading); letter-spacing: -.02em; }
+.statement-body { max-width: 62ch; }
+.statement-body p + p { margin-top: var(--s-4); }
+
+/* Pillar rows on the Services overview */
+.pillars { list-style: none; margin: 0; padding: 0; border-bottom: 1px solid var(--rule); }
+.pillar { display: grid; gap: var(--s-4) var(--gap); grid-template-columns: minmax(0, 1fr); padding: var(--s-6) 0; border-top: 1px solid var(--rule); }
+@media (min-width: 900px) { .pillar { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); } }
+.pillar h3 { margin-top: var(--s-2); }
+.pillar__intro { margin-top: var(--s-3); color: var(--text-muted); max-width: 46ch; }
+.pillar .arrow-link { margin-top: var(--s-4); }
+.pillar__list { list-style: none; margin: 0; padding: 0; display: grid; gap: 0 var(--s-6); grid-template-columns: minmax(0, 1fr); align-content: start; }
+@media (min-width: 600px) { .pillar__list { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.pillar__list li { padding: 10px 0; border-bottom: 1px solid var(--rule); font-size: 15px; line-height: 22px; }
+.pillar--entry { background: var(--surface); padding-inline: var(--s-5); margin-inline: calc(var(--s-5) * -1); }
+@media (max-width: 599px) { .pillar--entry { padding-inline: var(--s-4); margin-inline: calc(var(--s-4) * -1); } }
+
+/* Two-column checklists: what we review, what you receive, when this matters */
+.cols-2 { display: grid; gap: var(--s-7) var(--gap); grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 900px) { .cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.ruled-list { list-style: none; margin: var(--s-4) 0 0; padding: 0; border-top: 1px solid var(--rule); }
+.ruled-list li { display: grid; grid-template-columns: 28px minmax(0, 1fr); gap: var(--s-3); padding: 12px 0; border-bottom: 1px solid var(--rule); font-size: 15px; line-height: 23px; }
+.ruled-list li::before { content: ""; width: 8px; height: 8px; margin-top: 8px; border: 1.5px solid var(--accent); }
+.ruled-list strong { display: block; font-weight: 600; }
+.ruled-list span { color: var(--text-muted); }
+.ruled-list--num { counter-reset: rl; }
+.ruled-list--num li::before { counter-increment: rl; content: counter(rl, decimal-leading-zero); width: auto; height: auto; margin-top: 2px; border: 0; font: 500 12px/18px var(--font-mono); color: var(--accent-text); }
+
+/* Principles (AI governance) */
+.principles { list-style: none; margin: 0; padding: 0; counter-reset: pr; border-bottom: 1px solid var(--rule); }
+.principle { display: grid; gap: var(--s-2) var(--gap); grid-template-columns: minmax(0, 1fr); padding: var(--s-5) 0; border-top: 1px solid var(--rule); }
+@media (min-width: 900px) { .principle { grid-template-columns: 64px minmax(0, 5fr) minmax(0, 7fr); align-items: baseline; } }
+.principle::before { counter-increment: pr; content: counter(pr, decimal-leading-zero); font: 500 13px/20px var(--font-mono); color: var(--accent-text); }
+.principle h3 { font-size: var(--fs-h4, 20px); }
+.principle p { color: var(--text-muted); }
+
+/* Governance stack: the layers an agent action passes through */
+.stack { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.stack li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: var(--s-3); align-items: center; padding: 14px 18px; border: 1px solid var(--rule); background: var(--bg); }
+.stack li strong { font: 600 15px/22px var(--font-heading); }
+.stack li span { font: 500 11px/16px var(--font-mono); letter-spacing: .06em; color: var(--text-muted); text-align: right; }
+.stack li.is-gov { border-color: var(--accent); box-shadow: inset 3px 0 0 var(--accent); }
+.band-dark .stack li { background: transparent; }
+
+/* Product origin flow: engagement -> engineering -> product */
+.origin { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--s-4); grid-template-columns: minmax(0, 1fr); counter-reset: og; }
+@media (min-width: 900px) { .origin { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.origin li { position: relative; padding: var(--s-5); border: 1px solid var(--rule); background: var(--bg); }
+.origin li::before { counter-increment: og; content: counter(og, decimal-leading-zero); display: block; font: 500 12px/16px var(--font-mono); color: var(--accent-text); margin-bottom: var(--s-3); }
+.origin h3 { font-size: 18px; line-height: 24px; }
+.origin p { margin-top: var(--s-2); font-size: 15px; line-height: 23px; color: var(--text-muted); }
+@media (min-width: 900px) { .origin li:not(:last-child)::after { content: ""; position: absolute; top: 50%; right: -13px; width: 10px; height: 10px; border-top: 1.5px solid var(--text-muted); border-right: 1.5px solid var(--text-muted); transform: translateY(-50%) rotate(45deg); } }
+
+/* Problem areas (not products) */
+.areas .practice p { color: var(--text-muted); }
+.note-plain { margin-top: var(--s-5); max-width: 70ch; font-size: 14px; line-height: 22px; color: var(--text-muted); }
+
+/* Product card */
+.product-card { display: grid; gap: var(--s-6) var(--gap); grid-template-columns: minmax(0, 1fr); padding: var(--s-6); border: 1px solid var(--rule); background: var(--bg); }
+@media (min-width: 900px) { .product-card { grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); padding: var(--s-7); } }
+.product-card__name { display: flex; align-items: center; gap: var(--s-3); font: 700 clamp(30px, 3.4vw, 40px)/1.1 var(--font-heading); letter-spacing: -.02em; }
+.product-card__line { margin-top: var(--s-3); font-size: 18px; line-height: 28px; }
+.product-card__body { margin-top: var(--s-4); color: var(--text-muted); }
+.product-card .btn-row { margin-top: var(--s-5); }
+
+/* Facts row */
+.facts .stat-cell__label { max-width: 24ch; }

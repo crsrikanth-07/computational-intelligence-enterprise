@@ -40,16 +40,17 @@ async function api(p, opts = {}) {
 // Page plan: slug -> {title, template, parent?, content}. Templates match wordpress-theme/svls-labs/*.php.
 const PLAN = [
   { slug: 'home', title: 'SVLS LABS', template: '', front: true, content: '<!-- Rendered by front-page.php of the SVLS LABS theme -->' },
-  { slug: 'services', title: 'Services', template: '', content: '<p><a href="/services/sap/">SAP &amp; ERP</a> · <a href="/services/cloud/">Cloud</a> · <a href="/services/ai/">Agentic &amp; Applied AI</a></p>' },
-  { slug: 'sap', parent: 'services', title: 'SAP & ERP', template: 'page-services-sap.php' },
-  { slug: 'cloud', parent: 'services', title: 'Cloud', template: 'page-services-cloud.php' },
-  { slug: 'ai', parent: 'services', title: 'Agentic & Applied AI', template: 'page-services-ai.php' },
-  { slug: 'products', title: 'Products', template: '', content: '<p><a href="/products/value-lens/">Value Lens (private beta)</a> · <a href="/products/cutti/">CuTTI</a></p>' },
+  { slug: 'services', title: 'Services', template: 'page-services.php' },
+  { slug: 'architecture', parent: 'services', title: 'Enterprise Architecture', template: 'page-services-architecture.php' },
+  { slug: 'erp', parent: 'services', title: 'ERP and Application Modernisation', template: 'page-services-erp.php' },
+  { slug: 'integration', parent: 'services', title: 'Integration and Cloud', template: 'page-services-integration.php' },
+  { slug: 'ai', parent: 'services', title: 'AI and Agentic Architecture', template: 'page-services-ai.php' },
+  { slug: 'engineering', parent: 'services', title: 'Enterprise Software Engineering', template: 'page-services-engineering.php' },
+  { slug: 'assessment', parent: 'services', title: 'Architecture Assessment', template: 'page-services-assessment.php' },
+  { slug: 'products', title: 'Products', template: 'page-products.php' },
   { slug: 'value-lens', parent: 'products', title: 'Value Lens', template: 'page-products-value-lens.php' },
-  { slug: 'cutti', parent: 'products', title: 'CuTTI', template: 'page-products-cutti.php' },
-  { slug: 'cutti-score', parent: 'products', title: 'CuTTI Score (Beta)', template: 'page-products-cutti-score.php' },
   { slug: 'approach', title: 'Approach', template: 'page-approach.php' },
-  { slug: 'media', title: 'Entertainment & Media', template: 'page-media.php' },
+  { slug: 'ai-governance', title: 'AI Governance', template: 'page-ai-governance.php' },
   { slug: 'about', title: 'About', template: 'page-about.php' },
   { slug: 'contact', title: 'Contact', template: 'page-contact.php' },
   { slug: 'privacy', title: 'Privacy Policy', template: 'page-privacy.php' },
@@ -183,7 +184,7 @@ async function setFrontPage(homeId) {
   catch (e) { warn('Could not set the static front page via REST (' + e.message + '). Set it in Settings -> Reading -> Your homepage displays: A static page -> Homepage: SVLS LABS.'); }
 }
 
-const PUBLIC = ['/', '/services/sap/', '/services/cloud/', '/services/ai/', '/products/value-lens/', '/products/cutti/', '/products/cutti-score/', '/approach/', '/media/', '/about/', '/contact/', '/privacy/', '/terms/'];
+const PUBLIC = ['/', '/services/', '/services/architecture/', '/services/erp/', '/services/integration/', '/services/ai/', '/services/engineering/', '/services/assessment/', '/products/', '/products/value-lens/', '/approach/', '/ai-governance/', '/about/', '/contact/', '/privacy/', '/terms/'];
 async function verify() {
   const urls = [...PUBLIC, `/svls-deploy-check-${Date.now().toString(36)}/`];
   for (const p of urls) {

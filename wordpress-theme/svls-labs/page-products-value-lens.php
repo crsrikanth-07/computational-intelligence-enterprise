@@ -36,7 +36,7 @@ $GLOBALS['svls_page_head'] = function () { ?>
 <link rel="preload" as="font" type="font/woff2" crossorigin href="https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@800&display=swap">
-<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/tokens.css?v=047f8b8c">
+<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/tokens.css?v=bbbd58a0">
 <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/site.css?v=467fa276">
 <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/pages/value-lens.css?v=0bd0b3d8">
 <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/theme.css?v=95b1acdc">
@@ -666,11 +666,11 @@ get_header();
       <div class="section-mark"><span class="numeral">12</span><h2 class="eyebrow" id="also-title">Also from SVLS LABS</h2></div>
       <div class="grid">
         <div class="col-8">
-          <p class="h3 slim-band__line">Our other flagship, CuTTI, builds editable Logic Pro sessions from one request.</p>
-          <p class="slim-band__body">CuTTI leads our Entertainment &amp; Media portfolio and is available to purchase from 1 January 2027.</p>
+          <p class="h3 slim-band__line">Value Lens comes out of our architecture and engineering practice.</p>
+          <p class="slim-band__body">The same control model, deterministic numbers and evidence standard apply to the enterprise systems we architect and build for clients.</p>
         </div>
         <div class="col-4 slim-band__action">
-          <a class="arrow-link" href="/products/cutti/">See CuTTI<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
+          <a class="arrow-link" href="/services/">See our services<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
         </div>
       </div>
     </div>

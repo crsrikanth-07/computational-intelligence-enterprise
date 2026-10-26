@@ -213,3 +213,23 @@ SVLS LABS no longer markets SAP Intelligence Suite. The word "SAP" no longer app
 - WordPress: on the first request after the upload the theme creates the `products/cutti-score` page.
 - To update with each release: the "Where it is today" figures in `products/cutti-score/index.html` (section 05), taken from the release notes.
 - QA: 0 axe violations, 0 console errors and 0 broken links or anchors on the new page and the pages that changed. html-validate is clean and `php -l` is clean.
+
+## Repositioned as a vendor-neutral enterprise architecture company (26 October 2026)
+
+SVLS LABS now presents as a senior, vendor-neutral enterprise architecture and software engineering company. See `POSITIONING.md` for the sitemap, navigation, page structure, visual direction and a before-and-after view.
+
+- **Removed:** CuTTI, CuTTI Score, the Entertainment & Media page, books, music and Logic Pro references, the CuTTI video, images, styles and share images, and the aurora and gold-gradient styling.
+- **New or rewritten pages:**
+  - Home, Services overview, Enterprise Architecture, ERP and Application Modernisation (`/services/erp/`), Integration and Cloud (`/services/integration/`), AI and Agentic Architecture, Enterprise Software Engineering, Architecture Assessment.
+  - AI Governance, Products, Approach, About.
+  - Contact intents are rewritten, and assessment requests are emailed with the subject "Architecture assessment request".
+- **New stylesheet:** `assets/css/pages/enterprise.css`, covering the topology diagram, five-stage method, pillars, ruled lists, principles, governance stack and product card.
+- **WordPress:** on the first request after the upload, the theme does the following (release `2026-10-enterprise`):
+  - renames services/sap to services/erp and services/cloud to services/integration;
+  - creates the architecture, assessment and engineering practice pages and the top-level AI Governance page;
+  - sets the CuTTI, CuTTI Score, LogicPilot, Media and SAP Intelligence Suite pages to draft;
+  - 301-redirects the old URLs.
+- **Also updated:** the company overview PDF (two pages, new positioning), the control diagram labels, the sitemap, the deploy plan, the LinkedIn banner and `LINKEDIN_PAGE.md`.
+- **QA:**
+  - 17 pages with 0 axe violations, 0 console errors and 0 broken links or anchors, and no horizontal overflow at 390 px.
+  - html-validate and `php -l` are clean.

@@ -28,6 +28,7 @@ p{margin:0 0 2.5mm}
 .stat span{font-size:9pt;color:#4B5563}
 ol.steps{margin:0;padding-left:0;list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:5mm}
 ol.steps li{border-top:1px solid #D9DDE3;padding-top:2.5mm;font-size:9.5pt}
+ol.steps.steps5{grid-template-columns:repeat(5,1fr);gap:4mm}
 ol.steps li b{display:block;font:700 10.5pt/1.2 'Inter Tight',Inter,sans-serif;margin-bottom:1mm}
 .status{font-size:9pt;color:#4B5563;border-left:3px solid #B7791F;padding-left:3mm}
 .foot{position:absolute;left:18mm;right:18mm;bottom:10mm;display:flex;justify-content:space-between;font:500 8pt/1 'JetBrains Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:#4B5563;border-top:1px solid #D9DDE3;padding-top:3mm}
@@ -43,44 +44,41 @@ const head = (t) => `<div class="top"><div class="lock">${mark(34,'#101418','#E4
 const foot = (p) => `<div class="foot"><span>SVLS LABS LLP · Hyderabad, India · service@svlslabs.com · +91 8500811119</span><span>svlslabs.com · ${p}</span></div>`;
 const overview = `
 <div class="page">${head('Company overview · 2026')}
-<h1>Innovative Software for Enterprise and Entertainment.</h1>
-<p class="lead">SVLS LABS builds software that does the groundwork and shows its work. Two portfolios, Enterprise Software and Entertainment &amp; Media, and two flagship products: CuTTI and Value Lens. Founded 2020.</p>
-<div class="stats"><div class="stat"><b>2020</b><span>founded. SVLS LABS LLP</span></div><div class="stat"><b>2</b><span>portfolios: Enterprise Software and Entertainment &amp; Media</span></div><div class="stat"><b>2</b><span>flagship products: CuTTI and Value Lens</span></div><div class="stat"><b>25+</b><span>years of ERP delivery experience across our key architects</span></div></div>
-<h2>Two Flagship Products</h2>
-<div class="two">
-<div class="card"><span class="k">Flagship · Entertainment &amp; Media</span><h3>CuTTI</h3><p>One request, a full producer session in Logic Pro. Describe the track; CuTTI builds a real, editable session with Logic's own instruments, checks every step, then mixes and masters it to −14 LUFS. Every track, region and note stays yours to edit.</p><p class="status" style="margin-top:2.5mm">Available to purchase from 1 January 2027. Early access is open: svlslabs.com/products/cutti/</p></div>
-<div class="card"><span class="k">Flagship · Enterprise Software</span><h3>Value Lens</h3><p>Where did we lose money this week that we should not have lost? Value Lens finds margin leakage in ERP order-to-cash. Read-only tools, margin in exact integer cents under a versioned policy, and evidence-backed cases a finance reviewer accepts or dismisses with a reason.</p><p class="status" style="margin-top:2.5mm">Private beta on synthetic ERP-like data. Production ERP connector in development.</p></div>
-</div>
-<h2>Enterprise Software</h2>
+<h1>Architecture for Complex Enterprise Systems.</h1>
+<p class="lead">SVLS LABS is a vendor-neutral enterprise architecture and software engineering company. We help organisations modernise ERP, integration, cloud and AI landscapes through future-state architecture, governed engineering and purpose-built enterprise software. Founded 2020.</p>
+<div class="stats"><div class="stat"><b>2020</b><span>founded. SVLS LABS LLP</span></div><div class="stat"><b>25+</b><span>years of ERP delivery experience across our key architects</span></div><div class="stat"><b>1</b><span>written contract per interface, before code</span></div><div class="stat"><b>2 wks</b><span>focused architecture assessment, fixed scope and price</span></div></div>
+<h2>Six Practices. One Architecture Standard.</h2>
 <div class="cols">
-<div class="card"><span class="k">01 · ERP</span><h3>Clean core from the first transport</h3><p>ERP programmes, integration and extensions from a pattern library, with a written contract per interface and a read-back check after every run.</p></div>
-<div class="card"><span class="k">02 · Cloud</span><h3>Cloud around the core</h3><p>ERP-to-cloud integration, cloud-native services, migrations and landing zones that keep the ledger intact. Every extract reconciled to source totals.</p></div>
-<div class="card"><span class="k">03 · Agentic &amp; Applied AI</span><h3>Governed agents</h3><p>MCP tool catalogs, LangGraph and RAG under a control model where every write is read before, confirmed by a person and verified after. Applied research in Markov and stochastic models, constraint-based generation and optimisation.</p></div>
+<div class="card"><span class="k">01 · Enterprise Architecture</span><h3>Future state you can execute</h3><p>Future-state architecture, technology roadmaps, application portfolio rationalisation, platform architecture, governance and technical due diligence.</p></div>
+<div class="card"><span class="k">02 · ERP Modernisation</span><h3>Modernise the core, keep control</h3><p>Modernisation strategy, legacy and custom-code modernisation, extension rationalisation, upgrade-risk assessment and cloud transition. Clean core by default.</p></div>
+<div class="card"><span class="k">03 · Integration and Cloud</span><h3>Integration you can trust</h3><p>API and event-driven architecture, hybrid and legacy integration, cross-system orchestration, integration governance and cloud architecture.</p></div>
+<div class="card"><span class="k">04 · AI and Agentic Architecture</span><h3>Agents through governed interfaces</h3><p>Enterprise agent architecture, tool and API governance, human-in-the-loop design, deterministic validation, execution governance and audit.</p></div>
+<div class="card"><span class="k">05 · Software Engineering</span><h3>Where standard platforms stop</h3><p>Purpose-built applications, workflow and integration products, decision-support software, internal platforms, modern APIs and cloud-native services.</p></div>
+<div class="card"><span class="k">06 · Architecture Assessment</span><h3>The fixed-scope way to start</h3><p>Current-state architecture, risk register, future-state architecture, modernisation roadmap, priority initiatives and an implementation plan.</p></div>
 </div>
+<p style="margin-top:5mm">We work above individual platforms: ERP, CRM, cloud and data platforms, legacy applications, middleware, custom software, AI agents, APIs and event platforms.</p>
 ${foot('page 1 of 2')}</div>
-<div class="page">${head('Entertainment &amp; Media · How we build')}
-<h2>Entertainment &amp; Media</h2>
-<div class="cols">
-<div class="card"><span class="k">Original Music</span><h3>Composed and produced in-house</h3><p>Songs and scores across pop, cinematic and Indian traditions, produced with the same care we put into software.</p></div>
-<div class="card"><span class="k">Published Fiction</span><h3>Five titles in 2026</h3><p>Novels and story collections, written in-house: svlslabs.com/media/#books</p></div>
-<div class="card"><span class="k">Creative Tools</span><h3>Software we wished we had</h3><p>CuTTI first, and CuTTI Score, now in free beta, for turning printed music into playable, editable scores. Tools that do the groundwork so makers can spend their time on the work.</p></div>
-</div>
-<h2>How We Build</h2>
-<ol class="steps">
-<li><b>01 Specify</b>We write down what done looks like before we build: contracts, policies and acceptance checks.</li>
-<li><b>02 Build</b>Deterministic code for every number, AI where it helps, and a person reviewing what reaches you.</li>
-<li><b>03 Verify</b>Every step is read back and checked. When something cannot be verified, we say so.</li>
-<li><b>04 Hand over</b>What we deliver is yours to edit, own and extend, with the evidence attached.</li>
+<div class="page">${head('Approach, governance and products')}
+<h2>Discover. Architect. Engineer. Govern. Evolve.</h2>
+<ol class="steps steps5">
+<li><b>01 Discover</b>Map systems, workflows, interfaces, dependencies and constraints.</li>
+<li><b>02 Architect</b>Define the future-state architecture and the transition path.</li>
+<li><b>03 Engineer</b>Build integrations, services, applications and controls.</li>
+<li><b>04 Govern</b>Put security, validation, evidence and operational controls in place.</li>
+<li><b>05 Evolve</b>Keep the landscape coherent as business and technology change.</li>
 </ol>
-<h2>The Control Model</h2>
+<h2>Enterprise AI Should Not Bypass Architecture</h2>
 <div class="cols">
-<div class="card"><span class="k">Read before write</span><p>Software reads the current state before it proposes anything.</p></div>
-<div class="card"><span class="k">Confirm to act</span><p>A person reviews and confirms every create and update.</p></div>
-<div class="card"><span class="k">Verify after</span><p>The result is read back after every action and goes into the audit trail.</p></div>
+<div class="card"><span class="k">Governed interfaces</span><p>Agents reach systems through defined tools and APIs with scopes and limits.</p></div>
+<div class="card"><span class="k">Deterministic numbers</span><p>Business calculations in versioned, tested code. The model explains; it does not compute.</p></div>
+<div class="card"><span class="k">Validate, approve, verify</span><p>Checks before execution, approval by risk, independent read-back afterwards, evidence per action.</p></div>
 </div>
+<h2>Products from Recurring Problems</h2>
+<p><b>Value Lens (private beta).</b> Decision support and financial controls over ERP data. Read-only tools, deterministic computation under versioned policies, and evidence-backed cases a reviewer accepts or dismisses. First use case: margin leakage in order-to-cash.</p>
+<p class="status">Private beta on synthetic ERP-like data. Production ERP connector in development.</p>
 <h2>How to Start</h2>
-<p>Join CuTTI early access, request Value Lens beta access, or book a 45-minute discovery call with an architect. Replies within one business day.</p>
-<p><b>service@svlslabs.com · +91 8500811119 · svlslabs.com/contact/</b></p>
+<p>Start with an Architecture Assessment, or book a discovery call with an architect. NDA before discovery. Replies within one business day.</p>
+<p><b>service@svlslabs.com · +91 8500811119 · svlslabs.com/services/assessment/</b></p>
 <p>SVLS LABS LLP, 4th Floor, Aparna Astute, Shaikpet, Door No. 8-1-299/103&amp;104/AA/4F-2, Jubilee Hills, Hyderabad 500008, Telangana, India.</p>
 ${foot('page 2 of 2')}</div>`;
 const checklist = `

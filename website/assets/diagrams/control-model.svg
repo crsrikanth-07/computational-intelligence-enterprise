@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 120" width="960" height="120" role="img" aria-labelledby="control-model-title" font-family="'JetBrains Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="500" letter-spacing="0.06em" text-anchor="middle" fill="currentColor">
-  <title id="control-model-title">Three gates between SAP and SAP: read-before-write, confirm-to-act, verify-after.</title>
+  <title id="control-model-title">Three gates between an agent and a system of record: read-before-write, confirm-to-act, verify-after.</title>
   <rect x="1" y="37" width="94" height="46" fill="none" stroke="currentColor" stroke-width="2"/>
   <rect x="865" y="37" width="94" height="46" fill="none" stroke="currentColor" stroke-width="2"/>
-  <text x="48" y="64">SAP</text>
-  <text x="912" y="64">SAP</text>
+  <text x="48" y="64">AGENT</text>
+  <text x="912" y="64">SYSTEM</text>
   <path d="M96 60h760" fill="none" stroke="currentColor" stroke-width="1.5"/>
   <circle cx="859" cy="60" r="3" fill="var(--svls-accent, #E4432B)"/>
   <g fill="none" stroke="currentColor" stroke-width="2">

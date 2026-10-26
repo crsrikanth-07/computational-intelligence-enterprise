@@ -14,16 +14,19 @@ The theme picks the template from the page's path automatically (`functions.php`
 | URL | WordPress slug | Parent page | Template file | Template dropdown name |
 | --- | --- | --- | --- | --- |
 | `/about/` | `about` | none | `page-about.php` | About SVLS LABS |
-| `/approach/` | `approach` | none | `page-approach.php` | Governed Delivery Approach |
+| `/ai-governance/` | `ai-governance` | none | `page-ai-governance.php` | AI Governance |
+| `/approach/` | `approach` | none | `page-approach.php` | Approach |
 | `/contact/` | `contact` | none | `page-contact.php` | Contact SVLS LABS |
-| `/media/` | `media` | none | `page-media.php` | Entertainment & Media |
 | `/privacy/` | `privacy` | none | `page-privacy.php` | Privacy Policy |
-| `/products/cutti-score/` | `cutti-score` | `products` | `page-products-cutti-score.php` | CuTTI Score (Beta) |
-| `/products/cutti/` | `cutti` | `products` | `page-products-cutti.php` | CuTTI by SVLS LABS |
+| `/products/` | `products` | none | `page-products.php` | Products |
 | `/products/value-lens/` | `value-lens` | `products` | `page-products-value-lens.php` | Value Lens: Margin Leak Finder for ERP Order-to-Cash |
-| `/services/ai/` | `ai` | `services` | `page-services-ai.php` | Governed Agentic & Applied AI for Enterprise Systems |
-| `/services/cloud/` | `cloud` | `services` | `page-services-cloud.php` | Cloud Around the ERP Core |
-| `/services/sap/` | `sap` | `services` | `page-services-sap.php` | ERP Services: Programmes, Integration, Clean Core |
+| `/services/ai/` | `ai` | `services` | `page-services-ai.php` | AI and Agentic Architecture |
+| `/services/architecture/` | `architecture` | `services` | `page-services-architecture.php` | Enterprise Architecture and Future-State Roadmaps |
+| `/services/assessment/` | `assessment` | `services` | `page-services-assessment.php` | Architecture Assessment |
+| `/services/engineering/` | `engineering` | `services` | `page-services-engineering.php` | Enterprise Software Engineering |
+| `/services/erp/` | `erp` | `services` | `page-services-erp.php` | ERP and Application Modernisation |
+| `/services/` | `services` | none | `page-services.php` | Services |
+| `/services/integration/` | `integration` | `services` | `page-services-integration.php` | Integration and Cloud Architecture |
 | `/terms/` | `terms` | none | `page-terms.php` | Terms of Use |
 
 The nested pages need their parent pages to exist first: `services` (title "Services") and `products` (title "Products"). Those two parents render with `page.php` as hub pages (hero plus one card per child, from `svls_hub()` in functions.php); their WordPress content is not shown. Any other leftover page renders with its Divi shortcodes stripped.

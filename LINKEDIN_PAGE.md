@@ -2,55 +2,47 @@
 
 Paste each block into LinkedIn → Admin view → Edit page.
 
-## Tagline (86 of 120 characters)
+## Tagline (93 of 120 characters)
 
-Innovative software for Enterprise and Entertainment. Makers of CuTTI and Value Lens.
+Architecture for complex enterprise systems. ERP modernisation, integration and AI governance.
 
-## Overview / About (about 1,450 of 2,000 characters)
+## Overview / About (about 1,350 of 2,000 characters)
 
-SVLS LABS is an innovative software company. Since 2020 we have built products and systems where two worlds meet: the enterprise, where precision is everything, and entertainment, where feeling is everything.
+SVLS LABS is a vendor-neutral enterprise architecture and software engineering company. We help organisations modernise ERP, integration, cloud and AI landscapes through future-state architecture, governed engineering and purpose-built enterprise software.
 
-We work across two portfolios.
+Large enterprises rarely have a technology problem in isolation. They have overlapping ERP platforms, point-to-point integrations, inconsistent data, custom code, cloud services and, increasingly, AI agents operating across all of it. We help them understand that complexity, define a future-state architecture, modernise in steps that can be verified, and build governed software where standard platforms stop.
 
-ENTERPRISE SOFTWARE
-ERP programmes delivered clean core from the first transport, cloud platforms engineered for scale, and agentic and applied AI that is governed, observable and built to be trusted. Our architects bring more than 25 years of combined ERP delivery experience.
+What we do:
+• Enterprise architecture: future-state architecture, roadmaps, portfolio rationalisation, governance and technical due diligence
+• ERP and application modernisation: strategy, legacy and custom-code modernisation, upgrade risk and cloud transition
+• Integration and cloud: API and event-driven architecture, hybrid integration and integration governance
+• AI and agentic architecture: agents that work through governed interfaces, with validation, approval by risk and audit
+• Enterprise software engineering: purpose-built applications, workflow products and internal platforms
 
-ENTERTAINMENT & MEDIA
-Original music, published fiction and creative tools for people who make things. We compose, we produce and we write, and we build the software we wish we had.
+How we work: discover, architect, engineer, govern, evolve. A written contract before code, a verified result after it runs. Our key architects bring more than 25 years of ERP delivery experience.
 
-Two flagship products:
-
-◆ CuTTI. One request, a full producer session in Logic Pro. Describe the track you want; CuTTI builds a real, editable session with Logic's own instruments, then mixes and masters it. Available to purchase from 1 January 2027. Early access is open.
-
-◆ Value Lens. Finds margin leaking out of ERP order-to-cash, with read-only access, deterministic calculations and an evidence-backed case for every finding that finance can check. Now in private beta.
-
-How we build: we show evidence, not decks. Every step is verified, every claim is measured, and what we hand over is yours to edit, own and extend.
-
-Bring us the spec, or the song you have not written yet.
-
-svlslabs.com
+Start with a fixed-scope Architecture Assessment: svlslabs.com/services/assessment/
 
 ## Page details
 
 - Website: https://svlslabs.com
-- Industry: Software Development
+- Industry: IT Services and IT Consulting (or Software Development)
 - Company size: 2–10 employees (adjust if needed)
 - Type: Partnership (SVLS LABS LLP)
 - Founded: 2020
-- Specialties (LinkedIn allows up to 20): Enterprise Software, ERP, Order-to-Cash Analytics, Cloud Engineering, Agentic AI, Applied AI, Clean Core, Data Products, Music Technology, Logic Pro, AI Music Production, Creative Tools, Original Music, Publishing, Entertainment & Media, Product Engineering
+- Specialties (LinkedIn allows up to 20): Enterprise Architecture, ERP Modernisation, Future-State Architecture, Application Modernisation, Integration Architecture, API Architecture, Event-Driven Architecture, Cloud Architecture, AI Governance, Agentic Architecture, Legacy Modernisation, Clean Core, Enterprise Software Engineering, Architecture Assessment, Technical Due Diligence, Technology Strategy
 
 ## Images
 
 - Banner (1128 × 191, rendered at 2x): `website/assets/social/linkedin-banner.jpg` (upload this one; the PNG is the same image)
 - Logo (400 × 400): `website/assets/social/linkedin-logo-dark.png` (or `linkedin-logo-light.png`)
 
-## Launch post (optional)
+## Announcement post (optional)
 
-A new chapter for SVLS LABS.
+SVLS LABS has a new website, and a clearer focus.
 
-We are an innovative software company with two portfolios, Enterprise Software and Entertainment & Media, and two flagship products:
+We are a vendor-neutral enterprise architecture and software engineering company. We work above individual platforms, across ERP, integration, cloud, data and AI, to help organisations modernise complex landscapes safely.
 
-◆ CuTTI: describe a track and get a full, editable Logic Pro session, mixed and mastered. Available from 1 January 2027; early access is open now.
-◆ Value Lens: finds margin leakage in ERP order-to-cash, with evidence finance can check. Now in private beta.
+Our view on enterprise AI is simple: it should not bypass architecture. Agents should work through governed interfaces, business calculations should stay deterministic, and every action should be validated, approved by risk and verified.
 
-Explore the new svlslabs.com → https://svlslabs.com
+The easiest way to start is a fixed-scope Architecture Assessment: https://svlslabs.com/services/assessment/

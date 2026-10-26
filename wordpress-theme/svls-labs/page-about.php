@@ -6,21 +6,21 @@
 $GLOBALS['svls_page_head'] = function () { ?>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>About SVLS LABS | Innovative Software Since 2020</title>
-<meta name="description" content="SVLS LABS LLP builds software in two portfolios, Enterprise Software and Entertainment & Media, with two flagships: CuTTI and Value Lens. Founded 2020.">
+<title>About SVLS LABS | Enterprise Architecture and Engineering Since 2020</title>
+<meta name="description" content="SVLS LABS LLP is a vendor-neutral enterprise architecture and software engineering company, founded in 2020 and based in Hyderabad, India.">
 <link rel="canonical" href="<?php echo esc_url( home_url( '/about/' ) ); ?>">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="SVLS LABS">
-<meta property="og:title" content="About SVLS LABS | Innovative Software Since 2020">
-<meta property="og:description" content="SVLS LABS LLP builds software in two portfolios, Enterprise Software and Entertainment & Media, with two flagships: CuTTI and Value Lens. Founded 2020.">
+<meta property="og:title" content="About SVLS LABS | Enterprise Architecture and Engineering Since 2020">
+<meta property="og:description" content="SVLS LABS LLP is a vendor-neutral enterprise architecture and software engineering company, founded in 2020 and based in Hyderabad, India.">
 <meta property="og:url" content="<?php echo esc_url( home_url( '/about/' ) ); ?>">
 <meta property="og:image" content="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/og/og-about.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="About SVLS LABS: innovative software for enterprise and entertainment.">
+<meta property="og:image:alt" content="About SVLS LABS: enterprise architecture and engineering since 2020.">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="About SVLS LABS | Innovative Software Since 2020">
-<meta name="twitter:description" content="SVLS LABS LLP builds software in two portfolios, Enterprise Software and Entertainment & Media, with two flagships: CuTTI and Value Lens. Founded 2020.">
+<meta name="twitter:title" content="About SVLS LABS | Enterprise Architecture and Engineering Since 2020">
+<meta name="twitter:description" content="SVLS LABS LLP is a vendor-neutral enterprise architecture and software engineering company, founded in 2020 and based in Hyderabad, India.">
 <meta name="twitter:image" content="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/og/og-about.png">
 <meta name="theme-color" content="#0E1116" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0E1116" media="(prefers-color-scheme: dark)">
@@ -35,12 +35,10 @@ $GLOBALS['svls_page_head'] = function () { ?>
 <link rel="preload" as="font" type="font/woff2" crossorigin href="https://fonts.gstatic.com/s/intertight/v9/NGSwv5HMAFg6IuGlBNMjxLsH8ag.woff2">
 <link rel="preload" as="font" type="font/woff2" crossorigin href="https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@800&display=swap">
-<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/tokens.css?v=047f8b8c">
+<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/tokens.css?v=bbbd58a0">
 <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/site.css?v=467fa276">
+<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/pages/enterprise.css?v=2dd70f11">
 <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/pages/about.css?v=11dbc9a0">
-<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/pages/cutti.css?v=1f42d0a0">
-<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/pages/showcase.css?v=eaa59410">
 <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/theme.css?v=95b1acdc">
 <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/js/site.js?v=540ef525" defer></script>
 <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/js/theme.js?v=1aa957a6" defer></script>
@@ -52,11 +50,12 @@ $GLOBALS['svls_page_head'] = function () { ?>
       "@type": "AboutPage",
       "@id": "https://svlslabs.com/about/#page",
       "url": "https://svlslabs.com/about/",
-      "name": "About SVLS LABS | Innovative Software Since 2020",
-      "description": "Innovative software for enterprise and entertainment. Two flagship products: CuTTI, which builds editable Logic Pro sessions from one request, and Value Lens, a margin leak finder for ERP order-to-cash. Founded 2020.",
+      "name": "About SVLS LABS | Enterprise Architecture and Engineering Since 2020",
+      "description": "SVLS LABS LLP is a vendor-neutral enterprise architecture and software engineering company, founded in 2020 and based in Hyderabad, India.",
       "inLanguage": "en",
-      "about": { "@id": "https://svlslabs.com/#organization" },
-      "mainEntity": { "@id": "https://svlslabs.com/#organization" }
+      "about": {
+        "@id": "https://svlslabs.com/#organization"
+      }
     },
     {
       "@type": "Organization",
@@ -64,12 +63,21 @@ $GLOBALS['svls_page_head'] = function () { ?>
       "name": "SVLS LABS",
       "legalName": "SVLS LABS LLP",
       "telephone": "+91 8500811119",
-      "address": {"@type": "PostalAddress", "streetAddress": "4th Floor, Aparna Astute, Shaikpet, Door No. 8-1-299/103&104/AA/4F-2, Jubilee Hills", "addressLocality": "Hyderabad", "postalCode": "500008", "addressRegion": "Telangana", "addressCountry": "IN"},
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "4th Floor, Aparna Astute, Shaikpet, Door No. 8-1-299/103&104/AA/4F-2, Jubilee Hills",
+        "addressLocality": "Hyderabad",
+        "postalCode": "500008",
+        "addressRegion": "Telangana",
+        "addressCountry": "IN"
+      },
       "url": "https://svlslabs.com/",
       "logo": "<?php echo esc_url( get_template_directory_uri() ); ?>/assets/logo/stacked.svg",
       "foundingDate": "2020",
-      "description": "Innovative software for enterprise and entertainment. Two flagship products: CuTTI, which builds editable Logic Pro sessions from one request, and Value Lens, a margin leak finder for ERP order-to-cash. Founded 2020.",
-      "sameAs": ["https://www.linkedin.com/company/svlslabs/"]
+      "description": "Vendor-neutral enterprise architecture and software engineering: future-state architecture, ERP and application modernisation, integration architecture, AI governance and purpose-built enterprise software. Founded 2020.",
+      "sameAs": [
+        "https://www.linkedin.com/company/svlslabs/"
+      ]
     }
   ]
 }
@@ -79,120 +87,78 @@ get_header();
 ?>
 <main id="main">
 
-  <!-- 01 Hero -->
-  <section class="hero has-grid aurora" aria-labelledby="hero-title">
-    <div class="hero-art hero-art--lite" aria-hidden="true"><svg class="hero-art__mark" viewBox="0 0 64 64" focusable="false"><path d="M4 24V4h20v4H8v16z" fill="currentColor"/><circle cx="32" cy="32" r="13.5" fill="none" stroke="currentColor" stroke-width="5"/><path d="M60 40v20H40v-4h16V40z" fill="var(--svls-accent, #E4432B)"/></svg></div>
+  <section class="hero hero--plain" aria-labelledby="hero-title">
+    <div class="hero-art hero-art--lite" aria-hidden="true">
+      <svg class="hero-art__mark" viewBox="0 0 64 64" focusable="false"><path d="M4 24V4h20v4H8v16z" fill="currentColor"/><circle cx="32" cy="32" r="13.5" fill="none" stroke="currentColor" stroke-width="5"/><path d="M60 40v20H40v-4h16V40z" fill="var(--svls-accent, #E4432B)"/></svg>
+    </div>
     <div class="container">
       <div class="section-mark"><span class="numeral">01</span><p class="eyebrow">About</p></div>
       <div class="grid hero__grid">
         <div class="hero__copy col-9">
-          <h1 id="hero-title">An Innovative Software Company That Would Rather Show You <span class="key">Evidence</span> than a Deck.</h1>
-          <p class="lead">SVLS LABS LLP was founded in 2020. We build software in two portfolios: Enterprise Software, for the ERP systems companies run on, and Entertainment &amp; Media, for people who make music and stories. Two flagship products carry the work: CuTTI and Value Lens.</p>
+          <h1 id="hero-title">An Architecture and Engineering Company for <span class="key">Complex Enterprise Landscapes</span>.</h1>
+          <p class="lead">SVLS LABS LLP was founded in 2020 by enterprise architects with long experience in ERP, integration and enterprise software. We work across vendors and platforms, and we build software where the platforms stop.</p>
           <div class="btn-row">
-            <a class="btn btn--primary" href="/products/cutti/">Discover CuTTI</a>
-            <a class="btn btn--secondary" href="/contact/?intent=discovery">Book an enterprise call</a>
+            <a class="btn btn--primary" href="/services/">Explore our services</a>
+            <a class="btn btn--secondary" href="/contact/">Contact us</a>
           </div>
         </div>
-        <ul class="microlabels hero__rows-a">
-          <li>Founded 2020 · Hyderabad</li>
-          <li>Enterprise Software · Entertainment &amp; Media</li>
-          <li>TOGAF-certified architects · Working composers and writers</li>
-        </ul>
-        <ul class="proof-row hero__rows-b">
-          <li><span class="proof-row__num">2020</span><span class="proof-row__label">founded</span></li>
-          <li><span class="proof-row__num">2</span><span class="proof-row__label">portfolios: Enterprise Software, and Entertainment &amp; Media</span></li>
-          <li><span class="proof-row__num">2</span><span class="proof-row__label">flagship products: CuTTI and Value Lens</span></li>
-        </ul>
       </div>
     </div>
   </section>
 
-  <!-- 02 Story -->
   <section class="section band-surface" id="story" aria-labelledby="story-title">
     <div class="container">
-      <div class="section-mark mb-6"><span class="numeral">02</span><h2 class="eyebrow" id="story-title">The Story Since 2020</h2></div>
-      <div class="grid story" data-reveal>
-        <p class="col-6">We started in 2020 as an enterprise integration team with a narrow ambition: to be the engineers companies keep after go-live, because the work holds. Our key architects brought 25+ years of ERP delivery experience. The first years were integration work: flows built from a pattern library, a written contract per interface and a read-back check after every run.</p>
-        <p class="col-6">From there the work moved into the cloud around the ERP core and into governed agentic AI, where we built the control model that now runs through everything we make: agents act through defined tools, every step is verified, and a person decides. Value Lens, our margin leak finder for order-to-cash, came out of that work.</p>
-      </div>
-      <div class="grid story" data-reveal>
-        <p class="col-6">The same discipline carried into a second portfolio. Our team also composes, produces and writes, and CuTTI is what happens when that practice meets our engineering: a production assistant that builds a real, editable Logic Pro session from one request and checks every step it takes.</p>
-        <p class="col-6">Today SVLS LABS is one company with two portfolios and one standard: software that does the groundwork, shows its work, and leaves the decisions to people.</p>
-      </div>
-      <ul class="microlabels story__strip">
-        <li>2020 · Founded · Enterprise integration</li>
-        <li>Cloud · Governed agentic AI · Value Lens</li>
-        <li>Entertainment &amp; Media · CuTTI · CuTTI Score</li>
-      </ul>
-      <div class="story__today">
-        <p class="story__today-line">Today: <a class="link" href="/products/cutti/">CuTTI</a>, available to purchase from 1 January 2027, and <a class="link" href="/products/value-lens/">Value Lens</a>, in private beta.</p>
+      <div class="section-mark"><span class="numeral">02</span><p class="eyebrow">Why we exist</p></div>
+      <div class="grid mt-5">
+        <div class="col-5"><h2 id="story-title">Landscapes Grow One Decision at a Time.</h2></div>
+        <div class="col-7 statement-body">
+          <p class="lead">An ERP platform, then a second one after an acquisition. Integrations added under deadline. Custom code that outlived its authors. Cloud services, one project at a time. Now AI agents. Each decision made sense when it was taken. Together they are hard to change.</p>
+          <p>We started SVLS LABS to bring architecture discipline to that work: understand the landscape as it is, agree what it should become, and change it in steps that can be verified. Our key architects bring more than 25 years of ERP delivery experience, alongside integration, cloud, software architecture and AI governance.</p>
+          <p>Architecture engagements show us the problems that recur. Engineering solves them. Where a solution repeats, we turn it into a product. Value Lens began that way.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- 03 Values -->
   <section class="section" id="values" aria-labelledby="values-title">
     <div class="container">
-      <div class="section-mark mb-6"><span class="numeral">03</span><h2 class="eyebrow" id="values-title">Values as Working Commitments</h2></div>
-      <div class="principles">
-        <article class="glass principle"><span class="principle__glyph" aria-hidden="true">01</span><h3>Quality</h3><p>Every step is checked against the system it changes, whether that is an ERP ledger or a Logic Pro session. Evidence is a deliverable, not a favour.</p></article>
-        <article class="glass principle"><span class="principle__glyph" aria-hidden="true">02</span><h3>Focus</h3><p>We build where we have practice: enterprise systems, and music and storytelling. We will tell you when a problem is outside what we have shipped.</p></article>
-        <article class="glass principle"><span class="principle__glyph" aria-hidden="true">03</span><h3>Ownership</h3><p>A named lead stays from first conversation to launch. Producers and finance teams keep the final word on what our software produces.</p></article>
+      <div class="section-head" data-reveal>
+        <div class="section-mark"><span class="numeral">03</span><p class="eyebrow">How we work</p></div>
+        <h2 id="values-title">Four Commitments.</h2>
+      </div>
+      <div class="hgrid hgrid--4 hgrid--bottom">
+        <article class="practice offer"><span class="numeral practice__num">01</span><h3>Vendor-Neutral by Design</h3><p class="practice__body">Our recommendations follow your landscape. We are not tied to any platform vendor.</p></article>
+        <article class="practice offer"><span class="numeral practice__num">02</span><h3>Evidence over Assertion</h3><p class="practice__body">Contracts before code, deterministic numbers, and results verified by reading systems back.</p></article>
+        <article class="practice offer"><span class="numeral practice__num">03</span><h3>Senior People on the Work</h3><p class="practice__body">Architects who have delivered in complex landscapes lead every engagement.</p></article>
+        <article class="practice offer"><span class="numeral practice__num">04</span><h3>Built to Be Handed Over</h3><p class="practice__body">Artefacts, documentation and code your teams can own and run.</p></article>
       </div>
     </div>
   </section>
 
-  <!-- 04 Team -->
-  <section class="section band-surface" id="team" aria-labelledby="team-title">
+  <section class="section band-dark" id="landscape" aria-labelledby="landscape-title">
     <div class="container">
-      <div class="section-mark mb-6"><span class="numeral">04</span><h2 class="eyebrow" id="team-title">The Team</h2></div>
-      <div class="grid team">
-        <div class="col-5" data-reveal>
-          <p class="team__body">Small and senior: ERP architects, integration, cloud and AI engineers, alongside composers, producers and writers. TOGAF-certified architects lead enterprise design; working musicians shape the creative products.</p>
-          <ul class="chips team__roles" role="list">
-            <li class="chip">ERP architects</li><li class="chip">Cloud &amp; AI engineers</li><li class="chip">Composers</li><li class="chip">Producers</li><li class="chip">Writers</li>
-          </ul>
-        </div>
-        <div class="col-7 hgrid hgrid--2 hgrid--bottom team__lists">
-          <div class="cred"><h3>Enterprise Practice</h3><p class="cred__body">ERP programmes, integration and extensions, cloud data platforms and governed agents, delivered to a written specification and verified after every run.</p></div>
-          <div class="cred"><h3>Creative Practice</h3><p class="cred__body">Composition from solo piano to symphony, Indian classical traditions, contemporary production, and published fiction. The products are built by people who use them.</p></div>
-        </div>
+      <div class="section-head" data-reveal>
+        <div class="section-mark"><span class="numeral">04</span><p class="eyebrow">What we work across</p></div>
+        <h2 id="landscape-title">The Whole Landscape, Above Individual Platforms.</h2>
+        <p class="subcopy">ERP is often the most important system in the landscape. It is rarely the only one.</p>
       </div>
+      <ul class="landscape" role="list" aria-label="Systems we work across"><li>ERP</li><li>CRM</li><li>Cloud platforms</li><li>Data platforms</li><li>Legacy applications</li><li>Integration middleware</li><li>Custom software</li><li>AI agents</li><li>APIs</li><li>Event platforms</li><li>External systems</li><li>Enterprise workflows</li></ul>
     </div>
   </section>
 
-  <!-- 05 Research and publications -->
-  <section class="section" id="research" aria-labelledby="research-title">
-    <div class="container">
-      <div class="section-mark mb-6"><span class="numeral">05</span><h2 class="eyebrow" id="research-title">Research and Publications</h2></div>
-      <div class="grid research" data-reveal>
-        <div class="col-3">
-          <div class="book">
-            <div class="book__cover" role="img" aria-label="Book: Computational Intelligence for Enterprise Systems: Advanced Optimization Algorithms with Working Prototypes."><span>Computational Intelligence for Enterprise Systems: Advanced Optimization Algorithms with Working Prototypes.</span></div>
-          </div>
-        </div>
-        <div class="col-9 research__copy">
-          <h3>Technical Writing, Open Engineering and Fiction.</h3>
-          <p>Our team authored the technical book <cite>Computational Intelligence for Enterprise Systems: Advanced Optimization Algorithms with Working Prototypes</cite>. It covers supply-chain optimisation with working prototypes: genetic optimisation for supply networks, simulated annealing for transport modes, particle swarm methods for inventory policy and a primer on Markov chains and Monte Carlo methods, closing with a staged deployment blueprint that keeps a human override in place.</p>
-          <p>Our open engineering work includes reference designs for agent-to-agent interoperability, retrieval over enterprise documentation and process models, deterministic integration flow generation, and probabilistic music models built on Markov chains and constraint-based decoding. Our team has also published five works of fiction.</p>
-          <div class="links links--after research__links">
-            <a class="arrow-link" href="/services/ai/#methods">The methods behind the agents<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
-            <a class="arrow-link" href="/media/#books">The books<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 06 Where we are -->
   <section class="section band-surface" id="where" aria-labelledby="where-title">
     <div class="container">
-      <div class="section-mark mb-6"><span class="numeral">06</span><h2 class="eyebrow" id="where-title">Where We Are</h2></div>
+      <div class="section-mark mb-6"><span class="numeral">05</span><h2 class="eyebrow" id="where-title">Where We Are</h2></div>
       <div class="hgrid hgrid--2 hgrid--bottom">
         <div class="place">
           <span class="numeral">01</span>
           <h3>SVLS LABS LLP</h3>
           <p>4th Floor, Aparna Astute<br>Shaikpet, Door No. 8-1-299/103&amp;104/AA/4F-2<br>Jubilee Hills, Hyderabad 500008<br>Telangana, India</p>
+        </div>
+        <div class="place">
+          <span class="numeral">02</span>
+          <h3>Contact</h3>
+          <p><a class="link" href="mailto:service@svlslabs.com">service@svlslabs.com</a><br><a class="link nowrap" href="tel:+918500811119">+91&nbsp;8500811119</a><br>Replies within one business day.</p>
         </div>
       </div>
       <div class="where__after">
@@ -202,15 +168,20 @@ get_header();
     </div>
   </section>
 
-  <!-- 07 Closing -->
-  <section class="section has-grid cta-band finale aurora" id="next-step" aria-labelledby="next-title">
+  <section class="section has-grid cta-band" id="next-step" aria-labelledby="next-title">
     <div class="container">
-      <div class="section-mark"><span class="numeral">07</span><p class="eyebrow">Next step</p></div>
-      <h2 id="next-title">Bring Us the Spec. Or the Song You Have Not Written Yet.</h2>
-      <p class="subcopy">Enterprises: a 45-minute call with an architect, not a salesperson. Producers: join CuTTI early access for the founding price.</p>
+      <div class="section-head" data-reveal>
+        <div class="section-mark"><span class="numeral">06</span><p class="eyebrow">Next step</p></div>
+        <h2 id="next-title">Bring Us the Landscape.</h2>
+        <p class="subcopy">Start with an Architecture Assessment, or a discovery call with an architect.</p>
+      </div>
       <div class="btn-row">
-        <a class="btn btn--primary" href="/contact/?intent=discovery">Book an enterprise call</a>
-        <a class="btn btn--secondary" href="/products/cutti/#early-access">Join CuTTI early access</a>
+        <a class="btn btn--primary" href="/services/assessment/">Start an Architecture Assessment</a>
+        <a class="btn btn--secondary" href="/contact/?intent=discovery">Book a discovery call</a>
+      </div>
+      <p class="trust">A conversation with an architect, not a salesperson. Replies within one business day. NDA before discovery.</p>
+      <div class="cta-links">
+        <a class="arrow-link" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/downloads/svls-labs-capability-overview.pdf">Download the company overview (PDF)<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M0 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle class="arrow-link__pt" cx="9.5" cy="6" r="2.5"/></svg></a>
       </div>
     </div>
   </section>

@@ -28,8 +28,9 @@ function svls_handle_form() {
 		if ( svls_wants_json() ) { wp_send_json( array( 'ok' => false, 'error' => 'name and email are required' ), 400 ); }
 		wp_safe_redirect( add_query_arg( 'sent', '0', wp_get_referer() ? wp_get_referer() : home_url( '/contact/' ) ) ); exit;
 	}
-	$subjects = array( 'beta' => 'Value Lens beta request', 'cutti' => 'CuTTI early access', 'media' => 'Entertainment & Media enquiry', 'cutti-score' => 'CuTTI Score beta request' );
-	$subject  = 'svlslabs.com: ' . ( isset( $subjects[ $form ] ) ? $subjects[ $form ] : 'Contact enquiry' ) . ' from ' . $fields['name'];
+	$subjects = array( 'beta' => 'Value Lens beta request', 'assessment' => 'Architecture assessment request' );
+	$key      = ( 'contact' === $form && isset( $fields['intent'] ) && 'assessment' === $fields['intent'] ) ? 'assessment' : $form;
+	$subject  = 'svlslabs.com: ' . ( isset( $subjects[ $key ] ) ? $subjects[ $key ] : 'Contact enquiry' ) . ' from ' . $fields['name'];
 	$body    = '';
 	foreach ( $fields as $key => $value ) { $body .= ucfirst( str_replace( array( '-', '_' ), ' ', $key ) ) . ': ' . $value . "
 "; }
@@ -47,37 +48,41 @@ add_action( 'admin_post_svls_form', 'svls_handle_form' );
 
 /**
  * Page housekeeping per theme release, run once on the first request after the upload (option svls_pages_version).
- * October 2026: the CuTTI page is published again if a previous release set it to draft (or created under Products),
- * and the top-level Entertainment & Media page (/media/) is created if it does not exist.
- * The SAP Intelligence Suite page is set to draft (no longer marketed; its URL 301s to /products/).
- * The CuTTI Score (Beta) page is created under Products if it does not exist.
+ * October 2026, enterprise architecture repositioning: services/sap becomes services/erp and services/cloud becomes
+ * services/integration (renamed in place; the old URLs 301). The architecture, assessment and engineering practice
+ * pages and the top-level AI Governance page are created if missing. The CuTTI, CuTTI Score, LogicPilot,
+ * Entertainment & Media and SAP Intelligence Suite pages are set to draft (reversible under Pages > Drafts; URLs 301).
  */
 add_action( 'init', function () {
-	$release = '2026-10-cutti-score';
+	$release = '2026-10-enterprise';
 	if ( get_option( 'svls_pages_version' ) === $release || get_transient( 'svls_pages_lock' ) ) { return; }
 	set_transient( 'svls_pages_lock', 1, 60 );
-	$page = get_page_by_path( 'products/cutti' );
-	if ( $page && 'publish' !== $page->post_status ) {
-		wp_update_post( array( 'ID' => $page->ID, 'post_status' => 'publish' ) );
-	} elseif ( ! $page ) {
-		$parent = get_page_by_path( 'products' );
-		if ( $parent ) {
-			wp_insert_post( array( 'post_type' => 'page', 'post_status' => 'publish', 'post_title' => 'CuTTI', 'post_name' => 'cutti', 'post_parent' => $parent->ID,
-				'post_content' => '<!-- Rendered by the products/cutti template of the SVLS LABS theme -->' ) );
+	foreach ( array( 'sap' => array( 'erp', 'ERP and Application Modernisation' ), 'cloud' => array( 'integration', 'Integration and Cloud' ) ) as $old => $new ) {
+		$page = get_page_by_path( 'services/' . $old );
+		if ( $page && ! get_page_by_path( 'services/' . $new[0] ) ) {
+			wp_update_post( array( 'ID' => $page->ID, 'post_name' => $new[0], 'post_title' => $new[1], 'post_status' => 'publish' ) );
 		}
 	}
-	if ( ! get_page_by_path( 'media' ) ) {
-		wp_insert_post( array( 'post_type' => 'page', 'post_status' => 'publish', 'post_title' => 'Entertainment & Media', 'post_name' => 'media',
-			'post_content' => '<!-- Rendered by the media template of the SVLS LABS theme -->' ) );
+	$create = array(
+		array( 'services', 'architecture', 'Enterprise Architecture' ),
+		array( 'services', 'assessment', 'Architecture Assessment' ),
+		array( 'services', 'engineering', 'Enterprise Software Engineering' ),
+		array( 'services', 'erp', 'ERP and Application Modernisation' ),
+		array( 'services', 'integration', 'Integration and Cloud' ),
+		array( '', 'ai-governance', 'AI Governance' ),
+	);
+	foreach ( $create as $c ) {
+		list( $parent_path, $slug, $title ) = $c;
+		$path = $parent_path ? $parent_path . '/' . $slug : $slug;
+		if ( get_page_by_path( $path ) ) { continue; }
+		$parent = $parent_path ? get_page_by_path( $parent_path ) : null;
+		if ( $parent_path && ! $parent ) { continue; }
+		wp_insert_post( array( 'post_type' => 'page', 'post_status' => 'publish', 'post_title' => $title, 'post_name' => $slug, 'post_parent' => $parent ? $parent->ID : 0,
+			'post_content' => '<!-- Rendered by the ' . $path . ' template of the SVLS LABS theme -->' ) );
 	}
-	$products = get_page_by_path( 'products' );
-	if ( $products && ! get_page_by_path( 'products/cutti-score' ) ) {
-		wp_insert_post( array( 'post_type' => 'page', 'post_status' => 'publish', 'post_title' => 'CuTTI Score (Beta)', 'post_name' => 'cutti-score', 'post_parent' => $products->ID,
-			'post_content' => '<!-- Rendered by the products/cutti-score template of the SVLS LABS theme -->' ) );
-	}
-	$suite = get_page_by_path( 'products/sap-intelligence-suite' );
-	if ( $suite && 'publish' === $suite->post_status ) {
-		wp_update_post( array( 'ID' => $suite->ID, 'post_status' => 'draft' ) );
+	foreach ( array( 'products/cutti', 'products/cutti-score', 'products/logicpilot', 'media', 'products/sap-intelligence-suite' ) as $path ) {
+		$page = get_page_by_path( $path );
+		if ( $page && 'publish' === $page->post_status ) { wp_update_post( array( 'ID' => $page->ID, 'post_status' => 'draft' ) ); }
 	}
 	update_option( 'svls_pages_version', $release, false );
 	delete_transient( 'svls_pages_lock' );
@@ -117,7 +122,7 @@ function svls_default_head() { ?>
 <link rel="preload" as="font" type="font/woff2" crossorigin href="https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@800&display=swap">
-<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/tokens.css?v=047f8b8c">
+<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/tokens.css?v=bbbd58a0">
 <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/site.css?v=467fa276">
 <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/theme.css?v=95b1acdc">
 <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/js/site.js?v=540ef525" defer></script>
@@ -159,21 +164,22 @@ Sitemap: " . home_url( '/wp-sitemap.xml' ) . "
 function svls_hub( $slug ) {
 	$hubs = array(
 		'services' => array(
-			'label' => 'Enterprise Software',
-			'lead'  => 'Enterprise Software: ERP at the core, cloud around it and governed AI on top of it, one standard throughout.',
+			'label' => 'Services',
+			'lead'  => 'Architecture, modernisation, integration, AI governance and engineering, held to one standard.',
 			'items' => array(
-				array( 'title' => 'ERP', 'href' => '/services/sap/', 'cta' => 'See the ERP practice', 'body' => 'Programmes, integration and extensions delivered Clean Core, with a written contract per interface and a read-back check after every run.' ),
-				array( 'title' => 'Cloud', 'href' => '/services/cloud/', 'cta' => 'See the Cloud practice', 'body' => 'Contracted extracts to cloud data platforms, reconciled against ERP totals, plus integration, migrations and landing zones that keep the ledger intact.' ),
-				array( 'title' => 'Agentic & Applied AI', 'href' => '/services/ai/', 'cta' => 'See the AI practice', 'body' => 'Governed agents that read before they write, a person who confirms every change, and applied AI methods from optimisation to probabilistic models.' ),
+				array( 'title' => 'Enterprise Architecture', 'href' => '/services/architecture/', 'cta' => 'See the practice', 'body' => 'Future-state architecture, roadmaps, portfolio rationalisation, governance and technical due diligence.' ),
+				array( 'title' => 'ERP and Application Modernisation', 'href' => '/services/erp/', 'cta' => 'See the practice', 'body' => 'Modernisation strategy, legacy and custom-code modernisation, upgrade risk and cloud transition.' ),
+				array( 'title' => 'Integration and Cloud', 'href' => '/services/integration/', 'cta' => 'See the practice', 'body' => 'API and event-driven architecture, hybrid integration, orchestration and integration governance.' ),
+				array( 'title' => 'AI and Agentic Architecture', 'href' => '/services/ai/', 'cta' => 'See the practice', 'body' => 'Enterprise agents through governed interfaces, with validation, approval by risk and audit.' ),
+				array( 'title' => 'Enterprise Software Engineering', 'href' => '/services/engineering/', 'cta' => 'See the practice', 'body' => 'Purpose-built applications, workflow and integration products, internal platforms and APIs.' ),
+				array( 'title' => 'Architecture Assessment', 'href' => '/services/assessment/', 'cta' => 'See the assessment', 'body' => 'A fixed-scope entry engagement ending in a future-state architecture and roadmap.' ),
 			),
 		),
 		'products' => array(
 			'label' => 'Products',
-			'lead'  => 'Two flagship products, one standard of proof: tools that do the groundwork, and people who make the decisions.',
+			'lead'  => 'Enterprise software developed from recurring problems in complex enterprise environments.',
 			'items' => array(
-				array( 'title' => 'CuTTI (flagship)', 'href' => '/products/cutti/', 'cta' => 'See CuTTI', 'body' => 'One request, a full producer session in Logic Pro: built-in instruments, every step verified, mixed and mastered. Available to purchase from 1 January 2027.' ),
-				array( 'title' => 'Value Lens (flagship)', 'href' => '/products/value-lens/', 'cta' => 'See Value Lens', 'body' => 'The margin leak finder for ERP order-to-cash. Numbers from deterministic code, every case evidenced, finance decides. Private beta.' ),
-				array( 'title' => 'CuTTI Score (beta)', 'href' => '/products/cutti-score/', 'cta' => 'See CuTTI Score', 'body' => 'From printed page to playable, editable score: reads PDFs, scans, photos and screenshots, plays them back and opens them in your notation program. Free beta for Mac.' ),
+				array( 'title' => 'Value Lens (private beta)', 'href' => '/products/value-lens/', 'cta' => 'See Value Lens', 'body' => 'Decision support and financial controls over ERP data, with deterministic numbers and evidence per case.' ),
 			),
 		),
 	);
@@ -198,8 +204,13 @@ add_action( 'template_redirect', function () {
 		'privacy-policy-2'          => '/privacy/',
 		'terms-and-conditions'      => '/terms/',
 		'our-products-and-services' => '/services/',
-		'products/logicpilot'       => '/products/cutti/', // product renamed LogicPilot -> CuTTI
-		'products/sap-intelligence-suite' => '/products/', // product no longer marketed (October 2026)
+		'services/sap'              => '/services/erp/',         // October 2026: vendor-neutral practice names
+		'services/cloud'            => '/services/integration/',
+		'products/cutti'            => '/products/',             // no longer on this site (October 2026)
+		'products/cutti-score'      => '/products/',
+		'products/logicpilot'       => '/products/',
+		'products/sap-intelligence-suite' => '/products/',
+		'media'                     => '/',
 	);
 	$path = isset( $_SERVER['REQUEST_URI'] ) ? trim( (string) wp_parse_url( $_SERVER['REQUEST_URI'], PHP_URL_PATH ), '/' ) : '';
 	if ( '' !== $path && isset( $map[ $path ] ) ) {
