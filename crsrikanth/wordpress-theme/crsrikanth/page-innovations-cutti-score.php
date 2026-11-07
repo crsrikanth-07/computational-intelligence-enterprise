@@ -18,7 +18,7 @@ $GLOBALS['crs_page_head'] = function () { ?>
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#0B1020">
+<meta name="theme-color" content="#082C36">
 <link rel="icon" href="<?php echo esc_url( get_template_directory_uri() ); ?>/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="<?php echo esc_url( get_template_directory_uri() ); ?>/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="<?php echo esc_url( get_template_directory_uri() ); ?>/apple-touch-icon.png">
@@ -26,7 +26,8 @@ $GLOBALS['crs_page_head'] = function () { ?>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap">
 <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/site.css?v=2e46c672">
-<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/js/site.js?v=dedb0d7a" defer></script>
+<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/themes.css?v=f1af7340">
+<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/js/site.js?v=35babf5c" defer></script>
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -85,7 +86,7 @@ get_header();
 <div class="wrap">
 <div class="product"><div data-reveal><p class="kicker">Three ways in</p><h2 data-mt="18">Scan Score. Photo Score. <em>Audio Score</em>.</h2><p>Scan Score reads PDFs and scanned pages. Photo Score straightens a phone photo of a page and corrects its lighting. Audio Score turns a recording or a live performance into notation. In every case the result is a score that can be reviewed, edited, played and exported.</p></div><figure class="product__visual" data-reveal><svg viewBox="0 0 640 400" role="img" aria-labelledby="sv-t">
   <title id="sv-t">Illustration: a photographed page of music, straightened and read into an editable score, with two uncertain notes marked for review</title>
-  <rect width="640" height="400" fill="#0C0B1F"/>
+  <rect width="640" height="400" fill="#06262E"/>
   <g transform="translate(40 70) rotate(-5)">
     <rect width="230" height="290" rx="4" fill="#E9E1D0"/>
     <g stroke="#3A3428" stroke-opacity=".7"><path d="M18 50H212"/><path d="M18 57H212"/><path d="M18 64H212"/><path d="M18 71H212"/><path d="M18 78H212"/><path d="M18 130H212"/><path d="M18 137H212"/><path d="M18 144H212"/><path d="M18 151H212"/><path d="M18 158H212"/><path d="M18 210H212"/><path d="M18 217H212"/><path d="M18 224H212"/><path d="M18 231H212"/><path d="M18 238H212"/></g>
@@ -93,14 +94,14 @@ get_header();
     <rect width="230" height="290" rx="4" fill="url(#shade)"/>
   </g>
   <defs><linearGradient id="shade" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".28"/></linearGradient>
-  <linearGradient id="beam" x1="0" x2="1"><stop offset="0" stop-color="#9C8CFF" stop-opacity="0"/><stop offset="1" stop-color="#9C8CFF" stop-opacity=".8"/></linearGradient></defs>
-  <path d="M290 200H340" stroke="url(#beam)" stroke-width="2"/><path d="M334 194l8 6-8 6" fill="none" stroke="#9C8CFF" stroke-width="2"/>
+  <linearGradient id="beam" x1="0" x2="1"><stop offset="0" stop-color="#8FE0D3" stop-opacity="0"/><stop offset="1" stop-color="#8FE0D3" stop-opacity=".8"/></linearGradient></defs>
+  <path d="M290 200H340" stroke="url(#beam)" stroke-width="2"/><path d="M334 194l8 6-8 6" fill="none" stroke="#8FE0D3" stroke-width="2"/>
   <g transform="translate(360 60)">
-    <rect width="250" height="290" rx="10" fill="#14122E" stroke="#9C8CFF" stroke-opacity=".35"/>
+    <rect width="250" height="290" rx="10" fill="#0B3440" stroke="#8FE0D3" stroke-opacity=".35"/>
     <g stroke="#F2EBDD" stroke-opacity=".55"><path d="M20 60H230"/><path d="M20 67H230"/><path d="M20 74H230"/><path d="M20 81H230"/><path d="M20 88H230"/><path d="M20 140H230"/><path d="M20 147H230"/><path d="M20 154H230"/><path d="M20 161H230"/><path d="M20 168H230"/><path d="M20 220H230"/><path d="M20 227H230"/><path d="M20 234H230"/><path d="M20 241H230"/><path d="M20 248H230"/></g>
     <g fill="#F2EBDD"><ellipse cx="34" cy="60" rx="4.5" ry="3.2" transform="rotate(-20 34 60)"/><path d="M38 60v-20" stroke="#F2EBDD" stroke-width="1.1"/><ellipse cx="62" cy="70.5" rx="4.5" ry="3.2" transform="rotate(-20 62 70.5)"/><path d="M66 70.5v-20" stroke="#F2EBDD" stroke-width="1.1"/><ellipse cx="90" cy="63.5" rx="4.5" ry="3.2" transform="rotate(-20 90 63.5)"/><path d="M94 63.5v-20" stroke="#F2EBDD" stroke-width="1.1"/><ellipse cx="122" cy="74" rx="4.5" ry="3.2" transform="rotate(-20 122 74)"/><path d="M126 74v-20" stroke="#F2EBDD" stroke-width="1.1"/><ellipse cx="150" cy="67" rx="4.5" ry="3.2" transform="rotate(-20 150 67)"/><path d="M154 67v-20" stroke="#F2EBDD" stroke-width="1.1"/><ellipse cx="178" cy="60" rx="4.5" ry="3.2" transform="rotate(-20 178 60)"/><path d="M182 60v-20" stroke="#F2EBDD" stroke-width="1.1"/><ellipse cx="206" cy="70.5" rx="4.5" ry="3.2" transform="rotate(-20 206 70.5)"/><path d="M210 70.5v-20" stroke="#F2EBDD" stroke-width="1.1"/><ellipse cx="34" cy="143.5" rx="4.5" ry="3.2" transform="rotate(-20 34 143.5)"/><path d="M38 143.5v-20" stroke="#F2EBDD" stroke-width="1.1"/><ellipse cx="62" cy="154" rx="4.5" ry="3.2" transform="rotate(-20 62 154)"/><path d="M66 154v-20" stroke="#F2EBDD" stroke-width="1.1"/><ellipse cx="90" cy="147" rx="4.5" ry="3.2" transform="rotate(-20 90 147)"/><path d="M94 147v-20" stroke="#F2EBDD" stroke-width="1.1"/><ellipse cx="122" cy="140" rx="4.5" ry="3.2" transform="rotate(-20 122 140)"/><path d="M126 140v-20" stroke="#F2EBDD" stroke-width="1.1"/><ellipse cx="150" cy="150.5" rx="4.5" ry="3.2" transform="rotate(-20 150 150.5)"/><path d="M154 150.5v-20" stroke="#F2EBDD" stroke-width="1.1"/><ellipse cx="178" cy="143.5" rx="4.5" ry="3.2" transform="rotate(-20 178 143.5)"/><path d="M182 143.5v-20" stroke="#F2EBDD" stroke-width="1.1"/><ellipse cx="206" cy="154" rx="4.5" ry="3.2" transform="rotate(-20 206 154)"/><path d="M210 154v-20" stroke="#F2EBDD" stroke-width="1.1"/><ellipse cx="34" cy="227" rx="4.5" ry="3.2" transform="rotate(-20 34 227)"/><path d="M38 227v-20" stroke="#F2EBDD" stroke-width="1.1"/><ellipse cx="62" cy="220" rx="4.5" ry="3.2" transform="rotate(-20 62 220)"/><path d="M66 220v-20" stroke="#F2EBDD" stroke-width="1.1"/><ellipse cx="90" cy="230.5" rx="4.5" ry="3.2" transform="rotate(-20 90 230.5)"/><path d="M94 230.5v-20" stroke="#F2EBDD" stroke-width="1.1"/><ellipse cx="122" cy="223.5" rx="4.5" ry="3.2" transform="rotate(-20 122 223.5)"/><path d="M126 223.5v-20" stroke="#F2EBDD" stroke-width="1.1"/><ellipse cx="150" cy="234" rx="4.5" ry="3.2" transform="rotate(-20 150 234)"/><path d="M154 234v-20" stroke="#F2EBDD" stroke-width="1.1"/><ellipse cx="178" cy="227" rx="4.5" ry="3.2" transform="rotate(-20 178 227)"/><path d="M182 227v-20" stroke="#F2EBDD" stroke-width="1.1"/><ellipse cx="206" cy="220" rx="4.5" ry="3.2" transform="rotate(-20 206 220)"/><path d="M210 220v-20" stroke="#F2EBDD" stroke-width="1.1"/></g>
     <g fill="none" stroke="#E7A93A" stroke-width="1.5" stroke-dasharray="3 2"><rect x="111" y="44" width="22" height="34" rx="4"/><rect x="167" y="200" width="22" height="34" rx="4"/></g>
-    <text x="20" y="30" font-family="Inter, sans-serif" font-size="11" letter-spacing="2" fill="#9C8CFF">EDITABLE SCORE</text>
+    <text x="20" y="30" font-family="Inter, sans-serif" font-size="11" letter-spacing="2" fill="#8FE0D3">EDITABLE SCORE</text>
     <text x="20" y="276" font-family="Inter, sans-serif" font-size="10" fill="#E7A93A">2 spots to review</text>
   </g>
   <text x="40" y="40" font-family="Inter, sans-serif" font-size="11" letter-spacing="2" fill="#A49D90">PHONE PHOTO OF A PRINTED PAGE</text>

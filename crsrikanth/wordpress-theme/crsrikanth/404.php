@@ -17,7 +17,7 @@ $GLOBALS['crs_page_head'] = function () { ?>
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#0B1020">
+<meta name="theme-color" content="#082C36">
 <link rel="icon" href="<?php echo esc_url( get_template_directory_uri() ); ?>/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="<?php echo esc_url( get_template_directory_uri() ); ?>/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="<?php echo esc_url( get_template_directory_uri() ); ?>/apple-touch-icon.png">
@@ -25,7 +25,8 @@ $GLOBALS['crs_page_head'] = function () { ?>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap">
 <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/site.css?v=2e46c672">
-<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/js/site.js?v=dedb0d7a" defer></script>
+<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/themes.css?v=f1af7340">
+<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/js/site.js?v=35babf5c" defer></script>
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",

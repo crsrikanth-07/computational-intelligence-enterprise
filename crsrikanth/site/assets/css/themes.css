@@ -1,0 +1,110 @@
+/* Colour themes. The base palette (site.css) is the original midnight theme; each theme below re-colours it.
+   The active theme is set on <html data-theme="...">. Hero artwork colours come from --l1 (gold), --l2 (text),
+   --l3 (technology), --star and --glow, written as "r, g, b". */
+
+/* ---------- Twilight: dusk indigo to plum with a rose and amber horizon ---------- */
+html[data-theme="twilight"] {
+  --ink: #15123A; --night: #1C1847; --night-2: #261D55; --slate: #2C2260; --slate-2: #372A6E;
+  --rule: rgba(255, 236, 224, .14); --rule-2: rgba(255, 236, 224, .26);
+  --ivory: #FFF3EA; --ivory-2: #E2D6E4; --muted: #B4A8C4;
+  --gold: #F4C47E; --gold-2: #DD9E57; --violet: #BBA9FF; --rose: #F59AAE;
+  --l1: 244, 196, 126; --l2: 255, 236, 228; --l3: 245, 154, 174; --star: 255, 236, 228; --glow: 245, 154, 174;
+}
+html[data-theme="twilight"] body { background: var(--night); }
+html[data-theme="twilight"] .hero { background: radial-gradient(60% 55% at 88% 78%, rgba(245, 154, 174, .42), transparent 62%), radial-gradient(55% 45% at 62% 105%, rgba(244, 196, 126, .38), transparent 60%), radial-gradient(70% 60% at 20% 0%, rgba(120, 100, 255, .28), transparent 60%), linear-gradient(180deg, #120F33 0%, #241A55 52%, #452161 100%); }
+html[data-theme="twilight"] .hero__veil { background: linear-gradient(90deg, rgba(18, 15, 51, .8) 0%, rgba(18, 15, 51, .35) 45%, rgba(18, 15, 51, 0) 100%); }
+html[data-theme="twilight"] .phero { background: radial-gradient(70% 90% at 90% 10%, rgba(245, 154, 174, .3), transparent 60%), radial-gradient(60% 70% at 10% 100%, rgba(244, 196, 126, .18), transparent 60%), linear-gradient(180deg, #15123A, #2A1E5A); }
+html[data-theme="twilight"] .phero--violet { background: radial-gradient(70% 90% at 90% 10%, rgba(187, 169, 255, .4), transparent 60%), linear-gradient(180deg, #15123A, #2A1E5A); }
+html[data-theme="twilight"] .section--slate { background: linear-gradient(180deg, #241B52, #2E2160); }
+html[data-theme="twilight"] .section--ink { background: linear-gradient(180deg, #1A1644, #221A50); }
+html[data-theme="twilight"] .site-footer { background: #120F33; }
+html[data-theme="twilight"] .site-header.is-solid { background: rgba(21, 18, 58, .82); }
+html[data-theme="twilight"] .sheet { background: rgba(21, 18, 58, .97); }
+html[data-theme="twilight"] .world--music { background: radial-gradient(120% 80% at 50% 0%, #5A3A26 0%, #2A1A28 65%); }
+html[data-theme="twilight"] .world--tech { background: radial-gradient(120% 90% at 80% 0%, #4B3AA8 0%, #1E1650 65%); }
+html[data-theme="twilight"] .duo__panel--pop { background: radial-gradient(100% 120% at 0% 0%, rgba(244, 196, 126, .26), transparent 60%), var(--slate); }
+html[data-theme="twilight"] .duo__panel--classic { background: radial-gradient(100% 120% at 100% 0%, rgba(245, 154, 174, .22), transparent 60%), var(--slate); }
+html[data-theme="twilight"] .spotlight { background: radial-gradient(120% 120% at 0% 0%, rgba(245, 154, 174, .18), transparent 55%), var(--slate); }
+html[data-theme="twilight"] .input { background: rgba(18, 15, 51, .5); }
+html[data-theme="twilight"] .btn--gold { background: linear-gradient(180deg, #F8D394, #E59A5E); }
+
+/* ---------- Ocean: deep teal and petrol with champagne gold and sea-green ---------- */
+html[data-theme="ocean"] {
+  --ink: #05212A; --night: #082C36; --night-2: #0C3743; --slate: #10424F; --slate-2: #15505F;
+  --rule: rgba(232, 246, 242, .14); --rule-2: rgba(232, 246, 242, .26);
+  --ivory: #EEF7F3; --ivory-2: #C8DDD8; --muted: #94B2AC;
+  --gold: #EACB8A; --gold-2: #CFA75E; --violet: #8FE0D3;
+  --l1: 234, 203, 138; --l2: 238, 247, 243; --l3: 143, 224, 211; --star: 238, 247, 243; --glow: 143, 224, 211;
+}
+html[data-theme="ocean"] body { background: var(--night); }
+html[data-theme="ocean"] .hero { background: radial-gradient(60% 55% at 85% 70%, rgba(143, 224, 211, .3), transparent 62%), radial-gradient(55% 45% at 55% 110%, rgba(234, 203, 138, .25), transparent 60%), linear-gradient(180deg, #04202A 0%, #0A3540 55%, #135462 100%); }
+html[data-theme="ocean"] .hero__veil { background: linear-gradient(90deg, rgba(4, 32, 42, .82) 0%, rgba(4, 32, 42, .35) 45%, rgba(4, 32, 42, 0) 100%); }
+html[data-theme="ocean"] .phero { background: radial-gradient(70% 90% at 90% 10%, rgba(143, 224, 211, .24), transparent 60%), linear-gradient(180deg, #05212A, #0E3E49); }
+html[data-theme="ocean"] .section--slate { background: linear-gradient(180deg, #0C3743, #114552); }
+html[data-theme="ocean"] .section--ink { background: #062833; }
+html[data-theme="ocean"] .site-footer { background: #04202A; }
+html[data-theme="ocean"] .site-header.is-solid { background: rgba(5, 33, 42, .82); }
+html[data-theme="ocean"] .sheet { background: rgba(5, 33, 42, .97); }
+html[data-theme="ocean"] .world--music { background: radial-gradient(120% 80% at 50% 0%, #4A3D1F 0%, #13241F 65%); }
+html[data-theme="ocean"] .world--tech { background: radial-gradient(120% 90% at 80% 0%, #1F6A6A 0%, #06262E 65%); }
+html[data-theme="ocean"] .world--tech .world__label, html[data-theme="ocean"] .world--tech .arrow, html[data-theme="ocean"] .phero--violet .kicker { color: var(--violet); }
+html[data-theme="ocean"] .btn--violet { background: linear-gradient(180deg, #A9EDE3, #5CC2B3); color: #052A2A; }
+html[data-theme="ocean"] .input { background: rgba(4, 32, 42, .5); }
+
+/* ---------- Ivory & Ink: light pages, navy ink, gold; deep navy bands for contrast ---------- */
+html[data-theme="ivory"] {
+  --night: #F7F2E8; --night-2: #F1EADC; --slate: #FFFFFF; --slate-2: #F4EEE2;
+  --rule: rgba(27, 30, 51, .12); --rule-2: rgba(27, 30, 51, .24);
+  --ivory: #1B1E33; --ivory-2: #474A60; --muted: #6E6A63;
+  --gold: #8E6118; --gold-2: #B8863A; --violet: #5B49D6;
+  --l1: 176, 128, 45; --l2: 27, 30, 51; --l3: 91, 73, 214; --star: 27, 30, 51; --glow: 91, 73, 214;
+}
+html[data-theme="ivory"] body { background: var(--night); color: var(--ivory); }
+html[data-theme="ivory"] ::selection { background: rgba(176, 128, 45, .25); color: var(--ivory); }
+html[data-theme="ivory"] .hero { background: radial-gradient(55% 60% at 88% 40%, rgba(91, 73, 214, .14), transparent 62%), radial-gradient(55% 50% at 60% 100%, rgba(184, 134, 58, .18), transparent 60%), linear-gradient(180deg, #FBF8F1 0%, #F3EBDC 100%); }
+html[data-theme="ivory"] .hero__veil { background: linear-gradient(90deg, rgba(251, 248, 241, .92) 0%, rgba(251, 248, 241, .45) 45%, rgba(251, 248, 241, 0) 100%); }
+@media (max-width: 760px) { html[data-theme="ivory"] .hero__veil { background: linear-gradient(180deg, rgba(251, 248, 241, .1) 0%, rgba(251, 248, 241, .8) 55%, rgba(251, 248, 241, .95) 100%); } }
+html[data-theme="ivory"] .hero__name .thin { color: var(--gold-2); }
+html[data-theme="ivory"] .phero { background: radial-gradient(70% 90% at 90% 0%, rgba(184, 134, 58, .16), transparent 60%), linear-gradient(180deg, #FBF8F1, #F3EBDC); }
+html[data-theme="ivory"] .phero--violet { background: radial-gradient(70% 90% at 90% 0%, rgba(91, 73, 214, .16), transparent 60%), linear-gradient(180deg, #FBF8F1, #EFEAF5); }
+html[data-theme="ivory"] .phero--violet .kicker { color: var(--violet); }
+html[data-theme="ivory"] .section--slate { background: var(--night-2); }
+html[data-theme="ivory"] .section--paper { background: #FFFDF8; }
+html[data-theme="ivory"] .site-header.is-solid { background: rgba(251, 248, 241, .86); }
+html[data-theme="ivory"] .sheet { background: rgba(251, 248, 241, .98); }
+html[data-theme="ivory"] .menu-btn { background: rgba(255, 255, 255, .6); }
+html[data-theme="ivory"] .card, html[data-theme="ivory"] .dimension, html[data-theme="ivory"] .spotlight, html[data-theme="ivory"] .playlist, html[data-theme="ivory"] .duo__panel, html[data-theme="ivory"] .metric, html[data-theme="ivory"] .note { background: #FFFFFF; box-shadow: 0 24px 50px -36px rgba(27, 30, 51, .35); }
+html[data-theme="ivory"] .duo__panel--pop { background: radial-gradient(100% 120% at 0% 0%, rgba(184, 134, 58, .16), transparent 60%), #FFFFFF; }
+html[data-theme="ivory"] .duo__panel--classic { background: radial-gradient(100% 120% at 100% 0%, rgba(91, 73, 214, .12), transparent 60%), #FFFFFF; }
+html[data-theme="ivory"] .input { background: #FFFFFF; }
+html[data-theme="ivory"] select.input option { background: #FFFFFF; }
+html[data-theme="ivory"] .btn--ghost { background: rgba(255, 255, 255, .5); }
+html[data-theme="ivory"] .verify--ok { color: #1E7F4F; }
+html[data-theme="ivory"] .verify--rep { color: #8A5A0C; }
+html[data-theme="ivory"] .form__msg.ok { color: #1E7F4F; } html[data-theme="ivory"] .form__msg.err { color: #B3311B; }
+html[data-theme="ivory"] .milestone::before { background: var(--night); }
+/* Deep navy bands and the dark panels keep the original night palette inside them */
+html[data-theme="ivory"] .section--ink, html[data-theme="ivory"] .site-footer, html[data-theme="ivory"] .tech, html[data-theme="ivory"] .world--music, html[data-theme="ivory"] .world--tech {
+  --ink: #0E1530; --night: #121A38; --night-2: #172042; --slate: #1C2650; --slate-2: #232E5C;
+  --rule: rgba(242, 235, 221, .14); --rule-2: rgba(242, 235, 221, .26);
+  --ivory: #F2EBDD; --ivory-2: #D2CBBE; --muted: #A9A398; --gold: #D9B977; --gold-2: #B8954F; --violet: #A99BFF;
+  color: var(--ivory);
+}
+html[data-theme="ivory"] .section--ink { background: linear-gradient(180deg, #121A38, #0E1530); }
+html[data-theme="ivory"] .tech:not(.section--ink):not(.section--slate) { background: #151B3E; }
+html[data-theme="ivory"] .tech.section--slate { background: #1A2147; }
+html[data-theme="ivory"] .site-footer { background: #0E1530; }
+html[data-theme="ivory"] .section--ink .card, html[data-theme="ivory"] .section--ink .spotlight, html[data-theme="ivory"] .tech .card, html[data-theme="ivory"] .tech .note { background: var(--slate); box-shadow: none; }
+html[data-theme="ivory"] .world--words { background: #FFFFFF; border-color: rgba(27, 30, 51, .12); box-shadow: 0 30px 60px -40px rgba(27, 30, 51, .45); }
+
+/* Ocean: technology accents in sea-green instead of violet */
+html[data-theme="ocean"] .feature { background: linear-gradient(180deg, rgba(143, 224, 211, .09), rgba(143, 224, 211, .02)); border-color: rgba(143, 224, 211, .22); }
+html[data-theme="ocean"] .feature p, html[data-theme="ocean"] .world--tech .world__text { color: #CDE6E1; }
+html[data-theme="ocean"] .status { border-color: rgba(143, 224, 211, .4); background: rgba(143, 224, 211, .08); color: #D6F2EC; }
+html[data-theme="ocean"] .status::before { box-shadow: 0 0 0 4px rgba(143, 224, 211, .2); }
+html[data-theme="ocean"] .prompt { background: rgba(4, 32, 42, .7); border-color: rgba(143, 224, 211, .3); color: #D6F2EC; }
+html[data-theme="ocean"] .product__visual { border-color: rgba(143, 224, 211, .25); background: #06262E; box-shadow: 0 50px 80px -50px rgba(143, 224, 211, .4); }
+html[data-theme="ocean"] .product__visual figcaption { border-top-color: rgba(143, 224, 211, .18); }
+html[data-theme="ocean"] .chip--status { border-color: rgba(143, 224, 211, .45); }
+html[data-theme="ocean"] .phero--violet { background: radial-gradient(70% 90% at 90% 10%, rgba(143, 224, 211, .3), transparent 60%), linear-gradient(180deg, #05212A, #0E3E49); }
+html[data-theme="ocean"] .world--words { background: #F2F1E8; }

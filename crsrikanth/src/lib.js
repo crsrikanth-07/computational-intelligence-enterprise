@@ -21,7 +21,7 @@ function head({ title, desc, path, og = 'og-home.jpg', ld = [] }) {
   const url = SITE + path;
   const graph = { '@context': 'https://schema.org', '@graph': [{ '@type': 'WebPage', '@id': url + '#page', url, name: title, description: desc, inLanguage: 'en', about: { '@id': SITE + '/#person' } }, PERSON, ...ld] };
   return `<!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="ocean">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -37,7 +37,7 @@ function head({ title, desc, path, og = 'og-home.jpg', ld = [] }) {
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#0B1020">
+<meta name="theme-color" content="#082C36">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -45,6 +45,7 @@ function head({ title, desc, path, og = 'og-home.jpg', ld = [] }) {
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap">
 <link rel="stylesheet" href="/assets/css/site.css">
+<link rel="stylesheet" href="/assets/css/themes.css">
 <script src="/assets/js/site.js" defer></script>
 <script type="application/ld+json">
 ${JSON.stringify(graph, null, 1)}

@@ -30,7 +30,7 @@ This is the personal website of CR Srikanth: music, books and stories, CuTTI inn
 
 ## Design
 
-- **Colours:** midnight navy and near-black, warm ivory text, muted gold, slate sections, and violet for technology.
+- **Colours:** the Ocean theme by default: deep teal and petrol blue, warm ivory text, champagne gold, and sea-green for technology. Twilight, Ivory & Ink and the original Midnight are also in `site/assets/css/themes.css`; switch by changing `data-theme` in `src/lib.js`.
 - **Type:** Cormorant Garamond for titles and literary text; Inter for the interface.
 - **Hero artwork ("Five Lines"):** five staff lines carry notes, turn into lines of text, then into a sound wave. It is drawn in `site/assets/js/site.js` and stops under reduced motion.
 - **Videos and Spotify players** load only when someone presses play. Nothing autoplays.

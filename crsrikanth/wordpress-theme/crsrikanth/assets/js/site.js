@@ -77,7 +77,13 @@
     var W = 0, H = 0, dpr = 1, t0 = performance.now(), raf = 0, visible = true;
     var stars = [], X0 = 0;
     function U(x) { return Math.max(0, Math.min(1, (x - X0) / Math.max(1, W - X0))); }
-    var GOLD = [210, 178, 111], IVORY = [242, 235, 221], VIOLET = [156, 140, 255];
+    var GOLD = [210, 178, 111], IVORY = [242, 235, 221], VIOLET = [156, 140, 255], STAR = [242, 235, 221], GLOW = [156, 140, 255];
+    // Line colours come from the active theme (--l1 gold, --l2 text, --l3 technology, --star, --glow as "r, g, b")
+    function themeColours() {
+      var cs = getComputedStyle(canvas), rd = function (n, f) { var v = cs.getPropertyValue(n).trim(); if (!v) return f; var a = v.split(',').map(Number); return a.length === 3 && a.every(function (x) { return !isNaN(x); }) ? a : f; };
+      GOLD = rd('--l1', GOLD); IVORY = rd('--l2', IVORY); VIOLET = rd('--l3', VIOLET); STAR = rd('--star', STAR); GLOW = rd('--glow', VIOLET);
+    }
+    var themeTick = 0;
     function mix(a, b, k) { return [a[0] + (b[0] - a[0]) * k, a[1] + (b[1] - a[1]) * k, a[2] + (b[2] - a[2]) * k]; }
     function rgba(c, a) { return 'rgba(' + (c[0] | 0) + ',' + (c[1] | 0) + ',' + (c[2] | 0) + ',' + a + ')'; }
     function ss(a, b, x) { var k = Math.max(0, Math.min(1, (x - a) / (b - a))); return k * k * (3 - 2 * k); }
@@ -112,8 +118,9 @@
       return conv + drift * (1 - z[2] * .6) + wave;
     }
     function draw(t) {
+      if (themeTick++ % 90 === 0) themeColours();
       ctx.clearRect(0, 0, W, H);
-      for (var s = 0; s < stars.length; s++) { var st = stars[s]; var a = .25 + .25 * Math.sin(t * .6 + st[3]); ctx.fillStyle = 'rgba(242,235,221,' + a.toFixed(3) + ')'; ctx.fillRect(st[0], st[1], st[2], st[2]); }
+      for (var s = 0; s < stars.length; s++) { var st = stars[s]; var a = .25 + .25 * Math.sin(t * .6 + st[3]); ctx.fillStyle = rgba(STAR, a.toFixed(3)); ctx.fillRect(st[0], st[1], st[2], st[2]); }
       var mobile = W < 760;
       var cy = mobile ? H * .3 : H * .44, gap = Math.max(10, Math.min(22, H / 34));
       var x0 = mobile ? 0 : W * (variant === 'all' ? .34 : 0), step = 5; X0 = x0;
@@ -155,7 +162,7 @@
       // a soft glow where the wave resolves
       if (variant === 'all' || variant === 'tech') {
         var gx = variant === 'all' ? W * .9 : W * .7, g = ctx.createRadialGradient(gx, cy, 0, gx, cy, gap * 9);
-        g.addColorStop(0, 'rgba(156,140,255,.18)'); g.addColorStop(1, 'rgba(156,140,255,0)'); ctx.fillStyle = g; ctx.fillRect(gx - gap * 9, cy - gap * 9, gap * 18, gap * 18);
+        g.addColorStop(0, rgba(GLOW, .2)); g.addColorStop(1, rgba(GLOW, 0)); ctx.fillStyle = g; ctx.fillRect(gx - gap * 9, cy - gap * 9, gap * 18, gap * 18);
       }
     }
     function frame(now) { raf = 0; if (!visible || d.hidden) return; draw((now - t0) / 1000); raf = w.requestAnimationFrame(frame); }
