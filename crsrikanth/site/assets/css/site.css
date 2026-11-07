@@ -489,3 +489,8 @@ select.input option { background: var(--night); }
 @media (min-width: 980px) { .concert { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 44px; padding: 26px 40px 26px 26px; } }
 .concert h3 { margin-top: 14px; font-size: clamp(28px, 2.8vw, 40px); }
 .concert__body > p:not(.kicker) { margin-top: 12px; color: var(--ivory-2); }
+
+.press__go { display: grid; gap: 10px; justify-items: start; }
+@media (min-width: 860px) { .press__go { justify-items: end; } }
+.press__more { display: flex; flex-wrap: wrap; gap: 6px; }
+@media (min-width: 860px) { .press__more { justify-content: flex-end; max-width: 260px; } }

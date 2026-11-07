@@ -32,7 +32,7 @@ Checked on 7 November 2026 against public sources. **Verified** means the site l
 - **Press**
   - EARMILK (9 May 2025) and Notion (14 May 2025).
   - Interviews: EyeOnPop (5 March 2026) and European Indie Music Network (29 May 2026).
-  - Podcasts: Vigilantes Radio Live! (20 February 2026) and Phantom Electric Ghost (8 March 2026).
+  - Podcasts: Vigilantes Radio Live! (20 February 2026), Phantom Electric Ghost (8 March 2026) and VHC (Vibes, History & Culture) (9 May 2026), each with its other platforms (Spotify, iHeart, Spreaker, YouTube, Podbean). Maniacal Music Musings (5 June 2026) is left out at your request.
 - **Videos:** YouTube videos on your channels, including "Beneath the Last Autumn Moon" (latest release), plus the URI concert recording from URI Music (shown from 0:00 to 13:00).
 - **CuTTI:** text taken from your own description. Both tools are labelled private and in active development.
 
