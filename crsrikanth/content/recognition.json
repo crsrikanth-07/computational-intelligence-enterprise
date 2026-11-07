@@ -23,7 +23,9 @@
    "type": "Concert",
    "title": "Guest Composer, URI Composers’ Concert",
    "text": "Featured guest composer at the Spring 2026 Composers’ Concert of the University of Rhode Island, 8 pm in the URI Fine Arts Center Concert Hall, alongside new works by URI composition students under the guidance of Dr. Eliane Aberdam. Original piano works were performed.",
-   "home": true
+   "home": true,
+   "url": "https://www.youtube.com/watch?v=uRePvqj68_I",
+   "cta": "Watch the concert (URI Music)"
   },
   {
    "date": "Spring 2026",

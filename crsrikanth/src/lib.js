@@ -163,10 +163,22 @@ const playlist = r => `<article class="playlist" data-reveal>
   <div><h3>${esc(r.title)}</h3><p>${r.text}</p>
   <div class="sp-slot"><button class="btn btn--ghost" type="button" data-sp="${r.embed}" data-title="${esc(r.title)}">${PLAY}Play here</button>${chip(r.url, 'Open in Spotify')}</div></div>
 </article>`;
+const concert = v => `<article class="concert" data-reveal>
+  <div class="video__frame">
+    <img src="/assets/img/yt/${v.cover}" alt="" loading="lazy" width="1200" height="630">
+    <button class="video__play" type="button" data-yt="${v.id}" data-start="${v.start || 0}" data-end="${v.end}" data-title="${esc(v.title)}" aria-label="Play ${esc(v.title)}, first 13 minutes (loads YouTube)"><span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 3l12 7-12 7z" fill="currentColor"/></svg></span></button>
+  </div>
+  <div class="concert__body">
+    <p class="kicker">Live in concert</p>
+    <h3>${v.title}</h3>
+    <p>Guest composer at the University of Rhode Island Composers’ Concert on 25 April 2026, in the URI Fine Arts Center Concert Hall. The player opens on the first 13 minutes of the concert recording published by URI Music.</p>
+    <p data-mt="18"><a class="arrow" href="https://www.youtube.com/watch?v=${v.id}" target="_blank" rel="noopener">Watch on YouTube${EXT}${ARROW}</a></p>
+  </div>
+</article>`;
 const video = v => `<article class="video" data-reveal>
   <div class="video__frame">
-    <img src="/assets/img/yt/${v.id}.jpg" alt="" loading="lazy" width="480" height="360">
-    <button class="video__play" type="button" data-yt="${v.id}" data-title="${esc(v.title)}" aria-label="Play ${esc(v.title)} (loads YouTube)"><span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 3l12 7-12 7z" fill="currentColor"/></svg></span></button>
+    <img src="/assets/img/yt/${v.cover || v.id + '.jpg'}" alt="" loading="lazy" width="480" height="360">
+    <button class="video__play" type="button" data-yt="${v.id}"${v.end ? ` data-start="${v.start || 0}" data-end="${v.end}"` : ''} data-title="${esc(v.title)}" aria-label="Play ${esc(v.title)} (loads YouTube)"><span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 3l12 7-12 7z" fill="currentColor"/></svg></span></button>
   </div>
   <h3>${tm(v.title)}</h3>
   ${v.note ? `<p>${v.note}</p>` : ''}
@@ -201,4 +213,4 @@ const milestone = m => `<article class="milestone" data-reveal>
 
 const verify = ok => ok ? '<span class="verify verify--ok">Source linked</span>' : '<span class="verify verify--rep">Artist-reported</span>';
 
-module.exports = { spotlight, playlist, SITE, esc, raw, tm, MONOGRAM, ARROW, EXT, NAV, PERSON, head, header, footer, page, arrow, chip, kicker, phero, release, video, book, bookCover, milestone, verify };
+module.exports = { concert, spotlight, playlist, SITE, esc, raw, tm, MONOGRAM, ARROW, EXT, NAV, PERSON, head, header, footer, page, arrow, chip, kicker, phero, release, video, book, bookCover, milestone, verify };

@@ -25,9 +25,9 @@ $GLOBALS['crs_page_head'] = function () { ?>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap">
-<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/site.css?v=2e46c672">
+<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/site.css?v=82a11b0f">
 <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/themes.css?v=f1af7340">
-<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/js/site.js?v=35babf5c" defer></script>
+<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/js/site.js?v=61a35e3d" defer></script>
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -108,6 +108,7 @@ get_header();
     <span class="milestone__type">Concert</span>
     <h3>Guest Composer, URI Composers’ Concert</h3>
     <p>Featured guest composer at the Spring 2026 Composers’ Concert of the University of Rhode Island, 8 pm in the URI Fine Arts Center Concert Hall, alongside new works by URI composition students under the guidance of Dr. Eliane Aberdam. Original piano works were performed.</p>
+    <a class="arrow" href="https://www.youtube.com/watch?v=uRePvqj68_I" target="_blank" rel="noopener">Watch the concert (URI Music)<span class="visually-hidden"> (opens in a new tab)</span><svg viewBox="0 0 18 18" aria-hidden="true" focusable="false"><path d="M2 9h13M10 4l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a>
 
   </div>
 </article><article class="milestone" data-reveal>

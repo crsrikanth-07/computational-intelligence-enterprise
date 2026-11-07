@@ -1,11 +1,20 @@
 [
  {
+  "id": "IwTvmWp88X4",
+  "title": "Beneath the Last Autumn Moon",
+  "youtubeTitle": "Beneath the Last Autumn Moon | CR Srikanth",
+  "channel": "CR Srikanth",
+  "kind": "classical",
+  "home": true,
+  "note": "Latest release · November 2026"
+ },
+ {
   "id": "xWKkfmGU8po",
   "title": "Hope Symphony, Op. 2: I. Dawn",
   "youtubeTitle": "Op2 (Hope Symphony) | Dawn -Mov1 | Written and Composed by CR Srikanth",
   "channel": "CR Srikanth",
   "kind": "classical",
-  "home": true,
+  "home": false,
   "note": "Video on YouTube"
  },
  {
@@ -88,5 +97,17 @@
   "kind": "interview",
   "home": false,
   "note": "Interview, Phantom Electric Ghost"
+ },
+ {
+  "id": "uRePvqj68_I",
+  "title": "URI Composers’ Concert, Spring 2026",
+  "youtubeTitle": "URI Student Composers",
+  "channel": "URI Music",
+  "kind": "concert",
+  "home": false,
+  "cover": "concert-uri-2026.jpg",
+  "start": 0,
+  "end": 780,
+  "note": "Concert recording published by URI Music · plays 0:00 to 13:00"
  }
 ]

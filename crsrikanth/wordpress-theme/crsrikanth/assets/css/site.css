@@ -483,3 +483,9 @@ select.input option { background: var(--night); }
 .playlist .sp-slot { grid-column: 1 / -1; }
 @media (min-width: 620px) { .playlist .sp-slot { grid-column: auto; } }
 @media (max-width: 440px) { .brand__name { font-size: 16px; letter-spacing: .14em; white-space: nowrap; } .brand svg { width: 32px; height: 32px; } }
+
+/* Concert feature */
+.concert { display: grid; gap: 28px; align-items: center; padding: 22px; border-radius: 26px; border: 1px solid var(--rule); background: radial-gradient(100% 120% at 100% 0%, rgba(210, 178, 111, .14), transparent 55%), var(--slate); }
+@media (min-width: 980px) { .concert { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 44px; padding: 26px 40px 26px 26px; } }
+.concert h3 { margin-top: 14px; font-size: clamp(28px, 2.8vw, 40px); }
+.concert__body > p:not(.kicker) { margin-top: 12px; color: var(--ivory-2); }

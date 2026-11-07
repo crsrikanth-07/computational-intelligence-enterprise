@@ -35,7 +35,8 @@
     var b = e.target.closest && e.target.closest('[data-yt]'); if (!b) return;
     var id = b.getAttribute('data-yt'), title = b.getAttribute('data-title') || 'Video';
     var f = d.createElement('iframe');
-    f.src = 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(id) + '?autoplay=1&rel=0';
+    var st = b.getAttribute('data-start'), en = b.getAttribute('data-end');
+    f.src = 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(id) + '?autoplay=1&rel=0' + (st ? '&start=' + st : '') + (en ? '&end=' + en : '');
     f.title = title; f.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'; f.allowFullscreen = true;
     b.parentNode.replaceChild(f, b); f.focus();
   });

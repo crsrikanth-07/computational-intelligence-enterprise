@@ -25,9 +25,9 @@ $GLOBALS['crs_page_head'] = function () { ?>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap">
-<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/site.css?v=2e46c672">
+<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/site.css?v=82a11b0f">
 <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/themes.css?v=f1af7340">
-<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/js/site.js?v=35babf5c" defer></script>
+<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/js/site.js?v=61a35e3d" defer></script>
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -175,13 +175,32 @@ get_header();
 <section class="section " id="classical" aria-labelledby="cl-title">
 <div class="wrap">
 <div class="head " data-reveal><p class="kicker">Classical &amp; orchestral</p><h2 id="cl-title">Symphonies, Quartets, <em>Fugues</em> and Piano Works.</h2><p class="lead">Selected works, with recordings and published scores. Scores are freely available on IMSLP, the International Music Score Library Project.</p></div>
-<div class="releases"><article class="release" data-reveal>
+<article class="concert" data-reveal>
+  <div class="video__frame">
+    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/yt/concert-uri-2026.jpg" alt="" loading="lazy" width="1200" height="630">
+    <button class="video__play" type="button" data-yt="uRePvqj68_I" data-start="0" data-end="780" data-title="URI Composers’ Concert, Spring 2026" aria-label="Play URI Composers’ Concert, Spring 2026, first 13 minutes (loads YouTube)"><span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 3l12 7-12 7z" fill="currentColor"/></svg></span></button>
+  </div>
+  <div class="concert__body">
+    <p class="kicker">Live in concert</p>
+    <h3>URI Composers’ Concert, Spring 2026</h3>
+    <p>Guest composer at the University of Rhode Island Composers’ Concert on 25 April 2026, in the URI Fine Arts Center Concert Hall. The player opens on the first 13 minutes of the concert recording published by URI Music.</p>
+    <p data-mt="18"><a class="arrow" href="https://www.youtube.com/watch?v=uRePvqj68_I" target="_blank" rel="noopener">Watch on YouTube<span class="visually-hidden"> (opens in a new tab)</span><svg viewBox="0 0 18 18" aria-hidden="true" focusable="false"><path d="M2 9h13M10 4l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a></p>
+  </div>
+</article>
+<div class="releases" data-mt="60"><article class="release" data-reveal>
   <figure><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/art/beneath-the-last-autumn-moon.jpg" alt="Cover artwork for Beneath the Last Autumn Moon" loading="lazy" width="600" height="600"></figure>
   <h3>Beneath the Last Autumn Moon</h3>
   <p>Classical single · 2026</p>
   <div class="links"><a class="chip" href="https://open.spotify.com/track/4r30HrrU0EiHIILTZXrQFo" target="_blank" rel="noopener">Spotify<span class="visually-hidden"> (opens in a new tab)</span></a><a class="chip" href="https://music.apple.com/us/album/beneath-the-last-autumn-moon/6830632761?i=6830632762" target="_blank" rel="noopener">Apple Music<span class="visually-hidden"> (opens in a new tab)</span></a></div>
 </article></div>
 <div class="videos" data-mt="60"><article class="video" data-reveal>
+  <div class="video__frame">
+    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/yt/IwTvmWp88X4.jpg" alt="" loading="lazy" width="480" height="360">
+    <button class="video__play" type="button" data-yt="IwTvmWp88X4" data-title="Beneath the Last Autumn Moon" aria-label="Play Beneath the Last Autumn Moon (loads YouTube)"><span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 3l12 7-12 7z" fill="currentColor"/></svg></span></button>
+  </div>
+  <h3>Beneath the Last Autumn Moon</h3>
+  <p>Latest release · November 2026</p>
+</article><article class="video" data-reveal>
   <div class="video__frame">
     <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/yt/xWKkfmGU8po.jpg" alt="" loading="lazy" width="480" height="360">
     <button class="video__play" type="button" data-yt="xWKkfmGU8po" data-title="Hope Symphony, Op. 2: I. Dawn" aria-label="Play Hope Symphony, Op. 2: I. Dawn (loads YouTube)"><span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 3l12 7-12 7z" fill="currentColor"/></svg></span></button>

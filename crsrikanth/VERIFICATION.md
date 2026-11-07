@@ -33,14 +33,14 @@ Checked on 7 November 2026 against public sources. **Verified** means the site l
   - EARMILK (9 May 2025) and Notion (14 May 2025).
   - Interviews: EyeOnPop (5 March 2026) and European Indie Music Network (29 May 2026).
   - Podcasts: Vigilantes Radio Live! (20 February 2026) and Phantom Electric Ghost (8 March 2026).
-- **Videos:** ten YouTube videos on your channels.
+- **Videos:** YouTube videos on your channels, including "Beneath the Last Autumn Moon" (latest release), plus the URI concert recording from URI Music (shown from 0:00 to 13:00).
 - **CuTTI:** text taken from your own description. Both tools are labelled private and in active development.
 
 ## Needs your input before or after launch
 
 | # | Item | Status on the site | What is needed |
 | --- | --- | --- | --- |
-| 1 | URI Composers' Concert, 25 April 2026 | Text milestone, no link | The only public record is the poster on crsrikanth.com, and it includes your photo, so it is not shown. It names no works or performers. Send a URI page, programme or press link, or say if the poster may be linked. |
+| 1 | URI Composers' Concert, 25 April 2026 | **Now verified:** linked to the concert recording on URI Music's YouTube channel ("URI Student Composers"); the site plays 0:00 to 13:00 | Nothing more needed. Optionally, the titles of the piano works performed. |
 | 2 | Spotify Local Pulse, San José, "So Lets Dance" | Artist-reported | A screenshot or record with the date and position. |
 | 3 | College radio chart, PRYZM #756 (25 June 2025, unweighted) | Artist-reported | The chart publisher and a link. PRYZM is not on the streaming services under your name. |
 | 4 | Puls FM Borås, Puls FM Varberg, The Sound Lab, Click Your Radio Hits, MGZC Radio | Listed as artist-reported | Station logs, playlists or posts. |

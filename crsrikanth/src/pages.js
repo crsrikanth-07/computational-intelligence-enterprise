@@ -1,7 +1,7 @@
 // Every page of crsrikanth.com, built from content/*.json.
 const fs = require('fs'), path = require('path');
 const L = require('./lib.js'), ART = require('./art.js');
-const { spotlight, playlist, esc, tm, page, arrow, chip, kicker, phero, release, video, book, milestone, verify, EXT } = L;
+const { concert, spotlight, playlist, esc, tm, page, arrow, chip, kicker, phero, release, video, book, milestone, verify, EXT } = L;
 const C = n => JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'content', n + '.json'), 'utf8'));
 const lit = C('literature'), music = C('music'), rec = C('recognition'), cat = C('catalogue'), vids = C('videos'), inn = C('innovations');
 
@@ -50,6 +50,7 @@ ${section('section--ink', 'listen', `${head('Selected works · Music', 'A Compos
 <div class="spotlights">${music.latest.map(spotlight).join('')}</div>
 <div class="releases" data-mt="60">${music.releases.filter(r => r.featured).slice(0, 4).map(release).join('')}</div>
 <div class="videos" data-mt="60">${vids.filter(v => v.home).map(video).join('')}</div>
+<div data-mt="60">${vids.filter(v => v.kind === 'concert').map(concert).join('')}</div>
 <p data-mt="44">${arrow('/music/', 'All music')}</p>`, 'listen-title')}
 
 ${section('section--paper', 'read', `${head('Selected works · Literature', 'Stories of Memory, Place and the <em>Human Condition</em>.', 'read-title', 'Short fiction published by independent literary magazines, and books from imagined towns, theatres and inherited histories.', 'head--split')}
@@ -82,7 +83,8 @@ ${section('section--ink', 'vs-pop', `${head('VS Pop™ releases', 'Pop Songwriti
 <p class="small muted" data-mt="34">Also on: </p><div class="btn-row" data-mt="12">${platforms}</div>`, 'vs-title')}
 
 ${section('', 'classical', `${head('Classical &amp; orchestral', 'Symphonies, Quartets, <em>Fugues</em> and Piano Works.', 'cl-title', 'Selected works, with recordings and published scores. Scores are freely available on IMSLP, the International Music Score Library Project.')}
-<div class="releases">${music.classicalReleases.map(release).join('')}</div>
+${vids.filter(v => v.kind === 'concert').map(concert).join('')}
+<div class="releases" data-mt="60">${music.classicalReleases.map(release).join('')}</div>
 <div class="videos" data-mt="60">${vids.filter(v => v.kind === 'classical').map(video).join('')}</div>
 <div class="note" data-mt="50"><strong>Published scores.</strong> ${music.imslpNote} <a class="link" href="https://imslp.org/wiki/Category:CR,_Srikanth" target="_blank" rel="noopener">Open the IMSLP catalogue${EXT}</a></div>
 <p data-mt="34">${arrow('/music/compositions/', 'Browse the full classical catalogue')}</p>`, 'cl-title')}
