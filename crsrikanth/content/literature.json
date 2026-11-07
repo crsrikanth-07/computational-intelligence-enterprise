@@ -1,0 +1,123 @@
+{
+ "_note": "Literary works. Every entry was checked against the listed source on 7 Nov 2026. To add a book: copy an entry, put the cover in site/assets/covers/, run the build.",
+ "publications": [
+  {
+   "title": "Wheat for the Living",
+   "outlet": "The Hamilton Stone Review",
+   "issue": "Issue 54 · Spring 2026",
+   "kind": "Short fiction, independently published",
+   "text": "In the small Bulgarian town of Belogradets, Yavor Velev grows up between a family that lives for appearances and one that keeps score, and slowly learns that being useful, or admired, is not the same as being worth something.",
+   "url": "https://www.hamiltonstone.org/hsr54prose.html#srikanth",
+   "issueUrl": "https://hamiltonstone.org/hsr54.html",
+   "verified": true
+  },
+  {
+   "title": "The Attic Record",
+   "outlet": "Half and One",
+   "issue": "Fiction · 10 October 2026",
+   "kind": "Short fiction, independently published",
+   "text": "Lindenfeld, August 1958. Sent to the attic for a tablecloth, a seven-year-old finds an old gramophone and listens alone to Haydn’s “Emperor” Quartet. Decades later, after his mother’s funeral, he learns what that afternoon meant to her.",
+   "url": "https://halfandone.com/the-attic-record/",
+   "credit": "Illustration by Yibeni Tungoe",
+   "verified": true
+  }
+ ],
+ "books": [
+  {
+   "title": "Tales from Bellavere and Lindenfeld",
+   "form": "Short-story collection",
+   "year": 2026,
+   "featured": true,
+   "cover": "tales-from-bellavere-and-lindenfeld.jpg",
+   "synopsis": "Linked stories from two small European towns that appear on no map. Across generations, families pass down loyalties, recipes, music, houses, debts and secrets: a mechanic, a chocolatier, a struggling theatre company, a singing palazzo, and a boy changed by a forgotten gramophone record.",
+   "formats": "Ebook and paperback · published 21 October 2026",
+   "isbns": ["9798237466799 (ebook)", "9798237110791 (paperback)"],
+   "edition": "October 2026 edition; the ebook is distributed through Draft2Digital",
+   "links": [
+    {"label": "Apple Books", "url": "https://books.apple.com/us/book/tales-from-bellavere-and-lindenfeld/id6825566440"},
+    {"label": "Kobo (Rakuten)", "url": "https://books.rakuten.co.jp/rk/4bda3d3d9e7e3014a44c48d51006649b/"},
+    {"label": "Booktopia ebook", "url": "https://www.booktopia.com.au/tales-from-bellavere-and-lindenfeld-cr-srikanth/ebook/9798237466799.html"},
+    {"label": "Booktopia paperback", "url": "https://www.booktopia.com.au/tales-from-bellavere-and-lindenfeld-cr-srikanth/book/9798237110791.html"}
+   ]
+  },
+  {
+   "title": "The Debt of the Fifth Month",
+   "form": "Novella",
+   "year": 2026,
+   "cover": "the-debt-of-the-fifth-month.jpg",
+   "synopsis": "A novella in eleven movements, set in Italy. After the death of their thirteen-year-old son, Matteo and Elena Valli bring nine estranged cousins back to one table, while money they never asked for begins to arrive. A story of grief, faith and family.",
+   "formats": "Ebook · published 18 October 2026",
+   "isbns": ["9798237724912 (ebook)"],
+   "note": "The story begins with the death of a child.",
+   "links": [
+    {"label": "Apple Books", "url": "https://books.apple.com/us/book/the-debt-of-the-fifth-month/id6824237078"},
+    {"label": "Kobo (Rakuten)", "url": "https://books.rakuten.co.jp/rk/eac94829ec6035a08ad3bbd643737418/"},
+    {"label": "Booktopia", "url": "https://www.booktopia.com.au/the-debt-of-the-fifth-month-cr-srikanth/ebook/9798237724912.html"}
+   ]
+  },
+  {
+   "title": "August 18th",
+   "form": "Novel",
+   "year": 2026,
+   "cover": "august-18th.jpg",
+   "synopsis": "A literary thriller narrated from the small Deccan town of Suloor. One violent night, on 18 August 1996, sets off consequences that return on the same date across the following decades.",
+   "formats": "Ebook · published 29 April 2026",
+   "isbns": ["9798235360549 (ebook)"],
+   "links": [
+    {"label": "Apple Books", "url": "https://books.apple.com/us/book/august-18th/id6764650989"},
+    {"label": "Kobo (Rakuten)", "url": "https://books.rakuten.co.jp/rk/9131f9645bad36d98c44387b36789700/"},
+    {"label": "Booktopia", "url": "https://www.booktopia.com.au/august-18th-cr-srikanth/ebook/9798235360549.html"}
+   ]
+  },
+  {
+   "title": "GOTTESGABE: God’s Gift",
+   "form": "Novel",
+   "year": 2026,
+   "cover": "gottesgabe.jpg",
+   "synopsis": "Königswinter, 1923 to 1973. A secret chocolate recipe, passed from a grieving Belgian chocolatier to a German soldier, survives a family factory, betrayal, a killing and eighteen years in prison.",
+   "formats": "Ebook · published 30 April 2026",
+   "links": [
+    {"label": "Kobo (Rakuten)", "url": "https://books.rakuten.co.jp/rk/9024bf465b8034d5afd8c8437077f564/"}
+   ]
+  },
+  {
+   "title": "Kamil &amp; Hassan Drama Company",
+   "form": "Historical novel",
+   "year": 2026,
+   "tone": 2,
+   "synopsis": "Belgium in the 1920s. Two men leave a famous theatre company to found their own troupe, a marketer turns the actors’ fame into a business, and when cinema arrives, a long-silent love and an act of violence change two lives.",
+   "formats": "Ebook · published 9 April 2026",
+   "isbns": ["9798233086236 (ebook)"],
+   "links": [
+    {"label": "Booktopia", "url": "https://www.booktopia.com.au/kamil-hassan-drama-company-cr-srikanth/ebook/9798233086236.html"}
+   ]
+  },
+  {
+   "title": "The House on the Hill Above the River",
+   "form": "Family saga",
+   "year": 2026,
+   "cover": "the-house-on-the-hill-above-the-river.jpg",
+   "synopsis": "A Bulgarian family saga of vanity, sacrifice and awakening, from the town of Belogradets to the Bulgarian parishes of Vienna, about a man caught between two families and his own need for approval.",
+   "formats": "Ebook · published 4 April 2026",
+   "isbns": ["9798233203244 (ebook)"],
+   "links": [
+    {"label": "Kobo (Rakuten)", "url": "https://books.rakuten.co.jp/rk/f7dc0130401e33c5992f3e0965ba8a88/"},
+    {"label": "Booktopia", "url": "https://www.booktopia.com.au/the-house-on-the-hill-above-the-river-cr-srikanth/ebook/9798233203244.html"}
+   ]
+  },
+  {
+   "title": "Ten Tales from Bellavere and Lindelfeld",
+   "form": "Short stories · earlier edition",
+   "year": 2026,
+   "cover": "ten-tales-from-bellavere-and-lindelfeld.jpg",
+   "synopsis": "The first, ten-story paperback from the same two towns, five from each, later expanded as Tales from Bellavere and Lindenfeld. The title is listed as printed.",
+   "formats": "Paperback · published 8 May 2026",
+   "isbns": ["9798235030671 (paperback)"],
+   "earlier": true,
+   "links": [
+    {"label": "Booktopia", "url": "https://www.booktopia.com.au/ten-tales-from-bellavere-and-lindelfeld-cr-srikanth/book/9798235030671.html"},
+    {"label": "AbeBooks", "url": "https://www.abebooks.com/9798235030671/Ten-Tales-Bellavere-Lindelfeld-Paperback/plp"}
+   ]
+  }
+ ]
+}

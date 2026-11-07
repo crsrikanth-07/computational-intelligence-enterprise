@@ -1,0 +1,561 @@
+{
+ "_note": "Music data. Releases, artwork and IMSLP works checked against Apple Music, Spotify, Deezer and IMSLP on 7 Nov 2026. Titles are the published store titles; the (VS Pop™) suffix is shown as the release line.",
+ "vspop": "VS Pop™, short for Very Smooth Pop, is the name CR Srikanth gives to his contemporary songs: smooth melodies and pop songwriting, electronic production, cinematic textures and orchestral colour, drawing on classical, Carnatic and Hindustani influences.",
+ "classical": "Compositions credited to Ravi Chandra Srikanth Cherukupalli: symphonies such as Pi and Hope, string quartets, nocturnes, sonatas, fugues, études, waltzes and symphonic serenades, catalogued by opus number.",
+ "imslpNote": "IMSLP, the International Music Score Library Project, publishes 46 of these works with free scores: symphonies, string quartets, fugues, sonatas, piano, chamber and orchestral works.",
+ "playlistNote": "The artist reports more than 1,000 playlist placements for the VS Pop™ catalogue across several streaming platforms combined; this is not a Spotify-only figure. Public Spotify snapshot, 7 November 2026: 5,163 monthly listeners.",
+ "platforms": [
+  {
+   "label": "Spotify",
+   "url": "https://open.spotify.com/artist/16N9BJJPufgA3rnpQ06iSa"
+  },
+  {
+   "label": "Apple Music",
+   "url": "https://music.apple.com/us/artist/cr-srikanth/1763874820"
+  },
+  {
+   "label": "YouTube",
+   "url": "https://www.youtube.com/@CRSrikanthSymphonicResonance"
+  },
+  {
+   "label": "Bandcamp",
+   "url": "https://crsrikanthsymphoicresonance.bandcamp.com/"
+  },
+  {
+   "label": "SoundCloud",
+   "url": "https://soundcloud.com/srikanth-rc-cherukupalli"
+  },
+  {
+   "label": "IMSLP",
+   "url": "https://imslp.org/wiki/Category:CR,_Srikanth"
+  }
+ ],
+ "releases": [
+  {
+   "title": "Another Day",
+   "storeTitle": "Another Day(VS Pop™)",
+   "kind": "vspop",
+   "type": "VS Pop™ single",
+   "year": "2026",
+   "date": "2026-09-24",
+   "art": "another-day-vs-pop.jpg",
+   "featured": true,
+   "links": [
+    {
+     "label": "Spotify",
+     "url": "https://open.spotify.com/album/0oT1kdP4ih4TUEbVG0G2Zr"
+    },
+    {
+     "label": "Apple Music",
+     "url": "https://music.apple.com/us/album/another-day-vs-pop-single/6765462074"
+    },
+    {
+     "label": "Deezer",
+     "url": "https://www.deezer.com/album/973199221"
+    }
+   ]
+  },
+  {
+   "title": "You're Gonna Let It Go",
+   "storeTitle": "You're Gonna Let It Go",
+   "kind": "vspop",
+   "type": "VS Pop™ single",
+   "year": "2026",
+   "date": "2026-05-12",
+   "art": "youre-gonna-let-it-go.jpg",
+   "featured": false,
+   "links": [
+    {
+     "label": "Spotify",
+     "url": "https://open.spotify.com/album/0mNJOgDl0UAyFhKdrhx5m2"
+    },
+    {
+     "label": "Apple Music",
+     "url": "https://music.apple.com/us/album/youre-gonna-let-it-go-single/1873343617"
+    },
+    {
+     "label": "Deezer",
+     "url": "https://www.deezer.com/album/909169182"
+    }
+   ]
+  },
+  {
+   "title": "So Lets Dance",
+   "storeTitle": "So Lets Dance(VS Pop™)",
+   "kind": "vspop",
+   "type": "VS Pop™ single",
+   "year": "2025",
+   "date": "2025-12-02",
+   "art": "so-lets-dance-vs-pop.jpg",
+   "featured": true,
+   "links": [
+    {
+     "label": "Spotify",
+     "url": "https://open.spotify.com/album/3wJ7zfeZAWaxCKWt0WI63e"
+    },
+    {
+     "label": "Apple Music",
+     "url": "https://music.apple.com/us/album/so-lets-dance-vs-pop-single/1815713539"
+    },
+    {
+     "label": "Deezer",
+     "url": "https://www.deezer.com/album/760380021"
+    }
+   ]
+  },
+  {
+   "title": "Don't Waste My Time",
+   "storeTitle": "Don't Waste My Time(VS Pop™)",
+   "kind": "vspop",
+   "type": "VS Pop™ single",
+   "year": "2025",
+   "date": "2025-09-02",
+   "art": "dont-waste-my-time-vs-pop.jpg",
+   "featured": false,
+   "links": [
+    {
+     "label": "Spotify",
+     "url": "https://open.spotify.com/album/2AwFh1VFRHctK0XbBxghpy"
+    },
+    {
+     "label": "Apple Music",
+     "url": "https://music.apple.com/us/album/dont-waste-my-time-vs-pop-single/1815713103"
+    },
+    {
+     "label": "Deezer",
+     "url": "https://www.deezer.com/album/760379941"
+    }
+   ]
+  },
+  {
+   "title": "Never Let You Go",
+   "storeTitle": "Never Let You Go(VS Pop™)",
+   "kind": "vspop",
+   "type": "VS Pop™ single",
+   "year": "2025",
+   "date": "2025-06-01",
+   "art": "never-let-you-go-vs-pop.jpg",
+   "featured": false,
+   "links": [
+    {
+     "label": "Spotify",
+     "url": "https://open.spotify.com/album/6TNZlPynk5GYZTWXs1tU3P"
+    },
+    {
+     "label": "Apple Music",
+     "url": "https://music.apple.com/us/album/never-let-you-go-vs-pop-single/1811320158"
+    },
+    {
+     "label": "Deezer",
+     "url": "https://www.deezer.com/album/749267091"
+    }
+   ]
+  },
+  {
+   "title": "Dancing in the Dark",
+   "storeTitle": "Dancing in the Dark - VS Pop™",
+   "kind": "vspop",
+   "type": "VS Pop™ single",
+   "year": "2025",
+   "date": "2025-04-15",
+   "art": "dancing-in-the-dark-vs-pop.jpg",
+   "featured": true,
+   "links": [
+    {
+     "label": "Spotify",
+     "url": "https://open.spotify.com/album/5ETPkooAIgl8lrdCrOJjOR"
+    },
+    {
+     "label": "Apple Music",
+     "url": "https://music.apple.com/us/album/dancing-in-the-dark-vs-pop-single/1798759806"
+    },
+    {
+     "label": "Deezer",
+     "url": "https://www.deezer.com/album/719802411"
+    }
+   ]
+  },
+  {
+   "title": "Distance",
+   "storeTitle": "Distance vs Pop™",
+   "kind": "vspop",
+   "type": "VS Pop™ single",
+   "year": "2025",
+   "date": "2025-03-15",
+   "art": "distance-vs-pop.jpg",
+   "featured": true,
+   "links": [
+    {
+     "label": "Spotify",
+     "url": "https://open.spotify.com/album/4nVE5w3x9f7PH1AELE4drM"
+    },
+    {
+     "label": "Apple Music",
+     "url": "https://music.apple.com/us/album/distance-vs-pop-single/1800024085"
+    },
+    {
+     "label": "Deezer",
+     "url": "https://www.deezer.com/album/722799501"
+    }
+   ]
+  },
+  {
+   "title": "Quarzt",
+   "storeTitle": "Quarzt - VS Pop™",
+   "kind": "vspop",
+   "type": "VS Pop™ single",
+   "year": "2025",
+   "date": "2025-02-14",
+   "art": "quarzt-vs-pop.jpg",
+   "featured": false,
+   "links": [
+    {
+     "label": "Spotify",
+     "url": "https://open.spotify.com/album/1Xwdtdjgo8tmmDEZDZUDQy"
+    },
+    {
+     "label": "Apple Music",
+     "url": "https://music.apple.com/us/album/quarzt-vs-pop-single/1792955388"
+    },
+    {
+     "label": "Deezer",
+     "url": "https://www.deezer.com/album/704782181"
+    }
+   ]
+  },
+  {
+   "title": "Fyuzion",
+   "storeTitle": "Fyuzion (VS Pop™)",
+   "kind": "vspop",
+   "type": "VS Pop™ single · 3 tracks",
+   "year": "2024",
+   "date": "2024-12-30",
+   "art": "fyuzion-vs-pop.jpg",
+   "featured": false,
+   "links": [
+    {
+     "label": "Spotify",
+     "url": "https://open.spotify.com/album/2qZcB9ulperLSh6OdahAPG"
+    },
+    {
+     "label": "Apple Music",
+     "url": "https://music.apple.com/us/album/fyuzion-vs-pop-single/1788368977"
+    },
+    {
+     "label": "Deezer",
+     "url": "https://www.deezer.com/album/692411301"
+    }
+   ]
+  }
+ ],
+ "imslp": [
+  {
+   "title": "Abandoned Station, Op.10 No.26",
+   "url": "https://imslp.org/wiki/Abandoned_Station,_Op.10_No.26_(CR,_Srikanth)",
+   "category": "Orchestral · orchestra · 2024"
+  },
+  {
+   "title": "April Flowers, Op.13 No.2",
+   "url": "https://imslp.org/wiki/April_Flowers,_Op.13_No.2_(CR,_Srikanth)",
+   "category": "Fugue · piano · 2023"
+  },
+  {
+   "title": "Aquamorph, Op.13 No.7",
+   "url": "https://imslp.org/wiki/Aquamorph,_Op.13_No.7_(CR,_Srikanth)",
+   "category": "Fugue · piano · 2025"
+  },
+  {
+   "title": "Ars Fugata, Op.13 No.5",
+   "url": "https://imslp.org/wiki/Ars_Fugata,_Op.13_No.5_(CR,_Srikanth)",
+   "category": "Fugue · clarinet, cello, piano · 2024"
+  },
+  {
+   "title": "Bees Orchestra, Op.10 No.4",
+   "url": "https://imslp.org/wiki/Bees_Orchestra,_Op.10_No.4_(CR,_Srikanth)",
+   "category": "Orchestral · orchestra · 2020"
+  },
+  {
+   "title": "BiPolar Melodies, Op.11 No.21",
+   "url": "https://imslp.org/wiki/BiPolar_Melodies,_Op.11_No.21_(CR,_Srikanth)",
+   "category": "Piano · piano · 2024"
+  },
+  {
+   "title": "Cambios sinfónicos in E major, Op.9 No.7",
+   "url": "https://imslp.org/wiki/Cambios_sinf%C3%B3nicos_in_E_major,_Op.9_No.7_(CR,_Srikanth)",
+   "category": "Sonata · orchestra · 2024"
+  },
+  {
+   "title": "Chiaroscuro, Op.13 No.6",
+   "url": "https://imslp.org/wiki/Chiaroscuro,_Op.13_No.6_(CR,_Srikanth)",
+   "category": "Fugue · cello, piano"
+  },
+  {
+   "title": "Cuna de Vientos, Op.16 No.9",
+   "url": "https://imslp.org/wiki/Cuna_de_Vientos,_Op.16_No.9_(CR,_Srikanth)",
+   "category": "Orchestral · jazz orchestra · 2024"
+  },
+  {
+   "title": "Dawn at Midnight",
+   "url": "https://imslp.org/wiki/Dawn_at_Midnight_(CR,_Srikanth)",
+   "category": "Piano · piano · 2025"
+  },
+  {
+   "title": "Desliza, Op.16 No.12",
+   "url": "https://imslp.org/wiki/Desliza,_Op.16_No.12_(CR,_Srikanth)",
+   "category": "Chamber · mixed ensemble · 2025"
+  },
+  {
+   "title": "Elegy's Harmonic Calculus Fugue in C minor, Op.13 No.3",
+   "url": "https://imslp.org/wiki/Elegy's_Harmonic_Calculus_Fugue_in_C_minor,_Op.13_No.3_(CR,_Srikanth)",
+   "category": "Fugue · strings · 2023"
+  },
+  {
+   "title": "Evanesce, Op.11 No.24",
+   "url": "https://imslp.org/wiki/Evanesce,_Op.11_No.24_(CR,_Srikanth)",
+   "category": "Piano · piano · 2025"
+  },
+  {
+   "title": "Fallen Embers, Op.12 No.11",
+   "url": "https://imslp.org/wiki/Fallen_Embers,_Op.12_No.11_(CR,_Srikanth)",
+   "category": "Chamber · violin, piano · 2024"
+  },
+  {
+   "title": "Hope Symphony, Op.2",
+   "url": "https://imslp.org/wiki/Hope_Symphony,_Op.2_(CR,_Srikanth)",
+   "category": "Symphony · orchestra · 2024"
+  },
+  {
+   "title": "I am a failed musician, Op.16 No.11",
+   "url": "https://imslp.org/wiki/I_am_a_failed_musician,_Op.16_No.11_(CR,_Srikanth)",
+   "category": "Chamber · violin"
+  },
+  {
+   "title": "It's Rainy Season Here, Op.7 No.1",
+   "url": "https://imslp.org/wiki/It's_Rainy_Season_Here,_Op.7_No.1_(CR,_Srikanth)",
+   "category": "Chamber · piano, violin, viola, cello, double bass · 2020"
+  },
+  {
+   "title": "Kon-Fugue-Se, Op.13 No.1",
+   "url": "https://imslp.org/wiki/Kon-Fugue-Se,_Op.13_No.1_(CR,_Srikanth)",
+   "category": "Fugue · 2 violins, viola, cello · 2022"
+  },
+  {
+   "title": "May be Sonata, Op.9 No.4",
+   "url": "https://imslp.org/wiki/May_be_Sonata,_Op.9_No.4_(CR,_Srikanth)",
+   "category": "Sonata · viola, piano · 2021"
+  },
+  {
+   "title": "Moonlit Melodies, Op.15 No.4",
+   "url": "https://imslp.org/wiki/Moonlit_Melodies,_Op.15_No.4_(CR,_Srikanth)",
+   "category": "Piano · piano"
+  },
+  {
+   "title": "Most Beautiful, Op.6 No.8",
+   "url": "https://imslp.org/wiki/Most_Beautiful,_Op.6_No.8_(CR,_Srikanth)",
+   "category": "Piano · piano"
+  },
+  {
+   "title": "Mr Silent Storm, Op.10 No.1",
+   "url": "https://imslp.org/wiki/Mr_Silent_Storm,_Op.10_No.1_(CR,_Srikanth)",
+   "category": "Orchestral · orchestra · 2020"
+  },
+  {
+   "title": "Nepi Tanc, Op.6 No.1",
+   "url": "https://imslp.org/wiki/Nepi_Tanc,_Op.6_No.1_(CR,_Srikanth)",
+   "category": "Chamber · 2 violins, viola, cello · 2020"
+  },
+  {
+   "title": "Nocturne, Op.8 No.2",
+   "url": "https://imslp.org/wiki/Nocturne,_Op.8_No.2_(CR,_Srikanth)",
+   "category": "Chamber · violin, piano · 2022"
+  },
+  {
+   "title": "Of Shadows Gathering Where Hope Once Kneeled, Op.11 No.26",
+   "url": "https://imslp.org/wiki/Of_Shadows_Gathering_Where_Hope_Once_Kneeled,_Op.11_No.26_(CR,_Srikanth)",
+   "category": "Piano · piano · 2025"
+  },
+  {
+   "title": "Orchestral Suite",
+   "url": "https://imslp.org/wiki/Orchestral_Suite_(CR,_Srikanth)",
+   "category": "Orchestral · orchestra · 2022"
+  },
+  {
+   "title": "Pi Symphony, Op.1",
+   "url": "https://imslp.org/wiki/Pi_Symphony,_Op.1_(CR,_Srikanth)",
+   "category": "Symphony · strings · 2020"
+  },
+  {
+   "title": "Quartz, Op.7 No.4",
+   "url": "https://imslp.org/wiki/Quartz,_Op.7_No.4_(CR,_Srikanth)",
+   "category": "String quartet · 2 violins, viola, cello · 2025"
+  },
+  {
+   "title": "Rondo di Poesia, Op.20 No.1",
+   "url": "https://imslp.org/wiki/Rondo_di_Poesia,_Op.20_No.1_(CR,_Srikanth)",
+   "category": "Chamber · piccolo, fiddle, guitar, piano, 2 violins, viola, cello · 2024"
+  },
+  {
+   "title": "Rose Garden, Op.6 No.5",
+   "url": "https://imslp.org/wiki/Rose_Garden,_Op.6_No.5_(CR,_Srikanth)",
+   "category": "Piano · piano · 2022"
+  },
+  {
+   "title": "Serein Waltz, Op.6 No.12",
+   "url": "https://imslp.org/wiki/Serein_Waltz,_Op.6_No.12_(CR,_Srikanth)",
+   "category": "Chamber · flute, harp, lush pad, celesta · 2025"
+  },
+  {
+   "title": "Spectral Reverie Fugue, Op.13 No.4",
+   "url": "https://imslp.org/wiki/Spectral_Reverie_Fugue,_Op.13_No.4_(CR,_Srikanth)",
+   "category": "Fugue · piano · 2024"
+  },
+  {
+   "title": "Spring Whispers in E-flat minor, Op.10 No.5",
+   "url": "https://imslp.org/wiki/Spring_Whispers_in_E-flat_minor,_Op.10_No.5_(CR,_Srikanth)",
+   "category": "Chamber · piccolo · 2024"
+  },
+  {
+   "title": "Spyro, Op.11 No.14",
+   "url": "https://imslp.org/wiki/Spyro,_Op.11_No.14_(CR,_Srikanth)",
+   "category": "Piano · piano · 2020"
+  },
+  {
+   "title": "String Quartet in C minor 'Rally', Op.7 No.3",
+   "url": "https://imslp.org/wiki/String_Quartet_in_C_minor_'Rally',_Op.7_No.3_(CR,_Srikanth)",
+   "category": "String quartet · 2 violins, viola, cello · 2023"
+  },
+  {
+   "title": "String Quartet in D minor 'Shattered', Op.10 No.16",
+   "url": "https://imslp.org/wiki/String_Quartet_in_D_minor_'Shattered',_Op.10_No.16_(CR,_Srikanth)",
+   "category": "String quartet · 2 violins, viola, cello · 2020"
+  },
+  {
+   "title": "String Quartet in E major 'Twila', Op.7 No.2",
+   "url": "https://imslp.org/wiki/String_Quartet_in_E_major_'Twila',_Op.7_No.2_(CR,_Srikanth)",
+   "category": "String quartet · 2 violins, viola, cello · 2020"
+  },
+  {
+   "title": "SykLon, Op.10 No.39",
+   "url": "https://imslp.org/wiki/SykLon,_Op.10_No.39_(CR,_Srikanth)",
+   "category": "Orchestral · orchestra · 2025"
+  },
+  {
+   "title": "Symphony No.3, Op.3",
+   "url": "https://imslp.org/wiki/Symphony_No.3,_Op.3_(CR,_Srikanth)",
+   "category": "Symphony · orchestra · 2025"
+  },
+  {
+   "title": "The Other Half of Silence, Op.15 No.1",
+   "url": "https://imslp.org/wiki/The_Other_Half_of_Silence,_Op.15_No.1_(CR,_Srikanth)",
+   "category": "Orchestral · orchestra · 2024"
+  },
+  {
+   "title": "Therym, Op.10 No.38",
+   "url": "https://imslp.org/wiki/Therym,_Op.10_No.38_(CR,_Srikanth)",
+   "category": "Orchestral · orchestra · 2025"
+  },
+  {
+   "title": "Tulips, Tulips and so on, Op.6 No.6",
+   "url": "https://imslp.org/wiki/Tulips,_Tulips_and_so_on,_Op.6_No.6_(CR,_Srikanth)",
+   "category": "Piano · piano · 2021"
+  },
+  {
+   "title": "V-Variations, Op.11 No.16",
+   "url": "https://imslp.org/wiki/V-Variations,_Op.11_No.16_(CR,_Srikanth)",
+   "category": "Piano · piano · 2021"
+  },
+  {
+   "title": "Violin Sonata No.4 in E minor 'May Be', Op.9 No.4",
+   "url": "https://imslp.org/wiki/Violin_Sonata_No.4_in_E_minor_'May_Be',_Op.9_No.4_(CR,_Srikanth)",
+   "category": "Sonata · violin, piano"
+  },
+  {
+   "title": "Waning Shadow, Op.12 No.1",
+   "url": "https://imslp.org/wiki/Waning_Shadow,_Op.12_No.1_(CR,_Srikanth)",
+   "category": "Piano · piano · 2024"
+  },
+  {
+   "title": "Whirlwind Sonata, Op.9 No.8",
+   "url": "https://imslp.org/wiki/Whirlwind_Sonata,_Op.9_No.8_(CR,_Srikanth)",
+   "category": "Sonata · piano"
+  }
+ ],
+ "latest": [
+  {
+   "label": "Latest classical release",
+   "title": "Beneath the Last Autumn Moon",
+   "credit": "Ravi Chandra Srikanth Cherukupalli",
+   "meta": "Classical single · 4 November 2026",
+   "art": "beneath-the-last-autumn-moon.jpg",
+   "embed": "track/4r30HrrU0EiHIILTZXrQFo",
+   "links": [
+    {
+     "label": "Spotify",
+     "url": "https://open.spotify.com/track/4r30HrrU0EiHIILTZXrQFo"
+    },
+    {
+     "label": "Apple Music",
+     "url": "https://music.apple.com/us/album/beneath-the-last-autumn-moon/6830632761?i=6830632762"
+    }
+   ]
+  },
+  {
+   "label": "Latest VS Pop™ release",
+   "title": "Another Day",
+   "credit": "CR Srikanth",
+   "meta": "VS Pop™ single · 24 September 2026",
+   "art": "another-day-vs-pop.jpg",
+   "embed": "track/5LemOZwzkweSo5O4IR4Ddw",
+   "links": [
+    {
+     "label": "Spotify",
+     "url": "https://open.spotify.com/track/5LemOZwzkweSo5O4IR4Ddw"
+    },
+    {
+     "label": "Apple Music",
+     "url": "https://music.apple.com/us/album/another-day-vs-pop-single/6765462074"
+    },
+    {
+     "label": "Deezer",
+     "url": "https://www.deezer.com/album/973199221"
+    }
+   ]
+  }
+ ],
+ "playlists": [
+  {
+   "title": "VS Pop Records: Light Dance for Everyday Life",
+   "text": "A Spotify playlist of light, danceable VS Pop™ songs.",
+   "art": "playlist-light-dance.jpg",
+   "embed": "playlist/468SHEL2L8zQqRt9st0iN6",
+   "url": "https://open.spotify.com/playlist/468SHEL2L8zQqRt9st0iN6"
+  },
+  {
+   "title": "Some Things I’ve Written – CR",
+   "text": "The composer’s own selection of his music on Spotify.",
+   "art": "playlist-some-things-ive-written.jpg",
+   "embed": "playlist/3cJQk39ldhwrQEL0EhvJSS",
+   "url": "https://open.spotify.com/playlist/3cJQk39ldhwrQEL0EhvJSS"
+  }
+ ],
+ "classicalReleases": [
+  {
+   "title": "Beneath the Last Autumn Moon",
+   "storeTitle": "Beneath the Last Autumn Moon",
+   "kind": "classical",
+   "type": "Classical single",
+   "year": "2026",
+   "art": "beneath-the-last-autumn-moon.jpg",
+   "links": [
+    {
+     "label": "Spotify",
+     "url": "https://open.spotify.com/track/4r30HrrU0EiHIILTZXrQFo"
+    },
+    {
+     "label": "Apple Music",
+     "url": "https://music.apple.com/us/album/beneath-the-last-autumn-moon/6830632761?i=6830632762"
+    }
+   ]
+  }
+ ]
+}

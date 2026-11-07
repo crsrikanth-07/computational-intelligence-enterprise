@@ -1,0 +1,340 @@
+{
+ "_note": "Recognition data, checked 7 Nov 2026. verified=true means a public source is linked; false means artist-reported and awaiting a source (see VERIFICATION.md).",
+ "milestones": [
+  {
+   "date": "21 October 2026",
+   "type": "Book",
+   "title": "Tales from Bellavere and Lindenfeld",
+   "text": "The expanded edition of the story collection, in ebook and paperback.",
+   "url": "/books/",
+   "cta": "See the book"
+  },
+  {
+   "date": "10 October 2026",
+   "type": "Published fiction",
+   "title": "“The Attic Record” in Half and One",
+   "text": "A short story of memory and music, set in Lindenfeld in 1958, published in the fiction section of the online magazine Half and One on 10 October 2026.",
+   "url": "https://halfandone.com/the-attic-record/",
+   "cta": "Read the story",
+   "home": true
+  },
+  {
+   "date": "25 April 2026",
+   "type": "Concert",
+   "title": "Guest Composer, URI Composers’ Concert",
+   "text": "Featured guest composer at the Spring 2026 Composers’ Concert of the University of Rhode Island, 8 pm in the URI Fine Arts Center Concert Hall, alongside new works by URI composition students under the guidance of Dr. Eliane Aberdam. Original piano works were performed.",
+   "home": true
+  },
+  {
+   "date": "Spring 2026",
+   "type": "Published fiction",
+   "title": "“Wheat for the Living” in The Hamilton Stone Review",
+   "text": "A short story published in Issue 54 of The Hamilton Stone Review, an independent literary journal.",
+   "url": "https://www.hamiltonstone.org/hsr54prose.html#srikanth",
+   "cta": "Read the story",
+   "home": true
+  },
+  {
+   "date": "17 February 2026",
+   "type": "Chart",
+   "title": "#6, Euro Indie Music Chart",
+   "text": "“Lets Dance (VS Pop™)” reached number 6 in week 6 of the weekly Euro Indie Music Chart, published by the European Indie Music Network. Earlier singles reached #6 (“Never Let You Go”, August 2025) and #10 (“Don’t Waste My Time”, December 2025).",
+   "url": "https://euroindiemusic.info/2026/02/17/euro-indie-music-chart-week-6-26/",
+   "cta": "See the chart",
+   "home": true
+  },
+  {
+   "date": "May 2025",
+   "type": "Music journalism",
+   "title": "EARMILK on “Dancing in the Dark”",
+   "text": "The music publication EARMILK featured the VS Pop™ single “Dancing in the Dark”.",
+   "url": "https://earmilk.com/2025/05/09/cr-srikanth-lights-up-the-night-with-dancing-in-the-dark-vs-pop/",
+   "cta": "Read the feature"
+  },
+  {
+   "date": "January 2025",
+   "type": "Chart",
+   "title": "#1, Moon Phase Radio Ambient Top 10",
+   "text": "“Ghosa (The Call)” topped the weekly Ambient Channel Top 10 of the independent station Moon Phase Radio on 13 and 20 January 2025. The station’s charts are based on listener interactions.",
+   "url": "https://moonphaseradio.com/entries/weekly-music-chart/m-p-r-charts-13th-january-2025",
+   "cta": "See the chart"
+  },
+  {
+   "date": "Since 2020",
+   "type": "Published scores",
+   "title": "46 Works on IMSLP",
+   "text": "Symphonies, string quartets, fugues, sonatas, piano, chamber and orchestral works, published with free scores on the International Music Score Library Project.",
+   "url": "https://imslp.org/wiki/Category:CR,_Srikanth",
+   "cta": "Open the catalogue"
+  }
+ ],
+ "charts": [
+  {
+   "chart": "European Indie Music Network · Euro Indie Music Chart (weekly, independent)",
+   "track": "Lets Dance (VS Pop™)",
+   "position": "#6",
+   "date": "Week 6, published 17 Feb 2026",
+   "url": "https://euroindiemusic.info/2026/02/17/euro-indie-music-chart-week-6-26/",
+   "source": "Chart, week 6.26",
+   "verified": true
+  },
+  {
+   "chart": "European Indie Music Network · Euro Indie Music Chart (weekly, independent)",
+   "track": "Don't Waste My Time (VS Pop™)",
+   "position": "#10",
+   "date": "Week 51, published 29 Dec 2025",
+   "url": "https://euroindiemusic.info/2025/12/29/euro-indie-music-chart-week-51-25/",
+   "source": "Chart, week 51.25",
+   "verified": true
+  },
+  {
+   "chart": "European Indie Music Network · Euro Indie Music Chart (weekly, independent)",
+   "track": "Never Let You Go (VS Pop™)",
+   "position": "#6",
+   "date": "Week 29, published 2 Aug 2025",
+   "url": "https://euroindiemusic.info/2025/08/02/euro-indie-music-chart-29-25/",
+   "source": "Chart, week 29.25",
+   "verified": true
+  },
+  {
+   "chart": "Moon Phase Radio · Ambient Channel Top 10 (weekly, station chart based on listener interactions)",
+   "track": "Abandoned Station, Op. 10 No. 26",
+   "position": "#7",
+   "date": "13 Apr 2026",
+   "url": "https://moonphaseradio.com/entries/weekly-music-chart/m-p-r-charts-13th-april-2026",
+   "source": "Chart, 13 April 2026",
+   "verified": true
+  },
+  {
+   "chart": "Moon Phase Radio · Ambient Channel Top 10 (weekly, station chart based on listener interactions)",
+   "track": "Abandoned Station, Op. 10 No. 26",
+   "position": "#4",
+   "date": "27 Jan 2025",
+   "url": "https://moonphaseradio.com/entries/weekly-music-chart/m-p-r-charts-27th-january-2025",
+   "source": "Chart, 27 January 2025",
+   "verified": true
+  },
+  {
+   "chart": "Moon Phase Radio · Ambient Channel Top 10 (weekly, station chart based on listener interactions)",
+   "track": "Ghosa (The Call)",
+   "position": "#1",
+   "date": "20 Jan 2025",
+   "url": "https://moonphaseradio.com/entries/weekly-music-chart/m-p-r-charts-20th-january-2025",
+   "source": "Chart, 20 January 2025",
+   "verified": true
+  },
+  {
+   "chart": "Moon Phase Radio · Ambient Channel Top 10 (weekly, station chart based on listener interactions)",
+   "track": "Ghosa (The Call)",
+   "position": "#1",
+   "date": "13 Jan 2025",
+   "url": "https://moonphaseradio.com/entries/weekly-music-chart/m-p-r-charts-13th-january-2025",
+   "source": "Chart, 13 January 2025",
+   "verified": true
+  },
+  {
+   "chart": "Spotify Local Pulse · San José, Costa Rica (city chart)",
+   "track": "So Lets Dance (VS Pop™)",
+   "position": "Reported",
+   "date": "January 2026",
+   "source": "Original chart record to be added",
+   "verified": false
+  },
+  {
+   "chart": "College radio chart (unweighted; publisher to be confirmed)",
+   "track": "PRYZM",
+   "position": "#756",
+   "date": "25 Jun 2025",
+   "source": "Original chart record to be added",
+   "verified": false
+  }
+ ],
+ "stations": [
+  {
+   "station": "Formula Indie (radio show of the European Indie Music Network)",
+   "country": "Europe",
+   "track": "Dancing in the Dark, Never Let You Go, Don't Waste My Time, Lets Dance and others",
+   "url": "https://euroindiemusic.info/2025/12/22/formula-indie-schedule-from-22nd-28th-to-december/",
+   "source": "Show schedule",
+   "verified": true
+  },
+  {
+   "station": "Celtica Radio",
+   "country": "United Kingdom",
+   "track": "Featured artist (playlist update, May 2026)",
+   "url": "https://celticaradio.com/playlist.html",
+   "source": "Station playlist page",
+   "verified": true
+  },
+  {
+   "station": "Puls FM Borås",
+   "country": "Sweden",
+   "source": "Station log to be added",
+   "verified": false
+  },
+  {
+   "station": "Puls FM Varberg",
+   "country": "Sweden",
+   "source": "Station log to be added",
+   "verified": false
+  },
+  {
+   "station": "The Sound Lab",
+   "country": "United Kingdom",
+   "source": "Station log to be added",
+   "verified": false
+  },
+  {
+   "station": "Click Your Radio Hits",
+   "country": "Canada",
+   "source": "Station log to be added",
+   "verified": false
+  },
+  {
+   "station": "MGZC Radio",
+   "country": "United States",
+   "source": "Station log to be added",
+   "verified": false
+  }
+ ],
+ "metrics": [
+  {
+   "value": "100+",
+   "label": "FM spins tracked by Mediabase",
+   "source": "Artist-reported · Mediabase"
+  },
+  {
+   "value": "2,000+",
+   "label": "international plays reported by WARM",
+   "source": "Artist-reported · WARM"
+  },
+  {
+   "value": "40+",
+   "label": "college radio stations (NACC-reporting)",
+   "source": "Artist-reported · NACC reporting"
+  },
+  {
+   "value": "30+",
+   "label": "radio station adds",
+   "source": "Artist-reported"
+  }
+ ],
+ "pressGroups": [
+  {
+   "id": "journalism",
+   "kicker": "Music journalism",
+   "title": "Reviews and Features",
+   "items": [
+    {
+     "outlet": "EARMILK",
+     "title": "CR Srikanth lights up the night with “Dancing in the Dark - VS Pop™”",
+     "type": "Feature",
+     "date": "9 May 2025",
+     "url": "https://earmilk.com/2025/05/09/cr-srikanth-lights-up-the-night-with-dancing-in-the-dark-vs-pop/"
+    },
+    {
+     "outlet": "Notion",
+     "title": "‘Dancing in the Dark – VS Pop™’ by CR Srikanth",
+     "type": "Review",
+     "date": "14 May 2025",
+     "url": "https://notion.online/dancing-in-the-dark-vs-pop-by-cr-srikanth/"
+    }
+   ]
+  },
+  {
+   "id": "interviews",
+   "kicker": "Interviews &amp; podcasts",
+   "title": "In Conversation",
+   "items": [
+    {
+     "outlet": "European Indie Music Network",
+     "title": "Formula Indie Sessions: Interview with CR Srikanth",
+     "type": "Written interview",
+     "date": "29 May 2026",
+     "url": "https://euroindiemusic.info/2026/05/29/formula-indie-sessions-interview-with-cr-srikanth/"
+    },
+    {
+     "outlet": "Phantom Electric Ghost",
+     "title": "Bridging Western & Indian Classical Music: VS Pop™ Orchestral Thinking",
+     "type": "Podcast · 59 min",
+     "date": "8 Mar 2026",
+     "url": "https://podcasts.apple.com/us/podcast/bridging-western-indian-classical-music-w-srikanth/id1704022237?i=1000753927325"
+    },
+    {
+     "outlet": "EyeOnPop",
+     "title": "Exclusive Interview with CR Srikanth",
+     "type": "Interview",
+     "date": "5 Mar 2026",
+     "url": "https://eyeonpop.com/detail/6124/Exclusive-Interview-with-CR-Srikanth"
+    },
+    {
+     "outlet": "Vigilantes Radio Live!",
+     "title": "The CR Srikanth Interview",
+     "type": "Podcast · 34 min",
+     "date": "20 Feb 2026",
+     "url": "https://podcasts.apple.com/us/podcast/the-cr-srikanth-interview/id1545086027?i=1000751787493"
+    }
+   ]
+  },
+  {
+   "id": "literary",
+   "kicker": "Literary publications",
+   "title": "Fiction in Independent Magazines",
+   "items": [
+    {
+     "outlet": "Half and One",
+     "title": "The Attic Record",
+     "type": "Short story",
+     "date": "10 Oct 2026",
+     "url": "https://halfandone.com/the-attic-record/"
+    },
+    {
+     "outlet": "The Hamilton Stone Review",
+     "title": "Wheat for the Living",
+     "type": "Short story · Issue 54",
+     "date": "Spring 2026",
+     "url": "https://www.hamiltonstone.org/hsr54prose.html#srikanth"
+    }
+   ]
+  }
+ ],
+ "bio": [
+  "CR Srikanth, also known as Ravi Chandra Srikanth Cherukupalli, is a composer, recording artist, writer of literary fiction and builder of tools for musical creation. He works across all four, and treats them as one practice: different ways for the same imagination to take form.",
+  "As a composer he works between traditions. His musical foundation is in Western classical music as well as Carnatic and Hindustani music, and the influence of all three runs through a catalogue he numbers by opus: symphonies such as Pi and Hope, string quartets, nocturnes, sonatas, fugues, études, waltzes and a long series of symphonic serenades. Selected scores are published for free on IMSLP, the International Music Score Library Project, and in spring 2026 his piano works were performed at the University of Rhode Island Composers’ Concert, where he was the guest composer. He completed Berklee Online’s Music Composition for Film and TV 2 and is a registered ASCAP composer and publisher.",
+  "As a recording artist he created VS Pop™, short for Very Smooth Pop: songs that join pop songwriting and electronic production to cinematic textures and orchestral colour. VS Pop™ releases are distributed worldwide, have been played on college, community and FM radio in several countries, and have appeared on independent charts.",
+  "As an author he writes literary fiction about memory, family, identity, moral choice and the passage of time. His stories have been published by The Hamilton Stone Review and Half and One. His books, published in 2026, include the collection Tales from Bellavere and Lindenfeld, the novella The Debt of the Fifth Month, and the novels August 18th, GOTTESGABE, Kamil &amp; Hassan Drama Company and The House on the Hill Above the River. Several of them share towns and families, so they can be read as one connected world.",
+  "As an innovator he builds the tools he wants as a composer. A software architect by profession, he has spent years on algorithmic composition, counterpoint and raga engines, and now on CuTTI: CuTTI Studio, an assistant arranger that turns a brief or a score into a ready-to-work session in the DAW, and CuTTI Score, which turns printed music into editable, playable scores. Both are private and in active development, and both rest on one principle: the composer stays in charge."
+ ],
+ "dimensions": [
+  {
+   "title": "The Composer",
+   "text": "Classical foundations in Western, Carnatic and Hindustani music; symphonies, quartets, fugues, piano and chamber works catalogued by opus, with selected scores on IMSLP.",
+   "href": "/music/compositions/",
+   "cta": "The classical catalogue"
+  },
+  {
+   "title": "The Recording Artist",
+   "text": "VS Pop™, Very Smooth Pop: contemporary songs with cinematic textures and orchestral colour, distributed on the major platforms.",
+   "href": "/music/",
+   "cta": "Listen to VS Pop™"
+  },
+  {
+   "title": "The Author",
+   "text": "Literary fiction in independent magazines, a story collection, a novella and novels, many of them set in the same imagined towns.",
+   "href": "/books/",
+   "cta": "Books &amp; stories"
+  },
+  {
+   "title": "The Innovator",
+   "text": "CuTTI Studio and CuTTI Score: private studio tools that take on the drudgery between an idea and a working session.",
+   "href": "/innovations/",
+   "cta": "The innovations"
+  }
+ ],
+ "privacy": [
+  "This website is run by CR Srikanth. It does not use advertising, analytics or tracking cookies.",
+  "If you use the contact form, your name, email address and message are sent by email to CR Srikanth so that he can reply. They are not shared with anyone else, sold or used for marketing, and they are deleted when they are no longer needed for the conversation.",
+  "Videos and Spotify players are shown as still images and buttons until you choose to play. Only then does your browser load the player from YouTube (youtube-nocookie.com) or Spotify, under their own privacy policies. Links to streaming services, bookstores and magazines take you to those sites, which have their own policies.",
+  "Fonts are loaded from Google Fonts. To ask what information is held about you, or to have it deleted, email crs.07@crsrikanth.com."
+ ]
+}

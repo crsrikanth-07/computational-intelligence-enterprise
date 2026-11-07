@@ -1,0 +1,497 @@
+{
+ "source": "Artist catalogue published on crsrikanth.com (2026)",
+ "groups": [
+  {
+   "group": "Symphonies",
+   "works": [
+    {
+     "title": "Pi",
+     "opus": "Op. 1"
+    },
+    {
+     "title": "Hope",
+     "opus": "Op. 2"
+    },
+    {
+     "title": "Grey Mountain",
+     "opus": "Op. 3"
+    },
+    {
+     "title": "Prestine",
+     "opus": "Op. 4"
+    },
+    {
+     "title": "Delight",
+     "opus": "Op. 5"
+    }
+   ]
+  },
+  {
+   "group": "Waltzes",
+   "works": [
+    {
+     "title": "Népi Tánc",
+     "opus": "Op. 6 No. 1"
+    },
+    {
+     "title": "Rhein Unter Mondschein",
+     "opus": "Op. 6 No. 2"
+    },
+    {
+     "title": "Brooka Basilla",
+     "opus": "Op. 6 No. 3"
+    },
+    {
+     "title": "Millingtonia – Saraca asoca",
+     "opus": "Op. 6 No. 4"
+    },
+    {
+     "title": "Rose Garden",
+     "opus": "Op. 6 No. 5"
+    },
+    {
+     "title": "Tulips, Tulips and so on",
+     "opus": "Op. 6 No. 6"
+    },
+    {
+     "title": "7",
+     "opus": "Op. 6 No. 7"
+    },
+    {
+     "title": "Most Beautiful",
+     "opus": "Op. 6 No. 8"
+    },
+    {
+     "title": "Klahari Journey",
+     "opus": "Op. 6 No. 9"
+    },
+    {
+     "title": "Dancing Flowers",
+     "opus": "Op. 6 No. 10"
+    }
+   ]
+  },
+  {
+   "group": "String Quartets",
+   "works": [
+    {
+     "title": "It’s Rainy Season Here",
+     "opus": "Op. 7 No. 1"
+    },
+    {
+     "title": "Twila",
+     "opus": "Op. 7 No. 2"
+    },
+    {
+     "title": "Rally",
+     "opus": "Op. 7 No. 3"
+    }
+   ]
+  },
+  {
+   "group": "Nocturnes",
+   "works": [
+    {
+     "title": "One Night in Reynisfjara",
+     "opus": "Op. 8 No. 1"
+    },
+    {
+     "title": "One Night in a Scary Village",
+     "opus": "Op. 8 No. 2"
+    },
+    {
+     "title": "One Night in the Romantic Rain",
+     "opus": "Op. 8 No. 3"
+    },
+    {
+     "title": "One Autumn Night",
+     "opus": "Op. 8 No. 4"
+    },
+    {
+     "title": "No Trespassing Dear Humans",
+     "opus": "Op. 8 No. 5"
+    }
+   ]
+  },
+  {
+   "group": "Sonatas",
+   "works": [
+    {
+     "title": "Vortici",
+     "opus": "Op. 9 No. 1"
+    },
+    {
+     "title": "Tundra",
+     "opus": "Op. 9 No. 2"
+    },
+    {
+     "title": "Megha",
+     "opus": "Op. 9 No. 3"
+    },
+    {
+     "title": "May Be",
+     "opus": "Op. 9 No. 4"
+    },
+    {
+     "title": "Elysian",
+     "opus": "Op. 9 No. 5"
+    },
+    {
+     "title": "Aetherial",
+     "opus": "Op. 9 No. 6"
+    }
+   ]
+  },
+  {
+   "group": "Symphonic Serenades",
+   "works": [
+    {
+     "title": "Mr. Silent Storm",
+     "opus": "Op. 10 No. 1"
+    },
+    {
+     "title": "Qi-Flo (Wular Lake)",
+     "opus": "Op. 10 No. 2"
+    },
+    {
+     "title": "Almora Strings",
+     "opus": "Op. 10 No. 3"
+    },
+    {
+     "title": "Bees Orchestra",
+     "opus": "Op. 10 No. 4"
+    },
+    {
+     "title": "Spring Whispers",
+     "opus": "Op. 10 No. 5"
+    },
+    {
+     "title": "Orchestral Mockups",
+     "opus": "Op. 10 No. 6"
+    },
+    {
+     "title": "Welcome to the New ERA",
+     "opus": "Op. 10 No. 7"
+    },
+    {
+     "title": "Cello Melancholy",
+     "opus": "Op. 10 No. 8"
+    },
+    {
+     "title": "Champaca",
+     "opus": "Op. 10 No. 9"
+    },
+    {
+     "title": "The Frost Stack",
+     "opus": "Op. 10 No. 10"
+    },
+    {
+     "title": "Isomere",
+     "opus": "Op. 10 No. 11"
+    },
+    {
+     "title": "Elo",
+     "opus": "Op. 10 No. 12"
+    },
+    {
+     "title": "Majestic",
+     "opus": "Op. 10 No. 13"
+    },
+    {
+     "title": "Born in China",
+     "opus": "Op. 10 No. 14"
+    },
+    {
+     "title": "The Fiddleman",
+     "opus": "Op. 10 No. 15"
+    },
+    {
+     "title": "Shattered",
+     "opus": "Op. 10 No. 16"
+    },
+    {
+     "title": "Drops of Melody",
+     "opus": "Op. 10 No. 17"
+    },
+    {
+     "title": "Perseverance",
+     "opus": "Op. 10 No. 18"
+    },
+    {
+     "title": "Vividia",
+     "opus": "Op. 10 No. 19"
+    },
+    {
+     "title": "Astral Celestial Melodies",
+     "opus": "Op. 10 No. 20"
+    },
+    {
+     "title": "Spectral",
+     "opus": "Op. 10 No. 21"
+    },
+    {
+     "title": "NIGHTS IN SUNDARBANS",
+     "opus": "Op. 10 No. 22"
+    },
+    {
+     "title": "Delight Strings",
+     "opus": "Op. 10 No. 23"
+    },
+    {
+     "title": "X-SNOW-X",
+     "opus": "Op. 10 No. 24"
+    },
+    {
+     "title": "WinWinds",
+     "opus": "Op. 10 No. 25"
+    },
+    {
+     "title": "Abandoned Station",
+     "opus": "Op. 10 No. 26"
+    },
+    {
+     "title": "Welcome Winter",
+     "opus": "Op. 10 No. 27"
+    },
+    {
+     "title": "It Started Again",
+     "opus": "Op. 10 No. 28"
+    },
+    {
+     "title": "Beasts Rhapsody",
+     "opus": "Op. 10 No. 29"
+    },
+    {
+     "title": "OmniScence",
+     "opus": "Op. 10 No. 30"
+    },
+    {
+     "title": "Rav Rhapsody",
+     "opus": "Op. 10 No. 31"
+    },
+    {
+     "title": "Detune",
+     "opus": "Op. 10 No. 32"
+    },
+    {
+     "title": "Humo",
+     "opus": "Op. 10 No. 33"
+    },
+    {
+     "title": "Marées Célestes",
+     "opus": "Op. 10 No. 34"
+    }
+   ]
+  },
+  {
+   "group": "Etudes",
+   "works": [
+    {
+     "title": "Hometown",
+     "opus": "Op. 11 No. 1"
+    },
+    {
+     "title": "Autumn Part 2",
+     "opus": "Op. 11 No. 2"
+    },
+    {
+     "title": "Polar Winds",
+     "opus": "Op. 11 No. 3"
+    },
+    {
+     "title": "Colors Part 2",
+     "opus": "Op. 11 No. 4"
+    },
+    {
+     "title": "The Truth",
+     "opus": "Op. 11 No. 5"
+    },
+    {
+     "title": "Lilliana Rondo",
+     "opus": "Op. 11 No. 6"
+    },
+    {
+     "title": "Imagination",
+     "opus": "Op. 11 No. 7"
+    },
+    {
+     "title": "Little Jasmine",
+     "opus": "Op. 11 No. 8"
+    },
+    {
+     "title": "Monotuno",
+     "opus": "Op. 11 No. 9"
+    },
+    {
+     "title": "Ava Lagoon",
+     "opus": "Op. 11 No. 10"
+    }
+   ]
+  },
+  {
+   "group": "Fantasy Pieces",
+   "works": [
+    {
+     "title": "Waning Shadow",
+     "opus": "Op. 12 No. 1"
+    },
+    {
+     "title": "Fantasy",
+     "opus": "Op. 12 No. 2"
+    },
+    {
+     "title": "Rings",
+     "opus": "Op. 12 No. 3"
+    },
+    {
+     "title": "Revital Coffee Works",
+     "opus": "Op. 12 No. 4"
+    },
+    {
+     "title": "Aerify",
+     "opus": "Op. 12 No. 5"
+    },
+    {
+     "title": "BossaNova",
+     "opus": "Op. 12 No. 6"
+    },
+    {
+     "title": "Bliss",
+     "opus": "Op. 12 No. 7"
+    },
+    {
+     "title": "Champaca",
+     "opus": "Op. 12 No. 8"
+    },
+    {
+     "title": "A Small Minute",
+     "opus": "Op. 12 No. 9"
+    },
+    {
+     "title": "Flurries",
+     "opus": "Op. 12 No. 10"
+    }
+   ]
+  },
+  {
+   "group": "Fugues",
+   "works": [
+    {
+     "title": "Kon-Fuge-Se",
+     "opus": "Op. 13 No. 1"
+    },
+    {
+     "title": "April Flowers",
+     "opus": "Op. 13 No. 2"
+    },
+    {
+     "title": "Elegy’s Harmonic Calculus",
+     "opus": "Op. 13 No. 3"
+    },
+    {
+     "title": "Spectral Reverie",
+     "opus": "Op. 13 No. 4"
+    }
+   ]
+  },
+  {
+   "group": "Rhapsodies",
+   "works": [
+    {
+     "title": "Journey Through Shtetl",
+     "opus": "Op. 14 No. 1"
+    },
+    {
+     "title": "Vivace Minor Sketch: A Beginner’s Journey",
+     "opus": "Op. 14 No. 2"
+    }
+   ]
+  },
+  {
+   "group": "Electronic/Synth Music",
+   "works": [
+    {
+     "title": "Jazz Town",
+     "opus": "Op. 15 No. 1"
+    },
+    {
+     "title": "East-Coast-jazzy-time",
+     "opus": "Op. 15 No. 2"
+    },
+    {
+     "title": "Shanthi – Inner Peace",
+     "opus": "Op. 15 No. 3"
+    },
+    {
+     "title": "Jahathi",
+     "opus": "Op. 15 No. 4"
+    },
+    {
+     "title": "Chaotic Karaoke",
+     "opus": "Op. 15 No. 5"
+    },
+    {
+     "title": "Monkey Jump",
+     "opus": "Op. 15 No. 6"
+    },
+    {
+     "title": "Peace 22",
+     "opus": "Op. 15 No. 7"
+    },
+    {
+     "title": "Moonlit Melodies – ballad 24EDO",
+     "opus": "Op. 15 No. 8"
+    },
+    {
+     "title": "Lonely Planet",
+     "opus": "Op. 15 No. 9"
+    }
+   ]
+  },
+  {
+   "group": "Hindustani/Carnatic Compositions",
+   "works": [
+    {
+     "title": "Tyāgayya Neeku Vandanam",
+     "opus": "HariKhamboji, Adi"
+    },
+    {
+     "title": "Lamha",
+     "opus": "Yaman Kalyani, TeenTal"
+    },
+    {
+     "title": "Paahadi Dhun",
+     "opus": "Pahaad, TeenTal"
+    },
+    {
+     "title": "Persian Strings",
+     "opus": "Bhairavi, Adi"
+    },
+    {
+     "title": "Chenchruthi",
+     "opus": "Chenchruthi, Adi"
+    },
+    {
+     "title": "AmruthaVarshini",
+     "opus": "Amruthavarshini, Misra"
+    },
+    {
+     "title": "Himalayan Journey",
+     "opus": "Mixed, Mixed"
+    },
+    {
+     "title": "Veenabheri",
+     "opus": "Abheri, Adi"
+    },
+    {
+     "title": "Vasantha",
+     "opus": "Vasantha, Adi"
+    },
+    {
+     "title": "Behag",
+     "opus": "Behag, Adi"
+    }
+   ]
+  }
+ ]
+}
