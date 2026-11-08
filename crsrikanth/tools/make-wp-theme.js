@@ -216,7 +216,7 @@ add_action( 'admin_post_crs_form', 'crs_handle_form' );
  * their children, about, contact) if they do not exist. Existing pages, posts and the front-page setting are untouched.
  */
 add_action( 'init', function () {
-	$release = '2026-11-revamp';
+	$release = '2026-11-shop';
 	if ( get_option( 'crs_pages_version' ) === $release || get_transient( 'crs_pages_lock' ) ) { return; }
 	set_transient( 'crs_pages_lock', 1, 60 );
 	$create = array(
@@ -232,6 +232,7 @@ add_action( 'init', function () {
 		array( '', 'about', 'About' ),
 		array( '', 'contact', 'Contact' ),
 		array( '', 'privacy-policy', 'Privacy Policy' ),
+		array( '', 'shop', 'Shop' ),
 	);
 	foreach ( $create as $c ) {
 		list( $parent_path, $slug, $title ) = $c;
