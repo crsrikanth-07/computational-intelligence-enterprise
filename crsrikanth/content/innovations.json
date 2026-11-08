@@ -16,7 +16,7 @@
   "brief": "A brief can be as short as one line, such as “a dreamy pop song in A minor, 100 BPM”. CuTTI Studio plans the sections, key, tempo and instruments, writes the parts and builds the project. A brief can also be one of the composer’s own scores.",
   "example": "Build a cinematic arrangement beginning with solo piano, expanding into warm strings, layered synth textures and a powerful orchestral conclusion.",
   "daws": "Logic Pro, Cubase, Nuendo and Digital Performer, on the composer’s own Mac.",
-  "demo": "In this recording, a single request becomes a complete Logic Pro session: named tracks, built-in instruments, regions cut at every section, then a starting mix.",
+  "demo": "In this recording, one line and an attached PDF score become a finished song. CuTTI Score reads the five pages; CuTTI Studio finds the key and the melody, picks the strongest passages, reads the chords from the notes, solos the melody on violins, builds the full band around it in Logic Pro, and with one more line masters the result in WaveLab.",
   "features": [
    {
     "title": "From words to a session",
