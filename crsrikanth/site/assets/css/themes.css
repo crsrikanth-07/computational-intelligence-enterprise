@@ -293,3 +293,215 @@ html[data-theme="nocturne"] .product__visual { background: #070605; border-color
 html[data-theme="nocturne"] .milestone::before { background: #0C0A09; border-color: var(--gold); }
 html[data-theme="nocturne"] .milestone__date, html[data-theme="nocturne"] .dimension__n, html[data-theme="nocturne"] .principles li::before { font-family: "Instrument Serif", serif; font-style: italic; font-size: 22px; letter-spacing: 0; text-transform: none; }
 html[data-theme="nocturne"] .verify--ok { color: #9FC7A3; }
+
+/* =====================================================================================
+   GALLERY: a white-cube exhibition. Pure white, hairline graphite rules, one cobalt
+   accent, Bodoni Moda display with extreme contrast, generous whitespace, no boxes.
+   ===================================================================================== */
+html[data-theme="gallery"] {
+  --night: #FFFFFF; --night-2: #F6F6F4; --slate: #FFFFFF; --slate-2: #F1F1EE;
+  --rule: rgba(20, 20, 20, .14); --rule-2: rgba(20, 20, 20, .4);
+  --ivory: #141414; --ivory-2: #4A4A4A; --muted: #8A8A86;
+  --gold: #1F3BD1; --gold-2: #1731B0; --violet: #D12A1F;
+  --serif: "Bodoni Moda", "Didot", "Cormorant Garamond", serif; --sans: "Manrope", "Inter", sans-serif;
+  --radius: 0px;
+  --l1: 31, 59, 209; --l2: 20, 20, 20; --l3: 209, 42, 31; --star: 20, 20, 20; --glow: 209, 42, 31;
+}
+html[data-theme="gallery"] body { background: #FFFFFF; color: var(--ivory); }
+html[data-theme="gallery"] ::selection { background: rgba(31, 59, 209, .15); }
+html[data-theme="gallery"] h1, html[data-theme="gallery"] .h1, html[data-theme="gallery"] h2, html[data-theme="gallery"] .h2 { font-weight: 400; letter-spacing: -.01em; font-variation-settings: "opsz" 96; }
+html[data-theme="gallery"] em { font-style: italic; color: var(--gold); }
+html[data-theme="gallery"] .hero { background: #FFFFFF; }
+html[data-theme="gallery"] .hero canvas { opacity: .9; }
+html[data-theme="gallery"] .hero__veil { background: linear-gradient(90deg, rgba(255, 255, 255, .95) 0%, rgba(255, 255, 255, .5) 45%, rgba(255, 255, 255, 0) 100%); }
+@media (max-width: 760px) { html[data-theme="gallery"] .hero__veil { background: linear-gradient(180deg, rgba(255, 255, 255, .2) 0%, rgba(255, 255, 255, .9) 55%, #FFFFFF 100%); } }
+html[data-theme="gallery"] .hero__name { font-weight: 400; letter-spacing: -.02em; }
+html[data-theme="gallery"] .hero__name .thin { color: var(--gold); font-style: italic; }
+html[data-theme="gallery"] .hero__roles { color: var(--ivory-2); } html[data-theme="gallery"] .hero__roles li + li::before { color: var(--gold); }
+html[data-theme="gallery"] .phero { background: #FFFFFF; border-bottom: 1px solid var(--rule); }
+html[data-theme="gallery"] .phero canvas { opacity: .7; }
+html[data-theme="gallery"] .phero--violet .kicker { color: var(--violet); }
+html[data-theme="gallery"] .section--slate { background: #F6F6F4; } html[data-theme="gallery"] .section--ink { background: #FFFFFF; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+html[data-theme="gallery"] .section--paper { background: #F6F6F4; color: var(--ivory); }
+html[data-theme="gallery"] .section--paper .kicker, html[data-theme="gallery"] .section--paper .arrow, html[data-theme="gallery"] .section--paper .gold, html[data-theme="gallery"] .section--paper .link { color: var(--gold); }
+html[data-theme="gallery"] .section--paper .lead, html[data-theme="gallery"] .section--paper .muted, html[data-theme="gallery"] .section--paper .book p, html[data-theme="gallery"] .section--paper .book dl { color: var(--ivory-2); }
+html[data-theme="gallery"] .site-footer { background: #141414; color: #F6F6F4; --ivory: #F6F6F4; --ivory-2: #C8C8C4; --muted: #8A8A86; --gold: #9DB0FF; --rule: rgba(246, 246, 244, .16); }
+html[data-theme="gallery"] .site-header.is-solid { background: rgba(255, 255, 255, .9); border-bottom-color: var(--rule); }
+html[data-theme="gallery"] .sheet { background: rgba(255, 255, 255, .98); }
+html[data-theme="gallery"] .menu-btn { background: #FFFFFF; border-color: var(--ivory); }
+html[data-theme="gallery"] .kicker { color: var(--muted); letter-spacing: .32em; } html[data-theme="gallery"] .kicker::before { background: var(--ivory); opacity: 1; width: 20px; }
+html[data-theme="gallery"] .btn, html[data-theme="gallery"] .chip, html[data-theme="gallery"] .input, html[data-theme="gallery"] .release figure, html[data-theme="gallery"] .video__frame, html[data-theme="gallery"] .spotlight__art, html[data-theme="gallery"] .product__visual, html[data-theme="gallery"] .book__cover, html[data-theme="gallery"] .playlist figure, html[data-theme="gallery"] .sp-embed, html[data-theme="gallery"] .world, html[data-theme="gallery"] .pub { border-radius: 0; }
+html[data-theme="gallery"] .btn--gold { background: var(--ivory); color: #FFFFFF; box-shadow: none; }
+html[data-theme="gallery"] .btn--gold:hover { background: var(--gold); }
+html[data-theme="gallery"] .btn--ghost { border-color: var(--ivory); color: var(--ivory); background: transparent; }
+html[data-theme="gallery"] .btn--violet { background: var(--violet); color: #FFFFFF; box-shadow: none; }
+html[data-theme="gallery"] .btn--ink { background: var(--ivory); color: #FFFFFF; }
+html[data-theme="gallery"] .card, html[data-theme="gallery"] .dimension, html[data-theme="gallery"] .spotlight, html[data-theme="gallery"] .playlist, html[data-theme="gallery"] .duo__panel, html[data-theme="gallery"] .metric, html[data-theme="gallery"] .note, html[data-theme="gallery"] .concert, html[data-theme="gallery"] .feature, html[data-theme="gallery"] .pub { background: transparent; border: 0; border-top: 1px solid var(--ivory); border-radius: 0; box-shadow: none; padding-left: 0; padding-right: 0; }
+html[data-theme="gallery"] .pub { background: #FFFFFF; padding: 32px 0 0; }
+html[data-theme="gallery"] .pub__title { font-style: italic; }
+html[data-theme="gallery"] .world { border: 1px solid var(--ivory); background: #FFFFFF; color: var(--ivory); }
+html[data-theme="gallery"] .world:hover { background: #F6F6F4; }
+html[data-theme="gallery"] .world--music .world__label, html[data-theme="gallery"] .world--music .arrow, html[data-theme="gallery"] .world--words .world__label, html[data-theme="gallery"] .world--words .arrow { color: var(--gold); }
+html[data-theme="gallery"] .world--tech .world__label, html[data-theme="gallery"] .world--tech .arrow { color: var(--violet); }
+html[data-theme="gallery"] .world__text { color: var(--ivory-2) !important; }
+html[data-theme="gallery"] .world--words { background: #141414; color: #FFFFFF; border-color: #141414; }
+html[data-theme="gallery"] .world--words .world__label, html[data-theme="gallery"] .world--words .arrow { color: #9DB0FF; }
+html[data-theme="gallery"] .world--words .world__text { color: #C8C8C4 !important; }
+html[data-theme="gallery"] .world--tech .world__title { font-family: var(--serif); font-weight: 400; letter-spacing: -.01em; }
+html[data-theme="gallery"] .world__art { opacity: .35; }
+html[data-theme="gallery"] .input { background: #FFFFFF; border: 0; border-bottom: 1px solid var(--ivory); padding-left: 0; }
+html[data-theme="gallery"] .input:focus { box-shadow: none; border-bottom-color: var(--gold); }
+html[data-theme="gallery"] select.input option { background: #FFFFFF; }
+html[data-theme="gallery"] .verify--ok { color: #1F7A3A; } html[data-theme="gallery"] .verify--rep { color: var(--violet); }
+html[data-theme="gallery"] .form__msg.ok { color: #1F7A3A; } html[data-theme="gallery"] .form__msg.err { color: var(--violet); }
+html[data-theme="gallery"] .status { border-color: var(--violet); background: transparent; color: var(--ivory); border-radius: 0; }
+html[data-theme="gallery"] .status::before { background: var(--violet); box-shadow: 0 0 0 4px rgba(209, 42, 31, .15); }
+html[data-theme="gallery"] .prompt { background: #141414; color: #FFFFFF; border: 0; border-radius: 0; }
+html[data-theme="gallery"] .product__visual { background: #141414; border: 0; box-shadow: none; }
+html[data-theme="gallery"] .product__visual figcaption { color: #C8C8C4; border-top-color: rgba(246, 246, 244, .16); }
+html[data-theme="gallery"] .feature p, html[data-theme="gallery"] .product p { color: var(--ivory-2); }
+html[data-theme="gallery"] .feature__tag, html[data-theme="gallery"] .principles li::before { color: var(--violet); }
+html[data-theme="gallery"] .milestone::before { background: #FFFFFF; border-color: var(--ivory); border-radius: 0; }
+html[data-theme="gallery"] .timeline::before { background: var(--ivory); }
+html[data-theme="gallery"] .milestone__date { color: var(--gold); }
+html[data-theme="gallery"] .quote { color: var(--ivory); }
+html[data-theme="gallery"] .finale { background: #FFFFFF; }
+
+/* =====================================================================================
+   MANUSCRIPT: an illuminated raga manuscript. Deep lapis and vermilion, true gold leaf,
+   Cinzel small caps for labels, Cormorant for text, a fine saffron border on the panels.
+   ===================================================================================== */
+html[data-theme="manuscript"] {
+  --ink: #0A1033; --night: #0F1746; --night-2: #141E55; --slate: #1A2562; --slate-2: #212E72;
+  --rule: rgba(246, 220, 160, .18); --rule-2: rgba(246, 220, 160, .36);
+  --ivory: #FBF3E2; --ivory-2: #DCCFB4; --muted: #A89B82;
+  --gold: #E6B94A; --gold-2: #C5962A; --violet: #E8552F;
+  --radius: 6px;
+  --l1: 230, 185, 74; --l2: 251, 243, 226; --l3: 232, 85, 47; --star: 246, 220, 160; --glow: 232, 85, 47;
+}
+html[data-theme="manuscript"] body { background: var(--night); }
+html[data-theme="manuscript"] .kicker, html[data-theme="manuscript"] .hero__roles, html[data-theme="manuscript"] .world__label, html[data-theme="manuscript"] .pub__outlet, html[data-theme="manuscript"] .press__outlet, html[data-theme="manuscript"] .milestone__date, html[data-theme="manuscript"] .book__meta, html[data-theme="manuscript"] .foot h2, html[data-theme="manuscript"] .archive thead th { font-family: "Cinzel", "Cormorant Garamond", serif; font-weight: 600; letter-spacing: .22em; }
+html[data-theme="manuscript"] .hero__name .thin, html[data-theme="manuscript"] em { color: var(--gold); }
+html[data-theme="manuscript"] .hero { background: radial-gradient(55% 60% at 80% 30%, rgba(232, 85, 47, .28), transparent 62%), radial-gradient(50% 50% at 20% 100%, rgba(230, 185, 74, .22), transparent 60%), linear-gradient(180deg, #0A1033, #141E55); }
+html[data-theme="manuscript"] .hero__veil { background: linear-gradient(90deg, rgba(10, 16, 51, .86) 0%, rgba(10, 16, 51, .35) 45%, rgba(10, 16, 51, 0) 100%); }
+html[data-theme="manuscript"] .phero { background: radial-gradient(70% 90% at 90% 0%, rgba(232, 85, 47, .3), transparent 60%), linear-gradient(180deg, #0A1033, #141E55); }
+html[data-theme="manuscript"] .phero--violet .kicker, html[data-theme="manuscript"] .world--tech .world__label, html[data-theme="manuscript"] .world--tech .arrow { color: var(--violet); }
+html[data-theme="manuscript"] .section--slate { background: #141E55; } html[data-theme="manuscript"] .section--ink { background: #0A1033; }
+html[data-theme="manuscript"] .section--paper { background: #FBF3E2; color: #2A1E12; }
+html[data-theme="manuscript"] .section--paper .kicker, html[data-theme="manuscript"] .section--paper .arrow, html[data-theme="manuscript"] .section--paper .gold { color: #9A5A12; }
+html[data-theme="manuscript"] .section--paper .lead, html[data-theme="manuscript"] .section--paper .muted { color: #6B5A45; }
+html[data-theme="manuscript"] .site-footer { background: #0A1033; }
+html[data-theme="manuscript"] .site-header.is-solid { background: rgba(10, 16, 51, .86); }
+html[data-theme="manuscript"] .sheet { background: rgba(10, 16, 51, .97); }
+html[data-theme="manuscript"] .kicker::before { width: 10px; height: 10px; border: 1px solid var(--gold); transform: rotate(45deg); background: transparent; opacity: 1; }
+html[data-theme="manuscript"] .btn--gold { background: linear-gradient(180deg, #F3D27A, #C5962A); color: #2A1E12; box-shadow: 0 10px 30px -14px rgba(230, 185, 74, .7); }
+html[data-theme="manuscript"] .btn--violet { background: linear-gradient(180deg, #F27A5A, #C9431F); color: #FBF3E2; }
+html[data-theme="manuscript"] .btn--ghost { border-color: var(--gold); color: var(--gold); }
+html[data-theme="manuscript"] .card, html[data-theme="manuscript"] .dimension, html[data-theme="manuscript"] .spotlight, html[data-theme="manuscript"] .playlist, html[data-theme="manuscript"] .duo__panel, html[data-theme="manuscript"] .metric, html[data-theme="manuscript"] .note, html[data-theme="manuscript"] .concert, html[data-theme="manuscript"] .feature { background: #1A2562; border: 1px solid var(--rule-2); outline: 1px solid rgba(246, 220, 160, .12); outline-offset: 5px; border-radius: 6px; }
+html[data-theme="manuscript"] .world { border: 1px solid var(--gold); outline: 1px solid rgba(246, 220, 160, .25); outline-offset: 6px; border-radius: 6px; }
+html[data-theme="manuscript"] .world--music { background: radial-gradient(120% 80% at 50% 0%, #5A2B1A 0%, #1A1030 65%); }
+html[data-theme="manuscript"] .world--music .world__label, html[data-theme="manuscript"] .world--music .arrow { color: var(--gold); }
+html[data-theme="manuscript"] .world--music .world__text, html[data-theme="manuscript"] .world--tech .world__text { color: var(--ivory-2); }
+html[data-theme="manuscript"] .world--words { background: #FBF3E2; color: #2A1E12; }
+html[data-theme="manuscript"] .world--words .world__label, html[data-theme="manuscript"] .world--words .arrow { color: #9A5A12; }
+html[data-theme="manuscript"] .world--words .world__text { color: #6B5A45; }
+html[data-theme="manuscript"] .world--tech { background: radial-gradient(120% 90% at 80% 0%, #7A2A1A 0%, #1A1030 65%); }
+html[data-theme="manuscript"] .world--tech .world__title { font-family: var(--serif); font-weight: 500; letter-spacing: 0; }
+html[data-theme="manuscript"] .pub { background: #FFFAF0; border: 1px solid #C5962A; outline: 1px solid rgba(154, 90, 18, .25); outline-offset: 5px; }
+html[data-theme="manuscript"] .btn--ink { background: #2A1E12; color: #FBF3E2; }
+html[data-theme="manuscript"] .input { background: rgba(10, 16, 51, .5); border-color: var(--rule-2); }
+html[data-theme="manuscript"] .status { border-color: var(--violet); background: rgba(232, 85, 47, .1); color: var(--ivory); }
+html[data-theme="manuscript"] .status::before { background: var(--violet); box-shadow: 0 0 0 4px rgba(232, 85, 47, .2); }
+html[data-theme="manuscript"] .prompt { background: #0A1033; border-color: var(--rule-2); color: var(--ivory); }
+html[data-theme="manuscript"] .product__visual { background: #0A1033; border-color: var(--gold); box-shadow: 0 50px 80px -50px rgba(230, 185, 74, .4); }
+html[data-theme="manuscript"] .feature p { color: var(--ivory-2); }
+html[data-theme="manuscript"] .feature__tag, html[data-theme="manuscript"] .principles li::before { color: var(--violet); }
+html[data-theme="manuscript"] .milestone::before { background: var(--night); border-color: var(--gold); transform: rotate(45deg); border-radius: 0; }
+html[data-theme="manuscript"] .verify--rep { color: #F2A37A; }
+
+/* =====================================================================================
+   MODERNIST: a 1960s record sleeve. Warm cream, black, one signal red, Archivo Black
+   headlines set tight, thick rules, flat colour blocks, nothing rounded.
+   ===================================================================================== */
+html[data-theme="modernist"] {
+  --night: #F4EFE4; --night-2: #ECE5D6; --slate: #F4EFE4; --slate-2: #E6DECC;
+  --rule: rgba(17, 17, 17, .22); --rule-2: #111111;
+  --ivory: #111111; --ivory-2: #3D3A33; --muted: #7A7366;
+  --gold: #E2261C; --gold-2: #B81C14; --violet: #111111;
+  --serif: "Archivo", "Inter", sans-serif; --sans: "Archivo", "Inter", sans-serif;
+  --radius: 0px;
+  --l1: 226, 38, 28; --l2: 17, 17, 17; --l3: 17, 17, 17; --star: 17, 17, 17; --glow: 226, 38, 28;
+}
+html[data-theme="modernist"] body { background: var(--night); color: var(--ivory); }
+html[data-theme="modernist"] ::selection { background: rgba(226, 38, 28, .2); }
+html[data-theme="modernist"] h1, html[data-theme="modernist"] .h1, html[data-theme="modernist"] h2, html[data-theme="modernist"] .h2, html[data-theme="modernist"] h3, html[data-theme="modernist"] .h3, html[data-theme="modernist"] h4 { font-weight: 900; letter-spacing: -.045em; text-transform: uppercase; line-height: .92; }
+html[data-theme="modernist"] h3, html[data-theme="modernist"] .h3, html[data-theme="modernist"] h4 { font-weight: 800; letter-spacing: -.02em; text-transform: none; line-height: 1.1; }
+html[data-theme="modernist"] em { font-style: normal; color: var(--gold); }
+html[data-theme="modernist"] .hero { background: var(--night); }
+html[data-theme="modernist"] .hero canvas { opacity: .85; }
+html[data-theme="modernist"] .hero__veil { background: linear-gradient(90deg, rgba(244, 239, 228, .95) 0%, rgba(244, 239, 228, .5) 45%, rgba(244, 239, 228, 0) 100%); }
+@media (max-width: 760px) { html[data-theme="modernist"] .hero__veil { background: linear-gradient(180deg, rgba(244, 239, 228, .2) 0%, rgba(244, 239, 228, .9) 55%, var(--night) 100%); } }
+html[data-theme="modernist"] .hero__name { font-weight: 900; letter-spacing: -.06em; text-transform: uppercase; }
+html[data-theme="modernist"] .hero__name .thin { font-style: normal; font-weight: 900; color: var(--gold); }
+html[data-theme="modernist"] .hero__line { font-weight: 500; letter-spacing: -.02em; }
+html[data-theme="modernist"] .hero__roles { font-weight: 700; } html[data-theme="modernist"] .hero__roles li + li::before { color: var(--gold); }
+html[data-theme="modernist"] .phero { background: var(--night); border-bottom: 4px solid var(--ivory); }
+html[data-theme="modernist"] .phero canvas { opacity: .6; }
+html[data-theme="modernist"] .section--slate { background: #ECE5D6; }
+html[data-theme="modernist"] .section--ink { background: #111111; --ivory: #F4EFE4; --ivory-2: #CFC8B8; --muted: #8F887A; --rule: rgba(244, 239, 228, .2); --rule-2: #F4EFE4; color: #F4EFE4; }
+html[data-theme="modernist"] .section--paper { background: #FFFFFF; color: #111111; }
+html[data-theme="modernist"] .section--paper .kicker, html[data-theme="modernist"] .section--paper .arrow, html[data-theme="modernist"] .section--paper .gold { color: var(--gold); }
+html[data-theme="modernist"] .section--paper .lead, html[data-theme="modernist"] .section--paper .muted { color: #3D3A33; }
+html[data-theme="modernist"] .site-footer { background: var(--gold); --ivory: #FFFFFF; --ivory-2: #FFE6E3; --muted: #FFD0CB; --gold: #111111; --rule: rgba(255, 255, 255, .3); color: #FFFFFF; }
+html[data-theme="modernist"] .site-footer a:hover { color: #111111; }
+html[data-theme="modernist"] .site-header.is-solid { background: rgba(244, 239, 228, .94); border-bottom: 2px solid var(--ivory); }
+html[data-theme="modernist"] .sheet { background: var(--night); }
+html[data-theme="modernist"] .menu-btn { background: transparent; border: 2px solid var(--ivory); border-radius: 0; }
+html[data-theme="modernist"] .kicker { color: var(--ivory); font-weight: 700; letter-spacing: .2em; } html[data-theme="modernist"] .kicker::before { width: 14px; height: 14px; background: var(--gold); opacity: 1; }
+html[data-theme="modernist"] .btn, html[data-theme="modernist"] .chip, html[data-theme="modernist"] .input, html[data-theme="modernist"] .release figure, html[data-theme="modernist"] .video__frame, html[data-theme="modernist"] .spotlight__art, html[data-theme="modernist"] .product__visual, html[data-theme="modernist"] .book__cover, html[data-theme="modernist"] .playlist figure, html[data-theme="modernist"] .sp-embed, html[data-theme="modernist"] .world, html[data-theme="modernist"] .pub, html[data-theme="modernist"] .card, html[data-theme="modernist"] .dimension, html[data-theme="modernist"] .spotlight, html[data-theme="modernist"] .playlist, html[data-theme="modernist"] .duo__panel, html[data-theme="modernist"] .metric, html[data-theme="modernist"] .note, html[data-theme="modernist"] .concert, html[data-theme="modernist"] .feature, html[data-theme="modernist"] .status, html[data-theme="modernist"] .prompt { border-radius: 0; }
+html[data-theme="modernist"] .btn { text-transform: uppercase; font-weight: 800; letter-spacing: .06em; border-width: 2px; }
+html[data-theme="modernist"] .btn--gold { background: var(--gold); color: #FFFFFF; box-shadow: none; }
+html[data-theme="modernist"] .btn--gold:hover { background: var(--ivory); color: var(--night); }
+html[data-theme="modernist"] .btn--ghost { border-color: var(--ivory); color: var(--ivory); background: transparent; }
+html[data-theme="modernist"] .btn--violet { background: var(--ivory); color: var(--night); box-shadow: none; }
+html[data-theme="modernist"] .btn--ink { background: #111111; color: #FFFFFF; }
+html[data-theme="modernist"] .chip { border: 2px solid var(--ivory); color: var(--ivory); font-weight: 700; }
+html[data-theme="modernist"] .card, html[data-theme="modernist"] .dimension, html[data-theme="modernist"] .spotlight, html[data-theme="modernist"] .playlist, html[data-theme="modernist"] .duo__panel, html[data-theme="modernist"] .metric, html[data-theme="modernist"] .note, html[data-theme="modernist"] .concert, html[data-theme="modernist"] .feature, html[data-theme="modernist"] .pub { background: transparent; border: 2px solid var(--ivory); box-shadow: none; }
+html[data-theme="modernist"] .section--ink .card, html[data-theme="modernist"] .section--ink .spotlight, html[data-theme="modernist"] .section--ink .concert { border-color: #F4EFE4; }
+html[data-theme="modernist"] .section--ink .btn--ghost { border-color: #F4EFE4; color: #F4EFE4; }
+html[data-theme="modernist"] .section--ink .chip { border-color: #F4EFE4; color: #F4EFE4; }
+html[data-theme="modernist"] .world { border: 2px solid var(--ivory); }
+html[data-theme="modernist"] .world--music { background: var(--night); color: var(--ivory); }
+html[data-theme="modernist"] .world--music .world__label, html[data-theme="modernist"] .world--music .arrow { color: var(--gold); }
+html[data-theme="modernist"] .world--music .world__text, html[data-theme="modernist"] .world--tech .world__text { color: var(--ivory-2); }
+html[data-theme="modernist"] .world--words { background: var(--gold); color: #FFFFFF; border-color: var(--gold); }
+html[data-theme="modernist"] .world--words .world__label, html[data-theme="modernist"] .world--words .arrow { color: #FFFFFF; }
+html[data-theme="modernist"] .world--words .world__text { color: #FFE6E3; }
+html[data-theme="modernist"] .world--words .world__title { font-style: normal; }
+html[data-theme="modernist"] .world--tech { background: #111111; color: #F4EFE4; border-color: #111111; }
+html[data-theme="modernist"] .world--tech .world__label, html[data-theme="modernist"] .world--tech .arrow { color: var(--gold); }
+html[data-theme="modernist"] .world--tech .world__text { color: #CFC8B8; }
+html[data-theme="modernist"] .world--tech .world__title { font-weight: 900; letter-spacing: -.045em; text-transform: uppercase; line-height: .92; }
+html[data-theme="modernist"] .world__art { opacity: .25; }
+html[data-theme="modernist"] .pub { background: #FFFFFF; }
+html[data-theme="modernist"] .pub__title { font-style: normal; }
+html[data-theme="modernist"] .input { background: #FFFFFF; border: 2px solid var(--ivory); }
+html[data-theme="modernist"] .input:focus { box-shadow: none; border-color: var(--gold); }
+html[data-theme="modernist"] select.input option { background: #FFFFFF; }
+html[data-theme="modernist"] .verify--ok { color: #1F7A3A; } html[data-theme="modernist"] .verify--rep { color: var(--gold); }
+html[data-theme="modernist"] .form__msg.ok { color: #1F7A3A; } html[data-theme="modernist"] .form__msg.err { color: var(--gold); }
+html[data-theme="modernist"] .tech { background: #111111; --ivory: #F4EFE4; --ivory-2: #CFC8B8; --muted: #8F887A; --rule: rgba(244, 239, 228, .2); --rule-2: #F4EFE4; --violet: #E2261C; color: #F4EFE4; }
+html[data-theme="modernist"] .tech .card, html[data-theme="modernist"] .tech .feature, html[data-theme="modernist"] .tech .note { border-color: #F4EFE4; }
+html[data-theme="modernist"] .tech .feature p { color: #CFC8B8; }
+html[data-theme="modernist"] .tech .btn--violet { background: var(--gold); color: #FFFFFF; }
+html[data-theme="modernist"] .tech .btn--ghost { border-color: #F4EFE4; color: #F4EFE4; }
+html[data-theme="modernist"] .status { border: 2px solid var(--gold); background: transparent; color: inherit; }
+html[data-theme="modernist"] .status::before { background: var(--gold); box-shadow: none; }
+html[data-theme="modernist"] .prompt { background: #111111; color: #F4EFE4; border: 2px solid #F4EFE4; }
+html[data-theme="modernist"] .product__visual { background: #111111; border: 2px solid #F4EFE4; box-shadow: none; }
+html[data-theme="modernist"] .phero--violet .kicker { color: var(--gold); }
+html[data-theme="modernist"] .milestone::before { background: var(--gold); border-color: var(--gold); border-radius: 0; }
+html[data-theme="modernist"] .timeline::before { background: var(--ivory); width: 2px; }
+html[data-theme="modernist"] .milestone__date { color: var(--gold); font-weight: 800; }
+html[data-theme="modernist"] .principles li::before, html[data-theme="modernist"] .dimension__n { color: var(--gold); font-weight: 800; }
+html[data-theme="modernist"] .finale { background: var(--night); border-top: 4px solid var(--ivory); }
