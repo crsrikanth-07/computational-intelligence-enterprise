@@ -170,13 +170,14 @@ ${section('', 'charts', `${head('Charts', 'Chart Entries', 'charts-title')}
 <section class="table-wrap" tabindex="0" aria-label="Chart entries (scrollable table)"><table class="archive"><thead><tr><th scope="col">Chart (publisher, scope)</th><th scope="col">Track</th><th scope="col">Position</th><th scope="col">Date</th><th scope="col">Record</th></tr></thead><tbody>
 ${tableRows(rec.charts, [r => esc(r.chart), r => tm(esc(r.track)), r => esc(r.position), r => esc(r.date), r => `${src(r)}<br>${verify(r.verified)}`])}
 </tbody></table></section>`, 'charts-title')}
-${section('section--slate', 'stations', `${head('Radio', 'Station Records', 'st-title', 'Stations with a public playlist, post or log showing a play. Further stations are added only when a record is available.')}
+${section('section--slate', 'stations', `${head('Radio', 'Station Records', 'st-title', 'Airplay documented in Mediabase and NACC (Planetary Group) reports from April 2025, and in public station pages. The most prominent are listed first. Stations without a record are shown as artist-reported.')}
+<div class="prominent">${rec.stations.filter(st => st.prominent).map(st => `<article class="metric" data-reveal><b>${esc(st.station)}</b><span>${esc(st.country)} · ${tm(esc(st.track))}</span><small>${esc(st.source)}</small></article>`).join('')}</div>
 <section class="table-wrap" tabindex="0" aria-label="Station records (scrollable table)"><table class="archive"><thead><tr><th scope="col">Station</th><th scope="col">Country</th><th scope="col">Track</th><th scope="col">Record</th></tr></thead><tbody>
-${tableRows(rec.stations, [r => esc(r.station), r => esc(r.country), r => tm(esc(r.track || '—')), r => `${src(r)}<br>${verify(r.verified)}`])}
+${tableRows(rec.stations, [r => esc(r.station), r => esc(r.country), r => tm(esc(r.track || '—')), r => `${src(r)}<br>${verify(r.verified, !!r.url)}`])}
 </tbody></table></section>`, 'st-title')}
-${section('', 'metrics', `${head('Reported figures', 'Radio Monitoring and Playlists', 'm-title', 'Figures reported by the artist from monitoring services. They are shown separately because the services overlap.')}
+${section('', 'metrics', `${head('Figures', 'Radio Monitoring', 'm-title', 'Each figure comes from one report and covers its own period. They are not added together.')}
 <div class="metric-row">${rec.metrics.map(m => `<div class="metric" data-reveal><b>${m.value}</b><span>${m.label}</span><small>${m.source}</small></div>`).join('')}</div>
-<p class="note" data-mt="30"><strong>How to read these numbers.</strong> Each figure comes from one service and covers its own period. They are artist-reported until the original report is published here, and they should not be compared with national commercial chart positions.</p>`, 'm-title')}
+<p class="note" data-mt="30"><strong>How to read these numbers.</strong> Mediabase tracks spins on monitored U.S. commercial stations; NACC reports cover college and community radio; WARM monitors international broadcasts. The reports behind the first three figures are held by the artist and can be shared on request. None of them is a national commercial chart position.</p>`, 'm-title')}
 `);
 
 const press = page({ path: '/recognition/press/', title: 'Press & Media | CR Srikanth', desc: 'Music journalism, interviews, podcasts and literary publications about and by CR Srikanth, with outlet, date and original links.', og: 'og-home.jpg' }, `

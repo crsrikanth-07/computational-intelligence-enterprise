@@ -46,6 +46,15 @@
    "home": true
   },
   {
+   "date": "April 2025",
+   "type": "Radio",
+   "title": "FM Airplay in Chicago, and 19 College Radio Adds",
+   "text": "“Dancing in the Dark” was tracked by Mediabase on WCPY-FM Dance Factory, Chicago, with 57 spins between 18 April and 3 May 2025. In the same month the Official Electronic EP was added by 19 NACC-reporting college stations in the United States and Canada, reaching medium rotation at WDWN, WSUW and KXSU.",
+   "url": "/recognition/radio-charts/",
+   "cta": "See the radio archive",
+   "home": false
+  },
+  {
    "date": "May 2025",
    "type": "Music journalism",
    "title": "EARMILK on “Dancing in the Dark”",
@@ -153,7 +162,82 @@
  ],
  "stations": [
   {
-   "station": "Formula Indie (radio show of the European Indie Music Network)",
+   "station": "WCPY-FM, Dance Factory",
+   "country": "United States · Chicago (market #3)",
+   "track": "Dancing in the Dark",
+   "source": "Mediabase Song Analysis Report: 57 spins, 18 April to 3 May 2025, 4 a day in overnight and evening dayparts",
+   "verified": true,
+   "prominent": true,
+   "detail": "Mediabase, 4 May 2025"
+  },
+  {
+   "station": "WDWN",
+   "country": "United States · Auburn, NY (college)",
+   "track": "Official Electronic EP",
+   "source": "Planetary Group NACC report: added 8 April 2025, medium rotation by 30 April",
+   "verified": true,
+   "prominent": true
+  },
+  {
+   "station": "WSUW",
+   "country": "United States · Whitewater, WI (college)",
+   "track": "Official Electronic EP",
+   "source": "NACC report: added 8 April 2025, medium rotation by 30 April",
+   "verified": true,
+   "prominent": true
+  },
+  {
+   "station": "KXSU",
+   "country": "United States · Seattle, WA (college)",
+   "track": "Official Electronic EP",
+   "source": "NACC report: added 15 April 2025, medium rotation by 30 April",
+   "verified": true,
+   "prominent": true
+  },
+  {
+   "station": "WODU Studios",
+   "country": "United States · Norfolk, VA (college)",
+   "track": "Official Electronic EP",
+   "source": "NACC report: added 8 April 2025, light rotation",
+   "verified": true
+  },
+  {
+   "station": "CJLO",
+   "country": "Canada · Montreal (college)",
+   "track": "Official Electronic EP",
+   "source": "NACC report: added 8 April 2025",
+   "verified": true
+  },
+  {
+   "station": "WRRC",
+   "country": "United States · Lawrenceville, NJ (college)",
+   "track": "Official Electronic EP",
+   "source": "NACC report: added 15 April 2025, light rotation",
+   "verified": true
+  },
+  {
+   "station": "WSPN",
+   "country": "United States · Saratoga Springs, NY (college)",
+   "track": "Official Electronic EP",
+   "source": "NACC report: added 21 April 2025, light rotation",
+   "verified": true
+  },
+  {
+   "station": "KWVA",
+   "country": "United States · Eugene, OR (college)",
+   "track": "Official Electronic EP",
+   "source": "NACC report: added 21 April 2025",
+   "verified": true
+  },
+  {
+   "station": "WMUL, WSOE, WWUH, KRUX, CFRU, CHMR, CJUM/UMFM, WIUP, WAHS, M3 Radio",
+   "country": "United States and Canada (college and digital)",
+   "track": "Official Electronic EP",
+   "source": "NACC reports: added between 8 and 22 April 2025",
+   "verified": true
+  },
+  {
+   "station": "Formula Indie (European Indie Music Network)",
    "country": "Europe",
    "track": "Dancing in the Dark, Never Let You Go, Don't Waste My Time, Lets Dance and others",
    "url": "https://euroindiemusic.info/2025/12/22/formula-indie-schedule-from-22nd-28th-to-december/",
@@ -169,56 +253,40 @@
    "verified": true
   },
   {
-   "station": "Puls FM Borås",
+   "station": "Puls FM Borås and Puls FM Varberg",
    "country": "Sweden",
-   "source": "Station log to be added",
+   "track": "—",
+   "source": "WARM monitoring (about 200 spins, artist-reported); station log to be added",
    "verified": false
   },
   {
-   "station": "Puls FM Varberg",
-   "country": "Sweden",
-   "source": "Station log to be added",
-   "verified": false
-  },
-  {
-   "station": "The Sound Lab",
-   "country": "United Kingdom",
-   "source": "Station log to be added",
-   "verified": false
-  },
-  {
-   "station": "Click Your Radio Hits",
-   "country": "Canada",
-   "source": "Station log to be added",
-   "verified": false
-  },
-  {
-   "station": "MGZC Radio",
-   "country": "United States",
-   "source": "Station log to be added",
+   "station": "The Sound Lab, Click Your Radio Hits, MGZC Radio",
+   "country": "UK, Canada, USA",
+   "track": "—",
+   "source": "Station logs to be added",
    "verified": false
   }
  ],
  "metrics": [
   {
-   "value": "100+",
-   "label": "FM spins tracked by Mediabase",
-   "source": "Artist-reported · Mediabase"
+   "value": "57",
+   "label": "Mediabase-tracked spins of Dancing in the Dark on WCPY-FM Chicago in 16 days",
+   "source": "Mediabase Song Analysis Report, 18 Apr to 3 May 2025"
+  },
+  {
+   "value": "19",
+   "label": "NACC-reporting college stations that added the Official Electronic EP in April 2025",
+   "source": "Planetary Group NACC reports, 9 to 30 April 2025"
+  },
+  {
+   "value": "3",
+   "label": "college stations in medium rotation by 30 April 2025: WDWN, WSUW, KXSU",
+   "source": "Planetary Group NACC report, 30 April 2025"
   },
   {
    "value": "2,000+",
-   "label": "international plays reported by WARM",
+   "label": "international radio plays reported by WARM over 12 months, across 40 countries",
    "source": "Artist-reported · WARM"
-  },
-  {
-   "value": "40+",
-   "label": "college radio stations (NACC-reporting)",
-   "source": "Artist-reported · NACC reporting"
-  },
-  {
-   "value": "30+",
-   "label": "radio station adds",
-   "source": "Artist-reported"
   }
  ],
  "pressGroups": [

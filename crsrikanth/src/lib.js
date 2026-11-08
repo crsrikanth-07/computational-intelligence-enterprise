@@ -43,7 +43,7 @@ function head({ title, desc, path, og = 'og-home.jpg', ld = [] }) {
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,300&family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@400;500;700&family=Spectral:ital,wght@0,300;0,400;1,300&display=swap">
 <link rel="stylesheet" href="/assets/css/site.css">
 <link rel="stylesheet" href="/assets/css/themes.css">
 <script src="/assets/js/site.js" defer></script>
@@ -211,6 +211,6 @@ const milestone = m => `<article class="milestone" data-reveal>
   </div>
 </article>`;
 
-const verify = ok => ok ? '<span class="verify verify--ok">Source linked</span>' : '<span class="verify verify--rep">Artist-reported</span>';
+const verify = (ok, hasUrl = true) => ok ? (hasUrl ? '<span class="verify verify--ok">Source linked</span>' : '<span class="verify verify--ok">Report on file</span>') : '<span class="verify verify--rep">Artist-reported</span>';
 
 module.exports = { concert, spotlight, playlist, SITE, esc, raw, tm, MONOGRAM, ARROW, EXT, NAV, PERSON, head, header, footer, page, arrow, chip, kicker, phero, release, video, book, bookCover, milestone, verify };

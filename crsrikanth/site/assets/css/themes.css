@@ -108,3 +108,188 @@ html[data-theme="ocean"] .product__visual figcaption { border-top-color: rgba(14
 html[data-theme="ocean"] .chip--status { border-color: rgba(143, 224, 211, .45); }
 html[data-theme="ocean"] .phero--violet { background: radial-gradient(70% 90% at 90% 10%, rgba(143, 224, 211, .3), transparent 60%), linear-gradient(180deg, #05212A, #0E3E49); }
 html[data-theme="ocean"] .world--words { background: #F2F1E8; }
+
+/* =====================================================================================
+   ATELIER: a composer's desk. Warm parchment, oxblood and bottle-green ink, a visible
+   hand-ruled grid, Fraunces headings with a soft italic. Light by default; deep ink bands.
+   ===================================================================================== */
+html[data-theme="atelier"] {
+  --night: #F1E9D8; --night-2: #E9DFCB; --slate: #FBF6EA; --slate-2: #F3EAD6;
+  --rule: rgba(43, 32, 24, .18); --rule-2: rgba(43, 32, 24, .32);
+  --ivory: #2B2018; --ivory-2: #5A4A3C; --muted: #857462;
+  --gold: #8C2E2A; --gold-2: #B34A3F; --violet: #1F5C4A;
+  --serif: "Fraunces", "Cormorant Garamond", Georgia, serif;
+  --sans: "Spectral", Georgia, serif;
+  --radius: 4px;
+  --l1: 140, 46, 42; --l2: 43, 32, 24; --l3: 31, 92, 74; --star: 43, 32, 24; --glow: 31, 92, 74;
+}
+html[data-theme="atelier"] body { background: var(--night); color: var(--ivory); background-image: repeating-linear-gradient(0deg, transparent 0 27px, rgba(43, 32, 24, .045) 27px 28px); }
+html[data-theme="atelier"] ::selection { background: rgba(140, 46, 42, .22); }
+html[data-theme="atelier"] h1, html[data-theme="atelier"] .h1, html[data-theme="atelier"] h2, html[data-theme="atelier"] .h2 { font-weight: 300; letter-spacing: -.02em; font-variation-settings: "opsz" 144; }
+html[data-theme="atelier"] em, html[data-theme="atelier"] .hero__name .thin, html[data-theme="atelier"] .world--words .world__title { font-family: "Instrument Serif", "Fraunces", serif; font-style: italic; font-weight: 400; }
+html[data-theme="atelier"] .kicker { font-family: "Space Grotesk", sans-serif; letter-spacing: .3em; }
+html[data-theme="atelier"] .kicker::before { background: var(--gold); opacity: 1; }
+html[data-theme="atelier"] .nav a, html[data-theme="atelier"] .btn, html[data-theme="atelier"] .chip, html[data-theme="atelier"] .menu-btn, html[data-theme="atelier"] .brand__name, html[data-theme="atelier"] .hero__roles, html[data-theme="atelier"] .verify, html[data-theme="atelier"] .archive thead th, html[data-theme="atelier"] .book__meta, html[data-theme="atelier"] .milestone__date, html[data-theme="atelier"] .press__outlet, html[data-theme="atelier"] .pub__outlet, html[data-theme="atelier"] .world__label, html[data-theme="atelier"] .foot h2 { font-family: "Space Grotesk", sans-serif; }
+html[data-theme="atelier"] .hero { background: radial-gradient(70% 70% at 90% 20%, rgba(31, 92, 74, .16), transparent 60%), radial-gradient(60% 60% at 10% 90%, rgba(140, 46, 42, .14), transparent 60%), #F1E9D8; }
+html[data-theme="atelier"] .hero__veil { background: linear-gradient(90deg, rgba(241, 233, 216, .9) 0%, rgba(241, 233, 216, .4) 45%, rgba(241, 233, 216, 0) 100%); }
+@media (max-width: 760px) { html[data-theme="atelier"] .hero__veil { background: linear-gradient(180deg, rgba(241, 233, 216, .1) 0%, rgba(241, 233, 216, .85) 55%, rgba(241, 233, 216, .96) 100%); } }
+html[data-theme="atelier"] .hero__name { font-weight: 300; letter-spacing: -.02em; }
+html[data-theme="atelier"] .hero__name .thin { color: var(--gold); }
+html[data-theme="atelier"] .hero__roles li + li::before { color: var(--gold); }
+html[data-theme="atelier"] .phero { background: radial-gradient(70% 90% at 90% 0%, rgba(140, 46, 42, .1), transparent 60%), linear-gradient(180deg, #EFE6D3, #F1E9D8); }
+html[data-theme="atelier"] .phero--violet { background: radial-gradient(70% 90% at 90% 0%, rgba(31, 92, 74, .16), transparent 60%), linear-gradient(180deg, #EFE6D3, #F1E9D8); }
+html[data-theme="atelier"] .phero--violet .kicker { color: var(--violet); }
+html[data-theme="atelier"] .section--slate { background: #E9DFCB; }
+html[data-theme="atelier"] .section--paper { background: #FBF6EA; }
+html[data-theme="atelier"] .site-header.is-solid { background: rgba(241, 233, 216, .9); border-bottom-color: var(--rule); }
+html[data-theme="atelier"] .sheet { background: rgba(241, 233, 216, .98); }
+html[data-theme="atelier"] .menu-btn, html[data-theme="atelier"] .btn--ghost { background: transparent; border-color: var(--ivory); color: var(--ivory); }
+html[data-theme="atelier"] .btn--gold { background: var(--gold); color: #FBF6EA; box-shadow: none; }
+html[data-theme="atelier"] .btn--gold:hover { background: var(--gold-2); }
+html[data-theme="atelier"] .btn--violet { background: var(--violet); color: #FBF6EA; box-shadow: none; }
+html[data-theme="atelier"] .btn, html[data-theme="atelier"] .chip { border-radius: 2px; }
+html[data-theme="atelier"] .card, html[data-theme="atelier"] .dimension, html[data-theme="atelier"] .spotlight, html[data-theme="atelier"] .playlist, html[data-theme="atelier"] .duo__panel, html[data-theme="atelier"] .metric, html[data-theme="atelier"] .note, html[data-theme="atelier"] .concert, html[data-theme="atelier"] .feature, html[data-theme="atelier"] .pub, html[data-theme="atelier"] .world { background: #FBF6EA; border: 1px solid var(--ivory); border-radius: 4px; box-shadow: 4px 4px 0 var(--ivory); }
+html[data-theme="atelier"] .world:hover { box-shadow: 8px 8px 0 var(--gold); }
+html[data-theme="atelier"] .world--music { background: #FBF6EA; color: var(--ivory); }
+html[data-theme="atelier"] .world--music .world__label, html[data-theme="atelier"] .world--music .arrow { color: var(--gold); }
+html[data-theme="atelier"] .world--music .world__text, html[data-theme="atelier"] .world--tech .world__text { color: var(--ivory-2); }
+html[data-theme="atelier"] .world--words { background: var(--ivory); color: #FBF6EA; border-color: var(--ivory); }
+html[data-theme="atelier"] .world--words .world__label, html[data-theme="atelier"] .world--words .arrow { color: #E9C46A; }
+html[data-theme="atelier"] .world--words .world__text { color: #D9CFBE; }
+html[data-theme="atelier"] .world--tech { background: #FBF6EA; color: var(--ivory); }
+html[data-theme="atelier"] .world--tech .world__label, html[data-theme="atelier"] .world--tech .arrow { color: var(--violet); }
+html[data-theme="atelier"] .world--tech .world__title { font-family: "Space Grotesk", sans-serif; }
+html[data-theme="atelier"] .release figure, html[data-theme="atelier"] .video__frame, html[data-theme="atelier"] .spotlight__art, html[data-theme="atelier"] .book__cover, html[data-theme="atelier"] .product__visual { border-radius: 2px; }
+html[data-theme="atelier"] .input { background: #FBF6EA; border-color: var(--ivory); border-radius: 2px; color: var(--ivory); }
+html[data-theme="atelier"] select.input option { background: #FBF6EA; }
+html[data-theme="atelier"] .verify--ok { color: var(--violet); } html[data-theme="atelier"] .verify--rep { color: var(--gold); }
+html[data-theme="atelier"] .form__msg.ok { color: var(--violet); } html[data-theme="atelier"] .form__msg.err { color: var(--gold); }
+html[data-theme="atelier"] .milestone::before { background: var(--night); border-color: var(--gold); }
+html[data-theme="atelier"] .timeline::before { background: var(--ivory); }
+/* Ink bands: music section, tech pages and footer go deep ink */
+html[data-theme="atelier"] .section--ink, html[data-theme="atelier"] .site-footer, html[data-theme="atelier"] .tech, html[data-theme="atelier"] .finale {
+  --night: #1E1812; --slate: #2A2219; --rule: rgba(241, 233, 216, .16); --rule-2: rgba(241, 233, 216, .3);
+  --ivory: #F1E9D8; --ivory-2: #CFC3AE; --muted: #9D907C; --gold: #E9C46A; --gold-2: #C9A24A; --violet: #7FC7AA;
+  background: #1E1812; color: var(--ivory);
+}
+html[data-theme="atelier"] .section--ink .card, html[data-theme="atelier"] .section--ink .spotlight, html[data-theme="atelier"] .section--ink .concert, html[data-theme="atelier"] .tech .card, html[data-theme="atelier"] .tech .feature, html[data-theme="atelier"] .tech .note { background: #2A2219; border-color: var(--rule-2); box-shadow: 4px 4px 0 rgba(241, 233, 216, .18); }
+html[data-theme="atelier"] .section--ink .btn--gold, html[data-theme="atelier"] .finale .btn--gold { background: #E9C46A; color: #1E1812; }
+html[data-theme="atelier"] .section--ink .btn--ghost, html[data-theme="atelier"] .finale .btn--ghost, html[data-theme="atelier"] .tech .btn--ghost { border-color: var(--ivory); color: var(--ivory); }
+html[data-theme="atelier"] .tech .prompt { background: #15110C; color: #F1E9D8; border-color: var(--rule-2); }
+html[data-theme="atelier"] .tech .product__visual { background: #15110C; border-color: var(--rule-2); box-shadow: 4px 4px 0 rgba(241, 233, 216, .18); }
+html[data-theme="atelier"] .tech .status { border-color: var(--violet); background: rgba(127, 199, 170, .1); color: var(--ivory); }
+html[data-theme="atelier"] .tech .status::before { background: var(--violet); box-shadow: 0 0 0 4px rgba(127, 199, 170, .2); }
+
+/* =====================================================================================
+   AURORA: a printed poster. Hot coral and acid lime on dark forest, big Space Grotesk
+   headlines, hard edges, hairline frames, dotted paper texture.
+   ===================================================================================== */
+html[data-theme="aurora"] {
+  --ink: #0B1A14; --night: #10231B; --night-2: #142B22; --slate: #193429; --slate-2: #1F3F32;
+  --rule: rgba(236, 245, 229, .16); --rule-2: rgba(236, 245, 229, .3);
+  --ivory: #ECF5E5; --ivory-2: #C4D3BC; --muted: #8FA48A;
+  --gold: #D7F75B; --gold-2: #B8D93E; --violet: #FF6A4D;
+  --serif: "Space Grotesk", "Inter", sans-serif; --sans: "Inter", sans-serif;
+  --radius: 0px;
+  --l1: 215, 247, 91; --l2: 236, 245, 229; --l3: 255, 106, 77; --star: 215, 247, 91; --glow: 255, 106, 77;
+}
+html[data-theme="aurora"] body { background: var(--night); background-image: radial-gradient(rgba(236, 245, 229, .09) 1px, transparent 1px); background-size: 22px 22px; }
+html[data-theme="aurora"] h1, html[data-theme="aurora"] .h1, html[data-theme="aurora"] h2, html[data-theme="aurora"] .h2, html[data-theme="aurora"] h3, html[data-theme="aurora"] .h3, html[data-theme="aurora"] h4 { font-weight: 700; letter-spacing: -.04em; font-style: normal; }
+html[data-theme="aurora"] em { font-style: normal; color: var(--gold); text-decoration: underline; text-decoration-thickness: .08em; text-underline-offset: .12em; text-decoration-color: var(--violet); }
+html[data-theme="aurora"] .hero__name { font-weight: 700; letter-spacing: -.05em; text-transform: uppercase; }
+html[data-theme="aurora"] .hero__name .thin { font-style: normal; font-weight: 700; color: var(--gold); -webkit-text-stroke: 0; }
+html[data-theme="aurora"] .hero__line { font-weight: 500; }
+html[data-theme="aurora"] .hero { background: radial-gradient(60% 55% at 85% 80%, rgba(255, 106, 77, .35), transparent 62%), radial-gradient(50% 45% at 70% 10%, rgba(215, 247, 91, .22), transparent 60%), linear-gradient(180deg, #0B1A14, #163026); }
+html[data-theme="aurora"] .hero__veil { background: linear-gradient(90deg, rgba(11, 26, 20, .85) 0%, rgba(11, 26, 20, .35) 45%, rgba(11, 26, 20, 0) 100%); }
+html[data-theme="aurora"] .phero { background: radial-gradient(70% 90% at 90% 0%, rgba(255, 106, 77, .28), transparent 60%), linear-gradient(180deg, #0B1A14, #163026); }
+html[data-theme="aurora"] .phero--violet { background: radial-gradient(70% 90% at 90% 0%, rgba(215, 247, 91, .26), transparent 60%), linear-gradient(180deg, #0B1A14, #163026); }
+html[data-theme="aurora"] .phero--violet .kicker, html[data-theme="aurora"] .world--tech .world__label, html[data-theme="aurora"] .world--tech .arrow { color: var(--violet); }
+html[data-theme="aurora"] .section--slate { background: #142B22; } html[data-theme="aurora"] .section--ink { background: #0B1A14; }
+html[data-theme="aurora"] .section--paper { background: #ECF5E5; color: #0B1A14; }
+html[data-theme="aurora"] .section--paper .kicker, html[data-theme="aurora"] .section--paper .arrow, html[data-theme="aurora"] .section--paper .gold { color: #7A2F1E; }
+html[data-theme="aurora"] .section--paper .lead, html[data-theme="aurora"] .section--paper .muted { color: #3E5247; }
+html[data-theme="aurora"] .site-footer { background: #0B1A14; }
+html[data-theme="aurora"] .site-header.is-solid { background: rgba(11, 26, 20, .85); }
+html[data-theme="aurora"] .sheet { background: rgba(11, 26, 20, .97); }
+html[data-theme="aurora"] .btn, html[data-theme="aurora"] .chip, html[data-theme="aurora"] .card, html[data-theme="aurora"] .world, html[data-theme="aurora"] .dimension, html[data-theme="aurora"] .spotlight, html[data-theme="aurora"] .playlist, html[data-theme="aurora"] .duo__panel, html[data-theme="aurora"] .metric, html[data-theme="aurora"] .note, html[data-theme="aurora"] .concert, html[data-theme="aurora"] .feature, html[data-theme="aurora"] .pub, html[data-theme="aurora"] .input, html[data-theme="aurora"] .release figure, html[data-theme="aurora"] .video__frame, html[data-theme="aurora"] .spotlight__art, html[data-theme="aurora"] .product__visual, html[data-theme="aurora"] .book__cover, html[data-theme="aurora"] .playlist figure, html[data-theme="aurora"] .sp-embed { border-radius: 0; }
+html[data-theme="aurora"] .btn { text-transform: uppercase; letter-spacing: .12em; font-size: 13px; }
+html[data-theme="aurora"] .btn--gold { background: var(--gold); color: #0B1A14; box-shadow: none; }
+html[data-theme="aurora"] .btn--gold:hover { background: var(--violet); color: #0B1A14; }
+html[data-theme="aurora"] .btn--violet { background: var(--violet); color: #0B1A14; box-shadow: none; }
+html[data-theme="aurora"] .btn--ghost { border-color: var(--ivory); background: transparent; }
+html[data-theme="aurora"] .card, html[data-theme="aurora"] .dimension, html[data-theme="aurora"] .spotlight, html[data-theme="aurora"] .playlist, html[data-theme="aurora"] .duo__panel, html[data-theme="aurora"] .metric, html[data-theme="aurora"] .concert, html[data-theme="aurora"] .feature { background: transparent; border: 1px solid var(--rule-2); }
+html[data-theme="aurora"] .world { border: 1px solid var(--rule-2); }
+html[data-theme="aurora"] .world--music { background: linear-gradient(180deg, #1F3F32, #10231B); color: var(--ivory); }
+html[data-theme="aurora"] .world--music .world__label, html[data-theme="aurora"] .world--music .arrow { color: var(--gold); }
+html[data-theme="aurora"] .world--music .world__text, html[data-theme="aurora"] .world--tech .world__text { color: var(--ivory-2); }
+html[data-theme="aurora"] .world--words { background: var(--gold); color: #0B1A14; border-color: var(--gold); }
+html[data-theme="aurora"] .world--words .world__label, html[data-theme="aurora"] .world--words .arrow { color: #0B1A14; }
+html[data-theme="aurora"] .world--words .world__text { color: #2F3F2A; }
+html[data-theme="aurora"] .world--words .world__title { font-style: normal; }
+html[data-theme="aurora"] .world--tech { background: linear-gradient(180deg, #3A1D17, #10231B); }
+html[data-theme="aurora"] .pub { background: #FFFFFF; border: 1px solid #0B1A14; box-shadow: 8px 8px 0 #0B1A14; }
+html[data-theme="aurora"] .btn--ink { background: #0B1A14; color: var(--gold); }
+html[data-theme="aurora"] .kicker::before { width: 40px; height: 2px; background: var(--violet); opacity: 1; }
+html[data-theme="aurora"] .input { background: rgba(11, 26, 20, .6); border-color: var(--rule-2); }
+html[data-theme="aurora"] .status { border-color: var(--violet); background: rgba(255, 106, 77, .1); color: var(--ivory); border-radius: 0; }
+html[data-theme="aurora"] .status::before { background: var(--violet); box-shadow: 0 0 0 4px rgba(255, 106, 77, .2); }
+html[data-theme="aurora"] .prompt { background: #0B1A14; border-color: var(--rule-2); color: var(--gold); border-radius: 0; }
+html[data-theme="aurora"] .product__visual { border-color: var(--rule-2); background: #0B1A14; box-shadow: none; }
+html[data-theme="aurora"] .milestone::before { border-color: var(--gold); background: var(--night); border-radius: 0; }
+html[data-theme="aurora"] .principles li::before, html[data-theme="aurora"] .dimension__n { color: var(--violet); }
+html[data-theme="aurora"] .verify--rep { color: var(--violet); }
+
+/* =====================================================================================
+   NOCTURNE: a concert hall after the lights go down. Near-black with a single warm
+   spotlight, Spectral light serif, oversized italic numerals, thin brass rules.
+   ===================================================================================== */
+html[data-theme="nocturne"] {
+  --ink: #070605; --night: #0C0A09; --night-2: #121010; --slate: #171412; --slate-2: #1E1A17;
+  --rule: rgba(214, 196, 170, .14); --rule-2: rgba(214, 196, 170, .3);
+  --ivory: #F3EAD9; --ivory-2: #CDBFA8; --muted: #8E8371;
+  --gold: #C9A96E; --gold-2: #A88646; --violet: #D98B5F;
+  --serif: "Spectral", "Cormorant Garamond", Georgia, serif; --sans: "Inter", sans-serif;
+  --radius: 2px;
+  --l1: 201, 169, 110; --l2: 243, 234, 217; --l3: 217, 139, 95; --star: 243, 234, 217; --glow: 217, 139, 95;
+}
+html[data-theme="nocturne"] body { background: var(--night); }
+html[data-theme="nocturne"] h1, html[data-theme="nocturne"] .h1, html[data-theme="nocturne"] h2, html[data-theme="nocturne"] .h2 { font-weight: 300; letter-spacing: -.01em; }
+html[data-theme="nocturne"] em { font-family: "Instrument Serif", "Spectral", serif; font-style: italic; }
+html[data-theme="nocturne"] .hero { background: radial-gradient(45% 60% at 72% 42%, rgba(201, 169, 110, .34), rgba(201, 169, 110, .06) 45%, transparent 70%), radial-gradient(80% 60% at 50% 110%, rgba(217, 139, 95, .14), transparent 60%), #070605; }
+html[data-theme="nocturne"] .hero__veil { background: linear-gradient(90deg, rgba(7, 6, 5, .85) 0%, rgba(7, 6, 5, .3) 45%, rgba(7, 6, 5, 0) 100%); }
+html[data-theme="nocturne"] .hero__name { font-weight: 300; letter-spacing: .04em; }
+html[data-theme="nocturne"] .hero__name .thin { font-family: "Instrument Serif", serif; font-weight: 400; color: var(--gold); }
+html[data-theme="nocturne"] .phero { background: radial-gradient(50% 80% at 85% 10%, rgba(201, 169, 110, .22), transparent 60%), #070605; }
+html[data-theme="nocturne"] .phero--violet { background: radial-gradient(50% 80% at 85% 10%, rgba(217, 139, 95, .26), transparent 60%), #070605; }
+html[data-theme="nocturne"] .phero--violet .kicker, html[data-theme="nocturne"] .world--tech .world__label, html[data-theme="nocturne"] .world--tech .arrow { color: var(--violet); }
+html[data-theme="nocturne"] .section--slate { background: #121010; } html[data-theme="nocturne"] .section--ink { background: #070605; }
+html[data-theme="nocturne"] .section--paper { background: #F3EAD9; color: #1A1511; }
+html[data-theme="nocturne"] .section--paper .kicker, html[data-theme="nocturne"] .section--paper .arrow, html[data-theme="nocturne"] .section--paper .gold { color: #8A6A32; }
+html[data-theme="nocturne"] .site-footer { background: #070605; }
+html[data-theme="nocturne"] .site-header.is-solid { background: rgba(7, 6, 5, .85); }
+html[data-theme="nocturne"] .sheet { background: rgba(7, 6, 5, .97); }
+html[data-theme="nocturne"] .kicker { color: var(--gold); letter-spacing: .34em; font-weight: 500; }
+html[data-theme="nocturne"] .kicker::before { width: 56px; background: var(--gold); opacity: .6; }
+html[data-theme="nocturne"] .btn--gold { background: transparent; color: var(--gold); border: 1px solid var(--gold); box-shadow: none; border-radius: 0; }
+html[data-theme="nocturne"] .btn--gold:hover { background: var(--gold); color: #070605; }
+html[data-theme="nocturne"] .btn--ghost { border-color: var(--rule-2); background: transparent; border-radius: 0; }
+html[data-theme="nocturne"] .btn--violet { background: transparent; color: var(--violet); border: 1px solid var(--violet); box-shadow: none; border-radius: 0; }
+html[data-theme="nocturne"] .chip { border-radius: 0; }
+html[data-theme="nocturne"] .card, html[data-theme="nocturne"] .dimension, html[data-theme="nocturne"] .spotlight, html[data-theme="nocturne"] .playlist, html[data-theme="nocturne"] .duo__panel, html[data-theme="nocturne"] .metric, html[data-theme="nocturne"] .note, html[data-theme="nocturne"] .concert, html[data-theme="nocturne"] .feature { background: transparent; border: 0; border-top: 1px solid var(--rule-2); border-radius: 0; padding-left: 0; padding-right: 0; box-shadow: none; }
+html[data-theme="nocturne"] .world { border-radius: 0; border: 1px solid var(--rule-2); }
+html[data-theme="nocturne"] .world--music { background: radial-gradient(90% 60% at 50% 0%, rgba(201, 169, 110, .28), transparent 65%), #0C0A09; }
+html[data-theme="nocturne"] .world--words { background: #F3EAD9; color: #1A1511; border-color: transparent; }
+html[data-theme="nocturne"] .world--words .world__label, html[data-theme="nocturne"] .world--words .arrow { color: #8A6A32; }
+html[data-theme="nocturne"] .world--tech { background: radial-gradient(90% 60% at 50% 0%, rgba(217, 139, 95, .26), transparent 65%), #0C0A09; }
+html[data-theme="nocturne"] .world--tech .world__title { font-family: var(--serif); font-weight: 300; }
+html[data-theme="nocturne"] .world--tech .world__text, html[data-theme="nocturne"] .world--music .world__text { color: var(--ivory-2); }
+html[data-theme="nocturne"] .pub { background: #FBF5EA; border: 0; box-shadow: none; border-top: 2px solid #1A1511; border-radius: 0; }
+html[data-theme="nocturne"] .release figure, html[data-theme="nocturne"] .video__frame, html[data-theme="nocturne"] .spotlight__art, html[data-theme="nocturne"] .product__visual, html[data-theme="nocturne"] .book__cover, html[data-theme="nocturne"] .playlist figure { border-radius: 0; }
+html[data-theme="nocturne"] .input { background: #0C0A09; border-color: var(--rule-2); border-radius: 0; }
+html[data-theme="nocturne"] .status { border-radius: 0; border-color: var(--violet); background: transparent; color: var(--ivory); }
+html[data-theme="nocturne"] .status::before { background: var(--violet); box-shadow: 0 0 0 4px rgba(217, 139, 95, .2); }
+html[data-theme="nocturne"] .prompt { background: #070605; border-color: var(--rule-2); color: var(--ivory); border-radius: 0; }
+html[data-theme="nocturne"] .product__visual { background: #070605; border-color: var(--rule-2); box-shadow: none; }
+html[data-theme="nocturne"] .milestone::before { background: #0C0A09; border-color: var(--gold); }
+html[data-theme="nocturne"] .milestone__date, html[data-theme="nocturne"] .dimension__n, html[data-theme="nocturne"] .principles li::before { font-family: "Instrument Serif", serif; font-style: italic; font-size: 22px; letter-spacing: 0; text-transform: none; }
+html[data-theme="nocturne"] .verify--ok { color: #9FC7A3; }
