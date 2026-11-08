@@ -18,15 +18,15 @@ $GLOBALS['crs_page_head'] = function () { ?>
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#082C36">
+<meta name="theme-color" content="#F4EFE4">
 <link rel="icon" href="<?php echo esc_url( get_template_directory_uri() ); ?>/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="<?php echo esc_url( get_template_directory_uri() ); ?>/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="<?php echo esc_url( get_template_directory_uri() ); ?>/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap">
-<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/site.css?v=9c0de129">
-<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/themes.css?v=f1af7340">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,300&family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@400;500;700&family=Spectral:ital,wght@0,300;0,400;1,300&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,700;1,6..96,400&family=Cinzel:wght@400;600&family=Archivo:wght@400;500;800;900&family=Manrope:wght@300;400;600&display=swap">
+<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/site.css?v=36277132">
+<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/themes.css?v=20559f0c">
 <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/js/site.js?v=61a35e3d" defer></script>
 <script type="application/ld+json">
 {
@@ -127,6 +127,15 @@ get_header();
     <h3>#6, Euro Indie Music Chart</h3>
     <p>“Lets Dance (VS Pop™)” reached number 6 in week 6 of the weekly Euro Indie Music Chart, published by the European Indie Music Network. Earlier singles reached #6 (“Never Let You Go”, August 2025) and #10 (“Don’t Waste My Time”, December 2025).</p>
     <a class="arrow" href="https://euroindiemusic.info/2026/02/17/euro-indie-music-chart-week-6-26/" target="_blank" rel="noopener">See the chart<span class="visually-hidden"> (opens in a new tab)</span><svg viewBox="0 0 18 18" aria-hidden="true" focusable="false"><path d="M2 9h13M10 4l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a>
+
+  </div>
+</article><article class="milestone" data-reveal>
+  <p class="milestone__date">April 2025</p>
+  <div>
+    <span class="milestone__type">Radio</span>
+    <h3>FM Airplay in Chicago, and 19 College Radio Adds</h3>
+    <p>“Dancing in the Dark” was tracked by Mediabase on WCPY-FM Dance Factory, Chicago, with 57 spins between 18 April and 3 May 2025. In the same month the Official Electronic EP was added by 19 NACC-reporting college stations in the United States and Canada, reaching medium rotation at WDWN, WSUW and KXSU.</p>
+    <a class="arrow" href="/recognition/radio-charts/">See the radio archive<svg viewBox="0 0 18 18" aria-hidden="true" focusable="false"><path d="M2 9h13M10 4l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a>
 
   </div>
 </article><article class="milestone" data-reveal>

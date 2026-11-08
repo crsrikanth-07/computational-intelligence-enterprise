@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html <?php language_attributes(); ?> data-theme="ocean">
+<html <?php language_attributes(); ?> data-theme="modernist">
 <head>
 <?php crs_page_head(); ?>
 <?php wp_head(); ?>

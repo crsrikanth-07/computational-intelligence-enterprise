@@ -426,8 +426,8 @@ html[data-theme="manuscript"] .verify--rep { color: #F2A37A; }
 html[data-theme="modernist"] {
   --night: #F4EFE4; --night-2: #ECE5D6; --slate: #F4EFE4; --slate-2: #E6DECC;
   --rule: rgba(17, 17, 17, .22); --rule-2: #111111;
-  --ivory: #111111; --ivory-2: #3D3A33; --muted: #7A7366;
-  --gold: #E2261C; --gold-2: #B81C14; --violet: #111111;
+  --ivory: #111111; --ivory-2: #3D3A33; --muted: #5F584C;
+  --gold: #C41A12; --gold-2: #9E150E; --violet: #111111; --red-fill: #E2261C;
   --serif: "Archivo", "Inter", sans-serif; --sans: "Archivo", "Inter", sans-serif;
   --radius: 0px;
   --l1: 226, 38, 28; --l2: 17, 17, 17; --l3: 17, 17, 17; --star: 17, 17, 17; --glow: 226, 38, 28;
@@ -438,29 +438,29 @@ html[data-theme="modernist"] h1, html[data-theme="modernist"] .h1, html[data-the
 html[data-theme="modernist"] h3, html[data-theme="modernist"] .h3, html[data-theme="modernist"] h4 { font-weight: 800; letter-spacing: -.02em; text-transform: none; line-height: 1.1; }
 html[data-theme="modernist"] em { font-style: normal; color: var(--gold); }
 html[data-theme="modernist"] .hero { background: var(--night); }
-html[data-theme="modernist"] .hero canvas { opacity: .85; }
+html[data-theme="modernist"] .hero canvas { opacity: 1; filter: contrast(1.25); }
 html[data-theme="modernist"] .hero__veil { background: linear-gradient(90deg, rgba(244, 239, 228, .95) 0%, rgba(244, 239, 228, .5) 45%, rgba(244, 239, 228, 0) 100%); }
 @media (max-width: 760px) { html[data-theme="modernist"] .hero__veil { background: linear-gradient(180deg, rgba(244, 239, 228, .2) 0%, rgba(244, 239, 228, .9) 55%, var(--night) 100%); } }
 html[data-theme="modernist"] .hero__name { font-weight: 900; letter-spacing: -.06em; text-transform: uppercase; }
-html[data-theme="modernist"] .hero__name .thin { font-style: normal; font-weight: 900; color: var(--gold); }
+html[data-theme="modernist"] .hero__name .thin { font-style: normal; font-weight: 900; color: var(--red-fill); }
 html[data-theme="modernist"] .hero__line { font-weight: 500; letter-spacing: -.02em; }
 html[data-theme="modernist"] .hero__roles { font-weight: 700; } html[data-theme="modernist"] .hero__roles li + li::before { color: var(--gold); }
 html[data-theme="modernist"] .phero { background: var(--night); border-bottom: 4px solid var(--ivory); }
 html[data-theme="modernist"] .phero canvas { opacity: .6; }
 html[data-theme="modernist"] .section--slate { background: #ECE5D6; }
-html[data-theme="modernist"] .section--ink { background: #111111; --ivory: #F4EFE4; --ivory-2: #CFC8B8; --muted: #8F887A; --rule: rgba(244, 239, 228, .2); --rule-2: #F4EFE4; color: #F4EFE4; }
+html[data-theme="modernist"] .section--ink { background: #111111; --ivory: #F4EFE4; --ivory-2: #CFC8B8; --muted: #A39C8E; --gold: #FF4A3F; --rule: rgba(244, 239, 228, .2); --rule-2: #F4EFE4; color: #F4EFE4; }
 html[data-theme="modernist"] .section--paper { background: #FFFFFF; color: #111111; }
 html[data-theme="modernist"] .section--paper .kicker, html[data-theme="modernist"] .section--paper .arrow, html[data-theme="modernist"] .section--paper .gold { color: var(--gold); }
 html[data-theme="modernist"] .section--paper .lead, html[data-theme="modernist"] .section--paper .muted { color: #3D3A33; }
-html[data-theme="modernist"] .site-footer { background: var(--gold); --ivory: #FFFFFF; --ivory-2: #FFE6E3; --muted: #FFD0CB; --gold: #111111; --rule: rgba(255, 255, 255, .3); color: #FFFFFF; }
+html[data-theme="modernist"] .site-footer { background: var(--red-fill); --ivory: #FFFFFF; --ivory-2: #FFF1EF; --muted: #FFE6E3; --gold: #111111; --rule: rgba(255, 255, 255, .3); color: #FFFFFF; }
 html[data-theme="modernist"] .site-footer a:hover { color: #111111; }
 html[data-theme="modernist"] .site-header.is-solid { background: rgba(244, 239, 228, .94); border-bottom: 2px solid var(--ivory); }
 html[data-theme="modernist"] .sheet { background: var(--night); }
 html[data-theme="modernist"] .menu-btn { background: transparent; border: 2px solid var(--ivory); border-radius: 0; }
-html[data-theme="modernist"] .kicker { color: var(--ivory); font-weight: 700; letter-spacing: .2em; } html[data-theme="modernist"] .kicker::before { width: 14px; height: 14px; background: var(--gold); opacity: 1; }
+html[data-theme="modernist"] .kicker { color: var(--ivory); font-weight: 700; letter-spacing: .2em; } html[data-theme="modernist"] .kicker::before { width: 14px; height: 14px; background: var(--red-fill); opacity: 1; }
 html[data-theme="modernist"] .btn, html[data-theme="modernist"] .chip, html[data-theme="modernist"] .input, html[data-theme="modernist"] .release figure, html[data-theme="modernist"] .video__frame, html[data-theme="modernist"] .spotlight__art, html[data-theme="modernist"] .product__visual, html[data-theme="modernist"] .book__cover, html[data-theme="modernist"] .playlist figure, html[data-theme="modernist"] .sp-embed, html[data-theme="modernist"] .world, html[data-theme="modernist"] .pub, html[data-theme="modernist"] .card, html[data-theme="modernist"] .dimension, html[data-theme="modernist"] .spotlight, html[data-theme="modernist"] .playlist, html[data-theme="modernist"] .duo__panel, html[data-theme="modernist"] .metric, html[data-theme="modernist"] .note, html[data-theme="modernist"] .concert, html[data-theme="modernist"] .feature, html[data-theme="modernist"] .status, html[data-theme="modernist"] .prompt { border-radius: 0; }
 html[data-theme="modernist"] .btn { text-transform: uppercase; font-weight: 800; letter-spacing: .06em; border-width: 2px; }
-html[data-theme="modernist"] .btn--gold { background: var(--gold); color: #FFFFFF; box-shadow: none; }
+html[data-theme="modernist"] .btn--gold { background: var(--red-fill); color: #FFFFFF; box-shadow: none; }
 html[data-theme="modernist"] .btn--gold:hover { background: var(--ivory); color: var(--night); }
 html[data-theme="modernist"] .btn--ghost { border-color: var(--ivory); color: var(--ivory); background: transparent; }
 html[data-theme="modernist"] .btn--violet { background: var(--ivory); color: var(--night); box-shadow: none; }
@@ -474,7 +474,7 @@ html[data-theme="modernist"] .world { border: 2px solid var(--ivory); }
 html[data-theme="modernist"] .world--music { background: var(--night); color: var(--ivory); }
 html[data-theme="modernist"] .world--music .world__label, html[data-theme="modernist"] .world--music .arrow { color: var(--gold); }
 html[data-theme="modernist"] .world--music .world__text, html[data-theme="modernist"] .world--tech .world__text { color: var(--ivory-2); }
-html[data-theme="modernist"] .world--words { background: var(--gold); color: #FFFFFF; border-color: var(--gold); }
+html[data-theme="modernist"] .world--words { background: var(--red-fill); color: #FFFFFF; border-color: var(--red-fill); }
 html[data-theme="modernist"] .world--words .world__label, html[data-theme="modernist"] .world--words .arrow { color: #FFFFFF; }
 html[data-theme="modernist"] .world--words .world__text { color: #FFE6E3; }
 html[data-theme="modernist"] .world--words .world__title { font-style: normal; }
@@ -490,18 +490,44 @@ html[data-theme="modernist"] .input:focus { box-shadow: none; border-color: var(
 html[data-theme="modernist"] select.input option { background: #FFFFFF; }
 html[data-theme="modernist"] .verify--ok { color: #1F7A3A; } html[data-theme="modernist"] .verify--rep { color: var(--gold); }
 html[data-theme="modernist"] .form__msg.ok { color: #1F7A3A; } html[data-theme="modernist"] .form__msg.err { color: var(--gold); }
-html[data-theme="modernist"] .tech { background: #111111; --ivory: #F4EFE4; --ivory-2: #CFC8B8; --muted: #8F887A; --rule: rgba(244, 239, 228, .2); --rule-2: #F4EFE4; --violet: #E2261C; color: #F4EFE4; }
+html[data-theme="modernist"] .tech { background: #111111; --ivory: #F4EFE4; --ivory-2: #CFC8B8; --muted: #A39C8E; --gold: #FF4A3F; --rule: rgba(244, 239, 228, .2); --rule-2: #F4EFE4; --violet: #FF4A3F; color: #F4EFE4; }
 html[data-theme="modernist"] .tech .card, html[data-theme="modernist"] .tech .feature, html[data-theme="modernist"] .tech .note { border-color: #F4EFE4; }
 html[data-theme="modernist"] .tech .feature p { color: #CFC8B8; }
-html[data-theme="modernist"] .tech .btn--violet { background: var(--gold); color: #FFFFFF; }
+html[data-theme="modernist"] .tech .btn--violet { background: var(--red-fill); color: #FFFFFF; }
 html[data-theme="modernist"] .tech .btn--ghost { border-color: #F4EFE4; color: #F4EFE4; }
 html[data-theme="modernist"] .status { border: 2px solid var(--gold); background: transparent; color: inherit; }
 html[data-theme="modernist"] .status::before { background: var(--gold); box-shadow: none; }
 html[data-theme="modernist"] .prompt { background: #111111; color: #F4EFE4; border: 2px solid #F4EFE4; }
 html[data-theme="modernist"] .product__visual { background: #111111; border: 2px solid #F4EFE4; box-shadow: none; }
 html[data-theme="modernist"] .phero--violet .kicker { color: var(--gold); }
-html[data-theme="modernist"] .milestone::before { background: var(--gold); border-color: var(--gold); border-radius: 0; }
+html[data-theme="modernist"] .milestone::before { background: var(--red-fill); border-color: var(--red-fill); border-radius: 0; }
 html[data-theme="modernist"] .timeline::before { background: var(--ivory); width: 2px; }
 html[data-theme="modernist"] .milestone__date { color: var(--gold); font-weight: 800; }
 html[data-theme="modernist"] .principles li::before, html[data-theme="modernist"] .dimension__n { color: var(--gold); font-weight: 800; }
 html[data-theme="modernist"] .finale { background: var(--night); border-top: 4px solid var(--ivory); }
+
+html[data-theme="modernist"] .section--paper .kicker, html[data-theme="modernist"] .section--paper .arrow, html[data-theme="modernist"] .section--paper .gold { color: var(--gold); }
+html[data-theme="modernist"] .finale .lead, html[data-theme="modernist"] .section--ink .lead { color: #CFC8B8; }
+html[data-theme="modernist"] .quote cite { color: var(--gold); }
+html[data-theme="modernist"] .section--ink .kicker { color: #F4EFE4; }
+html[data-theme="modernist"] .tech .kicker { color: #F4EFE4; }
+/* Modernist: contrast fixes. White on signal red fails for small text, so the footer and the red panel use black for body copy */
+html[data-theme="modernist"] .site-footer { color: #111111; --ivory: #111111; --ivory-2: #111111; --muted: #111111; --gold: #FFFFFF; --rule: rgba(17, 17, 17, .35); }
+html[data-theme="modernist"] .site-footer a { color: #111111; } html[data-theme="modernist"] .site-footer a:hover { color: #FFFFFF; }
+html[data-theme="modernist"] .site-footer .foot__mark i { color: #FFFFFF; }
+html[data-theme="modernist"] .world--words .world__text { color: #111111; }
+html[data-theme="modernist"] .lead { color: #2E2B25; }
+html[data-theme="modernist"] .section--ink .lead, html[data-theme="modernist"] .tech .lead, html[data-theme="modernist"] .finale .lead { color: #E3DDCF; }
+html[data-theme="modernist"] .verify--ok { color: #176A32; }
+html[data-theme="modernist"] .section--ink .verify--ok, html[data-theme="modernist"] .tech .verify--ok { color: #8FD3A8; }
+html[data-theme="modernist"] .section--slate .verify--ok { color: #176A32; }
+/* Modernist: the footer and literature panel use a deeper red so white text passes contrast; finale sits on cream */
+html[data-theme="modernist"] .site-footer { background: #B3160E; color: #FFFFFF; --ivory: #FFFFFF; --ivory-2: #FFFFFF; --muted: #FFE6E3; --gold: #111111; --rule: rgba(255, 255, 255, .35); }
+html[data-theme="modernist"] .site-footer a { color: #FFFFFF; } html[data-theme="modernist"] .site-footer a:hover { color: #111111; }
+html[data-theme="modernist"] .site-footer .foot__mark i { color: #111111; }
+html[data-theme="modernist"] .site-footer .foot__line, html[data-theme="modernist"] .site-footer .foot__base { color: #FFFFFF; }
+html[data-theme="modernist"] .world--words { background: #B3160E; border-color: #B3160E; color: #FFFFFF; }
+html[data-theme="modernist"] .world--words .world__text { color: #FFFFFF; }
+html[data-theme="modernist"] .finale .lead { color: #2E2B25; }
+html[data-theme="modernist"] .site-footer .foot__mark i { color: #FFFFFF; font-weight: 400; }
+html[data-theme="modernist"] .world--tech .world__label, html[data-theme="modernist"] .world--tech .arrow { color: #FF6A60; }

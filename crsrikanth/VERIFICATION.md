@@ -28,12 +28,12 @@ Checked on 7 November 2026 against public sources. **Verified** means the site l
   - Moon Phase Radio Ambient Top 10:
     - "Ghosa (The Call)" #1 on 13 and 20 January 2025.
     - "Abandoned Station" #4 on 27 January 2025 and #7 on 13 April 2026.
-- **Radio:** Formula Indie (European Indie Music Network) show schedules; Celtica Radio featured-artist list (May 2026).
+- **Radio:** Mediabase Song Analysis Reports (WCPY-FM Dance Factory, Chicago: 57 spins of "Dancing in the Dark", 18 April to 3 May 2025) and Planetary Group NACC college-radio reports (19 station adds in April 2025; WDWN, WSUW and KXSU in medium rotation by 30 April), both supplied by the artist and marked "Report on file"; Formula Indie show schedules; Celtica Radio featured-artist list (May 2026).
 - **Press**
   - EARMILK (9 May 2025) and Notion (14 May 2025).
   - Interviews: EyeOnPop (5 March 2026) and European Indie Music Network (29 May 2026).
   - Podcasts: Vigilantes Radio Live! (20 February 2026), Phantom Electric Ghost (8 March 2026) and VHC (Vibes, History & Culture) (9 May 2026), each with its other platforms (Spotify, iHeart, Spreaker, YouTube, Podbean). Maniacal Music Musings (5 June 2026) is left out at your request.
-- **Videos:** YouTube videos on your channels, including "Beneath the Last Autumn Moon" (latest release), plus the URI concert recording from URI Music (shown from 0:00 to 13:00).
+- **Videos:** YouTube videos on your channels, including "Beneath the Last Autumn Moon" (latest release) and "Confusion, Yet Beloved" (Op. 11 No. 27), plus the URI concert recording from URI Music (shown from 0:00 to 13:00). Hope Symphony videos removed at your request.
 - **CuTTI:** text taken from your own description. Both tools are labelled private and in active development.
 
 ## Needs your input before or after launch
@@ -43,8 +43,8 @@ Checked on 7 November 2026 against public sources. **Verified** means the site l
 | 1 | URI Composers' Concert, 25 April 2026 | **Now verified:** linked to the concert recording on URI Music's YouTube channel ("URI Student Composers"); the site plays 0:00 to 13:00 | Nothing more needed. Optionally, the titles of the piano works performed. |
 | 2 | Spotify Local Pulse, San José, "So Lets Dance" | Artist-reported | A screenshot or record with the date and position. |
 | 3 | College radio chart, PRYZM #756 (25 June 2025, unweighted) | Artist-reported | The chart publisher and a link. PRYZM is not on the streaming services under your name. |
-| 4 | Puls FM Borås, Puls FM Varberg, The Sound Lab, Click Your Radio Hits, MGZC Radio | Listed as artist-reported | Station logs, playlists or posts. |
-| 5 | 100+ Mediabase spins, 2,000+ WARM plays, 40+ NACC college stations, 30+ adds | Artist-reported, each with its service | The reports, with dates. |
+| 4 | Puls FM Borås, Puls FM Varberg, The Sound Lab, Click Your Radio Hits, MGZC Radio | Listed as artist-reported | Station logs, playlists or posts (a WARM report would cover Puls FM). |
+| 5 | 2,000+ WARM plays over 12 months | Artist-reported | The WARM report. (Mediabase and NACC figures are now report-backed and shown with their exact numbers.) |
 | 6 | 1,000+ cross-platform playlist placements | Artist-reported, not labelled Spotify-only | Source and date. |
 | 7 | Upcoming100 and MusicsWeek coverage | Not on the site | Links. |
 | 8 | "Souls Festival" (Medium, 2026) | Not on the site | The URL. It would go under author-published stories, separate from the magazines. |

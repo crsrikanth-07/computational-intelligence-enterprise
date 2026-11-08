@@ -7,7 +7,7 @@ for (const [rel, html] of Object.entries(pages)) {
 }
 // Icons from the monogram
 const L = require('./lib.js');
-const icon = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#0A3540"/><g color="#F2EBDD" transform="translate(4 4) scale(.875)">${L.MONOGRAM().replace(/^<svg[^>]*>/, '').replace(/<\/svg>$/, '').replace(/currentColor/g, '#EEF7F3').replace('#D2B26F', '#EACB8A')}</g></svg>`;
+const icon = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" fill="#111111"/><g color="#F2EBDD" transform="translate(4 4) scale(.875)">${L.MONOGRAM().replace(/^<svg[^>]*>/, '').replace(/<\/svg>$/, '').replace(/currentColor/g, '#F4EFE4').replace('#D2B26F', '#E2261C')}</g></svg>`;
 fs.writeFileSync(path.join(out, 'favicon.svg'), icon);
 const urls = Object.keys(pages).filter(r => r !== '404.html').map(r => 'https://crsrikanth.com/' + r.replace(/index\.html$/, ''));
 fs.writeFileSync(path.join(out, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map(u => `  <url><loc>${u}</loc></url>`).join('\n')}\n</urlset>\n`);

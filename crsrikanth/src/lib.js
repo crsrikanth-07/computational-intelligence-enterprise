@@ -21,7 +21,7 @@ function head({ title, desc, path, og = 'og-home.jpg', ld = [] }) {
   const url = SITE + path;
   const graph = { '@context': 'https://schema.org', '@graph': [{ '@type': 'WebPage', '@id': url + '#page', url, name: title, description: desc, inLanguage: 'en', about: { '@id': SITE + '/#person' } }, PERSON, ...ld] };
   return `<!DOCTYPE html>
-<html lang="en" data-theme="ocean">
+<html lang="en" data-theme="modernist">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -37,7 +37,7 @@ function head({ title, desc, path, og = 'og-home.jpg', ld = [] }) {
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#082C36">
+<meta name="theme-color" content="#F4EFE4">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">

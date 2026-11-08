@@ -30,7 +30,7 @@ This is the personal website of CR Srikanth: music, books and stories, CuTTI inn
 
 ## Design
 
-- **Colours:** the Ocean theme by default: deep teal and petrol blue, warm ivory text, champagne gold, and sea-green for technology. Twilight, Ivory & Ink and the original Midnight are also in `site/assets/css/themes.css`; switch by changing `data-theme` in `src/lib.js`.
-- **Type:** Cormorant Garamond for titles and literary text; Inter for the interface.
+- **Colours:** the Modernist theme by default: cream paper, black, one signal red, Archivo headlines, flat colour blocks and square corners. Ocean, Twilight, Ivory & Ink, Atelier, Aurora, Nocturne, Gallery, Manuscript and the original Midnight are also in `site/assets/css/themes.css`; switch by changing `data-theme` in `src/lib.js`.
+- **Type:** Archivo throughout in the Modernist theme (other themes bring their own faces: Cormorant Garamond, Fraunces, Spectral, Bodoni Moda, Space Grotesk, Cinzel).
 - **Hero artwork ("Five Lines"):** five staff lines carry notes, turn into lines of text, then into a sound wave. It is drawn in `site/assets/js/site.js` and stops under reduced motion.
 - **Videos and Spotify players** load only when someone presses play. Nothing autoplays.

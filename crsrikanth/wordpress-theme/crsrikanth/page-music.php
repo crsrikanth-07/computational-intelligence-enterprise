@@ -18,15 +18,15 @@ $GLOBALS['crs_page_head'] = function () { ?>
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#082C36">
+<meta name="theme-color" content="#F4EFE4">
 <link rel="icon" href="<?php echo esc_url( get_template_directory_uri() ); ?>/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="<?php echo esc_url( get_template_directory_uri() ); ?>/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="<?php echo esc_url( get_template_directory_uri() ); ?>/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap">
-<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/site.css?v=9c0de129">
-<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/themes.css?v=f1af7340">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,300&family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@400;500;700&family=Spectral:ital,wght@0,300;0,400;1,300&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,700;1,6..96,400&family=Cinzel:wght@400;600&family=Archivo:wght@400;500;800;900&family=Manrope:wght@300;400;600&display=swap">
+<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/site.css?v=36277132">
+<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/themes.css?v=20559f0c">
 <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/js/site.js?v=61a35e3d" defer></script>
 <script type="application/ld+json">
 {
@@ -202,18 +202,11 @@ get_header();
   <p>Latest release · November 2026</p>
 </article><article class="video" data-reveal>
   <div class="video__frame">
-    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/yt/xWKkfmGU8po.jpg" alt="" loading="lazy" width="480" height="360">
-    <button class="video__play" type="button" data-yt="xWKkfmGU8po" data-title="Hope Symphony, Op. 2: I. Dawn" aria-label="Play Hope Symphony, Op. 2: I. Dawn (loads YouTube)"><span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 3l12 7-12 7z" fill="currentColor"/></svg></span></button>
+    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/yt/VEntql_uF6Q.jpg" alt="" loading="lazy" width="480" height="360">
+    <button class="video__play" type="button" data-yt="VEntql_uF6Q" data-title="Confusion, Yet Beloved, Op. 11 No. 27" aria-label="Play Confusion, Yet Beloved, Op. 11 No. 27 (loads YouTube)"><span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 3l12 7-12 7z" fill="currentColor"/></svg></span></button>
   </div>
-  <h3>Hope Symphony, Op. 2: I. Dawn</h3>
-  <p>Video on YouTube</p>
-</article><article class="video" data-reveal>
-  <div class="video__frame">
-    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/yt/zeVm75EGiys.jpg" alt="" loading="lazy" width="480" height="360">
-    <button class="video__play" type="button" data-yt="zeVm75EGiys" data-title="Hope Symphony, Op. 2: II. Embrace" aria-label="Play Hope Symphony, Op. 2: II. Embrace (loads YouTube)"><span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 3l12 7-12 7z" fill="currentColor"/></svg></span></button>
-  </div>
-  <h3>Hope Symphony, Op. 2: II. Embrace</h3>
-  <p>Video on YouTube</p>
+  <h3>Confusion, Yet Beloved, Op. 11 No. 27</h3>
+  <p>Piano · Video on YouTube</p>
 </article><article class="video" data-reveal>
   <div class="video__frame">
     <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/yt/pa2iVRmiogM.jpg" alt="" loading="lazy" width="480" height="360">
