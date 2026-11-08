@@ -195,7 +195,7 @@ function crs_handle_form() {
 		if ( crs_wants_json() ) { wp_send_json( array( 'ok' => false, 'error' => 'name and email are required' ), 400 ); }
 		wp_safe_redirect( add_query_arg( 'sent', '0', wp_get_referer() ? wp_get_referer() : home_url( '/contact/' ) ) ); exit;
 	}
-	$subjects = array( 'music' => 'Music enquiry', 'literary' => 'Literary correspondence', 'technology' => 'Technology enquiry', 'media' => 'Media request' );
+	$subjects = array( 'music' => 'Music enquiry', 'literary' => 'Literary correspondence', 'technology' => 'Technology enquiry', 'cutti-beta' => 'CuTTI beta access request', 'media' => 'Media request' );
 	$key      = isset( $fields['topic'] ) ? $fields['topic'] : '';
 	$subject  = 'crsrikanth.com: ' . ( isset( $subjects[ $key ] ) ? $subjects[ $key ] : 'Message' ) . ' from ' . $fields['name'];
 	$body    = '';

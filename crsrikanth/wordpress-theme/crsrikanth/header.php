@@ -17,6 +17,7 @@
         <li><a href="/books/"<?php crs_current( '/books/' ); ?>>Books &amp; Stories</a></li>
         <li><a href="/innovations/"<?php crs_current( '/innovations/' ); ?>>Innovations</a></li>
         <li><a href="/recognition/"<?php crs_current( '/recognition/' ); ?>>Recognition</a></li>
+        <li><a href="/shop/"<?php crs_current( '/shop/' ); ?>>Shop</a></li>
         <li><a href="/about/"<?php crs_current( '/about/' ); ?>>About</a></li>
         <li><a href="/contact/"<?php crs_current( '/contact/' ); ?>>Contact</a></li>
       </ul>
@@ -32,8 +33,9 @@
       <li><a href="/books/"<?php crs_current( '/books/' ); ?>>Books &amp; Stories<small>03</small></a></li>
       <li><a href="/innovations/"<?php crs_current( '/innovations/' ); ?>>Innovations<small>04</small></a></li>
       <li><a href="/recognition/"<?php crs_current( '/recognition/' ); ?>>Recognition<small>05</small></a></li>
-      <li><a href="/about/"<?php crs_current( '/about/' ); ?>>About<small>06</small></a></li>
-      <li><a href="/contact/"<?php crs_current( '/contact/' ); ?>>Contact<small>07</small></a></li>
+      <li><a href="/shop/"<?php crs_current( '/shop/' ); ?>>Shop<small>06</small></a></li>
+      <li><a href="/about/"<?php crs_current( '/about/' ); ?>>About<small>07</small></a></li>
+      <li><a href="/contact/"<?php crs_current( '/contact/' ); ?>>Contact<small>08</small></a></li>
     </ul>
   </nav>
 </div>

@@ -24,9 +24,9 @@ $GLOBALS['crs_page_head'] = function () { ?>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,300&family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@400;500;700&family=Spectral:ital,wght@0,300;0,400;1,300&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,700;1,6..96,400&family=Cinzel:wght@400;600&family=Archivo:wght@400;500;800;900&family=Manrope:wght@300;400;600&display=swap">
-<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/site.css?v=36277132">
-<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/themes.css?v=e78b3084">
-<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/js/site.js?v=61a35e3d" defer></script>
+<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/site.css?v=4ff4d4c6">
+<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/themes.css?v=10f9ea9a">
+<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/js/site.js?v=b9ea7f25" defer></script>
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -220,7 +220,7 @@ get_header();
     <p class="book__meta">Short-story collection · 2026</p>
     <p>Linked stories from two small European towns that appear on no map. Across generations, families pass down loyalties, recipes, music, houses, debts and secrets: a mechanic, a chocolatier, a struggling theatre company, a singing palazzo, and a boy changed by a forgotten gramophone record.</p>
     <dl><dt>Formats</dt><dd>Ebook and paperback · published 21 October 2026</dd><dt>ISBN</dt><dd>9798237466799 (ebook)</dd><dt>ISBN</dt><dd>9798237110791 (paperback)</dd><dt>Edition</dt><dd>October 2026 edition; the ebook is distributed through Draft2Digital</dd></dl>
-    <div class="links"><a class="chip" href="https://books.apple.com/us/book/tales-from-bellavere-and-lindenfeld/id6825566440" target="_blank" rel="noopener">Apple Books<span class="visually-hidden"> (opens in a new tab)</span></a><a class="chip" href="https://books.rakuten.co.jp/rk/4bda3d3d9e7e3014a44c48d51006649b/" target="_blank" rel="noopener">Kobo (Rakuten)<span class="visually-hidden"> (opens in a new tab)</span></a><a class="chip" href="https://www.booktopia.com.au/tales-from-bellavere-and-lindenfeld-cr-srikanth/ebook/9798237466799.html" target="_blank" rel="noopener">Booktopia ebook<span class="visually-hidden"> (opens in a new tab)</span></a><a class="chip" href="https://www.booktopia.com.au/tales-from-bellavere-and-lindenfeld-cr-srikanth/book/9798237110791.html" target="_blank" rel="noopener">Booktopia paperback<span class="visually-hidden"> (opens in a new tab)</span></a></div>
+    <div class="links"><a class="chip" href="https://books2read.com/u/3GDgV8" target="_blank" rel="noopener">Books2Read (all ebook stores)<span class="visually-hidden"> (opens in a new tab)</span></a><a class="chip" href="https://books.apple.com/us/book/tales-from-bellavere-and-lindenfeld/id6825566440" target="_blank" rel="noopener">Apple Books<span class="visually-hidden"> (opens in a new tab)</span></a><a class="chip" href="https://books.rakuten.co.jp/rk/4bda3d3d9e7e3014a44c48d51006649b/" target="_blank" rel="noopener">Kobo (Rakuten)<span class="visually-hidden"> (opens in a new tab)</span></a><a class="chip" href="https://www.booktopia.com.au/tales-from-bellavere-and-lindenfeld-cr-srikanth/ebook/9798237466799.html" target="_blank" rel="noopener">Booktopia ebook<span class="visually-hidden"> (opens in a new tab)</span></a><a class="chip" href="https://www.booktopia.com.au/tales-from-bellavere-and-lindenfeld-cr-srikanth/book/9798237110791.html" target="_blank" rel="noopener">Booktopia paperback<span class="visually-hidden"> (opens in a new tab)</span></a></div>
   </div>
 </article><article class="book" data-reveal>
   <div class="book__cover"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/covers/the-debt-of-the-fifth-month.jpg" alt="Cover of The Debt of the Fifth Month" loading="lazy" width="400" height="600"></div>
@@ -229,7 +229,7 @@ get_header();
     <p class="book__meta">Novella · 2026</p>
     <p>A novella in eleven movements, set in Italy. After the death of their thirteen-year-old son, Matteo and Elena Valli bring nine estranged cousins back to one table, while money they never asked for begins to arrive. A story of grief, faith and family.</p>
     <dl><dt>Formats</dt><dd>Ebook · published 18 October 2026</dd><dt>ISBN</dt><dd>9798237724912 (ebook)</dd></dl>
-    <div class="links"><a class="chip" href="https://books.apple.com/us/book/the-debt-of-the-fifth-month/id6824237078" target="_blank" rel="noopener">Apple Books<span class="visually-hidden"> (opens in a new tab)</span></a><a class="chip" href="https://books.rakuten.co.jp/rk/eac94829ec6035a08ad3bbd643737418/" target="_blank" rel="noopener">Kobo (Rakuten)<span class="visually-hidden"> (opens in a new tab)</span></a><a class="chip" href="https://www.booktopia.com.au/the-debt-of-the-fifth-month-cr-srikanth/ebook/9798237724912.html" target="_blank" rel="noopener">Booktopia<span class="visually-hidden"> (opens in a new tab)</span></a></div>
+    <div class="links"><a class="chip" href="https://books2read.com/u/mgVeMX" target="_blank" rel="noopener">Books2Read (all ebook stores)<span class="visually-hidden"> (opens in a new tab)</span></a><a class="chip" href="https://books.apple.com/us/book/the-debt-of-the-fifth-month/id6824237078" target="_blank" rel="noopener">Apple Books<span class="visually-hidden"> (opens in a new tab)</span></a><a class="chip" href="https://books.rakuten.co.jp/rk/eac94829ec6035a08ad3bbd643737418/" target="_blank" rel="noopener">Kobo (Rakuten)<span class="visually-hidden"> (opens in a new tab)</span></a><a class="chip" href="https://www.booktopia.com.au/the-debt-of-the-fifth-month-cr-srikanth/ebook/9798237724912.html" target="_blank" rel="noopener">Booktopia<span class="visually-hidden"> (opens in a new tab)</span></a></div>
   </div>
 </article><article class="book" data-reveal>
   <div class="book__cover"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/covers/august-18th.jpg" alt="Cover of August 18th" loading="lazy" width="400" height="600"></div>
@@ -291,7 +291,7 @@ get_header();
 
 <section class="section finale section--ink" aria-labelledby="finale-title">
 <div class="wrap">
-<div data-reveal><h2 id="finale-title">Music People Can Listen To. Stories People Can Read.</h2><p class="lead">Scores to explore, innovations to discover, and a direct line for collaborations, commissions, literary correspondence and media.</p><div class="btn-row"><a class="btn btn--gold" href="/contact/">Get in touch</a><a class="btn btn--ghost" href="https://open.spotify.com/artist/16N9BJJPufgA3rnpQ06iSa" target="_blank" rel="noopener">Listen on Spotify<span class="visually-hidden"> (opens in a new tab)</span></a></div></div>
+<div data-reveal><h2 id="finale-title">Music People Can Listen To. Stories People Can Read.</h2><p class="lead">Scores to explore, innovations to discover, and a direct line for collaborations, commissions, literary correspondence and media.</p><div class="btn-row"><a class="btn btn--gold" href="/contact/">Get in touch</a><a class="btn btn--ghost" href="/shop/">Visit the shop</a></div></div>
 </div>
 </section>
 

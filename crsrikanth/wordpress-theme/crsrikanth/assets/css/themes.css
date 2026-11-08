@@ -564,3 +564,16 @@ html[data-theme="modernist"] .phero { border-bottom: 4px solid #111111; box-shad
 html[data-theme="modernist"] .quote cite, html[data-theme="modernist"] .milestone__date { color: var(--coral-deep); }
 html[data-theme="modernist"] .section--ink .quote cite, html[data-theme="modernist"] .tech .quote cite, html[data-theme="modernist"] .section--ink .milestone__date { color: #FF8A2A; }
 html[data-theme="modernist"] ::selection { background: #C9EE55; color: #111111; }
+/* Modernist: shop */
+html[data-theme="modernist"] .shop-book { background: #FFFFFF; border: 2px solid #111111; border-radius: 0; }
+html[data-theme="modernist"] .shop-book .btn--ink { background: #111111; color: #FFFFFF; }
+html[data-theme="modernist"] .shop-book .btn--ink:hover { background: #FF7A1A; color: #111111; }
+html[data-theme="modernist"] .shop-rel { border: 2px solid #F4EFE4; border-radius: 0; }
+html[data-theme="modernist"] .shop-rel img { border-radius: 0; }
+html[data-theme="modernist"] .shop-rel .book__meta { color: #A39C8E; }
+html[data-theme="modernist"] .feature__tag { color: #C9EE55; }
+/* Modernist: the finale sits on cream, so it must not inherit the dark-band text colours */
+html[data-theme="modernist"] .finale.section--ink { --ivory: #111111; --ivory-2: #3D3A33; --muted: #5F584C; --gold: #A63F00; --rule: rgba(17, 17, 17, .22); --rule-2: #111111; color: #111111; }
+html[data-theme="modernist"] .finale.section--ink h2 { color: #111111; }
+html[data-theme="modernist"] .finale.section--ink .btn--ghost { border-color: #111111; color: #111111; }
+html[data-theme="modernist"] .finale.section--ink .btn--violet { background: #111111; color: #F4EFE4; }

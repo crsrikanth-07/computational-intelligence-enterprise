@@ -12,6 +12,7 @@
           <li><a href="/music/compositions/">Classical compositions</a></li>
           <li><a href="/books/">Books &amp; Stories</a></li>
           <li><a href="/innovations/">Innovations</a></li>
+          <li><a href="/shop/">Shop</a></li>
         </ul>
       </div>
       <div>

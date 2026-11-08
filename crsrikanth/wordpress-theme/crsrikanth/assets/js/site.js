@@ -176,3 +176,6 @@
   }
   d.querySelectorAll('canvas[data-lines]').forEach(FiveLines);
 })();
+
+// Preselect the contact topic from ?topic=
+(function () { var t = new URLSearchParams(location.search).get('topic'), el = document.getElementById('f-topic'); if (t && el && [].some.call(el.options, function (o) { return o.value === t; })) el.value = t; })();

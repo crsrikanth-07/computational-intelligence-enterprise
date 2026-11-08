@@ -25,9 +25,9 @@ $GLOBALS['crs_page_head'] = function () { ?>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,300&family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@400;500;700&family=Spectral:ital,wght@0,300;0,400;1,300&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,700;1,6..96,400&family=Cinzel:wght@400;600&family=Archivo:wght@400;500;800;900&family=Manrope:wght@300;400;600&display=swap">
-<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/site.css?v=36277132">
-<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/themes.css?v=e78b3084">
-<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/js/site.js?v=61a35e3d" defer></script>
+<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/site.css?v=4ff4d4c6">
+<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/themes.css?v=10f9ea9a">
+<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/js/site.js?v=b9ea7f25" defer></script>
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -130,12 +130,12 @@ get_header();
 </section>
 <section class="section tech section--slate" id="principles" aria-labelledby="pr-title">
 <div class="wrap">
-<div class="head " data-reveal><p class="kicker">Principles</p><h2 id="pr-title">The Composer Stays in Charge.</h2></div><ol class="principles"><li>The composer stays in charge. CuTTI suggests and prepares; the composer decides.</li><li>Stock instruments and plug-ins only.</li><li>Originality is checked. Every new part is compared against the reference material it learned from, and anything too close is rewritten.</li><li>It runs on the composer’s own Mac. A small local AI model only reads the brief.</li><li>Projects are never overwritten: every build is a new file.</li></ol><div data-mt="40"><p class="status">Status: both tools are private, built for the composer’s own work, and in active development.</p></div><p class="small muted" data-mt="40">Logic Pro is a trademark of Apple Inc.; Cubase, Nuendo, WaveLab and Dorico are trademarks of Steinberg Media Technologies GmbH; Digital Performer is a trademark of MOTU, Inc. CuTTI is an independent project and is not affiliated with, endorsed by or a partner of these companies.</p>
+<div class="head " data-reveal><p class="kicker">Principles</p><h2 id="pr-title">The Composer Stays in Charge.</h2></div><ol class="principles"><li>The composer stays in charge. CuTTI suggests and prepares; the composer decides.</li><li>Stock instruments and plug-ins only.</li><li>Originality is checked. Every new part is compared against the reference material it learned from, and anything too close is rewritten.</li><li>It runs on the composer’s own Mac. A small local AI model only reads the brief.</li><li>Projects are never overwritten: every build is a new file.</li></ol><div data-mt="40"><p class="status">Status: both tools are in private beta. Access is by request, at a special beta price, from the Shop.</p></div><p class="small muted" data-mt="40">Logic Pro is a trademark of Apple Inc.; Cubase, Nuendo, WaveLab and Dorico are trademarks of Steinberg Media Technologies GmbH; Digital Performer is a trademark of MOTU, Inc. CuTTI is an independent project and is not affiliated with, endorsed by or a partner of these companies.</p>
 </div>
 </section>
 <section class="section finale section--ink" aria-labelledby="finale-title">
 <div class="wrap">
-<div data-reveal><h2 id="finale-title">Technology Enquiries.</h2><p class="lead">Both tools are private and in active development. For conversations about the ideas behind them, research or collaboration, get in touch.</p><div class="btn-row"><a class="btn btn--violet" href="/contact/?topic=technology">Technology enquiries</a></div></div>
+<div data-reveal><h2 id="finale-title">Try Them in Beta.</h2><p class="lead">Both tools are in private beta: early access at a special beta price, by request. For conversations about the ideas behind them, research or collaboration, get in touch.</p><div class="btn-row"><a class="btn btn--violet" href="/shop/#cutti">Beta access</a><a class="btn btn--ghost" href="/contact/?topic=technology">Technology enquiries</a></div></div>
 </div>
 </section>
 

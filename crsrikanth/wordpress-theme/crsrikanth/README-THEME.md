@@ -22,6 +22,7 @@ Appearance -> Themes -> Add New -> Upload Theme -> `crsrikanth.zip` -> Install (
 | `/recognition/` | `page-recognition.php` |
 | `/recognition/press/` | `page-recognition-press.php` |
 | `/recognition/radio-charts/` | `page-recognition-radio-charts.php` |
+| `/shop/` | `page-shop.php` |
 
 Blog posts and any other page render with `index.php` / `page.php` in the same design (Divi shortcodes stripped). `/vs-pop-composer/` and `/podcast/` redirect (301) to `/innovations/` and `/recognition/press/`.
 

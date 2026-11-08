@@ -18,6 +18,8 @@ This is the personal website of CR Srikanth: music, books and stories, CuTTI inn
    - **A new published story:** `content/literature.json` → `publications`.
    - **A concert, chart or award:** `content/recognition.json` → `milestones`, plus `charts` or `stations` if it belongs in the archive. Set `"verified": true` only when `url` points to the original source.
    - **Press:** `content/recognition.json` → `pressGroups`.
+   - **A buy link:** add it to the book's `links` in `content/literature.json`. Links labelled "Amazon" or "Books2Read" become the big buttons on the Shop page; the rest stay as small chips.
+   - **The CuTTI beta offer:** `content/innovations.json` → `beta` (lead, steps, price text, note). The contact form topic `cutti-beta` sends the request to crs.07@crsrikanth.com with the subject "CuTTI beta access request".
    - **A video:** `content/videos.json`, and add the thumbnail `https://i.ytimg.com/vi/<id>/hqdefault.jpg` to `site/assets/img/yt/<id>.jpg`.
 2. Build and package:
 

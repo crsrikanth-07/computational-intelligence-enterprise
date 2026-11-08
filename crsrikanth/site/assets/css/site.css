@@ -499,3 +499,25 @@ select.input option { background: var(--night); }
 @media (min-width: 700px) { .prominent { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (min-width: 1100px) { .prominent { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
 .prominent .metric b { font-size: clamp(22px, 2vw, 28px); line-height: 1.15; }
+
+/* Shop */
+.shop-books { display: grid; gap: 22px; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 760px) { .shop-books { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1140px) { .shop-books { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.shop-book { display: grid; grid-template-columns: 104px minmax(0, 1fr); gap: 20px; align-items: start; padding: 22px; border-radius: 22px; background: #FBF7EF; border: 1px solid rgba(28, 26, 22, .1); }
+.shop-book h3 { font: 600 20px/1.2 var(--serif); color: var(--paper-ink); }
+.shop-book .book__meta { margin-top: 6px; font-size: 13px; color: var(--paper-muted); }
+.shop-book .btn-row { margin-top: 14px; gap: 8px; }
+.shop-book .btn { min-height: 40px; padding: 0 16px; font-size: 13px; }
+.shop-book .links { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 6px; }
+.shop-book .book__cover { box-shadow: 0 18px 28px -18px rgba(28, 26, 22, .5); }
+.shop-rels { display: grid; gap: 22px; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 760px) { .shop-rels { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.shop-rel { display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 18px; align-items: start; padding: 18px; border-radius: 18px; border: 1px solid var(--rule); }
+.shop-rel img { width: 96px; height: 96px; border-radius: 10px; object-fit: cover; }
+.shop-rel h3 { font: 600 19px/1.2 var(--serif); }
+.shop-rel .book__meta { margin-top: 4px; font-size: 13px; color: var(--muted); }
+.shop-rel .links { margin-top: 10px; display: flex; flex-wrap: wrap; gap: 6px; }
+.shop-scores { max-width: 760px; }
+.beta { display: grid; gap: 40px; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 960px) { .beta { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 60px; } }

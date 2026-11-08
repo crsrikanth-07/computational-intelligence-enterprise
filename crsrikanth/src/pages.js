@@ -1,7 +1,7 @@
 // Every page of crsrikanth.com, built from content/*.json.
 const fs = require('fs'), path = require('path');
 const L = require('./lib.js'), ART = require('./art.js');
-const { concert, spotlight, playlist, esc, tm, page, arrow, chip, kicker, phero, release, video, book, milestone, verify, EXT } = L;
+const { concert, spotlight, playlist, esc, tm, page, arrow, chip, kicker, phero, release, video, book, bookCover, milestone, verify, EXT } = L;
 const C = n => JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'content', n + '.json'), 'utf8'));
 const lit = C('literature'), music = C('music'), rec = C('recognition'), cat = C('catalogue'), vids = C('videos'), inn = C('innovations');
 
@@ -62,7 +62,7 @@ ${section('section--slate', 'milestones', `${head('Selected milestones', 'Achiev
 <div class="timeline">${rec.milestones.filter(m => m.home).map(milestone).join('')}</div>
 <p>${arrow('/recognition/', 'All recognition')}</p>`, 'ms-title')}
 
-${finale('Music People Can Listen To. Stories People Can Read.', 'Scores to explore, innovations to discover, and a direct line for collaborations, commissions, literary correspondence and media.', `<a class="btn btn--gold" href="/contact/">Get in touch</a><a class="btn btn--ghost" href="https://open.spotify.com/artist/16N9BJJPufgA3rnpQ06iSa" target="_blank" rel="noopener">Listen on Spotify${EXT}</a>`)}
+${finale('Music People Can Listen To. Stories People Can Read.', 'Scores to explore, innovations to discover, and a direct line for collaborations, commissions, literary correspondence and media.', `<a class="btn btn--gold" href="/contact/">Get in touch</a><a class="btn btn--ghost" href="/shop/">Visit the shop</a>`)}
 `);
 
 // ---------------- MUSIC ----------------
@@ -117,7 +117,7 @@ ${section('section--paper', 'books', `${head('Books &amp; collections', 'From Be
 
 ${section('section--paper', 'earlier', `<div class="grid grid--2"><div>${kicker('Earlier edition')}<h2 id="earlier-title" data-mt="18">The First Ten Tales</h2><p class="lead" data-mt="16">The collection first appeared in May 2026 as a ten-story paperback, before the expanded October 2026 edition.</p></div><div class="books books--one">${lit.books.filter(b => b.earlier).map(book).join('')}</div></div>`, 'earlier-title')}
 
-${section('section--paper', 'where', `<div class="note note--paper"><strong>Where to buy.</strong> Availability differs from book to book and from country to country, so each book lists only the stores where it has been confirmed. Ebook editions are distributed to retailers through Draft2Digital.</div>`)}
+${section('section--paper', 'where', `<div class="note note--paper"><strong>Where to buy.</strong> Availability differs from book to book and from country to country, so each book lists only the stores where it has been confirmed. Ebook editions are distributed to retailers through Draft2Digital. All buying links are gathered in the <a class="link" href="/shop/#books">Shop</a>.</div>`)}
 
 ${finale('Literary Correspondence.', 'For editors, publishers, translators, readers and literary events.', `<a class="btn btn--gold" href="/contact/?topic=literary">Write to the author</a>`)}
 `);
@@ -132,7 +132,7 @@ ${section('tech', 'quote', `<blockquote class="quote" data-reveal>“${inn.quote
 ${section('tech section--ink', 'studio', `<div class="product"><div data-reveal>${kicker('CuTTI Studio')}<h2 data-mt="18">From a Prompt to a Musical Arrangement.</h2><p>${inn.studio.lead}</p><div class="btn-row"><a class="btn btn--violet" href="/innovations/cutti-studio/">Discover CuTTI Studio</a></div></div><figure class="product__visual" data-reveal>${ART.studioViz}<figcaption>Illustration of the idea, not a screenshot.</figcaption></figure></div>`)}
 ${section('tech', 'score', `<div class="product product--flip"><div data-reveal>${kicker('CuTTI Score')}<h2 data-mt="18">From Paper to an Editable, Playable Score.</h2><p>${inn.score.lead}</p><div class="btn-row"><a class="btn btn--violet" href="/innovations/cutti-score/">Explore CuTTI Score</a></div></div><figure class="product__visual" data-reveal>${ART.scoreViz}<figcaption>Illustration of the workflow, not a screenshot.</figcaption></figure></div>`)}
 ${section('tech section--slate', 'principles', `${head('Principles', 'The Composer Stays in Charge.', 'pr-title')}<ol class="principles">${inn.principles.map(p => `<li>${p}</li>`).join('')}</ol><div data-mt="40">${statusLine}</div>${tmNote}`, 'pr-title')}
-${finale('Technology Enquiries.', 'Both tools are private and in active development. For conversations about the ideas behind them, research or collaboration, get in touch.', `<a class="btn btn--violet" href="/contact/?topic=technology">Technology enquiries</a>`)}
+${finale('Try Them in Beta.', 'Both tools are in private beta: early access at a special beta price, by request. For conversations about the ideas behind them, research or collaboration, get in touch.', `<a class="btn btn--violet" href="/shop/#cutti">Beta access</a><a class="btn btn--ghost" href="/contact/?topic=technology">Technology enquiries</a>`)}
 `);
 
 const studio = page({ path: '/innovations/cutti-studio/', title: 'CuTTI Studio | Idea Generator and Assistant Arranger', desc: 'CuTTI Studio turns a plain-words brief or a score into a ready-to-work session in Logic Pro, Cubase, Nuendo or Digital Performer. A private tool by CR Srikanth, in active development.', og: 'og-innovations.jpg' }, `
@@ -193,6 +193,44 @@ ${section('section--slate', 'dimensions', `${head('Four dimensions', 'The Work, 
 ${finale('Collaborate, Commission, Correspond.', 'Music collaborations, literary correspondence, technology conversations and media requests.', `<a class="btn btn--gold" href="/contact/">Get in touch</a>`)}
 `);
 
+// ---------------- SHOP ----------------
+const isBuy = l => /Amazon|Books2Read/.test(l.label);
+const shopBook = b => `<article class="shop-book" data-reveal>
+  ${bookCover(b)}
+  <div>
+    <h3>${tm(b.title)}</h3>
+    <p class="book__meta">${[b.form, b.formats].filter(Boolean).join(' · ')}</p>
+    ${(b.links || []).some(isBuy) ? `<div class="btn-row shop-book__buy">${b.links.filter(isBuy).map(l => `<a class="btn btn--ink" href="${l.url}" target="_blank" rel="noopener">${l.label}${EXT}</a>`).join('')}</div>` : ''}
+    <div class="links">${(b.links || []).filter(l => !isBuy(l)).map(l => chip(l.url, l.label)).join('')}</div>
+  </div>
+</article>`;
+const shopRelease = r => `<article class="shop-rel" data-reveal><img src="/assets/art/${r.art}" alt="${esc(r.storeTitle || r.title)} artwork" loading="lazy" width="160" height="160"><div><h3>${tm(r.title)}</h3><p class="book__meta">${r.meta || [r.type, r.year].filter(Boolean).join(' · ')}</p><div class="links">${r.links.map(l => chip(l.url, l.label)).join('')}</div></div></article>`;
+const shop = page({ path: '/shop/', title: 'Shop | Books, Music and CuTTI Beta | CR Srikanth', desc: 'Buy the books of CR Srikanth in ebook and paperback, stream the recordings, download the scores, and request early access to CuTTI Studio and CuTTI Score at the beta price.', og: 'og-shop.jpg' }, `
+${phero({ kicker: 'Shop', title: 'Books, Music and <em>Studio Tools</em>.', lead: 'Everything of mine you can buy, stream or join: the books in ebook and paperback, the recordings on the major services, free scores, and early access to the CuTTI studio tools at a special beta price.', variant: 'all', buttons: `<a class="btn btn--gold" href="#books">Books</a><a class="btn btn--ghost" href="#music">Music</a><a class="btn btn--ghost" href="#cutti">CuTTI beta</a>` })}
+
+${section('section--paper', 'books', `${head('Books', 'Buy the <em>Books</em>.', 'shop-books-title', 'Ebooks through Books2Read, Apple Books, Kobo and Booktopia; paperbacks through Booktopia and AbeBooks. Each book lists only the stores where it has been confirmed.')}
+<div class="shop-books">${lit.books.map(shopBook).join('')}</div>
+<div class="note note--paper" data-mt="40"><strong>How buying works.</strong> Books and music are sold by the stores linked here, at their own prices and in their own currencies; nothing is sold directly on this site, and no payment details are collected here. Availability differs from country to country.</div>`, 'shop-books-title')}
+
+${section('section--ink', 'music', `${head('Music', 'Listen, Follow, <em>Download</em>.', 'shop-music-title', 'The recordings are on every major streaming service. The classical scores are free.')}
+<div class="btn-row" data-reveal>${music.platforms.map(l => `<a class="btn ${l.label === 'Spotify' ? 'btn--gold' : 'btn--ghost'}" href="${l.url}" target="_blank" rel="noopener">${l.label}${EXT}</a>`).join('')}</div>
+<div class="shop-rels" data-mt="40">${music.latest.map(shopRelease).join('')}${music.releases.filter(r => r.featured && !music.latest.some(l => l.title === r.title)).slice(0, 2).map(shopRelease).join('')}</div>
+<div class="shop-scores" data-mt="40" data-reveal>${kicker('Scores')}<h3 data-mt="12">46 Scores, Free on IMSLP.</h3><p class="lead" data-mt="10">${music.imslpNote}</p><div class="btn-row" data-mt="18"><a class="btn btn--ghost" href="https://imslp.org/wiki/Category:CR,_Srikanth" target="_blank" rel="noopener">Download on IMSLP${EXT}</a><a class="btn btn--ghost" href="/music/compositions/">The works list</a></div></div>`, 'shop-music-title')}
+
+${section('tech', 'cutti', `${head(inn.beta.kicker, inn.beta.title, 'shop-cutti-title', inn.beta.lead)}
+<div class="grid grid--2">
+  <article class="feature" data-reveal><h3>CuTTI Studio</h3><p>${inn.studio.lead}</p><span class="feature__tag">Private beta · special price</span></article>
+  <article class="feature" data-reveal><h3>CuTTI Score</h3><p>${inn.score.lead}</p><span class="feature__tag">Private beta · special price</span></article>
+</div>
+<div class="beta" data-mt="40">
+  <div data-reveal>${kicker('How it works')}<ol class="principles" data-mt="18">${inn.beta.steps.map(s => `<li>${s}</li>`).join('')}</ol></div>
+  <div data-reveal>${kicker('The beta price')}<p class="lead" data-mt="18">${inn.beta.price}</p><div class="btn-row" data-mt="24"><a class="btn btn--violet" href="/contact/?topic=cutti-beta">${inn.beta.cta}</a><a class="btn btn--ghost" href="/innovations/">About the tools</a></div><p class="small muted" data-mt="22">${inn.beta.note}</p></div>
+</div>
+${tmNote}`, 'shop-cutti-title')}
+
+${finale('Questions Before You Buy?', 'About an edition, a store in your country, a score, or the CuTTI beta.', `<a class="btn btn--gold" href="/contact/">Ask</a>`)}
+`);
+
 // ---------------- CONTACT ----------------
 const contact = page({ path: '/contact/', title: 'Contact | CR Srikanth', desc: 'Contact CR Srikanth for music collaborations and commissions, literary correspondence, technology conversations and media requests.', og: 'og-home.jpg' }, `
 ${phero({ kicker: 'Contact', title: 'Let’s <em>Talk</em>.', lead: 'For professional enquiries, music collaborations, literary correspondence, technology conversations and media requests. Every message is read personally.', variant: 'all' })}
@@ -201,6 +239,7 @@ ${section('', 'write', `<div class="contact">
     <li><b>Music</b><span>Commissions, collaborations, licensing and performances.</span></li>
     <li><b>Literature</b><span>Editors, publishers, translators and readers.</span></li>
     <li><b>Technology</b><span>Conversations about CuTTI and creative music technology.</span></li>
+    <li><b>CuTTI beta</b><span>Early access to CuTTI Studio and CuTTI Score at the beta price. <a class="link" href="/shop/#cutti">How it works</a>.</span></li>
     <li><b>Media</b><span>Interviews, features and press requests.</span></li>
   </ul><p data-mt="28" class="muted">Or email <a class="link" href="mailto:crs.07@crsrikanth.com">crs.07@crsrikanth.com</a></p></div>
   <form class="form" data-form method="POST" action="/wp-admin/admin-post.php" data-reveal>
@@ -210,7 +249,7 @@ ${section('', 'write', `<div class="contact">
       <div class="field"><label for="f-name">Name</label><input type="text" class="input" id="f-name" name="name" autocomplete="name" required></div>
       <div class="field"><label for="f-email">Email</label><input class="input" id="f-email" name="email" type="email" autocomplete="email" required></div>
     </div>
-    <div class="field"><label for="f-topic">Topic</label><select class="input" id="f-topic" name="topic"><option value="music">Music collaboration or commission</option><option value="literary">Literary correspondence</option><option value="technology">Technology enquiry</option><option value="media">Media or interview request</option><option value="other">Something else</option></select></div>
+    <div class="field"><label for="f-topic">Topic</label><select class="input" id="f-topic" name="topic"><option value="music">Music collaboration or commission</option><option value="literary">Literary correspondence</option><option value="technology">Technology enquiry</option><option value="cutti-beta">CuTTI beta access (special price)</option><option value="media">Media or interview request</option><option value="other">Something else</option></select></div>
     <div class="field"><label for="f-msg">Message</label><textarea class="input" id="f-msg" name="message" required></textarea></div>
     <button class="btn btn--gold" type="submit">Send message</button>
     <p class="form__msg" role="status" aria-live="polite"></p>
@@ -228,4 +267,4 @@ const notFound = page({ path: '/404.html', title: 'Page Not Found | CR Srikanth'
 ${phero({ kicker: '404', title: 'A Rest, Not the <em>End</em>.', lead: 'This page does not exist, or it has moved. The music, the books and the innovations are all still here.', variant: 'all', buttons: `<a class="btn btn--gold" href="/">Home</a><a class="btn btn--ghost" href="/music/">Music</a><a class="btn btn--ghost" href="/books/">Books &amp; Stories</a>` })}
 `);
 
-module.exports = { 'index.html': home, 'music/index.html': musicPage, 'music/compositions/index.html': compositions, 'books/index.html': books, 'innovations/index.html': innovations, 'innovations/cutti-studio/index.html': studio, 'innovations/cutti-score/index.html': score, 'recognition/index.html': recognition, 'recognition/radio-charts/index.html': radio, 'recognition/press/index.html': press, 'about/index.html': about, 'contact/index.html': contact, 'privacy-policy/index.html': privacy, '404.html': notFound };
+module.exports = { 'index.html': home, 'music/index.html': musicPage, 'music/compositions/index.html': compositions, 'books/index.html': books, 'innovations/index.html': innovations, 'innovations/cutti-studio/index.html': studio, 'innovations/cutti-score/index.html': score, 'recognition/index.html': recognition, 'recognition/radio-charts/index.html': radio, 'recognition/press/index.html': press, 'shop/index.html': shop, 'about/index.html': about, 'contact/index.html': contact, 'privacy-policy/index.html': privacy, '404.html': notFound };

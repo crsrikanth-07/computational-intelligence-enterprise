@@ -25,9 +25,9 @@ $GLOBALS['crs_page_head'] = function () { ?>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,300&family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@400;500;700&family=Spectral:ital,wght@0,300;0,400;1,300&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,700;1,6..96,400&family=Cinzel:wght@400;600&family=Archivo:wght@400;500;800;900&family=Manrope:wght@300;400;600&display=swap">
-<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/site.css?v=36277132">
-<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/themes.css?v=e78b3084">
-<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/js/site.js?v=61a35e3d" defer></script>
+<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/site.css?v=4ff4d4c6">
+<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/themes.css?v=10f9ea9a">
+<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/js/site.js?v=b9ea7f25" defer></script>
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -115,7 +115,7 @@ get_header();
 </section>
 <section class="section tech section--slate" id="status">
 <div class="wrap">
-<div class="grid grid--2"><div data-reveal><p class="kicker">Status</p><h2 data-mt="18">Private, and in Active Development.</h2><p class="lead" data-mt="18">CuTTI Score is built for the composer’s own work and is not on sale. It works hand in hand with CuTTI Studio: a score corrected here becomes a song in the DAW with one line.</p></div><div data-reveal><p class="status">Status: both tools are private, built for the composer’s own work, and in active development.</p><p class="small muted" data-mt="40">Logic Pro is a trademark of Apple Inc.; Cubase, Nuendo, WaveLab and Dorico are trademarks of Steinberg Media Technologies GmbH; Digital Performer is a trademark of MOTU, Inc. CuTTI is an independent project and is not affiliated with, endorsed by or a partner of these companies.</p></div></div>
+<div class="grid grid--2"><div data-reveal><p class="kicker">Status</p><h2 data-mt="18">Private, and in Active Development.</h2><p class="lead" data-mt="18">CuTTI Score is built around the composer’s own work and is now in private beta: a small number of people can use it, by request, at a special beta price. It works hand in hand with CuTTI Studio: a score corrected here becomes a song in the DAW with one line.</p></div><div data-reveal><p class="status">Status: both tools are in private beta. Access is by request, at a special beta price, from the Shop.</p><p class="small muted" data-mt="40">Logic Pro is a trademark of Apple Inc.; Cubase, Nuendo, WaveLab and Dorico are trademarks of Steinberg Media Technologies GmbH; Digital Performer is a trademark of MOTU, Inc. CuTTI is an independent project and is not affiliated with, endorsed by or a partner of these companies.</p></div></div>
 </div>
 </section>
 <section class="section finale section--ink" aria-labelledby="finale-title">

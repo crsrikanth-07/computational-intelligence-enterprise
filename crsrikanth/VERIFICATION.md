@@ -34,7 +34,8 @@ Checked on 7 November 2026 against public sources. **Verified** means the site l
   - Interviews: EyeOnPop (5 March 2026) and European Indie Music Network (29 May 2026).
   - Podcasts: Vigilantes Radio Live! (20 February 2026), Phantom Electric Ghost (8 March 2026) and VHC (Vibes, History & Culture) (9 May 2026), each with its other platforms (Spotify, iHeart, Spreaker, YouTube, Podbean). Maniacal Music Musings (5 June 2026) is left out at your request.
 - **Videos:** YouTube videos on your channels, including "Beneath the Last Autumn Moon" (latest release) and "Confusion, Yet Beloved" (Op. 11 No. 27), plus the URI concert recording from URI Music (shown from 0:00 to 13:00). Hope Symphony videos removed at your request.
-- **CuTTI:** text taken from your own description. Both tools are labelled private and in active development.
+- **CuTTI:** text taken from your own description. Both tools are now labelled **private beta**, with access by request at a special beta price (the Shop page). No price, user count or release date is stated; the site says only that the beta price is sent with the access code and stays fixed during the beta.
+- **Shop:** nothing is sold on the site itself. Every buy button goes to a store (Books2Read, Apple Books, Kobo, Booktopia, AbeBooks) or a streaming service; the page says so.
 
 ## Needs your input before or after launch
 
@@ -50,7 +51,7 @@ Checked on 7 November 2026 against public sources. **Verified** means the site l
 | 8 | "Souls Festival" (Medium, 2026) | Not on the site | The URL. It would go under author-published stories, separate from the magazines. |
 | 9 | *Kamil & Hassan Drama Company* cover | Typographic stand-in | The only cover online is a 300-pixel print wrap. Send the front cover image. |
 | 10 | Paperback cover for *Tales…* (ISBN 9798237110791) | The ebook cover is used | Booktopia shows "cover coming soon". |
-| 11 | Amazon / Kindle and Books2Read links | Not shown | Amazon blocked automated checks. Send your Amazon author page or Books2Read universal links and they will be added per book. |
+| 11 | Amazon and Books2Read links | Books2Read added for *Tales from Bellavere and Lindenfeld* (books2read.com/u/3GDgV8) and *The Debt of the Fifth Month* (books2read.com/u/mgVeMX), both confirmed. The five Amazon links (ASINs B0HNV2KC3F, B0HNTSH7FL, B0HPZ1JYK3, B0GYZRKC1H, B0GYN5FNYR) are **not yet on the site** | Amazon blocks automated visits, so the titles behind the five ASINs could not be confirmed. Say which book each one is and they go onto the Shop and Books pages. |
 | 12 | *GOTTESGABE* ISBN | No ISBN shown | Only a Kobo ID is public. |
 | 13 | YouTube Music, Amazon Music, Tidal links | Not shown | Artist page links. |
 | 14 | Contact email | crs.07@crsrikanth.com (from the current site) | Confirm this is the address for the contact form. |

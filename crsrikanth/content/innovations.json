@@ -1,8 +1,8 @@
 {
- "_note": "Source: the creator's own description of CuTTI (November 2026). Both tools are private and in active development; nothing here claims availability, partnerships or measured accuracy.",
+ "_note": "Source: the creator's own description of CuTTI (November 2026). Both tools are in private beta: access is by request, at a special beta price. Nothing here claims partnerships or measured accuracy.",
  "intro": "CuTTI is a pair of tools built by CR Srikanth for his own composing, with SVLS LABS LLP. They do not replace the composer. They take on the drudgery between an idea and a session you can work in, so more of the time goes into the music itself.",
  "quote": "They don’t replace the composer. They take on the drudgery between an idea and a session I can work in, so more of my time goes into the music itself.",
- "status": "Status: both tools are private, built for the composer’s own work, and in active development.",
+ "status": "Status: both tools are in private beta. Access is by request, at a special beta price, from the Shop.",
  "trademarks": "Logic Pro is a trademark of Apple Inc.; Cubase, Nuendo, WaveLab and Dorico are trademarks of Steinberg Media Technologies GmbH; Digital Performer is a trademark of MOTU, Inc. CuTTI is an independent project and is not affiliated with, endorsed by or a partner of these companies.",
  "principles": [
   "The composer stays in charge. CuTTI suggests and prepares; the composer decides.",
@@ -18,25 +18,75 @@
   "daws": "Logic Pro, Cubase, Nuendo and Digital Performer, on the composer’s own Mac.",
   "demo": "In this recording, a single request becomes a complete Logic Pro session: named tracks, built-in instruments, regions cut at every section, then a starting mix.",
   "features": [
-   {"title": "From words to a session", "text": "Plans the sections, key, tempo and instruments, then writes the parts and builds the project with named tracks, markers and a starting mix."},
-   {"title": "From a score to a song", "text": "Reads a score as a PDF, a photo or MusicXML, keeps the melody note for note, fits chords to it and arranges a band around it, following the score’s own bar lengths and repeats."},
-   {"title": "Learns from the composer’s templates", "text": "Has studied the layouts of about 190 of the composer’s own Cubase and Logic templates (folders, buses, effect returns, sends and levels), lays out each new session the way he would, and explains every choice in one plain line."},
-   {"title": "A music brain", "text": "Learned song forms, energy curves, transitions and instrument entries shape each arrangement, and the composer’s own words, such as “quiet intro” or “start with the mukhda”, always win."},
-   {"title": "Mix and master", "text": "Sets a starting mix on the composer’s own arrangements and masters through WaveLab."},
-   {"title": "Dorico loop", "text": "Sends a player list to Dorico, and places the Dorico score back onto the template tracks in any of the DAWs.", "dev": true}
+   {
+    "title": "From words to a session",
+    "text": "Plans the sections, key, tempo and instruments, then writes the parts and builds the project with named tracks, markers and a starting mix."
+   },
+   {
+    "title": "From a score to a song",
+    "text": "Reads a score as a PDF, a photo or MusicXML, keeps the melody note for note, fits chords to it and arranges a band around it, following the score’s own bar lengths and repeats."
+   },
+   {
+    "title": "Learns from the composer’s templates",
+    "text": "Has studied the layouts of about 190 of the composer’s own Cubase and Logic templates (folders, buses, effect returns, sends and levels), lays out each new session the way he would, and explains every choice in one plain line."
+   },
+   {
+    "title": "A music brain",
+    "text": "Learned song forms, energy curves, transitions and instrument entries shape each arrangement, and the composer’s own words, such as “quiet intro” or “start with the mukhda”, always win."
+   },
+   {
+    "title": "Mix and master",
+    "text": "Sets a starting mix on the composer’s own arrangements and masters through WaveLab."
+   },
+   {
+    "title": "Dorico loop",
+    "text": "Sends a player list to Dorico, and places the Dorico score back onto the template tracks in any of the DAWs.",
+    "dev": true
+   }
   ]
  },
  "score": {
   "lead": "A desktop app that turns printed music into scores to edit, play and use: from PDFs, scans and phone photos, and from recordings too.",
   "workflows": "Scan Score reads PDFs and scanned pages. Photo Score straightens a phone photo of a page and corrects its lighting. Audio Score turns a recording or a live performance into notation. In every case the result is a score that can be reviewed, edited, played and exported.",
-  "statusText": "CuTTI Score is built for the composer’s own work and is not on sale. It works hand in hand with CuTTI Studio: a score corrected here becomes a song in the DAW with one line.",
+  "statusText": "CuTTI Score is built around the composer’s own work and is now in private beta: a small number of people can use it, by request, at a special beta price. It works hand in hand with CuTTI Studio: a score corrected here becomes a song in the DAW with one line.",
   "features": [
-   {"title": "Reads printed music", "text": "From PDFs, scans and phone photos: it straightens the page, corrects the lighting, and recognises clefs, keys, meters, notes, rests, chords, ties, slurs, dynamics and repeats."},
-   {"title": "Shows what it is unsure about", "text": "Uncertain spots are marked, so only those need reviewing and they can be fixed quickly."},
-   {"title": "Editing with undo", "text": "Pitch, rhythm, accidentals, ties, transposition, key, meter and tempo, with note entry from the computer keyboard or a MIDI keyboard."},
-   {"title": "Playback", "text": "A built-in synth or SoundFonts, with a following cursor, loop and metronome."},
-   {"title": "Audio to score", "text": "Turns a recording or a live performance into notation."},
-   {"title": "Exports", "text": "MusicXML, MIDI, PDF, PNG and WAV. A score corrected here becomes a song in CuTTI Studio with one line."}
+   {
+    "title": "Reads printed music",
+    "text": "From PDFs, scans and phone photos: it straightens the page, corrects the lighting, and recognises clefs, keys, meters, notes, rests, chords, ties, slurs, dynamics and repeats."
+   },
+   {
+    "title": "Shows what it is unsure about",
+    "text": "Uncertain spots are marked, so only those need reviewing and they can be fixed quickly."
+   },
+   {
+    "title": "Editing with undo",
+    "text": "Pitch, rhythm, accidentals, ties, transposition, key, meter and tempo, with note entry from the computer keyboard or a MIDI keyboard."
+   },
+   {
+    "title": "Playback",
+    "text": "A built-in synth or SoundFonts, with a following cursor, loop and metronome."
+   },
+   {
+    "title": "Audio to score",
+    "text": "Turns a recording or a live performance into notation."
+   },
+   {
+    "title": "Exports",
+    "text": "MusicXML, MIDI, PDF, PNG and WAV. A score corrected here becomes a song in CuTTI Studio with one line."
+   }
   ]
+ },
+ "beta": {
+  "kicker": "CuTTI · private beta",
+  "title": "Studio Tools, <em>Early Access</em>.",
+  "lead": "CuTTI Studio and CuTTI Score are in private beta. A small number of composers, arrangers, engravers and music teachers can join now, at a special beta price that stays fixed for the whole beta period.",
+  "price": "The beta price is sent with your access code. It is lower than the price at release, and it does not change while the beta runs.",
+  "steps": [
+   "Request access: say which tool you want, what you make, and which DAW or notation software you use.",
+   "You receive a personal access code and the beta price by email, usually within a few days.",
+   "Use the tools on your own work. Report what helps and what breaks; that feedback shapes the release."
+  ],
+  "note": "Beta means the tools are still changing: features will move, some things will break, and support is by email from the composer himself. Access codes are personal and not for sharing. CuTTI Studio runs on the Mac, with Logic Pro, Cubase, Nuendo or Digital Performer; CuTTI Score is a desktop app.",
+  "cta": "Request beta access"
  }
 }

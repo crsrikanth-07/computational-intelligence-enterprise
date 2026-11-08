@@ -9,7 +9,7 @@ const MONOGRAM = (cls = '') => `<svg class="${cls}" viewBox="0 0 64 64" aria-hid
 const ARROW = '<svg viewBox="0 0 18 18" aria-hidden="true" focusable="false"><path d="M2 9h13M10 4l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>';
 const EXT = '<span class="visually-hidden"> (opens in a new tab)</span>';
 
-const NAV = [['/', 'Home'], ['/music/', 'Music'], ['/books/', 'Books &amp; Stories'], ['/innovations/', 'Innovations'], ['/recognition/', 'Recognition'], ['/about/', 'About'], ['/contact/', 'Contact']];
+const NAV = [['/', 'Home'], ['/music/', 'Music'], ['/books/', 'Books &amp; Stories'], ['/innovations/', 'Innovations'], ['/recognition/', 'Recognition'], ['/shop/', 'Shop'], ['/about/', 'About'], ['/contact/', 'Contact']];
 
 const PERSON = {
   '@type': 'Person', '@id': SITE + '/#person', name: 'CR Srikanth', alternateName: 'Ravi Chandra Srikanth Cherukupalli', url: SITE + '/',
@@ -91,6 +91,7 @@ const footer = `<footer class="site-footer">
           <li><a href="/music/compositions/">Classical compositions</a></li>
           <li><a href="/books/">Books &amp; Stories</a></li>
           <li><a href="/innovations/">Innovations</a></li>
+          <li><a href="/shop/">Shop</a></li>
         </ul>
       </div>
       <div>
