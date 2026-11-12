@@ -1,5 +1,7 @@
 # Three video briefs — "Another Day" (VS Pop™)
 
+> **Replaced (12 November 2026).** The promoted track is now "Beneath the Last Autumn Moon". The first video will be cut from the official video; new briefs for the other two will be written when paid ads resume. See `../PLAYBOOK.md`.
+
 **Status: briefs for approval. No video has been made.** The song has not been listened to in preparing these, so the timings are placeholders: where a brief says "the hook", you choose the bars.
 
 ## Rules for all three

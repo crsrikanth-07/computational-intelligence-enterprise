@@ -2,6 +2,8 @@
 
 Promotion tooling for **CR Srikanth** and **VS Pop™ (Very Smooth Pop)**, owned by VS POP RECORDS LLP.
 
+**Start with `PLAYBOOK.md`**: it holds the current decisions (track, profile, markets, wording) and the rules.
+
 The first version is deliberately small: one landing page on the existing website, one tracked button, one small Meta campaign, and plain reports. The only new recurring spend it needs is the Meta advertising budget of $10–$20 per day. Nothing in this folder launches an advertisement, publishes a page or spends money by itself.
 
 ## What is here
@@ -10,7 +12,7 @@ The first version is deliberately small: one landing page on the existing websit
 | --- | --- | --- |
 | `landing/vspop-spotify-landing/` | WordPress plugin that serves the landing page at `crsrikanth.com/spotify/` | Built and tested locally; **not installed on the live site** |
 | `landing/dist/vspop-spotify-landing.zip` | The same plugin, ready to upload | Ready |
-| `landing/tests/landing.test.js` | 44 end-to-end checks (page, consent, events, counting, destinations) | All pass against a local WordPress |
+| `landing/tests/landing.test.js` | 47 end-to-end checks (page, consent, events, counting, destinations) | All pass against a local WordPress |
 | `docs/DEPLOY.md` | How the live site is built, and the exact steps to install, check and remove the page | Ready |
 | `docs/META_PIXEL_SETUP.md` | Creating the pixel, entering its ID, testing events, consent choices | Ready; needs your Meta account |
 | `campaign/CAMPAIGN_DRAFT.md` | The Meta campaign, field by field, following Andrew Southworth's 2026 method | Draft for approval |
@@ -23,7 +25,7 @@ The first version is deliberately small: one landing page on the existing websit
 2. A tap on the ad opens `https://crsrikanth.com/spotify/`.
 3. If the visitor allows it, the Meta Pixel records a **PageView**.
 4. The visitor presses **Listen on Spotify**. Only then does the pixel record **ViewContent**. This is the conversion the campaign optimises for.
-5. Spotify opens on the artist profile `https://open.spotify.com/artist/16N9BJJPufgA3rnpQ06iSa`.
+5. Spotify opens on the artist profile `https://open.spotify.com/artist/7omxXdWFGzNjA4FyjVn6oH`.
 6. Results are compared with Spotify for Artists each week.
 
 Three numbers are kept apart on purpose, because each one is smaller and more meaningful than the one before:

@@ -23,7 +23,7 @@ The landing page is a single small plugin, `vspop-spotify-landing`. It answers t
 
 1. In WordPress admin go to **Plugins → Add New Plugin → Upload Plugin**.
 2. Choose `landing/dist/vspop-spotify-landing.zip`, click **Install Now**, then **Activate Plugin**.
-3. Open `https://crsrikanth.com/spotify/` on a phone. You should see the artwork, "CR Srikanth" and a **Listen on Spotify** button. Pressing it should open the CR Srikanth artist profile in Spotify.
+3. Open `https://crsrikanth.com/spotify/` on a phone. You should see the "Beneath the Last Autumn Moon" artwork and title, "by CR Srikanth", and a **Listen on Spotify** button. Pressing it should open the Spotify artist profile shown as "Ravi Chandra Srikanth Cherukupalli".
 4. Go to **Settings → VS Pop Spotify Landing**. The top table states the page address, where the button goes, and whether the pixel is active. With no Pixel ID saved, the page sends nothing to Meta.
 5. If the page still shows "not found" after activation, clear the host's cache: in the WordPress admin bar choose **Flush Cache** (GoDaddy), then reload. Do the same after changing any setting on the plugin's screen, because a cached copy of the page can be served for a few minutes.
 
@@ -38,12 +38,13 @@ The page is safe to leave installed with no pixel: it is not linked from the men
 | First-party counts | on | Totals of page views and button clicks per day and per ad. No cookies, no visitor identifiers. |
 | Button destination | Artist profile | The approved artist link is fixed in the plugin. |
 | Track or release link | empty | For a future campaign. Used only when "A specific track or release" is selected. Only `open.spotify.com` track or album links are accepted; anything else is refused and the artist profile stays. |
-| Line below the name | Latest single: “Another Day” | Should name the song the advertisement plays. |
-| Artwork image | bundled "Another Day" artwork | A square image from the Media Library, about 640 px. |
+| Big title | Beneath the Last Autumn Moon | Usually the song title. |
+| Line above / below the title | New instrumental / by CR Srikanth · Ambient / Neo-classical | |
+| Artwork image | bundled "Beneath the Last Autumn Moon" artwork | A square image from the Media Library, about 640 px. |
 
 ## What the page loads
 
-Two requests, 63 KB in total: the page (11 KB, styles and script included) and the artwork (52 KB). No web fonts, no frameworks, no third-party request unless the visitor allows the pixel.
+Two requests, about 81 KB in total: the page (11 KB, styles and script included) and the artwork (70 KB). No web fonts, no frameworks, no third-party request unless the visitor allows the pixel.
 
 ## Remove
 
@@ -51,6 +52,6 @@ Two requests, 63 KB in total: the page (11 KB, styles and script included) and t
 
 ## How it was tested
 
-A local WordPress (current release, SQLite database) with the live `crsrikanth` theme and this plugin. `landing/tests/landing.test.js` drives a phone-sized browser through 44 checks: the page and button, the three consent modes, the Global Privacy Control signal, PageView and ViewContent timing, scripted clicks, double presses, destination rules, bot and repeat filtering, four phone sizes, and the main site being unaffected. Accessibility was checked with axe (WCAG A and AA): no violations, with and without the banner. The settings screen and CSV download were exercised through the real admin forms.
+A local WordPress (current release, SQLite database) with the live `crsrikanth` theme and this plugin. `landing/tests/landing.test.js` drives a phone-sized browser through 47 checks: the page and button, the three consent modes, the Global Privacy Control signal, PageView and ViewContent timing, scripted clicks, double presses, destination rules, bot and repeat filtering, four phone sizes, and the main site being unaffected. Accessibility was checked with axe (WCAG A and AA): no violations, with and without the banner. The settings screen and CSV download were exercised through the real admin forms.
 
 Two things could only be imitated locally and need the live site: Meta's own script receiving the events, and Spotify opening from inside the Instagram app on a real phone.

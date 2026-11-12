@@ -1,5 +1,7 @@
 # Meta campaign draft — VS POP RECORDS LLP
 
+> **Parked, and partly out of date (12 November 2026).** Paid ads are on hold while the free kick-start runs. When ads resume, use the decisions in `../PLAYBOOK.md`: the track is now "Beneath the Last Autumn Moon" (instrumental, ambient / neo-classical), the button opens the second artist profile, the markets are tier 2 Europe, and the interests become neo-classical and ambient. The structure, budget and rules below still apply; the song, country and interest details below are from the earlier plan and will be rewritten before any launch.
+
 **Status: draft. Not created in Ads Manager, not launched, no money spent.** Creating it, publishing it and changing its budget each need your approval.
 
 It follows the method in Andrew Southworth's "How to Promote Your Music on Spotify with Facebook Ads (2026)" (published 16 January 2026) and his written 2025 tutorial. Where this draft departs from him, the difference is stated.

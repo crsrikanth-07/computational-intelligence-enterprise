@@ -23,7 +23,10 @@ define( 'VSPOP_LANDING_DB_VERSION', '1' );
  * The approved Spotify artist destination. It is a constant on purpose: the settings screen can switch a
  * campaign to a specific track, but nothing can silently change where the artist button goes.
  */
-define( 'VSPOP_LANDING_ARTIST_URL', 'https://open.spotify.com/artist/16N9BJJPufgA3rnpQ06iSa' );
+define( 'VSPOP_LANDING_ARTIST_URL', 'https://open.spotify.com/artist/7omxXdWFGzNjA4FyjVn6oH' );
+
+/** The artist's name as Spotify shows it on that profile, so the page can say where the button goes. */
+define( 'VSPOP_LANDING_SPOTIFY_NAME', 'Ravi Chandra Srikanth Cherukupalli' );
 
 /* ------------------------------------------------------------------ settings ------------------------------------------------------------------ */
 
@@ -35,8 +38,9 @@ function vspop_landing_defaults() {
 		'destination'  => 'artist',        // artist | track.
 		'track_url'    => '',
 		'artist_name'  => 'CR Srikanth',
-		'tagline'      => 'VS Pop™ · Very Smooth Pop',
-		'track_line'   => 'Latest single: “Another Day”',
+		'headline'     => 'Beneath the Last Autumn Moon',
+		'tagline'      => 'New instrumental',
+		'track_line'   => 'by CR Srikanth · Ambient / Neo-classical',
 		'cover_url'    => '',
 		'privacy_url'  => '/privacy-policy/',
 		'stats'        => 1,
@@ -106,7 +110,7 @@ function vspop_landing_sanitize( $in ) {
 		vspop_landing_notice( 'dest', 'No valid track link was given, so the button still opens the artist profile.' );
 	}
 
-	foreach ( array( 'artist_name', 'tagline', 'track_line' ) as $k ) {
+	foreach ( array( 'artist_name', 'headline', 'tagline', 'track_line' ) as $k ) {
 		$out[ $k ] = isset( $in[ $k ] ) ? sanitize_text_field( $in[ $k ] ) : $d[ $k ];
 	}
 	if ( '' === $out['artist_name'] ) {
@@ -258,13 +262,14 @@ add_action(
 function vspop_landing_html( $o ) {
 	$dest      = vspop_landing_destination( $o );
 	$assets    = plugin_dir_url( __FILE__ ) . 'assets/';
-	$cover     = $o['cover_url'] ? $o['cover_url'] : $assets . 'cover-another-day.webp';
-	$og_image  = $o['cover_url'] ? $o['cover_url'] : $assets . 'cover-another-day.jpg';
+	$cover     = $o['cover_url'] ? $o['cover_url'] : $assets . 'cover-beneath-the-last-autumn-moon.webp';
+	$og_image  = $o['cover_url'] ? $o['cover_url'] : $assets . 'cover-beneath-the-last-autumn-moon.jpg';
+	$big       = '' !== $o['headline'] ? $o['headline'] : $o['artist_name'];
 	$canonical = home_url( '/' . $o['slug'] . '/' );
 	$privacy   = $o['privacy_url'] ? ( 0 === strpos( $o['privacy_url'], '/' ) ? home_url( $o['privacy_url'] ) : $o['privacy_url'] ) : '';
-	$title     = $o['artist_name'] . ' — Listen on Spotify | VS Pop™';
-	$desc      = $o['artist_name'] . ': ' . $o['tagline'] . '. Listen on Spotify.';
-	$hint      = 'track' === $dest['type'] ? 'Opens the song in Spotify.' : 'Opens ' . $o['artist_name'] . '’s artist page in Spotify.';
+	$title     = ( $big !== $o['artist_name'] ? $big . ' — ' . $o['artist_name'] : $o['artist_name'] ) . ' | Listen on Spotify';
+	$desc      = trim( $big . '. ' . $o['track_line'] . '. Listen on Spotify.' );
+	$hint      = 'track' === $dest['type'] ? 'Opens the song in Spotify.' : 'Opens the Spotify artist page of ' . VSPOP_LANDING_SPOTIFY_NAME . '.';
 	$config    = array(
 		'pixel' => 'pixel_off' === $o['consent_mode'] ? '' : $o['pixel_id'],
 		'mode'  => $o['consent_mode'],
@@ -303,7 +308,8 @@ main{flex:1;display:flex;flex-direction:column;align-items:center;justify-conten
 .cover::before{content:"";position:absolute;inset:8% -6% -10%;background:radial-gradient(closest-side,rgba(255,122,26,.55),rgba(255,122,26,0));filter:blur(18px)}
 .cover img{position:relative;display:block;width:100%;height:100%;object-fit:cover;border:2px solid #F4EFE4}
 .tag{margin:22px 0 0;font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#C9EE55}
-h1{margin:8px 0 0;font-size:clamp(38px,11vw,52px);line-height:.95;font-weight:900;letter-spacing:-.04em;text-transform:uppercase}
+h1{margin:8px 0 0;font-size:clamp(38px,11vw,52px);line-height:.95;font-weight:900;letter-spacing:-.04em;text-transform:uppercase;overflow-wrap:break-word}
+h1.long{font-size:clamp(30px,8.6vw,42px);line-height:1}
 .track{margin:10px 0 0;font-size:17px;color:#E3DDCF}
 .btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;min-height:62px;margin:24px 0 0;padding:0 22px;background:#C9EE55;color:#111;border:2px solid #C9EE55;font-family:inherit;font-weight:800;font-size:18px;line-height:1;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;-webkit-tap-highlight-color:transparent;transition:background .15s,color .15s}
 .btn:hover,.btn:focus-visible{background:#FF7A1A;border-color:#FF7A1A}
@@ -333,9 +339,9 @@ body.asking footer{display:none}
 <div class="bar" aria-hidden="true"></div>
 <p class="label">VS POP RECORDS LLP</p>
 <main>
-	<div class="cover"><img src="<?php echo esc_url( $cover ); ?>" width="640" height="640" alt="Artwork for <?php echo esc_attr( $o['artist_name'] ); ?>" fetchpriority="high" decoding="async"></div>
+	<div class="cover"><img src="<?php echo esc_url( $cover ); ?>" width="640" height="640" alt="Artwork for <?php echo esc_attr( $big ); ?> by <?php echo esc_attr( $o['artist_name'] ); ?>" fetchpriority="high" decoding="async"></div>
 	<?php if ( $o['tagline'] ) : ?><p class="tag"><?php echo esc_html( $o['tagline'] ); ?></p><?php endif; ?>
-	<h1><?php echo esc_html( $o['artist_name'] ); ?></h1>
+	<h1<?php echo strlen( $big ) > 16 ? ' class="long"' : ''; ?>><?php echo esc_html( $big ); ?></h1>
 	<?php if ( $o['track_line'] ) : ?><p class="track"><?php echo esc_html( $o['track_line'] ); ?></p><?php endif; ?>
 	<a class="btn" id="vspop-listen" href="<?php echo esc_url( $dest['url'] ); ?>" rel="noopener" data-dest="<?php echo esc_attr( $dest['type'] ); ?>">Listen on Spotify<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
 	<p class="hint"><?php echo esc_html( $hint ); ?></p>
@@ -370,9 +376,9 @@ function vspop_landing_js() {
   function read() { try { return window.localStorage.getItem(KEY); } catch (e) { return null; } }
   function write(v) { try { window.localStorage.setItem(KEY, v); } catch (e) {} }
 
-  /* The ad's utm_content (the ad name) labels the first-party counts, so creatives can be compared. */
+  /* utm_content (an ad's name) or else utm_source (e.g. youtube, curator) labels the first-party counts, so sources can be compared. */
   var tag = '';
-  try { tag = (new URLSearchParams(window.location.search).get('utm_content') || '').slice(0, 48); } catch (e) {}
+  try { var q = new URLSearchParams(window.location.search); tag = (q.get('utm_content') || q.get('utm_source') || '').slice(0, 48); } catch (e) {}
 
   /* First-party counts: one "view" and at most one "click" per page load. No cookie, no identifier. */
   var sent = {};
@@ -480,7 +486,7 @@ add_action(
 		header( 'Content-Type: text/csv; charset=utf-8' );
 		header( 'Content-Disposition: attachment; filename="vspop-landing-' . gmdate( 'Y-m-d' ) . '.csv"' );
 		$out = fopen( 'php://output', 'w' );
-		fputcsv( $out, array( 'day_utc', 'utm_content', 'landing_page_views', 'spotify_button_clicks' ) );
+		fputcsv( $out, array( 'day_utc', 'source', 'landing_page_views', 'spotify_button_clicks' ) );
 		foreach ( vspop_landing_rows( 400 ) as $r ) {
 			fputcsv( $out, array( $r['day'], $r['tag'], $r['views'], $r['clicks'] ) );
 		}
@@ -504,7 +510,7 @@ function vspop_landing_admin_page() {
 		if ( '_admin-test' === $r['tag'] ) {
 			continue;
 		}
-		foreach ( array( array( &$days, $r['day'] ), array( &$tags, '' === $r['tag'] ? '(no utm_content)' : $r['tag'] ) ) as $pair ) {
+		foreach ( array( array( &$days, $r['day'] ), array( &$tags, '' === $r['tag'] ? '(direct, no tag)' : $r['tag'] ) ) as $pair ) {
 			if ( ! isset( $pair[0][ $pair[1] ] ) ) {
 				$pair[0][ $pair[1] ] = array( 0, 0 );
 			}
@@ -555,9 +561,10 @@ function vspop_landing_admin_page() {
 			<table class="form-table" role="presentation">
 				<tr><th scope="row"><label for="vspop-slug">Address</label></th><td><code><?php echo esc_html( home_url( '/' ) ); ?></code><input type="text" id="vspop-slug" name="vspop_landing[slug]" value="<?php echo esc_attr( $o['slug'] ); ?>" class="regular-text" style="width:160px"><code>/</code></td></tr>
 				<tr><th scope="row"><label for="vspop-artist">Artist name</label></th><td><input type="text" id="vspop-artist" name="vspop_landing[artist_name]" value="<?php echo esc_attr( $o['artist_name'] ); ?>" class="regular-text"></td></tr>
-				<tr><th scope="row"><label for="vspop-tagline">Line above the name</label></th><td><input type="text" id="vspop-tagline" name="vspop_landing[tagline]" value="<?php echo esc_attr( $o['tagline'] ); ?>" class="regular-text"></td></tr>
-				<tr><th scope="row"><label for="vspop-trackline">Line below the name</label></th><td><input type="text" id="vspop-trackline" name="vspop_landing[track_line]" value="<?php echo esc_attr( $o['track_line'] ); ?>" class="regular-text"><p class="description">Name the song the advertisement plays, so the page matches the ad.</p></td></tr>
-				<tr><th scope="row"><label for="vspop-cover">Artwork image</label></th><td><input type="url" id="vspop-cover" name="vspop_landing[cover_url]" value="<?php echo esc_attr( $o['cover_url'] ); ?>" class="large-text" placeholder="Empty = the bundled “Another Day” artwork"><p class="description">A square image from the Media Library (copy its File URL), about 640 × 640 px and under 100 KB.</p></td></tr>
+				<tr><th scope="row"><label for="vspop-headline">Big title</label></th><td><input type="text" id="vspop-headline" name="vspop_landing[headline]" value="<?php echo esc_attr( $o['headline'] ); ?>" class="regular-text"><p class="description">Usually the song title. Leave empty to show the artist name instead.</p></td></tr>
+				<tr><th scope="row"><label for="vspop-tagline">Line above the title</label></th><td><input type="text" id="vspop-tagline" name="vspop_landing[tagline]" value="<?php echo esc_attr( $o['tagline'] ); ?>" class="regular-text"></td></tr>
+				<tr><th scope="row"><label for="vspop-trackline">Line below the title</label></th><td><input type="text" id="vspop-trackline" name="vspop_landing[track_line]" value="<?php echo esc_attr( $o['track_line'] ); ?>" class="regular-text"><p class="description">Name the song the advertisement plays, so the page matches the ad.</p></td></tr>
+				<tr><th scope="row"><label for="vspop-cover">Artwork image</label></th><td><input type="url" id="vspop-cover" name="vspop_landing[cover_url]" value="<?php echo esc_attr( $o['cover_url'] ); ?>" class="large-text" placeholder="Empty = the bundled “Beneath the Last Autumn Moon” artwork"><p class="description">A square image from the Media Library (copy its File URL), about 640 × 640 px and under 100 KB.</p></td></tr>
 				<tr><th scope="row"><label for="vspop-privacy">Privacy link</label></th><td><input type="text" id="vspop-privacy" name="vspop_landing[privacy_url]" value="<?php echo esc_attr( $o['privacy_url'] ); ?>" class="regular-text"></td></tr>
 			</table>
 			<?php submit_button(); ?>
@@ -571,7 +578,7 @@ function vspop_landing_admin_page() {
 			<?php if ( ! $days ) : ?><tr><td colspan="4">No visits counted yet.</td></tr><?php endif; ?>
 			<?php foreach ( $days as $d => $v ) : ?><tr><td><?php echo esc_html( $d ); ?></td><td><?php echo (int) $v[0]; ?></td><td><?php echo (int) $v[1]; ?></td><td><?php echo esc_html( $rate( $v[0], $v[1] ) ); ?></td></tr><?php endforeach; ?>
 			</tbody></table>
-			<table class="widefat striped" style="flex:1;min-width:300px"><thead><tr><th>Ad (utm_content)</th><th>Views</th><th>Clicks</th><th>Click rate</th></tr></thead><tbody>
+			<table class="widefat striped" style="flex:1;min-width:300px"><thead><tr><th>Source (utm_content or utm_source)</th><th>Views</th><th>Clicks</th><th>Click rate</th></tr></thead><tbody>
 			<?php if ( ! $tags ) : ?><tr><td colspan="4">No visits counted yet.</td></tr><?php endif; ?>
 			<?php foreach ( $tags as $t => $v ) : ?><tr><td><?php echo esc_html( $t ); ?></td><td><?php echo (int) $v[0]; ?></td><td><?php echo (int) $v[1]; ?></td><td><?php echo esc_html( $rate( $v[0], $v[1] ) ); ?></td></tr><?php endforeach; ?>
 			</tbody></table>

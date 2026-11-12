@@ -4,7 +4,7 @@
 const { chromium } = require(process.env.PLAYWRIGHT || 'playwright');
 const { execFileSync } = require('child_process');
 const [base, wpRoot, setopt, shots] = process.argv.slice(2);
-const ARTIST = 'https://open.spotify.com/artist/16N9BJJPufgA3rnpQ06iSa';
+const ARTIST = 'https://open.spotify.com/artist/7omxXdWFGzNjA4FyjVn6oH';
 const results = [];
 const ok = (name, pass, detail = '') => { results.push({ name, pass }); console.log(`${pass ? 'PASS' : 'FAIL'}  ${name}${detail ? '  [' + detail + ']' : ''}`); };
 const set = (...kv) => JSON.parse(execFileSync('php', [setopt, wpRoot, ...kv]).toString().trim().split('\n').pop());
@@ -37,6 +37,8 @@ const tap = async v => { await Promise.all([v.page.waitForURL(/open\.spotify\.co
   let v = await visit(browser, { path: '/spotify/?utm_source=meta&utm_content=Ad1-Hook' });
   ok('page: one h1, one button, label "Listen on Spotify"', await v.page.locator('h1').count() === 1 && (await v.page.locator('#vspop-listen').innerText()).trim().toUpperCase() === 'LISTEN ON SPOTIFY');
   ok('page: button href is the approved artist profile', await v.page.locator('#vspop-listen').getAttribute('href') === ARTIST);
+  ok('page: big title is the track, line below credits CR Srikanth', (await v.page.locator('h1').innerText()).trim().toUpperCase() === 'BENEATH THE LAST AUTUMN MOON' && (await v.page.locator('.track').innerText()).includes('by CR Srikanth'));
+  ok('page: hint names the Spotify profile the button opens', (await v.page.locator('.hint').innerText()).includes('Ravi Chandra Srikanth Cherukupalli'));
   ok('page: VS POP RECORDS LLP branding present', (await v.page.content()).includes('VS POP RECORDS LLP') && !/SVLS/i.test(await v.page.content()));
   ok('no pixel id: no consent banner, no request to Meta', await v.page.locator('#vspop-consent').count() === 0 && v.log.fb.length === 0);
   ok('page: no horizontal overflow at 390px', await v.page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth));
@@ -48,6 +50,13 @@ const tap = async v => { await Promise.all([v.page.waitForURL(/open\.spotify\.co
   let rows = set().rows;
   ok('first-party: 1 view and 1 click counted under the ad tag', total(rows, 'views', 'ad1-hook') === 1 && total(rows, 'clicks', 'ad1-hook') === 1, JSON.stringify(rows));
   ok('page: no JavaScript errors', v.log.errors.length === 0, v.log.errors.join(' | '));
+  await v.ctx.close();
+
+  // 1b. Free traffic: utm_source labels the counts when there is no utm_content.
+  set('--reset-stats');
+  v = await visit(browser, { path: '/spotify/?utm_source=YouTube' });
+  rows = set().rows;
+  ok('free traffic: utm_source labels the count', total(rows, 'views', 'youtube') === 1, JSON.stringify(rows));
   await v.ctx.close();
 
   // 2. Pixel + ask everyone: nothing to Meta before consent; Allow -> PageView; button -> ViewContent once.
