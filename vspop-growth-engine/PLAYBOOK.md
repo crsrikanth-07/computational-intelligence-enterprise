@@ -13,9 +13,12 @@ This file holds every decision made so far, so any future session can continue w
 | Button destination | The second Spotify artist profile: https://open.spotify.com/artist/7omxXdWFGzNjA4FyjVn6oH (shown on Spotify as "Ravi Chandra Srikanth Cherukupalli") |
 | Page wording (Option B) | "New instrumental" / BENEATH THE LAST AUTUMN MOON / "by CR Srikanth · Ambient / Neo-classical" |
 | Page address | https://crsrikanth.com/spotify/ (**live since 12 November 2026**, pixel off; checked from a phone-sized browser: correct title, button opens the second profile, no third-party requests) |
-| Meta pixel | Off for now. Consent mode when it is switched on: ask every visitor |
-| Paid ads | Parked. When used: Meta, Instagram placements only, one campaign, $10/day, 14 days, $150 account limit |
-| Ad markets, when ads start | Tier 2 Europe: Bulgaria, Romania, Poland, Czechia, Hungary, Slovakia, Croatia, Slovenia, Greece, Portugal, Lithuania, Latvia, Estonia, Serbia |
+| Meta pixel | Not used. The artist has no Facebook account and does not want one. |
+| Paid ads (decided 12 November 2026) | **Google Ads, YouTube video campaign**, run by the artist from his own Google account, promoting the official video https://youtu.be/IwTvmWp88X4 with the landing page as its link. $10/day, 14 days with an end date. This replaces Meta as the approved paid channel. |
+| Ad link | `https://crsrikanth.com/spotify/?utm_source=youtube_ads` (the tag lets the page count these visits and button presses separately) |
+| Ad markets | Tier 2 Europe (list below) |
+| How results are judged | The landing page's own counts (visits, button presses, press rate for `youtube_ads`) plus Spotify for Artists. Google Ads' own conversion tracking is not set up: no Google tag on the page. Google therefore optimises for views, not button presses. |
+| Tier 2 Europe list | Bulgaria, Romania, Poland, Czechia, Hungary, Slovakia, Croatia, Slovenia, Greece, Portugal, Lithuania, Latvia, Estonia, Serbia |
 | Goal | Audience growth (followers, listeners) and stream increase (streams, saves, streams per listener) |
 | Long-term goal | Run promotion in-house, without agencies or promotion services |
 
@@ -46,7 +49,7 @@ GoDaddy serves pages from its cache for up to 31 days. After changing anything i
 
 ## Rules that never change
 
-- Only new recurring spend allowed: Meta ads, $10–$20 per day, and only after approval.
+- Only new recurring spend allowed: advertising at $10–$20 per day (now Google Ads for YouTube; Meta was the original choice), started and paid by the artist.
 - No paid tools, services, hosting or APIs. No artificial streaming, bought placements or bots.
 - Launching ads, raising spend, publishing anything and contacting anyone each need the artist's explicit approval. Outreach is drafted here and sent by the artist.
 - Button presses are not streams. Spotify for Artists numbers are reported separately and any link to a cause is an estimate.
