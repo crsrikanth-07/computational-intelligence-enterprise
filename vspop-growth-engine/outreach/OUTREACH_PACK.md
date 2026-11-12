@@ -12,7 +12,9 @@ Prepared 12 November 2026 from `CURATOR_RESEARCH.md`. **Nothing has been sent.**
 - **Website:** https://crsrikanth.com
 - **Short bio (true, no hype):** Composer and author. 46 of his works are published with free scores on IMSLP. Guest composer at the University of Rhode Island composers' concert, April 2026.
 
-**One sentence only you can write:** what the piece sounds like (instruments, mood, length). Every draft has a `[SOUND]` slot for it. Example shape: "A slow piece for piano and strings, about four minutes, that moves from stillness to a quiet swell." Write it once and paste it into each message.
+**How it sounds (your words, condensed):** It is a slow, dark neo-classical piece in D minor for piano, Armenian duduk, cinematic strings and warm ambient pads, moving between intimate piano passages and sweeping strings: a meditation on memory, time and autumn solitude.
+
+The full description, for press notes and video posts: *a slow, dark and emotional neoclassical cinematic ballad in D minor, blending Armenian duduk, piano, cinematic strings and warm ambient pads into a deeply atmospheric journey through memory, time, autumn and solitude.* Style: Neoclassical / Cinematic / Dark Ambient. Key: D minor. Instruments: piano, Armenian duduk, strings, warm pads. Mood: melancholic, emotional, dark, autumnal, timeless, reflective.
 
 ## What you need ready before the first send
 
@@ -20,7 +22,7 @@ Several outlets will not accept a Spotify link alone. Make one Google Drive fold
 
 1. The master as **WAV** (or AIFF), and an **MP3 at 320 kbps** with the title and artist tagged.
 2. The **artwork**, square, at least 1400 × 1400 px.
-3. A one-paragraph **note** (the bio above plus your `[SOUND]` sentence).
+3. A one-paragraph **note** (the bio above plus your `It is a slow, dark neo-classical piece in D minor for piano, Armenian duduk, cinematic strings and warm ambient pads, moving between intimate piano passages and sweeping strings: a meditation on memory, time and autumn solitude.` sentence).
 
 Its share link is `[PRESS FOLDER]` in the drafts below. Use it only for outlets that ask for downloads.
 
@@ -45,7 +47,7 @@ Not now: A Closer Listen, Igloo, Ambient.Zone and Echoes and Dust take albums or
 
 ## Drafts
 
-Fill in `[SOUND]` and, where shown, `[PRESS FOLDER]`. Change any wording that does not sound like you.
+Fill in `It is a slow, dark neo-classical piece in D minor for piano, Armenian duduk, cinematic strings and warm ambient pads, moving between intimate piano passages and sweeping strings: a meditation on memory, time and autumn solitude.` and, where shown, `[PRESS FOLDER]`. Change any wording that does not sound like you.
 
 ### 1. Moon Phase Radio — contact form
 
@@ -55,7 +57,7 @@ Their page asks for: the music file (128 kbps or higher), permission for airplay
 >
 > Moon Phase Radio was kind to my music before: "Ghosa (The Call)" reached #1 on your Ambient Top 10 in January 2025, and "Abandoned Station" charted in 2025 and again in April 2026. Thank you for that.
 >
-> I'd like to send my new single, "Beneath the Last Autumn Moon", released 4 November 2026. [SOUND]
+> I'd like to send my new single, "Beneath the Last Autumn Moon", released 4 November 2026. It is a slow, dark neo-classical piece in D minor for piano, Armenian duduk, cinematic strings and warm ambient pads, moving between intimate piano passages and sweeping strings: a meditation on memory, time and autumn solitude.
 >
 > You have my permission to play it on Moon Phase Radio. The MP3 and the artwork are attached / linked here: [PRESS FOLDER]
 >
@@ -73,7 +75,7 @@ Their page asks for: the music file (128 kbps or higher), permission for airplay
 >
 > I enjoyed your "Travelogue: An Autumn Hush Redux" this October, and the premiere of Julia Andersson's "Blank Slate". I hope a new autumn piece of mine might find a place on Stationary Travels, in a playlist, a mix or a post.
 >
-> "Beneath the Last Autumn Moon" is an instrumental single, released 4 November 2026. [SOUND]
+> "Beneath the Last Autumn Moon" is an instrumental single, released 4 November 2026. It is a slow, dark neo-classical piece in D minor for piano, Armenian duduk, cinematic strings and warm ambient pads, moving between intimate piano passages and sweeping strings: a meditation on memory, time and autumn solitude.
 >
 > Spotify: https://open.spotify.com/track/4r30HrrU0EiHIILTZXrQFo
 > Video: https://youtu.be/IwTvmWp88X4
@@ -93,7 +95,7 @@ Their rules: download links only, **no attachments**; AIFF or WAV in a zipped fo
 
 > Hello John and the Echoes team,
 >
-> I'm submitting my new instrumental single, "Beneath the Last Autumn Moon", released 4 November 2026. [SOUND]
+> I'm submitting my new instrumental single, "Beneath the Last Autumn Moon", released 4 November 2026. It is a slow, dark neo-classical piece in D minor for piano, Armenian duduk, cinematic strings and warm ambient pads, moving between intimate piano passages and sweeping strings: a meditation on memory, time and autumn solitude.
 >
 > WAV download (zipped): [PRESS FOLDER]
 > Spotify, for reference: https://open.spotify.com/track/4r30HrrU0EiHIILTZXrQFo
@@ -113,7 +115,7 @@ Their rules: download links only, **no attachments**; AIFF or WAV in a zipped fo
 >
 > I've been listening to the podcast, including Episode 23, "Texture And Colour". It's lovely to hear independent artists given that space.
 >
-> I'd like to offer my new instrumental, "Beneath the Last Autumn Moon" (released 4 November 2026), for a future episode. [SOUND] You have my permission to include it.
+> I'd like to offer my new instrumental, "Beneath the Last Autumn Moon" (released 4 November 2026), for a future episode. It is a slow, dark neo-classical piece in D minor for piano, Armenian duduk, cinematic strings and warm ambient pads, moving between intimate piano passages and sweeping strings: a meditation on memory, time and autumn solitude. You have my permission to include it.
 >
 > Spotify: https://open.spotify.com/track/4r30HrrU0EiHIILTZXrQFo
 > Files, if useful: [PRESS FOLDER]
@@ -128,8 +130,8 @@ Their rules: download links only, **no attachments**; AIFF or WAV in a zipped fo
 Their rules: the music must be streamable or downloadable at the URL you give; choose a genre; nothing older than six months; emailed releases are ignored.
 
 - **URL:** https://open.spotify.com/track/4r30HrrU0EiHIILTZXrQFo
-- **Genre:** New Classical (or Ambient)
-- **Note:** "Beneath the Last Autumn Moon", instrumental single, released 4 November 2026. [SOUND] By CR Srikanth, composer and author (46 works with free scores on IMSLP), released as Ravi Chandra Srikanth Cherukupalli.
+- **Genre:** New Classical
+- **Note:** "Beneath the Last Autumn Moon", instrumental single, released 4 November 2026. It is a slow, dark neo-classical piece in D minor for piano, Armenian duduk, cinematic strings and warm ambient pads, moving between intimate piano passages and sweeping strings: a meditation on memory, time and autumn solitude. By CR Srikanth, composer and author (46 works with free scores on IMSLP), released as Ravi Chandra Srikanth Cherukupalli.
 
 ### 6. indiemono — form at indiemono.com/music-submit/
 
@@ -146,7 +148,7 @@ Free since 2015; one submission per track; no reply if not chosen.
 
 > Hello,
 >
-> I'd like to submit my new instrumental single, "Beneath the Last Autumn Moon" (released 4 November 2026), for Ultima Thule. [SOUND]
+> I'd like to submit my new instrumental single, "Beneath the Last Autumn Moon" (released 4 November 2026), for Ultima Thule. It is a slow, dark neo-classical piece in D minor for piano, Armenian duduk, cinematic strings and warm ambient pads, moving between intimate piano passages and sweeping strings: a meditation on memory, time and autumn solitude.
 >
 > Download: [PRESS FOLDER]
 > Spotify: https://open.spotify.com/track/4r30HrrU0EiHIILTZXrQFo
@@ -162,7 +164,7 @@ Free since 2015; one submission per track; no reply if not chosen.
 
 Tick **yes** to being considered for Higher Plain Music Radio and Spotify playlisting. It does not accept AI-generated music.
 
-> "Beneath the Last Autumn Moon", instrumental single, released 4 November 2026. [SOUND]
+> "Beneath the Last Autumn Moon", instrumental single, released 4 November 2026. It is a slow, dark neo-classical piece in D minor for piano, Armenian duduk, cinematic strings and warm ambient pads, moving between intimate piano passages and sweeping strings: a meditation on memory, time and autumn solitude.
 > Spotify: https://open.spotify.com/track/4r30HrrU0EiHIILTZXrQFo · Video: https://youtu.be/IwTvmWp88X4
 > CR Srikanth is a composer and author; 46 of his works are published with free scores on IMSLP. Released as Ravi Chandra Srikanth Cherukupalli. No embargo.
 
@@ -174,7 +176,7 @@ Their rules: one ZIP of tagged files (320 kbps MP3 or FLAC) with background and 
 
 > Hello,
 >
-> I know single tracks don't go on the blog, so I'm offering this one for DreamScenes. "Beneath the Last Autumn Moon" is an instrumental single, released 4 November 2026. [SOUND]
+> I know single tracks don't go on the blog, so I'm offering this one for DreamScenes. "Beneath the Last Autumn Moon" is an instrumental single, released 4 November 2026. It is a slow, dark neo-classical piece in D minor for piano, Armenian duduk, cinematic strings and warm ambient pads, moving between intimate piano passages and sweeping strings: a meditation on memory, time and autumn solitude.
 >
 > ZIP (320 kbps MP3, tagged, with artwork): [PRESS FOLDER]
 > Buy / stream: Apple Music https://music.apple.com/us/album/beneath-the-last-autumn-moon/6830632761?i=6830632762
@@ -192,7 +194,7 @@ Their rules: one ZIP of tagged files (320 kbps MP3 or FLAC) with background and 
 >
 > I'm a composer whose work sits between contemporary classical and ambient; 46 of my works are published with free scores on IMSLP, and I was a guest composer at the University of Rhode Island composers' concert in April 2026.
 >
-> My new single, "Beneath the Last Autumn Moon" (released 4 November 2026), may suit Second Inversion. [SOUND]
+> My new single, "Beneath the Last Autumn Moon" (released 4 November 2026), may suit Second Inversion. It is a slow, dark neo-classical piece in D minor for piano, Armenian duduk, cinematic strings and warm ambient pads, moving between intimate piano passages and sweeping strings: a meditation on memory, time and autumn solitude.
 >
 > WAV and artwork: [PRESS FOLDER]
 > Spotify: https://open.spotify.com/track/4r30HrrU0EiHIILTZXrQFo
