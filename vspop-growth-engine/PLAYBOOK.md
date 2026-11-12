@@ -12,7 +12,7 @@ This file holds every decision made so far, so any future session can continue w
 | Video | https://youtu.be/IwTvmWp88X4 (the artist will share the original file for vertical cuts) |
 | Button destination | The second Spotify artist profile: https://open.spotify.com/artist/7omxXdWFGzNjA4FyjVn6oH (shown on Spotify as "Ravi Chandra Srikanth Cherukupalli") |
 | Page wording (Option B) | "New instrumental" / BENEATH THE LAST AUTUMN MOON / "by CR Srikanth · Ambient / Neo-classical" |
-| Page address | https://crsrikanth.com/spotify/ |
+| Page address | https://crsrikanth.com/spotify/ (**live since 12 November 2026**, pixel off; checked from a phone-sized browser: correct title, button opens the second profile, no third-party requests) |
 | Meta pixel | Off for now. Consent mode when it is switched on: ask every visitor |
 | Paid ads | Parked. When used: Meta, Instagram placements only, one campaign, $10/day, 14 days, $150 account limit |
 | Ad markets, when ads start | Tier 2 Europe: Bulgaria, Romania, Poland, Czechia, Hungary, Slovakia, Croatia, Slovenia, Greece, Portugal, Lithuania, Latvia, Estonia, Serbia |
@@ -34,11 +34,15 @@ Earlier decisions, now replaced: "Another Day" as the song; the CR Srikanth VS P
    | Email signature, newsletter | `https://crsrikanth.com/spotify/?utm_source=email` |
 
    Curators and journalists get the **Spotify track link directly**, not the landing page: they expect it.
-2. **Curator and tastemaker outreach**: a verified list and personal drafts are prepared here; the artist sends each one. Nothing is sent automatically.
+2. **Curator and tastemaker outreach**: research in `outreach/CURATOR_RESEARCH.md`, ten ready drafts and a tracker in `outreach/OUTREACH_PACK.md`. The artist sends each one. Nothing is sent automatically.
 3. **Short vertical videos** cut from the official video, posted free as YouTube Shorts, Instagram Reels and TikTok.
 4. **Spotify profile**: set the track as Artist Pick; a personal playlist of calm music including the track.
 
 Spotify's editorial pitching tool accepts only unreleased music, so it applies to the next release, not this track.
+
+## Host cache
+
+GoDaddy serves pages from its cache for up to 31 days. After changing anything in **Settings → VS Pop Spotify Landing**, click **Flush Cache** in the admin bar, or visitors keep seeing the old page. Counting is not affected: it runs from the visitor's browser.
 
 ## Rules that never change
 

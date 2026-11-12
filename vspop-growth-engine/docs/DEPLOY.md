@@ -25,7 +25,7 @@ The landing page is a single small plugin, `vspop-spotify-landing`. It answers t
 2. Choose `landing/dist/vspop-spotify-landing.zip`, click **Install Now**, then **Activate Plugin**.
 3. Open `https://crsrikanth.com/spotify/` on a phone. You should see the "Beneath the Last Autumn Moon" artwork and title, "by CR Srikanth", and a **Listen on Spotify** button. Pressing it should open the Spotify artist profile shown as "Ravi Chandra Srikanth Cherukupalli".
 4. Go to **Settings → VS Pop Spotify Landing**. The top table states the page address, where the button goes, and whether the pixel is active. With no Pixel ID saved, the page sends nothing to Meta.
-5. If the page still shows "not found" after activation, clear the host's cache: in the WordPress admin bar choose **Flush Cache** (GoDaddy), then reload. Do the same after changing any setting on the plugin's screen, because a cached copy of the page can be served for a few minutes.
+5. If the page still shows "not found" after activation, clear the host's cache: in the WordPress admin bar choose **Flush Cache** (GoDaddy), then reload. Do the same after changing any setting on the plugin's screen: the host overrides the page's own short cache time and keeps pages for up to 31 days.
 
 The page is safe to leave installed with no pixel: it is not linked from the menu and is marked "noindex", so search engines leave it out.
 
