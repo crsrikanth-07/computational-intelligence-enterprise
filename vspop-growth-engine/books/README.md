@@ -47,3 +47,23 @@ Results: WordPress → **Settings → Book Landing** shows views and store click
 4. **Reviews from real readers.** Never paid or swapped (Amazon removes them).
 
 Expect SEO to work slowly: weeks to be indexed, months to bring steady visitors. It mainly helps people who already search for the author's name or a book title, plus a trickle from topic searches.
+
+## Instagram boost for the lead book (no Facebook account needed)
+
+**Video:** `creative/tales-reel-1080x1920.mp4`, 13 seconds, 9:16, made from the cover. Four lines of text, all true to the book: "Two towns that appear on no map." / "Families pass down loyalties, recipes, music, houses, debts and secrets." / "Tales from Bellavere and Lindenfeld — Linked stories by CR Srikanth" / "Ebook and paperback — Tap below to choose your store". Text stays out of the zones Instagram covers. It has a silent soundtrack; music can be added in the Instagram app (the author's own instrumental tracks suit it). If Instagram refuses to boost a post because of the chosen music, post it without music.
+
+**Caption:** Two towns that appear on no map, and the families who keep their secrets. Tales from Bellavere and Lindenfeld, linked stories by CR Srikanth. Ebook and paperback.
+
+**Boost settings (defaults chosen for the author):**
+
+| Setting | Value |
+| --- | --- |
+| Goal | More website visits |
+| Website | `https://crsrikanth.com/read/?utm_source=instagram_boost` |
+| Button | Shop Now |
+| Locations | United States, United Kingdom, Canada, Australia, Ireland, New Zealand (English-reading markets where the listed stores sell the book) |
+| Age | 25–65+ |
+| Interests | Literary fiction, Short story, Historical fiction, Books, Goodreads |
+| Budget | $10 a day for 7 days ($70) |
+
+Review on day 4: Instagram's link clicks against the landing page's views and store clicks (Settings → Book Landing, source `instagram_boost`). A store click is not a sale.
