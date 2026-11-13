@@ -1,0 +1,23 @@
+{
+ "dir": "vspop-another-day-landing",
+ "plugin_name": "VS Pop Spotify Landing — Another Day",
+ "menu_title": "Another Day Landing",
+ "text_domain": "vspop-another-day-landing",
+ "package": "VSPopAnotherDayLanding",
+ "prefix": "vspop_ad_landing",
+ "const_prefix": "VSPOP_AD_LANDING",
+ "ajax_action": "vspop_ad_hit",
+ "transient_prefix": "vspop_adh_",
+ "js_global": "VSPOPAD",
+ "admin_slug": "vspop-another-day",
+ "csv_name": "another-day-landing-",
+ "slug": "another-day",
+ "artist_url": "https://open.spotify.com/artist/16N9BJJPufgA3rnpQ06iSa",
+ "spotify_name": "CR Srikanth",
+ "headline": "Another Day",
+ "tagline": "VS Pop™ · Very Smooth Pop",
+ "track_line": "New single by CR Srikanth",
+ "cover_source": "/home/user/computational-intelligence-enterprise/crsrikanth/site/assets/art/another-day-vs-pop.jpg",
+ "cover_name": "cover-another-day",
+ "cover_title": "Another Day"
+}

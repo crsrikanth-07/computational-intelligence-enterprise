@@ -43,6 +43,14 @@ Earlier decisions, now replaced: "Another Day" as the song; the CR Srikanth VS P
 
 Spotify's editorial pitching tool accepts only unreleased music, so it applies to the next release, not this track.
 
+## Second music page: "Another Day" (from 13 November 2026)
+
+`https://crsrikanth.com/another-day/`, plugin `vspop-another-day-landing` (built by `landing/variants/make-variant.py` from the tested Spotify page, with its own names, settings, counts table and admin screen **Settings → Another Day Landing**, so it never touches `/spotify/`). Shows the "Another Day" artwork, "VS Pop™ · Very Smooth Pop" and "New single by CR Srikanth"; the button opens the CR Srikanth (VS Pop) Spotify profile `https://open.spotify.com/artist/16N9BJJPufgA3rnpQ06iSa`. Pixel off. Tests: 47 of 47 on the new page and 47 of 47 again on `/spotify/`.
+
+Ad links: `https://crsrikanth.com/another-day/?utm_source=instagram_boost`, `https://crsrikanth.com/another-day/?utm_source=youtube_ads`.
+
+To make a page for a further song: copy `landing/variants/another-day.json`, change the names, slug, artist link and texts, and run `python3 landing/variants/make-variant.py landing/variants/<file>.json`.
+
 ## Books (from 13 November 2026)
 
 See `books/README.md`. Lead book *Tales from Bellavere and Lindenfeld*; landing page `crsrikanth.com/read/`; one SEO page per book on crsrikanth.com. **No Amazon Ads account, ever, unless the author says otherwise.**

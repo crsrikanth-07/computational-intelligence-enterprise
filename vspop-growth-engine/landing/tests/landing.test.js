@@ -1,10 +1,18 @@
 // End-to-end checks for the VS Pop Spotify landing page against a local WordPress.
 // Usage: node landing.test.js <baseUrl> <wpRoot> <setoptPhp> [screenshotDir]
+// For a variant page set LANDING_SLUG, ARTIST_URL, EXPECT_TITLE, EXPECT_LINE, EXPECT_HINT and AJAX_ACTION (defaults: the /spotify/ page).
 // Meta and Spotify are never contacted: both hosts are intercepted and answered locally.
 const { chromium } = require(process.env.PLAYWRIGHT || 'playwright');
 const { execFileSync } = require('child_process');
 const [base, wpRoot, setopt, shots] = process.argv.slice(2);
-const ARTIST = 'https://open.spotify.com/artist/7omxXdWFGzNjA4FyjVn6oH';
+const E = process.env;
+const SLUG = E.LANDING_SLUG || 'spotify';
+const PAGE = `/${SLUG}/`;
+const ARTIST = E.ARTIST_URL || 'https://open.spotify.com/artist/7omxXdWFGzNjA4FyjVn6oH';
+const EXPECT_TITLE = E.EXPECT_TITLE || 'BENEATH THE LAST AUTUMN MOON';
+const EXPECT_LINE = E.EXPECT_LINE || 'by CR Srikanth';
+const EXPECT_HINT = E.EXPECT_HINT || 'Ravi Chandra Srikanth Cherukupalli';
+const ACTION = E.AJAX_ACTION || 'vspop_hit';
 const results = [];
 const ok = (name, pass, detail = '') => { results.push({ name, pass }); console.log(`${pass ? 'PASS' : 'FAIL'}  ${name}${detail ? '  [' + detail + ']' : ''}`); };
 const set = (...kv) => JSON.parse(execFileSync('php', [setopt, wpRoot, ...kv]).toString().trim().split('\n').pop());
@@ -12,7 +20,7 @@ const total = (rows, f, tag) => rows.filter(r => tag === undefined || r.tag === 
 // A stand-in for fbevents.js: replays the queued fbq() calls into window.__fb so the test can read them.
 const FB_STUB = `(function(){var q=window.fbq;window.__fb=window.__fb||[];function run(a){window.__fb.push(Array.prototype.slice.call(a));}if(q){q.callMethod=function(){run(arguments)};(q.queue||[]).forEach(run);q.queue=[];}})();`;
 
-async function visit(browser, { path = '/spotify/', tz = 'America/New_York', gpc = false, viewport = { width: 390, height: 844 }, webdriver = false } = {}) {
+async function visit(browser, { path = PAGE, tz = 'America/New_York', gpc = false, viewport = { width: 390, height: 844 }, webdriver = false } = {}) {
   const ctx = await browser.newContext({ viewport, timezoneId: tz, deviceScaleFactor: 1, isMobile: true, hasTouch: true, userAgent: 'Mozilla/5.0 (iPhone; CPU iPhone OS 17_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 Instagram 330.0.0.0' });
   if (!webdriver) await ctx.addInitScript(() => Object.defineProperty(Navigator.prototype, 'webdriver', { get: () => false }));
   if (gpc) await ctx.addInitScript(() => Object.defineProperty(Navigator.prototype, 'globalPrivacyControl', { get: () => true }));
@@ -34,11 +42,11 @@ const tap = async v => { await Promise.all([v.page.waitForURL(/open\.spotify\.co
 
   // 1. No Pixel ID: page works, nothing goes to Meta, first-party counts work.
   set('pixel_id=', 'consent_mode=ask_everyone', 'destination=artist', 'track_url=', '--reset-stats');
-  let v = await visit(browser, { path: '/spotify/?utm_source=meta&utm_content=Ad1-Hook' });
+  let v = await visit(browser, { path: PAGE + '?utm_source=meta&utm_content=Ad1-Hook' });
   ok('page: one h1, one button, label "Listen on Spotify"', await v.page.locator('h1').count() === 1 && (await v.page.locator('#vspop-listen').innerText()).trim().toUpperCase() === 'LISTEN ON SPOTIFY');
   ok('page: button href is the approved artist profile', await v.page.locator('#vspop-listen').getAttribute('href') === ARTIST);
-  ok('page: big title is the track, line below credits CR Srikanth', (await v.page.locator('h1').innerText()).trim().toUpperCase() === 'BENEATH THE LAST AUTUMN MOON' && (await v.page.locator('.track').innerText()).includes('by CR Srikanth'));
-  ok('page: hint names the Spotify profile the button opens', (await v.page.locator('.hint').innerText()).includes('Ravi Chandra Srikanth Cherukupalli'));
+  ok('page: big title is the track, line below credits the artist', (await v.page.locator('h1').innerText()).trim().toUpperCase() === EXPECT_TITLE && (await v.page.locator('.track').innerText()).includes(EXPECT_LINE));
+  ok('page: hint names the Spotify profile the button opens', (await v.page.locator('.hint').innerText()).includes(EXPECT_HINT));
   ok('page: VS POP RECORDS LLP branding present', (await v.page.content()).includes('VS POP RECORDS LLP') && !/SVLS/i.test(await v.page.content()));
   ok('no pixel id: no consent banner, no request to Meta', await v.page.locator('#vspop-consent').count() === 0 && v.log.fb.length === 0);
   ok('page: no horizontal overflow at 390px', await v.page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth));
@@ -54,7 +62,7 @@ const tap = async v => { await Promise.all([v.page.waitForURL(/open\.spotify\.co
 
   // 1b. Free traffic: utm_source labels the counts when there is no utm_content.
   set('--reset-stats');
-  v = await visit(browser, { path: '/spotify/?utm_source=YouTube' });
+  v = await visit(browser, { path: PAGE + '?utm_source=YouTube' });
   rows = set().rows;
   ok('free traffic: utm_source labels the count', total(rows, 'views', 'youtube') === 1, JSON.stringify(rows));
   await v.ctx.close();
@@ -86,7 +94,7 @@ const tap = async v => { await Promise.all([v.page.waitForURL(/open\.spotify\.co
   ok('no thanks: zero Meta requests, button still opens Spotify', v.log.fb.length === 0 && v.page.url() === ARTIST);
   ok('no thanks: the click is still counted first-party', total(rows, 'clicks') >= 1, JSON.stringify(rows));
   await v.page.goBack({ waitUntil: 'networkidle' }).catch(() => {});
-  await v.page.goto(base + '/spotify/', { waitUntil: 'networkidle' });
+  await v.page.goto(base + PAGE, { waitUntil: 'networkidle' });
   ok('no thanks is remembered: no banner, no Meta on the next visit', !(await v.page.locator('#vspop-consent').isVisible()) && v.log.fb.length === 0);
   await v.page.locator('#vspop-choices').click();
   ok('"Privacy choices" reopens the banner', await v.page.locator('#vspop-consent').isVisible());
@@ -133,11 +141,11 @@ const tap = async v => { await Promise.all([v.page.waitForURL(/open\.spotify\.co
   v = await visit(browser, { webdriver: true }); await new Promise(r => setTimeout(r, 300));
   ok('automated browser: nothing counted', v.log.hits.length === 0 && set().rows.length === 0);
   await v.ctx.close();
-  const r = await fetch(base + '/wp-admin/admin-ajax.php', { method: 'POST', headers: { 'User-Agent': 'facebookexternalhit/1.1', 'Content-Type': 'application/x-www-form-urlencoded' }, body: 'action=vspop_hit&e=click&t=x' });
+  const r = await fetch(base + '/wp-admin/admin-ajax.php', { method: 'POST', headers: { 'User-Agent': 'facebookexternalhit/1.1', 'Content-Type': 'application/x-www-form-urlencoded' }, body: `action=${ACTION}&e=click&t=x` });
   ok('bot user agent: endpoint answers 204 and counts nothing', r.status === 204 && set().rows.length === 0, String(r.status));
-  const r2 = await fetch(base + '/wp-admin/admin-ajax.php', { method: 'POST', headers: { 'User-Agent': 'Mozilla/5.0 Test', 'Content-Type': 'application/x-www-form-urlencoded' }, body: 'action=vspop_hit&e=purchase&t=x' });
+  const r2 = await fetch(base + '/wp-admin/admin-ajax.php', { method: 'POST', headers: { 'User-Agent': 'Mozilla/5.0 Test', 'Content-Type': 'application/x-www-form-urlencoded' }, body: `action=${ACTION}&e=purchase&t=x` });
   ok('unknown event name: ignored', r2.status === 204 && set().rows.length === 0);
-  for (let i = 0; i < 3; i++) await fetch(base + '/wp-admin/admin-ajax.php', { method: 'POST', headers: { 'User-Agent': 'Mozilla/5.0 Repeat', 'Content-Type': 'application/x-www-form-urlencoded' }, body: 'action=vspop_hit&e=click&t=Rep%20Tag<script>' });
+  for (let i = 0; i < 3; i++) await fetch(base + '/wp-admin/admin-ajax.php', { method: 'POST', headers: { 'User-Agent': 'Mozilla/5.0 Repeat', 'Content-Type': 'application/x-www-form-urlencoded' }, body: `action=${ACTION}&e=click&t=Rep%20Tag<script>` });
   rows = set().rows;
   ok('repeat guard: three identical hits within 30 s count once; tag is sanitised', rows.length === 1 && rows[0].clicks === 1 && rows[0].tag === 'rep-tag-script', JSON.stringify(rows));
 
@@ -160,7 +168,7 @@ const tap = async v => { await Promise.all([v.page.waitForURL(/open\.spotify\.co
   }
   for (const p of ['/', '/music/', '/shop/', '/contact/']) {
     const res = await fetch(base + p); const html = await res.text();
-    ok(`main site ${p}: still served by the theme, no pixel or landing code added`, res.status === 200 && html.includes('wp-content/themes/crsrikanth') && !/fbq\(|fbevents|vspop_hit|vspop-listen|window\.VSPOP/i.test(html));
+    ok(`main site ${p}: still served by the theme, no pixel or landing code added`, res.status === 200 && html.includes('wp-content/themes/crsrikanth') && !/fbq\(|fbevents|vspop_hit|vspop_ad_hit|vspop-listen|window\.VSPOP/i.test(html));
   }
 
   await browser.close();
