@@ -50,7 +50,7 @@ Expect SEO to work slowly: weeks to be indexed, months to bring steady visitors.
 
 ## Instagram boost for the lead book (no Facebook account needed)
 
-**Video:** `creative/tales-reel-1080x1920.mp4`, 13 seconds, 9:16, made from the cover. Four lines of text, all true to the book: "Two towns that appear on no map." / "Families pass down loyalties, recipes, music, houses, debts and secrets." / "Tales from Bellavere and Lindenfeld — Linked stories by CR Srikanth" / "Ebook and paperback — Tap below to choose your store". Text stays out of the zones Instagram covers. It has a silent soundtrack; music can be added in the Instagram app (the author's own instrumental tracks suit it). If Instagram refuses to boost a post because of the chosen music, post it without music.
+**Video:** `creative/tales-reel-1080x1920.mp4`, 13 seconds, 9:16, made from the cover. Four lines of text, all true to the book: "Two towns that appear on no map." / "Families pass down loyalties, recipes, music, houses, debts and secrets." / "Tales from Bellavere and Lindenfeld — Linked stories by CR Srikanth" / "Ebook and paperback — Tap below to choose your store". Text stays out of the zones Instagram covers. `creative/tales-reel-1080x1920-music.mp4` is the version to post: the same video over the opening 13 seconds of the author's own track "Beneath the Last Autumn Moon", with a fade-out and the level set to about -14 LUFS (Instagram's usual loudness). Because the music is in the file itself, no Instagram library music is needed, so it cannot block the boost.
 
 **Caption:** Two towns that appear on no map, and the families who keep their secrets. Tales from Bellavere and Lindenfeld, linked stories by CR Srikanth. Ebook and paperback.
 
