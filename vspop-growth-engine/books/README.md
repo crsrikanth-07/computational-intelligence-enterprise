@@ -17,6 +17,8 @@ Started 13 November 2026. Nothing here spends money or contacts anyone.
 2. **SEO repairs on the whole site** (theme): the Yoast plugin was printing a second, outdated description and second set of share tags on every page (on the home page: "over 200 original works… EDM"). Yoast's copies are now switched off and the theme's correct ones stay. Pages that redirect (`/podcast/`, `/vs-pop-composer/`) are removed from the sitemap.
 3. **A book landing page** at `crsrikanth.com/read/` (plugin `crs-book-landing`): cover, title, one big "Get the ebook" button (Books2Read universal link), other stores below, and a link to the full book page. It counts page views and store clicks per source, with no cookies and no third-party trackers. It is set to "noindex": the book page is the one meant for Google; the landing page is meant for ads and links.
 
+Live since 13 November 2026 (theme and `crs-book-landing` installed; checked: one title, description and canonical per page, seven book pages in the sitemap, /read/ opens Books2Read).
+
 Tests: 25 end-to-end checks on the landing page (`tests/book-landing.test.js`) and the theme checked with the real Yoast plugin active (one title, description and canonical per page; book pages in the sitemap; redirected pages out). No accessibility violations; all pages pass HTML validation.
 
 ## Links to use
@@ -37,9 +39,9 @@ Results: WordPress → **Settings → Book Landing** shows views and store click
 2. **Landing page**: Plugins → Add New Plugin → Upload Plugin → `crs-book-landing.zip` → Install Now → Activate.
 3. Click **Flush Cache** in the admin bar.
 
-## Free SEO steps still to do (the author's accounts)
+## Free SEO steps
 
-1. **Google Search Console**: add `crsrikanth.com`, verify it (Yoast → Settings → Site connections, or a DNS record in Cloudflare), and submit `https://crsrikanth.com/sitemap_index.xml`. Then use "URL inspection → Request indexing" on the lead book page.
+1. **Google Search Console: done 13 November 2026.** Domain property `crsrikanth.com` verified (DNS record at GoDaddy, already present); `https://crsrikanth.com/sitemap_index.xml` resubmitted; indexing requested for the Tales book page. A stray entry for the bare home URL shows "1 error" in Sitemaps; it is harmless. Check **Performance** in about two weeks.
 2. **Bing Webmaster Tools**: import the site from Search Console (one click).
 3. **Author profiles**, all free and all linking back to crsrikanth.com: Amazon Author Central, Goodreads Author Program, BookBub author profile.
 4. **Reviews from real readers.** Never paid or swapped (Amazon removes them).
