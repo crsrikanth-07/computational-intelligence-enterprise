@@ -582,3 +582,8 @@ html[data-theme="modernist"] .book-detail__facts dt, html[data-theme="modernist"
 html[data-theme="modernist"] .book-detail__facts { color: #3D3A33; }
 html[data-theme="modernist"] .shelf__meta { color: #5F584C; }
 html[data-theme="modernist"] .shelf__title { font-weight: 800; letter-spacing: -.01em; }
+/* Modernist: song pages */
+html[data-theme="modernist"] .shelf--music .shelf__item { color: #111111; }
+html[data-theme="modernist"] .shelf--music .shelf__item img { border: 2px solid #111111; }
+html[data-theme="modernist"] .song-facts dt { color: #111111; }
+html[data-theme="modernist"] .song-facts { color: #3D3A33; }

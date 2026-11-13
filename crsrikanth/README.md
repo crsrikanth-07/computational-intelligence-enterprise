@@ -13,7 +13,7 @@ This is the personal website of CR Srikanth: music, books and stories, CuTTI inn
 ## Adding new work
 
 1. Add an entry to the right file:
-   - **A new release:** `content/music.json` → `releases`, and put the artwork, 800×800, in `site/assets/art/`. To feature it, also add it to `latest`.
+   - **A new release:** `content/music.json` → `releases` (or `classicalReleases`), with a unique `slug` and the release `date`, and put the artwork, 800×800, in `site/assets/art/`. To feature it, also add it to `latest`. Each release gets its own page at `/music/<slug>/` (title, description, player, recognition from `recognition.json`, matching video, and Google music data are generated), and the theme creates the WordPress page on upload. An optional `about` list, `lead` line and `facts` table give a release its own description.
    - **A new book:** `content/literature.json` → `books`, with a unique `slug` and the publication `date`, and put the cover in `site/assets/covers/`. Each book gets its own page at `/books/<slug>/` (title, description and Google book data are generated), and the theme creates the WordPress page on upload.
    - **A new published story:** `content/literature.json` → `publications`.
    - **A concert, chart or award:** `content/recognition.json` → `milestones`, plus `charts` or `stations` if it belongs in the archive. Set `"verified": true` only when `url` points to the original source.

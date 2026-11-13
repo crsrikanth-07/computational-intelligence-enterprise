@@ -23,8 +23,8 @@ $GLOBALS['crs_page_head'] = function () { ?>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,300&family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@400;500;700&family=Spectral:ital,wght@0,300;0,400;1,300&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,700;1,6..96,400&family=Cinzel:wght@400;600&family=Archivo:wght@400;500;800;900&family=Manrope:wght@300;400;600&display=swap">
-<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/site.css?v=57fc42a9">
-<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/themes.css?v=7bbc1d6c">
+<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/site.css?v=fa76100d">
+<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/themes.css?v=d1718c40">
 <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/js/site.js?v=b9ea7f25" defer></script>
 <script type="application/ld+json">
 {
@@ -55,6 +55,8 @@ $GLOBALS['crs_page_head'] = function () { ?>
    ],
    "sameAs": [
     "https://open.spotify.com/artist/16N9BJJPufgA3rnpQ06iSa",
+    "https://open.spotify.com/artist/7omxXdWFGzNjA4FyjVn6oH",
+    "https://soundcloud.com/srikanth-rc-cherukupalli",
     "https://music.apple.com/us/artist/cr-srikanth/1763874820",
     "https://imslp.org/wiki/Category:CR,_Srikanth",
     "https://www.youtube.com/@CRSrikanthSymphonicResonance",

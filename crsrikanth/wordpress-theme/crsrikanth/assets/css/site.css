@@ -538,3 +538,18 @@ select.input option { background: var(--night); }
 .shelf__item:hover .shelf__title { text-decoration: underline; text-underline-offset: 3px; }
 .shelf__title { font: 600 16px/1.25 var(--serif); }
 .shelf__meta { font-size: 13px; color: var(--paper-muted); }
+
+/* Song pages */
+.release__link { color: inherit; text-decoration: none; }
+.release__link:hover { text-decoration: underline; text-underline-offset: 4px; }
+.song-facts { margin-top: 26px; color: var(--ivory-2); }
+.song-facts dt { color: var(--ivory); }
+.song-rec { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; border-top: 1px solid var(--rule); }
+.song-rec li { display: grid; gap: 6px; padding: 20px 0; border-bottom: 1px solid var(--rule); }
+.song-rec b { font: 600 19px/1.3 var(--serif); }
+.song-rec span { font-size: 14px; color: var(--muted); }
+.videos--one { grid-template-columns: minmax(0, 1fr) !important; max-width: 760px; }
+.shelf--music .shelf__item img { width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; }
+.shelf--music .shelf__item { color: var(--ivory); }
+.shelf--music .shelf__meta { color: var(--muted); }
+

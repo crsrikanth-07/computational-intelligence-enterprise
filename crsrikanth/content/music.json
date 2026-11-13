@@ -53,7 +53,8 @@
      "label": "Deezer",
      "url": "https://www.deezer.com/album/973199221"
     }
-   ]
+   ],
+   "slug": "another-day"
   },
   {
    "title": "You're Gonna Let It Go",
@@ -77,7 +78,8 @@
      "label": "Deezer",
      "url": "https://www.deezer.com/album/909169182"
     }
-   ]
+   ],
+   "slug": "youre-gonna-let-it-go"
   },
   {
    "title": "So Lets Dance",
@@ -101,7 +103,8 @@
      "label": "Deezer",
      "url": "https://www.deezer.com/album/760380021"
     }
-   ]
+   ],
+   "slug": "so-lets-dance"
   },
   {
    "title": "Don't Waste My Time",
@@ -125,7 +128,8 @@
      "label": "Deezer",
      "url": "https://www.deezer.com/album/760379941"
     }
-   ]
+   ],
+   "slug": "dont-waste-my-time"
   },
   {
    "title": "Never Let You Go",
@@ -149,7 +153,8 @@
      "label": "Deezer",
      "url": "https://www.deezer.com/album/749267091"
     }
-   ]
+   ],
+   "slug": "never-let-you-go"
   },
   {
    "title": "Dancing in the Dark",
@@ -173,7 +178,8 @@
      "label": "Deezer",
      "url": "https://www.deezer.com/album/719802411"
     }
-   ]
+   ],
+   "slug": "dancing-in-the-dark"
   },
   {
    "title": "Distance",
@@ -197,7 +203,8 @@
      "label": "Deezer",
      "url": "https://www.deezer.com/album/722799501"
     }
-   ]
+   ],
+   "slug": "distance"
   },
   {
    "title": "Quarzt",
@@ -221,7 +228,8 @@
      "label": "Deezer",
      "url": "https://www.deezer.com/album/704782181"
     }
-   ]
+   ],
+   "slug": "quarzt"
   },
   {
    "title": "Fyuzion",
@@ -245,7 +253,8 @@
      "label": "Deezer",
      "url": "https://www.deezer.com/album/692411301"
     }
-   ]
+   ],
+   "slug": "fyuzion"
   }
  ],
  "imslp": [
@@ -497,7 +506,8 @@
      "label": "Apple Music",
      "url": "https://music.apple.com/us/album/beneath-the-last-autumn-moon/6830632761?i=6830632762"
     }
-   ]
+   ],
+   "slug": "beneath-the-last-autumn-moon"
   },
   {
    "label": "Latest VS Pop™ release",
@@ -519,7 +529,8 @@
      "label": "Deezer",
      "url": "https://www.deezer.com/album/973199221"
     }
-   ]
+   ],
+   "slug": "another-day"
   }
  ],
  "playlists": [
@@ -555,7 +566,21 @@
      "label": "Apple Music",
      "url": "https://music.apple.com/us/album/beneath-the-last-autumn-moon/6830632761?i=6830632762"
     }
-   ]
+   ],
+   "slug": "beneath-the-last-autumn-moon",
+   "date": "2026-11-04",
+   "about": [
+    "A slow, dark and emotional neo-classical, cinematic ballad in D minor, blending Armenian duduk, piano, cinematic strings and warm ambient pads into an atmospheric journey through memory, time, autumn and solitude.",
+    "It moves between intimate piano moments and sweeping strings, while the duduk brings an ancient, human voice to the piece: the feeling of standing beneath a cold October sky as the last leaves of autumn disappear into the night."
+   ],
+   "facts": {
+    "Style": "Neo-classical · Cinematic · Dark ambient",
+    "Key": "D minor",
+    "Instruments": "Piano, Armenian duduk, strings, warm pads",
+    "Mood": "Melancholic, reflective, autumnal"
+   },
+   "credit": "Ravi Chandra Srikanth Cherukupalli",
+   "lead": "A slow, dark neo-classical piece in D minor for piano, Armenian duduk, cinematic strings and warm ambient pads."
   }
  ]
 }

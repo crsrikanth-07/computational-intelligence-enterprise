@@ -52,7 +52,7 @@ add_action( 'admin_post_crs_form', 'crs_handle_form' );
  * their children, about, contact) if they do not exist. Existing pages, posts and the front-page setting are untouched.
  */
 add_action( 'init', function () {
-	$release = '2026-11-books';
+	$release = '2026-11-songs';
 	if ( get_option( 'crs_pages_version' ) === $release || get_transient( 'crs_pages_lock' ) ) { return; }
 	set_transient( 'crs_pages_lock', 1, 60 );
 	$create = array(
@@ -76,6 +76,16 @@ add_action( 'init', function () {
 		array( 'books', 'kamil-and-hassan-drama-company', 'Kamil & Hassan Drama Company' ),
 		array( 'books', 'the-house-on-the-hill-above-the-river', 'The House on the Hill Above the River' ),
 		array( 'books', 'ten-tales-from-bellavere-and-lindelfeld', 'Ten Tales from Bellavere and Lindelfeld' ),
+		array( 'music', 'beneath-the-last-autumn-moon', 'Beneath the Last Autumn Moon' ),
+		array( 'music', 'another-day', 'Another Day' ),
+		array( 'music', 'youre-gonna-let-it-go', 'You\'re Gonna Let It Go' ),
+		array( 'music', 'so-lets-dance', 'So Lets Dance' ),
+		array( 'music', 'dont-waste-my-time', 'Don\'t Waste My Time' ),
+		array( 'music', 'never-let-you-go', 'Never Let You Go' ),
+		array( 'music', 'dancing-in-the-dark', 'Dancing in the Dark' ),
+		array( 'music', 'distance', 'Distance' ),
+		array( 'music', 'quarzt', 'Quarzt' ),
+		array( 'music', 'fyuzion', 'Fyuzion' ),
 	);
 	foreach ( $create as $c ) {
 		list( $parent_path, $slug, $title ) = $c;
@@ -122,8 +132,8 @@ function crs_default_head() { ?>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,300&family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@400;500;700&family=Spectral:ital,wght@0,300;0,400;1,300&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,700;1,6..96,400&family=Cinzel:wght@400;600&family=Archivo:wght@400;500;800;900&family=Manrope:wght@300;400;600&display=swap">
-<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/site.css?v=57fc42a9">
-<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/themes.css?v=7bbc1d6c">
+<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/site.css?v=fa76100d">
+<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/themes.css?v=d1718c40">
 <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/js/site.js?v=b9ea7f25" defer></script>
 
 <?php }

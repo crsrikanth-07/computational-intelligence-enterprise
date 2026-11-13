@@ -24,8 +24,8 @@ $GLOBALS['crs_page_head'] = function () { ?>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,300&family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@400;500;700&family=Spectral:ital,wght@0,300;0,400;1,300&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,700;1,6..96,400&family=Cinzel:wght@400;600&family=Archivo:wght@400;500;800;900&family=Manrope:wght@300;400;600&display=swap">
-<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/site.css?v=57fc42a9">
-<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/themes.css?v=7bbc1d6c">
+<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/site.css?v=fa76100d">
+<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/themes.css?v=d1718c40">
 <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/js/site.js?v=b9ea7f25" defer></script>
 <script type="application/ld+json">
 {
@@ -56,6 +56,8 @@ $GLOBALS['crs_page_head'] = function () { ?>
    ],
    "sameAs": [
     "https://open.spotify.com/artist/16N9BJJPufgA3rnpQ06iSa",
+    "https://open.spotify.com/artist/7omxXdWFGzNjA4FyjVn6oH",
+    "https://soundcloud.com/srikanth-rc-cherukupalli",
     "https://music.apple.com/us/artist/cr-srikanth/1763874820",
     "https://imslp.org/wiki/Category:CR,_Srikanth",
     "https://www.youtube.com/@CRSrikanthSymphonicResonance",
@@ -138,6 +140,7 @@ get_header();
     <p class="spotlight__meta">Classical single · 4 November 2026</p>
     <div class="sp-slot"><button class="btn btn--gold" type="button" data-sp="track/4r30HrrU0EiHIILTZXrQFo" data-title="Beneath the Last Autumn Moon"><svg viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M5 3l12 7-12 7z" fill="currentColor"/></svg>Play here</button><span class="small muted">Loads the Spotify player</span></div>
     <div class="links"><a class="chip" href="https://open.spotify.com/track/4r30HrrU0EiHIILTZXrQFo" target="_blank" rel="noopener">Spotify<span class="visually-hidden"> (opens in a new tab)</span></a><a class="chip" href="https://music.apple.com/us/album/beneath-the-last-autumn-moon/6830632761?i=6830632762" target="_blank" rel="noopener">Apple Music<span class="visually-hidden"> (opens in a new tab)</span></a></div>
+    <p data-mt="16"><a class="arrow" href="/music/beneath-the-last-autumn-moon/">About this song<svg viewBox="0 0 18 18" aria-hidden="true" focusable="false"><path d="M2 9h13M10 4l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a></p>
   </div>
 </article><article class="spotlight" data-reveal>
   <figure class="spotlight__art"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/art/another-day-vs-pop.jpg" alt="Cover artwork for Another Day" loading="lazy" width="640" height="640"></figure>
@@ -148,26 +151,27 @@ get_header();
     <p class="spotlight__meta">VS Pop<span class="tm">™</span> single · 24 September 2026</p>
     <div class="sp-slot"><button class="btn btn--gold" type="button" data-sp="track/5LemOZwzkweSo5O4IR4Ddw" data-title="Another Day"><svg viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M5 3l12 7-12 7z" fill="currentColor"/></svg>Play here</button><span class="small muted">Loads the Spotify player</span></div>
     <div class="links"><a class="chip" href="https://open.spotify.com/track/5LemOZwzkweSo5O4IR4Ddw" target="_blank" rel="noopener">Spotify<span class="visually-hidden"> (opens in a new tab)</span></a><a class="chip" href="https://music.apple.com/us/album/another-day-vs-pop-single/6765462074" target="_blank" rel="noopener">Apple Music<span class="visually-hidden"> (opens in a new tab)</span></a><a class="chip" href="https://www.deezer.com/album/973199221" target="_blank" rel="noopener">Deezer<span class="visually-hidden"> (opens in a new tab)</span></a></div>
+    <p data-mt="16"><a class="arrow" href="/music/another-day/">About this song<svg viewBox="0 0 18 18" aria-hidden="true" focusable="false"><path d="M2 9h13M10 4l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a></p>
   </div>
 </article></div>
 <div class="releases" data-mt="60"><article class="release" data-reveal>
   <figure><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/art/another-day-vs-pop.jpg" alt="Cover artwork for Another Day(VS Pop™)" loading="lazy" width="600" height="600"></figure>
-  <h3>Another Day</h3>
+  <h3><a class="release__link" href="/music/another-day/">Another Day</a></h3>
   <p>VS Pop™ single · 2026</p>
   <div class="links"><a class="chip" href="https://open.spotify.com/album/0oT1kdP4ih4TUEbVG0G2Zr" target="_blank" rel="noopener">Spotify<span class="visually-hidden"> (opens in a new tab)</span></a><a class="chip" href="https://music.apple.com/us/album/another-day-vs-pop-single/6765462074" target="_blank" rel="noopener">Apple Music<span class="visually-hidden"> (opens in a new tab)</span></a><a class="chip" href="https://www.deezer.com/album/973199221" target="_blank" rel="noopener">Deezer<span class="visually-hidden"> (opens in a new tab)</span></a></div>
 </article><article class="release" data-reveal>
   <figure><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/art/so-lets-dance-vs-pop.jpg" alt="Cover artwork for So Lets Dance(VS Pop™)" loading="lazy" width="600" height="600"></figure>
-  <h3>So Lets Dance</h3>
+  <h3><a class="release__link" href="/music/so-lets-dance/">So Lets Dance</a></h3>
   <p>VS Pop™ single · 2025</p>
   <div class="links"><a class="chip" href="https://open.spotify.com/album/3wJ7zfeZAWaxCKWt0WI63e" target="_blank" rel="noopener">Spotify<span class="visually-hidden"> (opens in a new tab)</span></a><a class="chip" href="https://music.apple.com/us/album/so-lets-dance-vs-pop-single/1815713539" target="_blank" rel="noopener">Apple Music<span class="visually-hidden"> (opens in a new tab)</span></a><a class="chip" href="https://www.deezer.com/album/760380021" target="_blank" rel="noopener">Deezer<span class="visually-hidden"> (opens in a new tab)</span></a></div>
 </article><article class="release" data-reveal>
   <figure><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/art/dancing-in-the-dark-vs-pop.jpg" alt="Cover artwork for Dancing in the Dark - VS Pop™" loading="lazy" width="600" height="600"></figure>
-  <h3>Dancing in the Dark</h3>
+  <h3><a class="release__link" href="/music/dancing-in-the-dark/">Dancing in the Dark</a></h3>
   <p>VS Pop™ single · 2025</p>
   <div class="links"><a class="chip" href="https://open.spotify.com/album/5ETPkooAIgl8lrdCrOJjOR" target="_blank" rel="noopener">Spotify<span class="visually-hidden"> (opens in a new tab)</span></a><a class="chip" href="https://music.apple.com/us/album/dancing-in-the-dark-vs-pop-single/1798759806" target="_blank" rel="noopener">Apple Music<span class="visually-hidden"> (opens in a new tab)</span></a><a class="chip" href="https://www.deezer.com/album/719802411" target="_blank" rel="noopener">Deezer<span class="visually-hidden"> (opens in a new tab)</span></a></div>
 </article><article class="release" data-reveal>
   <figure><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/art/distance-vs-pop.jpg" alt="Cover artwork for Distance vs Pop™" loading="lazy" width="600" height="600"></figure>
-  <h3>Distance</h3>
+  <h3><a class="release__link" href="/music/distance/">Distance</a></h3>
   <p>VS Pop™ single · 2025</p>
   <div class="links"><a class="chip" href="https://open.spotify.com/album/4nVE5w3x9f7PH1AELE4drM" target="_blank" rel="noopener">Spotify<span class="visually-hidden"> (opens in a new tab)</span></a><a class="chip" href="https://music.apple.com/us/album/distance-vs-pop-single/1800024085" target="_blank" rel="noopener">Apple Music<span class="visually-hidden"> (opens in a new tab)</span></a><a class="chip" href="https://www.deezer.com/album/722799501" target="_blank" rel="noopener">Deezer<span class="visually-hidden"> (opens in a new tab)</span></a></div>
 </article></div>

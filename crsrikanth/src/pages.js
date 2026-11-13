@@ -330,4 +330,65 @@ ${finale('Literary Correspondence.', 'For editors, publishers, translators, read
 }
 const bookPages = Object.fromEntries(lit.books.filter(b => b.slug).map(b => [`books/${b.slug}/index.html`, bookPage(b)]));
 
-module.exports = { 'index.html': home, 'music/index.html': musicPage, 'music/compositions/index.html': compositions, 'books/index.html': books, 'innovations/index.html': innovations, 'innovations/cutti-studio/index.html': studio, 'innovations/cutti-score/index.html': score, 'recognition/index.html': recognition, 'recognition/radio-charts/index.html': radio, 'recognition/press/index.html': press, 'shop/index.html': shop, 'about/index.html': about, 'contact/index.html': contact, 'privacy-policy/index.html': privacy, '404.html': notFound , ...bookPages };
+// ---------------- ONE PAGE PER SONG ----------------
+const norm = t => plain(t).toLowerCase().replace(/\(vs pop™?\)/g, '').replace(/[’']/g, '').replace(/[^a-z0-9]+/g, ' ').trim();
+const sameSong = (a, b) => { const x = norm(a), y = norm(b); return !!x && !!y && (x === y || ` ${x} `.includes(` ${y} `) || ` ${y} `.includes(` ${x} `)); };
+const spotifyEmbed = r => { const l = (r.links || []).find(k => k.label === 'Spotify'); const m = l && l.url.match(/open\.spotify\.com\/(album|track|playlist)\/([A-Za-z0-9]+)/); return m ? `${m[1]}/${m[2]}` : ''; };
+const songs = [...music.classicalReleases, ...music.releases].filter(r => r.slug);
+function songFacts(r) {
+  const facts = [];
+  for (const c of rec.charts || []) if (c.verified !== false && c.url && sameSong(c.track, r.title)) facts.push({ text: `${c.position}, ${c.chart.split(' · ')[1] || c.chart}`, sub: c.date, url: c.url });
+  for (const st of rec.stations || []) if ((st.verified || st.url) && String(st.track || '').split(/,| and /).some(t => sameSong(t, r.title))) facts.push({ text: `Radio: ${st.station}`, sub: [st.country, st.source].filter(Boolean).join(' · '), url: st.url || '' });
+  for (const g of rec.pressGroups || []) for (const it of g.items || []) if (it.url && sameSong(it.title.replace(/^.*?[“‘]/, '').replace(/[”’].*$/, '').replace(/ [–-] VS Pop™/, ''), r.title)) facts.push({ text: `${it.outlet}: ${plain(it.title)}`, sub: [it.type, it.date].filter(Boolean).join(' · '), url: it.url });
+  return facts;
+}
+function songPage(r) {
+  const url = `${L.SITE}/music/${r.slug}/`;
+  const name = plain(r.title);
+  const isPop = r.kind === 'vspop';
+  const kind = isPop ? 'VS Pop™ single' : 'Neo-classical single';
+  const title = `${name} | ${kind} by CR Srikanth`.length <= 70 ? `${name} | ${kind} by CR Srikanth` : `${name} | CR Srikanth`;
+  const when = r.date ? longDate(r.date) : r.year;
+  const platforms = (r.links || []).map(l => l.label).join(', ').replace(/, ([^,]*)$/, ' and $1');
+  const desc = isPop
+    ? `“${name}” is a VS Pop™ (Very Smooth Pop) single by CR Srikanth, released ${when}. Listen on ${platforms}.`
+    : (() => { const b = plain((r.about || [])[0] || ''); const t = ` Listen on ${platforms}.`; return (b.length + t.length <= 158 ? b : b.slice(0, 150 - t.length).replace(/[\s,;:]+\S*$/, '') + '…') + t; })();
+  const latest = (music.latest || []).find(x => x.slug === r.slug);
+  const embed = (latest && latest.embed) || spotifyEmbed(r);
+  const spotify = (r.links || []).find(l => l.label === 'Spotify');
+  const vid = vids.find(v => sameSong(v.title, r.title));
+  const facts = songFacts(r);
+  const about = r.about || [music.vspop];
+  const songFactsList = r.facts || { Type: kind, Released: when, 'Store title': plain(r.storeTitle || r.title), 'Listen on': platforms };
+  const image = r.art ? `${L.SITE}/assets/art/${r.art}` : '';
+  const ld = [
+    { '@type': 'MusicRecording', '@id': url + '#recording', name, url, byArtist: { '@id': L.SITE + '/#person' }, ...(r.date ? { datePublished: r.date } : {}), genre: isPop ? 'Pop' : 'Neoclassical',
+      description: plain(about.join(' ')), ...(image ? { image } : {}), sameAs: (r.links || []).map(l => l.url) },
+    { '@type': 'BreadcrumbList', itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: L.SITE + '/' },
+      { '@type': 'ListItem', position: 2, name: 'Music', item: L.SITE + '/music/' },
+      { '@type': 'ListItem', position: 3, name, item: url }] }
+  ];
+  const others = songs.filter(o => o.slug !== r.slug).slice(0, 6);
+  return page({ path: `/music/${r.slug}/`, title, desc, og: 'og-music.jpg', ogImage: image, ogType: 'music.song', ld }, `
+${phero({ kicker: kind, title: tm(r.title), lead: esc(r.lead || desc.replace(/ Listen on .*$/, '')), variant: 'music', crumbs: [['/music/', 'Music']],
+  buttons: `${spotify ? `<a class="btn btn--gold" href="${esc(spotify.url)}" target="_blank" rel="noopener">Listen on Spotify${EXT}</a>` : ''}<a class="btn btn--ghost" href="#listen">Play here</a>` })}
+
+${section('', 'listen', `<h2 class="visually-hidden" id="listen-title">Listen to ${tm(r.title)}</h2>${spotlight({ label: kind, title: r.title, credit: r.credit || 'CR Srikanth', meta: [r.type, when].filter(Boolean).join(' · '), art: r.art, embed, links: r.links, slug: r.slug, noPageLink: true })}`, 'listen-title')}
+
+${section('section--slate', 'about', `<div class="grid grid--2"><div data-reveal>${kicker('About the song')}<h2 id="about-title" data-mt="18">${tm(r.title)}</h2></div><div class="prose" data-reveal>${about.map(p => `<p>${p}</p>`).join('')}
+<dl class="book-detail__facts song-facts">${Object.entries(songFactsList).map(([k, v]) => `<dt>${esc(k)}</dt><dd>${esc(v)}</dd>`).join('')}</dl></div></div>`, 'about-title')}
+
+${facts.length ? section('', 'recognition', `${head('Recognition', 'On Charts, Radio and in Print', 'rec-title', 'Each item links to its source.')}<ul class="song-rec">${facts.map(f => `<li data-reveal><b>${esc(f.text)}</b>${f.sub ? `<span>${esc(f.sub)}</span>` : ''}${f.url ? arrow(f.url, 'Source', true) : ''}</li>`).join('')}</ul>`, 'rec-title') : ''}
+
+${vid ? section('section--ink', 'video', `${head('Video', 'Watch on YouTube', 'video-title')}<div class="videos videos--one">${video(vid)}</div>`, 'video-title') : ''}
+
+${section('', 'more', `${head('More music', 'Other Releases', 'more-title')}<div class="shelf shelf--music">${others.map(o => `<a class="shelf__item" href="/music/${o.slug}/" data-reveal><img src="/assets/art/${o.art}" alt="Cover artwork for ${esc(o.storeTitle || o.title)}" loading="lazy" width="300" height="300"><span class="shelf__title">${tm(o.title)}</span><span class="shelf__meta">${esc(o.type || '')}</span></a>`).join('')}</div>
+<p data-mt="30">${arrow('/music/', 'All music')}</p>`, 'more-title')}
+
+${finale('Commission, License or Collaborate.', 'For film, games, concert works, sync licensing and recordings.', `<a class="btn btn--gold" href="/contact/?topic=music">Music enquiries</a>`)}
+`);
+}
+const songPages = Object.fromEntries(songs.map(r => [`music/${r.slug}/index.html`, songPage(r)]));
+
+module.exports = { 'index.html': home, 'music/index.html': musicPage, 'music/compositions/index.html': compositions, 'books/index.html': books, 'innovations/index.html': innovations, 'innovations/cutti-studio/index.html': studio, 'innovations/cutti-score/index.html': score, 'recognition/index.html': recognition, 'recognition/radio-charts/index.html': radio, 'recognition/press/index.html': press, 'shop/index.html': shop, 'about/index.html': about, 'contact/index.html': contact, 'privacy-policy/index.html': privacy, '404.html': notFound , ...bookPages, ...songPages };

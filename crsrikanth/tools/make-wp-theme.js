@@ -22,6 +22,10 @@ const slug = slugArg || 'crsrikanth';
 const phpq = t => String(t).replace(/&amp;/g, '&').replace(/\\/g, '\\\\').replace(/'/g, "\\'");
 const bookRows = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'content', 'literature.json'), 'utf8')).books
   .filter(b => b.slug).map(b => `\t\tarray( 'books', '${b.slug}', '${phpq(b.title)}' ),`).join('\n');
+// One WordPress page per song (music/<slug>).
+const musicData = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'content', 'music.json'), 'utf8'));
+const songRows = [...musicData.classicalReleases, ...musicData.releases]
+  .filter(r => r.slug).map(r => `\t\tarray( 'music', '${r.slug}', '${phpq(r.title)}' ),`).join('\n');
 if (!root || !out) { console.error('usage: node make-wp-theme.js <siteRoot> <themeOutDir> [slug]'); process.exit(1); }
 
 const walk = d => fs.readdirSync(d, { withFileTypes: true }).flatMap(e => e.isDirectory() ? walk(path.join(d, e.name)) : [path.join(d, e.name)]);
@@ -220,7 +224,7 @@ add_action( 'admin_post_crs_form', 'crs_handle_form' );
  * their children, about, contact) if they do not exist. Existing pages, posts and the front-page setting are untouched.
  */
 add_action( 'init', function () {
-	$release = '2026-11-books';
+	$release = '2026-11-songs';
 	if ( get_option( 'crs_pages_version' ) === $release || get_transient( 'crs_pages_lock' ) ) { return; }
 	set_transient( 'crs_pages_lock', 1, 60 );
 	$create = array(
@@ -238,6 +242,7 @@ add_action( 'init', function () {
 		array( '', 'privacy-policy', 'Privacy Policy' ),
 		array( '', 'shop', 'Shop' ),
 ${bookRows}
+${songRows}
 	);
 	foreach ( $create as $c ) {
 		list( $parent_path, $slug, $title ) = $c;

@@ -14,7 +14,7 @@ const NAV = [['/', 'Home'], ['/music/', 'Music'], ['/books/', 'Books &amp; Stori
 const PERSON = {
   '@type': 'Person', '@id': SITE + '/#person', name: 'CR Srikanth', alternateName: 'Ravi Chandra Srikanth Cherukupalli', url: SITE + '/',
   jobTitle: ['Composer', 'Recording artist', 'Author', 'Music technology developer'],
-  sameAs: ['https://open.spotify.com/artist/16N9BJJPufgA3rnpQ06iSa', 'https://music.apple.com/us/artist/cr-srikanth/1763874820', 'https://imslp.org/wiki/Category:CR,_Srikanth', 'https://www.youtube.com/@CRSrikanthSymphonicResonance', 'https://crsrikanthsymphoicresonance.bandcamp.com/', 'https://www.instagram.com/crsrikanth_creator_vspop/'],
+  sameAs: ['https://open.spotify.com/artist/16N9BJJPufgA3rnpQ06iSa', 'https://open.spotify.com/artist/7omxXdWFGzNjA4FyjVn6oH', 'https://soundcloud.com/srikanth-rc-cherukupalli', 'https://music.apple.com/us/artist/cr-srikanth/1763874820', 'https://imslp.org/wiki/Category:CR,_Srikanth', 'https://www.youtube.com/@CRSrikanthSymphonicResonance', 'https://crsrikanthsymphoicresonance.bandcamp.com/', 'https://www.instagram.com/crsrikanth_creator_vspop/'],
 };
 
 function head({ title, desc, path, og = 'og-home.jpg', ogImage = '', ogType = 'website', ld = [] }) {
@@ -142,7 +142,7 @@ const phero = ({ kicker: k, title, lead, variant = 'all', cls = '', crumbs = [],
 
 const release = r => `<article class="release" data-reveal>
   <figure>${r.art ? `<img src="/assets/art/${r.art}" alt="Cover artwork for ${esc(r.storeTitle || r.title)}" loading="lazy" width="600" height="600">` : ''}</figure>
-  <h3>${tm(r.title)}</h3>
+  <h3>${r.slug ? `<a class="release__link" href="/music/${r.slug}/">${tm(r.title)}</a>` : tm(r.title)}</h3>
   <p>${[r.type, r.year].filter(Boolean).join(' · ')}</p>
   <div class="links">${(r.links || []).map(l => chip(l.url, l.label)).join('')}</div>
 </article>`;
@@ -157,6 +157,7 @@ const spotlight = r => `<article class="spotlight" data-reveal>
     <p class="spotlight__meta">${tm(r.meta)}</p>
     <div class="sp-slot"><button class="btn btn--gold" type="button" data-sp="${r.embed}" data-title="${esc(r.title)}">${PLAY}Play here</button><span class="small muted">Loads the Spotify player</span></div>
     <div class="links">${(r.links || []).map(l => chip(l.url, l.label)).join('')}</div>
+    ${r.slug && !r.noPageLink ? `<p data-mt="16">${arrow(`/music/${r.slug}/`, 'About this song')}</p>` : ''}
   </div>
 </article>`;
 const playlist = r => `<article class="playlist" data-reveal>
