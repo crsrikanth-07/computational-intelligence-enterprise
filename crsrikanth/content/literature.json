@@ -58,7 +58,9 @@
      "label": "Booktopia paperback",
      "url": "https://www.booktopia.com.au/tales-from-bellavere-and-lindenfeld-cr-srikanth/book/9798237110791.html"
     }
-   ]
+   ],
+   "slug": "tales-from-bellavere-and-lindenfeld",
+   "date": "2026-10-21"
   },
   {
    "title": "The Debt of the Fifth Month",
@@ -89,7 +91,9 @@
      "label": "Booktopia",
      "url": "https://www.booktopia.com.au/the-debt-of-the-fifth-month-cr-srikanth/ebook/9798237724912.html"
     }
-   ]
+   ],
+   "slug": "the-debt-of-the-fifth-month",
+   "date": "2026-10-18"
   },
   {
    "title": "August 18th",
@@ -114,7 +118,9 @@
      "label": "Booktopia",
      "url": "https://www.booktopia.com.au/august-18th-cr-srikanth/ebook/9798235360549.html"
     }
-   ]
+   ],
+   "slug": "august-18th",
+   "date": "2026-04-29"
   },
   {
    "title": "GOTTESGABE: God’s Gift",
@@ -128,7 +134,9 @@
      "label": "Kobo (Rakuten)",
      "url": "https://books.rakuten.co.jp/rk/9024bf465b8034d5afd8c8437077f564/"
     }
-   ]
+   ],
+   "slug": "gottesgabe",
+   "date": "2026-04-30"
   },
   {
    "title": "Kamil &amp; Hassan Drama Company",
@@ -145,7 +153,9 @@
      "label": "Booktopia",
      "url": "https://www.booktopia.com.au/kamil-hassan-drama-company-cr-srikanth/ebook/9798233086236.html"
     }
-   ]
+   ],
+   "slug": "kamil-and-hassan-drama-company",
+   "date": "2026-04-09"
   },
   {
    "title": "The House on the Hill Above the River",
@@ -166,7 +176,9 @@
      "label": "Booktopia",
      "url": "https://www.booktopia.com.au/the-house-on-the-hill-above-the-river-cr-srikanth/ebook/9798233203244.html"
     }
-   ]
+   ],
+   "slug": "the-house-on-the-hill-above-the-river",
+   "date": "2026-04-04"
   },
   {
    "title": "Ten Tales from Bellavere and Lindelfeld",
@@ -188,7 +200,9 @@
      "label": "AbeBooks",
      "url": "https://www.abebooks.com/9798235030671/Ten-Tales-Bellavere-Lindelfeld-Paperback/plp"
     }
-   ]
+   ],
+   "slug": "ten-tales-from-bellavere-and-lindelfeld",
+   "date": "2026-05-08"
   }
  ]
 }

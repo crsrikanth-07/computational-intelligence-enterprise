@@ -51,7 +51,7 @@ Checked on 7 November 2026 against public sources. **Verified** means the site l
 | 8 | "Souls Festival" (Medium, 2026) | Not on the site | The URL. It would go under author-published stories, separate from the magazines. |
 | 9 | *Kamil & Hassan Drama Company* cover | Typographic stand-in | The only cover online is a 300-pixel print wrap. Send the front cover image. |
 | 10 | Paperback cover for *Tales…* (ISBN 9798237110791) | The ebook cover is used | Booktopia shows "cover coming soon". |
-| 11 | Amazon and Books2Read links | Books2Read added for *Tales from Bellavere and Lindenfeld* (books2read.com/u/3GDgV8) and *The Debt of the Fifth Month* (books2read.com/u/mgVeMX), both confirmed. The five Amazon links (ASINs B0HNV2KC3F, B0HNTSH7FL, B0HPZ1JYK3, B0GYZRKC1H, B0GYN5FNYR) are **not yet on the site** | Amazon blocks automated visits, so the titles behind the five ASINs could not be confirmed. Say which book each one is and they go onto the Shop and Books pages. |
+| 11 | Amazon and Books2Read links | Books2Read added for *Tales from Bellavere and Lindenfeld* (books2read.com/u/3GDgV8) and *The Debt of the Fifth Month* (books2read.com/u/mgVeMX). Amazon links supplied: B0HNTSH7FL, B0HNV2KC3F, B0HPZ1JYK3 (13 November), plus B0GYZRKC1H and B0GYN5FNYR earlier; **not yet on the site** | Amazon blocks automated visits, so the book behind each link could not be confirmed. Say which book each one is; the book pages and the /read/ landing page each have Amazon slots. |
 | 12 | *GOTTESGABE* ISBN | No ISBN shown | Only a Kobo ID is public. |
 | 13 | YouTube Music, Amazon Music, Tidal links | Not shown | Artist page links. |
 | 14 | Contact email | crs.07@crsrikanth.com (from the current site) | Confirm this is the address for the contact form. |

@@ -14,7 +14,7 @@ This is the personal website of CR Srikanth: music, books and stories, CuTTI inn
 
 1. Add an entry to the right file:
    - **A new release:** `content/music.json` → `releases`, and put the artwork, 800×800, in `site/assets/art/`. To feature it, also add it to `latest`.
-   - **A new book:** `content/literature.json` → `books`, and put the cover in `site/assets/covers/`.
+   - **A new book:** `content/literature.json` → `books`, with a unique `slug` and the publication `date`, and put the cover in `site/assets/covers/`. Each book gets its own page at `/books/<slug>/` (title, description and Google book data are generated), and the theme creates the WordPress page on upload.
    - **A new published story:** `content/literature.json` → `publications`.
    - **A concert, chart or award:** `content/recognition.json` → `milestones`, plus `charts` or `stations` if it belongs in the archive. Set `"verified": true` only when `url` points to the original source.
    - **Press:** `content/recognition.json` → `pressGroups`.

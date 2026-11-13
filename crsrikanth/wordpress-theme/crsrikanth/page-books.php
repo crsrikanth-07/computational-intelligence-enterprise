@@ -25,8 +25,8 @@ $GLOBALS['crs_page_head'] = function () { ?>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,300&family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@400;500;700&family=Spectral:ital,wght@0,300;0,400;1,300&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,700;1,6..96,400&family=Cinzel:wght@400;600&family=Archivo:wght@400;500;800;900&family=Manrope:wght@300;400;600&display=swap">
-<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/site.css?v=4ff4d4c6">
-<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/themes.css?v=10f9ea9a">
+<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/site.css?v=57fc42a9">
+<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/themes.css?v=7bbc1d6c">
 <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/js/site.js?v=b9ea7f25" defer></script>
 <script type="application/ld+json">
 {
@@ -66,64 +66,78 @@ $GLOBALS['crs_page_head'] = function () { ?>
   },
   {
    "@type": "Book",
+   "@id": "https://crsrikanth.com/books/tales-from-bellavere-and-lindenfeld/#book",
    "name": "Tales from Bellavere and Lindenfeld",
+   "url": "https://crsrikanth.com/books/tales-from-bellavere-and-lindenfeld/",
    "author": {
     "@id": "https://crsrikanth.com/#person"
    },
-   "datePublished": "2026",
+   "datePublished": "2026-10-21",
    "isbn": "9798237466799"
   },
   {
    "@type": "Book",
+   "@id": "https://crsrikanth.com/books/the-debt-of-the-fifth-month/#book",
    "name": "The Debt of the Fifth Month",
+   "url": "https://crsrikanth.com/books/the-debt-of-the-fifth-month/",
    "author": {
     "@id": "https://crsrikanth.com/#person"
    },
-   "datePublished": "2026",
+   "datePublished": "2026-10-18",
    "isbn": "9798237724912"
   },
   {
    "@type": "Book",
+   "@id": "https://crsrikanth.com/books/august-18th/#book",
    "name": "August 18th",
+   "url": "https://crsrikanth.com/books/august-18th/",
    "author": {
     "@id": "https://crsrikanth.com/#person"
    },
-   "datePublished": "2026",
+   "datePublished": "2026-04-29",
    "isbn": "9798235360549"
   },
   {
    "@type": "Book",
+   "@id": "https://crsrikanth.com/books/gottesgabe/#book",
    "name": "GOTTESGABE: God’s Gift",
+   "url": "https://crsrikanth.com/books/gottesgabe/",
    "author": {
     "@id": "https://crsrikanth.com/#person"
    },
-   "datePublished": "2026"
+   "datePublished": "2026-04-30"
   },
   {
    "@type": "Book",
+   "@id": "https://crsrikanth.com/books/kamil-and-hassan-drama-company/#book",
    "name": "Kamil & Hassan Drama Company",
+   "url": "https://crsrikanth.com/books/kamil-and-hassan-drama-company/",
    "author": {
     "@id": "https://crsrikanth.com/#person"
    },
-   "datePublished": "2026",
+   "datePublished": "2026-04-09",
    "isbn": "9798233086236"
   },
   {
    "@type": "Book",
+   "@id": "https://crsrikanth.com/books/the-house-on-the-hill-above-the-river/#book",
    "name": "The House on the Hill Above the River",
+   "url": "https://crsrikanth.com/books/the-house-on-the-hill-above-the-river/",
    "author": {
     "@id": "https://crsrikanth.com/#person"
    },
-   "datePublished": "2026",
+   "datePublished": "2026-04-04",
    "isbn": "9798233203244"
   },
   {
    "@type": "Book",
+   "@id": "https://crsrikanth.com/books/ten-tales-from-bellavere-and-lindelfeld/#book",
    "name": "Ten Tales from Bellavere and Lindelfeld",
+   "url": "https://crsrikanth.com/books/ten-tales-from-bellavere-and-lindelfeld/",
    "author": {
     "@id": "https://crsrikanth.com/#person"
    },
-   "datePublished": "2026",
+   "datePublished": "2026-05-08",
    "isbn": "9798235030671"
   }
  ]
@@ -158,56 +172,62 @@ get_header();
 <div class="books"><article class="book" data-reveal>
   <div class="book__cover"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/covers/tales-from-bellavere-and-lindenfeld.jpg" alt="Cover of Tales from Bellavere and Lindenfeld" loading="lazy" width="400" height="600"></div>
   <div>
-    <h3>Tales from Bellavere and Lindenfeld</h3>
+    <h3><a class="book__link" href="/books/tales-from-bellavere-and-lindenfeld/">Tales from Bellavere and Lindenfeld</a></h3>
     <p class="book__meta">Short-story collection · 2026</p>
     <p>Linked stories from two small European towns that appear on no map. Across generations, families pass down loyalties, recipes, music, houses, debts and secrets: a mechanic, a chocolatier, a struggling theatre company, a singing palazzo, and a boy changed by a forgotten gramophone record.</p>
     <dl><dt>Formats</dt><dd>Ebook and paperback · published 21 October 2026</dd><dt>ISBN</dt><dd>9798237466799 (ebook)</dd><dt>ISBN</dt><dd>9798237110791 (paperback)</dd><dt>Edition</dt><dd>October 2026 edition; the ebook is distributed through Draft2Digital</dd></dl>
     <div class="links"><a class="chip" href="https://books2read.com/u/3GDgV8" target="_blank" rel="noopener">Books2Read (all ebook stores)<span class="visually-hidden"> (opens in a new tab)</span></a><a class="chip" href="https://books.apple.com/us/book/tales-from-bellavere-and-lindenfeld/id6825566440" target="_blank" rel="noopener">Apple Books<span class="visually-hidden"> (opens in a new tab)</span></a><a class="chip" href="https://books.rakuten.co.jp/rk/4bda3d3d9e7e3014a44c48d51006649b/" target="_blank" rel="noopener">Kobo (Rakuten)<span class="visually-hidden"> (opens in a new tab)</span></a><a class="chip" href="https://www.booktopia.com.au/tales-from-bellavere-and-lindenfeld-cr-srikanth/ebook/9798237466799.html" target="_blank" rel="noopener">Booktopia ebook<span class="visually-hidden"> (opens in a new tab)</span></a><a class="chip" href="https://www.booktopia.com.au/tales-from-bellavere-and-lindenfeld-cr-srikanth/book/9798237110791.html" target="_blank" rel="noopener">Booktopia paperback<span class="visually-hidden"> (opens in a new tab)</span></a></div>
+    <p data-mt="14"><a class="arrow" href="/books/tales-from-bellavere-and-lindenfeld/">About this book<svg viewBox="0 0 18 18" aria-hidden="true" focusable="false"><path d="M2 9h13M10 4l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a></p>
   </div>
 </article><article class="book" data-reveal>
   <div class="book__cover"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/covers/the-debt-of-the-fifth-month.jpg" alt="Cover of The Debt of the Fifth Month" loading="lazy" width="400" height="600"></div>
   <div>
-    <h3>The Debt of the Fifth Month</h3>
+    <h3><a class="book__link" href="/books/the-debt-of-the-fifth-month/">The Debt of the Fifth Month</a></h3>
     <p class="book__meta">Novella · 2026</p>
     <p>A novella in eleven movements, set in Italy. After the death of their thirteen-year-old son, Matteo and Elena Valli bring nine estranged cousins back to one table, while money they never asked for begins to arrive. A story of grief, faith and family.</p>
     <dl><dt>Formats</dt><dd>Ebook · published 18 October 2026</dd><dt>ISBN</dt><dd>9798237724912 (ebook)</dd></dl>
     <div class="links"><a class="chip" href="https://books2read.com/u/mgVeMX" target="_blank" rel="noopener">Books2Read (all ebook stores)<span class="visually-hidden"> (opens in a new tab)</span></a><a class="chip" href="https://books.apple.com/us/book/the-debt-of-the-fifth-month/id6824237078" target="_blank" rel="noopener">Apple Books<span class="visually-hidden"> (opens in a new tab)</span></a><a class="chip" href="https://books.rakuten.co.jp/rk/eac94829ec6035a08ad3bbd643737418/" target="_blank" rel="noopener">Kobo (Rakuten)<span class="visually-hidden"> (opens in a new tab)</span></a><a class="chip" href="https://www.booktopia.com.au/the-debt-of-the-fifth-month-cr-srikanth/ebook/9798237724912.html" target="_blank" rel="noopener">Booktopia<span class="visually-hidden"> (opens in a new tab)</span></a></div>
+    <p data-mt="14"><a class="arrow" href="/books/the-debt-of-the-fifth-month/">About this book<svg viewBox="0 0 18 18" aria-hidden="true" focusable="false"><path d="M2 9h13M10 4l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a></p>
   </div>
 </article><article class="book" data-reveal>
   <div class="book__cover"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/covers/august-18th.jpg" alt="Cover of August 18th" loading="lazy" width="400" height="600"></div>
   <div>
-    <h3>August 18th</h3>
+    <h3><a class="book__link" href="/books/august-18th/">August 18th</a></h3>
     <p class="book__meta">Novel · 2026</p>
     <p>A literary thriller narrated from the small Deccan town of Suloor. One violent night, on 18 August 1996, sets off consequences that return on the same date across the following decades.</p>
     <dl><dt>Formats</dt><dd>Ebook · published 29 April 2026</dd><dt>ISBN</dt><dd>9798235360549 (ebook)</dd></dl>
     <div class="links"><a class="chip" href="https://books.apple.com/us/book/august-18th/id6764650989" target="_blank" rel="noopener">Apple Books<span class="visually-hidden"> (opens in a new tab)</span></a><a class="chip" href="https://books.rakuten.co.jp/rk/9131f9645bad36d98c44387b36789700/" target="_blank" rel="noopener">Kobo (Rakuten)<span class="visually-hidden"> (opens in a new tab)</span></a><a class="chip" href="https://www.booktopia.com.au/august-18th-cr-srikanth/ebook/9798235360549.html" target="_blank" rel="noopener">Booktopia<span class="visually-hidden"> (opens in a new tab)</span></a></div>
+    <p data-mt="14"><a class="arrow" href="/books/august-18th/">About this book<svg viewBox="0 0 18 18" aria-hidden="true" focusable="false"><path d="M2 9h13M10 4l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a></p>
   </div>
 </article><article class="book" data-reveal>
   <div class="book__cover"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/covers/gottesgabe.jpg" alt="Cover of GOTTESGABE: God’s Gift" loading="lazy" width="400" height="600"></div>
   <div>
-    <h3>GOTTESGABE: God’s Gift</h3>
+    <h3><a class="book__link" href="/books/gottesgabe/">GOTTESGABE: God’s Gift</a></h3>
     <p class="book__meta">Novel · 2026</p>
     <p>Königswinter, 1923 to 1973. A secret chocolate recipe, passed from a grieving Belgian chocolatier to a German soldier, survives a family factory, betrayal, a killing and eighteen years in prison.</p>
     <dl><dt>Formats</dt><dd>Ebook · published 30 April 2026</dd></dl>
     <div class="links"><a class="chip" href="https://books.rakuten.co.jp/rk/9024bf465b8034d5afd8c8437077f564/" target="_blank" rel="noopener">Kobo (Rakuten)<span class="visually-hidden"> (opens in a new tab)</span></a></div>
+    <p data-mt="14"><a class="arrow" href="/books/gottesgabe/">About this book<svg viewBox="0 0 18 18" aria-hidden="true" focusable="false"><path d="M2 9h13M10 4l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a></p>
   </div>
 </article><article class="book" data-reveal>
   <div class="book__cover book__cover--type tone-2"><i>CR Srikanth</i><b>Kamil &amp; Hassan Drama Company</b><i>Historical novel</i></div>
   <div>
-    <h3>Kamil &amp; Hassan Drama Company</h3>
+    <h3><a class="book__link" href="/books/kamil-and-hassan-drama-company/">Kamil &amp; Hassan Drama Company</a></h3>
     <p class="book__meta">Historical novel · 2026</p>
     <p>Belgium in the 1920s. Two men leave a famous theatre company to found their own troupe, a marketer turns the actors’ fame into a business, and when cinema arrives, a long-silent love and an act of violence change two lives.</p>
     <dl><dt>Formats</dt><dd>Ebook · published 9 April 2026</dd><dt>ISBN</dt><dd>9798233086236 (ebook)</dd></dl>
     <div class="links"><a class="chip" href="https://www.booktopia.com.au/kamil-hassan-drama-company-cr-srikanth/ebook/9798233086236.html" target="_blank" rel="noopener">Booktopia<span class="visually-hidden"> (opens in a new tab)</span></a></div>
+    <p data-mt="14"><a class="arrow" href="/books/kamil-and-hassan-drama-company/">About this book<svg viewBox="0 0 18 18" aria-hidden="true" focusable="false"><path d="M2 9h13M10 4l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a></p>
   </div>
 </article><article class="book" data-reveal>
   <div class="book__cover"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/covers/the-house-on-the-hill-above-the-river.jpg" alt="Cover of The House on the Hill Above the River" loading="lazy" width="400" height="600"></div>
   <div>
-    <h3>The House on the Hill Above the River</h3>
+    <h3><a class="book__link" href="/books/the-house-on-the-hill-above-the-river/">The House on the Hill Above the River</a></h3>
     <p class="book__meta">Family saga · 2026</p>
     <p>A Bulgarian family saga of vanity, sacrifice and awakening, from the town of Belogradets to the Bulgarian parishes of Vienna, about a man caught between two families and his own need for approval.</p>
     <dl><dt>Formats</dt><dd>Ebook · published 4 April 2026</dd><dt>ISBN</dt><dd>9798233203244 (ebook)</dd></dl>
     <div class="links"><a class="chip" href="https://books.rakuten.co.jp/rk/f7dc0130401e33c5992f3e0965ba8a88/" target="_blank" rel="noopener">Kobo (Rakuten)<span class="visually-hidden"> (opens in a new tab)</span></a><a class="chip" href="https://www.booktopia.com.au/the-house-on-the-hill-above-the-river-cr-srikanth/ebook/9798233203244.html" target="_blank" rel="noopener">Booktopia<span class="visually-hidden"> (opens in a new tab)</span></a></div>
+    <p data-mt="14"><a class="arrow" href="/books/the-house-on-the-hill-above-the-river/">About this book<svg viewBox="0 0 18 18" aria-hidden="true" focusable="false"><path d="M2 9h13M10 4l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a></p>
   </div>
 </article></div>
 </div>
@@ -218,11 +238,12 @@ get_header();
 <div class="grid grid--2"><div><p class="kicker">Earlier edition</p><h2 id="earlier-title" data-mt="18">The First Ten Tales</h2><p class="lead" data-mt="16">The collection first appeared in May 2026 as a ten-story paperback, before the expanded October 2026 edition.</p></div><div class="books books--one"><article class="book" data-reveal>
   <div class="book__cover"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/covers/ten-tales-from-bellavere-and-lindelfeld.jpg" alt="Cover of Ten Tales from Bellavere and Lindelfeld" loading="lazy" width="400" height="600"></div>
   <div>
-    <h3>Ten Tales from Bellavere and Lindelfeld</h3>
+    <h3><a class="book__link" href="/books/ten-tales-from-bellavere-and-lindelfeld/">Ten Tales from Bellavere and Lindelfeld</a></h3>
     <p class="book__meta">Short stories · earlier edition · 2026</p>
     <p>The first, ten-story paperback from the same two towns, five from each, later expanded as Tales from Bellavere and Lindenfeld. The title is listed as printed.</p>
     <dl><dt>Formats</dt><dd>Paperback · published 8 May 2026</dd><dt>ISBN</dt><dd>9798235030671 (paperback)</dd></dl>
     <div class="links"><a class="chip" href="https://www.booktopia.com.au/ten-tales-from-bellavere-and-lindelfeld-cr-srikanth/book/9798235030671.html" target="_blank" rel="noopener">Booktopia<span class="visually-hidden"> (opens in a new tab)</span></a><a class="chip" href="https://www.abebooks.com/9798235030671/Ten-Tales-Bellavere-Lindelfeld-Paperback/plp" target="_blank" rel="noopener">AbeBooks<span class="visually-hidden"> (opens in a new tab)</span></a></div>
+    <p data-mt="14"><a class="arrow" href="/books/ten-tales-from-bellavere-and-lindelfeld/">About this book<svg viewBox="0 0 18 18" aria-hidden="true" focusable="false"><path d="M2 9h13M10 4l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a></p>
   </div>
 </article></div></div>
 </div>

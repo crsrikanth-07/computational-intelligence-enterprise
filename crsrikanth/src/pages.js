@@ -106,7 +106,7 @@ ${cat.groups.map(g => `<div class="opus" data-reveal><h3>${esc(g.group)} <small>
 `);
 
 // ---------------- BOOKS ----------------
-const books = page({ path: '/books/', title: 'Books & Stories | CR Srikanth, Author', desc: 'Literary fiction by CR Srikanth: stories in The Hamilton Stone Review and Half and One, the collection Tales from Bellavere and Lindenfeld, and novels.', og: 'og-books.jpg', ld: lit.books.map(b => ({ '@type': 'Book', name: b.title.replace(/&amp;/g, '&'), author: { '@id': L.SITE + '/#person' }, datePublished: String(b.year), ...(b.isbns ? { isbn: b.isbns[0].split(' ')[0] } : {}) })) }, `
+const books = page({ path: '/books/', title: 'Books & Stories | CR Srikanth, Author', desc: 'Literary fiction by CR Srikanth: stories in The Hamilton Stone Review and Half and One, the collection Tales from Bellavere and Lindenfeld, and novels.', og: 'og-books.jpg', ld: lit.books.map(b => ({ '@type': 'Book', '@id': `${L.SITE}/books/${b.slug}/#book`, name: b.title.replace(/&amp;/g, '&'), url: `${L.SITE}/books/${b.slug}/`, author: { '@id': L.SITE + '/#person' }, datePublished: b.date || String(b.year), ...(b.isbns ? { isbn: b.isbns[0].split(' ')[0] } : {}) })) }, `
 ${phero({ kicker: 'Literature &amp; fiction', title: 'Stories of Memory, Place and the <em>Human Condition</em>.', lead: 'Fiction about the emotional architecture of people’s lives: memory, family, identity, moral choices, history and the passage of time, moving through imagined towns, theatrical worlds and inherited histories.', variant: 'words', cls: 'phero--paper', buttons: `<a class="btn btn--gold" href="#published">Published stories</a><a class="btn btn--ghost" href="#books">Books</a>` })}
 
 ${section('section--paper', 'published', `${head('In literary magazines', 'Independently Published Fiction', 'pub-title', 'Stories selected and published by independent literary magazines, read in full at the original publication.')}
@@ -267,4 +267,67 @@ const notFound = page({ path: '/404.html', title: 'Page Not Found | CR Srikanth'
 ${phero({ kicker: '404', title: 'A Rest, Not the <em>End</em>.', lead: 'This page does not exist, or it has moved. The music, the books and the innovations are all still here.', variant: 'all', buttons: `<a class="btn btn--gold" href="/">Home</a><a class="btn btn--ghost" href="/music/">Music</a><a class="btn btn--ghost" href="/books/">Books &amp; Stories</a>` })}
 `);
 
-module.exports = { 'index.html': home, 'music/index.html': musicPage, 'music/compositions/index.html': compositions, 'books/index.html': books, 'innovations/index.html': innovations, 'innovations/cutti-studio/index.html': studio, 'innovations/cutti-score/index.html': score, 'recognition/index.html': recognition, 'recognition/radio-charts/index.html': radio, 'recognition/press/index.html': press, 'shop/index.html': shop, 'about/index.html': about, 'contact/index.html': contact, 'privacy-policy/index.html': privacy, '404.html': notFound };
+
+// ---------------- ONE PAGE PER BOOK ----------------
+const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+const longDate = d => { const [y, m, day] = d.split('-').map(Number); return `${day} ${MONTHS[m - 1]} ${y}`; };
+const plain = s => String(s).replace(/<[^>]+>/g, '').replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim();
+const isUniversal = l => /Books2Read/i.test(l.label);
+function bookPage(b) {
+  const url = `${L.SITE}/books/${b.slug}/`;
+  const name = plain(b.title);
+  const form = (b.form || 'Fiction').replace(/ · earlier edition/i, '');
+  const long = `${name} | A ${form.toLowerCase()} by CR Srikanth`;
+  const title = long.length <= 70 ? long : `${name} | CR Srikanth`;
+  const tail = ` ${form.charAt(0).toUpperCase() + form.slice(1)} by CR Srikanth.`;
+  const body = plain(b.synopsis);
+  const desc = body.length + tail.length <= 158 ? body + tail : body.slice(0, 155 - tail.length).replace(/[\s,;:]+\S*$/, '') + '…' + tail;
+  const links = b.links || [];
+  const main = links.find(isUniversal) || links[0];
+  const mainLabel = main ? (isUniversal(main) ? 'Get the ebook' : `Buy on ${main.label}`) : '';
+  const cover = b.cover ? `${L.SITE}/assets/covers/${b.cover}` : '';
+  const editions = (b.isbns || []).map(i => { const [isbn] = i.split(' '); return { '@type': 'Book', isbn, bookFormat: /paperback/i.test(i) ? 'https://schema.org/Paperback' : 'https://schema.org/EBook' }; });
+  const ld = [
+    { '@type': 'Book', '@id': url + '#book', name, url, author: { '@id': L.SITE + '/#person' }, inLanguage: 'en', genre: form, description: plain(b.synopsis), datePublished: b.date,
+      ...(cover ? { image: cover } : {}), ...(editions.length === 1 ? { isbn: editions[0].isbn, bookFormat: editions[0].bookFormat } : {}), ...(editions.length > 1 ? { workExample: editions } : {}),
+      ...(links.length ? { sameAs: links.map(l => l.url) } : {}) },
+    { '@type': 'BreadcrumbList', itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: L.SITE + '/' },
+      { '@type': 'ListItem', position: 2, name: 'Books & Stories', item: L.SITE + '/books/' },
+      { '@type': 'ListItem', position: 3, name, item: url }] }
+  ];
+  const others = lit.books.filter(o => o.slug !== b.slug && !o.earlier).slice(0, 6);
+  const related = b.slug === 'tales-from-bellavere-and-lindenfeld' ? lit.books.find(o => o.slug === 'ten-tales-from-bellavere-and-lindelfeld')
+    : b.slug === 'ten-tales-from-bellavere-and-lindelfeld' ? lit.books.find(o => o.slug === 'tales-from-bellavere-and-lindenfeld') : null;
+  return page({ path: `/books/${b.slug}/`, title, desc, og: 'og-books.jpg', ogImage: cover, ogType: 'book', ld }, `
+${phero({ kicker: esc(b.form || 'Fiction'), title: tm(b.title), lead: b.synopsis, variant: 'words', cls: 'phero--paper', crumbs: [['/books/', 'Books &amp; Stories']],
+  buttons: `${main ? `<a class="btn btn--gold" href="${esc(main.url)}" target="_blank" rel="noopener">${mainLabel}${EXT}</a>` : ''}<a class="btn btn--ghost" href="#buy">All stores and formats</a>` })}
+
+${section('section--paper', 'buy', `<div class="book-detail">
+  <div class="book-detail__cover" data-reveal>${bookCover(b)}</div>
+  <div data-reveal>${kicker('The book')}<h2 id="buy-title" data-mt="18">${tm(b.title)}</h2>
+    <dl class="book-detail__facts">
+      <dt>Author</dt><dd>CR Srikanth</dd>
+      <dt>Form</dt><dd>${esc(b.form || 'Fiction')}</dd>
+      ${b.date ? `<dt>Published</dt><dd>${longDate(b.date)}</dd>` : ''}
+      ${b.formats ? `<dt>Formats</dt><dd>${b.formats}</dd>` : ''}
+      ${(b.isbns || []).map(i => `<dt>ISBN</dt><dd>${i}</dd>`).join('')}
+      ${b.edition ? `<dt>Edition</dt><dd>${b.edition}</dd>` : ''}
+      ${b.note ? `<dt>Note</dt><dd>${b.note}</dd>` : ''}
+    </dl>
+    ${links.length ? `<h3 data-mt="30">Where to buy</h3><div class="btn-row" data-mt="14">${links.map(l => `<a class="btn ${l === main ? 'btn--ink' : 'btn--ghost btn--ghost-paper'}" href="${esc(l.url)}" target="_blank" rel="noopener">${l.label}${EXT}</a>`).join('')}</div>
+    <p class="small" data-mt="16">Availability differs from country to country; each book lists only the stores where it has been confirmed.</p>` : ''}
+  </div>
+</div>`, 'buy-title')}
+
+${related ? section('section--paper', 'edition', `<div class="note note--paper"><strong>${related.earlier ? 'The earlier edition.' : 'The expanded edition.'}</strong> ${related.earlier ? `The collection first appeared in May 2026 as a ten-story paperback, <a class="link" href="/books/${related.slug}/">${tm(related.title)}</a>.` : `In October 2026 these stories were expanded into <a class="link" href="/books/${related.slug}/">${tm(related.title)}</a>.`}</div>`) : ''}
+
+${section('section--paper', 'more', `${head('More from CR Srikanth', 'Other Books', 'more-title', 'Several of the books share towns and families, so they can be read as one connected world.')}
+<div class="shelf">${others.map(o => `<a class="shelf__item" href="/books/${o.slug}/" data-reveal>${bookCover(o)}<span class="shelf__title">${tm(o.title)}</span><span class="shelf__meta">${esc(o.form || '')}</span></a>`).join('')}</div>`, 'more-title')}
+
+${finale('Literary Correspondence.', 'For editors, publishers, translators, readers and literary events.', `<a class="btn btn--gold" href="/contact/?topic=literary">Write to the author</a><a class="btn btn--ghost" href="/books/">All books and stories</a>`)}
+`);
+}
+const bookPages = Object.fromEntries(lit.books.filter(b => b.slug).map(b => [`books/${b.slug}/index.html`, bookPage(b)]));
+
+module.exports = { 'index.html': home, 'music/index.html': musicPage, 'music/compositions/index.html': compositions, 'books/index.html': books, 'innovations/index.html': innovations, 'innovations/cutti-studio/index.html': studio, 'innovations/cutti-score/index.html': score, 'recognition/index.html': recognition, 'recognition/radio-charts/index.html': radio, 'recognition/press/index.html': press, 'shop/index.html': shop, 'about/index.html': about, 'contact/index.html': contact, 'privacy-policy/index.html': privacy, '404.html': notFound , ...bookPages };

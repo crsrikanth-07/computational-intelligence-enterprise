@@ -43,6 +43,10 @@ Earlier decisions, now replaced: "Another Day" as the song; the CR Srikanth VS P
 
 Spotify's editorial pitching tool accepts only unreleased music, so it applies to the next release, not this track.
 
+## Books (from 13 November 2026)
+
+See `books/README.md`. Lead book *Tales from Bellavere and Lindenfeld*; landing page `crsrikanth.com/read/`; one SEO page per book on crsrikanth.com. **No Amazon Ads account, ever, unless the author says otherwise.**
+
 ## Host cache
 
 GoDaddy serves pages from its cache for up to 31 days. After changing anything in **Settings → VS Pop Spotify Landing**, click **Flush Cache** in the admin bar, or visitors keep seeing the old page. Counting is not affected: it runs from the visitor's browser.

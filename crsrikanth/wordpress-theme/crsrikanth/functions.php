@@ -52,7 +52,7 @@ add_action( 'admin_post_crs_form', 'crs_handle_form' );
  * their children, about, contact) if they do not exist. Existing pages, posts and the front-page setting are untouched.
  */
 add_action( 'init', function () {
-	$release = '2026-11-shop';
+	$release = '2026-11-books';
 	if ( get_option( 'crs_pages_version' ) === $release || get_transient( 'crs_pages_lock' ) ) { return; }
 	set_transient( 'crs_pages_lock', 1, 60 );
 	$create = array(
@@ -69,6 +69,13 @@ add_action( 'init', function () {
 		array( '', 'contact', 'Contact' ),
 		array( '', 'privacy-policy', 'Privacy Policy' ),
 		array( '', 'shop', 'Shop' ),
+		array( 'books', 'tales-from-bellavere-and-lindenfeld', 'Tales from Bellavere and Lindenfeld' ),
+		array( 'books', 'the-debt-of-the-fifth-month', 'The Debt of the Fifth Month' ),
+		array( 'books', 'august-18th', 'August 18th' ),
+		array( 'books', 'gottesgabe', 'GOTTESGABE: God’s Gift' ),
+		array( 'books', 'kamil-and-hassan-drama-company', 'Kamil & Hassan Drama Company' ),
+		array( 'books', 'the-house-on-the-hill-above-the-river', 'The House on the Hill Above the River' ),
+		array( 'books', 'ten-tales-from-bellavere-and-lindelfeld', 'Ten Tales from Bellavere and Lindelfeld' ),
 	);
 	foreach ( $create as $c ) {
 		list( $parent_path, $slug, $title ) = $c;
@@ -115,8 +122,8 @@ function crs_default_head() { ?>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,300&family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@400;500;700&family=Spectral:ital,wght@0,300;0,400;1,300&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,700;1,6..96,400&family=Cinzel:wght@400;600&family=Archivo:wght@400;500;800;900&family=Manrope:wght@300;400;600&display=swap">
-<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/site.css?v=4ff4d4c6">
-<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/themes.css?v=10f9ea9a">
+<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/site.css?v=57fc42a9">
+<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/themes.css?v=7bbc1d6c">
 <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/js/site.js?v=b9ea7f25" defer></script>
 
 <?php }
@@ -150,6 +157,19 @@ remove_action( 'wp_head', 'wp_site_icon', 99 );
 add_filter( 'robots_txt', function ( $output ) { return rtrim( (string) $output ) . "
 Sitemap: " . home_url( '/wp-sitemap.xml' ) . "
 "; } );
+
+// Yoast SEO: every template already prints its own title, description, canonical, Open Graph and JSON-LD, so
+// Yoast's second copy is switched off (it repeated old wording). Yoast's XML sitemaps stay on.
+add_filter( 'wpseo_frontend_presenters', '__return_empty_array' );
+add_filter( 'wpseo_debug_markers', '__return_false' );
+// Pages that now redirect elsewhere are left out of the sitemap.
+add_filter( 'wpseo_exclude_from_sitemap_by_post_ids', function ( $ids ) {
+	foreach ( array( 'vs-pop-composer', 'podcast' ) as $old ) {
+		$p = get_page_by_path( $old );
+		if ( $p ) { $ids[] = (int) $p->ID; }
+	}
+	return $ids;
+} );
 
 /** Content of a leftover page from the previous site: Divi shortcodes removed, then the normal content filters. */
 function crs_clean_content( $content ) {

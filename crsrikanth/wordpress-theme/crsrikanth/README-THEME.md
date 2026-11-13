@@ -11,7 +11,14 @@ Appearance -> Themes -> Add New -> Upload Theme -> `crsrikanth.zip` -> Install (
 | URL | Template file |
 | --- | --- |
 | `/about/` | `page-about.php` |
+| `/books/august-18th/` | `page-books-august-18th.php` |
+| `/books/gottesgabe/` | `page-books-gottesgabe.php` |
 | `/books/` | `page-books.php` |
+| `/books/kamil-and-hassan-drama-company/` | `page-books-kamil-and-hassan-drama-company.php` |
+| `/books/tales-from-bellavere-and-lindenfeld/` | `page-books-tales-from-bellavere-and-lindenfeld.php` |
+| `/books/ten-tales-from-bellavere-and-lindelfeld/` | `page-books-ten-tales-from-bellavere-and-lindelfeld.php` |
+| `/books/the-debt-of-the-fifth-month/` | `page-books-the-debt-of-the-fifth-month.php` |
+| `/books/the-house-on-the-hill-above-the-river/` | `page-books-the-house-on-the-hill-above-the-river.php` |
 | `/contact/` | `page-contact.php` |
 | `/innovations/cutti-score/` | `page-innovations-cutti-score.php` |
 | `/innovations/cutti-studio/` | `page-innovations-cutti-studio.php` |

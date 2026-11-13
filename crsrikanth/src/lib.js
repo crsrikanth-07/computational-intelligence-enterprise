@@ -17,7 +17,7 @@ const PERSON = {
   sameAs: ['https://open.spotify.com/artist/16N9BJJPufgA3rnpQ06iSa', 'https://music.apple.com/us/artist/cr-srikanth/1763874820', 'https://imslp.org/wiki/Category:CR,_Srikanth', 'https://www.youtube.com/@CRSrikanthSymphonicResonance', 'https://crsrikanthsymphoicresonance.bandcamp.com/', 'https://www.instagram.com/crsrikanth_creator_vspop/'],
 };
 
-function head({ title, desc, path, og = 'og-home.jpg', ld = [] }) {
+function head({ title, desc, path, og = 'og-home.jpg', ogImage = '', ogType = 'website', ld = [] }) {
   const url = SITE + path;
   const graph = { '@context': 'https://schema.org', '@graph': [{ '@type': 'WebPage', '@id': url + '#page', url, name: title, description: desc, inLanguage: 'en', about: { '@id': SITE + '/#person' } }, PERSON, ...ld] };
   return `<!DOCTYPE html>
@@ -28,14 +28,14 @@ function head({ title, desc, path, og = 'og-home.jpg', ld = [] }) {
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(desc)}">
 <link rel="canonical" href="${url}">
-<meta property="og:type" content="website">
+<meta property="og:type" content="${ogType}">
 <meta property="og:site_name" content="CR Srikanth">
 <meta property="og:title" content="${esc(title)}">
 <meta property="og:description" content="${esc(desc)}">
 <meta property="og:url" content="${url}">
-<meta property="og:image" content="${SITE}/assets/img/${og}">
+${ogImage ? `<meta property="og:image" content="${ogImage}">` : `<meta property="og:image" content="${SITE}/assets/img/${og}">
 <meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
+<meta property="og:image:height" content="630">`}
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#F4EFE4">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -193,11 +193,12 @@ function bookCover(b) {
 const book = b => `<article class="book" data-reveal>
   ${bookCover(b)}
   <div>
-    <h3>${tm(b.title)}</h3>
+    <h3>${b.slug ? `<a class="book__link" href="/books/${b.slug}/">${tm(b.title)}</a>` : tm(b.title)}</h3>
     <p class="book__meta">${[b.form, b.year].filter(Boolean).join(' · ')}</p>
     <p>${b.synopsis}</p>
     <dl>${b.formats ? `<dt>Formats</dt><dd>${b.formats}</dd>` : ''}${(b.isbns || []).map(i => `<dt>ISBN</dt><dd>${i}</dd>`).join('')}${b.edition ? `<dt>Edition</dt><dd>${b.edition}</dd>` : ''}</dl>
     <div class="links">${(b.links || []).map(l => chip(l.url, l.label)).join('')}</div>
+    ${b.slug ? `<p data-mt="14">${arrow(`/books/${b.slug}/`, 'About this book')}</p>` : ''}
   </div>
 </article>`;
 
