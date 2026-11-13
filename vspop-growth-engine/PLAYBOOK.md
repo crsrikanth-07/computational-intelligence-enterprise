@@ -53,11 +53,15 @@ To make a page for a further song: copy `landing/variants/another-day.json`, cha
 
 ## Song pages for search (from 13 November 2026)
 
-Every release has its own page at `crsrikanth.com/music/<slug>/` (ten pages: Beneath the Last Autumn Moon and the nine VS Pop™ singles), with its own Google title and description, Spotify player, verified recognition with sources, matching video and schema.org `MusicRecording` data. The site's person data now lists both Spotify profiles and SoundCloud, with "Ravi Chandra Srikanth Cherukupalli" as the alternate name. Song pages (`/music/another-day/`) are for search; landing pages (`/another-day/`, `/spotify/`) are for ads.
+Every release has its own page at `crsrikanth.com/music/<slug>/` (**live since 13 November 2026**; checked: one title and description per page, song data present, all in the sitemap, the player loads on "Play here") (ten pages: Beneath the Last Autumn Moon and the nine VS Pop™ singles), with its own Google title and description, Spotify player, verified recognition with sources, matching video and schema.org `MusicRecording` data. The site's person data now lists both Spotify profiles and SoundCloud, with "Ravi Chandra Srikanth Cherukupalli" as the alternate name. Song pages (`/music/another-day/`) are for search; landing pages (`/another-day/`, `/spotify/`) are for ads.
 
 ## Books (from 13 November 2026)
 
 See `books/README.md`. Lead book *Tales from Bellavere and Lindenfeld*; landing page `crsrikanth.com/read/`; one SEO page per book on crsrikanth.com. **No Amazon Ads account, ever, unless the author says otherwise.**
+
+## Host script
+
+GoDaddy adds its own script to the site's normal theme pages (requests to `csp.secureserver.net/eventbus/...`), not to the three landing pages. It is the host's, not the site's; mention it in the privacy policy or switch it off in the GoDaddy dashboard if wanted.
 
 ## Host cache
 
