@@ -45,7 +45,7 @@ Spotify's editorial pitching tool accepts only unreleased music, so it applies t
 
 ## Second music page: "Another Day" (from 13 November 2026)
 
-`https://crsrikanth.com/another-day/`, plugin `vspop-another-day-landing` (built by `landing/variants/make-variant.py` from the tested Spotify page, with its own names, settings, counts table and admin screen **Settings → Another Day Landing**, so it never touches `/spotify/`). Shows the "Another Day" artwork, "VS Pop™ · Very Smooth Pop" and "New single by CR Srikanth"; the button opens the CR Srikanth (VS Pop) Spotify profile `https://open.spotify.com/artist/16N9BJJPufgA3rnpQ06iSa`. Pixel off. Tests: 47 of 47 on the new page and 47 of 47 again on `/spotify/`.
+`https://crsrikanth.com/another-day/` (**live since 13 November 2026**, checked from a phone-sized browser), plugin `vspop-another-day-landing` (built by `landing/variants/make-variant.py` from the tested Spotify page, with its own names, settings, counts table and admin screen **Settings → Another Day Landing**, so it never touches `/spotify/`). Shows the "Another Day" artwork, "VS Pop™ · Very Smooth Pop" and "New single by CR Srikanth"; the button opens the CR Srikanth (VS Pop) Spotify profile `https://open.spotify.com/artist/16N9BJJPufgA3rnpQ06iSa`. Pixel off. Tests: 47 of 47 on the new page and 47 of 47 again on `/spotify/`.
 
 Ad links: `https://crsrikanth.com/another-day/?utm_source=instagram_boost`, `https://crsrikanth.com/another-day/?utm_source=youtube_ads`.
 
